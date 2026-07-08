@@ -1,0 +1,51 @@
+{% comment %}
+  Accepts:
+  - image: {Object} Image object
+  - width: {String} 'small', 'medium', or 'large'
+  - alignment: {String} 'left', 'center', or 'right'
+  - block_attributes: {String} Block attributes for theme editor
+{% endcomment %}
+
+<div class="image-block image-block--{{ width }} image-block--{{ alignment }}" {{ block_attributes }}>
+  {%- if image != blank -%}
+    {{ image | image_url: width: 1500 | image_tag }}
+  {%- else -%}
+    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+  {%- endif -%}
+</div>
+
+{%- style -%}
+  .image-block {
+    margin: 1rem 0;
+  }
+
+  .image-block img {
+    width: 100%;
+    height: auto;
+  }
+
+  .image-block--small {
+    max-width: 300px;
+  }
+
+  .image-block--medium {
+    max-width: 500px;
+  }
+
+  .image-block--large {
+    max-width: 700px;
+  }
+
+  .image-block--left {
+    margin-right: auto;
+  }
+
+  .image-block--center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .image-block--right {
+    margin-left: auto;
+  }
+{%- endstyle -%}

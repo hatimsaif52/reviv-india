@@ -1,0 +1,171 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "gp_section_605828807487652762": {
+      "type": "gp-section-605828807487652762",
+      "settings": {
+        "section_preload": "true",
+        "checksum": "7c29eef61536a16aa2d671595727ebac5bfb2e11bf07265c408b060f45cf57f7_1_1_1_0__1",
+        "gg-uJ0-afxI_text": "You're not losing&nbsp;<br>your mind.<br>Perhaps something <span style=\"color:#FFD814;font-size:52px;\">mechanical is happening</span>",
+        "ggSvlkrxLFa_text": "<p>And in many cases, people notice meaningful improvement over time</p>",
+        "ggD9lpKXTse_text": "<p><span style=\"color:#19C449;font-size:18px;\"><strong>✓ </strong></span><span style=\"color:#F9F9F9;font-size:16px;\">Many users report noticeable improvements within 8 weeks</span></p>",
+        "ggKxRUvQoD7_text": "You're not losing&nbsp;<br>your mind.<br>Perhaps your skull is <span style=\"color:#FFD814;font-size:42px;\">collapsing</span>",
+        "ggIkNoHd1Dy_text": "<p>And in many cases, people notice meaningful improvement over time</p>",
+        "ggZhUt8Xea__text": "<p><span style=\"color:#19C449;font-size:16px;\"><strong>✓ </strong></span><span style=\"color:#FFFFFF;font-size:16px;\">Many users report noticeable improvements within 8 weeks</span></p>",
+        "ggAoZ1TxBLv_text": "You're not losing&nbsp;<br>your mind.<br>Perhaps your skull is <span style=\"color:#FFD814;font-size:42px;\">collapsing</span>",
+        "ggoQVjLH-4a_text": "<p><span style=\"font-size:18px;\">And in many cases, people notice meaningful improvement over time</span></p>",
+        "ggcR8HYje6S_text": "<p><span style=\"color:#19C449;font-size:16px;\"><strong>✓ </strong></span><span style=\"color:#FFFFFF;font-size:16px;\">Many users report noticeable improvements within 8 weeks</span></p>"
+      }
+    },
+    "gp_section_605874743102407428": {
+      "type": "gp-section-605874743102407428",
+      "settings": {
+        "checksum": "5117d3c1aae9da787223755a013728ab176b6318c8ba6471a12728be04faf094_1_1_1_0__1",
+        "gggB2c8WgS3_text": "Why You're Experiencing Brain Fog",
+        "ggmbEt4vRyQ_text": "<p>Reviv mouthguards are designed to support jaw balance&nbsp;</p><p>in cases of structural compression</p>",
+        "ggHR4CfarMY_text": "Orthodontics, extractions, veneers",
+        "ggGuKI0rNSZ_text": "<p>&nbsp;Changes in jaw structure</p>",
+        "gge6dE8656r_text": "Teeth grinding, jaw tension",
+        "gg1L_hDpUxG_text": "<p>Ongoing Structural Stress</p>",
+        "gg-uvIt0YlJ_text": "<p>The Result You Feel</p>",
+        "gg45rDjyRyJ_text": "Tension patterns some people associate with brain fog, mental fatigue, or reduced clarity",
+        "ggmtGsL8RHY_text": "<p>Free Shipping</p>",
+        "ggZil_jG08j_text": "<p>Free shipping on any order of $150&nbsp;</p><p>or more.</p>",
+        "gg-k6pPym4l_text": "<p>Full Refund</p>",
+        "gg2O1aCUaOe_text": "<p>If your product aren’t perfect, return them for a full refund</p>",
+        "ggUZb4MKgrr_text": "<p>Secure Online Payment</p>",
+        "ggeB0VrJ6SV_text": "<p>secure payment<br>worldwide</p>"
+      }
+    },
+    "gp_section_605882607573402522": {
+      "type": "gp-section-605882607573402522",
+      "settings": {
+        "checksum": "f05a6c518eb7690863a2b3cf8a8c597f32126e94ac66d7ffedd6c32a60d17451_1_1_1_0__1",
+        "ggu7kFplgJR_text": "Why You're Experiencing Brain Fog",
+        "ggMwCGJ4i5E_text": "<p>Reviv mouthguards works with your body's natural healingprocess to reverse skull collapse</p>",
+        "ggogBa2BsvP_text": "Orthodontics, extractions, veneers",
+        "ggrpbmYXh_Q_text": "<p>&nbsp;Changes in jaw structure</p>",
+        "gg_0yEkXaD0_text": "Teeth grinding, jaw tension",
+        "ggWrdSJWsht_text": "<p>Ongoing Structural Stress</p>",
+        "ggIsWPLeZHa_text": "<p>The Result You Feel</p>",
+        "ggZtSHCy6NX_text": "Tension patterns some people associate with brain fog, mental fatigue, or reduced clarity",
+        "gg8wH85AAfg_text": "<p>Free Shipping</p>",
+        "ggucrBVyN5h_text": "<p>Free shipping on any order of $150&nbsp;</p><p>or more.</p>",
+        "gg6izeOwb0D_text": "<p>Full Refund</p>",
+        "gga8kPq_CSo_text": "<p>If your product aren’t perfect, return them for a full refund</p>",
+        "ggPeGOmzcOl_text": "<p>Secure Online Payment</p>",
+        "gg23TVoPrjN_text": "<p>secure payment<br>worldwide</p>"
+      }
+    },
+    "gp_section_605882951774765828": {
+      "type": "gp-section-605882951774765828",
+      "settings": {
+        "checksum": "2d889c9a5d645d9142113cc48dc3e52e4f1de9bdb8afd718b51f6081862b0048_1_1_1_0__1",
+        "ggCdh9Z9jnG_text": "Why You're Experiencing Brain Fog",
+        "gg4Nv3SaoJt_text": "<p>Reviv mouthguards works with your body's natural healingprocess to reverse skull collapse</p>",
+        "ggGHCphvyfq_text": "Orthodontics, extractions, veneers",
+        "ggYqcIdLTN8_text": "<p>Changes in jaw structure</p>",
+        "ggEfQ7_A8zm_text": "Teeth grinding, jaw tension",
+        "ggHRSCBylzk_text": "<p>Progressive Collapse</p>",
+        "gg7HPBASs3h_text": "<p>The Result You Feel</p>",
+        "ggkn8DzCRsp_text": "Tension patterns some people associate with brain fog, mental fatigue, or reduced clarity"
+      }
+    },
+    "gp_section_605957537405076378": {
+      "type": "gp-section-605957537405076378",
+      "settings": {
+        "checksum": "d20c978f8ae78103eb3d943da8908c674a24c7a5c28e8880e6a1f8e8c8dfc63f_1_1_1_0__1",
+        "ggyPsVS8zYe_text": "Structural Support: How It Works",
+        "ggmW0XgZZS4_text": "<p>Reviv is designed to support natural jaw positioning and help ease structural tension</p><p>that may be contributing to how you feel.</p>",
+        "ggew-XWx2N6_text": "<p>Phase 1 - Acclimating (few weeks)</p>",
+        "ggX0ctO9HzS_childItem_0": "<p>Gums and teeth can hurt a bit</p>",
+        "ggX0ctO9HzS_childItem_1": "<p>Some mental clarity improvement</p>",
+        "ggopZ4v1TKY_text": "<p>Phase 2 - Gradual Progress (varies by individual)</p>",
+        "gggHLdgkojK_childItem_0": "<p>Some users report improved clarity</p><p>(focus, clarity of thought, etc)</p>",
+        "gggHLdgkojK_childItem_1": "<p>Some users report feeling better overall</p>",
+        "ggnTsQtelMl_text": "<p>Phase 3 - Slower progress (2+ yrs)</p>",
+        "ggWXE6oGHzg_childItem_0": "<p>Slower, but continued progress</p>",
+        "ggWXE6oGHzg_childItem_1": "<p>You will need to do additional stretching beyond just the mouthguard</p>"
+      }
+    },
+    "gp_section_605958667920998998": {
+      "type": "gp-section-605958667920998998",
+      "settings": {
+        "checksum": "0e910823cf49351c6308b2ee5027b09ae219a9506e4c6df4074f1ac8a5fb157e_1_1_1_0__1",
+        "ggtraz9tDjE_text": "Happy Customers. Real Results",
+        "ggxZ6oSS4pE_text": "<p>Over 20,000 people have started their reversal journey.</p><p>Here are just a few of their stories.</p>",
+        "gg9jewHrxaa_text": "<p>Some people even wonder if something bigger is going on, they haven't seen the real hell which is me 2 weeks ago before starting reviv. Changing structure is the way. I’ve never felt so organized &amp; peace. I've Never felt so organized &amp; peace.</p><p>&nbsp;</p>",
+        "ggYTDhyhrmr_text": "<p>Edward&nbsp;</p>",
+        "ggIp0yRG7R__text": "<p>I feel like most of my brain fog has improved, I don't really understand but it's definitely from reviv. I introduced 3 of my friends in SG.</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>",
+        "gg1Z04GcUw4_text": "<p>Caleb</p>",
+        "gg7q2O1ZmZZ_text": "<p>The differences are just awesome. I feel brighter, like my head is clearer and overall, I feel more like myself again. I feel like I was the kid I was when I was 7–8, just full of energy—honestly, it’s amazing!</p><p>&nbsp;</p><p>&nbsp;</p>",
+        "ggLEM4N6KwF_text": "<p>Hector&nbsp;</p>",
+        "ggLs2jDS76d_text": "<p>Just wanted to say thank you for making this mouthguard, I had a exam today and I had to cram until 4am and only slept three hours. I was able to get through the entire day without feeling as tired. Thank you so much for making this mouthguard.</p>",
+        "ggUI_Pq11fn_text": "<p>Ben</p>"
+      }
+    },
+    "gp_section_605964125146710938": {
+      "type": "gp-section-605964125146710938",
+      "settings": {
+        "checksum": "3c100edfa6392a507f392f73bcd381f9fc8fdcb7c2a3bd5927117fb56381706c_1_1_1_0__1",
+        "ggA6AhFHGr4_text": "Meet R3: Support For Jaw Balance",
+        "ggirQ8W2pKr_text": "<p>A device designed to support vertical jaw positioning</p>",
+        "ggZBTA1TMlz_text": "R3 + 1 Year or support",
+        "ggQxHKbSn52_childItem_0": "<p>Supports vertical dimension to help reduce upward jaw pressure</p>",
+        "ggQxHKbSn52_childItem_1": "<p>Repositions the jaw for long-lasting collapse</p>",
+        "ggQxHKbSn52_childItem_2": "<p>Designed to help reduce jaw tension</p>",
+        "ggQxHKbSn52_childItem_3": "<p>Designed to promote more relaxed, restorative sleep patterns</p>"
+      }
+    },
+    "gp_section_605970253930824247": {
+      "type": "gp-section-605970253930824247",
+      "settings": {
+        "checksum": "ca1cff04f4f9db672b828185d705a81d78548d67bd09f1125f02683ada11c73f_1_1_1_0__1",
+        "ggwMzRE3aI3_text": "Ready to Reclaim Your Mental Clarity?",
+        "ggneHjVMLR8_text": "<p>Join many others who stopped accepting brain fog as “normal” and started their Reviv journey.</p>",
+        "ggu91TdKIgf_text": "<p>Order your R3 + Support</p>",
+        "ggeXHT_trwX_text": "<p>Our latest appliance which is designed to stretch the soft tissue that takes compression off the brain.&nbsp; Delivered to your door with free shipping.</p>",
+        "gg_G_RFi4eF_text": "<p>Join the&nbsp;community</p>",
+        "gghwfYdqJV7_text": "<p>Connect with others on the same journey. Access expert guidance, progress tracking tools,&nbsp;<br>and stay motivated with real success stories.&nbsp;<br>&nbsp;</p>",
+        "ggr3Jh8RElJ_text": "<p>Track your</p><p>progress</p>",
+        "ggaDRMZ5lpx_text": "<p>Document your progress with photos and symptom tracking.&nbsp;<br>Watch your improvements unfold week by week. Most notice changes within 8 weeks.&nbsp;<br>&nbsp;</p>",
+        "ggtAyDJ6yU1_label": "<p>Order your R3 + Support</p>"
+      }
+    },
+    "gp_section_605985304670634756": {
+      "type": "gp-section-605985304670634756",
+      "settings": {
+        "checksum": "65f46379d830a1633a6bd0b9cea6aa2a45319d9c968a12aae52f77b7546a0e5c_1_1_1_0__1",
+        "ggzAk5-NFg3_text": "Learn More About Brain Fog",
+        "ggk8x7S697R_text": "<p>Addressing brain fog with these biomechanics</p>",
+        "ggylwWtVaRo_text": "<p>So far i'm 3 for 3. And I don't think i'll ever lose.</p>",
+        "ggcAmUhJwWQ_label": "<p>Read More</p>",
+        "ggU0jvH29t8_text": "<p>Max kicks brain fog with Reviv</p>",
+        "ggcqUPXHiBm_text": "<p>Max was in my first test group in early 2023 and managed to get rid of pretty severe brain fog in a little over a month.</p>",
+        "gg-s5zUHk_e_label": "<p>Read More</p>",
+        "ggBp3m2tw1K_text": "<p>This Stuff Determines Cognitive Function</p>",
+        "ggGsjfeOLCm_text": "<p>Each time I got worse it felt like my IQ plummeted. Each time I got better it felt like it rocketed up. And I did this numerous times in 10 years.</p>",
+        "ggQmq2TexRh_label": "<p>Read More</p>"
+      }
+    }
+  },
+  "order": [
+    "gp_section_605828807487652762",
+    "gp_section_605874743102407428",
+    "gp_section_605957537405076378",
+    "gp_section_605882607573402522",
+    "gp_section_605882951774765828",
+    "gp_section_605958667920998998",
+    "gp_section_605964125146710938",
+    "gp_section_605970253930824247",
+    "gp_section_605985304670634756"
+  ]
+}

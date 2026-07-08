@@ -1,0 +1,264 @@
+{%- style -%}
+  .section-{{ section.id }} {
+    background: #232021;
+  }
+
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  .customer-reviews-header__subtitle {
+    font-size: 24px;
+    line-height: 1.5;
+    color: #FFFFFF99;
+    font-weight: 500;
+    text-align: center;
+    font-family: "Roboto";
+    margin-bottom: 24px;
+  }
+
+  .customer-reviews-header__subtitle b {
+    color: #FFFFFFCC;
+  }
+
+  .customer-reviews-header__title {
+    font-size: 48px;
+    line-height: 1.5;
+    color: #efc98b;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 64px;
+    font-family: "Cardillac";
+  }
+
+  @media (max-width: 600px) {
+    .customer-reviews-header__subtitle {
+      color: #FFFFFFCC;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    .customer-reviews-header__title {
+      font-size: 32px;
+      line-height: 1;
+    }
+  }
+
+  .customer-review-cards-desktop-wrapper {
+    display: block;
+  }
+
+  .customer-review-cards-mobile-wrapper {
+    display: none;
+  }
+
+  .customer-review-cards-mobile {
+    overflow-x: auto;
+    scrollbar-width: none; /* Hide scrollbar for WebKit browsers */
+  }
+
+  @media (max-width: 600px) {
+    .customer-review-cards-desktop-wrapper {
+      display: none;
+    }
+
+    .customer-review-cards-mobile-wrapper {
+      overflow: hidden;
+      width: 100%;
+      display: block;
+    }
+
+    .customer-review-cards-mobile .first-row,
+    .customer-review-cards-mobile .second-row
+     {
+      display: flex;
+      width: max-content;
+      /* animation: scrollRight 20s linear infinite; */
+    }
+
+    .customer-review-cards-mobile .first-row .customer-review-card,
+    .customer-review-cards-mobile .second-row .customer-review-card
+     {
+      flex-shrink: 0;
+    }
+
+    .customer-review-cards-mobile .customer-review-card-image {
+      max-width: 100%;
+      width: auto;
+    }
+
+    @keyframes scrollRight {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%); /* Move exactly half the container width */
+      }
+    }
+  }
+
+  .customer-review-cards-desktop-wrapper .customer-review-card-image {
+    max-width: 100%;
+  }
+
+  .customer-review-cards-desktop-wrapper .customer-review-card:nth-child(even) {
+    display: flex;
+    justify-content: right;
+  }
+
+  .customer-review-cards-mobile-wrapper img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+
+  .customer-review-cards-mobile .first-row {
+    display: flex;
+  }
+
+  .customer-review-cards-mobile .second-row {
+    display: flex;
+
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="section-{{ section.id }}-padding section-{{ section.id }}">
+  <div class="page-width">
+    <div class="customer-reviews-header">
+      <div class="customer-reviews-header__subtitle">
+        And in fact there are people doing Reviv right now that have <b>attested to improving</b> each of these things.
+      </div>
+      <div class="customer-reviews-header__title">Read to find out why!</div>
+    </div>
+    <div class="customer-reviews-body">
+      <div class="customer-review-cards-desktop-wrapper">
+        <div class="customer-review-card">
+          {{ 'review-1.png' | file_url | img_tag: 'Review image', 'customer-review-card-image' }}
+        </div>
+        <div class="customer-review-card">
+          {{ 'review-2.png' | file_url | img_tag: 'Review image', 'customer-review-card-image' }}
+        </div>
+        <div class="customer-review-card">
+          {{ 'review-3.png' | file_url | img_tag: 'Review image', 'customer-review-card-image' }}
+        </div>
+        <div class="customer-review-card">
+          {{ 'review-4.png' | file_url | img_tag: 'Review image', 'customer-review-card-image' }}
+        </div>
+        <div class="customer-review-card">
+          {{ 'review-5.png' | file_url | img_tag: 'Review image', 'customer-review-card-image' }}
+        </div>
+      </div>
+      <div class="customer-review-cards-mobile-wrapper">
+        <div class="customer-review-card">
+          {{ 'review-1-mobile.jpg' | file_url | img_tag: 'Review image', 'customer-review-card-image' }}
+        </div>
+        <div class="customer-review-card">
+          {{ 'review-2-mobile.jpg' | file_url | img_tag: 'Review image', 'customer-review-card-image' }}
+        </div>
+        <div class="customer-review-card">
+          {{ 'review-3-mobile.jpg' | file_url | img_tag: 'Review image', 'customer-review-card-image' }}
+        </div>
+        <div class="customer-review-card">
+          {{ 'review-4-mobile.jpg' | file_url | img_tag: 'Review image', 'customer-review-card-image' }}
+        </div>
+      </div>
+      {% comment %}
+        <div class="customer-review-cards-mobile-wrapper">
+          <div class="customer-review-cards-mobile">
+            <div class="first-row">
+              <div class="customer-review-card first">
+                {{ 'review-mo-1.png' | file_url | img_tag: 'Review image', 'customer-review-card-image' }}
+              </div>
+              <div class="customer-review-card second">
+                {{ 'review-mo-2.png' | file_url | img_tag: 'Review image', 'customer-review-card-image' }}
+              </div>
+              {% comment %} Duplicate {% endcomment %}
+              {% comment %}
+                <div class="customer-review-card first">
+                  {{ 'review-mo-1.png' | file_url | img_tag: 'Review image', 'customer-review-card-image' }}
+                </div>
+                <div class="customer-review-card second">
+                  {{ 'review-mo-2.png' | file_url | img_tag: 'Review image', 'customer-review-card-image' }}
+                </div>
+              {% endcomment %}
+            </div>
+
+            <div class="second-row">
+              <div class="customer-review-card third">
+                {{ 'review-mo-3.png' | file_url | img_tag: 'Review image', 'customer-review-card-image' }}
+              </div>
+              <div>
+                <div class="customer-review-card fourth">
+                  {{ 'review-mo-4.png' | file_url | img_tag: 'Review image', 'customer-review-card-image' }}
+                </div>
+                <div class="customer-review-card fifth">
+                  {{ 'review-mo-5.png' | file_url | img_tag: 'Review image', 'customer-review-card-image' }}
+                </div>
+              </div>
+              {% comment %}
+                <div class="customer-review-card third">
+                  {{ 'review-mo-3.png' | file_url | img_tag: 'Review image', 'customer-review-card-image' }}
+                </div>
+                <div>
+                  <div class="customer-review-card fourth">
+                    {{ 'review-mo-4.png' | file_url | img_tag: 'Review image', 'customer-review-card-image' }}
+                  </div>
+                  <div class="customer-review-card fifth">
+                    {{ 'review-mo-5.png' | file_url | img_tag: 'Review image', 'customer-review-card-image' }}
+                  </div>
+                </div>
+              {% endcomment %}
+            </div>
+          </div>
+        </div>
+      {% endcomment %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "customer reviews",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "customer reviews"
+    }
+  ]
+}
+{% endschema %}

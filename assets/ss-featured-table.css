@@ -1,0 +1,41 @@
+.featured-spec-table {
+  background: linear-gradient(180deg, #2a2623, #1f1c1a);
+  border: 1px solid rgba(239, 201, 139, 0.5);
+  border-radius: 8px;
+  padding: 24px;
+  color: #f5f5f5;
+}
+
+.featured-spec-table__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.spec-row {
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(239, 201, 139, 1)
+}
+.spec-row:last-child {
+  border-bottom: none;
+}
+
+.spec-label {
+  font-size: 16px;
+  opacity: 0.75;
+  line-height: 1;
+}
+
+.spec-value {
+font-size: 22px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .featured-spec-table__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .spec-label, .spec-value {
+    text-align: center;
+  }
+}

@@ -1,0 +1,1194 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "judge_me_reviews_preview_badge_EAUeai": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+            "quantity_style": "default"
+          }
+        },
+        "custom_liquid_zeyt9h": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<p style=\"font-size:14px; margin:0; padding:0; color:yellow; text-align:center;\">\n    ★★★★★ Google Reviews\n</p>"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "custom_liquid_aFheq7": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div class=\"testimonial-card\">\n      <div class=\"testimonial-header\">\n        <div class=\"profile\">\n          <img class=\"profile-image\" width=\"100\" height=\"100\" src=\"{{ 'andrew-testimonial.png' | asset_url }}\" alt=\"Andrew from SKOOL Community\">\n          <strong class=\"profile-name\">Andrew</strong>\n        </div>\n        <div class=\"brand-logo\">\n          <span class=\"logo-letter logo-s\">s</span>\n          <span class=\"logo-letter logo-k\">k</span>\n          <span class=\"logo-letter logo-o1\">o</span>\n          <span class=\"logo-letter logo-o2\">o</span>\n          <span class=\"logo-letter logo-l\">l</span>\n        </div>\n      </div>\n      <blockquote class=\"testimonial-quote\">\n        \"Structurally and neurologically I feel so much better after I started the Reviv.\"\n      </blockquote>\n    </div>\n\n{% style %}\n.testimonial-card {\n  max-width: 42rem;\n  background: rgba(239, 201, 139, 0.04);\n  border: 1px solid #ffd7ba;\n  border-radius: 32px;\n  padding: 2rem;\n  position: relative;\n}\n\n.testimonial-header {\n  display: flex;\n  align-items: flex-start;\n  justify-content: space-between;\n  margin-bottom: 2rem;\n}\n\n.profile {\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n}\n\n.profile-image {\n  width: 4rem;\n  height: 4rem;\n  border-radius: 50%;\n  object-fit: cover;\n}\n\n.profile-name {\n  color: white;\n  font-size: 1.875rem;\n  font-weight: 600;\n}\n\n.brand-logo {\n  font-size: 2.25rem;\n  font-weight: 700;\n}\n\n.logo-letter {\n  font-weight: bold;\n}\n\n.logo-s {\n  color: #1b3bdb;\n}\n\n.logo-k {\n  color: #db1b1b;\n}\n\n.logo-o1 {\n  color: #dbc31b;\n}\n\n.logo-o2 {\n  color: #1bdbdb;\n}\n\n.logo-l {\n  color: #db1b1b;\n}\n\n.testimonial-quote {\n  color: rgba(255, 255, 255, 0.8);\n  font-weight: 400;\n  font-size: 18px;\n  letter-spacing: -0.02em;\n  line-height: 1.3;\n  font-style: italic;\n  border: none;\n  padding: 0;\n  margin: 0;\n}\n\n/* Responsive styles */\n@media (max-width: 640px) {\n  .testimonial-card {\n    padding: 1.5rem;\n  }\n\n  .profile-name,\n  .testimonial-quote {\n    font-size: 1.5rem;\n  }\n\n  .brand-logo {\n    font-size: 1.875rem;\n  }\n\n  .profile-image {\n    width: 3rem;\n    height: 3rem;\n  }\n}\n{% endstyle %}"
+          }
+        },
+        "custom_liquid_4YiTcD": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<p style=\"font-size:14px; margin:0; padding:0; color:white; text-align:center;\">\n    <span style=\"height:8px; width:8px; background-color:green; border-radius:50%; display:inline-block; animation:blinking 1.5s infinite;\"></span>\n    <span style=\"color:green;\">Note:</span> Only <span style=\"font-weight:bold;\">7</span> units left in stock\n</p>\n\n<style>\n@keyframes blinking {\n    0% { opacity: 1.0; }\n    50% { opacity: 0.0; }\n    100% { opacity: 1.0; }\n}\n</style>"
+          }
+        },
+        "icon_with_text_cbe7i6": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "center_content": false,
+            "icon_1": "return",
+            "image_1": "shopify://shop_images/Lock.png",
+            "heading_1": "<strong>Secure Checkout</strong>",
+            "icon_2": "lock",
+            "image_2": "shopify://shop_images/flip-backward.png",
+            "heading_2": "<strong>30-Day Guarantee</strong>",
+            "icon_3": "return",
+            "heading_3": ""
+          }
+        },
+        "collapsible_tab_zPhB4z": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What exactly is The 100 Club?",
+            "icon": "none",
+            "content": "<p>The 100 Club is a 100-day longevity and health-transformation programme designed by doctors, academics, and health coaches. It combines advanced diagnostics, personalised health plans, and weekly coaching to help you optimise your energy, focus, and long-term wellbeing.<br/><a href=\"https://100club.life/\" target=\"_blank\">https://100club.life/</a></p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_bETJ9W": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Why Join Now?",
+            "icon": "none",
+            "content": "<ul><li>Exclusive Pilot Price: £299 (future value £1,250+)</li><li>Help shape a new health model that could transform thousands of lives</li><li>Gain insider access to the UK’s top longevity experts</li><li>Risk-free: feel more energised within 30 days or your money back</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_MdA9x7": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Our Guarantee",
+            "icon": "heart",
+            "content": "<p>If you wear the appliance consistently and don't agree that your health issues are improving in the first 90 days we give you your money back. See terms <a href=\"https://getreviv.com/pages/our-guarantee\" title=\"Our Guarantee\">here</a></p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_PmmWBf": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How is The 100 Club different from a regular health check?",
+            "icon": "none",
+            "content": "<p>Most health checks only tell you if you fall within “normal” ranges. The 100 Club goes beyond that i.e analysing your results against optimal longevity ranges and building a tailored roadmap to help you perform, feel, and live better every day.</p>",
+            "page": ""
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "judge_me_reviews_preview_badge_EAUeai",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "custom_liquid_zeyt9h",
+        "buy_buttons",
+        "custom_liquid_aFheq7",
+        "custom_liquid_4YiTcD",
+        "icon_with_text_cbe7i6",
+        "collapsible_tab_zPhB4z",
+        "collapsible_tab_bETJ9W",
+        "collapsible_tab_MdA9x7",
+        "collapsible_tab_PmmWBf",
+        "description",
+        "share"
+      ],
+      "custom_css": [
+        ".product__title h1 {color: #e5c085;}",
+        ".icon-with-text .icon {fill: #e5c085;}",
+        ".icon-accordion {fill: #e5c085;}",
+        ".icon-caret {fill: #e5c085;}",
+        ".product__media img,.thumbnail.global-media-settings img {border-radius: 10px;}",
+        ".size-chart-container {display: none;}"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "show_sold_alert": true,
+        "color_scheme": "scheme-4",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "hover",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12,
+        "show_benefits": false
+      }
+    },
+    "product_compact_7FQLHM": {
+      "type": "product-compact",
+      "name": "Compact Product Detail",
+      "settings": {
+        "back_color": "#232021",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "show_title": true,
+        "show_price": true,
+        "show_add_to_cart": true,
+        "title_color": "#ffffff",
+        "desc_color": "#e5c085",
+        "button_text": "Buy it now"
+      }
+    },
+    "rich_text_Lyxah9": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_LkTjBX": {
+          "type": "heading",
+          "settings": {
+            "heading": "SCIENCE-BACKED HEALTH, SIMPLIFIED",
+            "heading_size": "h1"
+          }
+        },
+        "text_GVrHCD": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Most health checks tell you where you are — The 100 Club shows you how to get better. We merge longevity science, medical diagnostics, and behavioural coaching to create a transformation you can see and feel.</p>"
+          }
+        },
+        "button_cPrUXK": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_id": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_LkTjBX",
+        "text_GVrHCD",
+        "button_cPrUXK"
+      ],
+      "custom_css": [
+        "p {color: #ffffffa3;}",
+        "@media screen and (min-width: 750px) {.rich-text__blocks {max-width: 100%; }}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "full_width": true,
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "custom__class": ""
+      }
+    },
+    "image_with_text_Bb4P3V": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_rj3ACf": {
+          "type": "heading",
+          "settings": {
+            "heading": "Clinician-Led Longevity Plan",
+            "heading_size": "h2"
+          }
+        },
+        "text_NGrzma": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Your bespoke plan targets your personal health goals — improving sleep, nutrition, energy, movement, and mental resilience.</p>",
+            "text_style": "body",
+            "text_size": "medium",
+            "show_below_image": false
+          }
+        },
+        "button_kDhEeW": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_style_purchase": false,
+            "full_width_button": false,
+            "custom_buy_btns": false,
+            "purchase_btn_text": "",
+            "button_1_text": "",
+            "button_1_url": "",
+            "button_2_text": "",
+            "button_2_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_rj3ACf",
+        "text_NGrzma",
+        "button_kDhEeW"
+      ],
+      "custom_css": [
+        "h2 {color: #e5c085;}",
+        ".image-with-text__media {border-radius: 10px;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/6VPGeWlxH6ucvCCrf192p6u0.avif",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "color_scheme": "scheme-4",
+        "wrap_image_to_container": false,
+        "image_behavior": "none",
+        "mobile_content_order": "column",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom__class": ""
+      }
+    },
+    "image_with_text_tqdFKd": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_LCWYPq": {
+          "type": "heading",
+          "settings": {
+            "heading": "Coaching & Accountability",
+            "heading_size": "h2"
+          }
+        },
+        "text_xab87a": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Weekly check-ins with expert longevity coaches and doctors keep you on track. Every recommendation is science-backed and outcome-focused.</p>",
+            "text_style": "body",
+            "text_size": "medium",
+            "show_below_image": false
+          }
+        },
+        "button_8wWiLq": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_style_purchase": false,
+            "full_width_button": false,
+            "custom_buy_btns": false,
+            "purchase_btn_text": "",
+            "button_1_text": "",
+            "button_1_url": "",
+            "button_2_text": "",
+            "button_2_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_LCWYPq",
+        "text_xab87a",
+        "button_8wWiLq"
+      ],
+      "custom_css": [
+        "h2 {color: #e5c085;}",
+        ".image-with-text__media {border-radius: 10px;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/PC6FP7svT2v0jUhDZ5Tbvu1WL60.avif",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "wrap_image_to_container": false,
+        "image_behavior": "none",
+        "mobile_content_order": "column",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom__class": ""
+      }
+    },
+    "image_with_text_YBcpYq": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_aWgq8V": {
+          "type": "heading",
+          "settings": {
+            "heading": "Measure What Matters",
+            "heading_size": "h2"
+          }
+        },
+        "text_Tfw6CF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Track your progress using baseline biomarkers, biological age, and wearable integrations — all displayed in a simple, elegant dashboard.</p>",
+            "text_style": "body",
+            "text_size": "medium",
+            "show_below_image": false
+          }
+        },
+        "button_pQyWEP": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_style_purchase": false,
+            "full_width_button": false,
+            "custom_buy_btns": false,
+            "purchase_btn_text": "",
+            "button_1_text": "",
+            "button_1_url": "",
+            "button_2_text": "",
+            "button_2_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_aWgq8V",
+        "text_Tfw6CF",
+        "button_pQyWEP"
+      ],
+      "custom_css": [
+        "h2 {color: #e5c085;}",
+        ".image-with-text__media {border-radius: 10px;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/03NO465vAEqoKzdUqCURIJisk.avif",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "wrap_image_to_container": false,
+        "image_behavior": "none",
+        "mobile_content_order": "column",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom__class": ""
+      }
+    },
+    "rich_text_xqirpk": {
+      "type": "rich-text",
+      "blocks": {
+        "button_Tm9r8D": {
+          "type": "button",
+          "settings": {
+            "button_label": "BUY IT NOW",
+            "button_link": "#",
+            "button_id": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_Tm9r8D"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "full_width": true,
+        "padding_top": 32,
+        "padding_bottom": 48,
+        "custom__class": "repod-banner-bottom-btn"
+      }
+    },
+    "rich_text_KNxANf": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_8KHxtP": {
+          "type": "heading",
+          "settings": {
+            "heading": "SCIENCE-BACKED HEALTH, SIMPLIFIED",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_8KHxtP"
+      ],
+      "custom_css": [],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 12,
+        "custom__class": ""
+      }
+    },
+    "multicolumn_CzQQfx": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_NKGHVQ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Activity_df3237fd-0668-4c66-a026-960335307dc8.png",
+            "title": "Complete Health Assessment",
+            "text": "<p>At-home blood tests & doctor-led screenings covering cholesterol, hormones, inflammation, vitamins, and mental health.</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_tkygWU": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/beaker-02_48d5ec6d-e59c-45ef-83f8-77cbbe65a855.png",
+            "title": "Science Beyond the Standard",
+            "text": "<p>Results measured against optimal longevity ranges, not just normal ranges.</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_UTfcKz": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/announcement-03_2d333851-0a0a-4049-8511-5cbe0c702012.png",
+            "title": "Your Health Coach, 24/7",
+            "text": "<p>Personalised AI-driven plan with real-time tracking, nutrition & fitness guidance.</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_GxmbtR": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Users.png",
+            "title": "Expert Access & Community",
+            "text": "<p>Connect with doctors, coaches, and a private WhatsApp group for accountability.</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        }
+      },
+      "block_order": [
+        "column_NKGHVQ",
+        "column_tkygWU",
+        "column_UTfcKz",
+        "column_GxmbtR"
+      ],
+      "custom_css": [
+        ".media.media--transparent.media--adapt img {position: relative !important; width: 48px;}",
+        ".multicolumn-card__info {text-align: center;}",
+        "h3 {color: #fff; font-family: Roboto, sans-serif !important; letter-spacing: -0.02em; text-transform: uppercase; font-size: 22px; line-height: 100%; margin-bottom: 12px;}",
+        "p {color: #ffffffa3; letter-spacing: -0.02em; font-weight: 400; font-size: 16px; line-height: 150%;}"
+      ],
+      "settings": {
+        "title": "",
+        "box_link": false,
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "section_color_scheme": "scheme-4",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 24,
+        "padding_bottom": 0,
+        "custom_class": ""
+      }
+    },
+    "how_it_works_QVVDzP": {
+      "type": "how-it-works",
+      "blocks": {
+        "step_4VPUBc": {
+          "type": "step",
+          "settings": {
+            "step_number": "‎",
+            "step_title": "Welcome & Foundation",
+            "step_text": "<p>We will contact you via the phone number provided, and will Kick off with a small group (8–10 people). Meet your coach and doctors. Complete your at-home test and upload your initial health metrics — or use our home nurse service.</p>",
+            "pill_content": "Week 1"
+          }
+        },
+        "step_ANMirC": {
+          "type": "step",
+          "settings": {
+            "step_number": "‎",
+            "step_title": "Personalised Goals & Plan",
+            "step_text": "<p>Once your results are in, your doctor builds your personalised longevity plan. Your coach clarifies your health goals and core longevity pillars.</p>",
+            "pill_content": "Week 2"
+          }
+        },
+        "step_3qBB46": {
+          "type": "step",
+          "settings": {
+            "step_number": "‎",
+            "step_title": "Pillars of Longevity",
+            "step_text": "<p>Weekly sessions help you improve nutrition, movement, recovery, and mindset.<br/><br/>Your coach reviews progress and adjusts your plan in real-time.</p>",
+            "pill_content": "Weeks 3-8"
+          }
+        },
+        "step_wrh9MJ": {
+          "type": "step",
+          "settings": {
+            "step_number": "‎",
+            "step_title": "Integration & Vision",
+            "step_text": "<p>Learn how to embed your new habits for life. Build routines that sustain your energy, focus, and emotional wellbeing.<br/><br/></p>",
+            "pill_content": "Weeks 9-10"
+          }
+        },
+        "step_zcGFyJ": {
+          "type": "step",
+          "settings": {
+            "step_number": "‎",
+            "step_title": "Reassessment & Next Steps",
+            "step_text": "<p>Measure your progress against your starting point.<br/><br/>Celebrate your transformation — and join the 100 Club Alumni Community for continued longevity support.</p>",
+            "pill_content": "Weeks 11-12"
+          }
+        }
+      },
+      "block_order": [
+        "step_4VPUBc",
+        "step_ANMirC",
+        "step_3qBB46",
+        "step_wrh9MJ",
+        "step_zcGFyJ"
+      ],
+      "custom_css": [
+        ".step-number {width: 30px; height: 30px;}",
+        "@media screen and (min-width: 768px) {.step-content-left {text-align: right; } .step-content-right {text-align: left; }}",
+        "h2.section-title.title {padding-bottom: 20px; margin-top: 0px;}"
+      ],
+      "name": "How It Works - 2 Column",
+      "settings": {
+        "heading": "PROGRAM TIMELINE",
+        "color_scheme": "scheme-4",
+        "section_color_scheme": "",
+        "pills_enabled": true
+      }
+    },
+    "rich_text_bwLkpL": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_bhnVbx": {
+          "type": "heading",
+          "settings": {
+            "heading": "YOUR BLUEPRINT TO 100",
+            "heading_size": "h1"
+          }
+        },
+        "text_9QVL3J": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our programme systematically targets the 9 scientific hallmarks of ageing — transforming how your body performs at every level.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_bhnVbx",
+        "text_9QVL3J"
+      ],
+      "custom_css": [
+        "p {color: #fff;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 12,
+        "custom__class": ""
+      }
+    },
+    "multicolumn_KR8fxR": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_wzRrCR": {
+          "type": "column",
+          "settings": {
+            "title": "Cellular 🧬",
+            "text": "<p>Protect DNA, optimise mitochondria, and reduce oxidative stress.</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_C7LTUV": {
+          "type": "column",
+          "settings": {
+            "title": "System-Level ⚡",
+            "text": "<p>Lower inflammation, improve metabolic health.</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_44cGqq": {
+          "type": "column",
+          "settings": {
+            "title": "Whole-Body 💪",
+            "text": "<p>Support regeneration, clear senescent cells, and strengthen immunity.</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        }
+      },
+      "block_order": [
+        "column_wzRrCR",
+        "column_C7LTUV",
+        "column_44cGqq"
+      ],
+      "custom_css": [
+        ".media.media--transparent.media--adapt img {position: relative !important; width: 48px;}",
+        ".multicolumn-card__info {text-align: center;}",
+        "h3 {color: #fff; font-family: Roboto, sans-serif !important; letter-spacing: -0.02em; text-transform: uppercase; font-size: 22px; line-height: 100%; margin-bottom: 12px;}",
+        "p {color: #ffffffa3; letter-spacing: -0.02em; font-weight: 400; font-size: 16px; line-height: 150%;}"
+      ],
+      "settings": {
+        "title": "",
+        "box_link": false,
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "section_color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 24,
+        "padding_bottom": 0,
+        "custom_class": "aff-multi-centered multi-centered-100"
+      }
+    },
+    "multicolumn_Mh8KeF": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_HQaH8D": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Frame_27461.png",
+            "title": "The New Reality",
+            "text": "<ul><li>For the first time, science allows us to slow — and even reverse — biological ageing.</li><li>The research is real. The results are measurable. The future is longevity — and it starts with you.</li></ul>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_TmVTHT": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Frame_27462.png",
+            "title": "Your Invitation",
+            "text": "<ul><li>Join a select group redefining what’s possible for human health and performance.</li><li>Together, we’re not just adding years to life — we’re adding life to years.</li></ul>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        }
+      },
+      "block_order": [
+        "column_HQaH8D",
+        "column_TmVTHT"
+      ],
+      "custom_css": [
+        ".media.media--transparent.media--adapt img {position: relative !important; width: 48px;}",
+        ".multicolumn-card__info {text-align: center;}",
+        "h3 {color: #fff; letter-spacing: -0.02em; font-size: 22px; line-height: 100%; margin-bottom: 12px; font-weight: 400;}",
+        "li {color: #ffffffa3; letter-spacing: -0.02em; font-weight: 400; font-size: 16px; line-height: 150%;}"
+      ],
+      "settings": {
+        "title": "",
+        "box_link": false,
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 1,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "section_color_scheme": "scheme-4",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 52,
+        "padding_bottom": 0,
+        "custom_class": ""
+      }
+    },
+    "rich_text_a9GmMx": {
+      "type": "rich-text",
+      "blocks": {
+        "button_rxWneR": {
+          "type": "button",
+          "settings": {
+            "button_label": "BUY IT NOW",
+            "button_link": "#",
+            "button_id": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_rxWneR"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "full_width": true,
+        "padding_top": 32,
+        "padding_bottom": 48,
+        "custom__class": "repod-banner-bottom-btn"
+      }
+    },
+    "expert_image_slider_DzWtjY": {
+      "type": "expert-image-slider",
+      "blocks": {
+        "expert_block_VXAhBV": {
+          "type": "expert_block",
+          "settings": {
+            "image": "shopify://shop_images/image1.webp",
+            "heading": "Dr. Shifa Rahman",
+            "text": "<p>GP & Longevity Doctor</p>"
+          }
+        },
+        "expert_block_ewy3BB": {
+          "type": "expert_block",
+          "settings": {
+            "image": "shopify://shop_images/image_2.webp",
+            "heading": "Mona Azami",
+            "text": "<p>Technology Lead</p>"
+          }
+        },
+        "expert_block_qVBG8A": {
+          "type": "expert_block",
+          "settings": {
+            "image": "shopify://shop_images/image2.webp",
+            "heading": "Niel Cameron",
+            "text": "<p>Health Optimisation Expert</p>"
+          }
+        },
+        "expert_block_hHaQJ7": {
+          "type": "expert_block",
+          "settings": {
+            "image": "shopify://shop_images/image3.webp",
+            "heading": "Dr. Nicholas Dragolea",
+            "text": "<p>GP & Founder My Longevity Centre</p>"
+          }
+        }
+      },
+      "block_order": [
+        "expert_block_VXAhBV",
+        "expert_block_ewy3BB",
+        "expert_block_qVBG8A",
+        "expert_block_hHaQJ7"
+      ],
+      "name": "Expert Image Slider",
+      "settings": {
+        "section_heading": "MEET THE EXPERTS",
+        "color_scheme": "scheme-4",
+        "section_color_scheme": ""
+      }
+    },
+    "rich_text_w8j3Je": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_rHDzWB": {
+          "type": "heading",
+          "settings": {
+            "heading": "30-DAY MONEY-BACK GUARANTEE",
+            "heading_size": "h1"
+          }
+        },
+        "text_zL9RQQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Feel the difference or get a full refund.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rHDzWB",
+        "text_zL9RQQ"
+      ],
+      "custom_css": [
+        "p {color: #fff;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "full_width": true,
+        "padding_top": 52,
+        "padding_bottom": 12,
+        "custom__class": ""
+      }
+    },
+    "multicolumn_rxCHfM": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_gQUP4Y": {
+          "type": "column",
+          "settings": {
+            "title": "Pilot Price: <strong>399 USD </strong><em>(Future Value: 1,699 USD+)</em>",
+            "text": "<p><strong>YOUR 100-DAY PACKAGE INCLUDES:</strong><br/></p><ul><li>8 Weekly Group Coaching Sessions</li><li>Doctor-led Blood Testing (20+ Biomarkers)</li><li>Personalised Nutrition & Supplement Protocols</li><li>Full Progress Tracking Dashboard</li><li>Lifetime Alumni Community Access</li><li>Optional: Upload Your Own Tests</li></ul>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        }
+      },
+      "block_order": [
+        "column_gQUP4Y"
+      ],
+      "custom_css": [
+        ".multicolumn-card__info {display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px;}",
+        "h3.inline-richtext {color: #fff; display: flex; font-size: 28px; flex-direction: column; justify-content: center;}",
+        "h3.inline-richtext strong {font-size: 69px; color: #e5c085;}",
+        "h3.inline-richtext em {font: 300 18px normal; color: #ffffff87;}",
+        ".rte p strong {color: #e5c085; text-align: center; font-size: 20px; font-family: \"Font-1737687022306\" !important;}",
+        ".rte ul {color: #ccc; font-size: 15px;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "box_link": false,
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "section_color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": "multi-centered-100"
+      }
+    },
+    "rich_text_npUWdr": {
+      "type": "rich-text",
+      "blocks": {
+        "button_p8xPJY": {
+          "type": "button",
+          "settings": {
+            "button_label": "JOIN THE 100 CLUB TODAY",
+            "button_link": "#",
+            "button_id": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
+        "text_de6qUn": {
+          "type": "text",
+          "settings": {
+            "text": "<p><a href=\"https://cdn.shopify.com/s/files/1/0706/4243/4289/files/JdZ3jBNOCfKxBBHC1vZlJSpum6Q_1.pdf?v=1760507736\" title=\"https://cdn.shopify.com/s/files/1/0706/4243/4289/files/JdZ3jBNOCfKxBBHC1vZlJSpum6Q_1.pdf?v=1760507736\">DISCLAIMER</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "button_p8xPJY",
+        "text_de6qUn"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "full_width": true,
+        "padding_top": 12,
+        "padding_bottom": 48,
+        "custom__class": "repod-banner-bottom-btn"
+      }
+    },
+    "collapsible_content_P3dQNR": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_W33Cm7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What’s included in the 100-day pilot?",
+            "icon": "none",
+            "row_content": "<p>1. Comprehensive health assessment – one of the most detailed on the market, covering lifestyle, stress, sleep, movement, nutrition and more to flag potential risks early.<br/>2. Blood test – a deep dive into 29+ biomarkers that give us a clear picture of your current health.<br/>3. Doctor review to interpret your results.<br/>4. Personalised longevity plan designed around your results.<br/>5. 8 coaching sessions over 100 days to keep you on track.<br/>6. Access to our easy-to-use app where your plan, results, and updates all live.<br/>7. A supportive community of like-minded members.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_gQPAgY": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How does the health assessment work?",
+            "icon": "none",
+            "row_content": "<p>You’ll complete an in-depth health and lifestyle review covering:<br/>1. Sleep quality<br/>2. Stress and recovery<br/>3. Nutrition and hydration<br/>4. Movement and physical activity<br/>5. Daily habits and wellbeing<br/>This gives one of the most comprehensive pictures of your overall health available today.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_j9pqPY": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Which blood markers do you test for?",
+            "icon": "none",
+            "row_content": "<p>Our lab analysis covers 29+ key markers specifically chosen by our doctors, covering inflammation, iron, kidney, heart, liver, hormones and vitamins. These include:<br/>1. Inflammation<br/>- CRP<br/>2. Iron Status<br/>- Iron, T.I.B.C, UIBC, Transferrin Saturation, Ferritin<br/>3. Kidney Function<br/>-Urea, Creatinine, eGFR<br/>4. Cholesterol & Heart Health<br/>- Total Cholesterol, Triglycerides, HDL Cholesterol, HDL % of Total, LDL Cholesterol, Non-HDL Cholesterol<br/>5. Protein & Nutrition<br/>- Total Protein, Albumin, Globulin<br/>6. Liver Function<br/>- Alkaline Phosphatase, Alanine Transferase (ALT), Aspartate Transferase (AST), Gamma GT, Bilirubin<br/>7. Vitamins & Hormones<br/>- Vitamin B12, Vitamin D, TSH, FT4, FT3<br/>8. Blood Sugar<br/>- HbA1c<br/>These markers give a comprehensive snapshot of your health, helping us catch potential problems early and build your personalised longevity plan.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_6LMk8N": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Who will I work with?",
+            "icon": "none",
+            "row_content": "<p>1. A doctor to interpret your test results and health assessment, and flag any early warning signs.<br/>2. A coach to translate those insights into practical steps, guiding you through 8 sessions across the 100-day pilot.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_bqnFC9": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What’s this app about?",
+            "icon": "none",
+            "row_content": "<p>Your personal dashboard:<br/>1. All your health data in one secure place.<br/>2. Updates from your doctor & coach.<br/>3. Your evolving longevity plan, always at your fingertips.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_cNDVLT": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the Longevity Plan?",
+            "icon": "none",
+            "row_content": "<p>Think of it as your health roadmap. It’s personalised, practical, and updated as you go. It covers nutrition, movement, recovery, mindset, and more — everything you need to build a healthier, longer life.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_rhjmWr": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How interactive is the programme?",
+            "icon": "none",
+            "row_content": "<p>Very! You’ll get:<br/>1. A doctor review of your healthcare questionnaire and blood biomarkers at the start.<br/>2. 8 coaching sessions (1:1 or group) across 100 days.<br/>3. Weekly check-ins and progress reviews.<br/>4. Ongoing updates via the app.<br/>5. A community cheering you on.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_HEbgBT": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How is this different from a health MOT?",
+            "icon": "none",
+            "row_content": "<p>Most MOTs stop at the test. We don’t. We give you: <br/>✅ A holistic and detailed lifestyle & wellness assessment.<br/>✅ A full biomarker blood test (29+ markers).<br/>✅ A personalised doctor led longevity plan.<br/>✅ 8 coaching sessions to put it into action.<br/>✅ An app that grows with you.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_TMH9x7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What if I change my mind?",
+            "icon": "none",
+            "row_content": "<p>No stress. We offer a 100% money-back guarantee if you withdraw within 14 days.<br/>👉 Note: if the blood test kit has already been issued, that portion isn’t refundable (the labs don’t work for free!).</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_W33Cm7",
+        "collapsible_row_gQPAgY",
+        "collapsible_row_j9pqPY",
+        "collapsible_row_6LMk8N",
+        "collapsible_row_bqnFC9",
+        "collapsible_row_cNDVLT",
+        "collapsible_row_rhjmWr",
+        "collapsible_row_HEbgBT",
+        "collapsible_row_TMH9x7"
+      ],
+      "custom_css": [
+        ".collapsible-content__header strong {color: rgb(229, 192, 133);}"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "frequently asked questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "scheme-4",
+        "container_color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": "sk-faqs faqs-100"
+      }
+    },
+    "rich_text_JFAYEB": {
+      "type": "rich-text",
+      "blocks": {
+        "text_RhEbUT": {
+          "type": "text",
+          "settings": {
+            "text": "<p><a href=\"https://cdn.shopify.com/s/files/1/0706/4243/4289/files/P2eK3EEQ2d8qIOSwmssvBx19I4_1.pdf?v=1760507814\" title=\"https://cdn.shopify.com/s/files/1/0706/4243/4289/files/P2eK3EEQ2d8qIOSwmssvBx19I4_1.pdf?v=1760507814\">READ MORE FAQ HERE</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_RhEbUT"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "full_width": true,
+        "padding_top": 12,
+        "padding_bottom": 48,
+        "custom__class": "repod-banner-bottom-btn"
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "custom_css": [
+        ".card__heading a {color: #e5c085; font-size: 18px;}",
+        "h2.related-products__heading.inline-richtext.h2 {text-align: center; color: #e5c085; font-size: 48px;}",
+        "ul.grid.product-grid.grid--4-col-desktop.grid--1-col-tablet-down {justify-content: center;}"
+      ],
+      "settings": {
+        "heading": "OTHER PRODUCTS",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-4",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "1",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product_compact_7FQLHM",
+    "rich_text_Lyxah9",
+    "image_with_text_Bb4P3V",
+    "image_with_text_tqdFKd",
+    "image_with_text_YBcpYq",
+    "rich_text_xqirpk",
+    "rich_text_KNxANf",
+    "multicolumn_CzQQfx",
+    "how_it_works_QVVDzP",
+    "rich_text_bwLkpL",
+    "multicolumn_KR8fxR",
+    "multicolumn_Mh8KeF",
+    "rich_text_a9GmMx",
+    "expert_image_slider_DzWtjY",
+    "rich_text_w8j3Je",
+    "multicolumn_rxCHfM",
+    "rich_text_npUWdr",
+    "collapsible_content_P3dQNR",
+    "rich_text_JFAYEB",
+    "related-products"
+  ]
+}

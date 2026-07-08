@@ -1,0 +1,167 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "video_with_text_TbkDHp": {
+      "type": "video-with-text",
+      "blocks": {
+        "heading_DJY4KP": {
+          "type": "heading",
+          "settings": {
+            "heading": "Dental biomechanics are changing the game",
+            "heading_size": "h0"
+          }
+        },
+        "text_M3tpyY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>I publish 1-2 articles per week about <strong>how these biomechanics work</strong> and how they manifest themselves in almost all parts of your life.</p>",
+            "text_style": "body",
+            "text_size": "medium"
+          }
+        },
+        "video_text_T8zym6": {
+          "type": "video-text",
+          "settings": {
+            "text": "<p>These biomechanics are the <strong>key to health</strong>, the <strong>key to longevity</strong>, and the <strong>key to beauty</strong>. And I will explain exactly why in this blog.</p>",
+            "text_style": "body",
+            "text_size": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "heading_DJY4KP",
+        "text_M3tpyY",
+        "video_text_T8zym6"
+      ],
+      "settings": {
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "biomechanics_reasons_igYJKV": {
+      "type": "biomechanics-reasons",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "substack_blog_jC7EL4": {
+      "type": "substack-blog",
+      "blocks": {
+        "column_bUPczp": {
+          "type": "column",
+          "settings": {
+            "category": "",
+            "article_type": "",
+            "date": "",
+            "image": "shopify://shop_images/article-1.png",
+            "title": "I Am Going to Challenge What You Believe About Health",
+            "text": "<p>Challenges traditional health views, introduces the balloon theory, and explores how dental health affects overall well-being.</p>",
+            "link_label": "Read post",
+            "link": "https://reviv.substack.com/p/i-am-going-to-challenge-what-you",
+            "youtube_video_url": ""
+          }
+        },
+        "column_Lcbth7": {
+          "type": "column",
+          "settings": {
+            "category": "",
+            "article_type": "",
+            "date": "",
+            "image": "shopify://shop_images/article-2.png",
+            "title": "The Balloon Theory",
+            "text": "<p>Explains how dental health impacts overall well-being by linking teeth to various health issues and introduces methods for addressing these connections.</p>",
+            "link_label": "Read Post",
+            "link": "https://reviv.substack.com/p/so-why-do-the-teeth-relate-to-your",
+            "youtube_video_url": ""
+          }
+        },
+        "column_akCNdL": {
+          "type": "column",
+          "settings": {
+            "category": "",
+            "article_type": "",
+            "date": "",
+            "image": "shopify://shop_images/article-3.png",
+            "title": "How to Correct the Problem",
+            "text": "<p>Provides strategies for addressing dental health issues and correcting related problems for improved overall well-being.</p>",
+            "link_label": "Read Post",
+            "link": "https://reviv.substack.com/p/how-to-solve-the-problem",
+            "youtube_video_url": ""
+          }
+        },
+        "column_HWWqLC": {
+          "type": "column",
+          "settings": {
+            "category": "",
+            "article_type": "",
+            "date": "",
+            "image": "shopify://shop_images/article-4.png",
+            "title": "What Is Impacted by These Biomechanics?",
+            "text": "<p>Explores how dental biomechanics affect various aspects of health and well-being.</p>",
+            "link_label": "Read Post",
+            "link": "https://reviv.substack.com/p/what-is-impacted-by-these-biomechanics",
+            "youtube_video_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_bUPczp",
+        "column_Lcbth7",
+        "column_akCNdL",
+        "column_HWWqLC"
+      ],
+      "settings": {
+        "title": "Check out articles like",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-2ab1995e-c67e-4402-af73-6a85779ae883",
+        "section_color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": "",
+        "custom__class2": ""
+      }
+    },
+    "customer_reviews_K4bX3N": {
+      "type": "customer-reviews",
+      "settings": {
+        "padding_top": 80,
+        "padding_bottom": 200
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "video_with_text_TbkDHp",
+    "biomechanics_reasons_igYJKV",
+    "substack_blog_jC7EL4",
+    "customer_reviews_K4bX3N",
+    "main"
+  ]
+}

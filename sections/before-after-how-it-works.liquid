@@ -1,0 +1,263 @@
+{%- style -%}
+  .before-after-how-it-works {
+    background: #fff;
+    padding: 84px 0 80px;
+  }
+
+  .before-after-how-it-works__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .before-after-how-it-works__eyebrow {
+    margin: 0;
+    font-size: 12px;
+    letter-spacing: 0.38em;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.55);
+    text-transform: uppercase;
+  }
+
+  .before-after-how-it-works__heading {
+    margin: 14px 0 0;
+    font-size: clamp(34px, 5vw, 56px);
+    line-height: 1.05;
+    font-weight: 900;
+    color: #111111;
+  }
+
+  .before-after-how-it-works__subtext {
+    margin: 16px auto 0;
+    font-size: 16px;
+    line-height: 1.45;
+    color: rgba(0, 0, 0, 0.55);
+    max-width: 560px;
+    font-weight: 500;
+  }
+
+  .before-after-how-it-works__media {
+    margin: 42px auto 0;
+    max-width: 520px;
+  }
+
+  .before-after-how-it-works__media img,
+  .before-after-how-it-works__media svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .before-after-how-it-works__steps {
+    margin-top: 44px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .before-after-how-it-works__step {
+    background: #e2c089;
+    border-radius: 16px;
+    padding: 22px 20px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 138px;
+  }
+
+  .before-after-how-it-works__step-number {
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    background: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 900;
+    color: #111111;
+  }
+
+  .before-after-how-it-works__step-title {
+    margin: 12px 0 0;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 900;
+    color: #111111;
+  }
+
+  .before-after-how-it-works__step-text {
+    margin: 8px 0 0;
+    font-size: 12px;
+    line-height: 1.35;
+    color: rgba(0, 0, 0, 0.6);
+    max-width: 190px;
+  }
+
+  @media (max-width: 1024px) {
+    .before-after-how-it-works__steps {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .before-after-how-it-works__media {
+      max-width: 480px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .before-after-how-it-works {
+      padding: 66px 0 62px;
+    }
+
+    .before-after-how-it-works__subtext {
+      font-size: 14px;
+    }
+
+    .before-after-how-it-works__media {
+      margin-top: 30px;
+      max-width: 360px;
+    }
+
+    .before-after-how-it-works__steps {
+      grid-template-columns: 1fr;
+    }
+
+    .before-after-how-it-works__step {
+      min-height: auto;
+    }
+
+    .before-after-how-it-works__step-text {
+      max-width: 260px;
+    }
+  }
+{%- endstyle -%}
+
+<section class="before-after-how-it-works" role="region" aria-label="{{ section.settings.heading | strip_html | escape }}" id="ba-how-it-works">
+  <div class="before-after-how-it-works__inner">
+    {%- if section.settings.eyebrow != blank -%}
+      <p class="before-after-how-it-works__eyebrow">{{ section.settings.eyebrow }}</p>
+    {%- endif -%}
+
+    {%- if section.settings.heading != blank -%}
+      <h2 class="before-after-how-it-works__heading">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+
+    {%- if section.settings.subtext != blank -%}
+      <p class="before-after-how-it-works__subtext">{{ section.settings.subtext }}</p>
+    {%- endif -%}
+
+    <div class="before-after-how-it-works__media">
+      {%- if section.settings.image != blank -%}
+        {{
+          section.settings.image
+          | image_url: width: 1200
+          | image_tag: loading: 'lazy', sizes: '(min-width: 990px) 520px, (min-width: 750px) 480px, 90vw'
+        }}
+      {%- else -%}
+        {{ 'image' | placeholder_svg_tag }}
+      {%- endif -%}
+    </div>
+
+    {%- if section.blocks.size > 0 -%}
+      <div class="before-after-how-it-works__steps">
+        {%- for block in section.blocks -%}
+          <div class="before-after-how-it-works__step" {{ block.shopify_attributes }}>
+            <div class="before-after-how-it-works__step-number">{{ forloop.index }}</div>
+            <h3 class="before-after-how-it-works__step-title">{{ block.settings.title }}</h3>
+            <div class="before-after-how-it-works__step-text">{{ block.settings.text }}</div>
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "BA How It Works",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "HOW IT WORKS"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Four steps to results"
+    },
+    {
+      "type": "text",
+      "id": "subtext",
+      "label": "Subtext",
+      "default": "Simple nightly routine, compounding improvement."
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Wear the device"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Place Reviv comfortably during sleep. No adjustment period needed."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "BA How It Works",
+      "blocks": [
+        {
+          "type": "step",
+          "settings": {
+            "title": "Wear the device",
+            "text": "Place Reviv comfortably during sleep. No adjustment period needed."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "Jaw repositioning",
+            "text": "Gentle guidance shifts the jaw into a natural, relaxed position."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "Muscle relaxation",
+            "text": "Overactive muscles soften over time, reducing tension and grinding."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "Gradual improvement",
+            "text": "Results build week by week—most users notice change within 30 days."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,784 @@
+{% doc %}
+  @prompt
+    Generate a carousel of TikTok style videos. 8 videos that will be scrollable on mobile and also on desktop. Make it responsive on desktop. And make sure it's possible to add and upload the videos from here. Also add every possible adjustments such as paddings, differences or space between videos, margins. Add a title at the top. Also add every possible adjustment, alignment, text size for the title. And for the scroller helpers, also add them with every possible adjustments. When a video is clicked, it needs to go full screen. And there's a possibility to close it. And there's a possibility to click on the sound to activate the sound of the video. Normally the videos will run on loop, mute, without sound. Only when clicked on and turn the sound on, you can hear the sound.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-tiktok-carousel-{{ ai_gen_id }} {
+    padding: {{ block.settings.section_padding_top }}px {{ block.settings.section_padding_horizontal }}px {{ block.settings.section_padding_bottom }}px;
+    background-color: {{ block.settings.background_color }};
+  }
+
+  .ai-tiktok-carousel__container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.max_width }}px;
+    margin: 0 auto;
+  }
+
+  .ai-tiktok-carousel__header-{{ ai_gen_id }} {
+    margin-bottom: {{ block.settings.title_margin_bottom }}px;
+    text-align: {{ block.settings.title_alignment }};
+  }
+
+  .ai-tiktok-carousel__title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    color: {{ block.settings.title_color }};
+    margin: 0;
+    font-weight: {{ block.settings.title_weight }};
+  }
+
+  .ai-tiktok-carousel__wrapper-{{ ai_gen_id }} {
+    position: relative;
+    padding: 0 {{ block.settings.arrow_spacing }}px;
+  }
+
+  .ai-tiktok-carousel__scroll-container-{{ ai_gen_id }} {
+    display: flex;
+    gap: {{ block.settings.video_gap }}px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: {{ block.settings.scroll_padding }}px 0;
+  }
+
+  .ai-tiktok-carousel__scroll-container-{{ ai_gen_id }}::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ai-tiktok-carousel__video-item-{{ ai_gen_id }} {
+    flex: 0 0 {{ block.settings.video_width_mobile }}px;
+    position: relative;
+    border-radius: {{ block.settings.video_border_radius }}px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #000;
+  }
+
+  .ai-tiktok-carousel__video-{{ ai_gen_id }} {
+    width: 100%;
+    height: {{ block.settings.video_height_mobile }}px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .ai-tiktok-carousel__nav-button-{{ ai_gen_id }} {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: {{ block.settings.arrow_size }}px;
+    height: {{ block.settings.arrow_size }}px;
+    border-radius: 50%;
+    background-color: {{ block.settings.arrow_background }};
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+    opacity: {{ block.settings.arrow_opacity | divided_by: 100.0 }};
+  }
+
+  .ai-tiktok-carousel__nav-button-{{ ai_gen_id }}:hover {
+    opacity: 1;
+  }
+
+  .ai-tiktok-carousel__nav-button-{{ ai_gen_id }}:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  .ai-tiktok-carousel__nav-button--prev-{{ ai_gen_id }} {
+    left: 0;
+  }
+
+  .ai-tiktok-carousel__nav-button--next-{{ ai_gen_id }} {
+    right: 0;
+  }
+
+  .ai-tiktok-carousel__nav-button-{{ ai_gen_id }} svg {
+    width: {{ block.settings.arrow_icon_size }}px;
+    height: {{ block.settings.arrow_icon_size }}px;
+    fill: {{ block.settings.arrow_color }};
+  }
+
+  .ai-tiktok-carousel__modal-{{ ai_gen_id }} {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-tiktok-carousel__modal-{{ ai_gen_id }}.active {
+    display: flex;
+  }
+
+  .ai-tiktok-carousel__modal-content-{{ ai_gen_id }} {
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+    height: 90vh;
+    max-height: 900px;
+  }
+
+  .ai-tiktok-carousel__modal-video-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .ai-tiktok-carousel__modal-close-{{ ai_gen_id }} {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    width: {{ block.settings.close_button_size }}px;
+    height: {{ block.settings.close_button_size }}px;
+    background-color: {{ block.settings.close_button_background }};
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+  }
+
+  .ai-tiktok-carousel__modal-close-{{ ai_gen_id }} svg {
+    width: {{ block.settings.close_icon_size }}px;
+    height: {{ block.settings.close_icon_size }}px;
+    stroke: {{ block.settings.close_button_color }};
+  }
+
+  .ai-tiktok-carousel__sound-toggle-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: {{ block.settings.sound_button_size }}px;
+    height: {{ block.settings.sound_button_size }}px;
+    background-color: {{ block.settings.sound_button_background }};
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10001;
+  }
+
+  .ai-tiktok-carousel__sound-toggle-{{ ai_gen_id }} svg {
+    width: {{ block.settings.sound_icon_size }}px;
+    height: {{ block.settings.sound_icon_size }}px;
+    fill: {{ block.settings.sound_button_color }};
+  }
+
+  @media screen and (min-width: 750px) {
+    .ai-tiktok-carousel__video-item-{{ ai_gen_id }} {
+      flex: 0 0 {{ block.settings.video_width_desktop }}px;
+    }
+
+    .ai-tiktok-carousel__video-{{ ai_gen_id }} {
+      height: {{ block.settings.video_height_desktop }}px;
+    }
+
+    .ai-tiktok-carousel__nav-button-{{ ai_gen_id }} {
+      display: flex;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-tiktok-carousel__nav-button-{{ ai_gen_id }} {
+      display: none;
+    }
+  }
+{% endstyle %}
+
+<tiktok-video-carousel-{{ ai_gen_id }} class="ai-tiktok-carousel-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-tiktok-carousel__container-{{ ai_gen_id }}">
+    {% if block.settings.title != blank %}
+      <div class="ai-tiktok-carousel__header-{{ ai_gen_id }}">
+        <h2 class="ai-tiktok-carousel__title-{{ ai_gen_id }}">{{ block.settings.title }}</h2>
+      </div>
+    {% endif %}
+
+    <div class="ai-tiktok-carousel__wrapper-{{ ai_gen_id }}">
+      <button
+        class="ai-tiktok-carousel__nav-button-{{ ai_gen_id }} ai-tiktok-carousel__nav-button--prev-{{ ai_gen_id }}"
+        aria-label="Previous videos"
+        data-direction="prev"
+      >
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 18l-6-6 6-6"/>
+        </svg>
+      </button>
+
+      <div class="ai-tiktok-carousel__scroll-container-{{ ai_gen_id }}" data-scroll-container>
+        {% for i in (1..8) %}
+          {% liquid
+            assign video_key = 'video_' | append: i
+            assign video = block.settings[video_key]
+          %}
+          
+          {% if video != blank %}
+            <div class="ai-tiktok-carousel__video-item-{{ ai_gen_id }}" data-video-index="{{ forloop.index0 }}">
+              <video
+                class="ai-tiktok-carousel__video-{{ ai_gen_id }}"
+                src="{{ video }}"
+                loop
+                muted
+                playsinline
+                preload="metadata"
+              ></video>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <button
+        class="ai-tiktok-carousel__nav-button-{{ ai_gen_id }} ai-tiktok-carousel__nav-button--next-{{ ai_gen_id }}"
+        aria-label="Next videos"
+        data-direction="next"
+      >
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 18l6-6-6-6"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="ai-tiktok-carousel__modal-{{ ai_gen_id }}" data-modal>
+    <div class="ai-tiktok-carousel__modal-content-{{ ai_gen_id }}">
+      <button class="ai-tiktok-carousel__modal-close-{{ ai_gen_id }}" data-close-modal aria-label="Close video">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 6L6 18M6 6l12 12" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <video
+        class="ai-tiktok-carousel__modal-video-{{ ai_gen_id }}"
+        data-modal-video
+        loop
+        muted
+        playsinline
+      ></video>
+      <button class="ai-tiktok-carousel__sound-toggle-{{ ai_gen_id }}" data-sound-toggle aria-label="Toggle sound">
+        <svg class="sound-off" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11 5L6 9H2v6h4l5 4V5zM22 9l-6 6M16 9l6 6"/>
+        </svg>
+        <svg class="sound-on" style="display: none;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11 5L6 9H2v6h4l5 4V5zM19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</tiktok-video-carousel-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class TikTokVideoCarousel{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.scrollContainer = this.querySelector('[data-scroll-container]');
+        this.prevButton = this.querySelector('[data-direction="prev"]');
+        this.nextButton = this.querySelector('[data-direction="next"]');
+        this.videoItems = this.querySelectorAll('.ai-tiktok-carousel__video-item-{{ ai_gen_id }}');
+        this.modal = this.querySelector('[data-modal]');
+        this.modalVideo = this.querySelector('[data-modal-video]');
+        this.closeButton = this.querySelector('[data-close-modal]');
+        this.soundToggle = this.querySelector('[data-sound-toggle]');
+        this.currentVideoSrc = null;
+      }
+
+      connectedCallback() {
+        this.setupNavigation();
+        this.setupVideoClicks();
+        this.setupModal();
+        this.autoplayVideos();
+      }
+
+      setupNavigation() {
+        if (this.prevButton && this.nextButton) {
+          this.prevButton.addEventListener('click', () => this.scroll('prev'));
+          this.nextButton.addEventListener('click', () => this.scroll('next'));
+          
+          this.scrollContainer.addEventListener('scroll', () => this.updateButtonStates());
+          this.updateButtonStates();
+        }
+      }
+
+      scroll(direction) {
+        const scrollAmount = this.scrollContainer.offsetWidth * 0.8;
+        const currentScroll = this.scrollContainer.scrollLeft;
+        
+        if (direction === 'next') {
+          this.scrollContainer.scrollLeft = currentScroll + scrollAmount;
+        } else {
+          this.scrollContainer.scrollLeft = currentScroll - scrollAmount;
+        }
+      }
+
+      updateButtonStates() {
+        if (!this.prevButton || !this.nextButton) return;
+        
+        const isAtStart = this.scrollContainer.scrollLeft <= 0;
+        const isAtEnd = this.scrollContainer.scrollLeft + this.scrollContainer.offsetWidth >= this.scrollContainer.scrollWidth - 1;
+        
+        this.prevButton.disabled = isAtStart;
+        this.nextButton.disabled = isAtEnd;
+      }
+
+      setupVideoClicks() {
+        this.videoItems.forEach((item) => {
+          const video = item.querySelector('video');
+          
+          item.addEventListener('click', () => {
+            this.openModal(video.src);
+          });
+        });
+      }
+
+      setupModal() {
+        this.closeButton.addEventListener('click', () => this.closeModal());
+        
+        this.modal.addEventListener('click', (e) => {
+          if (e.target === this.modal) {
+            this.closeModal();
+          }
+        });
+
+        this.soundToggle.addEventListener('click', () => this.toggleSound());
+
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && this.modal.classList.contains('active')) {
+            this.closeModal();
+          }
+        });
+      }
+
+      openModal(videoSrc) {
+        this.currentVideoSrc = videoSrc;
+        this.modalVideo.src = videoSrc;
+        this.modalVideo.muted = true;
+        this.modal.classList.add('active');
+        this.modalVideo.play();
+        document.body.style.overflow = 'hidden';
+        this.updateSoundIcon();
+      }
+
+      closeModal() {
+        this.modal.classList.remove('active');
+        this.modalVideo.pause();
+        this.modalVideo.src = '';
+        this.currentVideoSrc = null;
+        document.body.style.overflow = '';
+      }
+
+      toggleSound() {
+        this.modalVideo.muted = !this.modalVideo.muted;
+        this.updateSoundIcon();
+      }
+
+      updateSoundIcon() {
+        const soundOff = this.soundToggle.querySelector('.sound-off');
+        const soundOn = this.soundToggle.querySelector('.sound-on');
+        
+        if (this.modalVideo.muted) {
+          soundOff.style.display = 'block';
+          soundOn.style.display = 'none';
+        } else {
+          soundOff.style.display = 'none';
+          soundOn.style.display = 'block';
+        }
+      }
+
+      autoplayVideos() {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            const video = entry.target.querySelector('video');
+            if (entry.isIntersecting) {
+              video.play().catch(() => {});
+            } else {
+              video.pause();
+            }
+          });
+        }, { threshold: 0.5 });
+
+        this.videoItems.forEach((item) => {
+          observer.observe(item);
+        });
+      }
+    }
+
+    customElements.define('tiktok-video-carousel-{{ ai_gen_id }}', TikTokVideoCarousel{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "TikTok video carousel",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Title"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Watch Our Videos"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 16,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "label": "Size",
+      "default": 32
+    },
+    {
+      "type": "select",
+      "id": "title_weight",
+      "label": "Weight",
+      "options": [
+        { "value": "400", "label": "Normal" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi-bold" },
+        { "value": "700", "label": "Bold" }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "select",
+      "id": "title_alignment",
+      "label": "Alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "title_margin_bottom",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom margin",
+      "default": 32
+    },
+    {
+      "type": "header",
+      "content": "Videos"
+    },
+    {
+      "type": "video",
+      "id": "video_1",
+      "label": "Video 1"
+    },
+    {
+      "type": "video",
+      "id": "video_2",
+      "label": "Video 2"
+    },
+    {
+      "type": "video",
+      "id": "video_3",
+      "label": "Video 3"
+    },
+    {
+      "type": "video",
+      "id": "video_4",
+      "label": "Video 4"
+    },
+    {
+      "type": "video",
+      "id": "video_5",
+      "label": "Video 5"
+    },
+    {
+      "type": "video",
+      "id": "video_6",
+      "label": "Video 6"
+    },
+    {
+      "type": "video",
+      "id": "video_7",
+      "label": "Video 7"
+    },
+    {
+      "type": "video",
+      "id": "video_8",
+      "label": "Video 8"
+    },
+    {
+      "type": "header",
+      "content": "Video dimensions"
+    },
+    {
+      "type": "range",
+      "id": "video_width_mobile",
+      "min": 150,
+      "max": 400,
+      "step": 10,
+      "unit": "px",
+      "label": "Width (mobile)",
+      "default": 200
+    },
+    {
+      "type": "range",
+      "id": "video_height_mobile",
+      "min": 250,
+      "max": 600,
+      "step": 10,
+      "unit": "px",
+      "label": "Height (mobile)",
+      "default": 350
+    },
+    {
+      "type": "range",
+      "id": "video_width_desktop",
+      "min": 200,
+      "max": 500,
+      "step": 10,
+      "unit": "px",
+      "label": "Width (desktop)",
+      "default": 280
+    },
+    {
+      "type": "range",
+      "id": "video_height_desktop",
+      "min": 300,
+      "max": 800,
+      "step": 10,
+      "unit": "px",
+      "label": "Height (desktop)",
+      "default": 500
+    },
+    {
+      "type": "range",
+      "id": "video_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "video_gap",
+      "min": 4,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Gap between videos",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Navigation arrows"
+    },
+    {
+      "type": "range",
+      "id": "arrow_size",
+      "min": 30,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Button size",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "arrow_icon_size",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Icon size",
+      "default": 24
+    },
+    {
+      "type": "color",
+      "id": "arrow_background",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "arrow_color",
+      "label": "Icon color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "arrow_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Opacity",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "arrow_spacing",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "label": "Spacing from edge",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Modal controls"
+    },
+    {
+      "type": "range",
+      "id": "close_button_size",
+      "min": 30,
+      "max": 70,
+      "step": 2,
+      "unit": "px",
+      "label": "Close button size",
+      "default": 44
+    },
+    {
+      "type": "range",
+      "id": "close_icon_size",
+      "min": 16,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Close icon size",
+      "default": 24
+    },
+    {
+      "type": "color",
+      "id": "close_button_background",
+      "label": "Close button background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "close_button_color",
+      "label": "Close icon color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "sound_button_size",
+      "min": 30,
+      "max": 70,
+      "step": 2,
+      "unit": "px",
+      "label": "Sound button size",
+      "default": 44
+    },
+    {
+      "type": "range",
+      "id": "sound_icon_size",
+      "min": 16,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Sound icon size",
+      "default": 24
+    },
+    {
+      "type": "color",
+      "id": "sound_button_background",
+      "label": "Sound button background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "sound_button_color",
+      "label": "Sound icon color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 800,
+      "max": 1600,
+      "step": 50,
+      "unit": "px",
+      "label": "Maximum width",
+      "default": 1200
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "section_padding_horizontal",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Horizontal padding",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "scroll_padding",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Scroll container padding",
+      "default": 8
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#000000"
+    }
+  ],
+  "presets": [
+    {
+      "name": "TikTok video carousel"
+    }
+  ]
+}
+{% endschema %}

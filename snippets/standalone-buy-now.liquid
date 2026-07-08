@@ -1,0 +1,30 @@
+{%- if product.available -%}
+  <form action="/cart/add" method="post" class="buy-now-form">
+    <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+    <input type="hidden" name="quantity" value="1">
+    <button type="button" class="buy-now-button">{{ block.settings.buy_button_text | default: 'Buy Now' }}</button>
+  </form>
+
+  <script>
+    const form = document.querySelector('.buy-now-form');
+    const button = document.querySelector('.buy-now-button');
+    button.addEventListener('click', function() {
+      const data = new FormData(form);
+      fetch('/cart/add', {
+        method: 'POST',
+        body: data
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.status == 'success') {
+          window.location = '/checkout';
+        } else {
+          // Handle error, e.g., alert('Failed to add product');
+        }
+      })
+      .catch(error => {
+        // Handle error, e.g., alert('Error occurred');
+      });
+    });
+  </script>
+{%- endif -%}

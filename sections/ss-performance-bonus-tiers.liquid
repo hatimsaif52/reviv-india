@@ -1,0 +1,282 @@
+{% schema %}
+{
+  "name": "Performance Bonus Tiers",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge",
+      "label": "Top Label",
+      "default": "Performance bonus tiers"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Earn up to $300 per asset."
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Right Description",
+      "default": "Bonuses are strictly tied to 30-day ad performance. You review the exact ROAS metrics before we process the payout."
+    },
+    {
+      "type": "textarea",
+      "id": "footer_note",
+      "label": "Footer Note",
+      "default": "ROAS Definition: Return on Ad Spend = Revenue Generated ÷ Ad Spend, calculated over a 30-day tracking window. Reports are delivered within 14 days of window close."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tier",
+      "name": "Tier",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tier_label",
+          "label": "Tier Label",
+          "default": "TIER A"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Price / Value",
+          "default": "$300"
+        },
+        {
+          "type": "text",
+          "id": "roas",
+          "label": "ROAS Range",
+          "default": "Above 3× ROAS"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Exceptional performance. Ad revenue exceeds 3× the allocated ad spend."
+        },
+        {
+          "type": "checkbox",
+          "id": "highlight",
+          "label": "Highlight this tier",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Performance Bonus Tiers",
+      "blocks": [
+        { "type": "tier", "settings": { "highlight": true } },
+        { "type": "tier" },
+        { "type": "tier" },
+        { "type": "tier" }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<section class="tiers-section" id="tiktok-earnings">
+  <div class="tiers-container">
+
+    <!-- Header -->
+    <div class="tiers-header">
+      <div class="tiers-left">
+        <p class="tiers-badge">{{ section.settings.badge }}</p>
+        <h2 class="tiers-heading">{{ section.settings.heading }}</h2>
+      </div>
+
+      <div class="tiers-right">
+        <p>{{ section.settings.description }}</p>
+      </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="tiers-grid">
+      {% for block in section.blocks %}
+        <div class="tier-card {% if block.settings.highlight %}highlight{% endif %}">
+          
+          <div class="tier-label">
+            {{ block.settings.tier_label }}
+          </div>
+
+          <div class="tier-price">
+            {{ block.settings.price }}
+          </div>
+
+          <div class="tier-roas">
+            {{ block.settings.roas }}
+          </div>
+
+          <div class="tier-divider"></div>
+
+          <p class="tier-description">
+            {{ block.settings.description }}
+          </p>
+
+        </div>
+      {% endfor %}
+    </div>
+
+    <!-- Footer -->
+    <div class="tiers-footer">
+      {{ section.settings.footer_note }}
+    </div>
+
+  </div>
+</section>
+
+<style>
+.tiers-section {
+  background: radial-gradient(circle at top, #1a1a1a, #000);
+  color: #fff;
+  padding: 100px 20px;
+}
+
+.tiers-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.tiers-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items:flex-end;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.tiers-left {
+  max-width: 600px;
+}
+
+.tiers-badge {
+  color: #d6a97a;
+  margin-bottom: 10px;
+}
+
+.tiers-heading {
+    font-size: 72px;
+    line-height: 1.2;
+    color: #fff;
+    font-weight: 500;
+    margin: 30px 0 0;
+}
+
+.tiers-heading span {
+  color: #EEC88B;
+}
+
+.tiers-right {
+  max-width: 420px;
+  color: #fff;
+  line-height: 1.6;
+  font-size:19px;
+}
+
+/* Grid */
+.tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Card */
+.tier-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 20px;
+  padding: 30px;
+  position: relative;
+    &:hover, &.highlight{
+        border-color:#EEC88B;
+        .tier-label{
+            color:#EEC88B;
+            background:#2D2720;
+        }
+        .tier-price {
+         color: #EEC88B;
+        }
+        .tier-roas{
+            border-color:#5B4320;
+        }
+    }
+}
+
+/* Label */
+.tier-label {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 11px;
+    margin-bottom: 20px;
+}
+
+/* Price */
+.tier-price {
+  font-size: 42px;
+  font-weight: 500;
+font-family: "Font-1737687022306" !important;
+  color: #ddd;
+  margin-bottom: 5px;
+}
+
+/* ROAS */
+.tier-roas {
+    font-size: 14px;
+    color: #aaa;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid;
+}
+
+/* Divider */
+.tier-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+  margin-bottom: 20px;
+}
+
+/* Description */
+.tier-description {
+  font-size: 14px;
+  color: #bbb;
+  line-height: 1.6;
+}
+
+/* Footer */
+.tiers-footer {
+  margin-top: 40px;
+  padding: 20px;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px;
+  font-size: 15px;
+  color: #fff;
+      span{
+       color:#EEC88B; 
+    }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .tiers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .tiers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tiers-heading {
+    font-size: 34px;
+  }
+}
+</style>

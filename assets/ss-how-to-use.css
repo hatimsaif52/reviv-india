@@ -1,0 +1,134 @@
+
+.how-to-use {
+  position: relative;
+}
+
+.how-to-use__heading {
+  text-align: center;
+  margin-bottom: 56px;
+  font-weight: 600;
+}
+
+/* Wrapper */
+.how-to-use__wrapper {
+  position: relative;
+}
+
+/* Timeline */
+.how-to-use__timeline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.how-to-use__timeline::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 17%;
+  right: 17%;
+  border-top: 2px dashed rgba(255, 255, 255, 0.35);
+  transform: translateY(-50%);
+}
+
+.how-to-use__step-indicator {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.how-to-use__number {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #f2c27c;
+  color: #000;
+  font-weight: 600;
+  font-family: "Font-1737687022306" !important;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Cards */
+.how-to-use__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+}
+
+.how-to-use__item {
+  text-align: center;
+}
+
+.how-to-use__image img {
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+    display: block;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+}
+
+.how-to-use__text {
+    margin-top: 14px;
+    font-size: 17px;
+    font-family: "Font-1737687022306" !important;
+    line-height: 1.4;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width: 749px) {
+
+  .how-to-use__wrapper {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+  }
+
+  /* Vertical timeline */
+  .how-to-use__timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    justify-content: space-between;
+  }
+
+  .how-to-use__timeline::before {
+    top: 4px;
+    bottom: 120px;
+    left: 50%;
+    right: auto;
+    border-top: none;
+    border-left: 2px dashed rgba(255, 255, 255, 0.35);
+    transform: translateX(-50%);
+  }
+
+  .how-to-use__step-indicator {
+    margin-bottom: 120px;
+  }
+
+  .how-to-use__grid {
+    grid-template-columns: 1fr;
+    gap: 64px;
+  }
+
+  .how-to-use__item {
+    /* display: flex; */
+    gap: 16px;
+    text-align: left;
+  }
+
+  .how-to-use__image {
+    max-width: 350px;
+    flex-shrink: 0;
+  }
+}

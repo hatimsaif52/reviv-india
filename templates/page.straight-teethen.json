@@ -1,0 +1,781 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_banner_g8wcVV": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_N68zMY": {
+          "type": "heading",
+          "settings": {
+            "heading": "Does Reviv straighten teeth?",
+            "heading_size": "hxl"
+          }
+        },
+        "text_TxQ6ti": {
+          "type": "text",
+          "settings": {
+            "text": "Yes because the teeth follow the improvements in the skull",
+            "text_style": "subtitle"
+          }
+        },
+        "buttons_apAtQJ": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Join now",
+            "button_id": "form-popup-btn",
+            "button_link_1": "#",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_N68zMY",
+        "text_TxQ6ti",
+        "buttons_apAtQJ"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Use_cCase_straighten_teeth_cover_image.png",
+        "image_overlay_opacity": 50,
+        "image_height": "medium",
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-522b6c27-788f-4b7e-bbb7-d4f61d40572f",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "custom_classes": "sk-main-banner"
+      }
+    },
+    "free_trial_CX8H9e": {
+      "type": "free-trial",
+      "blocks": {
+        "heading_MgDHRz": {
+          "type": "heading",
+          "settings": {
+            "heading": "START 1-MONTH FREE TRIAL TODAY",
+            "title_color": "#ffffff"
+          }
+        },
+        "text_FqcRn7": {
+          "type": "text",
+          "settings": {
+            "text_para": "$00.00",
+            "desc_color": "#e5c085"
+          }
+        },
+        "button_YBCQ63": {
+          "type": "button",
+          "settings": {
+            "button_label": "JOIN NOW",
+            "button_id": "form-popup-btn",
+            "button_link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MgDHRz",
+        "text_FqcRn7",
+        "button_YBCQ63"
+      ],
+      "settings": {
+        "back_color": "#232021",
+        "padding_top": 16,
+        "padding_bottom": 16,
+        "custom_class": ""
+      }
+    },
+    "tmj_block_UtYCDW": {
+      "type": "tmj-block",
+      "blocks": {
+        "rich_text_7Mewpm": {
+          "type": "rich_text",
+          "settings": {
+            "rich_text": "<p>Reviv works by putting a sort of door stop between your skull and your jaw, which ends up stretching the soft tissue that covers the skull as well as the tissue in the mouth.</p>"
+          }
+        },
+        "rich_text_D4G9EG": {
+          "type": "rich_text",
+          "settings": {
+            "rich_text": "<p>As this happens in our experience the skull will sort of 'inflate' like a balloon, which makes more space for everything inside.</p>"
+          }
+        },
+        "rich_text_ntGJxe": {
+          "type": "rich_text",
+          "name": "3rd bullet",
+          "settings": {
+            "rich_text": "<p>The cranial bones, which are connected at sutures, will move to a better, more aligned position.</p>"
+          }
+        },
+        "rich_text_C4jMHz": {
+          "type": "rich_text",
+          "settings": {
+            "rich_text": "<p>The jaw will also move to a healthier position over time.</p>"
+          }
+        },
+        "rich_text_FBPAdU": {
+          "type": "rich_text",
+          "settings": {
+            "rich_text": "<p>The upper teeth are connected to the bones and jaw and so they also \"go for the ride.\"  This results in the teeth getting straighter and the palate getting wider.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "rich_text_7Mewpm",
+        "rich_text_D4G9EG",
+        "rich_text_ntGJxe",
+        "rich_text_C4jMHz",
+        "rich_text_FBPAdU"
+      ],
+      "settings": {
+        "heading": "Why Reviv will typically straighten the teeth",
+        "padding_top": "pt-8",
+        "padding_bottom": "pb-12"
+      }
+    },
+    "image_with_text_zpBKbe": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_GrRteP": {
+          "type": "heading",
+          "settings": {
+            "heading": "Some results from the community",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_GrRteP"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Straight-Teethen-Content-Docs-10-12-2025_11_55_PM.png",
+        "height": "adapt",
+        "desktop_image_width": "large",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "wrap_image_to_container": false,
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom__class": ""
+      }
+    },
+    "multicolumn_HzjGGH": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_HqVALW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/d2365bea-5999-40f4-83df-221eedc32758_640x427_2d606dea-b65c-4daa-a593-5cc5efab3ed7.webp",
+            "title": "Crooked teeth = Crushed skull",
+            "text": "<p>Crooked teeth are a function of the space in your palate, which is a function of your skull.</p>",
+            "link_label": "Read More",
+            "link": "https://reviv.substack.com/p/crooked-teeth-crushed-skull",
+            "youtube_video_url": "",
+            "isNewTab": true
+          }
+        },
+        "column_MQQHXx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/b4a1cb1e-c919-44b4-a664-fdc4d89a4c97_721x424_82c9d930-3bd3-4639-a9bf-56b0a67eb753.webp",
+            "title": "Teeth need to be able to move with the Reviv process",
+            "text": "<p>So my recommendation is NOT to wear braces, aligners or retainers as you do Reviv.</p>",
+            "link_label": "Read More",
+            "link": "https://reviv.substack.com/p/teeth-need-to-be-able-to-move-with",
+            "youtube_video_url": "",
+            "isNewTab": true
+          }
+        },
+        "column_9KzYyy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/fa8436f2-3267-4c30-ab20-c6d9b9c95193_601x351_5feddb42-d686-40d4-9461-f20dfbea1789.webp",
+            "title": "Does this process widen the palate?",
+            "text": "<p>It does and it does it the only correct way in my view.</p>",
+            "link_label": "Read More",
+            "link": "https://reviv.substack.com/p/does-this-process-widen-the-palate?utm_source=publication-search",
+            "youtube_video_url": "",
+            "isNewTab": true
+          }
+        },
+        "column_9QpMhY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/edc002ea-a3e3-4153-9adc-2e5d7a4ed861_1155x648_14344cbe-5b7c-47d1-8141-8216e339f037.webp",
+            "title": "Does Reviv straighten the teeth?",
+            "text": "<p>Yes and I'll explain why.</p>",
+            "link_label": "Read More",
+            "link": "https://reviv.substack.com/p/does-reviv-straighten-the-teeth",
+            "youtube_video_url": "",
+            "isNewTab": true
+          }
+        }
+      },
+      "block_order": [
+        "column_HqVALW",
+        "column_MQQHXx",
+        "column_9KzYyy",
+        "column_9QpMhY"
+      ],
+      "settings": {
+        "title": "Articles I have written",
+        "box_link": false,
+        "heading_size": "hxl",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "section_color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": "sk-multi-col uc-multi-col"
+      }
+    },
+    "skool_image_slider_dhbCwq": {
+      "type": "skool-image-slider",
+      "blocks": {
+        "image_d9UTXy": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/0566d63318c1f07adae9e95cd7e6468f.png"
+          }
+        },
+        "image_Nqnm9h": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/ab4caac789e7b58aebe523df6f63fc31.png"
+          }
+        },
+        "image_74QiWf": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/0566d63318c1f07adae9e95cd7e6468f.png"
+          }
+        },
+        "image_WjzMVb": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/0566d63318c1f07adae9e95cd7e6468f.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_d9UTXy",
+        "image_Nqnm9h",
+        "image_74QiWf",
+        "image_WjzMVb"
+      ],
+      "settings": {
+        "section_head": "Take a look at skool",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_cmmbXX": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_UFy37y": {
+          "type": "heading",
+          "settings": {
+            "heading": "Not ready to purchase?",
+            "heading_size": "h1"
+          }
+        },
+        "text_HiNLnk": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Try a free month trial of our Skool community instead and see what hundreds of others who are doing the process are posting.</p>"
+          }
+        },
+        "button_ktXcj4": {
+          "type": "button",
+          "settings": {
+            "button_label": "Join now",
+            "button_link": "#",
+            "button_id": "form-popup-btn yellow-btn",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_UFy37y",
+        "text_HiNLnk",
+        "button_ktXcj4"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "custom__class": ""
+      }
+    },
+    "product_cards_j8jV4n": {
+      "type": "product-cards",
+      "blocks": {
+        "product_card_rnJawi": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-two",
+            "is_new": true
+          }
+        },
+        "product_card_jBbiK3": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-two-without-support",
+            "is_new": true
+          }
+        },
+        "product_card_VYkMzd": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-one",
+            "is_new": false
+          }
+        },
+        "product_card_Jf3L8L": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-one-without-support",
+            "is_new": false
+          }
+        },
+        "product_card_kiLBxy": {
+          "type": "product_card",
+          "settings": {
+            "product": "1-year-subscription-only",
+            "is_new": false
+          }
+        }
+      },
+      "block_order": [
+        "product_card_rnJawi",
+        "product_card_jBbiK3",
+        "product_card_VYkMzd",
+        "product_card_Jf3L8L",
+        "product_card_kiLBxy"
+      ],
+      "custom_css": [
+        ".product-card__price,.product-card__title {color: #000 !important;}",
+        ".product-card__title {font-size: 18px; line-height: normal;}",
+        ".swiper-pagination-bullet: not(.swiper-pagination-bullet-active) {border-color: #000;}",
+        ".product-form {margin-top: 0;}",
+        "span.swiper-pagination-bullet {margin: 0 5px !important;}",
+        ".swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {border-color: #000; opacity: 1;}",
+        ".swiper {width: auto; overflow: hidden;}",
+        ".add-to-cart__button {border: 1px solid #000000; color: black;}"
+      ],
+      "settings": {
+        "section_color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_classes": ""
+      }
+    },
+    "collapsible_content_JN3rhi": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_UjR4JN": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long does it take to straighten teeth with Reviv?",
+            "icon": "none",
+            "row_content": "<p>Things should start happening right away but for good visual results it usually takes at least 6 months.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_tUj3HX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is teeth straightening painful?",
+            "icon": "none",
+            "row_content": "<p>You may experience some discomfort or pressure when you first start doing Reviv, but this is typically temporary and subsides after awhile. <br/><br/>Most users describe the sensation as pressure rather than pain. And discomfort is typically a sign that your teeth are moving into their proper positions.  </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_6bErhk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is this a healthier way to straighten the teeth than braces or aligners?",
+            "icon": "none",
+            "row_content": "<p>In our view absolutely.  Because our rule is that the teeth are always exactly where the skull wants them to be.  And so you need to focus on fixing the skull, not the teeth.<br/><br/>The mouthguard focuses on the skull whereas orthodontists focus on moving teeth.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_jEbzGk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Will I need to wear a retainer after treatment?",
+            "icon": "none",
+            "row_content": "<p>No. Retainers, in our view, are for when you artificially move the teeth out of alignment with the skull.</p><p>With a mouthguard you are not doing that.  You are fixing the skull and the teeth are moving with these improvements.  So when you are done your teeth and skull are still in alignment.</p><p> However you may have a posterior open bite and so you need to continue to support the open bite till it closes, which should happen towards the end of the process if you did not grind much enamel off.  We wrote more about this here: <a href=\"https://reviv.substack.com/p/the-mystery-around-posterior-open\" target=\"_blank\">The Mystery Around Posterior Open Bites</a></p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_UjR4JN",
+        "collapsible_row_tUj3HX",
+        "collapsible_row_6bErhk",
+        "collapsible_row_jEbzGk"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "frequently asked questions",
+        "heading_size": "hxxl",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": "sk-faqs"
+      }
+    },
+    "1743752606d7c9c7a3": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_RjGj3h": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "414780",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_RjGj3h"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "multicolumn_9Vm9Vw": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_jDjA4i": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_8986965a-6016-465d-ae9e-1c5926da57dd_00000925_000.webp",
+            "title": "TMJ and Facial Symmetry",
+            "text": "<p>The Connection Nobody Talks About</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/tmj-and-facial-symmetry-the-connection-nobody-talks-about?_pos=21&_sid=7c1910555&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_eKaaf4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_8986965a-6016-465d-ae9e-1c5926da57dd_00001065_000.webp",
+            "title": "Best TMJ Mouthguards in 2025",
+            "text": "<p>Top Picks Compared</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/best-tmj-mouthguards-in-2025-top-picks-compared?_pos=28&_sid=93c40b4aa&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_NFEqe4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/3f62ea49-90f8-41ea-904f-18ece128b061_620x342_73159b2f-315d-4ab1-8fd8-8fe5e23123de.webp",
+            "title": "A few thoughts on TMJ groups on Facebook and Reddit",
+            "text": "<p>My history on TMJ groups of various sorts runs very deep.</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/a-few-thoughts-on-tmj-groups-on-facebook-and-reddit?_pos=34&_sid=93c40b4aa&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_GdQ3z4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-08-06_110052.webp",
+            "title": "What Are the Risks of Untreated TMJ?",
+            "text": "<p>In this post, I’ll break down the real risks of untreated TMJ.. no fluff, just straight talk.</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/what-are-the-risks-of-untreated-tmj?_pos=1&_sid=7c1910555&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_HkbzLW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-08-04_092446.webp",
+            "title": "The Relationship Between TMJ, Headaches, and Migraines",
+            "text": "<p>In this guide, I’ll walk you through how your jaw might be the hidden root of your head pain, what to do about it, and why most treatments miss the mark.</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/the-relationship-between-tmj-headaches-and-migraines?_pos=4&_sid=7c1910555&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_nacU6E": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Reviv-_-Metaobjects-_-Shopify-07-31-2025_03_41_PM.webp",
+            "title": "TMJ and Digestive Health",
+            "text": "<p>Unexpected Connections</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/tmj-and-digestive-health-unexpected-connections?_pos=5&_sid=7c1910555&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_hY7x9V": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-08-09_121223_122de5ee-4521-402d-8fbe-ccdaecf4b8d2.webp",
+            "title": "Are Custom Mouthguards Effective for TMJ Relief?",
+            "text": "<p>This post will break down the science, the hype, and the pitfalls so you can make an informed decision before spending a dime.</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/are-custom-mouthguards-effective-for-tmj-relief?_pos=6&_sid=7c1910555&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_Dd6bXX": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-08-01_081728_a4bad56f-88e2-4aa5-8cdd-6c71c7ee7664.webp",
+            "title": "Stress, Anxiety, and Their Impact on TMJ",
+            "text": "<p>Let’s cut the fluff and fix your jaw pain</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/stress-anxiety-and-their-impact-on-tmj?_pos=7&_sid=7c1910555&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_cgN6ih": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-08-04_094529.webp",
+            "title": "Mouthguards for Athletes",
+            "text": "<p>TMJ Prevention and Performance</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/mouthguards-for-athletes-tmj-prevention-and-performance?_pos=9&_sid=7c1910555&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_raERT4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-08-04_103031_1288311a-b296-4979-916e-88d515be0937.webp",
+            "title": "Innovations in TMJ Therapy",
+            "text": "<p>What’s New in 2025?</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/innovations-in-tmj-therapy-what-s-new-in-2025?_pos=10&_sid=7c1910555&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_qQyt6x": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_00001546_001_c1535b43-5c3d-4a99-a2eb-819f1e022db2.webp",
+            "title": "TMJ in Women",
+            "text": "<p>Hormones, Perimenopause & Night Grinding</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/tmj-in-women-hormones-perimenopause-night-grinding",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_UCU6xy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___M_72975f27-d798-4f99-92e5-c2f666e424ee.webp",
+            "title": "TMJ, Tinnitus, and Ear Pain",
+            "text": "<p>What’s the Connection and Where a Mouthguard Fits</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/tmj-tinnitus-and-ear-pain-what-s-the-connection-and-where-a-mouthguard-fits",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_agm4jM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2568-05-26_at_21.06.36_1.webp",
+            "title": "TMJ vs Stress",
+            "text": "<p>How to Tell the Difference & What Actually Works</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/tmj-vs-stress-how-to-tell-the-difference-what-actually-works",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_d6N9j3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2568-04-05_at_18.38.44.webp",
+            "title": "TMJ Treatment Timeline",
+            "text": "<p>What to Expect When Using Oral Appliances</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/tmj-treatment-timeline-what-to-expect-when-using-oral-appliances",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_jdFt6k": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_00002989_003_989dc05f-6004-4974-83d2-911fd4e7eca2.webp",
+            "title": "The Future of TMJ Mouth Guards",
+            "text": "<p>Innovations, Smart Tech, and Eco-Friendly Options</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/the-future-of-tmj-mouth-guards-innovations-smart-tech-and-eco-friendly-options",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_3LrcrY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2568-04-05_at_18.35.29.webp",
+            "title": "The Complete Guide to TMJ Exercises",
+            "text": "<p>Natural Relief Without a Mouth Guard</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/the-complete-guide-to-tmj-exercises-natural-relief-without-a-mouth-guard",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_dbC6Vj": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/image_-_2025-09-20T144748.407.png",
+            "title": "The TMJ Diet",
+            "text": "<p>Foods That Help Reduce Inflammation and Pain</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/the-tmj-diet-foods-that-help-reduce-inflammation-and-pain",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_nijVEf": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_8986965a-6016-465d-ae9e-1c5926da57dd_00003831_001.webp",
+            "title": "The TMJ Diet",
+            "text": "<p>Foods That Help Reduce Inflammation and Pain.</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/the-tmj-diet-foods-that-help-reduce-inflammation-and-pain",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        }
+      },
+      "block_order": [
+        "column_jDjA4i",
+        "column_eKaaf4",
+        "column_NFEqe4",
+        "column_GdQ3z4",
+        "column_HkbzLW",
+        "column_nacU6E",
+        "column_hY7x9V",
+        "column_Dd6bXX",
+        "column_cgN6ih",
+        "column_raERT4",
+        "column_qQyt6x",
+        "column_UCU6xy",
+        "column_agm4jM",
+        "column_d6N9j3",
+        "column_jdFt6k",
+        "column_3LrcrY",
+        "column_dbC6Vj",
+        "column_nijVEf"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "OTHER RELATED ARTICLES",
+        "box_link": false,
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "section_color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_g8wcVV",
+    "free_trial_CX8H9e",
+    "tmj_block_UtYCDW",
+    "image_with_text_zpBKbe",
+    "multicolumn_HzjGGH",
+    "skool_image_slider_dhbCwq",
+    "rich_text_cmmbXX",
+    "product_cards_j8jV4n",
+    "collapsible_content_JN3rhi",
+    "1743752606d7c9c7a3",
+    "multicolumn_9Vm9Vw"
+  ]
+}

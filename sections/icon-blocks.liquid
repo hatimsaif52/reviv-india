@@ -1,0 +1,177 @@
+<div class="icon-blocks-section">
+  <div class="page-width">
+    {% if section.settings.heading %}
+      <h2>{{ section.settings.heading }}</h2>
+    {% endif %}
+    {% if section.settings.subheading %}
+      <p class="subheading">{{ section.settings.subheading }}</p>
+    {% endif %}
+
+    <div class="blocks-grid columns-{{ section.settings.columns_per_row }}">
+      {% for block in section.blocks %}
+        <div class="block">
+            <a href="{{ block.settings.link }}" class="block-link" target="_blank">
+              {% if block.settings.icon %}
+                <img src="{{ block.settings.icon | image_url: width: 64 }}" alt="{{ block.settings.title | escape }}">
+              {% endif %}
+              <span>{{ block.settings.title }}</span>
+            </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<style>
+.icon-blocks-section {
+    padding: 40px 20px 70px 20px;
+    text-align: center;
+    background: #232021;
+    color: #fff;
+}
+.icon-blocks-section .subheading {
+    margin: 0;
+    font-size: 20px;
+}
+.blocks-grid {
+  display: grid;
+  gap: 30px;
+  margin-top: 30px;
+}
+.blocks-grid.columns-1 {
+  grid-template-columns: 1fr;
+}
+.blocks-grid.columns-2 {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 30px 100px;
+}
+.blocks-grid.columns-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.block img {
+  max-width: 64px;
+  margin-bottom: 15px;
+}
+.block h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+.block-link {
+  color: #007ace;
+  text-decoration: underline;
+  font-size: 0.95em;
+}
+  .icon-blocks-section h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.icon-blocks-section * {
+    color: #fff;
+}
+
+.icon-blocks-section .block {
+    display: flex;
+    align-items: center;
+}
+
+.icon-blocks-section .block img {
+    margin: 0;
+}
+
+.icon-blocks-section .block a.block-link {
+    text-decoration: none;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    background: #EFC98B;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.icon-blocks-section .block a.block-link span {
+    color: #000;
+    font-weight: bold;
+}
+@media only screen and (max-width: 850px) {
+  body .blocks-grid.columns-2 {
+    grid-template-columns: 1fr;
+    margin: 40px 0;
+  }
+}
+
+</style>
+{% schema %}
+{
+  "name": "Icon Blocks",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Explore Our Features"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Why customers love us"
+    },
+    {
+      "type": "select",
+      "id": "columns_per_row",
+      "label": "Columns per row",
+      "default": "3",
+      "options": [
+        {
+          "value": "1",
+          "label": "1 per row"
+        },
+        {
+          "value": "2",
+          "label": "2 per row"
+        },
+        {
+          "value": "3",
+          "label": "3 per row"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature_block",
+      "name": "Feature Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Fast Shipping"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Icon Blocks Section",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

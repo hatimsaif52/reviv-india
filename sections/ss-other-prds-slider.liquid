@@ -1,0 +1,350 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .other-products-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  .other-products-heading {
+    font-size: 28px;
+    font-weight: 500;
+    color: white;
+  }
+
+  .other-products-arrows {
+    display: flex;
+    gap: 24px;
+  }
+
+  .product-card {
+    /* min-height: 531px; */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-card__link {
+    text-decoration: none;
+  }
+
+  .product-card-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+
+  .product-card__image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+
+  .product-card__badge-wrapper {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+  }
+
+  .product-card-image-wrapper {
+    cursor: pointer;
+  }
+
+  .product-card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .product-card__title {
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 500;
+    color: white;
+    margin-top: 32px;
+  }
+
+  .product-card__price {
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 400;
+    color: #FFFFFFCC;
+    margin-top: 12px;
+    margin-bottom: 32px;
+  }
+
+  .product-card__cart-button {
+    background: transparent;
+    margin-top: auto;
+    border-radius: 100px;
+    border: 1px solid #FFFFFF;
+    font-size: 20px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: white;
+    padding: 12px 24px;
+    width: fit-content;
+    cursor: pointer;
+  }
+
+  .product-form {
+    margin-top: auto;
+  }
+
+  .add-to-cart__button {
+    padding: 12px 24px;
+    background-color: transparent;
+    border-radius: 100px;
+    border: 1px solid #FFFFFF;
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+    cursor: pointer;
+  }
+.other-products-arrows .arrow-btn{
+  cursor: pointer;
+}
+  @media screen and (max-width: 768px) {
+    .product-cards-swiper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      row-gap: 4rem;
+    }
+
+    .swiper-wrapper {
+      display: contents !important;
+    }
+
+    .swiper-slide {
+      width: 100% !important;
+      flex-shrink: 0 !important;
+      max-width: 100%;
+      margin-right: 0 !important;
+    }
+
+    .other-products-arrows {
+      display: none;
+    }
+
+    .product-card {
+      min-height: 350px;
+    }
+
+    .product-card__title,
+    .add-to-cart__button {
+      font-size: 16px;
+    }
+  }
+{%- endstyle -%}
+
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+
+<div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }} {{ section.settings.custom_classes }}">
+  <div class="page-width">
+
+    <!-- Header with heading + arrows -->
+    <div class="other-products-header">
+      <h2 class="other-products-heading">{{ section.settings.heading }}</h2>
+      <div class="other-products-arrows">
+        <div class="product-cards-button-prev arrow-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+             <path d="M15 6C15 6 9 10.419 9 12C9 13.581 15 18 15 18" stroke="white" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <div class="product-cards-button-next arrow-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 6C9 6 15 10.419 15 12C15 13.581 9 18 9 18" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-cards-wrapper">
+      <div class="swiper product-cards-swiper">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            {% assign product = all_products[block.settings.product] %}
+            {% if product != blank and product.id %}
+              {% assign featured_image = product.media | first %}
+              <div class="swiper-slide product-card">
+                <a href="{{ product.url }}" class="product-card__link">
+                  <div class="product-card-image-wrapper">
+                    {% if featured_image %}
+                      {{
+                        featured_image
+                        | image_url: width: 1900
+                        | image_tag: alt: product.title, class: 'product-card__image', loading: 'lazy'
+                      }}
+                    {% else %}
+                      <div style="width:100%;height:100%;background:#eee;display:flex;align-items:center;justify-content:center;">
+                        <span>No Image</span>
+                      </div>
+                    {% endif %}
+
+                    {% if block.settings.is_new %}
+                      <div class="product-card__badge-wrapper">
+                        {{ 'new-badge.png' | file_url | img_tag: 'New Badge image' }}
+                      </div>
+                    {% endif %}
+                  </div>
+
+                  <div class="product-card__title">{{ product.title }}</div>
+
+                  {%- liquid
+                    if settings.currency_code_enabled
+                      assign formatted_price = product.first_available_variant.price | money_with_currency
+                    else
+                      assign formatted_price = product.first_available_variant.price | money
+                    endif
+                    if cart.currency.iso_code == 'EUR'
+                      assign formatted_price = formatted_price | replace: ',', '.'
+                    endif
+                  -%}
+                  <div class="product-card__price">{{ formatted_price }}</div>
+                </a>
+
+                <!-- FULL ORIGINAL PRODUCT FORM (UNCHANGED) -->
+                <product-form class="product-form" data-section-id="{{ product.id }}">
+                  {%- form 'product',
+                    product,
+                    id: product.id,
+                    class: 'form',
+                    novalidate: 'novalidate',
+                    data-type: 'add-to-cart-form'
+                  -%}
+
+                    <input
+                      type="hidden"
+                      name="id"
+                      value="{{ product.selected_or_first_available_variant.id }}"
+                      {% if product.selected_or_first_available_variant.available == false
+                        or quantity_rule_soldout
+                        or product.selected_or_first_available_variant == null
+                      %}
+                        disabled
+                      {% endif %}
+                      class="product-variant-id"
+                    >
+
+                    <div class="product-form__buttons-wrapper product-form__buttons-wrapper--mobile-fixed">
+                      <div class="product-form__buttons">
+                        {%- liquid
+                          assign check_against_inventory = true
+                          if product.selected_or_first_available_variant.inventory_management != 'shopify' or product.selected_or_first_available_variant.inventory_policy == 'continue'
+                            assign check_against_inventory = false
+                          endif
+                          if product.selected_or_first_available_variant.quantity_rule.min > product.selected_or_first_available_variant.inventory_quantity and check_against_inventory
+                            assign quantity_rule_soldout = true
+                          endif
+                        -%}
+
+                        <button
+                          id="ProductSubmitButton-{{ product.id }}"
+                          type="submit"
+                          name="add"
+                          class="product-form__submit add-to-cart__button"
+                          {% if product.selected_or_first_available_variant.available == false
+                            or quantity_rule_soldout
+                            or product.selected_or_first_available_variant == null
+                          %}
+                            disabled
+                          {% endif %}
+                        >
+                          <span>Add to Cart</span>
+                          {%- render 'loading-spinner' -%}
+                        </button>
+                      </div>
+                    </div>
+                  {%- endform -%}
+                </product-form>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="{{ 'product-cards.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+{
+  "name": "SS Other Products Slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Other products"
+    },
+    {
+      "type": "color_scheme",
+      "id": "section_color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
+    {
+      "type": "text",
+      "id": "custom_classes",
+      "label": "Custom Classes"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_card",
+      "name": "Product Card",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "checkbox",
+          "id": "is_new",
+          "label": "Show new badge"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "SS Other Products Slider"
+    }
+  ]
+}
+{% endschema %}

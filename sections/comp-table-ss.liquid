@@ -1,0 +1,360 @@
+<style>
+.section-{{ section.id }}-padding {
+  padding-top: {{ section.settings.padding_top }}px;
+  padding-bottom: {{ section.settings.padding_bottom }}px;
+}
+</style>
+
+{% stylesheet %}
+.comparison-chart__header {
+  margin-bottom: 1.5rem;
+  .h1{margin-block-start: 0;}
+}
+
+.comparison-chart__subtext {
+  opacity: 0.75;
+  margin-top: 0.5rem;
+}
+.comparison-chart__table-wrapper{
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.h-competitors-compare-table__table{
+    min-width: 90rem;
+}
+.h-competitors-compare-table__table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.h-competitors-compare-table__heading th {
+  padding: 2rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,1);
+}
+
+.h-competitors-compare-table__column:nth-child(1) {
+  width: 25%;
+}
+.h-competitors-compare-table__column {
+  width: 35.5%;
+}
+
+.h-competitors-compare-table__body td {
+  padding: 2rem 2.8rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  vertical-align: middle;
+}
+
+.h-competitors-compare-table__body td.feature {
+  font-weight: 500;
+  text-align: center;
+}
+
+.h-competitors-compare-table__body td.value {
+  /* display: flex;
+  align-items: center; */
+  gap: 0.8rem;
+}
+
+.h-competitors-compare-table__body .is-highlight {
+  background: rgba(239,201,139,0.10);
+}
+.h-competitors-compare-table__body .comp-column {
+  background: rgba(255,255,255,0.10);
+}
+
+.h-competitors-compare-table__body img {
+  max-height: 24px;
+  object-fit: contain;
+  width: fit-content;
+  vertical-align: middle;
+}
+
+/* RESET table border handling */
+.h-competitors-compare-table__table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* ----------------------------------
+   HEADER
+---------------------------------- */
+.h-competitors-compare-table__heading th {
+  border: none;
+  padding-bottom: 2.5rem;
+}
+
+/* ----------------------------------
+   BODY CELL BASE
+---------------------------------- */
+.h-competitors-compare-table__body td {
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+.h-competitors-compare-table__body .table-bottom {
+  border-bottom: 1px solid rgba(255,255,255,1);
+}
+
+/* ----------------------------------
+   MIDDLE COLUMN (Reviv)
+---------------------------------- */
+th.is-highlight{
+    border: 1px solid rgba(239,201,139,1);
+    border-bottom: none;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+.h-competitors-compare-table__body td:nth-child(2) {
+  border-left: 1px solid rgba(239,201,139,1);
+  border-right: 1px solid rgba(239,201,139,1);
+}
+
+/* Top radius of middle column (first body row) */
+/* .h-competitors-compare-table__body tr:first-child td:nth-child(2) {
+  border-top: 1px solid rgba(239,201,139,1);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+} */
+
+/* Bottom radius of middle column (last body row) */
+/* .h-competitors-compare-table__body tr:last-child td:nth-child(2) {
+    border-bottom: 1px solid rgba(239,201,139,1);
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+} */
+
+/* ----------------------------------
+LEFT COLUMN (features)
+---------------------------------- */
+.h-competitors-compare-table__body td.top-left-corner {
+    border-top: 1px solid rgba(255,255,255,1);
+    border-top-left-radius: 16px;
+}
+.h-competitors-compare-table__body td.top-right-corner {
+    border-top: 1px solid rgba(255,255,255,1);
+    border-top-right-radius: 16px;
+}
+.h-competitors-compare-table__body td:first-child {
+    border-left: 1px solid rgba(255,255,255,1);
+}
+
+/* Bottom-left corner */
+.h-competitors-compare-table__body tr:last-child td:first-child {
+  border-bottom-left-radius: 16px;
+}
+
+/* ----------------------------------
+   RIGHT COLUMN
+---------------------------------- */
+.h-competitors-compare-table__body td:last-child {
+  border-right: 1px solid rgba(255,255,255,1);
+}
+
+/* Bottom-right corner */
+.h-competitors-compare-table__body tr:last-child td:last-child {
+  border-bottom-right-radius: 16px;
+}
+
+{% endstylesheet %}
+
+<section class="comparison-chart section section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}" id="{{ section.settings.comp_id }}">
+  <div class="page-width" style="padding:0;">
+
+    {% if section.settings.heading != blank %}
+      <div class="comparison-chart__header center">
+        <h2 class="h1">
+          {{ section.settings.heading }}
+        </h2>
+        {% if section.settings.subtext != blank %}
+          <p class="comparison-chart__subtext">
+            {{ section.settings.subtext }}
+          </p>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="comparison-chart__table-wrapper">
+      <table class="h-competitors-compare-table__table">
+        <colgroup>
+          <col class="h-competitors-compare-table__column">
+          <col class="h-competitors-compare-table__column">
+          <col class="h-competitors-compare-table__column">
+        </colgroup>
+
+        <tbody class="h-competitors-compare-table__body">
+
+          <!-- HEADER ROW -->
+          <tr class="h-competitors-compare-table__heading">
+            <th></th>
+
+            <th class="is-highlight">
+              {% if section.settings.col_2_image != blank %}
+                {{ section.settings.col_2_image | image_url: width: 240 | image_tag }}
+              {% endif %}
+              {% if section.settings.col_2_label != blank %}
+                <span>{{ section.settings.col_2_label }}</span>
+              {% endif %}
+            </th>
+
+            <th class="table-logo-image">
+              {% if section.settings.col_3_image != blank %}
+                {{ section.settings.col_3_image | image_url: width: 240 | image_tag }}
+              {% endif %}
+              {% if section.settings.col_3_label != blank %}
+                <span>{{ section.settings.col_3_label }}</span>
+              {% endif %}
+            </th>
+          </tr>
+
+          <!-- BODY ROWS -->
+          {% for block in section.blocks %}
+            <tr {{ block.shopify_attributes }}>
+              <td class="feature {% if forloop.first %}top-left-corner{% endif %} {% if forloop.last %}table-bottom{% endif %}">
+                {{ block.settings.feature }}
+              </td>
+
+              <td class="value is-highlight {% if forloop.last %}table-bottom{% endif %}">
+                {% if block.settings.col_2_icon != blank %}
+                  {{ block.settings.col_2_icon | image_url: width: 32 | image_tag }}
+                {% endif %}
+                <span>{{ block.settings.col_2_text }}</span>
+              </td>
+
+              <td class="value comp-column {% if forloop.first %}top-right-corner{% endif %} {% if forloop.last %}table-bottom{% endif %}">
+                {% if block.settings.col_3_icon != blank %}
+                  {{ block.settings.col_3_icon | image_url: width: 32 | image_tag }}
+                {% endif %}
+                <span>{{ block.settings.col_3_text }}</span>
+              </td>
+            </tr>
+          {% endfor %}
+
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Comparison Chart",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+        "type": "text",
+        "id": "comp_id",
+        "label": "Section Id for CTA"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Comparison Chart"
+    },
+    {
+      "type": "text",
+      "id": "subtext",
+      "label": "Subtext",
+      "default": "Compare everything at a glance, including pricing and perks."
+    },
+    {
+      "type": "image_picker",
+      "id": "col_2_image",
+      "label": "Column 2 image / logo"
+    },
+    {
+      "type": "text",
+      "id": "col_2_label",
+      "label": "Column 2 label",
+      "default": "Reviv"
+    },
+    {
+      "type": "image_picker",
+      "id": "col_3_image",
+      "label": "Column 3 image / logo"
+    },
+    {
+      "type": "text",
+      "id": "col_3_label",
+      "label": "Column 3 label",
+      "default": "ShockDoctor"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "background-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 48,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 48,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "row",
+      "name": "Comparison row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "feature",
+          "label": "Feature label",
+          "default": "Primary Function"
+        },
+        {
+          "type": "image_picker",
+          "id": "col_2_icon",
+          "label": "Column 2 icon"
+        },
+        {
+          "type": "text",
+          "id": "col_2_text",
+          "label": "Column 2 text",
+          "default": "Yes"
+        },
+        {
+          "type": "image_picker",
+          "id": "col_3_icon",
+          "label": "Column 3 icon"
+        },
+        {
+          "type": "text",
+          "id": "col_3_text",
+          "label": "Column 3 text",
+          "default": "No"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Comparison Chart",
+      "blocks": [
+        { "type": "row" },
+        { "type": "row" },
+        { "type": "row" }
+      ]
+    }
+  ]
+}
+{% endschema %}

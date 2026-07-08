@@ -1,0 +1,191 @@
+<style>
+.section-{{ section.id }}-padding {
+  padding-top: {{ section.settings.padding_top }}px;
+  padding-bottom: {{ section.settings.padding_bottom }}px;
+}
+</style>
+
+{% stylesheet %}
+.comparison-columns_text__grid {
+  display: grid;
+  gap: 2rem;
+}
+.columns_text__column-heading.right{
+    text-align: right;
+}
+.columns_text__column-heading.left{
+    text-align: left;
+}
+@media screen and (min-width: 830px) {
+  .comparison-columns_text__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+
+.comparison-columns_text__column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.comparison-columns_text__column-heading {
+  font-family: var(--font-heading-family);
+  font-weight: var(--font-heading-weight);
+  font-size: calc(var(--font-heading-scale) * 1.8rem);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Card base */
+.multi_text-comp-wrapper{
+    flex-grow: 1;
+    display: flex;
+    height: -webkit-fill-available;
+}
+.comparison-columns_text .multicolumn-card {
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+{% endstylesheet %}
+
+<section class="comparison-columns_text section section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+  <div class="page-width">
+
+    <div class="comparison-columns_text__grid">
+
+      <!-- LEFT COLUMN -->
+      <div class="comparison-columns_text__column">
+        {% if section.settings.left_heading != blank %}
+          <h3 class="comparison-columns_text__column-heading left h1">
+            {{ section.settings.left_heading }}
+          </h3>
+        {% endif %}
+
+        {% for block in section.blocks %}
+          {% if block.settings.column == 'left' %}
+            <div class="multi_text-comp-wrapper {{ block.settings.custom_class }}" {{ block.shopify_attributes }}>
+              <div class="multicolumn-card">
+                {{ block.settings.text }}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="comparison-columns_text__column">
+        {% if section.settings.right_heading != blank %}
+          <h3 class="comparison-columns_text__column-heading right h1">
+            {{ section.settings.right_heading }}
+          </h3>
+        {% endif %}
+
+        {% for block in section.blocks %}
+          {% if block.settings.column == 'right' %}
+            <div class="multi_text-comp-wrapper {{ block.settings.custom_class }}" {{ block.shopify_attributes }}>
+              <div class="multicolumn-card">
+                {{ block.settings.text }}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Comparison – Text Columns",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "left_heading",
+      "label": "Left column heading",
+      "default": "Use Reviv if…"
+    },
+    {
+      "type": "text",
+      "id": "right_heading",
+      "label": "Right column heading",
+      "default": "Use ShockDoctor if…"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "background-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 40,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 40,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text_block",
+      "name": "Text block",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Add text here</p>"
+        },
+        {
+          "type": "select",
+          "id": "column",
+          "label": "Column",
+          "options": [
+            { "value": "left", "label": "Left column" },
+            { "value": "right", "label": "Right column" }
+          ],
+          "default": "left"
+        },
+        {
+          "type": "text",
+          "id": "custom_class",
+          "label": "Custom CSS class",
+          "info": "Applied to the card wrapper"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Comparison – Text Columns",
+      "blocks": [
+        { "type": "text_block" },
+        { "type": "text_block" },
+        { "type": "text_block" },
+        { "type": "text_block" }
+      ]
+    }
+  ]
+}
+{% endschema %}

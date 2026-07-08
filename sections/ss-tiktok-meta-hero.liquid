@@ -1,0 +1,193 @@
+{% schema %}
+{
+  "name": "TikTok Meta Hero",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge",
+      "label": "Top Badge",
+      "default": "TIKTOK CREATOR PROGRAM"
+    },
+    {
+      "type": "text",
+      "id": "heading_main",
+      "label": "Main Heading",
+      "default": "Your TikTok content,"
+    },
+    {
+      "type": "text",
+      "id": "heading_highlight",
+      "label": "Highlighted Heading",
+      "default": "running as a Meta ad."
+    },
+    {
+      "type": "textarea",
+      "id": "subtext",
+      "label": "Sub Text",
+      "default": "If you've made a video featuring Reviv — or want to — we'd love to license it to run as a paid ad on Facebook and Instagram. We handle the spend. You earn a performance bonus."
+    },
+    {
+      "type": "text",
+      "id": "button_primary",
+      "label": "Primary Button Text",
+      "default": "Email us to get started →"
+    },
+    {
+      "type": "url",
+      "id": "button_primary_link",
+      "label": "Primary Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_secondary",
+      "label": "Secondary Button Text",
+      "default": "See the workflow ↓"
+    },
+    {
+      "type": "url",
+      "id": "button_secondary_link",
+      "label": "Secondary Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "TikTok Meta Hero"
+    }
+  ]
+}
+{% endschema %}
+
+<section class="tiktok-hero">
+  <div class="tiktok-hero__inner">
+    
+    <div class="tiktok-hero__badge">
+      {{ section.settings.badge }}
+    </div>
+
+    <h1 class="tiktok-hero__heading">
+      {{ section.settings.heading_main }}
+      <span>{{ section.settings.heading_highlight }}</span>
+    </h1>
+
+    <p class="tiktok-hero__subtext">
+      {{ section.settings.subtext }}
+    </p>
+
+    <div class="tiktok-hero__buttons">
+      {% if section.settings.button_primary_link != blank %}
+        <a href="{{ section.settings.button_primary_link }}" class="btn-primary">
+          {{ section.settings.button_primary }}
+        </a>
+      {% endif %}
+
+      {% if section.settings.button_secondary_link != blank %}
+        <a href="{{ section.settings.button_secondary_link }}" class="btn-secondary">
+          {{ section.settings.button_secondary }}
+        </a>
+      {% endif %}
+    </div>
+
+  </div>
+</section>
+
+<style>
+.tiktok-hero {
+background: radial-gradient(85.35% 72.81% at 50% 0%, #221E15 0%, #121212 100%);
+  color: #fff;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.tiktok-hero__badge::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background: #e5c085;
+    display: block;
+    position: absolute;
+    left: 16px;
+    top: 14px;
+}
+
+.tiktok-hero__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tiktok-hero__badge {
+    display: inline-block;
+    padding: 7px 18px 3px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    position: relative;
+    color: #d6b47a;
+    background: #322C23;
+}
+
+.tiktok-hero__heading {
+  font-size: 72px;
+  color:#fff;
+  line-height: 1.2;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.tiktok-hero__heading span {
+  display: block;
+  color: #d6b47a;
+  font-style: italic;
+}
+
+.tiktok-hero__subtext {
+    margin: 50px auto 50px;
+    font-size: 24px;
+    color: #4F4D4D;
+    line-height: 1.6;
+}
+
+.tiktok-hero__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+    color: #000;
+    padding: 8px 26px 5px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    background: linear-gradient(90deg, #FFCF86 0%, #FFE5BD 100%);
+}
+.btn-primary:hover{
+    background: linear-gradient(90deg, #FFE5BD 0%, #FFCF86 100%);
+}
+
+.btn-secondary {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #fff;
+    padding: 8px 26px 6px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+.btn-secondary:hover {
+  border-color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tiktok-hero__heading {
+    font-size: 34px;
+  }
+
+  .tiktok-hero {
+    padding: 80px 20px;
+  }
+}
+</style>

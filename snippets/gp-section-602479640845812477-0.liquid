@@ -1,0 +1,1982 @@
+<div
+      data-same-height-display-contents
+      style="--jc:start"
+      class="glvXJGXP6G gp-relative gp-flex gp-flex-col"
+    >
+      
+    
+      {%- assign gpBkProduct = product -%}
+      
+      {%- liquid
+        if request.page_type != 'product'
+          assign product = all_products['r2-revivtwo-support-package-copyzak']
+          assign productId = '9343904055537' | times: 1
+          if product == empty or product == null
+            paginate collections.all.products by 100000
+              for item in collections.all.products
+                if item.id == productId
+                  assign product = item
+                endif
+              endfor
+            endpaginate
+          endif
+        endif
+      -%}
+    
+    
+    {% if product != empty and product != null %}
+      
+      {%- assign initVariantId =  -%}
+      {%- assign product_form_id = 'product-form-' | append: "gS5E53G5Z-" -%}
+      {%- assign variant = product.selected_or_first_available_variant -%}
+      {%- assign productSelectedVariant = product.selected_or_first_available_variant -%}
+      {%-if productSelectedVariant == empty or productSelectedVariant == null -%}
+        {%- assign productSelectedVariant = product.selected_or_first_available_variant -%}
+      {%- endif -%}
+      {%-if variant == empty or variant == null -%}
+        {%- assign variant = product.selected_or_first_available_variant -%}
+      {%- endif -%}
+    
+      <gp-product
+        data-uid="gS5E53G5Z-"
+        data-id="gS5E53G5Z-"
+        
+        
+        gp-context='{"productId": {{ product.id }}, "preSelectedOptionIds": [], "isSyncProduct": "true", "hasPreSelected": true, "variantSelected": {{ variant | json | escape }},  "inventory_management": {{ variant.inventory_management | json | escape  }}, "inventory_policy": {{ variant.inventory_policy | json | escape }}, "inventoryQuantity": {{ variant.inventory_quantity | default: 0 }}, "quantity": 1, "formId": "{{ product_form_id }}" }'
+        gp-data='{"variantSelected": {{ variant | json | escape }}, "quantity": 1, "productUrl":{{ product.url | json | escape }}, "productHandle":{{ product.handle | json | escape }}, "collectionUrl": {{ collection.url | json | escape }}, "collectionHandle": {{ collection.handle | json | escape }}}'
+      >
+        <product-form class="product-form">
+          {%- form 'product', product, id: product_form_id, class: 'form contents', data-type: 'add-to-cart-form', autocomplete: 'off'  -%}
+            <input type="hidden" name="id" value="{{ variant.id }}" />
+            <input type="hidden" name="quantity" value="{{ quantity }}" />
+            <button type="submit" onclick="return false;" style="display:none;"></button>
+            
+    
+
+    
+
+    
+    <gp-row gp-data='{"background":{"desktop":{"color":"transparent","type":"color"}},"uid":"gS5E53G5Z-"}' data-id="gS5E53G5Z--row" id="gS5E53G5Z-" data-same-height-subgrid-container class="gS5E53G5Z- gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--pb:48px;--pb-mobile:40px;--pb-tablet:48px;--cg:32px;--rg:32px;--rg-mobile:16px;--gtc:minmax(0, 12fr);--w:600px;--bgc:transparent;--bgi:url();--pc:start">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:start"
+      class="gl7ftnkLvK gp-relative gp-flex gp-flex-col"
+    >
+      <div gp-el-wrapper style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:var(--g-s-l)" class="gjLsH1nirw ">
+      {% unless product %}<p>{{ 'gempages.ProductTitle.product_not_found' | t }}</p>{% else %}
+      <gp-product-title
+        gp-data='{"setting":{"linkProduct":false},"uid":"gjLsH1nirw"}'
+      >
+        
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gjLsH1nirw"
+        class="gjLsH1nirw"
+        style="--dynamic-source-color:#F4F4F4"
+      >
+      <div  >
+        <h2
+          data-gp-text
+          class=" gp-text-instant"
+          style="--w:100%;--tdt:auto;--ts:none;--ta:left;--ta-mobile:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--c:#E5C185;--fs:normal;--ff:var(--g-font-heading, heading);--weight:700;--size:32px;--size-tablet:24px;--size-mobile:22px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--ls:normal;--ls-tablet:normal;--ls-mobile:normal;--tt:none;word-break:break-word;overflow:hidden;--tdl:"
+        >
+          {{ product.title }}
+        </h2>
+      </div>
+    </div>
+    
+      </gp-product-title>
+      <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-product-title-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+    {% endunless %}
+      </div><div gp-el-wrapper style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:var(--g-s-l)" class="g6iLGPuaK4 ">
+      
+    <div
+      
+      style="--ta:left"
+    >
+      <div>
+        {% assign widget = 'single_product_preview_badge' %}
+        {% case widget %}
+          {% when "single_product_preview_badge" %}
+            <div style='{{ jm_style }}' class='jdgm-widget jdgm-preview-badge' data-product-title='{{ product.title | escape }}' data-id='{{ product.id }}'>
+              {{ product.metafields.judgeme.badge }}
+            </div>
+          {% when "review_widget" %}
+            {% assign has_legacy = false %}
+            {% if product.metafields.judgeme.widget.size > 20 %}
+            {% assign has_legacy = true %}
+            {% endif %}
+              <div style='clear:both'></div>
+              <div id='judgeme_product_reviews' class='jdgm-widget jdgm-review-widget' data-product-title='{{ product.title | escape }}' data-id='{{ product.id }}' data-product-id='{{ product.id }}' data-widget='review' data-auto-install='false' data-shop-reviews-count='{{ shop.metafields.judgeme.shop_reviews_count | default: 0 | escape }}' data-entry-point='review_widget.js' data-entry-key='review-widget/main.js'>
+                {% if has_legacy %}
+                <div class='jdgm-legacy-widget-content' style='display: none;'>{{ product.metafields.judgeme.widget }}</div>
+                {% endif %}
+              </div>
+              {% if product.metafields.judgeme.review_widget_data %}
+                <script>jdgm.data ||= {}; jdgm.data.reviewWidget ||= {}; jdgm.data.reviewWidget[{{ product.id }}] = {{ product.metafields.judgeme.review_widget_data }}</script>
+              {% endif %}
+          {% when "reviews_carousel" %}
+            <div class='jdgm-carousel-wrapper'>
+              {% assign jm_metafields = shop.metafields.judgeme %}
+              <div class='jdgm-carousel-title-and-link'>
+                <h2 class='jdgm-carousel-title'>Let customers speak for us</h2>
+                <span class='jdgm-all-reviews-rating-wrapper' href='javascript:void(0)'>
+                  <span style='display:block'  data-score='{{ jm_metafields.all_reviews_rating }}' class='jdgm-all-reviews-rating' aria-label='{{ jm_metafields.all_reviews_rating }} stars' tabindex='0' role='img'></span>
+                  <span style='display: block' class='jdgm-carousel-number-of-reviews' data-number-of-reviews='{{ jm_metafields.all_reviews_count }}'>
+                    from {{ shop.metafields.judgeme.all_reviews_count }} reviews
+                  </span>
+                </span>
+              </div>
+              {{ jm_metafields.featured_carousel }}
+            </div>
+          {% when "reviews_text" %}
+            <div style='text-align: center'>
+              <div class='jdgm-widget jdgm-all-reviews-text'>
+                <a href='javascript:void(0)'>
+                  <span data-score='{{ shop.metafields.judgeme.all_reviews_rating }}' class='jdgm-all-reviews-rating'></span>
+                  <span class='jdgm-all-reviews-text__text' data-score='{{ shop.metafields.judgeme.all_reviews_rating }}' data-number-of-reviews='{{ shop.metafields.judgeme.all_reviews_count }}'>
+                    Customers rate us {{ shop.metafields.judgeme.all_reviews_rating | round: 1 }}/5 based on {{ shop.metafields.judgeme.all_reviews_count }} reviews.
+                  </span>
+                </a>
+              </div>
+            </div>
+          {% when "section_for_medals" %}
+            {{ shop.metafields.judgeme.medals }}
+          {% when "ugc_media_grid" %}
+            <div class='jdgm-widget jdgm-ugc-media-wrapper'>
+              {{ shop.metafields.judgeme.ugc_media_grid }}
+            </div>
+          {% when "verified_reviews_count_badge" %}
+            <div style='clear:both'></div>
+            <div style='text-align: center'>
+              <a class='jdgm-verified-count-badget' href='javascript:void(0)'>
+                {{ shop.metafields.judgeme.verified_badge }}
+              </a>
+            </div>
+        {% endcase %}
+      </div>
+    </div>
+  
+      </div>
+    
+
+    
+
+    
+    <gp-row gp-data='{"background":{"desktop":{"attachment":"scroll","color":"transparent","image":{"height":0,"src":"","width":0},"position":{"x":50,"y":50},"preload":false,"repeat":"no-repeat","size":"cover","type":"color"}},"uid":"gMfbFPVFU8"}' data-id="gMfbFPVFU8" id="gMfbFPVFU8" data-same-height-subgrid-container class="gMfbFPVFU8 gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:var(--g-s-l);--cg:8px;--rg:0px;--gtc:minmax(0, auto);--gtc-mobile:minmax(0, auto);--w:var(--g-ct-w, 1200px);--h:auto;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--pc:start">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:center"
+      class="gcgVWwmCBI gp-relative gp-flex gp-flex-col"
+    >
+      
+      <gp-product-price
+        id="shopify-text-element-gK90Oc8DDG" data-id="gK90Oc8DDG"
+        class="gp-product-price group-data-[state=loading]:gp-invisible data-[hidden=true]:!gp-hidden gK90Oc8DDG"
+        style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px"
+        gp-data='{"priceType":"regular","uid":"gK90Oc8DDG","locale":"{{shop.locale}}","currency":"{{shop.currency}}","moneyFormat":"{{ shop.money_format | replace: '"', '\\"' | escape }}"}'
+      >
+        
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div id="p-price-gK90Oc8DDG" data-id
+        
+        style="--dynamic-source-color:#F4F4F4"
+      >
+      <div  >
+        <div
+          data-gp-text
+          class="gp-price gp-money gp-decoration-g-text-1  gp-text-instant"
+          style="--w:100%;--tdc:var(--g-c-text-1, text-1);--tdt:2px;--ts:none;--ta:left;--ta-mobile:left;--c:#E5C185;--fs:normal;--ff:var(--g-font-body, body);--weight:700;--size:20px;--size-tablet:16px;--size-mobile:18px;--lh:150%;--lh-tablet:150%;--lh-mobile:150%;--ls:normal;--ls-tablet:normal;--ls-mobile:normal;word-break:break-word;overflow:hidden;--tdl:"
+        >
+          
+     {% if variant.price %}
+       {{ variant.price | money}}
+     {% endif %}
+   
+        </div>
+      </div>
+    </div>
+    
+      </gp-product-price>
+      <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-product-price-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+  
+    </div>
+
+      
+    </gp-row>
+  
+  <div gp-el-wrapper style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:var(--g-s-l);--mb-mobile:16px" class="gMzeE76E-F ">
+      
+    {%- assign total_combinations = 1 -%}
+    {% for option in product.options_with_values %}{%- assign total_combinations = total_combinations | times: option.values.size -%}{% endfor %}
+    <gp-product-variants
+      data-id="gMzeE76E-F" has-pre-selected="true" class
+      gp-data='{
+        "setting":{"blankText":"Please select an option","column":{"desktop":1},"combineFullWidth":{"desktop":true},"combineHeight":"45px","combineWidth":{"desktop":"100%"},"hasOnlyDefaultVariant":false,"hasPreSelected":true,"label":true,"layout":{"desktop":"vertical"},"optionAlign":{"desktop":"left"},"optionType":"singleOption","price":true,"showAsSwatches":true,"soldOutStyle":"line","variantPresets":[{"isEdited":true,"optionName":"base","optionType":"rectangle_list","presets":{"rectangle_list":{"height":"45px","optionBgColor":{"normal":"#FFFFFF"},"optionBorder":{"active":{"border":"solid","borderType":"style-3","borderWidth":"2px","color":"line-3","isCustom":false,"width":"2px 2px 2px 2px"},"hover":{"border":"solid","borderType":"style-3","borderWidth":"1px","color":"line-3","isCustom":false,"width":"1px 1px 1px 1px"},"normal":{"border":"solid","borderType":"style-2","borderWidth":"1px","color":"line-2","isCustom":false,"width":"1px 1px 1px 1px"}},"optionHasShadow":{"normal":false},"optionRounded":{"normal":{"bblr":"0px","bbrr":"0px","btlr":"0px","btrr":"0px","radiusType":"none"}},"optionShadow":{"normal":{"angle":45,"blur":"4px","color":"rgba(18, 18, 18, 0.20)","distance":"4px","enable":false,"spread":"0px","type":"shadow-1"}},"optionTextColor":{"normal":"text-1"},"spacing":"8px","width":{"desktop":""}}}},{"isEdited":true,"optionName":"Color","optionType":"color","presets":{"color":{"height":"45px","optionBgColor":{"active":"bg-3","hover":"bg-3","normal":"bg-3"},"optionBorder":{"active":{"border":"solid","borderType":"style-3","borderWidth":"2px","color":"#294C43","isCustom":true,"width":"2px 2px 2px 2px"},"hover":{"border":"solid","borderType":"style-3","borderWidth":"1px","color":"#294C43","isCustom":true,"width":"1px 1px 1px 1px"},"normal":{"border":"solid","borderWidth":"1px","color":"#121212","width":"1px"}},"optionHasShadow":{"normal":false},"optionRounded":{"normal":{"bblr":"999999px","bbrr":"999999px","btlr":"999999px","btrr":"999999px","radiusType":"circle"}},"optionShadow":{"normal":{"angle":45,"blur":"4px","color":"rgba(18, 18, 18, 0.20)","distance":"4px","enable":false,"spread":"0px","type":"shadow-1"}},"optionTextColor":{"active":"text-2","hover":"text-2","normal":"text-2"},"spacing":"8px","width":{"desktop":"45px","mobile":"45px","tablet":"45px"}}}},{"isEdited":true,"optionName":"Colour","optionType":"color","presets":{"color":{"height":"45px","optionBgColor":{"active":"bg-3","hover":"bg-3","normal":"bg-3"},"optionBorder":{"active":{"border":"solid","borderType":"style-3","borderWidth":"2px","color":"line-3","isCustom":false,"width":"2px 2px 2px 2px"},"hover":{"border":"solid","borderType":"style-3","borderWidth":"1px","color":"line-3","isCustom":false,"width":"1px 1px 1px 1px"},"normal":{"border":"solid","borderType":"style-2","borderWidth":"1px","color":"line-2","isCustom":false,"width":"1px 1px 1px 1px"}},"optionHasShadow":{"normal":false},"optionRounded":{"normal":{"bblr":"999999px","bbrr":"999999px","btlr":"999999px","btrr":"999999px","radiusType":"circle"}},"optionShadow":{"normal":{"angle":45,"blur":"4px","color":"rgba(18, 18, 18, 0.20)","distance":"4px","enable":false,"spread":"0px","type":"shadow-1"}},"optionTextColor":{"active":"text-2","hover":"text-2","normal":"text-2"},"spacing":"8px","width":{"desktop":"45px","mobile":"45px","tablet":"45px"}}}},{"isEdited":true,"optionName":"Size","optionType":"dropdown","presets":{"dropdown":{"height":"45px","optionBgColor":{"normal":"#242021"},"optionBorder":{"active":{"border":"solid","borderType":"style-3","borderWidth":"2px","color":"line-3","isCustom":false,"width":"2px 2px 2px 2px"},"hover":{"border":"solid","borderType":"style-3","borderWidth":"1px","color":"line-3","isCustom":false,"width":"1px 1px 1px 1px"},"normal":{"border":"solid","borderType":"style-2","borderWidth":"1px","color":"#E5C185","isCustom":true,"width":"1px 1px 1px 1px"}},"optionHasShadow":{"normal":false},"optionRounded":{"normal":{"bblr":"0px","bbrr":"0px","btlr":"0px","btrr":"0px","radiusType":"none"}},"optionShadow":{"normal":{"angle":45,"blur":"4px","color":"rgba(18, 18, 18, 0.20)","distance":"4px","enable":false,"spread":"0px","type":"shadow-1"}},"optionTextColor":{"normal":"#E5C185"},"width":{"desktop":"50%","mobile":"100%","tablet":"100%"}}}},{"isEdited":true,"optionName":"Have you purchased a REVIV before?","optionType":"dropdown","presets":{"dropdown":{"height":"45px","optionBgColor":{"normal":"#242021"},"optionBorder":{"active":{"border":"solid","borderType":"style-3","borderWidth":"2px","color":"line-3","isCustom":false,"width":"2px 2px 2px 2px"},"hover":{"border":"solid","borderType":"style-3","borderWidth":"1px","color":"line-3","isCustom":false,"width":"1px 1px 1px 1px"},"normal":{"border":"solid","borderType":"style-2","borderWidth":"1px","color":"#E5C185","isCustom":true,"width":"1px 1px 1px 1px"}},"optionHasShadow":{"normal":false},"optionRounded":{"normal":{"bblr":"0px","bbrr":"0px","btlr":"0px","btrr":"0px","radiusType":"none"}},"optionShadow":{"normal":{"angle":45,"blur":"4px","color":"rgba(18, 18, 18, 0.20)","distance":"4px","enable":false,"spread":"0px","type":"shadow-1"}},"optionTextColor":{"normal":"#E5C185"},"width":{"desktop":"50%","mobile":"100%","tablet":"100%"}}}}]},
+        "styles":{"align":{"desktop":"left"},"dropdownItemWidth":{"desktop":"fill","mobile":"fill","tablet":"fill"},"fixedDropdownWidth":{"desktop":"240px"},"fullWidth":{"desktop":true},"labelColor":"text-1","labelGap":"8px","labelTypo":{"attrs":{"bold":true,"color":"#E5C185"},"custom":{"fontSize":{"desktop":"16px","mobile":"14px","tablet":"13px"},"fontStyle":"normal","fontWeight":"700","hasShadowText":false,"letterSpacing":{"desktop":"0.6px"},"lineHeight":{"desktop":"150%","mobile":"150%","tablet":"150%"},"textShadow":{"angle":37,"blur":"2px","color":"rgba(0, 0, 0, 0.6)","distance":"4px","enable":false,"type":"custom"}},"latestUpdate":"color","type":"paragraph-2"},"marginBottom":{"desktop":"16px"},"optionBgColor":{"normal":"#FFFFFF"},"optionBorder":{"active":{"border":"solid","borderType":"style-3","borderWidth":"2px","color":"line-3","isCustom":false,"width":"2px 2px 2px 2px"},"hover":{"border":"solid","borderType":"style-3","borderWidth":"1px","color":"line-3","isCustom":false,"width":"1px 1px 1px 1px"},"normal":{"border":"solid","borderType":"style-2","borderWidth":"1px","color":"line-2","isCustom":false,"width":"1px 1px 1px 1px"}},"optionHasShadow":{"normal":false},"optionRounded":{"normal":{"bblr":"0px","bbrr":"0px","btlr":"0px","btrr":"0px","radiusType":"none"}},"optionShadow":{"normal":{"angle":45,"blur":"4px","color":"rgba(18, 18, 18, 0.20)","distance":"4px","enable":false,"spread":"0px","type":"shadow-1"}},"optionSpacing":"30px","optionTextColor":{"normal":"text-1"},"optionTypo":{"type":"paragraph-2"},"swatchAutoWidth":{"desktop":true},"swatchHeight":{"desktop":"45px"},"swatchItemWidth":{"desktop":"auto"},"swatchSpacing":"var(--g-s-m)","swatchWidth":{"desktop":"80px"},"width":{"desktop":"100%"}},
+        "variants":{{product.variants | json | escape}},
+        "optionsWithValues": {{product.options_with_values | json | escape}},
+        "variantSelected": {{ variant | json | escape }},
+        "variantInventoryQuantity": {{product.variants | map: 'inventory_quantity' | json | escape}},
+        "variantInventoryPolicy": {{product.variants | map: 'inventory_policy' | json | escape}},
+        "moneyFormat": {{shop.money_format | json | escape}},
+        "productId": {{product.id | json | escape}},
+        "productUrl": {{product.url | json | escape}},
+        "productHandle": {{product.handle | json | escape}},
+        "displayState": {"desktop":true,"mobile":true,"tablet":true},
+        "totalVariantCombinations": {{total_combinations}},
+        "firstAvailableVariant": {{product.selected_or_first_available_variant | json | escape}}
+      }
+    '>
+      <div class="gp-hidden" style="--hvr-shadow: none; --hvr-shadow-tablet: none; --hvr-shadow-mobile: none"></div>
+      {%- assign options = product.options_with_values -%}
+      {%- assign variants = product.variants -%}
+      {% if options.size == 0 or options.size == 1 and variants.size == 1 and variants[0].title == 'Default Title' and variants[0].option1 == 'Default Title' %}<div></div>{% else %}<div
+            class="gp-flex gp-flex-col !gp-ml-0"
+            style="--gtc:repeat(1, minmax(0, 1fr));--ta:left;--w:100%;--w-tablet:100%;--w-mobile:100%"
+          >
+          
+      {%- assign presets = "base($2)rectangle_list($1)Color($2)color($1)Colour($2)color($1)Size($2)dropdown($1)Have you purchased a REVIV before?($2)dropdown" | split: '($1)' -%}
+      {% assign hiddenPresetOptions = "" | split: ',' %}
+      
+      {% assign all_option_names = options | map: 'name' %}
+      {% assign filtered_options_string = '' %}
+      {% assign delimiter = '||' %}
+      
+      {% for item_name in all_option_names %}
+        {% assign is_excluded = false %}
+        {% for exclude_name in hiddenPresetOptions %}
+          {% if item_name == exclude_name %}
+            {% assign is_excluded = true %}
+          {% endif %}
+        {% endfor %}
+        
+        {% unless is_excluded %}
+          {% if filtered_options_string == '' %}
+            {% assign filtered_options_string = item_name %}
+          {% else %}
+            {% assign filtered_options_string = filtered_options_string | append: delimiter | append: item_name %}
+          {% endif %}
+        {% endunless %}
+      {% endfor %}
+      
+      {% assign filtered_options_array = filtered_options_string | split: delimiter %}
+      
+      {% assign last_option_name = filtered_options_array | last %}
+      
+      {% for option in options %}
+        <div
+        option-name="{{option.name | escape}}"
+        class="gp-flex variant-inside gp-flex-col gp-items-start {% if hiddenPresetOptions contains option.name %}gp-hidden{% endif %}"
+        style="--mb: 16px;{% if forloop.last or option.name == last_option_name %}--mb:0;--mb-mobile:0;--mb-tablet:0;{% endif %}"
+        >
+          {%- assign showVariantClass = 'variant-display' -%}
+          {%- assign optionName = option.name  -%}
+          {% for preset in presets %}
+            {%- assign presetDetail = preset | split: '($2)' -%}
+            {% if presetDetail[1] == 'dropdown' and presetDetail[0] == optionName %}{%- assign showVariantClass = '' -%} {%- break -%}{% endif %}
+          {% endfor %}
+          
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id
+        
+        style="--mb:8px;--mr:0px;--mb-tablet:8px;--mr-tablet:0px;--mb-mobile:8px;--mr-mobile:0px;--dynamic-source-color:#F4F4F4"
+      >
+      <div  style="--w:fit-content;--w-tablet:fit-content;--w-mobile:fit-content">
+        <legend
+          data-gp-text
+          class="{{showVariantClass}}  gp-text-instant"
+          style="--w:100%;--tdt:auto;--ts:none;--fs:normal;--ff:var(--g-font-body, body);--size:16px;--size-tablet:13px;--size-mobile:14px;--lh:150%;--lh-tablet:150%;--lh-mobile:150%;--ls:0.6px;--weight:bold;--c:#E5C185;word-break:break-word;overflow:hidden;--tdl:"
+        >
+          {{option.name}}
+        </legend>
+      </div>
+    </div>
+    
+          <div
+              variant-option-name="{{option.name | escape}}"
+              class="variant-option-group gp-flex gp-w-full gp-flex-wrap gp-items-center  gp-justify-start"
+              style="--rg: var(--g-s-m);--cg: var(--g-s-m);"
+            >
+              {%- assign values = option.values -%}
+              {%- assign rootForloop = forloop.index0 -%}
+              
+                {%- if option.position == 1 -%}
+                  {%- assign selectedValue = variant.option1 -%}
+                {%- elsif option.position == 2 -%}
+                  {%- assign selectedValue = variant.option2 -%}
+                {%- else -%}
+                  {%- assign selectedValue = variant.option3 -%}
+                {%- endif -%}
+              
+              
+              
+      {% if shop.metafields.GEMPAGES.swatchesJSONFormat and shop.metafields.GEMPAGES.swatchesJSONFormat != blank %}
+    {%- assign optionRendered = false -%}
+    {%- assign swatches = shop.metafields.GEMPAGES.swatchesJSONFormat.value -%}
+
+    {% for swatch in swatches %}
+      {%- assign optionTitle = swatch.optionTitle -%}
+      {%- assign optionType = swatch.optionType -%}
+      {%- assign labelsString = "" -%}
+      {%- assign colorArraysString = "" -%}
+      {%- assign imageUrlsString = "" -%}
+
+      {% for optionValue in swatch.optionValues %}
+        {%- assign labelsString = labelsString | append: optionValue.label | append: '|||' -%}
+        {%- assign colorsJoined = optionValue.colors | join: '|||' -%}
+        {%- assign colorArraysString = colorArraysString | append: colorsJoined | append: '|||' -%}
+        {%- assign imageUrlsString = imageUrlsString | append: optionValue.imageUrl | append: '|||' -%}
+      {% endfor %}
+
+      {%- assign labels = labelsString | split: '|||' | slice: 0, labelsString.size -%}
+      {%- assign colorStrings = colorArraysString | split: '|||' | slice: 0, colorArraysString.size -%}
+      {%- assign imageUrls = imageUrlsString | split: '|||' | slice: 0, imageUrlsString.size -%}
+
+      {% if optionTitle == option.name %}
+        {%- assign variantPresetString = "base($1)rectangle_list($2)Color($1)color($2)Colour($1)color($2)Size($1)dropdown($2)Have you purchased a REVIV before?($1)dropdown" -%}
+        {%- assign optionName = option.name | replace: "'", "&apos;" | replace: '"', "&quot;" -%}
+        {%- assign items = variantPresetString | split: '($2)' -%}
+        {%- assign type = 'dropdown' -%}
+
+        {% for item in items %}
+          {%- assign itemPreset = item | split: '($1)' -%}
+          {% if itemPreset[0] == optionName %}{%- assign type = itemPreset[1] -%}{% endif %}
+          {% if itemPreset[0] == 'base' %}{%- assign type = itemPreset[1] -%}{% endif %}
+        {% endfor %}
+        {%- assign optionRendered = true -%}
+
+        
+    {% for value in values %}
+    {%- liquid
+      assign option_disabled = true
+      for variantItem in product.variants
+        case option.position
+          when 1
+            if variantItem.available and variantItem.option1 == value
+              assign option_disabled = false
+            endif
+          when 2
+            if variantItem.available and variantItem.option2 == value
+              assign option_disabled = false
+            endif
+          when 3
+            if variantItem.available and variantItem.option3 == value
+              assign option_disabled = false
+            endif
+        endcase
+      endfor
+    -%}
+    {% assign option_disabled = false %}
+    <label
+      id="{{option.name | escape | handleize}}-{{value | escape | handleize}}"
+      for="{{product.id}}-gMzeE76E-F-{{option.name | escape}}-{{option.position}}-{{ forloop.index }}"
+      class="option-item gp-group gp-relative !gp-block gp-child-item-gMzeE76E-F"
+      
+    >
+      <div class="gp-hidden !gp-max-w-[150px] gp-left-[50%] gp-translate-x-[-50%] gp-translate-y-0 gp-absolute gp-bottom-[calc(100%+20px)] gp-text-[12px] group-hover:gp-block gp-w-max gp-bg-[#333333] gp-text-[#F9F9F9] gp-px-[8px] gp-py-[4px] gp-rounded-[8px] gp-mb-[-10px] after:gp-content-[''] after:gp-absolute after:gp-p-[7px] after:gp-left-0 after:gp-w-full after:gp-bottom-[-10px]">
+        <p class="gp-text-[#F9F9F9]">{{value | escape}}</p>
+        <svg class="gp-absolute gp-left-[50%] gp-translate-x-[-50%] gp-translate-y-0 gp-z-10 gp-bottom-[-4px]" width="8" height="4" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 10L0 0L16 1.41326e-06L8 10Z" fill="#333333"/>
+        </svg>
+      </div>
+      <input
+        checked="{%- if option.selected_value == value -%}true{% else %}false{%- endif -%}"
+        name="{{product.id}}-options-{{option.name | escape}}"
+        id="{{product.id}}-gMzeE76E-F-{{option.name | escape}}-{{option.position}}-{{ forloop.index }}"
+        value="{{value | escape}}"
+        type="radio"
+        class="gp-sr-only gp-absolute gp-bottom-0 gp-right-0"
+      />
+      <span class="gp-sr-only">{{value | escape}}</span>
+      <div
+        option-name="{{option.name | escape}}" option-name-value="{{value | escape}}" data-gp-option-value-id="{{value.id}}"
+        class="option-item-inner gp-w-auto gp-h-auto {% if option_disabled == true %} {% endif %}">
+        
+    {% case type %}
+      {% when "rectangle_list" %}
+      
+    <div
+      id="value-wrapper-{{option.name | escape | strip | handleize}}-{{value | escape | strip | handleize}}" option-data="{{option.name | escape}}" option-value="{{value | escape}}" option-position="{{option.position}}" data-gp-option-available="{{value.available}}" option-type="rectangle_list" data-disabled="{%- if option_disabled == true -%} disabled  {%- endif -%}" data-hidden="true"
+      class="gp-relative gp-flex gp-cursor-pointer gp-items-center gp-justify-center gp-text-center option-value-wrapper gp-overflow-hidden gp-w-full gp-h-full data-[disabled='disabled']:gp-pointer-events-none data-[disabled='disabled']:!gp-cursor-not-allowed
+  data-[hidden='false']:gp-flex {{option.name | escape}}-{{option.position}}-{{ forloop.index }} gp-g-paragraph-2"
+      style="{% if selectedValue == value %}--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: none;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--hvr-bblr: 0px;--hvr-bbrr: 0px;--hvr-btlr: 0px;--hvr-btrr: 0px;--focus-bblr: 0px;--focus-bbrr: 0px;--focus-btlr: 0px;--focus-btrr: 0px;-undefined-bblr: 0px;-undefined-bbrr: 0px;-undefined-btlr: 0px;-undefined-btrr: 0px;{% else %}--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: solid;--hvr-bs: solid;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--hvr-bblr: 0px;--hvr-bbrr: 0px;--hvr-btlr: 0px;--hvr-btrr: 0px;--focus-bblr: 0px;--focus-bbrr: 0px;--focus-btlr: 0px;--focus-btrr: 0px;-undefined-bblr: 0px;-undefined-bbrr: 0px;-undefined-btlr: 0px;-undefined-btrr: 0px;{% endif %}">
+      
+      <div
+        class="option-value gp-overflow-hidden gp-relative"
+        style=" --pl: 16px;--pr: 16px;--pl-tablet: 16px;--pr-tablet: 16px;--pl-mobile: 16px;--pr-mobile: 16px;--pt: 0px;--pb: 0px;">
+         
+        <span class="gp-text-center gp-g-paragraph-2" >{{value}}</span>
+      </div>
+    
+    </div>
+      {% when "color" %}
+      
+    {% assign colorsString = null %}
+    {% assign colors = null %}
+    {% for label in labels %}
+      {% if label == value %}
+        {% assign colorsString = colorStrings[forloop.index0] %}
+      {% endif %}
+    {% endfor %}
+    {% if colorsString != null %}
+      {% assign colors = colorsString | split: '|||' %}
+    {% endif %}
+    
+    <div
+      id="value-wrapper-{{option.name | escape | strip | handleize}}-{{value | escape | strip | handleize}}" option-data="{{option.name | escape}}" option-value="{{value | escape}}" option-position="{{option.position}}" data-gp-option-available="{{value.available}}" option-type="color" data-disabled="{%- if option_disabled == true -%} disabled  {%- endif -%}" data-hidden="true"
+      class="gp-relative gp-flex gp-cursor-pointer gp-items-center gp-justify-center gp-text-center option-value-wrapper gp-overflow-hidden gp-w-full gp-h-full data-[disabled='disabled']:gp-pointer-events-none data-[disabled='disabled']:!gp-cursor-not-allowed
+  data-[hidden='false']:gp-flex {{option.name | escape}}-{{option.position}}-{{ forloop.index }} gp-g-paragraph-2 gp-p-[4px]"
+      style="{% if selectedValue == value %}--minw: 32px;--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: none;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 999999px;--bbrr: 999999px;--btlr: 999999px;--btrr: 999999px;--hvr-bblr: 999999px;--hvr-bbrr: 999999px;--hvr-btlr: 999999px;--hvr-btrr: 999999px;--focus-bblr: 999999px;--focus-bbrr: 999999px;--focus-btlr: 999999px;--focus-btrr: 999999px;-undefined-bblr: 999999px;-undefined-bbrr: 999999px;-undefined-btlr: 999999px;-undefined-btrr: 999999px;{% else %}--minw: 32px;--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: solid;--hvr-bs: solid;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 999999px;--bbrr: 999999px;--btlr: 999999px;--btrr: 999999px;--hvr-bblr: 999999px;--hvr-bbrr: 999999px;--hvr-btlr: 999999px;--hvr-btrr: 999999px;--focus-bblr: 999999px;--focus-bbrr: 999999px;--focus-btlr: 999999px;--focus-btrr: 999999px;-undefined-bblr: 999999px;-undefined-bbrr: 999999px;-undefined-btlr: 999999px;-undefined-btrr: 999999px;{% endif %}">
+      {% if colors != null and colors.size > 0 %}
+      {% for color in colors %}
+          {% assign backgroundType = "background-color" %}
+          {% if color contains "linear-gradient" %}{% assign backgroundType = "background-image" %}{% endif %}
+          <div
+            class="color gp-relative gp-h-full gp-w-full gp-overflow-hidden gp-min-w-fit gp-flex gp-color-circle"
+            data-test="{{ backgroundType }}: {{ color }}"
+            style="{{ backgroundType }}: {{ color }}; {% if selectedValue == value %}--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: none;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 999999px;--bbrr: 999999px;--btlr: 999999px;--btrr: 999999px;--hvr-bblr: 999999px;--hvr-bbrr: 999999px;--hvr-btlr: 999999px;--hvr-btrr: 999999px;--focus-bblr: 999999px;--focus-bbrr: 999999px;--focus-btlr: 999999px;--focus-btrr: 999999px;-undefined-bblr: 999999px;-undefined-bbrr: 999999px;-undefined-btlr: 999999px;-undefined-btrr: 999999px;{% else %}--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: solid;--hvr-bs: solid;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 999999px;--bbrr: 999999px;--btlr: 999999px;--btrr: 999999px;--hvr-bblr: 999999px;--hvr-bbrr: 999999px;--hvr-btlr: 999999px;--hvr-btrr: 999999px;--focus-bblr: 999999px;--focus-bbrr: 999999px;--focus-btlr: 999999px;--focus-btrr: 999999px;-undefined-bblr: 999999px;-undefined-bbrr: 999999px;-undefined-btlr: 999999px;-undefined-btrr: 999999px;{% endif %}"></div>
+        {% endfor %}
+      {% else %}
+      <div
+        class="option-value gp-overflow-hidden gp-relative color gp-line-clamp-2 gp-flex gp-h-full gp-w-full gp-items-center gp-justify-center"
+        style="{% if selectedValue == value %}--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: none;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 999999px;--bbrr: 999999px;--btlr: 999999px;--btrr: 999999px;--hvr-bblr: 999999px;--hvr-bbrr: 999999px;--hvr-btlr: 999999px;--hvr-btrr: 999999px;--focus-bblr: 999999px;--focus-bbrr: 999999px;--focus-btlr: 999999px;--focus-btrr: 999999px;-undefined-bblr: 999999px;-undefined-bbrr: 999999px;-undefined-btlr: 999999px;-undefined-btrr: 999999px;{% else %}--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: solid;--hvr-bs: solid;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 999999px;--bbrr: 999999px;--btlr: 999999px;--btrr: 999999px;--hvr-bblr: 999999px;--hvr-bbrr: 999999px;--hvr-btlr: 999999px;--hvr-btrr: 999999px;--focus-bblr: 999999px;--focus-bbrr: 999999px;--focus-btlr: 999999px;--focus-btrr: 999999px;-undefined-bblr: 999999px;-undefined-bbrr: 999999px;-undefined-btlr: 999999px;-undefined-btrr: 999999px;{% endif %} ">
+         
+        <span class="gp-text-center gp-g-paragraph-2 gp-overflow-hidden gp-text-ellipsis gp-px-1" >{{value}}</span>
+      </div>
+    {% endif %}
+    </div>
+  
+      {% when "image_shopify" %}
+      
+      {% assign imageUrl = null %}
+      {% for variant in variants %}
+        {% assign valueIncludesSelectedOption = false %}
+        {% for item in variant.options %}
+          {% if item == value %}
+          {% assign valueIncludesSelectedOption = true %}
+          {% endif %}
+        {% endfor %}
+        {% if valueIncludesSelectedOption and variant.featured_image or variant.featured_media%}
+          {% unless imageUrl %}
+            {% if variant.featured_media %}
+              {% assign imageUrl = variant.featured_media.preview_image.src | product_img_url: '200x'  %}
+            {% else %}
+              {% assign imageUrl = variant.featured_image.src | product_img_url: '200x'  %}
+            {% endif %}
+          {% endunless %}
+        {% endif %}
+      {% endfor %}
+      
+    <div
+      id="value-wrapper-{{option.name | escape | strip | handleize}}-{{value | escape | strip | handleize}}" option-data="{{option.name | escape}}" option-value="{{value | escape}}" option-position="{{option.position}}" data-gp-option-available="{{value.available}}" option-type="image_shopify" data-disabled="{%- if option_disabled == true -%} disabled  {%- endif -%}" data-hidden="true"
+      class="gp-relative gp-flex gp-cursor-pointer gp-items-center gp-justify-center gp-text-center option-value-wrapper gp-overflow-hidden gp-w-full gp-h-full data-[disabled='disabled']:gp-pointer-events-none data-[disabled='disabled']:!gp-cursor-not-allowed
+  data-[hidden='false']:gp-flex {{option.name | escape}}-{{option.position}}-{{ forloop.index }} gp-g-paragraph-2"
+      style="{% if selectedValue == value %}--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: none;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--hvr-bblr: 0px;--hvr-bbrr: 0px;--hvr-btlr: 0px;--hvr-btrr: 0px;--focus-bblr: 0px;--focus-bbrr: 0px;--focus-btlr: 0px;--focus-btrr: 0px;-undefined-bblr: 0px;-undefined-bbrr: 0px;-undefined-btlr: 0px;-undefined-btrr: 0px;{% else %}--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: solid;--hvr-bs: solid;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--hvr-bblr: 0px;--hvr-bbrr: 0px;--hvr-btlr: 0px;--hvr-btrr: 0px;--focus-bblr: 0px;--focus-bbrr: 0px;--focus-btlr: 0px;--focus-btrr: 0px;-undefined-bblr: 0px;-undefined-bbrr: 0px;-undefined-btlr: 0px;-undefined-btrr: 0px;{% endif %}">
+      {% if imageUrl != null and imageUrl != "" %}
+      <img class="gp-object-cover gp-rounded-none" style="width: 64px; height: 64px" src="{{imageUrl}}" alt="" />
+    {% else %}
+      <div
+        class="option-value gp-overflow-hidden gp-relative gp-flex gp-flex-col gp-justify-center gp-items-center gp-gap-[6px"
+        style=" --pl: 16px;--pr: 16px;--pl-tablet: 16px;--pr-tablet: 16px;--pl-mobile: 16px;--pr-mobile: 16px;--pt: 0px;--pb: 0px;">
+        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="2" fill="#D6D6D6"></circle><path d="M0.196854 10.6453L2.40968 8.05946C2.4846 7.97175 2.57719 7.9008 2.68141 7.85124C2.78562 7.80168 2.89913 7.77461 3.01452 7.77181C3.12991 7.76902 3.2446 7.79055 3.3511 7.835C3.45761 7.87945 3.55353 7.94583 3.63262 8.02981L4.66733 9.12714L8.71205 4.29464C8.79123 4.19995 8.89077 4.1243 9.00325 4.07333C9.11573 4.02236 9.23827 3.99737 9.36176 4.00022C9.48524 4.00307 9.6065 4.03369 9.71651 4.08979C9.82651 4.1459 9.92245 4.22605 9.99717 4.32429L14.8329 10.6772C14.9254 10.7989 14.982 10.9441 14.9964 11.0962C15.0107 11.2484 14.9823 11.4016 14.9144 11.5385C14.8464 11.6754 14.7415 11.7907 14.6115 11.8713C14.4815 11.952 14.3316 11.9948 14.1786 11.995L0.822048 12C0.664945 11.9999 0.511148 11.9549 0.378853 11.8703C0.246557 11.7857 0.141299 11.6649 0.0755311 11.5224C0.00976323 11.3799 -0.013762 11.2216 0.00773837 11.0661C0.0292388 10.9107 0.0948652 10.7646 0.196854 10.6453Z" fill="#D6D6D6"></path></svg>
+        <span class="gp-text-center gp-g-paragraph-2 gp-overflow-hidden gp-text-ellipsis gp-px-1" >{{value}}</span>
+      </div>
+    {% endif %}
+    </div>
+  
+      {% when "image" %}
+      
+    {% assign imageUrl = null %}
+    {% for label in labels %}
+    {% if label == value %}
+      {% assign imageUrl = imageUrls[forloop.index0] %}
+    {% endif %}
+    {% endfor %}
+    
+    <div
+      id="value-wrapper-{{option.name | escape | strip | handleize}}-{{value | escape | strip | handleize}}" option-data="{{option.name | escape}}" option-value="{{value | escape}}" option-position="{{option.position}}" data-gp-option-available="{{value.available}}" option-type="image" data-disabled="{%- if option_disabled == true -%} disabled  {%- endif -%}" data-hidden="true"
+      class="gp-relative gp-flex gp-cursor-pointer gp-items-center gp-justify-center gp-text-center option-value-wrapper gp-overflow-hidden gp-w-full gp-h-full data-[disabled='disabled']:gp-pointer-events-none data-[disabled='disabled']:!gp-cursor-not-allowed
+  data-[hidden='false']:gp-flex {{option.name | escape}}-{{option.position}}-{{ forloop.index }} gp-g-paragraph-2"
+      style="{% if selectedValue == value %}--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: none;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--hvr-bblr: 0px;--hvr-bbrr: 0px;--hvr-btlr: 0px;--hvr-btrr: 0px;--focus-bblr: 0px;--focus-bbrr: 0px;--focus-btlr: 0px;--focus-btrr: 0px;-undefined-bblr: 0px;-undefined-bbrr: 0px;-undefined-btlr: 0px;-undefined-btrr: 0px;{% else %}--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: solid;--hvr-bs: solid;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--hvr-bblr: 0px;--hvr-bbrr: 0px;--hvr-btlr: 0px;--hvr-btrr: 0px;--focus-bblr: 0px;--focus-bbrr: 0px;--focus-btlr: 0px;--focus-btrr: 0px;-undefined-bblr: 0px;-undefined-bbrr: 0px;-undefined-btlr: 0px;-undefined-btrr: 0px;{% endif %}">
+      {% if imageUrl != null and imageUrl != "" %}
+      <img class="gp-object-cover gp-rounded-none" style="width: 64px; height: 64px" src="{{imageUrl}}" alt="" />
+    {% else %}
+      <div
+        class="option-value gp-overflow-hidden gp-relative gp-flex gp-flex-col gp-justify-center gp-items-center gp-gap-[6px"
+        style=" --pl: 16px;--pr: 16px;--pl-tablet: 16px;--pr-tablet: 16px;--pl-mobile: 16px;--pr-mobile: 16px;--pt: 0px;--pb: 0px;">
+        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="2" fill="#D6D6D6"></circle><path d="M0.196854 10.6453L2.40968 8.05946C2.4846 7.97175 2.57719 7.9008 2.68141 7.85124C2.78562 7.80168 2.89913 7.77461 3.01452 7.77181C3.12991 7.76902 3.2446 7.79055 3.3511 7.835C3.45761 7.87945 3.55353 7.94583 3.63262 8.02981L4.66733 9.12714L8.71205 4.29464C8.79123 4.19995 8.89077 4.1243 9.00325 4.07333C9.11573 4.02236 9.23827 3.99737 9.36176 4.00022C9.48524 4.00307 9.6065 4.03369 9.71651 4.08979C9.82651 4.1459 9.92245 4.22605 9.99717 4.32429L14.8329 10.6772C14.9254 10.7989 14.982 10.9441 14.9964 11.0962C15.0107 11.2484 14.9823 11.4016 14.9144 11.5385C14.8464 11.6754 14.7415 11.7907 14.6115 11.8713C14.4815 11.952 14.3316 11.9948 14.1786 11.995L0.822048 12C0.664945 11.9999 0.511148 11.9549 0.378853 11.8703C0.246557 11.7857 0.141299 11.6649 0.0755311 11.5224C0.00976323 11.3799 -0.013762 11.2216 0.00773837 11.0661C0.0292388 10.9107 0.0948652 10.7646 0.196854 10.6453Z" fill="#D6D6D6"></path></svg>
+        <span class="gp-text-center gp-g-paragraph-2 gp-overflow-hidden gp-text-ellipsis gp-px-1" >{{value}}</span>
+      </div>
+    {% endif %}
+    </div>
+  
+      {% else %}
+    {% endcase %}
+    
+      </div>
+    </label>{% endfor %}
+      {% if type == "dropdown" %}
+    <select
+      aria-label="{{option.name | escape}}" autocomplete="off" id="p-variant-dropdown-{{option.position}}" name="{%- if option -%}{{option.name | escape}}{% else %}Select Option{%- endif -%}" option-data="{{option.name}}" option-type="{{optionType}}" option-renderer="{{optionRendered}}"
+      class="dropdown-option-item gp-truncate gp-bg-auto gp-pl-4 gp-pr-6 gp-outline-none gp-shadow-none gp-g-paragraph-2 gp-border-g-line-2 hover:gp-border-g-line-3 gp-text-g-text-1"
+      style="--w:true;--w-tablet:true;--w-mobile:true;--h:[object Object];--shadow:none;--bs:solid;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-2, line-2);--c:var(--g-c-text-1, text-1);--bg:#FFFFFF;--hvr-bs:solid;--hvr-bw:1px 1px 1px 1px;--hvr-bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--hvr-bblr:0px;--hvr-bbrr:0px;--hvr-btlr:0px;--hvr-btrr:0px;--focus-bblr:0px;--focus-bbrr:0px;--focus-btlr:0px;--focus-btrr:0px;-undefined-bblr:0px;-undefined-bbrr:0px;-undefined-btlr:0px;-undefined-btrr:0px;appearance:none;background-image:url(https://cdn.shopify.com/s/files/1/1827/4239/t/1/assets/ico-select.svg?v=155563818344741998551488860031);background-repeat:no-repeat;background-position:right 16px center"
+    >
+      
+      {% for value in values %}{%- liquid
+      assign option_disabled = true
+      for variantItem in product.variants
+        case option.position
+          when 1
+            if variantItem.available and variantItem.option1 == value
+              assign option_disabled = false
+            endif
+          when 2
+            if variantItem.available and variantItem.option2 == value
+              assign option_disabled = false
+            endif
+          when 3
+            if variantItem.available and variantItem.option3 == value
+              assign option_disabled = false
+            endif
+        endcase
+      endfor
+    -%}
+    {% if value == selectedValue %}<option selected 
+  option-data="{{option.name | escape}}"
+  option-value="{{value | escape}}"
+  data-gp-option-value-id="{{value.id}}"
+  data-gp-option-available="{{value.available}}"
+  value="{{value | escape}}"
+  class="option-value-wrapper"
+  key="{{value | escape}}"
+ option-position="{{option.position}}">{{value}}</option>{% else %}<option 
+  option-data="{{option.name | escape}}"
+  option-value="{{value | escape}}"
+  data-gp-option-value-id="{{value.id}}"
+  data-gp-option-available="{{value.available}}"
+  value="{{value | escape}}"
+  class="option-value-wrapper"
+  key="{{value | escape}}"
+ option-position="{{option.position}}">{{value}}</option>{% endif %}{% endfor %}
+    </select>{% endif %}
+      {% endif %}
+    {% endfor %}
+
+    {% if optionRendered == false %}
+    {% for value in values %}
+    {%- liquid
+      assign option_disabled = true
+      for variantItem in product.variants
+        case option.position
+          when 1
+            if variantItem.available and variantItem.option1 == value
+              assign option_disabled = false
+            endif
+          when 2
+            if variantItem.available and variantItem.option2 == value
+              assign option_disabled = false
+            endif
+          when 3
+            if variantItem.available and variantItem.option3 == value
+              assign option_disabled = false
+            endif
+        endcase
+      endfor
+    -%}
+    {% assign option_disabled = false %}
+    <label
+      id="{{option.name | escape | handleize}}-{{value | escape | handleize}}"
+      for="{{product.id}}-gMzeE76E-F-{{option.name | escape}}-{{option.position}}-{{ forloop.index }}"
+      class="option-item gp-group gp-relative !gp-block gp-child-item-gMzeE76E-F"
+      
+    >
+      <div class="gp-hidden !gp-max-w-[150px] gp-left-[50%] gp-translate-x-[-50%] gp-translate-y-0 gp-absolute gp-bottom-[calc(100%+20px)] gp-text-[12px] group-hover:gp-block gp-w-max gp-bg-[#333333] gp-text-[#F9F9F9] gp-px-[8px] gp-py-[4px] gp-rounded-[8px] gp-mb-[-10px] after:gp-content-[''] after:gp-absolute after:gp-p-[7px] after:gp-left-0 after:gp-w-full after:gp-bottom-[-10px]">
+        <p class="gp-text-[#F9F9F9]">{{value | escape}}</p>
+        <svg class="gp-absolute gp-left-[50%] gp-translate-x-[-50%] gp-translate-y-0 gp-z-10 gp-bottom-[-4px]" width="8" height="4" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 10L0 0L16 1.41326e-06L8 10Z" fill="#333333"/>
+        </svg>
+      </div>
+      <input
+        checked="{%- if option.selected_value == value -%}true{% else %}false{%- endif -%}"
+        name="{{product.id}}-options-{{option.name | escape}}"
+        id="{{product.id}}-gMzeE76E-F-{{option.name | escape}}-{{option.position}}-{{ forloop.index }}"
+        value="{{value | escape}}"
+        type="radio"
+        class="gp-sr-only gp-absolute gp-bottom-0 gp-right-0"
+      />
+      <span class="gp-sr-only">{{value | escape}}</span>
+      <div
+        option-name="{{option.name | escape}}" option-name-value="{{value | escape}}" data-gp-option-value-id="{{value.id}}"
+        class="option-item-inner gp-w-auto gp-h-auto {% if option_disabled == true %} {% endif %}">
+        
+    
+    <div
+      id="value-wrapper-{{option.name | escape | strip | handleize}}-{{value | escape | strip | handleize}}" option-data="{{option.name | escape}}" option-value="{{value | escape}}" option-position="{{option.position}}" data-gp-option-available="{{value.available}}" option-type="optionType" data-disabled="{%- if option_disabled == true -%} disabled  {%- endif -%}" data-hidden="true"
+      class="gp-relative gp-flex gp-cursor-pointer gp-items-center gp-justify-center gp-text-center option-value-wrapper gp-overflow-hidden gp-w-full gp-h-full data-[disabled='disabled']:gp-pointer-events-none data-[disabled='disabled']:!gp-cursor-not-allowed
+  data-[hidden='false']:gp-flex {{option.name | escape}}-{{option.position}}-{{ forloop.index }} gp-g-paragraph-2"
+      style="{% if selectedValue == value %}--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: none;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--hvr-bblr: 0px;--hvr-bbrr: 0px;--hvr-btlr: 0px;--hvr-btrr: 0px;--focus-bblr: 0px;--focus-bbrr: 0px;--focus-btlr: 0px;--focus-btrr: 0px;-undefined-bblr: 0px;-undefined-bbrr: 0px;-undefined-btlr: 0px;-undefined-btrr: 0px;{% else %}--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: solid;--hvr-bs: solid;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--hvr-bblr: 0px;--hvr-bbrr: 0px;--hvr-btlr: 0px;--hvr-btrr: 0px;--focus-bblr: 0px;--focus-bbrr: 0px;--focus-btlr: 0px;--focus-btrr: 0px;-undefined-bblr: 0px;-undefined-bbrr: 0px;-undefined-btlr: 0px;-undefined-btrr: 0px;{% endif %}">
+      
+      <div
+        class="option-value gp-overflow-hidden gp-relative"
+        style=" --pl: 16px;--pr: 16px;--pl-tablet: 16px;--pr-tablet: 16px;--pl-mobile: 16px;--pr-mobile: 16px;--pt: 0px;--pb: 0px;">
+         
+        <span class="gp-text-center gp-g-paragraph-2" >{{value}}</span>
+      </div>
+    
+    </div>
+    
+      </div>
+    </label>{% endfor %}
+      {% if false %}
+    <select
+      aria-label="{{option.name | escape}}" autocomplete="off" id="p-variant-dropdown-{{option.position}}" name="{%- if option -%}{{option.name | escape}}{% else %}Select Option{%- endif -%}" option-data="{{option.name}}" option-type="{{optionType}}" option-renderer="{{optionRendered}}"
+      class="dropdown-option-item gp-truncate gp-bg-auto gp-pl-4 gp-pr-6 gp-outline-none gp-shadow-none gp-g-paragraph-2 gp-border-g-line-2 hover:gp-border-g-line-3 gp-text-g-text-1"
+      style="--w:true;--w-tablet:true;--w-mobile:true;--h:[object Object];--shadow:none;--bs:solid;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-2, line-2);--c:var(--g-c-text-1, text-1);--bg:#FFFFFF;--hvr-bs:solid;--hvr-bw:1px 1px 1px 1px;--hvr-bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--hvr-bblr:0px;--hvr-bbrr:0px;--hvr-btlr:0px;--hvr-btrr:0px;--focus-bblr:0px;--focus-bbrr:0px;--focus-btlr:0px;--focus-btrr:0px;-undefined-bblr:0px;-undefined-bbrr:0px;-undefined-btlr:0px;-undefined-btrr:0px;appearance:none;background-image:url(https://cdn.shopify.com/s/files/1/1827/4239/t/1/assets/ico-select.svg?v=155563818344741998551488860031);background-repeat:no-repeat;background-position:right 16px center"
+    >
+      
+      {% for value in values %}{%- liquid
+      assign option_disabled = true
+      for variantItem in product.variants
+        case option.position
+          when 1
+            if variantItem.available and variantItem.option1 == value
+              assign option_disabled = false
+            endif
+          when 2
+            if variantItem.available and variantItem.option2 == value
+              assign option_disabled = false
+            endif
+          when 3
+            if variantItem.available and variantItem.option3 == value
+              assign option_disabled = false
+            endif
+        endcase
+      endfor
+    -%}
+    {% if value == selectedValue %}<option selected 
+  option-data="{{option.name | escape}}"
+  option-value="{{value | escape}}"
+  data-gp-option-value-id="{{value.id}}"
+  data-gp-option-available="{{value.available}}"
+  value="{{value | escape}}"
+  class="option-value-wrapper"
+  key="{{value | escape}}"
+ option-position="{{option.position}}">{{value}}</option>{% else %}<option 
+  option-data="{{option.name | escape}}"
+  option-value="{{value | escape}}"
+  data-gp-option-value-id="{{value.id}}"
+  data-gp-option-available="{{value.available}}"
+  value="{{value | escape}}"
+  class="option-value-wrapper"
+  key="{{value | escape}}"
+ option-position="{{option.position}}">{{value}}</option>{% endif %}{% endfor %}
+    </select>{% endif %}{% endif %}
+  {% else %}
+    {%- assign optionRendered = false -%}
+    {%- assign swatches = shop.metafields.GEMPAGES.swatches -%}
+    {%- assign swatchesItems = swatches | split: '($1)' -%}
+
+    {% for swatchesItem in swatchesItems %}
+      {%- assign colorArraysString = "" -%}
+      {%- assign labelsString = "" -%}
+      {%- assign imageUrlsString = "" -%}
+      {%- assign attrItems = swatchesItem | split: '($3)' -%}
+
+      {% for attrItem in attrItems %}
+          {%- assign attrs = attrItem | split: '($2)' -%}
+          {%- assign optionKey = attrs[0] -%}
+          {%- assign optionValue = attrs[1] -%}
+          
+            {% if optionKey == 'optionTitle' %}
+              {% assign optionTitle = optionValue %}
+            {% elsif optionKey == 'optionType' %}
+              {% assign optionType = optionValue %}
+            {% endif %}
+          
+
+          {% if optionKey == "optionValues" %}
+            {%- assign opValueItems = optionValue | split: '($4)' -%}
+            {% for opValueItem in opValueItems %}
+                {%- assign opValueItemAttrs = opValueItem | split: '($6)' -%}
+                {% for opValueItemAttr in opValueItemAttrs %}
+                    {%- assign attrs = opValueItemAttr | split: '($5)' -%}
+                    {%- assign opValueItemKey = attrs[0] -%}
+                    {%- assign opValueItemValue = attrs[1] -%}
+
+                    {% if opValueItemKey == "label" %}{%- assign labelsString = labelsString | append: opValueItemValue -%}
+                       {%- assign labelsString = labelsString | append: "($8)" -%}{% endif %}
+
+                    {% if opValueItemKey == "colors" %}{%- assign colorArraysString = colorArraysString | append: opValueItemValue -%}
+                       {%- assign colorArraysString = colorArraysString | append: "($8)" -%}{% endif %}
+
+                    {% if opValueItemKey == "imageUrl" %}{%- assign imageUrlsString = imageUrlsString | append: opValueItemValue -%}
+                       {%- assign imageUrlsString = imageUrlsString | append: "($8)" -%}{% endif %}
+                  {% endfor %}
+              {% endfor %}
+            {% endif %}
+        {% endfor %}
+
+      {%- assign labels = labelsString | split: '($8)' -%}
+      {%- assign colorStrings = colorArraysString | split: '($8)' -%}
+      {%- assign imageUrls = imageUrlsString | split: '($8)' -%}
+
+      {% if optionTitle == option.name %}
+        {%- assign variantPresetString = "base($1)rectangle_list($2)Color($1)color($2)Colour($1)color($2)Size($1)dropdown($2)Have you purchased a REVIV before?($1)dropdown" -%}
+        {%- assign optionName = option.name | replace: "'", "&apos;" | replace: '"', "&quot;" -%}
+        {%- assign items = variantPresetString | split:'($2)' -%}
+        {%- assign type = 'dropdown' -%}
+        {% for item in items %}
+            {%- assign itemPreset = item | split:'($1)' -%}
+            {% if itemPreset[0] == optionName %}{%- assign type = itemPreset[1] -%}{% endif %}
+            {% if itemPreset[0] == "base" %}{%- assign type = itemPreset[1] -%}{% endif %}
+          {% endfor %}
+        {%- assign optionRendered = true -%}
+        
+    {% for value in values %}
+    {%- liquid
+      assign option_disabled = true
+      for variantItem in product.variants
+        case option.position
+          when 1
+            if variantItem.available and variantItem.option1 == value
+              assign option_disabled = false
+            endif
+          when 2
+            if variantItem.available and variantItem.option2 == value
+              assign option_disabled = false
+            endif
+          when 3
+            if variantItem.available and variantItem.option3 == value
+              assign option_disabled = false
+            endif
+        endcase
+      endfor
+    -%}
+    {% assign option_disabled = false %}
+    <label
+      id="{{option.name | escape | handleize}}-{{value | escape | handleize}}"
+      for="{{product.id}}-gMzeE76E-F-{{option.name | escape}}-{{option.position}}-{{ forloop.index }}"
+      class="option-item gp-group gp-relative !gp-block gp-child-item-gMzeE76E-F"
+      
+    >
+      <div class="gp-hidden !gp-max-w-[150px] gp-left-[50%] gp-translate-x-[-50%] gp-translate-y-0 gp-absolute gp-bottom-[calc(100%+20px)] gp-text-[12px] group-hover:gp-block gp-w-max gp-bg-[#333333] gp-text-[#F9F9F9] gp-px-[8px] gp-py-[4px] gp-rounded-[8px] gp-mb-[-10px] after:gp-content-[''] after:gp-absolute after:gp-p-[7px] after:gp-left-0 after:gp-w-full after:gp-bottom-[-10px]">
+        <p class="gp-text-[#F9F9F9]">{{value | escape}}</p>
+        <svg class="gp-absolute gp-left-[50%] gp-translate-x-[-50%] gp-translate-y-0 gp-z-10 gp-bottom-[-4px]" width="8" height="4" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 10L0 0L16 1.41326e-06L8 10Z" fill="#333333"/>
+        </svg>
+      </div>
+      <input
+        checked="{%- if option.selected_value == value -%}true{% else %}false{%- endif -%}"
+        name="{{product.id}}-options-{{option.name | escape}}"
+        id="{{product.id}}-gMzeE76E-F-{{option.name | escape}}-{{option.position}}-{{ forloop.index }}"
+        value="{{value | escape}}"
+        type="radio"
+        class="gp-sr-only gp-absolute gp-bottom-0 gp-right-0"
+      />
+      <span class="gp-sr-only">{{value | escape}}</span>
+      <div
+        option-name="{{option.name | escape}}" option-name-value="{{value | escape}}" data-gp-option-value-id="{{value.id}}"
+        class="option-item-inner gp-w-auto gp-h-auto {% if option_disabled == true %} {% endif %}">
+        
+    {% case type %}
+      {% when "rectangle_list" %}
+      
+    <div
+      id="value-wrapper-{{option.name | escape | strip | handleize}}-{{value | escape | strip | handleize}}" option-data="{{option.name | escape}}" option-value="{{value | escape}}" option-position="{{option.position}}" data-gp-option-available="{{value.available}}" option-type="rectangle_list" data-disabled="{%- if option_disabled == true -%} disabled  {%- endif -%}" data-hidden="true"
+      class="gp-relative gp-flex gp-cursor-pointer gp-items-center gp-justify-center gp-text-center option-value-wrapper gp-overflow-hidden gp-w-full gp-h-full data-[disabled='disabled']:gp-pointer-events-none data-[disabled='disabled']:!gp-cursor-not-allowed
+  data-[hidden='false']:gp-flex {{option.name | escape}}-{{option.position}}-{{ forloop.index }} gp-g-paragraph-2"
+      style="{% if selectedValue == value %}--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: none;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--hvr-bblr: 0px;--hvr-bbrr: 0px;--hvr-btlr: 0px;--hvr-btrr: 0px;--focus-bblr: 0px;--focus-bbrr: 0px;--focus-btlr: 0px;--focus-btrr: 0px;-undefined-bblr: 0px;-undefined-bbrr: 0px;-undefined-btlr: 0px;-undefined-btrr: 0px;{% else %}--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: solid;--hvr-bs: solid;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--hvr-bblr: 0px;--hvr-bbrr: 0px;--hvr-btlr: 0px;--hvr-btrr: 0px;--focus-bblr: 0px;--focus-bbrr: 0px;--focus-btlr: 0px;--focus-btrr: 0px;-undefined-bblr: 0px;-undefined-bbrr: 0px;-undefined-btlr: 0px;-undefined-btrr: 0px;{% endif %}">
+      
+      <div
+        class="option-value gp-overflow-hidden gp-relative"
+        style=" --pl: 16px;--pr: 16px;--pl-tablet: 16px;--pr-tablet: 16px;--pl-mobile: 16px;--pr-mobile: 16px;--pt: 0px;--pb: 0px;">
+         
+        <span class="gp-text-center gp-g-paragraph-2" >{{value}}</span>
+      </div>
+    
+    </div>
+      {% when "color" %}
+      
+    {% assign colorsString = null %}
+    {% assign colors = null %}
+    {% for label in labels %}
+      {% if label == value %}
+        {% assign colorsString = colorStrings[forloop.index0] %}
+      {% endif %}
+    {% endfor %}
+    {% if colorsString != null %}
+      {% assign colors = colorsString | split: '|||' %}
+    {% endif %}
+    
+    <div
+      id="value-wrapper-{{option.name | escape | strip | handleize}}-{{value | escape | strip | handleize}}" option-data="{{option.name | escape}}" option-value="{{value | escape}}" option-position="{{option.position}}" data-gp-option-available="{{value.available}}" option-type="color" data-disabled="{%- if option_disabled == true -%} disabled  {%- endif -%}" data-hidden="true"
+      class="gp-relative gp-flex gp-cursor-pointer gp-items-center gp-justify-center gp-text-center option-value-wrapper gp-overflow-hidden gp-w-full gp-h-full data-[disabled='disabled']:gp-pointer-events-none data-[disabled='disabled']:!gp-cursor-not-allowed
+  data-[hidden='false']:gp-flex {{option.name | escape}}-{{option.position}}-{{ forloop.index }} gp-g-paragraph-2 gp-p-[4px]"
+      style="{% if selectedValue == value %}--minw: 32px;--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: none;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 999999px;--bbrr: 999999px;--btlr: 999999px;--btrr: 999999px;--hvr-bblr: 999999px;--hvr-bbrr: 999999px;--hvr-btlr: 999999px;--hvr-btrr: 999999px;--focus-bblr: 999999px;--focus-bbrr: 999999px;--focus-btlr: 999999px;--focus-btrr: 999999px;-undefined-bblr: 999999px;-undefined-bbrr: 999999px;-undefined-btlr: 999999px;-undefined-btrr: 999999px;{% else %}--minw: 32px;--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: solid;--hvr-bs: solid;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 999999px;--bbrr: 999999px;--btlr: 999999px;--btrr: 999999px;--hvr-bblr: 999999px;--hvr-bbrr: 999999px;--hvr-btlr: 999999px;--hvr-btrr: 999999px;--focus-bblr: 999999px;--focus-bbrr: 999999px;--focus-btlr: 999999px;--focus-btrr: 999999px;-undefined-bblr: 999999px;-undefined-bbrr: 999999px;-undefined-btlr: 999999px;-undefined-btrr: 999999px;{% endif %}">
+      {% if colors != null and colors.size > 0 %}
+      {% for color in colors %}
+          {% assign backgroundType = "background-color" %}
+          {% if color contains "linear-gradient" %}{% assign backgroundType = "background-image" %}{% endif %}
+          <div
+            class="color gp-relative gp-h-full gp-w-full gp-overflow-hidden gp-min-w-fit gp-flex gp-color-circle"
+            data-test="{{ backgroundType }}: {{ color }}"
+            style="{{ backgroundType }}: {{ color }}; {% if selectedValue == value %}--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: none;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 999999px;--bbrr: 999999px;--btlr: 999999px;--btrr: 999999px;--hvr-bblr: 999999px;--hvr-bbrr: 999999px;--hvr-btlr: 999999px;--hvr-btrr: 999999px;--focus-bblr: 999999px;--focus-bbrr: 999999px;--focus-btlr: 999999px;--focus-btrr: 999999px;-undefined-bblr: 999999px;-undefined-bbrr: 999999px;-undefined-btlr: 999999px;-undefined-btrr: 999999px;{% else %}--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: solid;--hvr-bs: solid;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 999999px;--bbrr: 999999px;--btlr: 999999px;--btrr: 999999px;--hvr-bblr: 999999px;--hvr-bbrr: 999999px;--hvr-btlr: 999999px;--hvr-btrr: 999999px;--focus-bblr: 999999px;--focus-bbrr: 999999px;--focus-btlr: 999999px;--focus-btrr: 999999px;-undefined-bblr: 999999px;-undefined-bbrr: 999999px;-undefined-btlr: 999999px;-undefined-btrr: 999999px;{% endif %}"></div>
+        {% endfor %}
+      {% else %}
+      <div
+        class="option-value gp-overflow-hidden gp-relative color gp-line-clamp-2 gp-flex gp-h-full gp-w-full gp-items-center gp-justify-center"
+        style="{% if selectedValue == value %}--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: none;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 999999px;--bbrr: 999999px;--btlr: 999999px;--btrr: 999999px;--hvr-bblr: 999999px;--hvr-bbrr: 999999px;--hvr-btlr: 999999px;--hvr-btrr: 999999px;--focus-bblr: 999999px;--focus-bbrr: 999999px;--focus-btlr: 999999px;--focus-btrr: 999999px;-undefined-bblr: 999999px;-undefined-bbrr: 999999px;-undefined-btlr: 999999px;-undefined-btrr: 999999px;{% else %}--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: solid;--hvr-bs: solid;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 999999px;--bbrr: 999999px;--btlr: 999999px;--btrr: 999999px;--hvr-bblr: 999999px;--hvr-bbrr: 999999px;--hvr-btlr: 999999px;--hvr-btrr: 999999px;--focus-bblr: 999999px;--focus-bbrr: 999999px;--focus-btlr: 999999px;--focus-btrr: 999999px;-undefined-bblr: 999999px;-undefined-bbrr: 999999px;-undefined-btlr: 999999px;-undefined-btrr: 999999px;{% endif %} ">
+         
+        <span class="gp-text-center gp-g-paragraph-2 gp-overflow-hidden gp-text-ellipsis gp-px-1" >{{value}}</span>
+      </div>
+    {% endif %}
+    </div>
+  
+      {% when "image_shopify" %}
+      
+      {% assign imageUrl = null %}
+      {% for variant in variants %}
+        {% assign valueIncludesSelectedOption = false %}
+        {% for item in variant.options %}
+          {% if item == value %}
+          {% assign valueIncludesSelectedOption = true %}
+          {% endif %}
+        {% endfor %}
+        {% if valueIncludesSelectedOption and variant.featured_image or variant.featured_media%}
+          {% unless imageUrl %}
+            {% if variant.featured_media %}
+              {% assign imageUrl = variant.featured_media.preview_image.src | product_img_url: '200x'  %}
+            {% else %}
+              {% assign imageUrl = variant.featured_image.src | product_img_url: '200x'  %}
+            {% endif %}
+          {% endunless %}
+        {% endif %}
+      {% endfor %}
+      
+    <div
+      id="value-wrapper-{{option.name | escape | strip | handleize}}-{{value | escape | strip | handleize}}" option-data="{{option.name | escape}}" option-value="{{value | escape}}" option-position="{{option.position}}" data-gp-option-available="{{value.available}}" option-type="image_shopify" data-disabled="{%- if option_disabled == true -%} disabled  {%- endif -%}" data-hidden="true"
+      class="gp-relative gp-flex gp-cursor-pointer gp-items-center gp-justify-center gp-text-center option-value-wrapper gp-overflow-hidden gp-w-full gp-h-full data-[disabled='disabled']:gp-pointer-events-none data-[disabled='disabled']:!gp-cursor-not-allowed
+  data-[hidden='false']:gp-flex {{option.name | escape}}-{{option.position}}-{{ forloop.index }} gp-g-paragraph-2"
+      style="{% if selectedValue == value %}--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: none;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--hvr-bblr: 0px;--hvr-bbrr: 0px;--hvr-btlr: 0px;--hvr-btrr: 0px;--focus-bblr: 0px;--focus-bbrr: 0px;--focus-btlr: 0px;--focus-btrr: 0px;-undefined-bblr: 0px;-undefined-bbrr: 0px;-undefined-btlr: 0px;-undefined-btrr: 0px;{% else %}--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: solid;--hvr-bs: solid;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--hvr-bblr: 0px;--hvr-bbrr: 0px;--hvr-btlr: 0px;--hvr-btrr: 0px;--focus-bblr: 0px;--focus-bbrr: 0px;--focus-btlr: 0px;--focus-btrr: 0px;-undefined-bblr: 0px;-undefined-bbrr: 0px;-undefined-btlr: 0px;-undefined-btrr: 0px;{% endif %}">
+      {% if imageUrl != null and imageUrl != "" %}
+      <img class="gp-object-cover gp-rounded-none" style="width: 64px; height: 64px" src="{{imageUrl}}" alt="" />
+    {% else %}
+      <div
+        class="option-value gp-overflow-hidden gp-relative gp-flex gp-flex-col gp-justify-center gp-items-center gp-gap-[6px"
+        style=" --pl: 16px;--pr: 16px;--pl-tablet: 16px;--pr-tablet: 16px;--pl-mobile: 16px;--pr-mobile: 16px;--pt: 0px;--pb: 0px;">
+        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="2" fill="#D6D6D6"></circle><path d="M0.196854 10.6453L2.40968 8.05946C2.4846 7.97175 2.57719 7.9008 2.68141 7.85124C2.78562 7.80168 2.89913 7.77461 3.01452 7.77181C3.12991 7.76902 3.2446 7.79055 3.3511 7.835C3.45761 7.87945 3.55353 7.94583 3.63262 8.02981L4.66733 9.12714L8.71205 4.29464C8.79123 4.19995 8.89077 4.1243 9.00325 4.07333C9.11573 4.02236 9.23827 3.99737 9.36176 4.00022C9.48524 4.00307 9.6065 4.03369 9.71651 4.08979C9.82651 4.1459 9.92245 4.22605 9.99717 4.32429L14.8329 10.6772C14.9254 10.7989 14.982 10.9441 14.9964 11.0962C15.0107 11.2484 14.9823 11.4016 14.9144 11.5385C14.8464 11.6754 14.7415 11.7907 14.6115 11.8713C14.4815 11.952 14.3316 11.9948 14.1786 11.995L0.822048 12C0.664945 11.9999 0.511148 11.9549 0.378853 11.8703C0.246557 11.7857 0.141299 11.6649 0.0755311 11.5224C0.00976323 11.3799 -0.013762 11.2216 0.00773837 11.0661C0.0292388 10.9107 0.0948652 10.7646 0.196854 10.6453Z" fill="#D6D6D6"></path></svg>
+        <span class="gp-text-center gp-g-paragraph-2 gp-overflow-hidden gp-text-ellipsis gp-px-1" >{{value}}</span>
+      </div>
+    {% endif %}
+    </div>
+  
+      {% when "image" %}
+      
+    {% assign imageUrl = null %}
+    {% for label in labels %}
+    {% if label == value %}
+      {% assign imageUrl = imageUrls[forloop.index0] %}
+    {% endif %}
+    {% endfor %}
+    
+    <div
+      id="value-wrapper-{{option.name | escape | strip | handleize}}-{{value | escape | strip | handleize}}" option-data="{{option.name | escape}}" option-value="{{value | escape}}" option-position="{{option.position}}" data-gp-option-available="{{value.available}}" option-type="image" data-disabled="{%- if option_disabled == true -%} disabled  {%- endif -%}" data-hidden="true"
+      class="gp-relative gp-flex gp-cursor-pointer gp-items-center gp-justify-center gp-text-center option-value-wrapper gp-overflow-hidden gp-w-full gp-h-full data-[disabled='disabled']:gp-pointer-events-none data-[disabled='disabled']:!gp-cursor-not-allowed
+  data-[hidden='false']:gp-flex {{option.name | escape}}-{{option.position}}-{{ forloop.index }} gp-g-paragraph-2"
+      style="{% if selectedValue == value %}--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: none;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--hvr-bblr: 0px;--hvr-bbrr: 0px;--hvr-btlr: 0px;--hvr-btrr: 0px;--focus-bblr: 0px;--focus-bbrr: 0px;--focus-btlr: 0px;--focus-btrr: 0px;-undefined-bblr: 0px;-undefined-bbrr: 0px;-undefined-btlr: 0px;-undefined-btrr: 0px;{% else %}--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: solid;--hvr-bs: solid;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--hvr-bblr: 0px;--hvr-bbrr: 0px;--hvr-btlr: 0px;--hvr-btrr: 0px;--focus-bblr: 0px;--focus-bbrr: 0px;--focus-btlr: 0px;--focus-btrr: 0px;-undefined-bblr: 0px;-undefined-bbrr: 0px;-undefined-btlr: 0px;-undefined-btrr: 0px;{% endif %}">
+      {% if imageUrl != null and imageUrl != "" %}
+      <img class="gp-object-cover gp-rounded-none" style="width: 64px; height: 64px" src="{{imageUrl}}" alt="" />
+    {% else %}
+      <div
+        class="option-value gp-overflow-hidden gp-relative gp-flex gp-flex-col gp-justify-center gp-items-center gp-gap-[6px"
+        style=" --pl: 16px;--pr: 16px;--pl-tablet: 16px;--pr-tablet: 16px;--pl-mobile: 16px;--pr-mobile: 16px;--pt: 0px;--pb: 0px;">
+        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="2" fill="#D6D6D6"></circle><path d="M0.196854 10.6453L2.40968 8.05946C2.4846 7.97175 2.57719 7.9008 2.68141 7.85124C2.78562 7.80168 2.89913 7.77461 3.01452 7.77181C3.12991 7.76902 3.2446 7.79055 3.3511 7.835C3.45761 7.87945 3.55353 7.94583 3.63262 8.02981L4.66733 9.12714L8.71205 4.29464C8.79123 4.19995 8.89077 4.1243 9.00325 4.07333C9.11573 4.02236 9.23827 3.99737 9.36176 4.00022C9.48524 4.00307 9.6065 4.03369 9.71651 4.08979C9.82651 4.1459 9.92245 4.22605 9.99717 4.32429L14.8329 10.6772C14.9254 10.7989 14.982 10.9441 14.9964 11.0962C15.0107 11.2484 14.9823 11.4016 14.9144 11.5385C14.8464 11.6754 14.7415 11.7907 14.6115 11.8713C14.4815 11.952 14.3316 11.9948 14.1786 11.995L0.822048 12C0.664945 11.9999 0.511148 11.9549 0.378853 11.8703C0.246557 11.7857 0.141299 11.6649 0.0755311 11.5224C0.00976323 11.3799 -0.013762 11.2216 0.00773837 11.0661C0.0292388 10.9107 0.0948652 10.7646 0.196854 10.6453Z" fill="#D6D6D6"></path></svg>
+        <span class="gp-text-center gp-g-paragraph-2 gp-overflow-hidden gp-text-ellipsis gp-px-1" >{{value}}</span>
+      </div>
+    {% endif %}
+    </div>
+  
+      {% else %}
+    {% endcase %}
+    
+      </div>
+    </label>{% endfor %}
+      {% if type == "dropdown" %}
+    <select
+      aria-label="{{option.name | escape}}" autocomplete="off" id="p-variant-dropdown-{{option.position}}" name="{%- if option -%}{{option.name | escape}}{% else %}Select Option{%- endif -%}" option-data="{{option.name}}" option-type="{{optionType}}" option-renderer="{{optionRendered}}"
+      class="dropdown-option-item gp-truncate gp-bg-auto gp-pl-4 gp-pr-6 gp-outline-none gp-shadow-none gp-g-paragraph-2 gp-border-g-line-2 hover:gp-border-g-line-3 gp-text-g-text-1"
+      style="--w:true;--w-tablet:true;--w-mobile:true;--h:[object Object];--shadow:none;--bs:solid;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-2, line-2);--c:var(--g-c-text-1, text-1);--bg:#FFFFFF;--hvr-bs:solid;--hvr-bw:1px 1px 1px 1px;--hvr-bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--hvr-bblr:0px;--hvr-bbrr:0px;--hvr-btlr:0px;--hvr-btrr:0px;--focus-bblr:0px;--focus-bbrr:0px;--focus-btlr:0px;--focus-btrr:0px;-undefined-bblr:0px;-undefined-bbrr:0px;-undefined-btlr:0px;-undefined-btrr:0px;appearance:none;background-image:url(https://cdn.shopify.com/s/files/1/1827/4239/t/1/assets/ico-select.svg?v=155563818344741998551488860031);background-repeat:no-repeat;background-position:right 16px center"
+    >
+      
+      {% for value in values %}{%- liquid
+      assign option_disabled = true
+      for variantItem in product.variants
+        case option.position
+          when 1
+            if variantItem.available and variantItem.option1 == value
+              assign option_disabled = false
+            endif
+          when 2
+            if variantItem.available and variantItem.option2 == value
+              assign option_disabled = false
+            endif
+          when 3
+            if variantItem.available and variantItem.option3 == value
+              assign option_disabled = false
+            endif
+        endcase
+      endfor
+    -%}
+    {% if value == selectedValue %}<option selected 
+  option-data="{{option.name | escape}}"
+  option-value="{{value | escape}}"
+  data-gp-option-value-id="{{value.id}}"
+  data-gp-option-available="{{value.available}}"
+  value="{{value | escape}}"
+  class="option-value-wrapper"
+  key="{{value | escape}}"
+ option-position="{{option.position}}">{{value}}</option>{% else %}<option 
+  option-data="{{option.name | escape}}"
+  option-value="{{value | escape}}"
+  data-gp-option-value-id="{{value.id}}"
+  data-gp-option-available="{{value.available}}"
+  value="{{value | escape}}"
+  class="option-value-wrapper"
+  key="{{value | escape}}"
+ option-position="{{option.position}}">{{value}}</option>{% endif %}{% endfor %}
+    </select>{% endif %}
+      {% endif %}
+    {% endfor %}
+
+    {% if optionRendered == false %}
+    {% for value in values %}
+    {%- liquid
+      assign option_disabled = true
+      for variantItem in product.variants
+        case option.position
+          when 1
+            if variantItem.available and variantItem.option1 == value
+              assign option_disabled = false
+            endif
+          when 2
+            if variantItem.available and variantItem.option2 == value
+              assign option_disabled = false
+            endif
+          when 3
+            if variantItem.available and variantItem.option3 == value
+              assign option_disabled = false
+            endif
+        endcase
+      endfor
+    -%}
+    {% assign option_disabled = false %}
+    <label
+      id="{{option.name | escape | handleize}}-{{value | escape | handleize}}"
+      for="{{product.id}}-gMzeE76E-F-{{option.name | escape}}-{{option.position}}-{{ forloop.index }}"
+      class="option-item gp-group gp-relative !gp-block gp-child-item-gMzeE76E-F"
+      
+    >
+      <div class="gp-hidden !gp-max-w-[150px] gp-left-[50%] gp-translate-x-[-50%] gp-translate-y-0 gp-absolute gp-bottom-[calc(100%+20px)] gp-text-[12px] group-hover:gp-block gp-w-max gp-bg-[#333333] gp-text-[#F9F9F9] gp-px-[8px] gp-py-[4px] gp-rounded-[8px] gp-mb-[-10px] after:gp-content-[''] after:gp-absolute after:gp-p-[7px] after:gp-left-0 after:gp-w-full after:gp-bottom-[-10px]">
+        <p class="gp-text-[#F9F9F9]">{{value | escape}}</p>
+        <svg class="gp-absolute gp-left-[50%] gp-translate-x-[-50%] gp-translate-y-0 gp-z-10 gp-bottom-[-4px]" width="8" height="4" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 10L0 0L16 1.41326e-06L8 10Z" fill="#333333"/>
+        </svg>
+      </div>
+      <input
+        checked="{%- if option.selected_value == value -%}true{% else %}false{%- endif -%}"
+        name="{{product.id}}-options-{{option.name | escape}}"
+        id="{{product.id}}-gMzeE76E-F-{{option.name | escape}}-{{option.position}}-{{ forloop.index }}"
+        value="{{value | escape}}"
+        type="radio"
+        class="gp-sr-only gp-absolute gp-bottom-0 gp-right-0"
+      />
+      <span class="gp-sr-only">{{value | escape}}</span>
+      <div
+        option-name="{{option.name | escape}}" option-name-value="{{value | escape}}" data-gp-option-value-id="{{value.id}}"
+        class="option-item-inner gp-w-auto gp-h-auto {% if option_disabled == true %} {% endif %}">
+        
+    
+    <div
+      id="value-wrapper-{{option.name | escape | strip | handleize}}-{{value | escape | strip | handleize}}" option-data="{{option.name | escape}}" option-value="{{value | escape}}" option-position="{{option.position}}" data-gp-option-available="{{value.available}}" option-type="optionType" data-disabled="{%- if option_disabled == true -%} disabled  {%- endif -%}" data-hidden="true"
+      class="gp-relative gp-flex gp-cursor-pointer gp-items-center gp-justify-center gp-text-center option-value-wrapper gp-overflow-hidden gp-w-full gp-h-full data-[disabled='disabled']:gp-pointer-events-none data-[disabled='disabled']:!gp-cursor-not-allowed
+  data-[hidden='false']:gp-flex {{option.name | escape}}-{{option.position}}-{{ forloop.index }} gp-g-paragraph-2"
+      style="{% if selectedValue == value %}--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: none;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--hvr-bblr: 0px;--hvr-bbrr: 0px;--hvr-btlr: 0px;--hvr-btrr: 0px;--focus-bblr: 0px;--focus-bbrr: 0px;--focus-btlr: 0px;--focus-btrr: 0px;-undefined-bblr: 0px;-undefined-bbrr: 0px;-undefined-btlr: 0px;-undefined-btrr: 0px;{% else %}--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: solid;--hvr-bs: solid;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--hvr-bblr: 0px;--hvr-bbrr: 0px;--hvr-btlr: 0px;--hvr-btrr: 0px;--focus-bblr: 0px;--focus-bbrr: 0px;--focus-btlr: 0px;--focus-btrr: 0px;-undefined-bblr: 0px;-undefined-bbrr: 0px;-undefined-btlr: 0px;-undefined-btrr: 0px;{% endif %}">
+      
+      <div
+        class="option-value gp-overflow-hidden gp-relative"
+        style=" --pl: 16px;--pr: 16px;--pl-tablet: 16px;--pr-tablet: 16px;--pl-mobile: 16px;--pr-mobile: 16px;--pt: 0px;--pb: 0px;">
+         
+        <span class="gp-text-center gp-g-paragraph-2" >{{value}}</span>
+      </div>
+    
+    </div>
+    
+      </div>
+    </label>{% endfor %}
+      {% if false %}
+    <select
+      aria-label="{{option.name | escape}}" autocomplete="off" id="p-variant-dropdown-{{option.position}}" name="{%- if option -%}{{option.name | escape}}{% else %}Select Option{%- endif -%}" option-data="{{option.name}}" option-type="{{optionType}}" option-renderer="{{optionRendered}}"
+      class="dropdown-option-item gp-truncate gp-bg-auto gp-pl-4 gp-pr-6 gp-outline-none gp-shadow-none gp-g-paragraph-2 gp-border-g-line-2 hover:gp-border-g-line-3 gp-text-g-text-1"
+      style="--w:true;--w-tablet:true;--w-mobile:true;--h:[object Object];--shadow:none;--bs:solid;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-2, line-2);--c:var(--g-c-text-1, text-1);--bg:#FFFFFF;--hvr-bs:solid;--hvr-bw:1px 1px 1px 1px;--hvr-bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--hvr-bblr:0px;--hvr-bbrr:0px;--hvr-btlr:0px;--hvr-btrr:0px;--focus-bblr:0px;--focus-bbrr:0px;--focus-btlr:0px;--focus-btrr:0px;-undefined-bblr:0px;-undefined-bbrr:0px;-undefined-btlr:0px;-undefined-btrr:0px;appearance:none;background-image:url(https://cdn.shopify.com/s/files/1/1827/4239/t/1/assets/ico-select.svg?v=155563818344741998551488860031);background-repeat:no-repeat;background-position:right 16px center"
+    >
+      
+      {% for value in values %}{%- liquid
+      assign option_disabled = true
+      for variantItem in product.variants
+        case option.position
+          when 1
+            if variantItem.available and variantItem.option1 == value
+              assign option_disabled = false
+            endif
+          when 2
+            if variantItem.available and variantItem.option2 == value
+              assign option_disabled = false
+            endif
+          when 3
+            if variantItem.available and variantItem.option3 == value
+              assign option_disabled = false
+            endif
+        endcase
+      endfor
+    -%}
+    {% if value == selectedValue %}<option selected 
+  option-data="{{option.name | escape}}"
+  option-value="{{value | escape}}"
+  data-gp-option-value-id="{{value.id}}"
+  data-gp-option-available="{{value.available}}"
+  value="{{value | escape}}"
+  class="option-value-wrapper"
+  key="{{value | escape}}"
+ option-position="{{option.position}}">{{value}}</option>{% else %}<option 
+  option-data="{{option.name | escape}}"
+  option-value="{{value | escape}}"
+  data-gp-option-value-id="{{value.id}}"
+  data-gp-option-available="{{value.available}}"
+  value="{{value | escape}}"
+  class="option-value-wrapper"
+  key="{{value | escape}}"
+ option-position="{{option.position}}">{{value}}</option>{% endif %}{% endfor %}
+    </select>{% endif %}{% endif %}
+  {% endif %}
+      
+          </div>
+      </div>{% endfor %}
+    
+        </div>{% endif %}
+    </gp-product-variants>
+
+    <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-product-variant-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+  
+      </div>
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="g4NE4ulxUs"
+        class="g4NE4ulxUs"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:var(--g-s-l);--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--b:none;--bc:#121212;--bw:1px 1px 1px 1px;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--shadow:none;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--fs:normal;--ff:var(--g-font-body, body);--weight:700;--size:16px;--size-tablet:16px;--size-mobile:14px;--lh:150%;--lh-tablet:150%;--lh-mobile:150%;--ls:normal;--ls-tablet:normal;--ls-mobile:normal;--c:#E5C185;--tt:none;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.gg4NE4ulxUs_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    <div gp-el-wrapper style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:var(--g-s-l)" class="g4LASMq5GV ">
+      
+    {%- liquid
+      assign current_variant = product.selected_or_first_available_variant
+      assign available = current_variant.available | default: false
+    -%}
+      <gp-product-quantity
+        data-id="g4LASMq5GV" data-disabled="{%- if available -%} false {%- else -%} true {%- endif -%}"
+        data-price="true"
+        class="quantityClass gp-relative gp-inline-flex gp-h-12 gp-w-full gp-bg-transparent gp-transition-all gp-duration-150 data-[disabled=true]:gp-opacity-60 "
+        style="--h:45px;--jc:left"
+      >
+        <div class="gp-inline-flex gp-w-full gp-overflow-hidden" style="--bg:#FFFFFF;--maxw:160px;--maxw-mobile:100%;--b:solid;--bc:var(--g-c-line-3, line-3);--bw:1px;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px">
+          
+              <button
+              {% if available == false %} disabled {% endif %}
+               title="Decrement" aria-label="decrement" type="button"
+                class="gp-flex gp-aspect-square gp-h-full disabled:gp-cursor-not-allowed gp-cursor-pointer gp-items-center gp-justify-center gp-outline-none gp-minus "
+                style="--w:45px;--c:#294C43;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--focus-bblr:0px;--focus-bbrr:0px;--focus-btlr:0px;--focus-btrr:0px;-undefined-bblr:0px;-undefined-bbrr:0px;-undefined-btlr:0px;-undefined-btrr:0px"
+              >
+                <span class="gp-inline-flex gp-items-center gp-justify-center [&>*]:gp-h-full [&>*]:gp-w-full" style="--w:16px;--w-tablet:16px;--w-mobile:16px"
+                >
+                  <svg height="20px" width="20px" data-name="minus-regular" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" data-id="508817690725712232">
+              <path fill="currentColor" strokelinecap="round" strokelinejoin="round" d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"></path></svg>
+                </span>
+              </button>
+            
+          <input
+            {% if available == false %} disabled {% endif %}
+            type="text" name="quantity" step="1" min="1" aria-label="quantity" inputMode="numeric" quantity="current_variant.quantity" autocomplete="off" value="1"
+            class="gp-flex gp-w-full gp-shrink-[99999] gp-appearance-none gp-items-center gp-text-center gp-outline-none focus-visible:gp-shadow-none focus-visible:gp-outline-none gp-transition-all gp-duration-150 hover:gp-text-black disabled:gp-cursor-not-allowed"
+            style="--fs:normal;--ff:var(--g-font-body, body);--weight:700;--size:16px;--size-tablet:16px;--size-mobile:14px;--lh:120%;--lh-tablet:180%;--lh-mobile:180%;--ls:normal;--ls-tablet:normal;--ls-mobile:normal;--c:#294C43;--bg:transparent;--brw:1px;--blw:1px;--brc:transparent;--blc:transparent;--ts:none"
+            inputMode="numeric"
+          />
+
+          
+            <button
+              {% if available == false %} disabled {% endif %}
+              title="Increment" aria-label="increment" type="button"
+              class="gp-flex gp-aspect-square gp-h-full disabled:gp-cursor-not-allowed gp-cursor-pointer gp-items-center gp-justify-center gp-outline-none gp-plus "
+              style="--w:45px;--c:#294C43;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--focus-bblr:0px;--focus-bbrr:0px;--focus-btlr:0px;--focus-btrr:0px;-undefined-bblr:0px;-undefined-bbrr:0px;-undefined-btlr:0px;-undefined-btrr:0px"
+            >
+              <span class="gp-inline-flex gp-items-center gp-justify-center [&>*]:gp-h-full [&>*]:gp-w-full" style="--w:16px;--w-tablet:16px;--w-mobile:16px">
+                <svg height="20px" width="20px" data-name="plus-regular" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" data-id="508817698760687976">
+              <path fill="currentColor" strokelinecap="round" strokelinejoin="round" d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"></path></svg>
+              </span>
+            </button>
+          
+          </div>
+        </gp-product-quantity>
+      <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-product-quantity-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+      </div>
+    {%- assign total_combinations = 1 -%}
+    {% for option in product.options_with_values %}{%- assign total_combinations = total_combinations | times: option.values.size -%}{% endfor %}
+    {%- liquid
+      assign inventory_quantity = variant.inventory_quantity | default: 0
+      assign is_in_stock = variant.available
+    -%}
+    <gp-product-button
+      
+      gp-data-wrapper="true"
+      gp-href="{{ request.origin }}{{ routes.root_url | split: '/' | join: '/' }}/cart"
+      class="gp-product-button"
+      gp-label-out-of-stock="{{ section.settings.gg2t1sSwNhI_outOfStockLabel }}"
+      gp-label-unavailable="{{ section.settings.gg2t1sSwNhI_unavailableLabel }}"
+      gp-data='{"styles":{"errorTypo":{"attrs":{"color":"error"},"type":"paragraph-2"},"successTypo":{"attrs":{"color":"success"},"type":"paragraph-2"}},"setting":{"errorType":"built-in","actionEffect":"open-cart-drawer","enableMessage":true,"label":"Add to cart","errorMessage":"{{ section.settings.gg2t1sSwNhI_errorMessage }}","successMessage":"{{ section.settings.gg2t1sSwNhI_successMessage }}","outOfStockLabel":"Out of stock","customURL":{"link":"/cart","target":"_self"}},"variantID":"{{variant.id}}","disabled":"{{variant.available}}","totalVariant":"{{total_combinations}}"}'
+      data-variant-selection-required-message="{{ section.settings.gg2t1sSwNhI_variantSelectionRequiredMessage }}"
+      gp-enable-third-partycart="{{shop.metafields.GEMPAGES.enableThirdPartyCart}}"
+    >
+      
+    <gp-button
+      gp-data='{}'
+      
+      class="gp-flex gp-flex-col"
+    >
+      <div style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ta:left" class="{% unless variant.available %} !gp-hidden {% endunless %}">
+        <style>[data-id="g2t1sSwNhI"].gp-button-base::before, [data-id="g2t1sSwNhI-interaction"].gp-button-base::before {
+      
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: #E5C085;
+  
+    
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      
+  
+    }
+  
+      
+  [data-id="g2t1sSwNhI"]:hover::before, [data-id="g2t1sSwNhI-interaction"]:hover::before {
+    border-style: none;
+  
+  
+  
+    
+  }</style>
+        
+        <button
+          data-id="g2t1sSwNhI" dataId="g2t1sSwNhI" data-state="idle" aria-label="Add to cart"
+          name="add" gp-data-hidden="{% unless variant.available %}true{% endunless %}"
+          type="submit"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--h:Auto;--h-tablet:Auto;--h-mobile:Auto;--pl:24px;--pr:24px;--pt:12px;--pb:12px;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px;--hvr-bblr:8px;--hvr-bbrr:8px;--hvr-btlr:8px;--hvr-btrr:8px;--bgi:;--hvr-bgi:;--hvr-bg:#151515;--bg:#FFD814;--hvr-c:#FFFFFF;--c:#151515;--fs:normal;--ff:var(--g-font-body, body);--weight:700;--size:19px;--size-tablet:16px;--size-mobile:14px;--lh:150%;--lh-tablet:150%;--lh-mobile:150%;--ls:normal;--ls-tablet:normal;--ls-mobile:normal"
+          class="gp-button-atc tcustomizer-submit-button g2t1sSwNhI gp-button-base gp-group gp-relative gp-inline-flex gp-max-w-full gp-items-center gp-justify-center gp-no-underline gp-transition-colors gp-duration-200 disabled:gp-btn-disabled disabled:gp-opacity-30 "
+        >
+        
+  <svg
+    class="gp-invisible gp-absolute gp-h-5 gp-w-5 group-data-[state=loading]:gp-animate-spin group-data-[state=loading]:gp-visible"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+  >
+    <circle
+      class="gp-opacity-25"
+      cx="12"
+      cy="12"
+      r="10"
+      stroke="currentColor"
+      stroke-width="4"
+    ></circle>
+    <path
+      class="gp-opacity-75"
+      fill="currentColor"
+      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+    ></path>
+  </svg>
+
+        <div class="gp-inline-flex">
+          
+    <span
+      style="--fs:normal;--ff:var(--g-font-body, body);--weight:700;--size:19px;--size-tablet:16px;--size-mobile:14px;--lh:150%;--lh-tablet:150%;--lh-mobile:150%;--ls:normal;--ls-tablet:normal;--ls-mobile:normal;--ts:none;word-break:break-word;--mr:8px;--height-desktop:1em;--height-tablet:1em;--height-mobile:1em"
+      class="gp-button-icon gp-z-1 gp-inline-flex gp-shrink-0 gp-items-center gp-justify-center group-data-[state=loading]:gp-invisible [&>svg]:!gp-h-[var(--height-desktop)] [&>svg]:!gp-w-auto tablet:[&>svg]:!gp-h-[var(--height-tablet)] mobile:[&>svg]:!gp-h-[var(--height-mobile)]"
+    >
+      <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" data-id="508414779109605736">
+            <path fill="currentColor" strokelinecap="round" strokelinejoin="round" d="M233.21,56.31A12,12,0,0,0,224,52H66L60.53,21.85A12,12,0,0,0,48.73,12H24a12,12,0,0,0,0,24H38.71L63.62,173a28,28,0,0,0,4.07,10.21A32,32,0,1,0,123,196h34a32,32,0,1,0,31-24H91.17a4,4,0,0,1-3.93-3.28L84.92,156H196.1a28,28,0,0,0,27.55-23l12.16-66.86A12,12,0,0,0,233.21,56.31ZM100,204a8,8,0,1,1-8-8A8,8,0,0,1,100,204Zm88,8a8,8,0,1,1,8-8A8,8,0,0,1,188,212Zm12-83.28A4,4,0,0,1,196.1,132H80.56L70.38,76H209.62Z"></path></svg>
+    </span>
+  
+          
+    <span
+      data-gp-text
+      style="--fs:normal;--ff:var(--g-font-body, body);--weight:700;--size:19px;--size-tablet:16px;--size-mobile:14px;--lh:150%;--lh-tablet:150%;--lh-mobile:150%;--ls:normal;--ls-tablet:normal;--ls-mobile:normal;--ts:none;word-break:break-word"
+      class="gp-content-product-button group-active/button:!gp-text-inherit gp-relative gp-flex gp-h-full gp-items-center gp-overflow-hidden gp-break-words group-data-[state=loading]:gp-invisible [&_p]:gp-whitespace-pre-line gp-text button-text"
+    >
+      {{ section.settings.gg2t1sSwNhI_label }}
+    </span>
+        </div>
+        
+    
+    
+  
+        </button>
+      </div>
+      <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-button-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+    </gp-button>
+  
+      
+    <gp-button
+      gp-data='{}'
+      
+      class="gp-flex gp-flex-col"
+    >
+      <div style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ta:left" class="{% if variant.available %} !gp-hidden {% endif %}">
+        <style>[data-id="g2t1sSwNhI-sold-out"].gp-button-base::before, [data-id="g2t1sSwNhI-sold-out-interaction"].gp-button-base::before {
+      
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    
+    
+  
+    }
+  
+      
+  [data-id="g2t1sSwNhI-sold-out"]:hover::before, [data-id="g2t1sSwNhI-sold-out-interaction"]:hover::before {
+    
+    
+  }</style>
+        
+        <button
+          data-id="g2t1sSwNhI-sold-out" dataId="g2t1sSwNhI-sold-out" data-state="idle" aria-label="{{ section.settings.gg2t1sSwNhI_outOfStockLabel }}"
+          gp-data-hidden="{% if variant.available %}true{% endif %}"
+          type="button"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--h:Auto;--h-tablet:Auto;--h-mobile:Auto;--pl:24px;--pr:24px;--pt:12px;--pb:12px;--bgi:;--hvr-bgi:;--bg:#B7B7B7;--hvr-bg:#B7B7B7;--c:var(--g-c-text-3, text-3);--fs:normal;--ff:var(--g-font-body, body);--weight:700;--size:19px;--size-tablet:16px;--size-mobile:14px;--lh:150%;--lh-tablet:150%;--lh-mobile:150%;--ls:normal;--ls-tablet:normal;--ls-mobile:normal"
+          class="gp-cursor-default gp-opacity-30 btn-disabled gp-button-sold-out g2t1sSwNhI-sold-out gp-button-base gp-group gp-relative gp-inline-flex gp-max-w-full gp-items-center gp-justify-center gp-no-underline gp-transition-colors gp-duration-200 disabled:gp-btn-disabled disabled:gp-opacity-30 "
+        >
+        
+        <div class="gp-inline-flex">
+          
+    <span
+      style="--fs:normal;--ff:var(--g-font-body, body);--weight:700;--size:19px;--size-tablet:16px;--size-mobile:14px;--lh:150%;--lh-tablet:150%;--lh-mobile:150%;--ls:normal;--ls-tablet:normal;--ls-mobile:normal;--ts:none;word-break:break-word;--mr:8px;--height-desktop:1em;--height-tablet:1em;--height-mobile:1em"
+      class="gp-button-icon gp-z-1 gp-inline-flex gp-shrink-0 gp-items-center gp-justify-center group-data-[state=loading]:gp-invisible [&>svg]:!gp-h-[var(--height-desktop)] [&>svg]:!gp-w-auto tablet:[&>svg]:!gp-h-[var(--height-tablet)] mobile:[&>svg]:!gp-h-[var(--height-mobile)]"
+    >
+      <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" data-id="508414779109605736">
+            <path fill="currentColor" strokelinecap="round" strokelinejoin="round" d="M233.21,56.31A12,12,0,0,0,224,52H66L60.53,21.85A12,12,0,0,0,48.73,12H24a12,12,0,0,0,0,24H38.71L63.62,173a28,28,0,0,0,4.07,10.21A32,32,0,1,0,123,196h34a32,32,0,1,0,31-24H91.17a4,4,0,0,1-3.93-3.28L84.92,156H196.1a28,28,0,0,0,27.55-23l12.16-66.86A12,12,0,0,0,233.21,56.31ZM100,204a8,8,0,1,1-8-8A8,8,0,0,1,100,204Zm88,8a8,8,0,1,1,8-8A8,8,0,0,1,188,212Zm12-83.28A4,4,0,0,1,196.1,132H80.56L70.38,76H209.62Z"></path></svg>
+    </span>
+  
+          
+    <span
+      data-gp-text
+      style="--fs:normal;--ff:var(--g-font-body, body);--weight:700;--size:19px;--size-tablet:16px;--size-mobile:14px;--lh:150%;--lh-tablet:150%;--lh-mobile:150%;--ls:normal;--ls-tablet:normal;--ls-mobile:normal;--ts:none;word-break:break-word"
+      class="gp-content-product-button group-active/button:!gp-text-inherit gp-relative gp-flex gp-h-full gp-items-center gp-overflow-hidden gp-break-words group-data-[state=loading]:gp-invisible [&_p]:gp-whitespace-pre-line gp-text button-text"
+    >
+      {{ section.settings.gg2t1sSwNhI_outOfStockLabel }}
+    </span>
+        </div>
+        
+    
+    
+  
+        </button>
+      </div>
+      <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-button-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+    </gp-button>
+  
+    </gp-product-button>
+    <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-product-button-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+  
+    </div>
+
+      
+    </gp-row>
+  
+  
+          {%- endform -%}
+        </product-form>
+      </gp-product>
+      {%- assign product = gpBkProduct -%}
+    {% else %}
+      <div class="gp-text-center">{{ 'gempages.Product.product_not_found' | t }}</div>
+    {% endif %}
+    <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-product-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+  
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gBOffoIt9Q"
+        class="gBOffoIt9Q"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--pb:16px;--pb-mobile:16px;--pb-tablet:16px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--b:none;--bc:#121212;--bw:1px 1px 1px 1px;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--shadow:none;--ts:none;--ta:center;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--fs:normal;--ff:var(--g-font-body, body);--weight:600;--size:16px;--size-tablet:16px;--size-mobile:14px;--lh:150%;--lh-tablet:150%;--lh-mobile:150%;--ls:normal;--ls-tablet:normal;--ls-mobile:normal;--c:#E5C185;--tt:none;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggBOffoIt9Q_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+    
+        <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-product-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+        <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-same-height-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+        
+
+    
+    <div
+      class="gp-relative gp-flex gPTQgbLyFY"
+      style="--d:block;--d-mobile:block;--d-tablet:block"
+    >
+      <div class='gp-flex gp-w-full' style="--jc:center">
+        <div
+          style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--w:var(--g-ct-w, 1200px);--bgi:none;--bgi-tablet:none;--bgi-mobile:none"
+        >
+          {%- assign gpBkProduct = product -%}
+          {%- assign gpBkProducts = products -%}
+          
+      {%- liquid
+        assign productHandles = 'rd1-revivday-daytime-mouthguard,repod,1-year-subscription-only'| split: ','
+        assign products = null
+        assign target_collection = null
+        assign productSrc = 'PickProduct'
+        assign c = 0
+        assign limit = 4
+
+        if request.page_type == 'collection' or preview_page_type == 'collection'
+          assign target_collection = collection
+          if target_collection == empty or target_collection == null
+            if '445348151537' == 'latest'
+              assign target_collection = collections | sort: 'updated_at'  | first
+            else
+              
+          assign target_collection = collections['all']
+          if target_collection == empty
+            for collection in collections
+              if collection.id == 445348151537
+                assign target_collection = collection
+                break
+              endif
+            endfor
+          endif
+        
+            endif
+          endif
+          paginate target_collection.products by 10
+            assign products = target_collection.products  
+          endpaginate
+        else
+          if productSrc == 'RelatedProduct'
+            
+    
+  
+          elsif productSrc == 'PickProduct'
+            unless false
+              assign products = null | sort
+              for handle in productHandles
+                assign productH = all_products[handle] | sort
+                assign products = products | concat: productH
+              endfor
+              assign limit = products.length
+            else
+              if 3 == 0
+                paginate collections.all.products by 100000
+                  assign products = collections.all.products  | sort : "created_at"  | reverse
+                endpaginate
+              endif
+            endunless
+          else
+            if '445348151537' == 'latest'
+              assign target_collection = collections | sort: 'updated_at'  | first
+            else
+              
+          assign target_collection = collections['all']
+          if target_collection == empty
+            for collection in collections
+              if collection.id == 445348151537
+                assign target_collection = collection
+                break
+              endif
+            endfor
+          endif
+        
+            endif
+            paginate target_collection.products by 10
+              assign products = target_collection.products  
+            endpaginate
+          endif
+        endif
+      -%}
+    
+          
+    {%- if products == null -%}
+    {%- if count == 0 and 3 == 0 -%}
+      {% if 'PickProduct' == 'RelatedProduct' -%}
+          <div>{{ 'gempages.ProductList.no_related_products' | t }}</div>
+        {% else %}
+          <div>{{ 'gempages.ProductList.no_products_found' | t }}</div>
+      {%- endif -%}
+    {%- endif -%}
+    {%-else-%}
+      
+    <div
+      items-repeat="true" data-id="gPTQgbLyFY"
+      style="--cg:16px;--cg-mobile:16px;--gtc:repeat(1, minmax(0, 1fr));--gtc-tablet:repeat(1, minmax(0, 1fr));--gtc-mobile:repeat(1, minmax(0, 1fr))"
+      class="!gp-m-auto gp-grid gp-w-full gp-grid-flow-row"
+    >
+      
+      <gp-same-height
+        class="gp-contents"
+        style="visibility: hidden"
+        gp-data='{"targetUid":"gr0F49NEdL","slidesToShow":{"desktop":1,"mobile":1,"tablet":1},"rowGap":{"desktop":"16px","mobile":"16px"}}'>
+        
+      {%- assign count = 0 -%}
+      {%- for product in products limit: limit -%}
+      {%- if product.id != empty -%}
+      {%- assign count = count | plus: 1 -%}
+      {%- assign variant = product.selected_or_first_available_variant -%}
+      {%- assign product_form_id = 'product-form-' | append: "gPTQgbLyFY" | append: product.id -%}
+        
+      <gp-product
+        gp-context='{"variantSelected": {{ variant | json | escape }}, "inventory_management": {{ variant.inventory_management | json | escape  }}, "inventory_policy": {{ variant.inventory_policy | json | escape }}, "quantity": 1 ,"inventoryQuantity": {{ variant.inventory_quantity | default: 0 }},  "formId": "{{ product_form_id }}"}'
+        gp-data='{"variantSelected": {{ variant | json | escape }}, "quantity": 1, "productUrl":{{ product.url | json | escape }}, "productHandle":{{ product.handle | json | escape }}, "collectionUrl": {{ collection.url | json | escape }}, "collectionHandle": {{ collection.handle | json | escape }},"pageContext" : {"pageType":"GP_PRODUCT","sectionName":"","isPreviewing":false,"isOptimizePlan":false,"isTranslateWithLocale":false,"isLazyLoadSection":true,"isLazyLoadImage":false,"hasCollectionHandle":true,"numberOfProductOfProductList":0,"pageBackground":"","fontType":"google","primaryLocale":"","showPriceCurrency":false,"enableLazyLoadImage":false}}'
+        class="gp-contents"
+
+      >
+        {%- form 'product', product, id: product_form_id, class: 'form contents gp-contents [&>*>div]:gp-contents [&>*]:gp-grid-rows-[subgrid] [&>*]:gp-gap-y-0 gp-child-item-gPTQgbLyFY',  data-type: 'add-to-cart-form', autocomplete: 'off' -%}
+        <input type="hidden" name="id" value="{{ variant.id }}" />
+        <input type="hidden" min="1" name="quantity"  value="{{ quantity }}" />
+        <button type="submit" onclick="return false;" style="display:none;"></button>
+          
+      
+            
+    
+
+    
+
+    
+    <gp-row gp-data='{"background":{},"uid":"gr0F49NEdL"}' data-id="gr0F49NEdL" id="gr0F49NEdL" data-same-height-subgrid-container="true" class="gr0F49NEdL gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-1, line-1);--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--cg:var(--g-s-2xl);--rg:0px;--gtc:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--h:auto;--pc:start">
+      
+
+      <div
+      data-same-height-display-contents="true"
+      style="--ai:normal;--jc:start;--o:0"
+      class="gKU4gZSMIK gp-relative gp-flex gp-flex-col"
+    >
+      
+    
+
+    
+
+    
+    <gp-row gp-data='{"background":{},"uid":"gNC-PxDb-b"}' data-id="gNC-PxDb-b" id="gNC-PxDb-b" data-same-height-subgrid-container class="gNC-PxDb-b gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--bs:solid;--bw:1px 1px 1px 1px;--bc:#A9D8CC;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--pageType:GP_STATIC;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px;--pt:12px;--pl:12px;--pb:12px;--pr:12px;--pt-mobile:12px;--pl-mobile:12px;--pb-mobile:12px;--pr-mobile:12px;--pt-tablet:12px;--pl-tablet:12px;--pb-tablet:12px;--pr-tablet:12px;--cg:16px;--rg:16px;--rg-tablet:16px;--rg-mobile:16px;--gtc:minmax(0, 2fr) minmax(0, 6fr) minmax(0, 4fr);--gtc-mobile:minmax(0, 3fr) minmax(0, 5fr) minmax(0, 4fr);--w:var(--g-ct-w, 1200px);--h:auto;--of:hidden;--of-tablet:hidden;--of-mobile:hidden;--pc:start">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:center"
+      class="g-GqQVfKkd gp-relative gp-flex gp-flex-col"
+    >
+      
+  {% if product.media.size > 1 %}<style>
+    .gem-slider-item-gaDVkvvX8v-{{product.id}}.gp-gallery-image-item::after, .gem-slider-item-gp-gallery-gaDVkvvX8v-{{product.id}}.gp-gallery-image-item.gem-slider-item-active::after {
+      content: "";
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: var(--g-c-line-3, line-3);
+  
+      
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      
+    }
+    .gem-slider-item-gaDVkvvX8v-{{product.id}}.gp-gallery-image-item[data-outline=active]:after, .gem-slider-item-gp-gallery-gaDVkvvX8v-{{product.id}}.gp-gallery-image-item[data-outline=active]:after {
+      pointer-events: none;
+    }
+    .gem-slider-item-gaDVkvvX8v-{{product.id}}.gp-gallery-image-item[data-outline=none]:after{
+        pointer-events: none;
+        border-color: transparent !important;
+    }
+  </style>{% endif %}
+  
+    {% assign featured_image = product.featured_image %}
+    {% if variant != null and variant.featured_image != null %}{% assign featured_image = variant.featured_image %}{% endif %}
+  
+    <gp-product-images-v3
+      gp-data='
+    {
+      "id":"gaDVkvvX8v",
+      "pageContext": {"pageType":"GP_PRODUCT","sectionName":"","isPreviewing":false,"isOptimizePlan":false,"isTranslateWithLocale":false,"isLazyLoadSection":true,"isLazyLoadImage":false,"hasCollectionHandle":true,"numberOfProductOfProductList":0,"pageBackground":"","fontType":"google","primaryLocale":"","showPriceCurrency":false,"enableLazyLoadImage":false},
+      "setting":{"arrowIcon":"<svg height=\"20\" width=\"20\" data-name=\"caret-right-regular\" xmlns=\"http://www.w3.org/2000/svg\"  viewBox=\"0 0 256 256\" fill=\"currentColor\" data-id=\"508418455613473128\">\n              <path fill=\"currentColor\" strokeLinecap=\"round\" strokeLinejoin=\"round\" fill=\"currentColor\" d=\"M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z\" /></svg>","arrowIconColor":"#000000","arrowIconSize":{"desktop":24},"arrowNavBorder":{"border":"none","borderType":"none","borderWidth":"1px","isCustom":false,"width":"1px 1px 1px 1px"},"arrowNavColor":"brand","arrowNavRadius":{"bblr":"9999px","bbrr":"9999px","btlr":"9999px","btrr":"9999px","radiusType":"circle"},"arrowNavShadow":{"angle":90,"blur":"12px","color":"rgba(0, 0, 0, 0.20)","distance":"4px","enable":false,"spread":"0px","type":"shadow-1"},"arrowNavSize":{"height":"Auto","padding":{"bottom":"12px","left":"12px","right":"12px","top":"12px"},"shape":"square","shapeLinked":true,"shapeValue":"1/1","width":"Auto"},"borderActive":{"border":"solid","borderType":"none","borderWidth":"1px","color":"line-3","isCustom":false,"width":"1px 1px 1px 1px"},"clickOpenLightBox":{"desktop":false},"displayByVariant":false,"dragToScroll":true,"filterByVariant":"all_images","ftAnimationMode":"ease-out","ftAnimationSpeed":500,"ftArrowIcon":"<svg height=\"20\" width=\"20\" data-name=\"caret-right-regular\" xmlns=\"http://www.w3.org/2000/svg\"  viewBox=\"0 0 256 256\" fill=\"currentColor\" data-id=\"508418455613473128\">\n              <path fill=\"currentColor\" strokeLinecap=\"round\" strokeLinejoin=\"round\" fill=\"currentColor\" d=\"M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z\" /></svg>","ftArrowIconColor":"#121212","ftArrowIconSize":{"desktop":16},"ftArrowNavColor":"brand","ftArrowNavRadius":{"bblr":"9999px","bbrr":"9999px","btlr":"9999px","btrr":"9999px","radiusType":"circle"},"ftArrowNavSize":{"height":"Auto","padding":{"bottom":"12px","left":"12px","right":"12px","top":"12px"},"shape":"square","shapeLinked":true,"shapeValue":"1/1","width":"Auto"},"ftClickOpenLightBox":{"desktop":"product-link"},"ftClickOpenNewTab":false,"ftDotActiveColor":{"desktop":"#FFFFFF"},"ftDotColor":{"desktop":"#121212"},"ftDotGapToCarousel":{"desktop":16},"ftDotSize":{"desktop":16},"ftDotStyle":{"desktop":"none"},"ftDragToScroll":false,"ftLoop":{"desktop":false},"ftNavigationPosition":{"desktop":"none"},"ftPauseOnHover":true,"galleryHoverEffect":"none","galleryZoom":150,"galleryZoomType":"default","hoverEffect":"none","loop":{"desktop":true},"navigationPosition":{"desktop":"inside"},"otherImage":0,"pauseOnHover":true,"preDisplay":"1st-available-variant","preload":false,"qualityPercent":{"desktop":100},"qualityType":{"desktop":"high"},"speed":1,"type":{"desktop":"slider"},"typeDisplay":"all-images","zoom":150,"zoomType":"default"},
+      "styles":{"align":{"desktop":"flex-start"},"corner":{"bblr":"0px","bbrr":"0px","btlr":"0px","btrr":"0px","radiusType":"none"},"ftCorner":{"bblr":"0px","bbrr":"0px","btlr":"0px","btrr":"0px","radiusType":"none"},"ftLayout":{"desktop":"cover"},"ftShape":{"desktop":{"gap":"","height":"","shape":"square","shapeLinked":true,"shapeValue":"1/1","width":"100%"}},"itemSpacing":{"desktop":"8px"},"layout":{"desktop":"cover"},"position":{"desktop":"only-feature","mobile":"only-feature"},"ratioLayout":{"desktop":[2,10]},"ratioLayoutRight":{"desktop":[10,2]},"shape":{"desktop":{"shape":"square","shapeLinked":true,"shapeValue":"1/1","width":"100%"}},"shapeFor1Col":{"desktop":{"shape":"square","shapeLinked":true,"shapeValue":"1/1","width":"100%"}},"shapeFor2Col":{"desktop":{"shape":"square","shapeLinked":true,"shapeValue":"1/1","width":"50%"}},"shapeForBottom":{"desktop":{"shape":"square","shapeLinked":true,"shapeValue":"1/1","width":"20%"}},"shapeForFtOnly":{"desktop":{"shape":"square","shapeLinked":true,"shapeValue":"1/1","width":"100%"}},"shapeForInside":{"desktop":{"shape":"square","shapeLinked":true,"shapeValue":"1/1","width":"20%"}},"shapeForInsideBottom":{"desktop":{"shape":"square","shapeLinked":true,"shapeValue":"1/1","width":"20%"}},"spacing":{"desktop":"8px"}},
+      "productUrl":{{product.url | json | escape}},
+      "product":{{product | json | escape}},
+      "collectionUrl": {{ collection.url | json | escape }},
+      "collection": {{ collection | json | escape}}
+    }
+  '
+      section-id="{{section.id}}" data-id="gaDVkvvX8v"
+      style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px"
+      class="gp-relative gp-w-full gaDVkvvX8v "
+    >
+      <div
+        class="{% if product.media.size > 1 %}gp-grid gp-w-full !gp-m-0 gp-relative{% else %}gp-w-full !gp-m-0 gp-relative{% endif %}"
+        style="{% if product.media.size > 1 %}--gtc: minmax(0, 12fr);--gtc-tablet: minmax(0, 12fr);--gtc-mobile: minmax(0, 12fr);--gg: 8px;{% else %}--gtc: minmax(0, 12fr);--gg: 8px;{% endif %}"
+      >
+        
+    {% capture featureImageOnlyOne %}
+      
+        {% assign featureMedia = variant.featured_media %}
+        {% unless featureMedia %}
+        {% assign featureMedia = product.featured_media %}
+        {% endunless %}
+        {% if product.media.size > 1 %}
+          {% assign featureMedia = variant.featured_media %}
+          {% unless featureMedia %}
+          {% assign featureMedia = product.featured_media %}
+          {% endunless %}
+        {% endif %}
+        {% assign largestRatio = 0 %}
+        {% assign height = featureMedia.height | times: 1.0 %}
+        {% assign width = featureMedia.width | times: 1.0 %}
+        {% assign ratio = height | divided_by: width %}
+        {% if ratio > largestRatio %}{% assign largestRatio = ratio %}{% endif %}
+        {% assign productImageWidth = 0 %}
+        {% case featureMedia.media_type %}
+          {% when 'image' %}
+            {% assign productImageWidth = featureMedia.width %}
+          {% else %}
+            {% assign productImageWidth = featureMedia.preview_image.width %}
+        {% endcase %}
+        {% if featureMedia == null %}{% assign productImageWidth = 1600 %}{% endif %}
+        <div
+          class='gp-feature-image-carousel gp-feature-image-only'
+          style="--jc: flex-start;--o: 0;--o-tablet: 0;--o-mobile: 0;--d: flex;--d-mobile: flex;--d-tablet: flex;"
+        >
+          <div
+            class="gp-relative"
+            style="--w: 100%;--w-tablet: 100%;--w-mobile: 100%;--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--hvr-bblr: 0px;--hvr-bbrr: 0px;--hvr-btlr: 0px;--hvr-btrr: 0px;--focus-bblr: 0px;--focus-bbrr: 0px;--focus-btlr: 0px;--focus-btrr: 0px;-undefined-bblr: 0px;-undefined-bbrr: 0px;-undefined-btlr: 0px;-undefined-btrr: 0px;--h: auto;--h-tablet: auto;--h-mobile: auto;"
+          >
+            
+      
+    
+            <div
+              type="gp-feature-image-only"
+              product-id="{{product.id}}"
+              product-media="{{product.media.size}}"
+              class="gp-group gp-z-0 gp-flex !gp-min-w-full !gp-max-w-full gp-w-full gp-relative gp-items-start gp-justify-center gp-overflow-hidden gp-outline-1 -gp-outline-offset-1 gp-image-item gp-ft-image-item data-[outline=active]:gp-outline gp-featured-image-wrapper"
+              style="max-width: 100%;outline-color: var(--g-c-brand, brand);--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--h: auto;--h-tablet: auto;--h-mobile: auto;width: {{productImageWidth}}px;"
+            >
+              <div
+                class="gp-w-full gp-relative {% if featureMedia == null or featureMedia.media_type == 'image' %}{{ 'gp-h-0' }}{% else %}{{ 'gp-h-full !gp-pb-0' }}{% endif %}"
+                style="--pb: calc((1/1)*100%);--pb-tablet: calc((1/1)*100%);--pb-mobile: calc((1/1)*100%); {% if featureMedia.media_type == 'video' or featureMedia.media_type == 'external_video' %}{{ 'display: flex; align-items: center; justify-content: center' }}{% endif %}"
+              >
+                
+    {% case featureMedia.media_type %}
+      {% when 'image' %}
+        
+      
+    {% assign src = featureMedia.src %}
+    
+    
+    <img
+      alt="{{featureMedia.alt | escape}}" width="{{featureMedia.width}}" height="{{featureMedia.height}}" draggable="false" quality-type="{&quot;desktop&quot;:&quot;high&quot;}" quality-percent="{&quot;desktop&quot;:100}" data-sizes="auto" sizes="(max-width: 768px) 50vw, 100vw" src="{{src | image_url}}" isNotLazyload="true" srcset="{{src | image_url: width: 480}} 480w, {{src | image_url: width: 768}} 768w, {{src | image_url: width: 1024}} 1024w, {{src | image_url: width: 1440}} 1440w" base-src="{{src | image_url}}" loading="lazy"
+      id="{% if featureMedia != null %}{{featureMedia.id}}{% endif %}"
+      style="--aspect:1/1;--aspect-tablet:1/1;--aspect-mobile:1/1;--objf:cover"
+      class="gp-w-full gp-h-full gp-absolute gp-top-0 gp-left-0 featured-image-only gp-cursor-pointer !gp-rounded-none gp-w-full gp-transition-opacity {{shouldHidden}}"
+    />
+       
+       
+    
+      {% when 'external_video' %}
+        {% assign mediaSourceVideo = featureMedia | external_video_url %}
+        
+    <iframe
+      src="{{mediaSourceVideo}}" alt="{{featureMedia.alt | escape}}" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" frameborder="0" width="100%" height="100%" controls="true" allowfullscreen="true"
+      style="--aspect:1/1;--aspect-tablet:1/1;--aspect-mobile:1/1"
+      class="feature-video gp-w-full gp-h-full gp-relative"
+    >
+    </iframe>
+  
+      {% when 'video' %}
+        {% assign mediaSourceVideo = featureMedia.sources.last.url %}
+        
+  <gp-lite-html5-embed is-check-loaded="true" style="--h:100%">
+    
+    <video
+    id="gp-video-undefined" title="{{featureMedia.alt | escape}}" preload="none" data-src="{{mediaSourceVideo}}" poster="{{featureMedia.preview_image.src | product_img_url: '1024x1024'}}" data-poster="{{featureMedia.preview_image.src | product_img_url: '1024x1024'}}"
+      style="width:100%;max-height:100%;--h:100%;--objf:cover"
+      class="gp-w-full gp-invisible gp-lazyload-video"
+      controls
+      
+      
+      
+      playsinline
+      
+    ></video>
+    
+     <div
+        role="presentation"
+        style="width:100%;max-height:100%;--h:100%;--objf:cover"
+        class="gp-absolute gp-top-0 gp-left-0  gp-w-full gp-thumbnail-video gp-h-full"
+        >
+           
+    <img
+      alt="{{featureMedia.alt | escape}}" width="2237" height="1678" draggable="false" quality-type quality-percent data-sizes="auto" sizes="100vw" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIzNyIgaGVpZ2h0PSIxNjc4IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZy0yMjM3LTE2NzgiPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iMjAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNTAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNzAlIiAvPgogICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPHJlY3Qgd2lkdGg9IjIyMzciIGhlaWdodD0iMTY3OCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMjIzNyIgaGVpZ2h0PSIxNjc4IiBmaWxsPSJ1cmwoI2ctMjIzNy0xNjc4KSIgLz4KICAgIDxhbmltYXRlIHhsaW5rOmhyZWY9IiNyIiBhdHRyaWJ1dGVOYW1lPSJ4IiBmcm9tPSItMjIzNyIgdG89IjIyMzciIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAgLz4KICA8L3N2Zz4=" base-src="{{featureMedia.preview_image.src | product_img_url: '1024x1024'}}" data-src="{{featureMedia.preview_image.src | product_img_url: '1024x1024'}}" data-srcset="{{featureMedia.preview_image.src | product_img_url: '1024x1024'}}"
+      id="video-thumbnail"
+      
+      class="gp-w-full gp-h-full gp-object-cover gp_lazyload"
+    />
+          <button type="button" class="gp-absolute gp-left-1/2 gp-top-1/2 gp-flex gp-aspect-[56/32] gp-w-14 -gp-translate-x-1/2 -gp-translate-y-1/2 gp-items-center gp-justify-center gp-rounded gp-bg-black/80 gp-transition-colors hover:gp-bg-[#ef0800]" aria-label="Play">
+            <svg class="gp-w-5 gp-text-white" viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M5 5.274c0-1.707 1.826-2.792 3.325-1.977l12.362 6.726c1.566.853 1.566 3.101 0 3.953L8.325 20.702C6.826 21.518 5 20.432 5 18.726V5.274Z"
+              />
+            </svg>
+          </button>
+        </div>
+  
+  </gp-lite-html5-embed>
+        <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-lite-html5-embed-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+  
+      {% when 'model' %}
+        
+    <model-viewer
+      src="{% if featureMedia.sources.first.url contains '.glb' %}{{ featureMedia.sources.first.url }}{% else %}{{featureMedia.sources.last.url}}{% endif %}" alt="{{featureMedia.preview_image.alt}}" data-shopify-feature="1.12" width="100%" poster="{{featureMedia.preview_image.src | product_img_url: '1024x1024'}}" ar-status="not-presenting" camera-controls="true"
+      class="gp-w-full gp-h-full model-viewer gp-z-[90]"
+      style="--aspect:1/1;--aspect-tablet:1/1;--aspect-mobile:1/1">
+    </model-viewer>
+  
+      {% else %}
+        
+    
+    <img
+      alt="No Image" width="2237" height="1678" draggable="false" quality-type="{&quot;desktop&quot;:&quot;high&quot;}" quality-percent="{&quot;desktop&quot;:100}" data-sizes="auto" sizes="(max-width: 768px) 50vw, 100vw" src isNotLazyload="true" srcset loading="lazy"
+      id=""
+      style="--aspect:1/1;--aspect-tablet:1/1;--aspect-mobile:1/1;--objf:cover"
+      class="gp-w-full gp-h-full gp-absolute gp-top-0 gp-left-0 featured-image-only gp-cursor-pointer !gp-rounded-none"
+    />
+    {% endcase %}
+    
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    {% endcapture %}
+    {% if product.media.size > 1 %}
+         
+        {{ featureImageOnlyOne }}
+      {% else %}{{ featureImageOnlyOne }}{% endif %}
+  
+        
+      </div>
+    </gp-product-images-v3>
+    <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-product-images-v3-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+  
+    </div><div
+      data-same-height-display-contents
+      style="--jc:center"
+      class="gqnlbewhdD gp-relative gp-flex gp-flex-col"
+    >
+      <div gp-el-wrapper style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px" class="gAm30VIqjr ">
+      {% unless product %}<p>{{ 'gempages.ProductTitle.product_not_found' | t }}</p>{% else %}
+      <gp-product-title
+        gp-data='{"setting":{"linkProduct":false},"uid":"gAm30VIqjr"}'
+      >
+        
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gAm30VIqjr"
+        class="gAm30VIqjr"
+        style="--dynamic-source-color:#F4F4F4"
+      >
+      <div  >
+        <h2
+          data-gp-text
+          class=" gp-text-instant"
+          style="--w:100%;--tdt:auto;--ts:none;--ta:left;--ta-mobile:left;--line-clamp:2;--line-clamp-tablet:2;--line-clamp-mobile:2;--c:#E5C185;--fs:normal;--ff:var(--g-font-heading, heading);--weight:700;--size:16px;--size-tablet:20px;--size-mobile:12px;--lh:150%;--lh-tablet:150%;--lh-mobile:150%;--ls:normal;--ls-tablet:normal;--ls-mobile:normal;--tt:none;word-break:break-word;overflow:hidden;--tdl:"
+        >
+          {{ product.title }}
+        </h2>
+      </div>
+    </div>
+    
+      </gp-product-title>
+      <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-product-title-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+    {% endunless %}
+      </div>
+      <gp-product-price
+        id="shopify-text-element-gCVuZ26Sgl" data-id="gCVuZ26Sgl"
+        class="gp-product-price group-data-[state=loading]:gp-invisible data-[hidden=true]:!gp-hidden gCVuZ26Sgl"
+        style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px"
+        gp-data='{"priceType":"regular","uid":"gCVuZ26Sgl","locale":"{{shop.locale}}","currency":"{{shop.currency}}","moneyFormat":"{{ shop.money_format | replace: '"', '\\"' | escape }}"}'
+      >
+        
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div id="p-price-gCVuZ26Sgl" data-id
+        
+        style="--dynamic-source-color:#F4F4F4"
+      >
+      <div  >
+        <div
+          data-gp-text
+          class="gp-price gp-money gp-decoration-g-highlight  gp-text-instant"
+          style="--w:100%;--tdc:var(--g-c-highlight, highlight);--tdt:1px;--ts:none;--ta:left;--c:#E5C185;--fs:normal;--ff:var(--g-font-body, body);--weight:400;--size:16px;--size-tablet:16px;--size-mobile:14px;--lh:150%;--lh-tablet:150%;--lh-mobile:150%;--ls:normal;--ls-tablet:normal;--ls-mobile:normal;word-break:break-word;overflow:hidden;--tdl:"
+        >
+          
+     {% if variant.price %}
+       {{ variant.price | money}}
+     {% endif %}
+   
+        </div>
+      </div>
+    </div>
+    
+      </gp-product-price>
+      <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-product-price-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+  
+    </div><div
+      data-same-height-display-contents
+      style="--jc:center"
+      class="gQOzjTn0iF gp-relative gp-flex gp-flex-col"
+    >
+      
+    {%- assign total_combinations = 1 -%}
+    {% for option in product.options_with_values %}{%- assign total_combinations = total_combinations | times: option.values.size -%}{% endfor %}
+    {%- liquid
+      assign inventory_quantity = variant.inventory_quantity | default: 0
+      assign is_in_stock = variant.available
+    -%}
+    <gp-product-button
+      
+      gp-data-wrapper="true"
+      gp-href="{{ request.origin }}{{ routes.root_url | split: '/' | join: '/' }}/cart"
+      class="gp-product-button"
+      gp-label-out-of-stock="{{ section.settings.gg1Zch_30TS_outOfStockLabel }}"
+      gp-label-unavailable="{{ section.settings.gg1Zch_30TS_unavailableLabel }}"
+      gp-data='{"styles":{"errorTypo":{"attrs":{"color":"error"},"type":"paragraph-2"},"successTypo":{"attrs":{"color":"success"},"type":"paragraph-2"}},"setting":{"errorType":"built-in","actionEffect":"open-cart-drawer","enableMessage":true,"label":"Add","errorMessage":"{{ section.settings.gg1Zch_30TS_errorMessage }}","successMessage":"{{ section.settings.gg1Zch_30TS_successMessage }}","outOfStockLabel":"Out Of Stock","customURL":{"link":"/cart","target":"_self"}},"variantID":"{{variant.id}}","disabled":"{{variant.available}}","totalVariant":"{{total_combinations}}"}'
+      data-variant-selection-required-message="{{ section.settings.gg1Zch_30TS_variantSelectionRequiredMessage }}"
+      gp-enable-third-partycart="{{shop.metafields.GEMPAGES.enableThirdPartyCart}}"
+    >
+      
+    <gp-button
+      gp-data='{}'
+      
+      class="gp-flex gp-flex-col"
+    >
+      <div style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ta:right" class="{% unless variant.available %} !gp-hidden {% endunless %}">
+        <style>[data-id="g1Zch_30TS"].gp-button-base::before, [data-id="g1Zch_30TS-interaction"].gp-button-base::before {
+      
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    border-style: none;
+  border-width: 1px 1px 1px 1px;
+  border-color: #121212;
+  
+    
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      
+  
+    }
+  
+      
+  [data-id="g1Zch_30TS"]:hover::before, [data-id="g1Zch_30TS-interaction"]:hover::before {
+    
+    
+  }</style>
+        
+        <button
+          data-id="g1Zch_30TS" dataId="g1Zch_30TS" data-state="idle" aria-label="Add"
+          name="add" gp-data-hidden="{% unless variant.available %}true{% endunless %}"
+          type="submit"
+          style="--w:100px;--w-tablet:100px;--w-mobile:160px;--h:Auto;--h-tablet:Auto;--h-mobile:Auto;--pl:16px;--pr:16px;--pt:8px;--pb:8px;--pl-mobile:20px;--pr-mobile:20px;--pt-mobile:10px;--pb-mobile:12px;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px;--hvr-bblr:8px;--hvr-bbrr:8px;--hvr-btlr:8px;--hvr-btrr:8px;--bgi:;--hvr-bgi:;--hvr-bg:#151515;--bg:#E5C085;--c:var(--g-c-text-3, text-3);--fs:normal;--ff:var(--g-font-body, body);--weight:700;--size:16px;--size-tablet:16px;--size-mobile:14px;--lh:150%;--lh-tablet:150%;--lh-mobile:150%;--ls:normal;--ls-tablet:normal;--ls-mobile:normal"
+          class="gp-button-atc tcustomizer-submit-button g1Zch_30TS gp-button-base gp-group gp-relative gp-inline-flex gp-max-w-full gp-items-center gp-justify-center gp-no-underline gp-transition-colors gp-duration-200 disabled:gp-btn-disabled disabled:gp-opacity-30 gp-text-g-text-3  undefined"
+        >
+        
+  <svg
+    class="gp-invisible gp-absolute gp-h-5 gp-w-5 group-data-[state=loading]:gp-animate-spin group-data-[state=loading]:gp-visible"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+  >
+    <circle
+      class="gp-opacity-25"
+      cx="12"
+      cy="12"
+      r="10"
+      stroke="currentColor"
+      stroke-width="4"
+    ></circle>
+    <path
+      class="gp-opacity-75"
+      fill="currentColor"
+      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+    ></path>
+  </svg>
+
+        <div class="gp-inline-flex">
+          
+          
+    <span
+      data-gp-text
+      style="--fs:normal;--ff:var(--g-font-body, body);--weight:700;--size:16px;--size-tablet:16px;--size-mobile:14px;--lh:150%;--lh-tablet:150%;--lh-mobile:150%;--ls:normal;--ls-tablet:normal;--ls-mobile:normal;--ts:none;word-break:break-word"
+      class="gp-content-product-button group-active/button:!gp-text-inherit gp-relative gp-flex gp-h-full gp-items-center gp-overflow-hidden gp-break-words group-data-[state=loading]:gp-invisible [&_p]:gp-whitespace-pre-line gp-text button-text"
+    >
+      {{ section.settings.gg1Zch_30TS_label }}
+    </span>
+        </div>
+        
+    
+    
+  
+        </button>
+      </div>
+      <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-button-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+    </gp-button>
+  
+      
+    <gp-button
+      gp-data='{}'
+      
+      class="gp-flex gp-flex-col"
+    >
+      <div style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ta:right" class="{% if variant.available %} !gp-hidden {% endif %}">
+        <style>[data-id="g1Zch_30TS-sold-out"].gp-button-base::before, [data-id="g1Zch_30TS-sold-out-interaction"].gp-button-base::before {
+      
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    
+    
+  
+    }
+  
+      
+  [data-id="g1Zch_30TS-sold-out"]:hover::before, [data-id="g1Zch_30TS-sold-out-interaction"]:hover::before {
+    
+    
+  }</style>
+        
+        <button
+          data-id="g1Zch_30TS-sold-out" dataId="g1Zch_30TS-sold-out" data-state="idle" aria-label="{{ section.settings.gg1Zch_30TS_outOfStockLabel }}"
+          gp-data-hidden="{% if variant.available %}true{% endif %}"
+          type="button"
+          style="--w:100px;--w-tablet:100px;--w-mobile:160px;--h:Auto;--h-tablet:Auto;--h-mobile:Auto;--pl:16px;--pr:16px;--pt:8px;--pb:8px;--pl-mobile:20px;--pr-mobile:20px;--pt-mobile:10px;--pb-mobile:12px;--bgi:;--hvr-bgi:;--bg:#B7B7B7;--hvr-bg:#B7B7B7;--c:var(--g-c-text-3, text-3);--fs:normal;--ff:var(--g-font-body, body);--weight:700;--size:16px;--size-tablet:16px;--size-mobile:14px;--lh:150%;--lh-tablet:150%;--lh-mobile:150%;--ls:normal;--ls-tablet:normal;--ls-mobile:normal"
+          class="gp-cursor-default gp-opacity-30 btn-disabled gp-button-sold-out g1Zch_30TS-sold-out gp-button-base gp-group gp-relative gp-inline-flex gp-max-w-full gp-items-center gp-justify-center gp-no-underline gp-transition-colors gp-duration-200 disabled:gp-btn-disabled disabled:gp-opacity-30 "
+        >
+        
+        <div class="gp-inline-flex">
+          
+          
+    <span
+      data-gp-text
+      style="--fs:normal;--ff:var(--g-font-body, body);--weight:700;--size:16px;--size-tablet:16px;--size-mobile:14px;--lh:150%;--lh-tablet:150%;--lh-mobile:150%;--ls:normal;--ls-tablet:normal;--ls-mobile:normal;--ts:none;word-break:break-word"
+      class="gp-content-product-button group-active/button:!gp-text-inherit gp-relative gp-flex gp-h-full gp-items-center gp-overflow-hidden gp-break-words group-data-[state=loading]:gp-invisible [&_p]:gp-whitespace-pre-line gp-text button-text"
+    >
+      {{ section.settings.gg1Zch_30TS_outOfStockLabel }}
+    </span>
+        </div>
+        
+    
+    
+  
+        </button>
+      </div>
+      <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-button-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+    </gp-button>
+  
+    </gp-product-button>
+    <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-product-button-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+  
+    </div>
+
+      
+    </gp-row>
+  
+  
+    </div>
+
+      
+    </gp-row>
+  
+  
+          
+    
+        {%- endform -%}
+      </gp-product>
+  
+      {%- endif -%}
+      {% endfor %}
+      {%- if count == 0 and 3 == 0 -%}
+        {% if 'PickProduct' == 'RelatedProduct' -%}
+          <div>{{ 'gempages.ProductList.no_related_products' | t }}</div>
+        {% else %}
+          <div>{{ 'gempages.ProductList.no_products_found' | t }}</div>
+        {%- endif -%}
+      {%- endif -%}
+    
+      </gp-same-height>
+    
+      
+    </div>
+  
+    {%- endif -%}
+    
+          {%- assign product = gpBkProduct -%}
+          {%- assign products = gpBkProducts -%}
+        </div>
+      </div>
+    </div>
+  
+    </div>

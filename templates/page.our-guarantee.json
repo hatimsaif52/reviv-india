@@ -1,0 +1,440 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_8GQnGk": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_b34DMM": {
+          "type": "heading",
+          "settings": {
+            "heading": "OUR GUARANTEE",
+            "heading_size": "h1"
+          }
+        },
+        "text_QdPQDP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our guarantee states that if you follow our method for at least 30 days in a disciplined way and are not getting the results, then we will refund you the full price you paid.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_b34DMM",
+        "text_QdPQDP"
+      ],
+      "custom_css": [],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": false,
+        "padding_top": 40,
+        "padding_bottom": 56
+      }
+    },
+    "multicolumn_re8gBF": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_jJp48n": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2025-04-18_at_4.46.13_PM.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        }
+      },
+      "block_order": [
+        "column_jJp48n"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "title": "",
+        "box_link": false,
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 1,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "section_color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_class": "full-image"
+      }
+    },
+    "image_banner_AdJXtT": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify://shop_images/WhatsApp_Image_2025-04-18_at_4.46.13_PM.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "custom_classes": ""
+      }
+    },
+    "rich_text_mxGaHj": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_6e9W6Y": {
+          "type": "heading",
+          "settings": {
+            "heading": "What products does it apply to?",
+            "heading_size": "h2"
+          }
+        },
+        "text_mfMU3e": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Applies to all products that have support include.</li></ul>"
+          }
+        },
+        "text_KgHk9L": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Doesn't apply when you purchased only the appliance as we have no idea if you were doing the process as we prescribe it.</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_6e9W6Y",
+        "text_mfMU3e",
+        "text_KgHk9L"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": false,
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_88JDWR": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_crr9di": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/image_1_2ba3c059-7c20-4e51-a6ab-c21adc64b48c.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        }
+      },
+      "block_order": [
+        "column_crr9di"
+      ],
+      "settings": {
+        "title": "",
+        "box_link": false,
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 1,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "section_color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_class": "full-image"
+      }
+    },
+    "rich_text_LWXQVn": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_4WB9tG": {
+          "type": "heading",
+          "settings": {
+            "heading": "What it does not cover?",
+            "heading_size": "h2"
+          }
+        },
+        "text_HcdW73": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>1. Does not cover if you just decide to give up because it is hard or painful.<br/></strong>We tell everyone that this process is hard upfront.  You need to be mentally prepared for it.  So this is not a reason for a refund.</p>"
+          }
+        },
+        "text_QVEgqY": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>2. Does not cover if you just show up one day and decided it didn't work<br/></strong>You need to demonstrate that you are doing the process as we prescribe it. This can be via the journal or if you send Ken updates via Skool DM's with challenges you are facing.</p>"
+          }
+        },
+        "text_XF74BH": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>3. Does not cover if it's not going fast enough for you.<br/></strong>This process takes time and you need to be in it for the long game. Expecting to correct your profile or achieve massive changes in facial symmetry in a month is not realistic.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_4WB9tG",
+        "text_HcdW73",
+        "text_QVEgqY",
+        "text_XF74BH"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": false,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
+    "rich_text_ExX3xL": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_n9BFmj": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why do we do this guarantee?",
+            "heading_size": "h2"
+          }
+        },
+        "text_DULJYr": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We are confident that this process works on every human being IF you do it properly. And so we want to remove the risk of 'what if it doesn't work?'<br/><br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_n9BFmj",
+        "text_DULJYr"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": false,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "rich_text_AEAJ77": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_PmzVdR": {
+          "type": "heading",
+          "settings": {
+            "heading": "HOW IT WORKS",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_PmzVdR"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": false,
+        "padding_top": 24,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_rCFNJE": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_RUJ8gw": {
+          "type": "heading",
+          "settings": {
+            "heading": "STEP 1",
+            "heading_size": "h2"
+          }
+        },
+        "text_XUWTde": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>You receive the Reviv appliance and start using it.<br/></strong>The first day you use it is considered 'day 1'</p>"
+          }
+        },
+        "heading_kJAdzw": {
+          "type": "heading",
+          "settings": {
+            "heading": "STEP 2",
+            "heading_size": "h2"
+          }
+        },
+        "text_rM8R6K": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>You should track your progress and challenges over 30+ days.</strong></p><p>- Your progress can be tracked by your journal, a post on Skool that you update, or by DM's to Ken.<br/>- You should have mentioned to Ken the challenges you are facing at least two weeks prior to requesting to execute the guarantee.<br/>- You should try implementing the advice he gives you.</p>"
+          }
+        },
+        "heading_7YGgNh": {
+          "type": "heading",
+          "settings": {
+            "heading": "STEP 3",
+            "heading_size": "h2"
+          }
+        },
+        "text_z6Jz9R": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>After 30 days of not making progress you execute the guarantee using the instructions below.</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_RUJ8gw",
+        "text_XUWTde",
+        "heading_kJAdzw",
+        "text_rM8R6K",
+        "heading_7YGgNh",
+        "text_z6Jz9R"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": false,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "rich_text_kXHUR6": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_RxWQEq": {
+          "type": "heading",
+          "settings": {
+            "heading": "HOW TO EXECUTE THE GUARANTEE",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_RxWQEq"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": false,
+        "padding_top": 24,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_xjbpYt": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_xh4n36": {
+          "type": "heading",
+          "settings": {
+            "heading": "STEP 4",
+            "heading_size": "h2"
+          }
+        },
+        "text_B3y9QH": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>You should write to Ken on cs@getreviv.com or as a DM on Skool stating that you would like to exercise the guarantee. Be sure to include in your message:</strong></p><p>- The date that you started using the appliance.<br/>- A link to your journal entries.<br/>- Evidence of where you alerted us at least two weeks prior that you were not achieving results or struggling.</p>"
+          }
+        },
+        "heading_R4hiUF": {
+          "type": "heading",
+          "settings": {
+            "heading": "STEP 5",
+            "heading_size": "h2"
+          }
+        },
+        "text_bkEXE4": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>- Ken will either immediately agree or point out that you haven't tracked your progress and alerted us to your challenges as prescribed above.<br/></strong>- In that case you should continue a bit longer so that you adhere to our guidelines and re-execute the guarantee after that period is over.</p>"
+          }
+        },
+        "heading_P8mYcW": {
+          "type": "heading",
+          "settings": {
+            "heading": "STEP 6",
+            "heading_size": "h2"
+          }
+        },
+        "text_9xkmwj": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>- If we agree that you fulfill the guarantee requirements we will refund your order on Shopify.<br/></strong>- You do not need to return the appliance to us.<br/>- We will remove you from our Skool community.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xh4n36",
+        "text_B3y9QH",
+        "heading_R4hiUF",
+        "text_bkEXE4",
+        "heading_P8mYcW",
+        "text_9xkmwj"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": false,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_8GQnGk",
+    "multicolumn_re8gBF",
+    "image_banner_AdJXtT",
+    "rich_text_mxGaHj",
+    "multicolumn_88JDWR",
+    "rich_text_LWXQVn",
+    "rich_text_ExX3xL",
+    "rich_text_AEAJ77",
+    "rich_text_rCFNJE",
+    "rich_text_kXHUR6",
+    "rich_text_xjbpYt"
+  ]
+}

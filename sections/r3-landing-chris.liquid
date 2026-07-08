@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Reviv R3 — Why Does Your Face Look Different?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  /* ─── RESET ─── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
+  body { font-family: 'DM Sans', sans-serif; background: #FAFAF8; color: #1A1A1A; overflow-x: hidden; }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  button { cursor: pointer; border: none; outline: none; font-family: inherit; }
+
+  /* ─── TOKENS ─── */
+  :root {
+    --cream:      #FAFAF8;
+    --cream-alt:  #F2F1EE;
+    --ink:        #1A1A1A;
+    --body:       #2C2C2C;
+    --muted:      #888888;
+    --gold:       #d4af37;
+    --gold-dark:  #b8962e;
+    --border:     #D5D2CB;
+  }
+
+  /* ─── TYPOGRAPHY ─── */
+  .font-headline { font-family: 'Cormorant Garamond', serif; }
+  .font-body     { font-family: 'DM Sans', sans-serif; }
+
+  /* ─── SECTIONS ─── */
+  .section-cream     { background: var(--cream); }
+  .section-cream-alt { background: var(--cream-alt); }
+  .section-pad       { padding: 80px clamp(20px, 5vw, 60px); }
+  .section-pad-sm    { padding: 60px clamp(20px, 5vw, 60px); }
+  .content-narrow    { max-width: 800px; margin: 0 auto; }
+  .content-wide      { max-width: 1000px; margin: 0 auto; }
+
+  /* ─── STICKY BAR ─── */
+  .sticky-bar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: var(--cream); border-bottom: 1px solid var(--gold);
+    padding: 0 clamp(12px, 3vw, 40px);
+    height: 56px; display: flex; align-items: center; justify-content: space-between;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    gap: 12px;
+  }
+  .sticky-bar p { font-size: clamp(11px, 1.4vw, 14px); color: var(--body); min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .sticky-bar strong { color: var(--ink); }
+  .sticky-bar-btn {
+    background: var(--gold); color: #000; font-family: 'DM Sans', sans-serif;
+    font-weight: 600; font-size: 13px; padding: 8px 20px; border-radius: 4px;
+    white-space: nowrap; flex-shrink: 0;
+    transition: background 0.2s; text-decoration: none;
+  }
+  .sticky-bar-btn:hover { background: var(--gold-dark); }
+  .sticky-spacer { height: 56px; }
+
+  /* ─── GOLD DIVIDER ─── */
+  .gold-divider { width: 60px; height: 2px; background: var(--gold); margin: 32px auto; }
+
+  /* ─── PULL QUOTE ─── */
+  .pull-quote {
+    margin: 48px auto 40px; text-align: center; max-width: 700px;
+    padding: 0 clamp(16px, 4vw, 40px);
+  }
+  .pull-quote p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(20px, 2.8vw, 28px);
+    font-weight: 700; font-style: italic;
+    color: var(--ink); line-height: 1.5;
+  }
+  .pull-quote .gold-text { color: var(--gold); }
+  .pull-quote .sub { font-family: 'DM Sans', sans-serif; font-size: clamp(13px, 1.5vw, 15px); color: var(--muted); font-style: italic; margin-top: 12px; }
+
+  /* ─── CALLOUT ─── */
+  .callout {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(22px, 3.5vw, 30px); font-weight: 700;
+    color: var(--ink); text-align: center;
+    margin: 0 auto 40px; max-width: 700px; line-height: 1.4;
+  }
+
+  /* ─── BODY COPY ─── */
+  .body-copy {
+    color: var(--body); font-size: clamp(16px, 2vw, 19px);
+    line-height: 1.8; text-align: left;
+  }
+  .body-copy p { margin-bottom: 12px; }
+  .body-copy p.gap { margin-bottom: 24px; }
+  .body-copy strong { color: var(--ink); }
+
+  /* ─── GOLD BULLETS ─── */
+  .gold-bullet { display: flex; align-items: flex-start; gap: 10px; color: var(--body); font-size: clamp(16px, 2vw, 18px); line-height: 1.6; margin-bottom: 10px; }
+  .gold-bullet::before { content: "\2192"; color: var(--gold); flex-shrink: 0; margin-top: 2px; }
+
+  /* ─── CTA BUTTON ─── */
+  .btn-gold {
+    background: var(--gold); color: #000;
+    font-family: 'DM Sans', sans-serif; font-weight: 700;
+    font-size: clamp(16px, 2vw, 18px);
+    padding: 16px 48px; border-radius: 6px;
+    position: relative; overflow: hidden;
+    transition: background 0.2s, transform 0.15s;
+    display: inline-block; text-decoration: none;
+  }
+  .btn-gold:hover { background: var(--gold-dark); transform: translateY(-1px); }
+  .btn-gold::after {
+    content: ""; position: absolute; top: 0; left: -75%;
+    width: 50%; height: 100%;
+    background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.35) 50%, transparent 100%);
+    transform: skewX(-20deg);
+    transition: left 0.5s;
+  }
+  .btn-gold:hover::after { left: 130%; }
+  .btn-full { width: 100%; text-align: center; display: block; padding-left: 0; padding-right: 0; }
+
+  /* ─── TESTIMONIAL CARD ─── */
+  .testimonial-card {
+    background: var(--cream-alt); border: 1px solid var(--gold-dark);
+    border-radius: 6px; padding: 28px 32px;
+  }
+  .testimonial-card .quote { color: var(--body); font-size: clamp(15px, 1.8vw, 18px); font-style: italic; line-height: 1.7; margin-bottom: 14px; }
+  .testimonial-card .name { color: var(--ink); font-size: 15px; font-weight: 600; }
+
+  /* ─── DISCLAIMER ─── */
+  .disclaimer { color: var(--muted); font-size: 12px; font-style: italic; text-align: center; margin-top: 10px; line-height: 1.5; }
+
+  /* ─── TIMELINE ─── */
+  .timeline { position: relative; padding-left: clamp(24px, 4vw, 40px); }
+  .timeline::before {
+    content: ""; position: absolute;
+    left: clamp(8px, 1.5vw, 12px); top: 8px; bottom: 8px;
+    width: 2px; background: var(--gold); opacity: 0.5;
+  }
+  .timeline-item { position: relative; margin-bottom: 48px; }
+  .timeline-item:last-child { margin-bottom: 0; }
+  .timeline-item::before {
+    content: ""; position: absolute;
+    left: clamp(-20px, -3vw, -28px); top: 6px;
+    width: 14px; height: 14px; border-radius: 50%;
+    background: var(--gold); border: 2px solid var(--cream);
+  }
+  .timeline-label {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--gold); font-size: clamp(13px, 1.6vw, 15px);
+    font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .timeline-bullet { display: flex; align-items: flex-start; gap: 10px; color: var(--body); font-size: clamp(15px, 1.8vw, 17px); line-height: 1.6; margin-bottom: 8px; }
+  .timeline-bullet span { color: var(--gold); flex-shrink: 0; margin-top: 2px; }
+
+  /* ─── PRICING CARDS ─── */
+  .pricing-grid { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; margin-top: 40px; }
+  .pricing-card { flex: 1 1 min(100%, 460px); background: var(--cream-alt); border-radius: 8px; padding: 40px; }
+  .pricing-card-popular { border: 3px solid var(--gold-dark); box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
+  .pricing-card-standard { border: 1px solid var(--border); }
+  .pricing-badge { background: var(--gold); color: #000; font-weight: 700; font-size: 14px; padding: 8px 20px; border-radius: 20px; display: inline-block; margin-bottom: 20px; }
+  .pricing-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 3.5vw, 30px); font-weight: 700; text-align: center; margin-bottom: 12px; }
+  .pricing-price { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 4vw, 38px); font-weight: 700; color: var(--gold); text-align: center; margin-bottom: 20px; }
+  .pricing-feature { display: flex; align-items: flex-start; gap: 10px; color: var(--body); font-size: clamp(15px, 1.8vw, 18px); margin-bottom: 10px; }
+  .pricing-feature span { color: var(--gold); font-weight: 700; flex-shrink: 0; }
+  .pricing-stock { color: var(--ink); font-size: 13px; text-align: center; margin-bottom: 8px; }
+  .pricing-ships { color: var(--body); font-size: 13px; text-align: center; margin-top: 10px; }
+
+  /* ─── FAQ ─── */
+  .faq-item { margin-bottom: 40px; }
+  .faq-q { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2.5vw, 22px); font-weight: 700; margin-bottom: 12px; }
+  .faq-a { font-size: clamp(16px, 2vw, 18px); color: var(--body); line-height: 1.7; }
+
+  /* ─── FEATURED IN LOGOS ─── */
+  .logos-row { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: clamp(32px, 6vw, 64px); }
+
+  /* ─── KEN BEFORE/AFTER ─── */
+  .ken-pair { display: flex; border: 2px solid var(--gold); margin-bottom: 16px; }
+  .ken-pair .ken-img { flex: 1; position: relative; }
+  .ken-pair .ken-divider { width: 4px; background: var(--gold); flex-shrink: 0; }
+  .ken-label { position: absolute; top: 10px; left: 10px; font-size: 15px; font-weight: 600; color: #fff; background: rgba(0,0,0,0.6); padding: 3px 8px; border-radius: 3px; font-family: 'DM Sans', sans-serif; }
+  .ken-pair img { width: 100%; display: block; }
+  @media (max-width: 640px) {
+    .ken-pair { flex-direction: column; }
+    .ken-pair .ken-divider { width: 100%; height: 4px; }
+  }
+
+  /* ─── FADE-UP ANIMATION ─── */
+  .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+  /* ─── FOOTER ─── */
+  .lp-footer { background: var(--cream); padding: 60px 30px; border-top: 1px solid var(--border); }
+  .lp-footer .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 16px; }
+  .lp-footer .footer-links a { font-size: 12px; color: var(--body); text-decoration: underline; }
+
+  /* ─── UTILITY ─── */
+  .text-center { text-align: center; }
+  .text-gold { color: var(--gold); }
+  .mt-8 { margin-top: 8px; }
+  .mt-16 { margin-top: 16px; }
+  .mt-24 { margin-top: 24px; }
+  .mt-32 { margin-top: 32px; }
+  .mt-40 { margin-top: 40px; }
+  .mb-8 { margin-bottom: 8px; }
+  .mb-16 { margin-bottom: 16px; }
+  .mb-24 { margin-bottom: 24px; }
+  .mb-32 { margin-bottom: 32px; }
+  .mb-40 { margin-bottom: 40px; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     STICKY BAR
+════════════════════════════════════════════════ -->
+<div class="sticky-bar">
+  <div style="min-width:0;display:flex;gap:8px;align-items:center;">
+    <span style="font-size:16px;flex-shrink:0;line-height:1;">⚠️</span>
+    <div>
+      <p style="margin:0;font-weight:700;font-size:clamp(12px,1.4vw,14px);white-space:nowrap;">Limited stock available</p>
+      <p style="margin:0;font-size:clamp(10px,1.2vw,12px);font-style:italic;color:var(--muted);white-space:nowrap;">Next restock: 4–6 weeks</p>
+    </div>
+  </div>
+  <a href="#pricing" class="sticky-bar-btn">Get Reviv</a>
+</div>
+<div class="sticky-spacer"></div>
+
+
+<!-- SECTION 1: HERO -->
+<section class="section-cream section-pad">
+  <div class="content-narrow text-center fade-up">
+    <h1 class="font-headline" style="font-size:clamp(36px,6vw,64px);font-weight:700;line-height:1.15;margin-bottom:32px;color:var(--ink);">
+      Why does your face look different than it used to?
+    </h1>
+    <div class="font-body" style="font-size:clamp(16px,2vw,19px);line-height:1.8;color:var(--body);margin-bottom:32px;">
+      <p class="mb-8">Not because you gained weight.</p>
+      <p class="mb-8">Not because you "got older."</p>
+      <p class="mb-8">Something else happened.</p>
+      <p>And over 20,000 people have figured out what it is.</p>
+    </div>
+    <a href="#pricing" class="btn-gold" style="margin-bottom:18px;">See What They Discovered</a>
+    <p class="font-body" style="font-size:14px;color:var(--body);margin-top:18px;">⭐⭐⭐⭐⭐ (4.8/5 • 578 reviews) &nbsp;•&nbsp; Free shipping</p>
+  </div>
+</section>
+
+
+<!-- SECTION 2: FEATURED IN -->
+<section class="section-cream-alt section-pad-sm">
+  <div class="content-wide">
+    <p class="font-body text-center" style="color:var(--muted);font-size:12px;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:28px;">Featured In</p>
+    <div class="logos-row mb-32">
+      <svg height="52" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Business Insider">
+        <text x="0" y="28" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#1B3A6B" letter-spacing="-0.5">BUSINESS</text>
+        <text x="0" y="52" font-family="Georgia, serif" font-size="22" font-weight="400" fill="#1B3A6B" letter-spacing="2">INSIDER</text>
+      </svg>
+      <svg height="44" viewBox="0 0 160 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Yahoo Finance">
+        <text x="0" y="30" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#6001D2">yahoo!</text>
+        <text x="0" y="44" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#6001D2">finance</text>
+      </svg>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div style="background:#CC0000;width:52px;height:52px;display:flex;align-items:center;justify-content:center;border-radius:4px;">
+          <span style="color:#fff;font-family:Arial,sans-serif;font-weight:700;font-size:18px;">AP</span>
+        </div>
+        <div>
+          <p style="font-family:Arial,sans-serif;font-size:14px;font-weight:600;color:var(--ink);line-height:1.2;">Associated</p>
+          <p style="font-family:Arial,sans-serif;font-size:14px;font-weight:600;color:var(--ink);line-height:1.2;">Press</p>
+        </div>
+      </div>
+    </div>
+    <div class="logos-row">
+      <svg height="40" viewBox="0 0 260 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="MarketWatch">
+        <text x="0" y="32" font-family="Arial Black, sans-serif" font-size="28" font-weight="900" fill="#1A1A1A">Market</text>
+        <text x="112" y="32" font-family="Arial Black, sans-serif" font-size="28" font-weight="900" fill="#00AC4E">Watch</text>
+      </svg>
+      <svg height="40" viewBox="0 0 140 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Apple News">
+        <path d="M22.8 13.6c-.1-3.2 2.6-4.7 2.7-4.8-1.5-2.2-3.8-2.5-4.6-2.5-2-.2-3.8 1.2-4.8 1.2-1 0-2.6-1.1-4.2-1.1-2.2 0-4.2 1.3-5.3 3.2-2.3 3.9-.6 9.7 1.6 12.9 1.1 1.6 2.4 3.3 4.1 3.2 1.6-.1 2.2-1 4.2-1 2 0 2.5 1 4.2 1 1.8 0 2.9-1.6 3.9-3.1 1.2-1.8 1.7-3.5 1.8-3.6-.1-.1-3.6-1.4-3.6-5.4z" fill="#1A1A1A"/>
+        <path d="M19.6 4.3c.9-1.1 1.5-2.5 1.3-4-1.3.1-2.8.9-3.7 1.9-.8.9-1.5 2.4-1.3 3.8 1.4.1 2.8-.7 3.7-1.7z" fill="#1A1A1A"/>
+        <text x="32" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="24" font-weight="400" fill="#1A1A1A" letter-spacing="-0.5">News</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION 3: THE PROBLEM -->
+<section class="section-cream section-pad">
+  <div class="content-narrow" style="padding:0 clamp(20px,5vw,60px);">
+    <div class="body-copy fade-up">
+      <p>You've felt it.</p>
+      <p>Maybe not all at once.</p>
+      <p class="gap">But over time... you started noticing things.</p>
+      <p>Your face looks different in photos.</p>
+      <p>Not just "older."</p>
+      <p>Different.</p>
+      <p>Like the proportions shifted.</p>
+      <p>Your jawline isn't as defined.</p>
+      <p>Your cheekbones seem less prominent.</p>
+      <p>Your face feels... flatter. Narrower. Almost like it deflated.</p>
+    </div>
+
+    <div class="pull-quote fade-up">
+      <div class="gold-divider"></div>
+      <p>And it's not just your face.</p>
+      <div class="gold-divider"></div>
+    </div>
+
+    <div class="body-copy fade-up">
+      <p>Your posture changed.</p>
+      <p>Your neck feels tighter.</p>
+      <p>Your shoulders roll forward more than they used to.</p>
+      <p>You get tension headaches.</p>
+      <p class="gap">You wake up tired... even after a full night's sleep.</p>
+      <p>And when you look in the mirror...</p>
+      <p>You don't quite recognize the person staring back.</p>
+      <p>You know <strong>SOMETHING</strong> changed.</p>
+      <p>But you can't explain what.</p>
+      <p>Or why.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION 4: THE THEORY + JAW DIAGRAM -->
+<section class="section-cream-alt section-pad">
+  <div class="content-narrow" style="padding:0 clamp(20px,5vw,60px);">
+
+    <div class="body-copy fade-up">
+      <p>Here's the working theory behind this:</p>
+      <p>Most people think their skull is one solid bone.</p>
+      <p class="gap">It's not.</p>
+      <p>It's 22 separate bones.</p>
+      <p>Connected by soft tissue.</p>
+      <p>Fascia. Muscle. Ligaments.</p>
+    </div>
+
+    <div class="pull-quote fade-up">
+      <div class="gold-divider"></div>
+      <p>
+        There's a simple theory...<br>
+        Developed by an Ivy League-educated engineer...<br>
+        <span class="gold-text">Who spent an entire DECADE obsessively testing this on himself.</span>
+      </p>
+      <p class="sub">(It's now been tested by thousands of people around the world.)</p>
+      <div class="gold-divider"></div>
+    </div>
+
+    <div class="body-copy fade-up">
+      <p>The theory:</p>
+      <p>Your back molars act like a <strong>LOCK</strong> on your jaw.</p>
+      <p>When they're clenched together...</p>
+      <p>Your jaw can't move freely.</p>
+      <p class="gap">The soft tissue covering your skull stays compressed.</p>
+      <p>But when you create <strong>SPACE</strong> between those back molars...</p>
+      <p>The lock releases.</p>
+      <p>Your jaw can move more naturally.</p>
+      <p>And based on 10 years of self-experimentation...</p>
+      <p>This appears to allow your skull structure to begin naturally unwinding.</p>
+    </div>
+
+    <div class="fade-up" style="margin:40px 0;">
+      <img
+        src="https://d2xsxph8kpxj0f.cloudfront.net/310519663362156340/HK6GVBHHByjpqZsEb7dhYB/jaw-skull-final-izxnR3E45u2Loe8H54Pavh.png"
+        alt="WITHOUT SPACE vs WITH SPACE — jaw mechanics illustration"
+        style="width:100%;max-width:700px;margin:0 auto;border-radius:6px;"
+      />
+    </div>
+
+    <div class="body-copy fade-up">
+      <p>Think of it like a balloon.</p>
+      <p>When the balloon is fully inflated...</p>
+      <p class="gap">Your face is wider. More defined. More symmetrical.</p>
+      <p>But over time...</p>
+      <p>Certain things let air <strong>OUT</strong> of that balloon.</p>
+      <p>Teeth grinding.</p>
+      <p>Orthodontics that flattened your bite.</p>
+      <p>Wisdom teeth removal.</p>
+      <p class="gap">Dental work that ground down your teeth.</p>
+      <p>The working model is that all of these compress your jaw.</p>
+      <p>And when your jaw closes more...</p>
+      <p>The soft tissue covering your skull tightens.</p>
+      <p>The balloon deflates.</p>
+      <p>Your face narrows. Your cheekbones sink.</p>
+      <p>Your jawline weakens. Everything compresses inward.</p>
+    </div>
+
+    <div class="pull-quote fade-up">
+      <div class="gold-divider"></div>
+      <p>And it doesn't just affect how you look.</p>
+      <div class="gold-divider"></div>
+    </div>
+
+    <div class="body-copy fade-up">
+      <p>When your skull structure compresses...</p>
+      <p>Your posture may collapse forward to compensate.</p>
+      <p>Your sleep quality tanks.</p>
+      <p>Your energy drops.</p>
+      <p>You get chronic tension in your neck and shoulders.</p>
+      <p>This engineer believes the structure of your skull affects how your entire body functions.</p>
+      <p>And based on what thousands of users have reported...</p>
+      <p>There might be something to it.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SECTION 5: COMMUNITY RESULTS -->
+<section class="section-cream section-pad">
+  <div class="content-narrow" style="padding:0 clamp(20px,5vw,60px);">
+    <p class="callout fade-up">It's happening across an entire community.</p>
+
+    <div class="fade-up mb-8">
+      <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663362156340/HK6GVBHHByjpqZsEb7dhYB/teeth-before-after_806a345f.webp" alt="Dental arch transformation before and after" style="width:100%;max-width:600px;margin:0 auto;border-radius:6px;" />
+    </div>
+    <div class="body-copy fade-up" style="font-size:clamp(15px,1.8vw,17px);">
+      <p>This is someone from the Reviv community.</p>
+      <p>Left: Their dental arch <strong>BEFORE</strong>. Crowded. Narrow. Compressed.</p>
+      <p>Right: After wearing a simple device consistently. The arch is <strong>WIDER</strong>. Teeth more aligned. Space opened up.</p>
+      <p>No braces. No orthodontics.</p>
+      <p>Just what happened when they created space in their jaw... and allowed their structure to respond.</p>
+    </div>
+    <p class="disclaimer fade-up">Individual results. Not typical. The R3 is not a medical or orthodontic device and has not been evaluated by the FDA. Consult a dentist before use.</p>
+
+    <div class="gold-divider"></div>
+
+    <div class="fade-up mb-8">
+      <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663362156340/HK6GVBHHByjpqZsEb7dhYB/male-3month-transformation_3eeab1f4.png" alt="3-month male face transformation" style="width:100%;max-width:600px;margin:0 auto;border-radius:6px;" />
+    </div>
+    <div class="body-copy fade-up" style="font-size:clamp(15px,1.8vw,17px);">
+      <p>3 months.</p>
+      <p>Left: Before. Narrower face. Less definition.</p>
+      <p>Right: 3 months later. Wider jaw. Better symmetry. More structure.</p>
+      <p>Same person. Same genetics.</p>
+      <p>The only thing that changed... was creating space in his jaw.</p>
+    </div>
+    <p class="disclaimer fade-up">Individual results. Not typical.</p>
+
+    <div class="gold-divider"></div>
+
+    <div class="fade-up mb-8">
+      <div style="width:100%;max-width:500px;margin:0 auto;border-radius:6px;overflow:hidden;aspect-ratio:1/1.1;">
+        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663362156340/HK6GVBHHByjpqZsEb7dhYB/female-mouth-oct-feb_2346536a.png" alt="Female teeth transformation October to February" style="width:100%;height:100%;object-fit:cover;object-position:center;border-radius:6px;" />
+      </div>
+    </div>
+    <div class="body-copy fade-up" style="font-size:clamp(15px,1.8vw,17px);">
+      <p>Look at what happened to this person's teeth.</p>
+      <p>Top: Crowded. Overlapping.</p>
+      <p>Bottom: Straighter. More aligned. Natural spacing.</p>
+      <p>No braces.</p>
+      <p>Just the device creating space... and the teeth responding over time.</p>
+    </div>
+    <p class="disclaimer fade-up">Individual results. Not typical. The R3 is not a medical or orthodontic device. Consult a dentist before use.</p>
+
+    <div class="gold-divider"></div>
+
+    <div class="fade-up" style="display:flex;flex-direction:column;gap:16px;margin-bottom:24px;">
+      <div class="testimonial-card"><p class="quote">"First week — already improving. The loud click is always less tight... yesterday was the first time I could chew food on the left side."</p><p class="name">— George</p></div>
+      <div class="testimonial-card"><p class="quote">"TMJ is so much better... I don't get loud pops and clicks anymore."</p><p class="name">— Ramez</p></div>
+      <div class="testimonial-card"><p class="quote">"I stand taller now. My posture feels natural instead of forced."</p><p class="name">— Carol</p></div>
+      <div class="testimonial-card"><p class="quote">"I haven't slept so deeply in years."</p><p class="name">— Birte</p></div>
+      <div class="testimonial-card"><p class="quote">"I no longer wake up with a stuffy nose."</p><p class="name">— Jen</p></div>
+      <div class="testimonial-card"><p class="quote">"The brain fog I used to deal with? Way better. I can actually think clearly now."</p><p class="name">— Caleb</p></div>
+      <div class="testimonial-card"><p class="quote">"Lips look fuller again... increased energy... mood uplifted."</p><p class="name">— Sadia</p></div>
+      <div class="testimonial-card"><p class="quote">"Teeth marks on my tongue edge are changing... my teeth are more collapsed on the left side, so I can see it smoothing out."</p><p class="name">— Moonching</p></div>
+    </div>
+    <p class="disclaimer fade-up">Individual results vary. Not guaranteed. These statements are based on personal experience and have not been evaluated by the FDA.</p>
+
+    <div class="body-copy fade-up mt-32">
+      <p>This isn't a beauty hack.</p>
+      <p>It's structural support.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION 6: KEN'S STORY -->
+<section class="section-cream-alt section-pad">
+  <div class="content-narrow" style="padding:0 clamp(20px,5vw,60px);">
+    <p class="callout fade-up">So who figured this out?</p>
+
+    <div class="body-copy fade-up">
+      <p>A guy named Ken.</p>
+      <p>Ken was a normal guy growing up in America.</p>
+      <p>Played hockey. Had his wisdom teeth pulled at 21.</p>
+      <p class="gap">Got some crowns after chipping his teeth. Standard stuff.</p>
+      <p>But throughout his 20s and 30s...</p>
+      <p>He dealt with constant neck and back tightness.</p>
+      <p>He averaged 2–3 medical visits <strong>PER WEEK</strong>.</p>
+      <p class="gap">Chiropractors. Physical therapists. Neurologists. He'd been to every department in the hospital. Nothing worked long-term.</p>
+      <p>Then in 2013...</p>
+      <p>He was living in Ukraine.</p>
+      <p>A dentist told him he might have TMJ.</p>
+      <p>Made him a flat splint to wear.</p>
+      <p class="gap">And within a few weeks... <strong>ALL</strong> the tightness disappeared.</p>
+      <p>Ken thought the guy was a magician.</p>
+      <p>But then the first war in Ukraine started.</p>
+      <p>He moved his family to Vietnam.</p>
+      <p class="gap">Chewed through the splint within weeks.</p>
+      <p>Found a TMJ dentist in Vietnam who said...</p>
+      <p>"Let me adjust your dental contacts."</p>
+      <p>Ken figured, sure. The first splint worked. This guy's a specialist.</p>
+      <p>So he sat there playing on his phone...</p>
+      <p>While the dentist drilled down his back teeth. For quite a while. Ken had no idea what was happening.</p>
+    </div>
+
+    <div class="pull-quote fade-up">
+      <div class="gold-divider"></div>
+      <p>But within a couple months...<br><span class="gold-text">Everything changed.</span></p>
+      <div class="gold-divider"></div>
+    </div>
+
+    <div class="body-copy fade-up">
+      <p>His vision went dull.</p>
+      <p>Severe mental fatigue rolled in.</p>
+      <p>He didn't want to leave the house.</p>
+      <p>His wife had to drag him out.</p>
+      <p>He asked to be demoted <strong>TWO LEVELS</strong> at work...</p>
+      <p>Because if he didn't write something down...</p>
+      <p class="gap">It was gone from his head 5 minutes later.</p>
+      <p>And he started looking different.</p>
+      <p>His neck changed. His body changed rapidly.</p>
+      <p class="gap">This was 2014. Ken was 37 years old.</p>
+      <p>And for the next <strong>10 YEARS</strong>...</p>
+      <p>He became obsessed with figuring out what happened.</p>
+      <p>He tried every method he could find.</p>
+      <p class="gap">DIY appliances. Different splints. Various approaches. He tested everything on himself.</p>
+      <p>And by late 2021...</p>
+      <p>He finally figured it out.</p>
+      <p>He understood the physics of what he believed was happening.</p>
+      <p>And more importantly... how to potentially support his body's recovery.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION 7: KEN BEFORE/AFTER -->
+<section class="section-cream section-pad-sm">
+  <div style="max-width:900px;margin:0 auto;padding:0 clamp(20px,5vw,60px);">
+    <div class="fade-up">
+      <div class="ken-pair">
+        <div class="ken-img">
+          <span class="ken-label">Before — Early 2021</span>
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663362156340/jRvnjyDynnrFjHmK.png" alt="Ken before 2021" />
+        </div>
+        <div class="ken-divider"></div>
+        <div class="ken-img">
+          <span class="ken-label">After — 2025</span>
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663362156340/MjJxjcouGapZRaew.png" alt="Ken after 2025" />
+        </div>
+      </div>
+      <p class="font-body text-center" style="font-size:clamp(14px,1.8vw,16px);font-style:italic;color:var(--body);margin-bottom:10px;">Ken in 2021 (left) vs 2025 (right). Notice the wider jaw, higher cheekbones, increased eye support and more balanced facial structure.</p>
+      <p class="disclaimer">Individual results. Not typical.</p>
+    </div>
+
+    <div class="body-copy fade-up mt-32">
+      <p>Look at his face.</p>
+      <p>Not just his skin.</p>
+      <p>His <strong>STRUCTURE</strong>.</p>
+      <p>His jawline is more prominent.</p>
+      <p>His cheekbones are higher.</p>
+      <p class="gap">His face is <strong>WIDER</strong>.</p>
+      <p>This is what Ken observed after years of using his own device.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION 8: THE DEVICE -->
+<section class="section-cream-alt section-pad">
+  <div class="content-narrow" style="padding:0 clamp(20px,5vw,60px);">
+    <p class="callout fade-up">Here's the device Ken developed:</p>
+
+    <div class="body-copy fade-up">
+      <p>Ken tested this on himself for years.</p>
+      <p>Iterating. Adjusting. Refining.</p>
+      <p>Until he developed a simple device... that creates consistent space between your back molars.</p>
+    </div>
+
+    <div class="fade-up" style="margin:40px auto;text-align:center;">
+      <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663362156340/ensakVpUbJMKFGKA.png" alt="Reviv R3 mouthguard" style="width:320px;max-width:100%;margin:0 auto;" />
+    </div>
+
+    <div class="body-copy fade-up">
+      <p>It's called the R3.</p>
+      <p>It's a silicone mouthguard.</p>
+      <p>You wear it while you sleep.</p>
+      <p>(And ideally 1–2 hours during the day if possible.)</p>
+      <p>It sits between your teeth...</p>
+      <p>Creating space in your back molars.</p>
+      <p>Based on Ken's observations...</p>
+      <p>This spacing appears to support the body's natural adaptation process.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION 9: SYMMETRY + POSTURE -->
+<section class="section-cream section-pad-sm">
+  <div class="content-narrow" style="padding:0 clamp(20px,5vw,60px);">
+    <div class="fade-up">
+      <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663362156340/HK6GVBHHByjpqZsEb7dhYB/symmetry-testimonial_492331f9.png" alt="3-week symmetry progress" style="width:100%;max-width:680px;margin:0 auto;border-radius:6px;" />
+      <p class="font-body text-center mt-16" style="font-size:clamp(15px,1.8vw,17px);color:var(--body);">That's 3 weeks.</p>
+      <p class="disclaimer">Individual results. Not typical.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="section-cream-alt section-pad">
+  <div class="content-narrow" style="padding:0 clamp(20px,5vw,60px);">
+    <div class="fade-up mb-32">
+      <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663362156340/HK6GVBHHByjpqZsEb7dhYB/underchin-before-after_36cd544c.png" alt="Under-chin before and after" style="width:100%;max-width:600px;margin:0 auto;border-radius:6px;" />
+    </div>
+
+    <div class="fade-up" style="display:flex;flex-direction:column;gap:16px;margin-bottom:24px;">
+      <div class="testimonial-card"><p class="quote">"I can now wear posture straps to drive — I sit exactly in the same slightly forward position... Reviv allows me to breathe deeper."</p><p class="name">— George</p></div>
+      <div class="testimonial-card"><p class="quote">"I'm sleeping deeper than I have in years. Waking up actually refreshed."</p><p class="name">— MrNobody</p></div>
+      <div class="testimonial-card"><p class="quote">"My posture has improved... and I can take a deeper breath."</p><p class="name">— Evelyn</p></div>
+    </div>
+
+    <div class="fade-up text-center" style="margin:40px 0;">
+      <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663362156340/rdeVGduMHYsEIPxa.gif" alt="Posture improvement animation" style="width:280px;max-width:100%;margin:0 auto;border-radius:6px;" />
+    </div>
+
+    <div class="body-copy fade-up">
+      <p>Many users report that when they create space in their jaw...</p>
+      <p>Their posture naturally corrects.</p>
+      <p>Their breathing deepens.</p>
+      <p>Their structure rebalances.</p>
+      <p style="color:var(--muted);font-size:13px;font-style:italic;">(Individual experiences vary.)</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION 10: DR. GARRETT SMITH -->
+<section class="section-cream section-pad">
+  <div class="content-narrow" style="padding:0 clamp(20px,5vw,60px);">
+    <p class="callout fade-up">Even doctors are using this.</p>
+
+    <div class="body-copy fade-up">
+      <p>Over 20,000 people discovered the answer.</p>
+      <p>It wasn't a surgery.</p>
+      <p>It wasn't a special diet.</p>
+      <p class="gap">It was something <strong>MUCH</strong> simpler.</p>
+    </div>
+
+    <div class="fade-up mb-32">
+      <div class="testimonial-card">
+        <p class="quote">"TMJ is so much better... I don't get loud pops and clicks anymore."</p>
+        <p class="name">— Ramez</p>
+      </div>
+    </div>
+
+    <div class="body-copy fade-up">
+      <p>And one of the people who saw it work firsthand...</p>
+      <p class="gap">is a licensed naturopathic medical doctor whose entire family works in dentistry.</p>
+    </div>
+
+    <h2 class="font-headline text-center fade-up" style="font-size:clamp(30px,4.5vw,44px);font-weight:700;margin-bottom:40px;">Meet Dr. Garrett Smith.</h2>
+
+    <div class="body-copy fade-up">
+      <p>Dr. Garrett Smith is a licensed naturopathic medical doctor.</p>
+      <p>His entire family works in dentistry.</p>
+      <p>His son is in braces right now.</p>
+      <p>Wearing rubber bands.</p>
+      <p class="gap">Doing all the things the orthodontist told him to do.</p>
+      <p>And when those braces come off...</p>
+      <p class="gap">The orthodontist is gonna hand him a retainer. The standard wire retainer. The one that's supposed to "keep your teeth in place."</p>
+      <p>But Dr. Smith isn't giving his son that retainer.</p>
+      <p>Because he believes that retainer <strong>LOCKS</strong> the jaw.</p>
+      <p>And when the jaw gets locked...</p>
+      <p class="gap">He believes the entire skull starts to compress.</p>
+      <p>Dr. Smith is giving his son the R3 instead.</p>
+      <p>Because it creates space.</p>
+      <p>It allows the jaw to <strong>EXPAND</strong>.</p>
+      <p>Not compress.</p>
+    </div>
+
+    <div class="fade-up text-center" style="margin:40px 0;">
+      <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663362156340/WnTPziXsNpCpUFOS.png" alt="Dr. Garrett Smith, NMD" style="width:280px;max-width:100%;border-radius:6px;margin:0 auto 16px;" />
+      <p class="font-body" style="color:var(--muted);font-size:13px;">Dr. Garrett Smith, NMD</p>
+    </div>
+
+    <div class="body-copy fade-up">
+      <p>Dr. Smith doesn't just recommend this.</p>
+      <p>He uses it himself.</p>
+      <p>The very first day he wore it to the gym...</p>
+      <p>He felt something shift.</p>
+      <p>His neck felt like it was <strong>ELONGATING</strong>.</p>
+      <p>Like his posture was correcting itself... without him even thinking about it.</p>
+      <p>He didn't have to force the "chin tuck."</p>
+      <p class="gap">His body just... aligned.</p>
+      <p>Within weeks, he noticed his breathing felt clearer.</p>
+      <p>The chronic neck pain he'd had for <strong>YEARS</strong> started to fade.</p>
+    </div>
+
+    <div class="fade-up" style="background:var(--cream-alt);border:1px solid var(--gold-dark);border-radius:6px;padding:28px 32px;margin:32px 0;">
+      <p class="font-body" style="font-size:clamp(15px,1.8vw,18px);font-style:italic;color:var(--body);line-height:1.7;margin-bottom:14px;">
+        "I feel the difference immediately. My breathing feels easier. I recover faster after workouts. When my son's braces come off, he'll be using this instead of a retainer — that's how much I trust it."
+      </p>
+      <p class="font-body" style="font-size:15px;font-weight:600;color:var(--ink);">— Dr. Garrett Smith, NMD</p>
+    </div>
+    <p class="disclaimer fade-up">Dr. Smith is an affiliate of Reviv and receives compensation for referrals.</p>
+
+    <div class="body-copy fade-up mt-24">
+      <p>This is a licensed medical doctor.</p>
+      <p>Whose whole family is in dentistry.</p>
+      <p>And he chose <strong>THIS</strong> over a retainer for his son. That should tell you something.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- MID-PAGE CTA -->
+<section class="section-cream-alt section-pad-sm">
+  <div class="content-narrow text-center fade-up" style="padding:0 clamp(20px,5vw,60px);">
+    <p class="font-headline" style="font-size:clamp(24px,3.5vw,32px);font-weight:700;margin-bottom:12px;">You don't have to take anyone's word for it.</p>
+    <p class="font-body" style="font-size:clamp(16px,2vw,19px);color:var(--body);margin-bottom:28px;">Try it yourself. Free shipping.</p>
+    <a href="#pricing" class="btn-gold">Get The R3 Now</a>
+  </div>
+</section>
+
+
+<!-- SECTION 11: WHAT TO EXPECT (TIMELINE) -->
+<section class="section-cream section-pad">
+  <div class="content-narrow" style="padding:0 clamp(20px,5vw,60px);">
+    <h2 class="font-headline text-center fade-up" style="font-size:clamp(28px,4vw,38px);font-weight:700;margin-bottom:12px;">What can YOU expect?</h2>
+
+    <div class="body-copy fade-up mb-40">
+      <p>Look, this isn't an overnight thing.</p>
+      <p>The first week or two might be uncomfortable.</p>
+      <p>Your teeth and gums might ache.</p>
+      <p>Sleeping through the night with it can be tough at first.</p>
+      <p>But once you get past that initial phase... that's when most people start noticing changes.</p>
+    </div>
+
+    <div class="timeline fade-up">
+      <div class="timeline-item">
+        <p class="timeline-label">WEEK 1</p>
+        <div class="timeline-bullet"><span>→</span>Some discomfort in your teeth and gums — that's normal. Your jaw is adjusting.</div>
+        <div class="timeline-bullet"><span>→</span>You might have trouble sleeping through the whole night with it in.</div>
+        <div class="timeline-bullet"><span>→</span>Most people adapt within a few days.</div>
+      </div>
+      <div class="timeline-item">
+        <p class="timeline-label">MONTH 1</p>
+        <div class="timeline-bullet"><span>→</span>The device gets more comfortable.</div>
+        <div class="timeline-bullet"><span>→</span>You might notice subtle changes in your bite.</div>
+        <div class="timeline-bullet"><span>→</span>Sleep improves. Energy increases.</div>
+        <div class="timeline-bullet"><span>→</span>Your face may look a bit different. (In a good way.)</div>
+      </div>
+      <div class="timeline-item">
+        <p class="timeline-label">MONTHS 2–4</p>
+        <div class="timeline-bullet"><span>→</span>Some users report jaw clicking decreases over time.</div>
+        <div class="timeline-bullet"><span>→</span>Posture starts shifting naturally.</div>
+        <div class="timeline-bullet"><span>→</span>People might start asking if you 'did something' to your face.</div>
+      </div>
+      <div class="timeline-item">
+        <p class="timeline-label">YEAR 1</p>
+        <div class="timeline-bullet"><span>→</span>Mental clarity improves.</div>
+        <div class="timeline-bullet"><span>→</span>You handle stress better.</div>
+        <div class="timeline-bullet"><span>→</span>More energy and stamina.</div>
+        <div class="timeline-bullet"><span>→</span>Structural changes become more visible.</div>
+      </div>
+      <div class="timeline-item">
+        <p class="timeline-label">YEAR 2+</p>
+        <div class="timeline-bullet"><span>→</span>If you're also doing jaw exercises and stretches, the improvements keep coming.</div>
+        <div class="timeline-bullet"><span>→</span>Functionally AND aesthetically.</div>
+        <div class="timeline-bullet"><span>→</span>You move through your day with less friction.</div>
+      </div>
+    </div>
+
+    <p class="disclaimer fade-up mt-32">Individual experiences. Results vary. The R3 is not intended to diagnose, treat, cure, or prevent any disease.</p>
+  </div>
+</section>
+
+
+<!-- SECTION 12: WHAT YOU'RE GETTING + SIZING -->
+<section class="section-cream-alt section-pad">
+  <div class="content-narrow" style="padding:0 clamp(20px,5vw,60px);">
+    <p class="callout fade-up">Here's what you're getting:</p>
+
+    <div class="body-copy fade-up">
+      <p>The R3 is a simple silicone mouthguard.</p>
+      <p>Made from premium silicone.</p>
+      <p>You wear it while you sleep.</p>
+      <p>(And ideally 1–2 hours during the day if possible.)</p>
+      <p>It sits between your teeth...</p>
+      <p>Creating space in your back molars.</p>
+      <p>Based on Ken's model... this spacing appears to support your body's natural adaptation process.</p>
+      <p>It doesn't force your teeth into position like braces.</p>
+      <p>It creates space... and lets your body adapt naturally.</p>
+    </div>
+
+    <div class="fade-up" style="margin:40px 0;">
+      <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663362156340/HK6GVBHHByjpqZsEb7dhYB/r3-sizing-chart_1817aa7e.webp" alt="R3 sizing chart" style="width:100%;max-width:680px;margin:0 auto;border-radius:6px;" />
+    </div>
+
+    <div class="body-copy fade-up">
+      <p class="mb-16">Available in 3 sizes:</p>
+      <div class="gold-bullet">Medium (63.5mm wide, 46mm deep, 23mm tall) — Smaller builds</div>
+      <div class="gold-bullet">Large (73.2mm wide, 53.6mm deep, 26mm tall) — Most adults</div>
+      <div class="gold-bullet mb-24">Extra Large (84mm wide, 59.6mm deep, 27mm tall) — Bigger frames</div>
+      <p class="gap">Most people use Large. If you're unsure, email <a href="mailto:cs@getreviv.com" style="color:var(--gold);">cs@getreviv.com</a> before ordering.</p>
+      <p class="mb-16">What's included:</p>
+      <div class="gold-bullet">The R3 mouthguard (your choice of size)</div>
+      <div class="gold-bullet">Hard protective case</div>
+      <div class="gold-bullet">Detailed instructions</div>
+      <div class="gold-bullet">1-Year Warranty (1 free replacement per customer)</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION 13: PRICING -->
+<section id="pricing" class="section-cream section-pad">
+  <div class="content-wide" style="padding:0 clamp(20px,5vw,60px);">
+    <h2 class="font-headline text-center fade-up" style="font-size:clamp(28px,4vw,38px);font-weight:700;margin-bottom:12px;">Two ways to get started:</h2>
+
+    <div class="pricing-grid">
+      <!-- Card 1: Most Popular -->
+      <div class="pricing-card pricing-card-popular fade-up">
+        <div class="text-center"><span class="pricing-badge">⭐ MOST POPULAR</span></div>
+        <div class="text-center mb-16">
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663362156340/ensakVpUbJMKFGKA.png" alt="Reviv R3 Mouthguard" style="width:300px;max-width:100%;margin:0 auto;" />
+        </div>
+        <h3 class="pricing-title">Option 1: R3 + 1 Year Community Access</h3>
+        <p class="pricing-price">$129</p>
+        <div style="margin-bottom:28px;">
+          <div class="pricing-feature"><span>✓</span>The R3 mouthguard</div>
+          <div class="pricing-feature"><span>✓</span>Full year of Skool community access</div>
+          <div class="pricing-feature"><span>✓</span>Community support (3,000+ members)</div>
+          <div class="pricing-feature"><span>✓</span>60+ educational videos from Ken</div>
+          <div class="pricing-feature"><span>✓</span>The 'FAST method' stretches to accelerate results</div>
+          <div class="pricing-feature"><span>✓</span>Free shipping</div>
+        </div>
+        <p class="pricing-stock">⚠️ Limited stock available • Next restock: 4–6 weeks</p>
+        <a href="https://getreviv.com/products/r3-revivthree-without-support?variant=47225721127153" class="btn-gold btn-full mt-8" style="padding:18px 0;font-size:clamp(15px,2vw,17px);">Get The R3 + Community Access — $129</a>
+        <p class="pricing-ships">📦 Ships in 2–3 days</p>
+      </div>
+
+      <!-- Card 2: Standard -->
+      <div class="pricing-card pricing-card-standard fade-up">
+        <div class="text-center mb-16">
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663362156340/ensakVpUbJMKFGKA.png" alt="Reviv R3 Mouthguard" style="width:300px;max-width:100%;margin:0 auto;" />
+        </div>
+        <h3 class="pricing-title">Option 2: Just The R3</h3>
+        <p class="pricing-price">$80</p>
+        <div style="margin-bottom:28px;">
+          <div class="pricing-feature"><span>✓</span>The R3 mouthguard</div>
+          <div class="pricing-feature"><span>✓</span>Instruction guide</div>
+          <div class="pricing-feature"><span>✓</span>Free shipping</div>
+        </div>
+        <p class="pricing-stock">⚠️ Limited stock available • Next restock: 4–6 weeks</p>
+        <a href="https://getreviv.com/products/r3-revivthree-without-support?variant=47596826689777" class="btn-gold btn-full mt-8" style="padding:18px 0;font-size:clamp(15px,2vw,17px);">Get Just The R3 — $80</a>
+        <p class="pricing-ships">📦 Ships in 2–3 days</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION 14: FAQ -->
+<section class="section-cream-alt section-pad">
+  <div class="content-narrow" style="padding:0 clamp(20px,5vw,60px);">
+    <h2 class="font-headline text-center fade-up" style="font-size:clamp(30px,4.5vw,44px);font-weight:700;margin-bottom:50px;">Questions?</h2>
+
+    <div class="faq-item fade-up">
+      <p class="faq-q">Is this safe?</p>
+      <p class="faq-a">Yes. The R3 is made from premium silicone. It doesn't force your teeth into position like braces. It creates space... and lets your body adapt naturally. Ken uses it. His wife and son use it. Over 20,000 people use it. And we back it with a 1-year warranty. If it breaks, we replace it for free.</p>
+    </div>
+    <div class="faq-item fade-up">
+      <p class="faq-q">Can kids use this?</p>
+      <p class="faq-a">Yes... but consult a pediatric dentist first. Every kid's mouth is different, and we want to make sure it's the right fit for them.</p>
+    </div>
+    <div class="faq-item fade-up">
+      <p class="faq-q">Will this work for me if I grind my teeth?</p>
+      <p class="faq-a">Many people who grind or clench find the R3 helpful, as the spacing it creates may reduce surface contact during grinding. Some users report their grinding decreases over time as their jaw structure adapts.</p>
+    </div>
+    <div class="faq-item fade-up">
+      <p class="faq-q">How long do I need to wear it each day?</p>
+      <p class="faq-a">Ken recommends wearing it every night while you sleep, plus 1–2 hours during the day if possible. The more you wear it... the faster your structure may respond.</p>
+    </div>
+    <div class="faq-item fade-up">
+      <p class="faq-q">Will this mess up my teeth?</p>
+      <p class="faq-a">Some users find their teeth shift over time as their jaw structure adapts. This appears to be a natural response to the space being created — not a forced mechanical movement like braces. Individual results vary.</p>
+    </div>
+    <div class="faq-item fade-up">
+      <p class="faq-q">What if it doesn't fit right?</p>
+      <p class="faq-a">If you're unsure about sizing before you order, email <a href="mailto:cs@getreviv.com" style="color:var(--gold);">cs@getreviv.com</a> and Ken's team will help you choose. And remember — you have a full year warranty. If there's any issue with your R3, you get one free replacement.</p>
+    </div>
+    <div class="faq-item fade-up">
+      <p class="faq-q">How long until I notice changes?</p>
+      <p class="faq-a">It varies by person. Some people notice improvements in sleep and energy within the first few weeks. Visual structural changes may take longer. Most people see continued improvements over 6–12 months.</p>
+    </div>
+    <div class="faq-item fade-up">
+      <p class="faq-q">Can I use this if I have dental work?</p>
+      <p class="faq-a">Ken has crowns himself. Many community members have fillings, implants, or previous dental work. The R3 doesn't interfere with any of that. If you have specific concerns, reach out to <a href="mailto:cs@getreviv.com" style="color:var(--gold);">cs@getreviv.com</a> before ordering.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION 15: FINAL PUSH + CTA -->
+<section class="section-cream section-pad" style="padding-top:100px;padding-bottom:100px;">
+  <div class="content-narrow text-center" style="padding:0 clamp(20px,5vw,60px);">
+    <h2 class="font-headline fade-up" style="font-size:clamp(30px,4.5vw,44px);font-weight:700;line-height:1.2;margin-bottom:32px;">Your structure is either expanding or compressing.</h2>
+
+    <div class="body-copy fade-up text-center mb-32">
+      <p>There's no middle ground.</p>
+      <p>Every day your bite stays locked...</p>
+      <p class="gap">Your structure may compress a little more.</p>
+      <p>Most people don't notice until they look in the mirror one day...</p>
+      <p class="gap">And don't recognize the person staring back.</p>
+      <p>But based on what Ken and thousands of users have experienced...</p>
+      <p>Your body may have more capacity to adapt than you think.</p>
+    </div>
+
+    <div class="body-copy fade-up text-center mb-32">
+      <p>By giving your skull the space it's been begging for.</p>
+      <p>Some people feel it in <strong>DAYS</strong>.</p>
+      <p class="gap">Their posture straightens. Their breathing deepens.</p>
+      <p>Others see it in <strong>WEEKS</strong>.</p>
+      <p class="gap">Their face starts looking more like the version they remember.</p>
+      <p>But most people who use this consistently... report feeling <strong>SOMETHING</strong> shift.</p>
+      <p>Because once you remove the compression...</p>
+      <p>Your body knows what to do.</p>
+      <p>You just have to give it the room.</p>
+    </div>
+
+    <p class="font-headline fade-up" style="font-size:clamp(20px,2.5vw,24px);font-weight:700;margin-bottom:20px;">Imagine if:</p>
+    <div class="fade-up" style="display:flex;flex-direction:column;gap:14px;margin-bottom:40px;text-align:left;max-width:600px;margin-left:auto;margin-right:auto;">
+      <div class="gold-bullet">You stopped hitting snooze 5 times. And woke up feeling like you actually SLEPT.</div>
+      <div class="gold-bullet">You stopped waking up at 3 AM with a tight neck. And slept through the night for the first time in years.</div>
+      <div class="gold-bullet">Your thinking sharpened. You stopped walking into rooms and forgetting why you're there.</div>
+      <div class="gold-bullet">Your shoulders stopped rounding forward. You stood up straight without having to think about it.</div>
+      <div class="gold-bullet">Your jawline sharpened. Your cheekbones came forward. You looked in the mirror and finally recognized yourself again.</div>
+    </div>
+    <p class="disclaimer fade-up mb-24">Individual results vary. Not everyone experiences these outcomes.</p>
+
+    <div class="body-copy fade-up text-center mb-32">
+      <p>That's what thousands of users have reported.</p>
+      <p>But if it <strong>DOES</strong> work...</p>
+      <p>If you wake up one morning and realize your neck doesn't hurt anymore...</p>
+      <p>If you look in the mirror and finally see <strong>YOURSELF</strong> again...</p>
+      <p>You'll wish you started sooner.</p>
+    </div>
+
+    <div class="fade-up">
+      <p class="font-body" style="font-size:14px;color:var(--ink);margin-bottom:32px;">⚠️ Limited stock available • Next restock: 4–6 weeks</p>
+      <a href="#pricing" class="btn-gold" style="font-size:clamp(17px,2vw,20px);padding:20px 60px;width:100%;max-width:500px;display:block;margin:0 auto 16px;">Get The R3 Now — Start Today</a>
+      <p class="font-body" style="font-size:14px;color:var(--body);margin-bottom:8px;">⭐⭐⭐⭐⭐ (4.8/5 • 578 reviews) &nbsp;•&nbsp; Free shipping</p>
+      <p class="font-body" style="font-size:14px;color:var(--body);margin-bottom:32px;">📦 Ships in 2–3 days</p>
+      <p class="font-body" style="font-size:clamp(15px,1.8vw,17px);font-style:italic;color:var(--body);">P.S. Ken uses this himself. His wife and son use it. Over 20,000 people use it. And Dr. Smith (affiliate) chose this for his son instead of a retainer. That should tell you everything.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<div class="lp-footer">
+  <div style="max-width:1000px;margin:0 auto;text-align:center;">
+    <p class="font-body" style="font-size:12px;color:var(--body);line-height:1.6;margin-bottom:16px;">Results vary by individual. This is not medical advice. The R3 is not intended to diagnose, treat, cure, or prevent any disease. Consult with a healthcare professional before starting any new health regimen. Individual results may vary.</p>
+    <p class="font-body" style="font-size:12px;color:var(--body);margin-bottom:15px;">&copy; 2026 Reviv. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="https://getreviv.com/policies/privacy-policy">Privacy Policy</a>
+      <a href="https://getreviv.com/policies/terms-of-service">Terms of Service</a>
+      <a href="mailto:cs@getreviv.com">Contact Us</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- EXIT INTENT POPUP (R1 DOWNSELL) -->
+<div id="exit-popup" style="display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.75);align-items:center;justify-content:center;">
+  <div style="background:var(--cream);max-width:520px;width:90%;border-radius:8px;padding:40px;text-align:center;position:relative;">
+    <button onclick="document.getElementById('exit-popup').style.display='none'" style="position:absolute;top:12px;right:16px;background:none;font-size:22px;color:var(--muted);cursor:pointer;border:none;">&#10005;</button>
+    <h3 class="font-headline" style="font-size:clamp(24px,3.5vw,30px);font-weight:700;margin-bottom:12px;">Wait — not ready for the R3?<br>Try the R1 for $25</h3>
+    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663362156340/KBcnOZIjNUDAQety.png" alt="Reviv R1" style="width:200px;max-width:100%;margin:16px auto;" />
+    <a href="https://getreviv.com/products/reviv-one-without-support" class="btn-gold btn-full" style="padding:16px 0;margin-top:16px;">Get The R1 — $25</a>
+    <button onclick="document.getElementById('exit-popup').style.display='none'" style="background:none;color:var(--muted);font-size:13px;margin-top:12px;text-decoration:underline;cursor:pointer;border:none;">No thanks</button>
+  </div>
+</div>
+
+
+<!-- EMAIL CAPTURE POPUP -->
+<div id="email-popup" style="display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.6);align-items:center;justify-content:center;">
+  <div style="background:var(--cream);max-width:480px;width:90%;border-radius:8px;padding:40px;text-align:center;position:relative;">
+    <button onclick="closeEmailPopup()" style="position:absolute;top:12px;right:16px;background:none;font-size:22px;color:var(--muted);cursor:pointer;">&#10005;</button>
+    <h3 class="font-headline" style="font-size:clamp(24px,3.5vw,30px);font-weight:700;margin-bottom:8px;">Before you go...</h3>
+    <p class="font-body" style="font-size:16px;color:var(--body);margin-bottom:24px;">Get the free guide to jaw decompression.</p>
+    <form method="post" action="/contact#contact_form">
+      <input type="hidden" name="form_type" value="customer" />
+      <input type="hidden" name="utf8" value="✓" />
+      <input type="email" name="contact[email]" required placeholder="Your email address" style="width:100%;padding:14px 16px;border:1px solid var(--border);border-radius:6px;font-size:16px;font-family:'DM Sans',sans-serif;margin-bottom:12px;outline:none;" />
+      <button type="submit" class="btn-gold btn-full" style="padding:16px 0;border:none;">Send Me The Guide</button>
+    </form>
+    <button onclick="closeEmailPopup()" style="background:none;color:var(--muted);font-size:13px;margin-top:12px;text-decoration:underline;cursor:pointer;display:block;margin-left:auto;margin-right:auto;border:none;">No thanks</button>
+  </div>
+</div>
+
+
+<!-- SCRIPTS -->
+<script>
+  // ── Fade-up on scroll ──
+  const fadeEls = document.querySelectorAll('.fade-up');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  fadeEls.forEach(el => observer.observe(el));
+
+  // ── Email popup (8s delay, once per session) ──
+  function closeEmailPopup() {
+    document.getElementById('email-popup').style.display = 'none';
+    sessionStorage.setItem('emailPopupDismissed', '1');
+  }
+  if (!sessionStorage.getItem('emailPopupDismissed')) {
+    setTimeout(function() {
+      document.getElementById('email-popup').style.display = 'flex';
+    }, 8000);
+  }
+
+  // ── Exit intent popup (mouse leave, once per session) ──
+  var exitShown = false;
+  document.addEventListener('mouseleave', function(e) {
+    if (e.clientY <= 0 && !exitShown && !sessionStorage.getItem('exitPopupDismissed')) {
+      exitShown = true;
+      document.getElementById('exit-popup').style.display = 'flex';
+      sessionStorage.setItem('exitPopupDismissed', '1');
+    }
+  });
+</script>
+
+</body>
+</html>

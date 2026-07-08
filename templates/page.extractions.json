@@ -1,0 +1,668 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_banner_g8wcVV": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_N68zMY": {
+          "type": "heading",
+          "settings": {
+            "heading": "Can a flat mouthguard reverse the damage of extractions?",
+            "heading_size": "hxl"
+          }
+        },
+        "text_tmWeXJ": {
+          "type": "text",
+          "settings": {
+            "text": "Based on my experience I view that it can help.  Now let me explain why.",
+            "text_style": "subtitle"
+          }
+        },
+        "buttons_YMPP3D": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Join now",
+            "button_id": "form-popup-btn",
+            "button_link_1": "#",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_N68zMY",
+        "text_tmWeXJ",
+        "buttons_YMPP3D"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/08da521167598c3adab2f34bc36a23bfa689a48e.png",
+        "image_overlay_opacity": 50,
+        "image_height": "medium",
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-522b6c27-788f-4b7e-bbb7-d4f61d40572f",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "custom_classes": "sk-main-banner"
+      }
+    },
+    "free_trial_CX8H9e": {
+      "type": "free-trial",
+      "blocks": {
+        "heading_MgDHRz": {
+          "type": "heading",
+          "settings": {
+            "heading": "START 1-MONTH FREE TRIAL TODAY",
+            "title_color": "#ffffff"
+          }
+        },
+        "text_FqcRn7": {
+          "type": "text",
+          "settings": {
+            "text_para": "$00.00",
+            "desc_color": "#e5c085"
+          }
+        },
+        "button_YBCQ63": {
+          "type": "button",
+          "settings": {
+            "button_label": "JOIN NOW",
+            "button_id": "form-popup-btn",
+            "button_link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MgDHRz",
+        "text_FqcRn7",
+        "button_YBCQ63"
+      ],
+      "settings": {
+        "back_color": "#232021",
+        "padding_top": 16,
+        "padding_bottom": 16,
+        "custom_class": ""
+      }
+    },
+    "tmj_block_UtYCDW": {
+      "type": "tmj-block",
+      "blocks": {
+        "rich_text_7Mewpm": {
+          "type": "rich_text",
+          "settings": {
+            "rich_text": "<p>When you extract teeth I view that it is a bit like removing a structural support in a building.  </p>"
+          }
+        },
+        "rich_text_D4G9EG": {
+          "type": "rich_text",
+          "settings": {
+            "rich_text": "<p>The structure collapses a little bit and the rest of the teeth move to find a new stability point.</p>"
+          }
+        },
+        "rich_text_ntGJxe": {
+          "type": "rich_text",
+          "settings": {
+            "rich_text": "<p>Using a mouthguard serves as a sort of support beam that helps prevent further collapses and even starts to push things back out.</p>"
+          }
+        },
+        "rich_text_C4jMHz": {
+          "type": "rich_text",
+          "settings": {
+            "rich_text": "<p>It works via the soft tissue and 'inflates' the skull, which allows the bones and jaw to move back to where they should be over time.</p>"
+          }
+        },
+        "rich_text_FBPAdU": {
+          "type": "rich_text",
+          "settings": {
+            "rich_text": "<p>I find that the teeth move during this healing process to healthier positions.  Often similar to where they were pre-extraction. </p>"
+          }
+        }
+      },
+      "block_order": [
+        "rich_text_7Mewpm",
+        "rich_text_D4G9EG",
+        "rich_text_ntGJxe",
+        "rich_text_C4jMHz",
+        "rich_text_FBPAdU"
+      ],
+      "settings": {
+        "heading": "Why I do think a flat mouthguard helps",
+        "padding_top": "pt-8",
+        "padding_bottom": "pb-12"
+      }
+    },
+    "multicolumn_HzjGGH": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_HqVALW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/5167821b-c547-44ba-82d3-08f212281301_983x689_79737823-aa5e-4675-affd-10d34602e1dc.webp",
+            "title": "Are Dental Extractions Bad?",
+            "text": "<p>They are f*cking barbaric. Now let me tell you why...</p>",
+            "link_label": "Read More",
+            "link": "https://reviv.substack.com/p/are-dental-extractions-bad?utm_source=publication-search",
+            "youtube_video_url": "",
+            "isNewTab": true
+          }
+        },
+        "column_MQQHXx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/6ed5f92f-381f-4a5c-86f2-e7fc9af9bd57_1024x683_c50db745-c9a4-4130-901a-6dcc6fc01ebe.webp",
+            "title": "Does Reviv work if you have missing teeth? Or an implant?",
+            "text": "<p>Yes because this process works via the soft tissue and not the teeth.</p>",
+            "link_label": "Read More",
+            "link": "https://reviv.substack.com/p/does-reviv-work-if-you-have-missing",
+            "youtube_video_url": "",
+            "isNewTab": true
+          }
+        },
+        "column_9KzYyy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/dfe2ba39-89bb-40df-b7c0-950f751068f0_3000x2022_e317e19d-70bc-43f8-8b5b-3edf44682e45.webp",
+            "title": "Does this process impact facial symmetry?",
+            "text": "<p>Yes, but in a very non-linear way</p>",
+            "link_label": "Read More",
+            "link": "https://reviv.substack.com/p/does-this-process-impact-facial-symmetry",
+            "youtube_video_url": "",
+            "isNewTab": true
+          }
+        },
+        "column_9QpMhY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/bad1bc53-d792-4ba2-9892-c082f2e462a3_612x408_18b65913-6169-4804-aa85-62724eb5a640.webp",
+            "title": "There is only one way that the body collapses",
+            "text": "<p>And therefore what I write here applies to pretty much all health issues</p>",
+            "link_label": "Read More",
+            "link": "https://reviv.substack.com/p/there-is-only-one-way-that-the-body",
+            "youtube_video_url": "",
+            "isNewTab": true
+          }
+        }
+      },
+      "block_order": [
+        "column_HqVALW",
+        "column_MQQHXx",
+        "column_9KzYyy",
+        "column_9QpMhY"
+      ],
+      "settings": {
+        "title": "Articles I have written",
+        "box_link": false,
+        "heading_size": "hxl",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "section_color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": "sk-multi-col uc-multi-col"
+      }
+    },
+    "skool_image_slider_dhbCwq": {
+      "type": "skool-image-slider",
+      "blocks": {
+        "image_d9UTXy": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/0566d63318c1f07adae9e95cd7e6468f.png"
+          }
+        },
+        "image_Nqnm9h": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/ab4caac789e7b58aebe523df6f63fc31.png"
+          }
+        },
+        "image_74QiWf": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/0566d63318c1f07adae9e95cd7e6468f.png"
+          }
+        },
+        "image_WjzMVb": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/0566d63318c1f07adae9e95cd7e6468f.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_d9UTXy",
+        "image_Nqnm9h",
+        "image_74QiWf",
+        "image_WjzMVb"
+      ],
+      "settings": {
+        "section_head": "Take a look at skool",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_cmmbXX": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_UFy37y": {
+          "type": "heading",
+          "settings": {
+            "heading": "Not ready to purchase?",
+            "heading_size": "h1"
+          }
+        },
+        "text_HiNLnk": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Try a free month trial of our Skool community instead and see what hundreds of others who are doing the process are posting.</p>"
+          }
+        },
+        "button_ktXcj4": {
+          "type": "button",
+          "settings": {
+            "button_label": "Join now",
+            "button_link": "#",
+            "button_id": "form-popup-btn yellow-btn",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_UFy37y",
+        "text_HiNLnk",
+        "button_ktXcj4"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "custom__class": ""
+      }
+    },
+    "product_cards_j8jV4n": {
+      "type": "product-cards",
+      "blocks": {
+        "product_card_rnJawi": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-two",
+            "is_new": true
+          }
+        },
+        "product_card_jBbiK3": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-two-without-support",
+            "is_new": true
+          }
+        },
+        "product_card_VYkMzd": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-one",
+            "is_new": false
+          }
+        },
+        "product_card_Jf3L8L": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-one-without-support",
+            "is_new": false
+          }
+        },
+        "product_card_kiLBxy": {
+          "type": "product_card",
+          "settings": {
+            "product": "1-year-subscription-only",
+            "is_new": false
+          }
+        }
+      },
+      "block_order": [
+        "product_card_rnJawi",
+        "product_card_jBbiK3",
+        "product_card_VYkMzd",
+        "product_card_Jf3L8L",
+        "product_card_kiLBxy"
+      ],
+      "custom_css": [
+        ".product-card__price,.product-card__title {color: #000 !important;}",
+        ".product-card__title {font-size: 18px; line-height: normal;}",
+        ".swiper-pagination-bullet: not(.swiper-pagination-bullet-active) {border-color: #000;}",
+        ".product-form {margin-top: 0;}",
+        "span.swiper-pagination-bullet {margin: 0 5px !important;}",
+        ".swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {border-color: #000; opacity: 1;}",
+        ".swiper {width: auto; overflow: hidden;}",
+        ".add-to-cart__button {border: 1px solid #000000; color: black;}"
+      ],
+      "settings": {
+        "section_color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_classes": ""
+      }
+    },
+    "collapsible_content_JN3rhi": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_UjR4JN": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can Reviv really help even if my extractions were done many years ago?",
+            "icon": "none",
+            "row_content": "<p>I view that the biomechanical collapse process triggered by extractions continues for decades after the procedure. <br/><br/>And so a simple mouthguard helps stop this collapse process and can reverse it.  Even many years afterwards.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_tUj3HX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "I had four bicuspids extracted before braces. Can Reviv help?",
+            "icon": "none",
+            "row_content": "<p>The extraction of bicuspids (premolars) is particularly damaging as the whole skull often collapses pretty significantly afterwards.<br/><br/>I do view that a mouthguard like Reviv is very helpful in a situation like this.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_6bErhk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Will Reviv re-open the gaps where my teeth were extracted?",
+            "icon": "none",
+            "row_content": "<p>Yes often as things expand and teeth move back to 'where they were', the gaps where teeth were removed will open back up.</p><p>Some folks can opt to go for implants if they want.  But I don't view that it is necessary as long as you are wearing the mouthguard at night.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_jEbzGk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "I've experienced health issues since my extractions that my dentist says are unrelated - can Reviv help with these?",
+            "icon": "none",
+            "row_content": "<p>I've already seen a number of users report improvements in seemingly unrelated health issues that emerged after extractions.  </p><p>So I cannot promise you anything.  But I view that it is definitely a good possibility.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_UjR4JN",
+        "collapsible_row_tUj3HX",
+        "collapsible_row_6bErhk",
+        "collapsible_row_jEbzGk"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "frequently asked questions",
+        "heading_size": "hxxl",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": "sk-faqs"
+      }
+    },
+    "1743752606d7c9c7a3": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_RjGj3h": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "414780",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_RjGj3h"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "multicolumn_Y9GLDn": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_nYRUWB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2568-05-26_at_21.06.36.webp",
+            "title": "Most people think their jaw pain is stress, but they're only half right.",
+            "text": "<p>You've had orthodontics (braces, Invisalign, extractions) in the past</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/tmj-vs-stress-how-to-tell-the-difference-what-actually-works?_pos=6&_sid=9075cfc52&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_YHGGVy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___M_cfa2a127-02d8-4c80-b883-1c73cd4cacbf.webp",
+            "title": "Kids and Teens",
+            "text": "<p>When a Deep Curve of Spee Needs Action</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/kids-and-teens-when-a-deep-curve-of-spee-needs-action?_pos=3&_sid=9075cfc52&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_qd8DpW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_8986965a-6016-465d-ae9e-1c5926da57dd_00001588_001.webp",
+            "title": "Deep Bite vs the Curve of Spee",
+            "text": "<p>What’s the Real Difference?</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/deep-bite-vs-the-curve-of-spee-what-s-the-real-difference?_pos=5&_sid=9075cfc52&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_BYhydt": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-08-09_082046_166efbe8-5c16-42d0-b56f-16a142644f71.webp",
+            "title": "Troubleshoot Your TMJ Mouth Guard",
+            "text": "<p>Fixing Common Problems Fast</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/troubleshoot-your-tmj-mouth-guard-fixing-common-problems-fast?_pos=4&_sid=b7bd956d2&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_3FLQGG": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2568-04-06_at_00.51.08.webp",
+            "title": "The TMJ Diet",
+            "text": "<p>Foods That Help Reduce Inflammation and Pain</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/the-tmj-diet-foods-that-help-reduce-inflammation-and-pain?_pos=7&_sid=b7bd956d2&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_7UEWhM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-08-09_121223_7ec43094-a5d3-4f5e-972f-c2fd537b2f8d.webp",
+            "title": "Can Supplements Improve Sleep Duration and Quality?",
+            "text": "<p>Let’s break it down without the fluffy “just relax” advice you’ve heard a million times.</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/can-supplements-improve-sleep-duration-and-quality?_pos=2&_sid=b7bd956d2&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_tFD8c4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___M_541ca80b-4e41-48fb-9a4a-f02244147349.webp",
+            "title": "The Evidence Behind Reviv",
+            "text": "<p>What Health Libraries Say About Mouthguards + Our Posture/Aesthetics Hypothesis</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/the-evidence-behind-reviv-what-health-libraries-say-about-mouthguards-our-posture-aesthetics-hypothesis",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_cXPY7k": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___M_354ba87f-cbd5-4032-a022-6ccac76c7b9e.webp",
+            "title": "Reviv + Dentist Co‑Care",
+            "text": "<p>How to Talk to Your Dentist and When to Upgrade to Custom</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/reviv-dentist-co-care-how-to-talk-to-your-dentist-and-when-to-upgrade-to-custom",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_fLjE6X": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_8986965a-6016-465d-ae9e-1c5926da57dd_00000946_003.webp",
+            "title": "What Is Bruxism, Really?",
+            "text": "<p>The Difference Between Clenching and Grinding</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/what-is-bruxism-really-the-difference-between-clenching-and-grinding",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_4z7czV": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_00001268_003_32f15898-3109-4a66-81fe-7e1333bfd273.webp",
+            "title": "5 Types of Mouthguard Users",
+            "text": "<p>and Why Reviv Works for All</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/5-types-of-mouthguard-users-and-why-reviv-works-for-all",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_a3LUgC": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___M_4df9b6ed-3d9d-4323-85cb-9f9b82cd0cab.webp",
+            "title": "Do Night Guards Change the Curve of Spee?",
+            "text": "<p>Do Night Guards Change the Curve of Spee?</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/do-night-guards-change-the-curve-of-spee-what-they-actually-do",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_pYBgBY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/aad57f24-16c7-4d2f-8f79-0603016615e8_521x347_59526048-ecdd-46db-a21c-92de577fe94f.jpg",
+            "title": "Genetics are wayyyy overrated",
+            "text": "<p>And so let’s go deeper into understanding this.</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/genetics-are-wayyyy-overrated",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        }
+      },
+      "block_order": [
+        "column_nYRUWB",
+        "column_YHGGVy",
+        "column_qd8DpW",
+        "column_BYhydt",
+        "column_3FLQGG",
+        "column_7UEWhM",
+        "column_tFD8c4",
+        "column_cXPY7k",
+        "column_fLjE6X",
+        "column_4z7czV",
+        "column_a3LUgC",
+        "column_pYBgBY"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "OTHER RELATED ARTICLES",
+        "box_link": false,
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "section_color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_g8wcVV",
+    "free_trial_CX8H9e",
+    "tmj_block_UtYCDW",
+    "multicolumn_HzjGGH",
+    "skool_image_slider_dhbCwq",
+    "rich_text_cmmbXX",
+    "product_cards_j8jV4n",
+    "collapsible_content_JN3rhi",
+    "1743752606d7c9c7a3",
+    "multicolumn_Y9GLDn"
+  ]
+}

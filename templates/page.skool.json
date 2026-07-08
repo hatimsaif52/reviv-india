@@ -1,0 +1,385 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_banner_g8wcVV": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_N68zMY": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get 1-Month Free on the Reviv Skool Community!",
+            "heading_size": "hxl"
+          }
+        },
+        "text_tmWeXJ": {
+          "type": "text",
+          "settings": {
+            "text": "This is a very powerful tool in ensuring you stay on track as you will probably experience lots of changes during your journey.",
+            "text_style": "subtitle"
+          }
+        },
+        "buttons_YMPP3D": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Join now",
+            "button_id": "form-popup-btn",
+            "button_link_1": "#",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_N68zMY",
+        "text_tmWeXJ",
+        "buttons_YMPP3D"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/c813bbd513e4fac634d99065e31a746d.webp",
+        "image_overlay_opacity": 50,
+        "image_height": "medium",
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-522b6c27-788f-4b7e-bbb7-d4f61d40572f",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "custom_classes": "sk-main-banner"
+      }
+    },
+    "free_trial_CX8H9e": {
+      "type": "free-trial",
+      "blocks": {
+        "heading_MgDHRz": {
+          "type": "heading",
+          "settings": {
+            "heading": "START 1-MONTH FREE TRIAL TODAY",
+            "title_color": "#ffffff"
+          }
+        },
+        "text_FqcRn7": {
+          "type": "text",
+          "settings": {
+            "text_para": "$00.00",
+            "desc_color": "#e5c085"
+          }
+        },
+        "button_YBCQ63": {
+          "type": "button",
+          "settings": {
+            "button_label": "JOIN NOW",
+            "button_id": "form-popup-btn",
+            "button_link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MgDHRz",
+        "text_FqcRn7",
+        "button_YBCQ63"
+      ],
+      "settings": {
+        "back_color": "#232021",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "multicolumn_HzjGGH": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_HqVALW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/img2.webp",
+            "title": "",
+            "text": "<p>Build connections in vibrant learning community with people around the world. A supportive community of others that are also going through the Reviv process.</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": ""
+          }
+        },
+        "column_MQQHXx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/img3.webp",
+            "title": "",
+            "text": "<p>60+ Educational Videos which cover everything Ken has learned during his 10-year journey.</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": ""
+          }
+        },
+        "column_9KzYyy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/img1.webp",
+            "title": "",
+            "text": "<p>You're provided a journal template to track how you feel and ask any questions you may have Ken reviews and comments at least once a week.</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": ""
+          }
+        },
+        "column_9QpMhY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/img4.webp",
+            "title": "",
+            "text": "<p>This is a very powerful tool in ensuring you stay on track as you will probably experience lots of changes during your journey.</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_HqVALW",
+        "column_MQQHXx",
+        "column_9KzYyy",
+        "column_9QpMhY"
+      ],
+      "settings": {
+        "title": "Why Choose Skool?",
+        "heading_size": "hxl",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "section_color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": "sk-multi-col"
+      }
+    },
+    "multicolumn_MLmy9H": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_arCg7D": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/user-edit.png",
+            "title": "",
+            "text": "<p>Sign up for the free trial</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": ""
+          }
+        },
+        "column_RqnPnt": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/link-icon.png",
+            "title": "",
+            "text": "<p>Join via the invite link</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": ""
+          }
+        },
+        "column_KLGc8q": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/users-icon.png",
+            "title": "",
+            "text": "<p>Start learning and engaging with the community.</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": ""
+          }
+        },
+        "column_L3akBX": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/clander-icon.png",
+            "title": "",
+            "text": "<p>We will remind you after your month is up to either pay for continued access or we will remove access</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_arCg7D",
+        "column_RqnPnt",
+        "column_KLGc8q",
+        "column_L3akBX"
+      ],
+      "settings": {
+        "title": "How It Works",
+        "heading_size": "hxl",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 1,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "section_color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": "how-it-works sk-multi-col"
+      }
+    },
+    "collapsible_content_JN3rhi": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_UjR4JN": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How does the free trial work?",
+            "icon": "none",
+            "row_content": "<p>Our free trial gives you full access to all premium features for a limited period, allowing you to explore everything our service has to offer. There's no cost during the trial, and you can cancel at any time before it ends to avoid any charges. After the trial period, you'll have the option to choose a paid plan to continue enjoying the service.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_tUj3HX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What happens after the trial ends?",
+            "icon": "none",
+            "row_content": "<p>Once the trial ends, you will no longer have access to the premium features. You’ll be prompted to choose a paid plan to continue using the service without interruption. If you decide not to upgrade, your account will be downgraded to a basic plan, and you’ll still be able to access limited features. You can also choose to cancel your account entirely at any time.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_6bErhk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I cancel anytime?",
+            "icon": "none",
+            "row_content": "<p>Yes, you can cancel your subscription at any time. There are no long-term commitments, and you can easily cancel through your account settings. If you cancel before the trial ends, you won’t be charged. If you’re on a paid plan, you’ll have access to the service until the end of your billing cycle, after which your subscription will be fully canceled.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_UjR4JN",
+        "collapsible_row_tUj3HX",
+        "collapsible_row_6bErhk"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "frequently asked questions",
+        "heading_size": "hxxl",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": "sk-faqs"
+      }
+    },
+    "skool_image_slider_dhbCwq": {
+      "type": "skool-image-slider",
+      "blocks": {
+        "image_WjzMVb": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/img1.webp"
+          }
+        },
+        "image_Nqnm9h": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/img1.webp"
+          }
+        },
+        "image_74QiWf": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/img1.webp"
+          }
+        },
+        "image_N8LAAg": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/img1.webp"
+          }
+        }
+      },
+      "block_order": [
+        "image_WjzMVb",
+        "image_Nqnm9h",
+        "image_74QiWf",
+        "image_N8LAAg"
+      ],
+      "settings": {
+        "section_head": "Start Your Free Trial Today",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1743752606d7c9c7a3": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_RjGj3h": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "414780",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_RjGj3h"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_g8wcVV",
+    "free_trial_CX8H9e",
+    "multicolumn_HzjGGH",
+    "multicolumn_MLmy9H",
+    "collapsible_content_JN3rhi",
+    "skool_image_slider_dhbCwq",
+    "1743752606d7c9c7a3"
+  ]
+}

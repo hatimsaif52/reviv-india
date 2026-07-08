@@ -1,0 +1,547 @@
+{%- style -%}
+  .before-after-user-stories {
+    background: #050505;
+    padding: 84px 0 74px;
+  }
+
+  .before-after-user-stories__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .before-after-user-stories__header {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 38px;
+  }
+
+  .before-after-user-stories__eyebrow {
+    margin: 0;
+    font-size: 12px;
+    letter-spacing: 0.38em;
+    font-weight: 700;
+    color: rgba(226, 192, 137, 0.8);
+    text-transform: uppercase;
+  }
+
+  .before-after-user-stories__heading {
+    margin: 14px 0 0;
+    font-size: clamp(34px, 5vw, 56px);
+    line-height: 1.05;
+    font-weight: 800;
+    color: #ffffff;
+  }
+
+  .before-after-user-stories__subtext {
+    margin: 16px auto 0;
+    font-size: 16px;
+    line-height: 1.45;
+    color: rgba(226, 192, 137, 0.8);
+    max-width: 560px;
+    font-weight: 500;
+  }
+
+  .before-after-user-stories__slider-wrap {
+    position: relative;
+  }
+
+  .before-after-user-stories__viewport {
+    overflow: hidden;
+    position: relative;
+    transition: height 0.35s ease;
+  }
+
+  .before-after-user-stories__slider {
+    display: flex;
+    transition: transform 0.4s ease;
+    cursor: grab;
+    align-items: flex-start;
+    --us-slide-cols: 4;
+    --us-slide-gap: 22px;
+    --us-slide-pad: 0px;
+  }
+
+  .before-after-user-stories__slider:active {
+    cursor: grabbing;
+  }
+
+  .before-after-user-stories__slide {
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(var(--us-slide-cols, 4), minmax(0, 1fr));
+    gap: var(--us-slide-gap, 22px);
+    padding-left: var(--us-slide-pad, 0px);
+    padding-right: var(--us-slide-pad, 0px);
+    user-select: none;
+  }
+
+  .before-after-user-stories__card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 26px 26px 22px;
+    box-shadow: 0 18px 38px rgba(0, 0, 0, 0.35);
+    min-height: 210px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .before-after-user-stories__card-top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 14px;
+  }
+
+  .before-after-user-stories__avatar {
+    width: 62px;
+    height: 62px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #e2c089;
+    color: #151515;
+    font-weight: 800;
+    font-size: 22px;
+    flex: 0 0 62px;
+  }
+
+  .before-after-user-stories__name-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+  }
+
+  .before-after-user-stories__name {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 800;
+    color: #111111;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .before-after-user-stories__verified {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    flex: 0 0 26px;
+  }
+
+  .before-after-user-stories__verified img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+  }
+
+  .before-after-user-stories__body {
+    margin: 6px 0 0;
+    font-size: 14px;
+    line-height: 1.45;
+    color: rgba(17, 17, 17, 0.8);
+    flex: 1 1 auto;
+    overflow: hidden;
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+  }
+
+  .before-after-user-stories__stars {
+    margin-top: 14px;
+    display: flex;
+    gap: 3px;
+    color: #e2c089;
+    font-size: 22px;
+    letter-spacing: 0.05em;
+  }
+
+  .before-after-user-stories__dots {
+    text-align: center;
+    margin-top: 34px;
+  }
+
+  .before-after-user-stories__dots span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    border: 1.5px solid rgba(226, 192, 137, 0.8);
+    background: transparent;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+
+  .before-after-user-stories__dots .active {
+    background: #e2c089;
+    border-color: #e2c089;
+  }
+
+  @media (max-width: 1024px) {
+    .before-after-user-stories__slide {
+      grid-template-columns: repeat(var(--us-slide-cols, 2), minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 640px) {
+    .before-after-user-stories {
+      padding: 66px 0 58px;
+    }
+
+    .before-after-user-stories__header {
+      margin-bottom: 28px;
+    }
+
+    .before-after-user-stories__subtext {
+      font-size: 14px;
+    }
+
+    .before-after-user-stories__slide {
+      grid-template-columns: repeat(var(--us-slide-cols, 1), minmax(0, 1fr));
+      gap: var(--us-slide-gap, 16px);
+    }
+
+    .before-after-user-stories__body {
+      -webkit-line-clamp: 3;
+    }
+
+    .before-after-user-stories__dots {
+      margin-top: 26px;
+    }
+
+    .before-after-user-stories__dots span {
+      width: 12px;
+      height: 12px;
+      margin: 0 6px;
+    }
+  }
+{%- endstyle -%}
+
+<section class="before-after-user-stories" id="ba-user-stories" role="region" aria-label="{{ section.settings.heading | strip_html | escape }}">
+  <div class="before-after-user-stories__inner">
+    <div class="before-after-user-stories__header">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="before-after-user-stories__eyebrow">{{ section.settings.eyebrow }}</p>
+      {%- endif -%}
+
+      {%- if section.settings.heading != blank -%}
+        <h2 class="before-after-user-stories__heading">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+
+      {%- if section.settings.subtext != blank -%}
+        <p class="before-after-user-stories__subtext">{{ section.settings.subtext }}</p>
+      {%- endif -%}
+    </div>
+
+    <div class="before-after-user-stories__slider-wrap">
+      <div class="before-after-user-stories__viewport">
+        <div
+          class="before-after-user-stories__slider"
+          id="BeforeAfterUserStoriesSlider"
+          data-per-slide-desktop="{{ section.settings.cards_per_slide_desktop | default: 4 | plus: 0 }}"
+          data-per-slide-mobile="{{ section.settings.cards_per_slide_mobile | default: 1 | plus: 0 }}"
+        >
+          {%- for block in section.blocks -%}
+            <div class="before-after-user-stories__card" data-us-card {{ block.shopify_attributes }}>
+              <div class="before-after-user-stories__card-top">
+                <div class="before-after-user-stories__avatar">{{ block.settings.initials | default: "" }}</div>
+
+                <div class="before-after-user-stories__name-row">
+                  <h3 class="before-after-user-stories__name">{{ block.settings.name }}</h3>
+                  {%- if block.settings.verified -%}
+                    <span class="before-after-user-stories__verified" aria-label="Verified">
+                      <img src="{{ 'verified.png' | asset_url }}" alt="Verified" loading="lazy" />
+                    </span>
+                  {%- endif -%}
+                </div>
+              </div>
+
+              <div class="before-after-user-stories__body">{{ block.settings.text }}</div>
+
+              <div class="before-after-user-stories__stars" aria-label="{{ block.settings.stars }} out of 5 stars">
+                {%- assign star_count = block.settings.stars | default: 5 | plus: 0 -%}
+                {%- if star_count > 5 -%}{%- assign star_count = 5 -%}{%- endif -%}
+                {%- if star_count < 0 -%}{%- assign star_count = 0 -%}{%- endif -%}
+                {%- for i in (1..star_count) -%}
+                  <span aria-hidden="true">★</span>
+                {%- endfor -%}
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+
+      <div class="before-after-user-stories__dots" id="BeforeAfterUserStoriesDots"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    function init() {
+      const sectionEl = document.getElementById("ba-user-stories");
+      if (!sectionEl) return;
+
+      const sliderViewport = sectionEl.querySelector(".before-after-user-stories__viewport");
+      const slider = sectionEl.querySelector("#BeforeAfterUserStoriesSlider");
+      const dotsContainer = sectionEl.querySelector("#BeforeAfterUserStoriesDots");
+      if (!slider || !dotsContainer) return;
+
+      const originalCards = Array.from(slider.querySelectorAll("[data-us-card]"));
+      let slides = slider.getElementsByClassName("before-after-user-stories__slide");
+      let currentPerSlide = 0;
+
+      let index = 0;
+      let startX = 0;
+      let currentX = 0;
+      let isDragging = false;
+
+      function getPerSlide() {
+        const desktop = parseInt(slider.dataset.perSlideDesktop || "4", 10);
+        const mobile = parseInt(slider.dataset.perSlideMobile || "1", 10);
+
+        const w = window.innerWidth || document.documentElement.clientWidth || 9999;
+        if (w <= 640) return mobile;
+        return desktop;
+      }
+
+      function applySlideLayout(perSlide) {
+        const w = window.innerWidth || document.documentElement.clientWidth || 9999;
+        let cols = 4;
+        let gap = 22;
+        let pad = 0;
+
+        if (w <= 640) {
+          cols = Math.min(perSlide || 1, 2);
+          gap = 16;
+          pad = 12;
+        } else if (w <= 1024) {
+          cols = Math.min(perSlide || 1, 2);
+          gap = 18;
+          pad = 16;
+        } else {
+          cols = Math.min(perSlide || 1, 4);
+          gap = 22;
+          pad = 20;
+        }
+
+        slider.style.setProperty("--us-slide-cols", String(cols));
+        slider.style.setProperty("--us-slide-gap", gap + "px");
+        slider.style.setProperty("--us-slide-pad", pad + "px");
+      }
+
+      function buildSlides(perSlide) {
+        if (!perSlide || perSlide < 1) perSlide = 1;
+
+        applySlideLayout(perSlide);
+
+        slider.innerHTML = "";
+        for (let i = 0; i < originalCards.length; i += perSlide) {
+          const slideEl = document.createElement("div");
+          slideEl.className = "before-after-user-stories__slide";
+          originalCards.slice(i, i + perSlide).forEach((card) => {
+            slideEl.appendChild(card);
+          });
+          slider.appendChild(slideEl);
+        }
+
+        slides = slider.getElementsByClassName("before-after-user-stories__slide");
+        if (index > slides.length - 1) index = Math.max(0, slides.length - 1);
+      }
+
+      function update() {
+        slider.style.transition = "transform 0.4s ease";
+        slider.style.transform = `translateX(-${index * 100}%)`;
+
+        if (sliderViewport && slides[index]) {
+          sliderViewport.style.height = slides[index].offsetHeight + "px";
+        }
+
+        [...dotsContainer.children].forEach((dot) => dot.classList.remove("active"));
+        if (dotsContainer.children[index]) {
+          dotsContainer.children[index].classList.add("active");
+        }
+      }
+
+      function createDots() {
+        dotsContainer.innerHTML = "";
+
+        if (!slides || slides.length <= 1) {
+          return;
+        }
+
+        for (let i = 0; i < slides.length; i++) {
+          const dot = document.createElement("span");
+          dot.addEventListener("click", () => {
+            index = i;
+            update();
+          });
+          dotsContainer.appendChild(dot);
+        }
+      }
+
+      function startDrag(x) {
+        isDragging = true;
+        startX = x;
+        slider.style.transition = "none";
+      }
+
+      function moveDrag(x) {
+        if (!isDragging) return;
+
+        currentX = x;
+        let diff = currentX - startX;
+        slider.style.transform = `translateX(calc(-${index * 100}% + ${diff}px))`;
+      }
+
+      function endDrag() {
+        if (!isDragging) return;
+        isDragging = false;
+
+        let diff = currentX - startX;
+        let threshold = 50;
+
+        if (diff > threshold && index > 0) {
+          index--;
+        } else if (diff < -threshold && index < slides.length - 1) {
+          index++;
+        }
+
+        update();
+      }
+
+      slider.addEventListener("mousedown", (e) => startDrag(e.pageX));
+      window.addEventListener("mousemove", (e) => moveDrag(e.pageX));
+      window.addEventListener("mouseup", endDrag);
+
+      slider.addEventListener("touchstart", (e) => startDrag(e.touches[0].clientX));
+      slider.addEventListener("touchmove", (e) => moveDrag(e.touches[0].clientX));
+      slider.addEventListener("touchend", endDrag);
+
+      window.addEventListener("resize", () => {
+        const nextPerSlide = getPerSlide();
+        if (nextPerSlide !== currentPerSlide) {
+          currentPerSlide = nextPerSlide;
+          buildSlides(currentPerSlide);
+          createDots();
+        } else {
+          applySlideLayout(currentPerSlide);
+        }
+        update();
+      });
+
+      currentPerSlide = getPerSlide();
+      buildSlides(currentPerSlide);
+
+      createDots();
+      update();
+    }
+
+    document.addEventListener("DOMContentLoaded", init);
+    document.addEventListener("shopify:section:load", function (event) {
+      if (event && event.target && event.target.id === "ba-user-stories") {
+        init();
+      }
+    });
+
+    init();
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Before/After Stories",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "USER STORIES"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "In their own words"
+    },
+    {
+      "type": "text",
+      "id": "subtext",
+      "label": "Subtext",
+      "default": "Real experiences from verified Reviv customers."
+    },
+    {
+      "type": "range",
+      "id": "cards_per_slide_desktop",
+      "label": "Cards per slide (desktop)",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "cards_per_slide_mobile",
+      "label": "Cards per slide (mobile)",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "default": 1
+    }
+  ],
+  "blocks": [
+    {
+      "type": "story",
+      "name": "Story",
+      "settings": [
+        {
+          "type": "text",
+          "id": "initials",
+          "label": "Initials",
+          "default": "GB"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name",
+          "default": "Gijs B."
+        },
+        {
+          "type": "checkbox",
+          "id": "verified",
+          "label": "Verified",
+          "default": true
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Really felt the difference over the past months, I sleep better and my facial structure started to align pretty quickly.</p>"
+        },
+        {
+          "type": "range",
+          "id": "stars",
+          "label": "Stars",
+          "min": 0,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Before/After Stories"
+    }
+  ]
+}
+{% endschema %}

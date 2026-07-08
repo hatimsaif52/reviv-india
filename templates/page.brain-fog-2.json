@@ -1,0 +1,733 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_banner_g8wcVV": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_N68zMY": {
+          "type": "heading",
+          "settings": {
+            "heading": "Do biomechanics help with brain fog?",
+            "heading_size": "hxl"
+          }
+        },
+        "text_tmWeXJ": {
+          "type": "text",
+          "settings": {
+            "text": "I believe it can help and I'll explain why.",
+            "text_style": "subtitle"
+          }
+        },
+        "buttons_YMPP3D": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Join now",
+            "button_id": "form-popup-btn",
+            "button_link_1": "#",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_N68zMY",
+        "text_tmWeXJ",
+        "buttons_YMPP3D"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/34aa384e4d7bc93f551773da222262c6.png",
+        "image_overlay_opacity": 50,
+        "image_height": "medium",
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-522b6c27-788f-4b7e-bbb7-d4f61d40572f",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "custom_classes": "sk-main-banner"
+      }
+    },
+    "free_trial_CX8H9e": {
+      "type": "free-trial",
+      "blocks": {
+        "heading_MgDHRz": {
+          "type": "heading",
+          "settings": {
+            "heading": "START 1-MONTH FREE TRIAL TODAY",
+            "title_color": "#ffffff"
+          }
+        },
+        "text_FqcRn7": {
+          "type": "text",
+          "settings": {
+            "text_para": "$00.00",
+            "desc_color": "#e5c085"
+          }
+        },
+        "button_YBCQ63": {
+          "type": "button",
+          "settings": {
+            "button_label": "JOIN NOW",
+            "button_id": "form-popup-btn",
+            "button_link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MgDHRz",
+        "text_FqcRn7",
+        "button_YBCQ63"
+      ],
+      "settings": {
+        "back_color": "#232021",
+        "padding_top": 16,
+        "padding_bottom": 16,
+        "custom_class": ""
+      }
+    },
+    "tmj_block_UtYCDW": {
+      "type": "tmj-block",
+      "blocks": {
+        "rich_text_7Mewpm": {
+          "type": "rich_text",
+          "settings": {
+            "rich_text": "<p>Reviv acts like a door stop that prevents the jaw from closing.</p>"
+          }
+        },
+        "rich_text_D4G9EG": {
+          "type": "rich_text",
+          "settings": {
+            "rich_text": "<p>I view that this stretches the soft tissue that covers the skull and jaw, which 'inflates' the skull.</p>"
+          }
+        },
+        "rich_text_eg4YY8": {
+          "type": "rich_text",
+          "settings": {
+            "rich_text": "<p>By inflating the skull the cranial bones are able to move outwards and back to where they 'should' be over time.</p>"
+          }
+        },
+        "rich_text_ntGJxe": {
+          "type": "rich_text",
+          "settings": {
+            "rich_text": "<p>This outward movement of the cranial bones is basically like 'uncrushing the skull'.  And it takes compression off the brain.</p>"
+          }
+        },
+        "rich_text_C4jMHz": {
+          "type": "rich_text",
+          "settings": {
+            "rich_text": "<p>As compression is taken off the brain I have seen how a number of folks (including myself) that had brain fog were able to get relief from it.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "rich_text_7Mewpm",
+        "rich_text_D4G9EG",
+        "rich_text_eg4YY8",
+        "rich_text_ntGJxe",
+        "rich_text_C4jMHz"
+      ],
+      "settings": {
+        "heading": "How flat mouthguards work?A flat mouthguard acts like a doorstop..",
+        "padding_top": "pt-8",
+        "padding_bottom": "pb-12"
+      }
+    },
+    "multicolumn_HzjGGH": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_HqVALW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/fbfce229-45de-4c1c-af71-b954ebdef12d_2560x1928_4c072d02-c2b6-49d6-a9c3-ac9c650a9ed8.webp",
+            "title": "Addressing brain fog with these biomechanics",
+            "text": "<p>So far i'm 3 for 3. And I don't think i'll ever lose.</p>",
+            "link_label": "Read More",
+            "link": "https://reviv.substack.com/p/addressing-brain-fog-with-these-biomechanics?utm_source=publication-search",
+            "youtube_video_url": "",
+            "isNewTab": true
+          }
+        },
+        "column_MQQHXx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/bbfc0292-1ff9-4dc4-be98-e551bdcf2ea5_1320x803_acfe5c69-ea18-4aa6-be1d-54709f38d0a8.webp",
+            "title": "Max kicks brain fog with Reviv",
+            "text": "<p>Max was in my first test group in early 2023 and managed to get rid of pretty severe brain fog in a little over a month.</p>",
+            "link_label": "Read More",
+            "link": "https://reviv.substack.com/p/max-kicks-brain-fog-with-reviv?utm_source=publication-search",
+            "youtube_video_url": "",
+            "isNewTab": true
+          }
+        },
+        "column_9KzYyy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/6200a3b8-645b-4e7c-8b40-c20b45503648_2400x1260_a1ac0502-9393-4d21-911d-2386df780a23.webp",
+            "title": "This Stuff Determines Cognitive Function",
+            "text": "<p>Each time I got worse it felt like my IQ plummeted. Each time I got better it felt like it rocketed up. And I did this numerous times in 10 years.</p>",
+            "link_label": "Read More",
+            "link": "https://reviv.substack.com/p/this-stuff-determines-cognitive-function?utm_source=publication-search",
+            "youtube_video_url": "",
+            "isNewTab": true
+          }
+        },
+        "column_9QpMhY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/eea77ac4-9bd5-45b5-8087-5fe23ed99672_1280x720_93e454f8-5c8d-499d-bf53-a671ae6bc74f.webp",
+            "title": "Did Biomechanical Collapse Cost Joe Biden the Election?",
+            "text": "<p>Joe Biden's skull is to me a classic case of the 'deflated balloon' that is crushing the brain.</p>",
+            "link_label": "Read More",
+            "link": "https://reviv.substack.com/p/did-biomechanical-collapse-cost-joe?utm_source=publication-search",
+            "youtube_video_url": "",
+            "isNewTab": true
+          }
+        }
+      },
+      "block_order": [
+        "column_HqVALW",
+        "column_MQQHXx",
+        "column_9KzYyy",
+        "column_9QpMhY"
+      ],
+      "settings": {
+        "title": "Articles I have written",
+        "box_link": false,
+        "heading_size": "hxl",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "section_color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": "sk-multi-col uc-multi-col"
+      }
+    },
+    "skool_image_slider_dhbCwq": {
+      "type": "skool-image-slider",
+      "blocks": {
+        "image_d9UTXy": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/0566d63318c1f07adae9e95cd7e6468f.png"
+          }
+        },
+        "image_Nqnm9h": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/ab4caac789e7b58aebe523df6f63fc31.png"
+          }
+        },
+        "image_74QiWf": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/0566d63318c1f07adae9e95cd7e6468f.png"
+          }
+        },
+        "image_WjzMVb": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/0566d63318c1f07adae9e95cd7e6468f.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_d9UTXy",
+        "image_Nqnm9h",
+        "image_74QiWf",
+        "image_WjzMVb"
+      ],
+      "settings": {
+        "section_head": "Take a look at skool",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_cmmbXX": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_UFy37y": {
+          "type": "heading",
+          "settings": {
+            "heading": "Not ready to purchase?",
+            "heading_size": "h1"
+          }
+        },
+        "text_HiNLnk": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Try a free month trial of our Skool community instead and see what hundreds of others who are doing the process are posting.</p>"
+          }
+        },
+        "button_ktXcj4": {
+          "type": "button",
+          "settings": {
+            "button_label": "Join now",
+            "button_link": "#",
+            "button_id": "form-popup-btn yellow-btn",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_UFy37y",
+        "text_HiNLnk",
+        "button_ktXcj4"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "custom__class": ""
+      }
+    },
+    "product_cards_j8jV4n": {
+      "type": "product-cards",
+      "blocks": {
+        "product_card_rnJawi": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-two",
+            "is_new": true
+          }
+        },
+        "product_card_jBbiK3": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-two-without-support",
+            "is_new": true
+          }
+        },
+        "product_card_VYkMzd": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-one",
+            "is_new": false
+          }
+        },
+        "product_card_Jf3L8L": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-one-without-support",
+            "is_new": false
+          }
+        },
+        "product_card_kiLBxy": {
+          "type": "product_card",
+          "settings": {
+            "product": "1-year-subscription-only",
+            "is_new": false
+          }
+        }
+      },
+      "block_order": [
+        "product_card_rnJawi",
+        "product_card_jBbiK3",
+        "product_card_VYkMzd",
+        "product_card_Jf3L8L",
+        "product_card_kiLBxy"
+      ],
+      "custom_css": [
+        ".product-card__price,.product-card__title {color: #000 !important;}",
+        ".product-card__title {font-size: 18px; line-height: normal;}",
+        ".swiper-pagination-bullet: not(.swiper-pagination-bullet-active) {border-color: #000;}",
+        ".product-form {margin-top: 0;}",
+        "span.swiper-pagination-bullet {margin: 0 5px !important;}",
+        ".swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {border-color: #000; opacity: 1;}",
+        ".swiper {width: auto; overflow: hidden;}",
+        ".add-to-cart__button {border: 1px solid #000000; color: black;}"
+      ],
+      "settings": {
+        "section_color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_classes": ""
+      }
+    },
+    "collapsible_content_JN3rhi": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_UjR4JN": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long does it take to see improvements in brain fog with Reviv?",
+            "icon": "none",
+            "row_content": "<p>It is impossible to say for sure.</p><p>But i have seen a number of folks begin to notice improvements within 2-3 months of consistent use. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_tUj3HX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Will I experience headaches when using Reviv for brain fog?",
+            "icon": "none",
+            "row_content": "<p>In my personal experience this was the case and I viewed the headache to sort of be a symbol of progress as I often felt a bit clearer after such headaches.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_6bErhk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can Reviv help with brain fog if I've tried everything else?",
+            "icon": "none",
+            "row_content": "<p>I cannot promise you anything.  All i can say is that it has helped a number of people with brain fog already (including myself).</p><p>And it is a pretty inexpensive, uninvasive thing to try.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_jEbzGk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do I need to make other lifestyle changes while using Reviv for brain fog?",
+            "icon": "none",
+            "row_content": "<p>I do not really view that you do.</p><p>But you should 'listen' to your body.  For me this means that i eat when i am hungry and I sleep when I am tired.</p><p>Pretty simple.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_UjR4JN",
+        "collapsible_row_tUj3HX",
+        "collapsible_row_6bErhk",
+        "collapsible_row_jEbzGk"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "frequently asked questions",
+        "heading_size": "hxxl",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": "sk-faqs"
+      }
+    },
+    "1743752606d7c9c7a3": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_RjGj3h": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "414780",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_RjGj3h"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "multicolumn_FkppHr": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_9H4REq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___M_0505abc3-75aa-46ae-ad08-fb28a87df3b8.webp",
+            "title": "ADHD, SSRIs, Jaw Clenching & Brain Fog",
+            "text": "<p>How a Reviv Night Guard Protects Your Focus</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/adhd-ssris-jaw-clenching-brain-fog-how-a-reviv-night-guard-protects-your-focus?_pos=11&_sid=e38c7f2c9&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_fmjeCz": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_8986965a-6016-465d-ae9e-1c5926da57dd_00001408_002.webp",
+            "title": "Morning Brain Fog From Night Grinding?",
+            "text": "<p>Reviv’s Guide to Fixing the Root Causes</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/morning-brain-fog-from-night-grinding-reviv-s-guide-to-fixing-the-root-causes?_pos=10&_sid=978dd3047&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_hhq68w": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___M_d0abcfa6-37d5-4f02-959a-3c21c2023bbf.webp",
+            "title": "Reviv Mouthguard & Brain Fog",
+            "text": "<p>Can Better Sleep Clear the Haze?</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/reviv-mouthguard-brain-fog-can-better-sleep-clear-the-haze?_pos=2&_sid=978dd3047&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_yzCaXN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___M_a28020dd-b330-4fc6-9969-a7c641158e8a.webp",
+            "title": "Brain Fog From Snoring or Mild OSA?",
+            "text": "<p>Reviv Mouthguard Helps</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/brain-fog-from-snoring-or-mild-osa-can-a-reviv-mouthguard-help?_pos=4&_sid=978dd3047&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_GQRdJp": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_8986965a-6016-465d-ae9e-1c5926da57dd_00001394_002.webp",
+            "title": "Does TMJ Cause Brain Frog",
+            "text": "<p>What the Research Says & Where Reviv Fits</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/does-tmj-cause-brain-fog-what-the-research-says-where-reviv-fits?_pos=5&_sid=978dd3047&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_gcThfM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_8986965a-6016-465d-ae9e-1c5926da57dd_00001422_001.webp",
+            "title": "Airway, Snoring, Sleep Apnea & Brain Fog",
+            "text": "<p>When a Reviv Guard Helps (and When It Doesn’t)</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/airway-snoring-sleep-apnea-brain-fog-when-a-reviv-guard-helps-and-when-it-doesn-t?_pos=6&_sid=978dd3047&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_TXCmfM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_8986965a-6016-465d-ae9e-1c5926da57dd_00001441_000.webp",
+            "title": "Is Your Night Guard Making Brain Fog Worse?",
+            "text": "<p>Reviv’s Fit & Airway Checklist</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/is-your-night-guard-making-brain-fog-worse-reviv-s-fit-airway-checklist?_pos=8&_sid=978dd3047&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_6YBGLr": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_8986965a-6016-465d-ae9e-1c5926da57dd_00001721_002.webp",
+            "title": "5 Signs It’s Time to Replace Your Current Mouthguard With Reviv",
+            "text": "<p>Your guard is probably doing nothing for alignment.</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/5-signs-it-s-time-to-replace-your-current-mouthguard-with-reviv?_pos=14&_sid=c6650b78e&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_PHFpxx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_8986965a-6016-465d-ae9e-1c5926da57dd_00001546_001_2.webp",
+            "title": "TMJ in Women",
+            "text": "<p>Also “Silent” sleep apnea in women is easy to miss</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/tmj-in-women-hormones-perimenopause-night-grinding?_pos=18&_sid=c6650b78e&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_nh4wHM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_8986965a-6016-465d-ae9e-1c5926da57dd_00001469_002.webp",
+            "title": "Real Stories",
+            "text": "<p>How Switching to a Reviv Mouthguard Reduced Daytime Brain Fog is what people actually ask me for.</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/real-stories-how-switching-to-a-reviv-mouthguard-reduced-daytime-brain-fog-is-what-people-actually-ask-me-for?_pos=12&_sid=c6650b78e&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_MNhHtn": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/5d0edc23-80b5-40be-a423-212a882f87a5_1920x1081_3f3f2675-410a-4285-8168-7eff77b6c3ad.webp",
+            "title": "Pseudoscience?",
+            "text": "<p>Or just very sound logic?</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/pseudoscience-or-just-very-sound-logic",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_XVr8Mt": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/article-2_1.webp",
+            "title": "So why do the teeth relate to your body and neurology?",
+            "text": "<p>Think of the skull like a balloon</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/so-why-do-the-teeth-relate-to-your-body-and-neurology",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_X3UXek": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_8986965a-6016-465d-ae9e-1c5926da57dd_00002345_000.webp",
+            "title": "Real Case",
+            "text": "<p>The case of the 58 year old who looks like he is in his late 20's</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/the-case-of-the-58-year-old-who-looks-like-he-is-in-his-late-20s",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_73Vde3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/bb218abc-3de0-4f8e-9381-f2381cc4b7a8_831x432_cd293673-d4b3-4e6f-85a8-e56456a2aadf.webp",
+            "title": "The Testosterone Decline in Men",
+            "text": "<p>What else generally declines in age?</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/the-testosterone-decline-in-men",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_mK3Mbm": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/dff52bc0-949b-4034-8fb7-c1e84c6e0b16_553x337_9f651316-5922-4cf9-a176-c868d0b93fb3.webp",
+            "title": "Addressing Lordosis, Kyphosis, & Scoliosis",
+            "text": "<p>It is not like you use different appliances to address different things</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/addressing-lordosis-kyphosis-scoliosis",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_DqQq8U": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/1e69ef75-d2e5-40b0-a901-7278412e36de_1100x688_a6442ada-5cb8-4c34-8d60-1870ada32fd4.webp",
+            "title": "The Great Fakeout",
+            "text": "<p>I would often describe it as ‘landing back on Earth from Mars’.</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/the-great-fakeout",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_nDhncb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/276d8813-6f00-43c4-baf2-9e8cf5c550ed_926x524_0d0be036-e4c8-4819-92eb-d11fdf635277.webp",
+            "title": "I think I know why marijuana use has exploded",
+            "text": "<p>But why is there all this demand in thailand? What is driving people to do this?</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/i-think-i-know-why-marijuana-use-has-exploded",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        }
+      },
+      "block_order": [
+        "column_9H4REq",
+        "column_fmjeCz",
+        "column_hhq68w",
+        "column_yzCaXN",
+        "column_GQRdJp",
+        "column_gcThfM",
+        "column_TXCmfM",
+        "column_6YBGLr",
+        "column_PHFpxx",
+        "column_nh4wHM",
+        "column_MNhHtn",
+        "column_XVr8Mt",
+        "column_X3UXek",
+        "column_73Vde3",
+        "column_mK3Mbm",
+        "column_DqQq8U",
+        "column_nDhncb"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "OTHER RELATED ARTICLES",
+        "box_link": false,
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "section_color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_g8wcVV",
+    "free_trial_CX8H9e",
+    "tmj_block_UtYCDW",
+    "multicolumn_HzjGGH",
+    "skool_image_slider_dhbCwq",
+    "rich_text_cmmbXX",
+    "product_cards_j8jV4n",
+    "collapsible_content_JN3rhi",
+    "1743752606d7c9c7a3",
+    "multicolumn_FkppHr"
+  ]
+}

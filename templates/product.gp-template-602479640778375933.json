@@ -1,0 +1,104 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "gp_section_602479640845484797": {
+      "type": "gp-section-602479640845484797",
+      "settings": {
+        "checksum": "d9ea7e4cbcdaa7a465eb6246a7cba72e334088dcede9bce46aa771f5eb5cd6a0_1_1_0_0__1",
+        "gge-765tgot_background_desktop_image_src": "https://getreviv.com/cdn/shop/files/30.jpg?v=1764507476&width=1000",
+        "ggTkVRo8MMp_background_desktop_image_src": "https://getreviv.com/cdn/shop/files/31.jpg?v=1764507476&width=1000",
+        "ggsMJIt41Wr_background_desktop_image_src": "https://getreviv.com/cdn/shop/files/32.jpg?v=1764507476&width=1000"
+      }
+    },
+    "gp_section_602479640845550333": {
+      "type": "gp-section-602479640845550333",
+      "settings": {
+        "checksum": "91086b9cf48c722b9c69ed0fc3bb248c767d812d9a4c6da800f2e608bae6d42c_1_1_0_0__1",
+        "ggJdS473QMH_text": "Happy Customers, Real Results"
+      }
+    },
+    "gp_section_602479640845615869": {
+      "type": "gp-section-602479640845615869",
+      "settings": {
+        "checksum": "6552c9ea1de906a5cf3330326d710c0caaf8a33d3a05b877778a6599d4c1f80d_1_1_0_0__1",
+        "gguKLmj2Nn2_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/Home.png",
+        "gguKLmj2Nn2_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/Frame_61.png"
+      }
+    },
+    "gp_section_602479640845746941": {
+      "type": "gp-section-602479640845746941",
+      "settings": {
+        "checksum": "13ec65b05b27108359668eda1cee27d8f148a732b4af72a528d502a18662f30d_1_1_0_0__1",
+        "ggz5GQnS5LP_text": "Upgrade Your Daily Well-being",
+        "gg450cU3EOG_text": "<p>Healthy teeth, better posture, and renewed energy start with this simple daily routine.</p>",
+        "ggVI3RQcWV5_srcSet_desktop_src": "https://getreviv.com/cdn/shop/files/R2-Z_45.jpg?v=1765825327&width=1500",
+        "ggnHoupVTPb_text": "Orthodontics failed you?",
+        "ggHlGLrcYL__srcSet_desktop_src": "https://getreviv.com/cdn/shop/files/R2-Z_46.jpg?v=1765825327&width=1500",
+        "ggXPAYvL9yX_text": "Biomechanics is the solution",
+        "ggYjHzwN_Cj_srcSet_desktop_src": "https://getreviv.com/cdn/shop/files/R2-Z_52.jpg?v=1765825974&width=1500",
+        "ggvGiEhojVC_text": "How will a mouthguard realign relapsed teeth?"
+      }
+    },
+    "gp_section_602479640845812477": {
+      "type": "gp-section-602479640845812477",
+      "settings": {
+        "section_preload": "true",
+        "checksum": "d158f7757e70406ea182a4f6a3f5c7b0a78917e53493c8e39328b40a4e4ac661_1_1_0_0__1",
+        "gg4NE4ulxUs_text": "Quantity",
+        "gg2t1sSwNhI_label": "Add to cart",
+        "gg2t1sSwNhI_outOfStockLabel": "Out of stock",
+        "gg2t1sSwNhI_unavailableLabel": "Unavailable",
+        "gg2t1sSwNhI_variantSelectionRequiredMessage": "Please select a variant to add product to cart",
+        "gg2t1sSwNhI_successMessage": "Add product to cart successfully",
+        "gg2t1sSwNhI_errorMessage": "Cannot add product to cart",
+        "ggBOffoIt9Q_text": "<p>The Reviv Package for Maximum Win</p>",
+        "gg1Zch_30TS_label": "Add",
+        "gg1Zch_30TS_outOfStockLabel": "Out Of Stock",
+        "gg1Zch_30TS_unavailableLabel": "Unavailable",
+        "gg1Zch_30TS_variantSelectionRequiredMessage": "Please select a variant to add product to cart",
+        "gg1Zch_30TS_successMessage": "Add product to cart successfully",
+        "gg1Zch_30TS_errorMessage": "Cannot add product to cart"
+      }
+    },
+    "gp_section_602479779895051005": {
+      "type": "gp-section-602479779895051005",
+      "settings": {
+        "checksum": "4b9d1038fecfa085c161645028af6468963292a2aadb8e912a66707489568010_1_1_0_0__1"
+      }
+    },
+    "gp_section_602479858479530801": {
+      "type": "gp-section-602479858479530801",
+      "settings": {
+        "checksum": "67160a45250f8b5df25b9d7acc55b59bcafa0fa03492e224945744049201aa49_1_1_0_0__1",
+        "ggVy3V8m5qw_text": "<strong>Frequently Asked Questions</strong>",
+        "ggwDn4bJQRQ_childItem_0": "<p><span style=\"background-color:#242021;color:#FFFFFF;\">Why does this work?</span></p>",
+        "ggwDn4bJQRQ_childItem_1": "<p><span style=\"color:#FFFFFF;\">How many people have done this process?</span></p>",
+        "ggwDn4bJQRQ_childItem_2": "<p><span style=\"color:#FFFFFF;\">How does sizing work?</span></p>",
+        "ggwDn4bJQRQ_childItem_3": "<p><span style=\"color:#F7F7F7;\">How is R3 different from R1 and R2? Can I start with R3?</span></p>",
+        "ggwDn4bJQRQ_childItem_4": "<p><span style=\"color:#FFFFFF;\">What is the appliance made out of?</span></p>",
+        "ggzF0kZNy69_text": "<p>Think of the soft tissue (e.g., fascia &amp; skin) covering the bones of the skull as a balloon. When you grind your teeth down, it is as if you're taking air out of the balloon.</p><p>When this balloon deflates, it crushes the skull, which in turn crushes the brain and causes cognitive and neurological issues over time.</p><p>In general, we as a society like to call this process 'aging.' But if you grind down your teeth faster, you 'age' faster. The good part is you can reverse the process by using the same physics in reverse, i.e., you 'add' height back to the teeth.</p>",
+        "gglvzdsR308_text": "<p>Over 20,000 people have started using the appliance and this method since late 2024.</p>",
+        "ggwrz9alfgC_text": "<p>Note that there is a 'Size chart' above that you should refer to for measurements of our appliances.</p><p>We recommend choosing size based on the instructions in this video (<a href=\"https://www.youtube.com/watch?si=YPejTMYZqcjja8qg&amp;v=9gVyEOWx-AE&amp;feature=youtu.be\" target=\"_blank\"><u>link</u></a>)</p>",
+        "gg4xGGySst3_text": "<p>Please refer the image above where we compare R3 to R1 and R2.</p><p>Note that you can start with R3 and our appliances do not go in any particular order.</p><p><strong>Guarantee</strong>: R1 has no guarantee.&nbsp; Both R2 &amp; R3 are guaranteed for one year with one free replacement. This replacement warranty is limited to one user per customer and doesn't cover repeat purchases of the same appliance.</p>",
+        "gg0_CgBP22v_text": "<p>It is made out of 100% food grade silicone.</p>"
+      }
+    }
+  },
+  "order": [
+    "gp_section_602479640845812477",
+    "gp_section_602479640845746941",
+    "gp_section_602479640845550333",
+    "gp_section_602479640845615869",
+    "gp_section_602479640845484797",
+    "gp_section_602479779895051005",
+    "gp_section_602479858479530801"
+  ]
+}

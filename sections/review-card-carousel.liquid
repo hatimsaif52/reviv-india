@@ -1,0 +1,460 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="review-carousel section-{{ section.id }}-padding isolate{% if section.settings.full_width %} content-container--full-width{% endif %}">
+    <div class="page-width">
+      <div class="carousel-container">
+        {%- for block in section.blocks -%}
+          <div
+            class="testimonial-card carousel-cell{% if forloop.first %} is-selected{% endif %}"
+            {{ block.shopify_attributes }}
+            data-carousel-cell
+          >
+            <div class="content">
+              <div class="stars">
+                {%- for i in (1..block.settings.rating) -%}
+                  <span class="star">★</span>
+                {%- endfor -%}
+              </div>
+
+              <blockquote>{{ block.settings.quote }}</blockquote>
+
+              <div class="author-nav">
+                <div class="author">
+                  <h3>{{ block.settings.author_name }}</h3>
+                  <p>{{ block.settings.author_description }}</p>
+                </div>
+                <div class="navigation">
+                  <button class="nav-btn prev-button" aria-label="Previous" onclick="prevSlide()">←</button>
+                  <button class="nav-btn next-button" aria-label="Next" onclick="nextSlide()">→</button>
+                </div>
+              </div>
+            </div>
+
+            {%- if block.settings.author_image != blank -%}
+              <div class="image">
+                {{
+                  block.settings.author_image
+                  | image_url: width: 800
+                  | image_tag:
+                    loading: 'lazy',
+                    sizes: '(min-width: 1024px) 50vw, 100vw',
+                    widths: '375, 550, 750, 1100, 1500, 1780, 2000',
+                    height: block.settings.author_image.height,
+                    width: block.settings.author_image.width
+                }}
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% style %}
+  .carousel-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .testimonial-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: #2C2727;
+    opacity: 0;
+    max-width: 860px;
+    margin: 0 auto;
+    visibility: hidden;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+
+  .testimonial-card.is-selected {
+    position: relative;
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Animation classes */
+  .slide-from-left {
+    transform: translateX(-50px);
+    animation: slideFromLeft 0.5s forwards;
+  }
+
+  .slide-from-right {
+    transform: translateX(50px);
+    animation: slideFromRight 0.5s forwards;
+  }
+
+  @keyframes slideFromLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideFromRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .image {
+    height: 250px;
+    order: -1;
+  }
+
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stars {
+    margin-bottom: 16px;
+  }
+
+  .star {
+    color: #FFD700;
+    font-size: 18px;
+    margin-right: 2px;
+  }
+
+  blockquote {
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 0;
+    font-weight: 500;
+    border: none;
+    font-style: normal;
+    padding: 0;
+    flex: 1;
+  }
+
+  .author-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .author h3 {
+    color: #D4AF37;
+    font-size: 18px;
+    margin: 0 0 8px 0;
+  }
+
+  .author p {
+    font-size: 14px;
+    color: #999;
+    margin: 0;
+  }
+
+  .navigation {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #D4AF37;
+    background: transparent;
+    color: #D4AF37;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .nav-btn:hover {
+    background: #D4AF37;
+    color: #2A2A2A;
+  }
+
+  @media (min-width: 768px) {
+    .content {
+      padding: 40px;
+    }
+
+    .stars {
+      margin-bottom: 24px;
+    }
+
+    .star {
+      font-size: 24px;
+      margin-right: 4px;
+    }
+
+    blockquote {
+      font-size: 28px;
+      line-height: 1.3;
+      margin: 0 0 24px 0;
+    }
+
+    .author h3 {
+      font-size: 24px;
+      margin: 0 0 8px 0;
+    }
+
+    .author p {
+      font-size: 16px;
+      max-width: 80%;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .testimonial-card {
+      flex-direction: row;
+    }
+
+    .content {
+      flex: 1;
+      padding: 40px;
+    }
+
+    .image {
+      flex: 0 0 400px;
+      height: auto;
+      order: 2;
+    }
+
+    blockquote {
+      font-size: 2.7rem;
+    }
+
+    .author-nav {
+      margin-top: 40px;
+    }
+
+    .author p {
+        font-size: 14px;
+    }
+  }
+{% endstyle %}
+
+<script>
+  // Simple global variables
+  let currentIndex = 0;
+  let slides = [];
+  let direction = 'next'; // Track navigation direction
+
+  // Initialize on page load
+  document.addEventListener('DOMContentLoaded', function() {
+    slides = document.querySelectorAll('.testimonial-card');
+    if (slides.length === 0) return;
+
+    // Set initial height for the container based on the first slide
+    const firstSlide = slides[0];
+    if (firstSlide) {
+      const container = document.querySelector('.carousel-container');
+      if (container) {
+        container.style.minHeight = firstSlide.offsetHeight + 'px';
+      }
+    }
+
+    // Make sure first slide has animation applied
+    if (slides[0]) {
+      slides[0].classList.add('slide-from-right');
+    }
+  });
+
+  // Previous slide function
+  function prevSlide() {
+    // Get all slides again in case DOM has changed
+    slides = document.querySelectorAll('.testimonial-card');
+    direction = 'prev';
+
+    // Remove selected class and animation classes from current slide
+    slides[currentIndex].classList.remove('is-selected', 'slide-from-left', 'slide-from-right');
+
+    // Update index (with wrap-around)
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+
+    // Add selected class to new current slide
+    slides[currentIndex].classList.add('is-selected');
+
+    // Remove any existing animation classes and add the appropriate one
+    slides[currentIndex].classList.remove('slide-from-left', 'slide-from-right');
+    slides[currentIndex].classList.add('slide-from-left');
+
+    // Update container height for the new slide
+    updateContainerHeight();
+  }
+
+  // Next slide function
+  function nextSlide() {
+    // Get all slides again in case DOM has changed
+    slides = document.querySelectorAll('.testimonial-card');
+    direction = 'next';
+
+    // Remove selected class and animation classes from current slide
+    slides[currentIndex].classList.remove('is-selected', 'slide-from-left', 'slide-from-right');
+
+    // Update index (with wrap-around)
+    currentIndex = (currentIndex + 1) % slides.length;
+
+    // Add selected class to new current slide
+    slides[currentIndex].classList.add('is-selected');
+
+    // Remove any existing animation classes and add the appropriate one
+    slides[currentIndex].classList.remove('slide-from-left', 'slide-from-right');
+    slides[currentIndex].classList.add('slide-from-right');
+
+    // Update container height for the new slide
+    updateContainerHeight();
+  }
+
+  // Update container height to match current slide
+  function updateContainerHeight() {
+    const currentSlide = slides[currentIndex];
+    const container = document.querySelector('.carousel-container');
+
+    if (currentSlide && container) {
+      // Use setTimeout to ensure the slide is visible before measuring
+      setTimeout(() => {
+        container.style.minHeight = currentSlide.offsetHeight + 'px';
+      }, 50);
+    }
+  }
+
+  // Update container height on window resize
+  window.addEventListener('resize', updateContainerHeight);
+</script>
+
+{% schema %}
+{
+  "name": "Review Carousel",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "background-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "limit": 8,
+      "settings": [
+        {
+          "type": "range",
+          "id": "rating",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "label": "Rating",
+          "default": 5
+        },
+        {
+          "type": "textarea",
+          "id": "quote",
+          "label": "Quote",
+          "default": "Share what your customers are saying about your products or services."
+        },
+        {
+          "type": "text",
+          "id": "author_name",
+          "label": "Author name",
+          "default": "Author name"
+        },
+        {
+          "type": "textarea",
+          "id": "author_description",
+          "label": "Author description",
+          "default": "Author description or details"
+        },
+        {
+          "type": "image_picker",
+          "id": "author_image",
+          "label": "Author image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Review Card Carousel",
+      "blocks": [
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

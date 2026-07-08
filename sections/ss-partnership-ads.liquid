@@ -1,0 +1,122 @@
+<section class="partnership-ads">
+  <div class="container">
+    <h2>{{ section.settings.heading }}</h2>
+
+    <div class="box">
+      <p class="intro">{{ section.settings.intro }}</p>
+
+      <ol>
+        {% for block in section.blocks %}
+          <li>{{ block.settings.step }}</li>
+        {% endfor %}
+      </ol>
+
+      <div class="note">
+        {{ section.settings.note }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.partnership-ads {
+  background: #0d0c0b;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+  .box {
+  border: 1px solid #C9A96E2E;
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 800px;
+  margin: auto;
+  text-align: left;
+  background: #1E1B14;
+}
+.intro {
+  color: #8C7F68;
+  margin-bottom: 20px;
+}
+ol {
+  padding-left: 20px;
+  counter-reset: item;
+}
+ol li {
+  margin-bottom: 15px;
+  color: #E8DFC8;
+  border-bottom: 1px solid #C9A96E1A;
+  padding-bottom: 6px;
+  font-size: 14px;
+  position: relative;
+  padding-left: 40px;
+  list-style: none;
+  counter-increment: item;
+}
+ol li:nth-last-child(1) {
+  border-bottom: none;
+}
+  ol li span {
+      display: block;
+      color: #8C7F68;
+      font-size: 15px;
+  }
+
+  ol li:before {
+      content: counter(item) " ";
+      background: #C9A96E26;
+      font-size: 11px;
+      width: 22px;
+      height: 22px;
+      position: absolute;
+      min-width: 22px;
+      opacity: 1;
+      padding: 0 7px;
+      border-radius: 11px;
+      display: flex;
+      align-items: center;
+      color: #C9A96E;
+      border: 1px solid #C9A96E;
+      left: 0;
+      top: 2px;
+  }
+.note {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #C9A96E40;
+    border-radius: 8px;
+    color: #8C7F68;
+    text-align: center;
+    background: #C9A96E08;
+  b{
+    color:#D8AB56;
+  }
+}
+}
+.partnership-ads h2 {
+  margin-bottom: 30px;
+  font-size: 40px;
+  color: #fff;
+}
+
+</style>
+
+{% schema %}
+{
+  "name": "SS Partnership Ads",
+  "settings": [
+    { "type": "text", "label":"Heading", "id": "heading", "default": "What are Instagram Partnership Ads?" },
+    { "type": "textarea", "id": "intro", "label": "Intro Text" },
+    { "type": "textarea", "id": "note", "label": "Bottom Note" }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        { "type": "text", "id": "step", "label": "Step text" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "SS Partnership Ads" }]
+}
+{% endschema %}

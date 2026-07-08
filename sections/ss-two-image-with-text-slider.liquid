@@ -1,0 +1,339 @@
+<style>
+.section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+}
+.image-text-slider-section {
+  display: flex;
+  gap: 40px;
+  align-items: start;
+  flex-direction: row-reverse;
+  width: 100%;
+}
+
+.image-text-slider-left {
+  width: fit-content;
+}
+
+.image-text-slider-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.image-text-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.image-text-slide {
+  min-width: 280px;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 45%;
+}
+
+.image-text-slide img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.image-text-slide .slide-text {
+  margin-top: 12px;
+  font-size: 14px;
+}
+.icon-text-line {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.icon-img {
+  width: 22px !important;
+  height: 22px !important;
+}
+.slide--2{
+    text-align: right;
+}
+.slidecontent-2{
+  justify-content: end;
+  .icon-text{
+    text-align: right;
+  }
+  
+}
+.slider-arrows{
+  display: none;
+}
+@media(max-width: 950px) {
+  .image-text-slider {
+    overflow-x: hidden;
+    margin-top: 10px;
+  }
+  .image-text-slide img {
+  padding: 30px;}
+  .slider-arrows {
+    display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #e5c085; /* peach color */
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  font-size: 22px;
+  font-weight: 600;
+  color: #3a1c1c; /* dark brown icon color */
+  
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.arrow:hover {
+  transform: scale(1.08);
+  opacity: 0.9;
+}
+
+.arrow:active {
+  transform: scale(0.97);
+}
+
+.image-text-slide{
+  width: 100%;
+}
+.icon-text-line{
+  justify-content: center;
+}
+.image-text-slider-section {
+  flex-direction: column-reverse;
+}
+  .image-text-slider-left,
+  .image-text-slider-right {
+    width: 100%;
+    text-align: center;
+  }
+  .slidecontent-2{
+    justify-content: center;
+    .icon-text{
+      text-align: center;
+    }
+}
+.slide--2{
+  text-align: center;
+}
+}
+</style>
+
+<div class="image-text-slider-section color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding">
+<div class="image-text-slider-section page-width">
+  
+  <!-- LEFT: SLIDER -->
+  <div class="image-text-slider-left">
+    <div class="image-text-slider">
+ {% assign slide_index = 0 %}
+
+{% for block in section.blocks %}
+  {% if block.type == 'slide' %}
+    <div class="image-text-slide slide--{{slide_index | plus: 1}}">
+
+      {% if block.settings.image %}
+        <img 
+          src="{{ block.settings.image | image_url: width: 800 }}"
+          alt="{{ block.settings.image.alt | escape }}"
+        >
+      {% endif %}
+      {% if block.settings.text != blank %}
+        {{ block.settings.text }}
+      {% endif %}
+
+      <!-- ICON + TEXT ROWS BASED ON slide_number -->
+      <div class="slide-text">
+        {% for row in section.blocks %}
+            {% assign index = slide_index | plus: 1 %}
+          {% if row.type == 'text_row' and row.settings.slide_number == index%}
+
+            <div class="icon-text-line slidecontent-{{ index }}">
+              {% if row.settings.icon %}
+                <img class="icon-img"
+                  src="{{ row.settings.icon | image_url: width: 40 }}"
+                  alt="icon">
+              {% endif %}
+              <span class="icon-text">{{ row.settings.line_text }}</span>
+            </div>
+
+          {% endif %}
+        {% endfor %}
+      </div>
+
+    </div>
+
+    {% assign slide_index = slide_index | plus: 1 %}
+
+  {% endif %}
+{% endfor %}
+
+
+    </div>
+    <div class="slider-arrows">
+      <button class="arrow arrow-left" aria-label="Scroll left">‹</button>
+      <button class="arrow arrow-right" aria-label="Scroll right">›</button>
+    </div>
+
+  </div>
+
+  <!-- RIGHT: CONTENT -->
+  <div class="image-text-slider-right hmp-btn">
+    {% if section.settings.heading != blank %}
+      <h2 class="h1 slider-heading">{{ section.settings.heading }}</h2>
+    {% endif %}
+
+    {% if section.settings.description != blank %}
+      <p class="slider-description">{{ section.settings.description }}</p>
+    {% endif %}
+
+    {% if section.settings.button_label != blank %}
+      <a 
+        href="{{ section.settings.button_link }}" 
+        class="button button--primary"
+      >
+        {{ section.settings.button_label }}
+      </a>
+    {% endif %}
+  </div>
+
+</div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const slider = document.querySelector('.image-text-slider');
+  const btnLeft = document.querySelector('.arrow-left');
+  const btnRight = document.querySelector('.arrow-right');
+
+  const scrollAmount = slider.clientWidth * 0.9; // Scroll almost one full screen width
+
+  btnLeft.addEventListener('click', () => {
+    slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+
+  btnRight.addEventListener('click', () => {
+    slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+});
+</script>
+
+{% schema %}
+{
+  "name": "Image + Text Slider",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Our Mouthguards"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Write your section description here.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "scheme-1",
+      "label": "Color scheme"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Slide Image"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Slide text",
+          "default": "<p>Add text below this image</p>"
+        }
+      ]
+    },
+    {
+    "type": "text_row",
+    "name": "Icon + Text Row",
+    "settings": [
+    {
+    "type": "richtext",
+    "id": "line_text",
+    "label": "Text line"
+    },
+    {
+    "type": "image_picker",
+    "id": "icon",
+    "label": "Icon image"
+    },
+    {
+    "type": "number",
+    "id": "slide_number",
+    "label": "Slide number (1 for first slide, 2 for second, etc.)",
+    "default": 1
+    }
+
+  ]
+}
+
+  ],
+  "presets": [
+    {
+      "name": "Image + Text Slider"
+    }
+  ]
+}
+{% endschema %}

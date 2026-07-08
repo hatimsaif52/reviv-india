@@ -1,0 +1,57 @@
+.product-terms-container {
+  margin-bottom: 20px;
+}
+
+.product-terms-checkbox-wrapper {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.product-terms-checkbox {
+  margin-right: 10px;
+  margin-top: 0.25em;
+  flex-shrink: 0;
+}
+
+.product-terms-label {
+  line-height: 1.4;
+}
+
+.terms-link-button {
+  text-decoration: underline;
+  display: inline;
+  background: transparent;
+  color: wheat;
+  border: none;
+  cursor: pointer;
+}
+
+.terms-link-button:hover {
+  text-decoration: none;
+}
+
+.product-terms-error {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  color: #d82c0d;
+  font-size: 1.1rem;
+}
+
+.product-terms-error.hidden {
+  display: none;
+}
+
+.product-terms-error .icon {
+  flex-shrink: 0;
+  width: 13px;
+  height: 13px;
+  margin-right: 0.5rem;
+  fill: #d82c0d;
+}
+.preorder-notice {
+  color: wheat;
+  font-weight: bold;
+  line-height: 2.2rem;
+}

@@ -1,0 +1,479 @@
+{{ 'component-size-chart.css' | asset_url | stylesheet_tag }}
+
+<div class="size-chart-container">
+  <button type="button" class="size-chart-button" id="SizeChartButton">
+    <span class="size-chart-button__text">Size</span>
+    <span class="size-chart-button__secondtext">SIZE CHART &gt;</span>
+  </button>
+</div>
+
+<!-- Modal markup - initially hidden -->
+<div class="size-chart-modal" id="SizeChartModal" style="display: none;">
+  <div class="size-chart-modal__content">
+    <div class="size-chart-modal__header">
+      <div class="size-chart-modal__header-heading">Size Guide</div>
+      <button type="button" class="size-chart-modal__close" id="size-chart-modal__close" aria-label="Close">
+        &times;
+      </button>
+    </div>
+    <div class="size-chart-modal__body">
+      {% assign lowercase_title = product.url | downcase %}
+      {% if lowercase_title contains 'reviv-two' %}
+        <div class="size-chart-wrapper">
+          <div class="size-chart__heading">
+            Choosing the right mouthpiece size is crucial for your comfort and the effectiveness of our product. Here's
+            a straightforward guide to help you make the best choice:
+          </div>
+          <div class="size-chart__subheading">Which Size Should You Choose?</div>
+          <div class="size-chart__subheading">Large Size</div>
+          <div>
+            {{ 'reviv2-size-large.png' | file_url | img_tag: 'Reviv2 image', 'reviv2-large-image' }}
+          </div>
+          <div>
+            <div class="d-flex size-description">
+              <div class="size-chart-specification__content">
+                <div class="d-flex">
+                  <div class="size-chart-specification__dot">○</div>
+                  This is suitable for most adults.
+                </div>
+                <div class="d-flex">
+                  <div class="size-chart-specification__dot">○</div>
+                  Ensures a snug, comfortable fit for best effectiveness.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="size-chart__subheading">Medium Size</div>
+          <div>
+            {{ 'reviv2-size-medium.png' | file_url | img_tag: 'Reviv2 image', 'reviv2-medium-image' }}
+          </div>
+          <div>
+            <div class="d-flex size-description">
+              <div class="size-chart-specification__content">
+                <div class="d-flex">
+                  <div class="size-chart-specification__dot">○</div>
+                  Designed for teens and adults with smaller mouths.
+                </div>
+                <div class="d-flex">
+                  <div class="size-chart-specification__dot">○</div>
+                  Slightly narrower and shorter for a more precise fit.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="size-chart__subheading">Mouthpiece Dimensions</div>
+            <div class="size-chart__table-wrapper">
+              <table class="size-chart-table">
+                <tr class="size-chart-table__header">
+                  <th>Size</th>
+                  <th>Length</th>
+                  <th>Width</th>
+                  <th>Height</th>
+                  <th>Best for</th>
+                </tr>
+                <tr>
+                  <td>Large</td>
+                  <td>54 mm</td>
+                  <td>74 mm</td>
+                  <td>30 mm</td>
+                  <td>Most adults</td>
+                </tr>
+                <tr>
+                  <td>Medium</td>
+                  <td>46 mm</td>
+                  <td>63 mm</td>
+                  <td>25 mm</td>
+                  <td>Teens & small adult mouths</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div>
+            <div class="size-chart__subheading">Need help on how to measure?</div>
+            <div>Check out this video - <a class="size-chart__email" href="https://youtu.be/3qnYhe__7yU">link</a></div>
+          </div>
+          <div>
+            <div class="size-chart__subheading">Already found your fit? Purchase Now</div>
+            <div>
+              If you're still uncertain about which size to choose, feel free to reach out to me at
+              <span class="size-chart__email">ken@getreviv.com</span>.
+            </div>
+          </div>
+        </div>
+
+      {% elsif lowercase_title contains 'rd1-revivday' %}
+          <div class="size-chart-wrapper">
+          <div class="size-chart__heading">
+            Choosing the right mouthpiece size is crucial for your comfort and the effectiveness of our product. Here's
+            a straightforward guide to help you make the best choice:
+          </div>
+          <div class="size-chart__subheading">Which Size Should You Choose?</div>
+          <div class="size-chart__subheading">Free Size</div>
+          <div>
+            {{ 'unnamed_e3bf70b6-ff59-413f-8813-89efe77628b8.png' | file_url | img_tag: 'RD1 Image', 'RD1 size image' }}
+          </div>
+          <div>
+            <div class="d-flex size-description">
+              <div class="size-chart-specification__content">
+                <div class="d-flex">
+                  <div class="size-chart-specification__dot">○</div>
+                  This is suitable for all adult-sized mouths.
+                </div>
+                <div class="d-flex">
+                  <div class="size-chart-specification__dot">○</div>
+                  Ensures a snug, comfortable fit for best effectiveness.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="size-chart__subheading">Mouthpiece Dimensions</div>
+            <div class="size-chart__table-wrapper">
+              <table class="size-chart-table">
+                <tr class="size-chart-table__header">
+                  <th>Size</th>
+                  <th>Length</th>
+                  <th>Width</th>
+                  <th>Height</th>
+                  <th>Best for</th>
+                </tr>
+                <tr>
+                  <td>Medium</td>
+                  <td>4.2 cm</td>
+                  <td>6.5 cm</td>
+                  <td>0.9 cm</td>
+                  <td>All adult-sized mouths.</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div>
+            <div class="size-chart__subheading">Need help on how to measure?</div>
+            <div class="size-chart-specification__content">
+              1. Measure Your Mouth Width:
+              <div class="d-flex">
+                <div class="size-chart-specification__dot">○</div>
+                Use a soft measuring tape or a ruler.
+              </div>
+              <div class="d-flex">
+                <div class="size-chart-specification__dot">○</div>
+                Open your mouth slightly and measure the distance between the outer edges of your molars (back teeth).
+              </div>
+            </div>
+            <div class="size-chart-specification__content">
+              2. Measure Your Mouth Length:
+              <div class="d-flex">
+                <div class="size-chart-specification__dot">○</div>
+                Place the measuring tape from the front of your upper teeth to the back of your molars.
+              </div>
+            </div>
+            <div class="size-chart-specification__content">
+              3. Compare with Our Mouthpiece Dimensions:
+              <div class="d-flex">
+                <div class="size-chart-specification__dot">○</div>
+                Medium Size: 4.2 cm (Length) x 6.5 cm (Width) x 0.9 cm (Height)
+              </div>
+              <div class="d-flex">
+                <div class="size-chart-specification__dot">○</div>
+                If you're between sizes, we recommend going one size up for comfort.
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="size-chart__subheading">Already found your fit? Purchase Now</div>
+            <div>
+              If you're still uncertain about which size to choose, feel free to reach out to me at
+              <span class="size-chart__email">ken@getreviv.com</span>.
+            </div>
+          </div>
+        </div>
+      {% elsif lowercase_title contains 'nasal-dilator' %}
+        {% render 'nasal-dilator-size-guide' %}
+      {% elsif lowercase_title contains 'hoodie' %}
+          {% render 'hoodie-size-guide' %}
+      {% elsif lowercase_title contains 't-shirt' %}
+          {% render 't-shirt-size-guide' %}
+      {% elsif lowercase_title contains 'r3-revivthree' %}
+          <div class="size-chart-wrapper">
+          <div class="size-chart__heading">
+            Choosing the right mouthpiece size is crucial for your comfort and the effectiveness of our product. Here's a straightforward guide to help you make the best choice:
+          </div>
+          <div class="size-chart__subheading">Which Size Should You Choose?</div>
+          <div class="size-chart__subheading">XL Size</div>
+          <div>
+            <img 
+              src="https://cdn.shopify.com/s/files/1/0706/4243/4289/files/R3_XL.webp?v=1764752251" 
+              alt="Reviv 3 Image"
+              width="300"
+              height="auto"
+            />
+
+            {% comment %} {{ 'Gemini_Generated_Image_tvhl40tvhl40tvhl.png' | file_url | img_tag: 'Reviv 3 Image', 'R3 size image' }} {% endcomment %}
+          </div>
+          <div>
+            <div class="d-flex size-description">
+              <div class="size-chart-specification__content">
+                <div class="d-flex">
+                  <div class="size-chart-specification__dot">○</div>
+                  This is suitable for adults with large mouth size.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="size-chart__subheading">Large Size</div>
+          <div>
+            <img 
+              src="https://cdn.shopify.com/s/files/1/0706/4243/4289/files/R3_L.webp?v=1764752252" 
+              alt="Reviv 3 Image"
+              width="300"
+              height="auto"
+            />
+
+            {% comment %} {{ 'Gemini_Generated_Image_tvhl40tvhl40tvhl.png' | file_url | img_tag: 'Reviv 3 Image', 'R3 size image' }} {% endcomment %}
+          </div>
+          <div>
+            <div class="d-flex size-description">
+              <div class="size-chart-specification__content"> 
+                <div class="d-flex">
+                  <div class="size-chart-specification__dot">○</div>
+                  This is suitable for most adults.
+                </div>
+                <div class="d-flex">
+                  <div class="size-chart-specification__dot">○</div>
+                  Ensures a snug, comfortable fit for best effectiveness.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="size-chart__subheading">Medium Size</div>
+          <div>
+            <img 
+              src="https://cdn.shopify.com/s/files/1/0706/4243/4289/files/R3_M.webp?v=1764752252" 
+              alt="Reviv 3 Image"
+              width="300"
+              height="auto"
+            />
+
+            {% comment %} {{ 'Gemini_Generated_Image_tvhl40tvhl40tvhl.png' | file_url | img_tag: 'Reviv 3 Image', 'R3 size image' }} {% endcomment %}
+          </div>
+          <div>
+            <div class="d-flex size-description">
+              <div class="size-chart-specification__content">
+                <div class="d-flex">
+                  <div class="size-chart-specification__dot">○</div>
+                  Designed for teens and adults with smaller mouths.  
+                </div>
+                <div class="d-flex">
+                  <div class="size-chart-specification__dot">○</div>
+                  Slightly narrower and shorter for a more precise fit
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="size-chart__subheading">Mouthpiece Dimensions</div>
+            <div class="size-chart__table-wrapper">
+              <table class="size-chart-table">
+                <tr class="size-chart-table__header">
+                  <th>Size</th>
+                  <th>Length</th>
+                  <th>Width</th>
+                  <th>Height</th>
+                  <th>Thickness</th>
+                  <th>Best for</th>
+                </tr>
+                <tr>
+                  <td>XL</td>
+                  <td>59.6 mm</td>
+                  <td>84 mm</td>
+                  <td>27 mm</td>
+                  <td>5 mm</td>
+                  <td>Adults with large mouth sizes.</td>
+                </tr>
+                <tr>
+                  <td>Large</td>
+                  <td>53.6 mm</td>
+                  <td>73.2 mm</td>
+                  <td>26 mm</td>
+                  <td>4.2 mm</td>
+                  <td>Most adults</td>
+                </tr>
+                <tr>
+                  <td>Medium</td>
+                  <td>46 mm</td>
+                  <td>63.5 mm</td>
+                  <td>23 mm</td>
+                  <td>4.1 mm</td>
+                  <td>Teens & small adult mouths</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="size-chart__subheading">Need help on how to measure?</div>
+            <div>Check out this video - <a class="size-chart__email" href="https://youtu.be/gmoeX-6gsFg">link</a></div>
+          </div>
+          {% comment %} <div>
+            <div class="size-chart__subheading">Need help on how to measure?</div>
+            <div class="size-chart-specification__content">
+              1. Measure Your Mouth Width:
+              <div class="d-flex">
+                <div class="size-chart-specification__dot">○</div>
+                Use a soft measuring tape or a ruler.
+              </div>
+              <div class="d-flex">
+                <div class="size-chart-specification__dot">○</div>
+                Open your mouth slightly and measure the distance between the outer edges of your molars (back teeth).
+              </div>
+            </div>
+            <div class="size-chart-specification__content">
+              2. Measure Your Mouth Length:
+              <div class="d-flex">
+                <div class="size-chart-specification__dot">○</div>
+                Place the measuring tape from the front of your upper teeth to the back of your molars.
+              </div>
+            </div>
+            <div class="size-chart-specification__content">
+              3. Compare with Our Mouthpiece Dimensions:
+              <div class="d-flex">
+                <div class="size-chart-specification__dot">○</div>
+                Medium Size: 4.2 cm (Length) x 6.5 cm (Width) x 0.9 cm (Height)
+              </div>
+              <div class="d-flex">
+                <div class="size-chart-specification__dot">○</div>
+                If you're between sizes, we recommend going one size up for comfort.
+              </div>
+            </div>
+          </div> {% endcomment %}
+          <div>
+            <div>
+              If you're still uncertain about which size to choose, feel free to reach out to me at
+              <span class="size-chart__email">ken@getreviv.com</span>.
+            </div>
+          </div>
+      {% else %}
+        <div class="size-chart-wrapper">
+          <div class="size-chart__heading">
+            Choosing the right mouthpiece size is crucial for your comfort and the effectiveness of our product. Here's
+            a straightforward guide to help you make the best choice:
+          </div>
+          <div class="size-chart__subheading">Which Size Should You Choose?</div>
+          <div class="size-chart__subheading">Large Size</div>
+          <div>
+            {{ 'reviv-big.png' | file_url | img_tag: 'Reviv image', 'reviv-big-image' }}
+          </div>
+          <div>
+            <div class="d-flex size-description">
+              <div class="size-chart-specification__content">
+                <div class="d-flex">
+                  <div class="size-chart-specification__dot">○</div>
+                  This is suitable for most adults.
+                </div>
+                <div class="d-flex">
+                  <div class="size-chart-specification__dot">○</div>
+                  Ensures a snug, comfortable fit for best effectiveness.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="size-chart__subheading">Small Size</div>
+          <div>
+            {{ 'R1-S-size.png' | file_url | img_tag: 'Reviv image', 'reviv-small-image' }}
+          </div>
+          <div>
+            <div class="d-flex">
+              <div class="size-chart-specification__content">
+                <div class="d-flex">
+                  <div class="size-chart-specification__dot">○</div>
+                  Designed for teens and adults with smaller mouths.
+                </div>
+                <div class="d-flex">
+                  <div class="size-chart-specification__dot">○</div>
+                  Slightly narrower and shorter for a more precise fit.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="size-chart__subheading">Mouthpiece Dimensions</div>
+            <div class="size-chart__table-wrapper">
+              <table class="size-chart-table">
+                <tr class="size-chart-table__header">
+                  <th>Size</th>
+                  <th>Length</th>
+                  <th>Width</th>
+                  <th>Height</th>
+                  <th>Best for</th>
+                </tr>
+                <tr>
+                  <td>Small</td>
+                  <td>4.7 cm</td>
+                  <td>6.0 cm</td>
+                  <td>2.5 cm</td>
+                  <td>Teens & small adult mouths</td>
+                </tr>
+                <tr>
+                  <td>Large</td>
+                  <td>5.0 cm</td>
+                  <td>6.7 cm</td>
+                  <td>3.0 cm</td>
+                  <td>Most adults</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div>
+            <div class="size-chart__subheading">How to measure your mouth</div>
+            <div class="size-chart-specification__content">
+              1. Measure Your Mouth Width:
+              <div class="d-flex">
+                <div class="size-chart-specification__dot">○</div>
+                Use a soft measuring tape or a ruler
+              </div>
+              <div class="d-flex">
+                <div class="size-chart-specification__dot">○</div>
+                Open your mouth slightly and measure the distance between the outer edges of your molars (back teeth).
+              </div>
+            </div>
+            <div class="size-chart-specification__content">
+              2. Measure Your Mouth Length:
+              <div class="d-flex">
+                <div class="size-chart-specification__dot">○</div>
+                Place the measuring tape from the front of your upper teeth to the back of your molars.
+              </div>
+            </div>
+            <div class="size-chart-specification__content">
+              3. Compare with Our Mouthpiece Dimensions:
+              <div class="d-flex">
+                <div class="size-chart-specification__dot">○</div>
+                Small Size: 4.7 cm (Length) × 6.0 cm (Width) × 2.5 cm (Height) → Best for teens & small adult mouths.
+              </div>
+              <div class="d-flex">
+                <div class="size-chart-specification__dot">○</div>
+                Large Size: 5.0 cm (Length) x 6.7 cm (Width) x 3.0 cm (Height) → Best for most adults.
+              </div>
+              <div class="d-flex">
+                <div class="size-chart-specification__dot">○</div>
+                If you're between sizes, we recommend going one size up for comfort.
+              </div>
+            </div>
+          </div>
+                      <div class="size-chart__subheading">Need help on how to measure?</div>
+            <div>Check out this video - <a class="size-chart__email" href="https://youtu.be/pUDMltQ84MI">link</a></div>
+          </div>
+          <div>
+            <div class="size-chart__subheading">Already found your fit? Purchase Now</div>
+            <div>
+              If you're still uncertain about which size to choose, feel free to reach out to me at
+              <span class="size-chart__email">ken@getreviv.com</span>.
+            </div>
+          </div>
+      {% endif %}
+    </div>
+    <div class="size-chart-modal__footer">
+      <button type="button" class="button button--secondary" id="size-chart-modal__close-btn">Close</button>
+    </div>
+  </div>
+</div>
+
+<script src="{{ 'modal-size-chart.js' | asset_url }}" defer="defer"></script>

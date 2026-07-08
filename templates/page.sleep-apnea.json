@@ -1,0 +1,668 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_banner_g8wcVV": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_N68zMY": {
+          "type": "heading",
+          "settings": {
+            "heading": "Do biomechanics address sleep apnea?",
+            "heading_size": "hxl"
+          }
+        },
+        "text_tmWeXJ": {
+          "type": "text",
+          "settings": {
+            "text": "I view that it helps",
+            "text_style": "subtitle"
+          }
+        },
+        "buttons_YMPP3D": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Join now",
+            "button_id": "form-popup-btn",
+            "button_link_1": "#",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_N68zMY",
+        "text_tmWeXJ",
+        "buttons_YMPP3D"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/image_68.png",
+        "image_overlay_opacity": 50,
+        "image_height": "medium",
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-522b6c27-788f-4b7e-bbb7-d4f61d40572f",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "custom_classes": "sk-main-banner"
+      }
+    },
+    "free_trial_CX8H9e": {
+      "type": "free-trial",
+      "blocks": {
+        "heading_MgDHRz": {
+          "type": "heading",
+          "settings": {
+            "heading": "START 1-MONTH FREE TRIAL TODAY",
+            "title_color": "#ffffff"
+          }
+        },
+        "text_FqcRn7": {
+          "type": "text",
+          "settings": {
+            "text_para": "$00.00",
+            "desc_color": "#e5c085"
+          }
+        },
+        "button_YBCQ63": {
+          "type": "button",
+          "settings": {
+            "button_label": "JOIN NOW",
+            "button_id": "form-popup-btn",
+            "button_link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MgDHRz",
+        "text_FqcRn7",
+        "button_YBCQ63"
+      ],
+      "settings": {
+        "back_color": "#232021",
+        "padding_top": 16,
+        "padding_bottom": 16,
+        "custom_class": ""
+      }
+    },
+    "tmj_block_UtYCDW": {
+      "type": "tmj-block",
+      "blocks": {
+        "rich_text_7Mewpm": {
+          "type": "rich_text",
+          "settings": {
+            "rich_text": "<p>Reviv acts like a door stop that doesn’t allow the jaw to completely close.  And this stretches the soft tissue that surrounds the skull.</p>"
+          }
+        },
+        "rich_text_w9AVRD": {
+          "type": "rich_text",
+          "settings": {
+            "rich_text": "<p>The skull inflates like a balloon as a result and cranial bones and the jaw move to a healthier position.</p>"
+          }
+        },
+        "rich_text_D4G9EG": {
+          "type": "rich_text",
+          "settings": {
+            "rich_text": "<p>Not just the skull corrects but the skeleton also corrects, including the neck.</p>"
+          }
+        },
+        "rich_text_ntGJxe": {
+          "type": "rich_text",
+          "settings": {
+            "rich_text": "<p>As these things correct more airway space is created over time.</p>"
+          }
+        },
+        "rich_text_C4jMHz": {
+          "type": "rich_text",
+          "settings": {
+            "rich_text": "<p>This, in my view, can often improve the situation with sleep apnea.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "rich_text_7Mewpm",
+        "rich_text_w9AVRD",
+        "rich_text_D4G9EG",
+        "rich_text_ntGJxe",
+        "rich_text_C4jMHz"
+      ],
+      "settings": {
+        "heading": "How I view that flat mouthguards work. A flat mouthguard acts like a door stop...",
+        "padding_top": "pt-8",
+        "padding_bottom": "pb-12"
+      }
+    },
+    "multicolumn_HzjGGH": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_HqVALW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/7aeb4976-63a5-4a23-a26c-b2bd57f55983_801x535_89e5172a-1829-438b-b168-5b66219c3f7f.webp",
+            "title": "Guess what the easy cure to sleep apnea is?",
+            "text": "<p>I'll give you a hint... it is not a CPAP!</p>",
+            "link_label": "Read More",
+            "link": "https://reviv.substack.com/p/guess-what-the-easy-cure-to-sleep",
+            "youtube_video_url": "",
+            "isNewTab": true
+          }
+        },
+        "column_MQQHXx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/6655e97b-de91-4272-9ee1-4130e905ac8b_1755x1087_c2e59c0b-1f0d-408c-bdce-3cac20cd6fc8.webp",
+            "title": "Breathing vs. Biomechanics",
+            "text": "<p>Should you focus on your breathing?</p>",
+            "link_label": "Read More",
+            "link": "https://reviv.substack.com/p/breathing-vs-biomechanics",
+            "youtube_video_url": "",
+            "isNewTab": true
+          }
+        },
+        "column_9KzYyy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/f24ef246-d389-4acf-b768-5245ec91d593_716x360_793b6933-ab9b-4f82-bbf6-515b8f757ee9.webp",
+            "title": "So why do the teeth relate to your body and neurology?",
+            "text": "<p>In this article I explain my 'balloon theory' of how the soft tissue crushes the skull, which crushes the brain.</p>",
+            "link_label": "Read More",
+            "link": "https://reviv.substack.com/p/so-why-do-the-teeth-relate-to-your",
+            "youtube_video_url": "",
+            "isNewTab": true
+          }
+        },
+        "column_9QpMhY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/1705bb9a-3a73-4e89-96c5-904c5be09681_1921x1080_226b680a-989a-4d71-8049-1bd03aee34de.webp",
+            "title": "Oralift: An anti-aging miracle? Or just the wuss version of Reviv?",
+            "text": "<p>Oralift: An anti-aging miracle? Or just the wuss version of Reviv?</p>",
+            "link_label": "Read More",
+            "link": "https://reviv.substack.com/p/oralift-an-anti-aging-miracle-or",
+            "youtube_video_url": "",
+            "isNewTab": true
+          }
+        }
+      },
+      "block_order": [
+        "column_HqVALW",
+        "column_MQQHXx",
+        "column_9KzYyy",
+        "column_9QpMhY"
+      ],
+      "settings": {
+        "title": "Articles I have written",
+        "box_link": false,
+        "heading_size": "hxl",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "section_color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": "sk-multi-col uc-multi-col"
+      }
+    },
+    "skool_image_slider_dhbCwq": {
+      "type": "skool-image-slider",
+      "blocks": {
+        "image_d9UTXy": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/0566d63318c1f07adae9e95cd7e6468f.png"
+          }
+        },
+        "image_Nqnm9h": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/ab4caac789e7b58aebe523df6f63fc31.png"
+          }
+        },
+        "image_74QiWf": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/0566d63318c1f07adae9e95cd7e6468f.png"
+          }
+        },
+        "image_WjzMVb": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/0566d63318c1f07adae9e95cd7e6468f.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_d9UTXy",
+        "image_Nqnm9h",
+        "image_74QiWf",
+        "image_WjzMVb"
+      ],
+      "settings": {
+        "section_head": "Take a look at skool",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_cmmbXX": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_UFy37y": {
+          "type": "heading",
+          "settings": {
+            "heading": "Not ready to purchase?",
+            "heading_size": "h1"
+          }
+        },
+        "text_HiNLnk": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Try a free month trial of our Skool community instead and see what hundreds of others who are doing the process are posting.</p>"
+          }
+        },
+        "button_ktXcj4": {
+          "type": "button",
+          "settings": {
+            "button_label": "Join now",
+            "button_link": "#",
+            "button_id": "form-popup-btn yellow-btn",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_UFy37y",
+        "text_HiNLnk",
+        "button_ktXcj4"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "custom__class": ""
+      }
+    },
+    "product_cards_j8jV4n": {
+      "type": "product-cards",
+      "blocks": {
+        "product_card_rnJawi": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-two",
+            "is_new": true
+          }
+        },
+        "product_card_jBbiK3": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-two-without-support",
+            "is_new": true
+          }
+        },
+        "product_card_VYkMzd": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-one",
+            "is_new": false
+          }
+        },
+        "product_card_Jf3L8L": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-one-without-support",
+            "is_new": false
+          }
+        },
+        "product_card_kiLBxy": {
+          "type": "product_card",
+          "settings": {
+            "product": "1-year-subscription-only",
+            "is_new": false
+          }
+        }
+      },
+      "block_order": [
+        "product_card_rnJawi",
+        "product_card_jBbiK3",
+        "product_card_VYkMzd",
+        "product_card_Jf3L8L",
+        "product_card_kiLBxy"
+      ],
+      "custom_css": [
+        ".product-card__price,.product-card__title {color: #000 !important;}",
+        ".product-card__title {font-size: 18px; line-height: normal;}",
+        ".swiper-pagination-bullet: not(.swiper-pagination-bullet-active) {border-color: #000;}",
+        ".product-form {margin-top: 0;}",
+        "span.swiper-pagination-bullet {margin: 0 5px !important;}",
+        ".swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {border-color: #000; opacity: 1;}",
+        ".swiper {width: auto; overflow: hidden;}",
+        ".add-to-cart__button {border: 1px solid #000000; color: black;}"
+      ],
+      "settings": {
+        "section_color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_classes": ""
+      }
+    },
+    "collapsible_content_JN3rhi": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_UjR4JN": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How does Reviv work differently from CPAP machines for sleep apnea?",
+            "icon": "none",
+            "row_content": "<p>While CPAP machines force air into your airways to keep them open during sleep, I view that Reviv addresses the root structural issues.</p><p>And gradually corrects the structural issues that cause airway collapse in the first place.  </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_tUj3HX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long does it take to see improvements in sleep apnea with Reviv?",
+            "icon": "none",
+            "row_content": "<p>I have seen some folks report improvements in their sleep in the first 1-2 months. </p><p>But it can take longer.</p><p>And note that this is based on what I have seen in folks doing Reviv and we are not claiming that a mouthguard will always fix sleep apnea.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_6bErhk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is it difficult to wear Reviv?",
+            "icon": "none",
+            "row_content": "<p>Many users can find the initial weeks difficult with some soreness of teeth and gums.</p><p>I view that the soft tissue is stretching and that with time it gets easier to sleep with the mouthguard.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_jEbzGk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I wear my CPAP with Reviv?",
+            "icon": "none",
+            "row_content": "<p>Yes a number of folks have done this and it doesn't seem to be an issues.</p><p>I believe that eventually things should open sufficiently that it could be possible to stop the use of the CPAP.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_UjR4JN",
+        "collapsible_row_tUj3HX",
+        "collapsible_row_6bErhk",
+        "collapsible_row_jEbzGk"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "frequently asked questions",
+        "heading_size": "hxxl",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": "sk-faqs"
+      }
+    },
+    "1743752606d7c9c7a3": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_RjGj3h": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "414780",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_RjGj3h"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "multicolumn_WbdcXe": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Fp6JHj": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2568-04-05_at_18.32.48.webp",
+            "title": "TMJ and Sleep Apnea",
+            "text": "<p>Understanding the Connection and Finding Relief</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/tmj-and-sleep-apnea-understanding-the-connection-and-finding-relief?_pos=5&_sid=21a70246b&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_9Fyc6k": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_8986965a-6016-465d-ae9e-1c5926da57dd_00001422_001_1.webp",
+            "title": "Airway, Snoring, Sleep Apnea & Brain Fog",
+            "text": "<p>When a Reviv Guard Helps (and When It Doesn’t)</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/airway-snoring-sleep-apnea-brain-fog-when-a-reviv-guard-helps-and-when-it-doesn-t?_pos=2&_sid=21a70246b&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_Vfh9gg": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___M_3f93db0d-c7cc-4fc4-b5bb-76a4d83377af.webp",
+            "title": "How Reviv Helps You Sleep Better, Breathe Easier, and Wake Up Relaxed",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/how-reviv-helps-you-sleep-better-breathe-easier-and-wake-up-relaxed?_pos=1&_sid=0b9f36d84&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_RxbAnH": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-08-06_144142_abb9820f-9d5d-4cbf-b0f4-146c9d70c630.webp",
+            "title": "How to Improve Sleep Quality With Oral Appliance Therapy",
+            "text": "<p>Sleep apnea appliances add airway support but can be overkill if you just have TMJ.</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/how-to-improve-sleep-quality-with-oral-appliance-therapy?_pos=10&_sid=21a70246b&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_4QPEkw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_8986965a-6016-465d-ae9e-1c5926da57dd_00001462_000.webp",
+            "title": "Track Your Clarity",
+            "text": "<p>A Simple Brain-Fog & Sleep Scorecard You Can Use With Reviv</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/track-your-clarity-a-simple-brain-fog-sleep-scorecard-you-can-use-with-reviv?_pos=17&_sid=21a70246b&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_A7wgy7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_8986965a-6016-465d-ae9e-1c5926da57dd_00001212_002.webp",
+            "title": "How Reviv Helps With Sleep Quality",
+            "text": "<p>Even If You Don’t Snore</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/how-reviv-helps-with-sleep-quality-even-if-you-don-t-snore?_pos=16&_sid=14c72a75d&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_3CQqRG": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_8986965a-6016-465d-ae9e-1c5926da57dd_00000169_000.webp",
+            "title": "Why Reviv Is the Best Mouthguard",
+            "text": "<p>for Better Sleep and Jaw Comfort</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/why-reviv-is-the-best-mouthguard-for-better-sleep-and-jaw-comfort?_pos=23&_sid=14c72a75d&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_KR3Xdi": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_00000036_000_22d3c9ce-9694-4f3d-8807-09ef62b510d3.webp",
+            "title": "Jawline, Posture, and Sleep",
+            "text": "<p>The Overlooked Mouthguard Benefits No One Talks About</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/jawline-posture-and-sleep-the-overlooked-mouthguard-benefits-no-one-talks-about?_pos=22&_sid=14c72a75d&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_XbGgwM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_8986965a-6016-465d-ae9e-1c5926da57dd_00000932_000.webp",
+            "title": "Clenching in Your Sleep?",
+            "text": "<p>How to Spot the Signs Before It Gets Worse</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/clenching-in-your-sleep-how-to-spot-the-signs-before-it-gets-worse?_pos=21&_sid=14c72a75d&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_hMAij6": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_8986965a-6016-465d-ae9e-1c5926da57dd_00001448_003.webp",
+            "title": "The Science of Clenching, Broken Sleep & Brain Fog",
+            "text": "<p>And How Reviv Guards Help You Recover</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/the-science-of-clenching-broken-sleep-brain-fog-and-how-reviv-guards-help-you-recover?_pos=19&_sid=14c72a75d&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_at4id8": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_8986965a-6016-465d-ae9e-1c5926da57dd_00000609_000.webp",
+            "title": "Reviv Starter Quiz",
+            "text": "<p>Pick Your Fit, Goals, and Sleep Pattern</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/reviv-starter-quiz-pick-your-fit-goals-and-sleep-pattern",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_7mJaEF": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_8986965a-6016-465d-ae9e-1c5926da57dd_00000553_002.webp",
+            "title": "Reviv for Side Sleepers",
+            "text": "<p>Fit, Airway, and Morning Jaw Tension Checklist</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/reviv-for-side-sleepers-fit-airway-and-morning-jaw-tension-checklist",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        }
+      },
+      "block_order": [
+        "column_Fp6JHj",
+        "column_9Fyc6k",
+        "column_Vfh9gg",
+        "column_RxbAnH",
+        "column_4QPEkw",
+        "column_A7wgy7",
+        "column_3CQqRG",
+        "column_KR3Xdi",
+        "column_XbGgwM",
+        "column_hMAij6",
+        "column_at4id8",
+        "column_7mJaEF"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "OTHER RELATED ARTICLES",
+        "box_link": false,
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "section_color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_g8wcVV",
+    "free_trial_CX8H9e",
+    "tmj_block_UtYCDW",
+    "multicolumn_HzjGGH",
+    "skool_image_slider_dhbCwq",
+    "rich_text_cmmbXX",
+    "product_cards_j8jV4n",
+    "collapsible_content_JN3rhi",
+    "1743752606d7c9c7a3",
+    "multicolumn_WbdcXe"
+  ]
+}

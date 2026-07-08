@@ -1,0 +1,164 @@
+<style>
+.comp-product .comp-product-inner {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0rem 5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.comp-product h3 {
+  font-size: 18px;
+  font-family: Roboto !important;
+}
+.comp-product h3,
+.comp-product p {
+  margin: 0;
+}
+.comp-product .btn {
+  border-radius: 8px !important;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: #E5C085;
+  border: 2px solid #E5C085;
+  text-decoration: none;
+  padding: 2rem 5rem;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.comp-product .btn:hover {
+  /* border: 2px solid #fff;
+  color: #fff;
+  background-color: #000; */
+}
+@media screen and (max-width: 767px) {
+  .comp-product .comp-product-inner {
+    justify-content: space-between;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 10px;
+  }
+  .comp-product .btn {
+    padding: 1rem 2rem;
+  }
+  .comp-product h3,
+  .comp-product p {
+    text-align: left;
+    font-size: 18px;
+  }
+}
+</style>
+
+<div class="comp-product section-padding-{{ section.id }}" style="background-color:{{ section.settings.back_color }}; padding-top:{{ section.settings.padding_top }}px; padding-bottom:{{ section.settings.padding_bottom }}px;">
+  <div class="comp-product-inner">
+    <div class="content-col">
+      {% if section.settings.show_title %}
+        <h3 style="color: {{ section.settings.title_color }}">{{ product.title }}</h3>
+      {% endif %}
+      {% if section.settings.show_price %}
+        <p style="color: {{ section.settings.desc_color }}">$ {{ product.price | money_with_currency }}</p>
+      {% endif %}
+    </div>
+
+    <div class="btn-col">
+      {% if section.settings.show_add_to_cart %}
+        <form method="post" action="/cart/add" enctype="multipart/form-data">
+          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+         <button type="submit" class="btn">
+            {{ section.settings.button_text }}
+          </button>
+        </form>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Free Trial Section",
+  "settings": [
+  {
+    "type": "color",
+    "id": "back_color",
+    "default": "#ccc",
+    "label": "Background Color"
+  },
+  {
+    "type": "range",
+    "id": "padding_top",
+    "min": 0,
+    "max": 100,
+    "step": 4,
+    "unit": "px",
+    "label": "Top Padding",
+    "default": 36
+  },
+  {
+    "type": "range",
+    "id": "padding_bottom",
+    "min": 0,
+    "max": 100,
+    "step": 4,
+    "unit": "px",
+    "label": "Bottom Padding",
+    "default": 36
+  },
+  {
+    "type": "checkbox",
+    "id": "show_title",
+    "default": true,
+    "label": "Show Product Title"
+  },
+  {
+    "type": "checkbox",
+    "id": "show_price",
+    "default": true,
+    "label": "Show Product Price"
+  },
+  {
+    "type": "checkbox",
+    "id": "show_add_to_cart",
+    "default": true,
+    "label": "Show Add to Cart Button"
+  },
+  {
+    "type": "color",
+    "id": "title_color",
+    "default": "#000000",
+    "label": "Product Title Color"
+  },
+  {
+    "type": "color",
+    "id": "desc_color",
+    "default": "#000000",
+    "label": "Product Price Color"
+  },
+  {
+    "type": "text",
+    "id": "button_text",
+    "label": "Add to Cart Button Text",
+    "default": "Add to Cart"
+  }
+],
+  "presets": [
+    {
+      "name": "Compact Product Detail",
+      "category": "Custom Sections",
+      "settings": {
+        "back_color": "#ccc",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "show_title": true,
+        "show_price": true,
+        "show_add_to_cart": true,
+        "title_color": "#000000",
+        "desc_color": "#000000"
+      }
+    }
+  ]
+}
+{% endschema %}
+

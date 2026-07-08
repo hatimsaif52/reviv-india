@@ -1,0 +1,193 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "ss_creator_partnership_piBq8e": {
+      "type": "ss-creator-partnership",
+      "name": "Creator Partnership Hero",
+      "settings": {
+        "tagline": "CREATOR PARTNERSHIP PROGRAM",
+        "heading": "Grow your audience.",
+        "highlight": "Earn while you sleep.",
+        "description": "We put paid spend behind your existing posts — and pay you 10% of every sale your content drives. No extra work on your end.",
+        "button_text": "Email us to apply →",
+        "button_link": "mailto:affiliates@getreviv.com",
+        "main_image": "shopify://shop_images/Screenshot_April_17_2026_13_38_19.webp"
+      }
+    },
+    "ss_how_it_works_4Yyp7K": {
+      "type": "ss-how-it-works",
+      "blocks": {
+        "step_U8KcRY": {
+          "type": "step",
+          "settings": {
+            "step": "01",
+            "title": "Email Us",
+            "text": "Reach out at \naffiliates@getreviv.com to \nget started"
+          }
+        },
+        "step_LCwEe8": {
+          "type": "step",
+          "settings": {
+            "step": "01",
+            "title": "Get your code",
+            "text": "we set you up with a unique\ndiscount code to track you sales"
+          }
+        },
+        "step_dbaneV": {
+          "type": "step",
+          "settings": {
+            "step": "01",
+            "title": "Earn 10%",
+            "text": "Get Paid monthly on every \nsale you content drives"
+          }
+        }
+      },
+      "block_order": [
+        "step_U8KcRY",
+        "step_LCwEe8",
+        "step_dbaneV"
+      ],
+      "name": "SS How It Works",
+      "settings": {
+        "heading": "HOW IT WORKS"
+      }
+    },
+    "ss_creator_what_you_get_4a7m8X": {
+      "type": "ss-creator-what-you-get",
+      "blocks": {
+        "item_BxXyGK": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/Background_Border.png",
+            "title": "10% commission",
+            "text": "On every sale tracked to your discount code, paid out monthly"
+          }
+        },
+        "item_y3LkcF": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/Background_Border_1.png",
+            "title": "Paid promotion",
+            "text": "We invest our own ad budget to put your content in front of thousands of new potential fans."
+          }
+        },
+        "item_TQrTYD": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/Group_7_2x_0b2ad2e4-2f08-4d93-a79f-ae1ff91b931e.png",
+            "title": "Unique tracking code",
+            "text": "Custom codes that offer your audience exclusive discounts while securing your attribution."
+          }
+        },
+        "item_AqU9Md": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/Background_Border_2.png",
+            "title": "Zero extra effort",
+            "text": "Keep doing what you love. We handle the technical set-up, the ad management, and the fulfillment. You just create."
+          }
+        }
+      },
+      "block_order": [
+        "item_BxXyGK",
+        "item_y3LkcF",
+        "item_TQrTYD",
+        "item_AqU9Md"
+      ],
+      "name": "Creator What You Get",
+      "settings": {
+        "heading": "What you get"
+      }
+    },
+    "ss_partnership_ads_hwFJbf": {
+      "type": "ss-partnership-ads",
+      "blocks": {
+        "step_GWVzEQ": {
+          "type": "step",
+          "settings": {
+            "step": "Open the post in Instagram and tap the three-dot menu (⋯)"
+          }
+        },
+        "step_iDRMVp": {
+          "type": "step",
+          "settings": {
+            "step": "Tap \"Partnership ad settings\" (or \"Branded content tools\") <span>The label varies slightly depending on your app version</span>"
+          }
+        },
+        "step_WhrLqg": {
+          "type": "step",
+          "settings": {
+            "step": "Toggle on \"Allow brand partner to boost\""
+          }
+        },
+        "step_4HNkzn": {
+          "type": "step",
+          "settings": {
+            "step": "Search for and add Reviv as your brand partner"
+          }
+        },
+        "step_97ayCW": {
+          "type": "step",
+          "settings": {
+            "step": "Copy the Partnership Ad code and send it to us  <span>Takes about 30 seconds per post once you've done it once</span>"
+          }
+        }
+      },
+      "block_order": [
+        "step_GWVzEQ",
+        "step_iDRMVp",
+        "step_WhrLqg",
+        "step_4HNkzn",
+        "step_97ayCW"
+      ],
+      "name": "SS Partnership Ads",
+      "settings": {
+        "heading": "What are Instagram Partnership Ads?",
+        "intro": "Instagram Partnership Ads let us put paid promotion behind your existing posts — with your permission. Your content stays yours, it just reaches a much bigger audience. Here's how to set it up for any post you're happy for us to boost:",
+        "note": "<b>Your post won't change</b> — it stays on your profile exactly as it is.\nWe just use the code to run it as a paid ad on our end, tagged as a paid partnership with you."
+      }
+    },
+    "ss_tiktok_reviv_cta_NDULji": {
+      "type": "ss-tiktok-reviv-cta",
+      "custom_css": [
+        ".reviv-cta {background: #16140f;}",
+        ".reviv-cta__box {border-radius: 0; background: linear-gradient(99.99deg, #e9cfb1 0.33%, #ffe6c2 64.4%);}",
+        ".reviv-cta__subtext {color: #b76c45;}",
+        ".reviv-cta__button {background: #ecbf7c;}",
+        ".reviv-cta__note {margin-top: 15px; font-size: 14px; color: #1b1b1b; font-style: normal;}"
+      ],
+      "name": "SS Tiktok Reviv CTA",
+      "settings": {
+        "heading": "Ready to earn with Reviv?",
+        "subtext": "Drop us a message and we'll take it from there.",
+        "button_text": "affiliates@getreviv.com",
+        "button_link": "mailto:affiliates@getreviv.com",
+        "note": "We'll reply within 1–2 business days"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ss_creator_partnership_piBq8e",
+    "ss_how_it_works_4Yyp7K",
+    "ss_creator_what_you_get_4a7m8X",
+    "ss_partnership_ads_hwFJbf",
+    "ss_tiktok_reviv_cta_NDULji"
+  ]
+}

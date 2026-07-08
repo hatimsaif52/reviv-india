@@ -1,0 +1,469 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "product_navbar_7EB9E4": {
+      "type": "product-navbar",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "judge_me_reviews_preview_badge_EAUeai": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+            "quantity_style": "default"
+          }
+        },
+        "custom_liquid_zeyt9h": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<p style=\"font-size:14px; margin:0; padding:0; color:yellow; text-align:center;\">\n    ★★★★★ Google Reviews\n</p>"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "custom_liquid_aFheq7": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div class=\"testimonial-card\">\n      <div class=\"testimonial-header\">\n        <div class=\"profile\">\n          <img class=\"profile-image\" width=\"100\" height=\"100\" src=\"{{ 'andrew-testimonial.png' | asset_url }}\" alt=\"Andrew from SKOOL Community\">\n          <strong class=\"profile-name\">Andrew</strong>\n        </div>\n        <div class=\"brand-logo\">\n          <span class=\"logo-letter logo-s\">s</span>\n          <span class=\"logo-letter logo-k\">k</span>\n          <span class=\"logo-letter logo-o1\">o</span>\n          <span class=\"logo-letter logo-o2\">o</span>\n          <span class=\"logo-letter logo-l\">l</span>\n        </div>\n      </div>\n      <blockquote class=\"testimonial-quote\">\n        \"Structurally and neurologically I feel so much better after I started the Reviv.\"\n      </blockquote>\n    </div>\n\n{% style %}\n.testimonial-card {\n  max-width: 42rem;\n  background: rgba(239, 201, 139, 0.04);\n  border: 1px solid #ffd7ba;\n  border-radius: 32px;\n  padding: 2rem;\n  position: relative;\n}\n\n.testimonial-header {\n  display: flex;\n  align-items: flex-start;\n  justify-content: space-between;\n  margin-bottom: 2rem;\n}\n\n.profile {\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n}\n\n.profile-image {\n  width: 4rem;\n  height: 4rem;\n  border-radius: 50%;\n  object-fit: cover;\n}\n\n.profile-name {\n  color: white;\n  font-size: 1.875rem;\n  font-weight: 600;\n}\n\n.brand-logo {\n  font-size: 2.25rem;\n  font-weight: 700;\n}\n\n.logo-letter {\n  font-weight: bold;\n}\n\n.logo-s {\n  color: #1b3bdb;\n}\n\n.logo-k {\n  color: #db1b1b;\n}\n\n.logo-o1 {\n  color: #dbc31b;\n}\n\n.logo-o2 {\n  color: #1bdbdb;\n}\n\n.logo-l {\n  color: #db1b1b;\n}\n\n.testimonial-quote {\n  color: rgba(255, 255, 255, 0.8);\n  font-weight: 400;\n  font-size: 18px;\n  letter-spacing: -0.02em;\n  line-height: 1.3;\n  font-style: italic;\n  border: none;\n  padding: 0;\n  margin: 0;\n}\n\n/* Responsive styles */\n@media (max-width: 640px) {\n  .testimonial-card {\n    padding: 1.5rem;\n  }\n  .profile-name {\n    font-size: 1.5rem;\n  }\n  .brand-logo {\n    font-size: 1.75rem;\n  }\n  .testimonial-quote {\n    font-size: 16px;\n  }\n}\n{% endstyle %}"
+          }
+        },
+        "custom_liquid_4YiTcD": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<p style=\"font-size:14px; margin:0; padding:0; color:white; text-align:center;\">\n    <span style=\"height:8px; width:8px; background-color:green; border-radius:50%; display:inline-block; animation:blinking 1.5s infinite;\"></span>\n    <span style=\"color:green;\">Note:</span> Only <span style=\"font-weight:bold;\">7</span> units left in stock\n</p>\n\n<style>\n@keyframes blinking {\n    0% { opacity: 1.0; }\n    50% { opacity: 0.0; }\n    100% { opacity: 1.0; }\n}\n</style>"
+          }
+        },
+        "icon_with_text_cbe7i6": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "center_content": false,
+            "icon_1": "heart",
+            "heading_1": "<strong>Trusted by 30k+ Customers</strong>",
+            "icon_2": "lock",
+            "image_2": "shopify://shop_images/Lock_67b88b24-0f3c-4d9a-a6bd-7c908dac2fa0.png",
+            "heading_2": "<strong>Secure Checkout</strong>",
+            "icon_3": "return",
+            "heading_3": ""
+          }
+        },
+        "collapsible_tab_MdA9x7": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What's inside?",
+            "icon": "box",
+            "content": "{{ product.metafields.custom.dropdown_two_content_merch | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "collapsible_tab_bETJ9W": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How It Works?",
+            "icon": "question_mark",
+            "content": "{{ product.metafields.custom.dropdown_one_content_merch | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "collapsible_tab_PmmWBf": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How To Wear",
+            "icon": "sheild",
+            "content": "{{ product.metafields.custom.dropdown_three_content_merch | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "judge_me_reviews_preview_badge_EAUeai",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "custom_liquid_zeyt9h",
+        "buy_buttons",
+        "custom_liquid_aFheq7",
+        "custom_liquid_4YiTcD",
+        "icon_with_text_cbe7i6",
+        "collapsible_tab_MdA9x7",
+        "collapsible_tab_bETJ9W",
+        "collapsible_tab_PmmWBf",
+        "description",
+        "share"
+      ],
+      "custom_css": [
+        ".product__title h1 {color: #e5c085;}",
+        ".icon-with-text .icon {fill: #e5c085;}",
+        ".icon-accordion {fill: #e5c085;}",
+        ".icon-caret {fill: #e5c085;}",
+        ".icon-with-text--horizontal {justify-content: space-between;}",
+        ".product__media.media.media--transparent img {border-radius: 12px;}",
+        ".accordion__content ul {margin: 0;}"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "show_sold_alert": false,
+        "color_scheme": "scheme-4",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "hover",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12,
+        "show_benefits": false
+      }
+    },
+    "video_yrzCBT": {
+      "type": "video",
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https://youtu.be/qiP89vbttqc",
+        "cover_image": "shopify://shop_images/youtube_thumbnail_how_to_wear.svg",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "toe_longform": {
+      "type": "merch-toe-separator-longform",
+      "blocks": {
+        "toc_item_1": {
+          "type": "toc_item",
+          "settings": {
+            "anchor_id": "supporting-your-bodys-foundation",
+            "title": "Supporting your body's foundation",
+            "subitems": ""
+          }
+        },
+        "toc_item_2": {
+          "type": "toc_item",
+          "settings": {
+            "anchor_id": "from-tooth-to-toe",
+            "title": "From tooth to toe — total alignment",
+            "subitems": "<ul><li>Support from the foundation to the crown</li></ul>"
+          }
+        },
+        "toc_item_3": {
+          "type": "toc_item",
+          "settings": {
+            "anchor_id": "the-biomechaneer-story",
+            "title": "The Biomechaneer story: why these are different",
+            "subitems": "<ul><li>Why generic spacers weren't enough</li><li>Systemic improvements</li></ul>"
+          }
+        },
+        "point_1": {
+          "type": "point",
+          "settings": {
+            "anchor_id": "supporting-your-bodys-foundation",
+            "layout": "image_left",
+            "eyebrow": "Foundation",
+            "title": "Supporting your body's",
+            "title_accent": "foundation",
+            "subtitle": "",
+            "body": "<p>The ergonomic design of these toe spacers restores the natural width of the forefoot—a structural necessity commonly lost to modern footwear.</p><p>By encouraging a wider base, the device recovers your natural alignment from the ground up.</p>",
+            "bullets": "",
+            "callout_title": "Usage tip.",
+            "callout": "<p>Wear the separators progressively — start with a few minutes and build up to a few hours each day to maximize the benefits.</p>",
+            "footer_line": "From tooth to toe: this is the support your body needs.",
+            "image": "shopify://shop_images/a2483dbc8abf3b391ef806fd152bd0af0dbb4ff5_d8635609-42b8-4a18-a148-1068ea802610.png"
+          }
+        },
+        "point_2": {
+          "type": "point",
+          "settings": {
+            "anchor_id": "from-tooth-to-toe",
+            "layout": "image_right",
+            "eyebrow": "Total Alignment",
+            "title": "From tooth",
+            "title_accent": "to toe",
+            "subtitle": "Support From the Foundation to the Crown",
+            "body": "<p>To truly optimize the human body, you must address its two most critical sensory and structural anchors: <strong>the feet and the teeth</strong>.</p><p>The feet provide your physical base. The teeth act as the fundamental support for your skull.</p><p>When both are supported, you remove the primary tension points that lead to chronic pain and structural collapse.</p><p>We believe that by combining the Reviv mouthguard with these toe separators, you achieve <strong>two-directional biomechanical restoration:</strong></p>",
+            "bullets": "<ul><li>Untwist your skeleton, expand your skull</li><li>Improve structural-related body functions</li><li>Become stronger, more flexible, more symmetrical</li></ul>",
+            "callout_title": "",
+            "callout": "",
+            "footer_line": "",
+            "image": "shopify://shop_images/8d8d229321e2bf5a94d1aa5106d067b10205dc6c_6a1040d6-47ab-4029-947f-7ee41f85e5bf.jpg"
+          }
+        },
+        "point_story_Aigafg": {
+          "type": "point_story",
+          "settings": {
+            "anchor_id": "",
+            "title": "The Biomechaneer story: <br>why these are",
+            "title_accent": "different",
+            "subtitle": "Support From the Foundation to the Crown",
+            "image_1": "shopify://shop_images/a3846c466c370abf62b16b3ad7a19d7399c03b91.jpg",
+            "text_1": "<p>As I've seen from my physiotherapy training, feet play a huge role in postural balance and alignment. However, most people ignore how much toe splay determines overall function. <br/><br/>Sadly, modern-day footwear is unintentionally designed to sabotage this. The narrow toe box found in most footwear gradually cramps the toes together, compromising the very base we stand on. <br/><br/><strong>When the base fails, the entire structure of the body suffers.</strong></p>",
+            "image_2": "shopify://shop_images/91b369920e5bcf4152ba94551e329c25ff321862.jpg",
+            "heading_2": "Why generic spacers weren't enough",
+            "text_2": "<p>Toe separators aim to reverse this process. However, most brands fall short in their attempt. <br/><br/>I've personally been part of the \"barefoot\" community for years, wearing generic spacers and switching exclusively to barefoot shoes. While I noticed increased mobility and strength, I only restored part of the damage. <br/><br/>With my teeth still locked in an occlusion, my skull remained restricted, making further progress difficult. <strong>After freeing up both tension points, progress accelerated.</strong></p>",
+            "bottom_intro": "<p>Once combined with a Reviv mouthguard, any positive postural intervention simply sticks much more easily. As a result, this gave me: </p>",
+            "bottom_bullets": "<ul><li><strong>Improved balance</strong> — a wider forefoot area creates a more stable center of gravity.</li><li><strong>Increased facial symmetry</strong> — relieving ascending and descending tension patterns.</li><li><strong>Better glute engagement</strong> — improved big toe activation leads to better posterior chain recruitment and increased lifting strength.</li><li>And more.</li></ul><p>All in all, this unique pairing is the missing approach most people need. From tooth to toe.</p>",
+            "bottom_image": "shopify://shop_images/ac53c49b3b23d2cf6bae02ad4190b238928aee7e.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "toc_item_1",
+        "toc_item_2",
+        "toc_item_3",
+        "point_1",
+        "point_2",
+        "point_story_Aigafg"
+      ],
+      "settings": {
+        "heading_left": "Table of",
+        "heading_accent": "contents",
+        "color_scheme": "scheme-4"
+      }
+    },
+    "rich_text_VA4icr": {
+      "type": "rich-text",
+      "blocks": {
+        "button_MJ7xq7": {
+          "type": "button",
+          "settings": {
+            "button_label": "Buy it now",
+            "button_link": "#",
+            "button_id": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_MJ7xq7"
+      ],
+      "custom_css": [
+        ".button {border-radius: 50px; font-weight: bold; letter-spacing: 0; min-width: 150px;}",
+        ".button:after {display: none;}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "full_width": true,
+        "padding_top": 28,
+        "padding_bottom": 64,
+        "custom__class": ""
+      }
+    },
+    "17434042364ad1184b": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_KVQffE": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_KVQffE"
+      ],
+      "custom_css": [
+        "{background: #232021;}",
+        ".jdgm-rev-widg__header {background: #efc98b0a; border: 1px solid rgba(239, 201, 139, 0.6); border-radius: 10px; color: #fff;}",
+        ".jdgm-rev-widg__title {color: #fff;}",
+        ".jdgm-histogram__frequency {color: #fff;}",
+        ".jdgm-rev-widg__actions {background: #232021; margin: 0;}",
+        ".jdgm-rev.jdgm-rev {background: #efc98b0a; color: #fff; border: 1px solid rgba(239, 201, 139, 0.6); border-radius: 10px !important;}"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "custom_css": [
+        ".card__heading a {color: #e5c085; font-size: 18px;}",
+        "h2.related-products__heading.inline-richtext.h2 {text-align: center; color: #e5c085; font-size: 48px;}",
+        "ul.grid.product-grid.grid--4-col-desktop.grid--1-col-tablet-down {justify-content: center;}"
+      ],
+      "settings": {
+        "heading": "OTHER PRODUCTS",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-4",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "1",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_PKizka": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_YjaDWr": {
+          "type": "heading",
+          "settings": {
+            "heading": "Other Products",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_YjaDWr"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "full_width": true,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom__class": ""
+      }
+    },
+    "product_cards_tNRnC4": {
+      "type": "product-cards",
+      "blocks": {
+        "product_card_hRHHpx": {
+          "type": "product_card",
+          "settings": {
+            "product": "nasal-dilator",
+            "is_new": true
+          }
+        },
+        "product_card_8zYWgX": {
+          "type": "product_card",
+          "settings": {
+            "product": "jaw-trainer",
+            "is_new": true
+          }
+        },
+        "product_card_kAictm": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-one-without-support",
+            "is_new": false
+          }
+        },
+        "product_card_rg8YpD": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-two-without-support",
+            "is_new": false
+          }
+        },
+        "product_card_KVQpJh": {
+          "type": "product_card",
+          "settings": {
+            "product": "r3-revivthree-support-package",
+            "is_new": false
+          }
+        }
+      },
+      "block_order": [
+        "product_card_hRHHpx",
+        "product_card_8zYWgX",
+        "product_card_kAictm",
+        "product_card_rg8YpD",
+        "product_card_KVQpJh"
+      ],
+      "name": "Product Cards",
+      "settings": {
+        "section_color_scheme": "scheme-4",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_classes": ""
+      }
+    }
+  },
+  "order": [
+    "product_navbar_7EB9E4",
+    "main",
+    "video_yrzCBT",
+    "toe_longform",
+    "rich_text_VA4icr",
+    "17434042364ad1184b",
+    "related-products",
+    "rich_text_PKizka",
+    "product_cards_tNRnC4"
+  ]
+}

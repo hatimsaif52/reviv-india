@@ -1,0 +1,874 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "product_navbar_exWwk4": {
+      "type": "product-navbar",
+      "disabled": true,
+      "name": "Product Navbar",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_product_W8Pde8": {
+      "type": "featured-product",
+      "blocks": {
+        "text_MyNTAX": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_aLgaXn": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_9iG3Gn": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_B9A6EV": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_YGJn7p": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_byeWGr": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "custom_liquid_yVCfyH": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"testimonial-card\">\n      <div class=\"testimonial-header\">\n        <div class=\"profile\">\n          <img class=\"profile-image\" width=\"100\" height=\"100\" src=\"{{ 'andrew-testimonial.png' | asset_url }}\" alt=\"Andrew from SKOOL Community\">\n          <strong class=\"profile-name\">Andrew</strong>\n        </div>\n        <div class=\"brand-logo\">\n          <span class=\"logo-letter logo-s\">s</span>\n          <span class=\"logo-letter logo-k\">k</span>\n          <span class=\"logo-letter logo-o1\">o</span>\n          <span class=\"logo-letter logo-o2\">o</span>\n          <span class=\"logo-letter logo-l\">l</span>\n        </div>\n      </div>\n      <blockquote class=\"testimonial-quote\">\n        \"Structurally and neurologically I feel so much better after I started the Reviv.\"\n      </blockquote>\n    </div>\n\n{% style %}\n.testimonial-card {\n  max-width: 42rem;\n  background: rgba(239, 201, 139, 0.04);\n  border: 1px solid #ffd7ba;\n  border-radius: 32px;\n  padding: 2rem;\n  position: relative;\n}\n\n.testimonial-header {\n  display: flex;\n  align-items: flex-start;\n  justify-content: space-between;\n  margin-bottom: 2rem;\n}\n\n.profile {\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n}\n\n.profile-image {\n  width: 4rem;\n  height: 4rem;\n  border-radius: 50%;\n  object-fit: cover;\n}\n\n.profile-name {\n  color: white;\n  font-size: 1.875rem;\n  font-weight: 600;\n}\n\n.brand-logo {\n  font-size: 2.25rem;\n  font-weight: 700;\n}\n\n.logo-letter {\n  font-weight: bold;\n}\n\n.logo-s {\n  color: #1b3bdb;\n}\n\n.logo-k {\n  color: #db1b1b;\n}\n\n.logo-o1 {\n  color: #dbc31b;\n}\n\n.logo-o2 {\n  color: #1bdbdb;\n}\n\n.logo-l {\n  color: #db1b1b;\n}\n\n.testimonial-quote {\n  color: rgba(255, 255, 255, 0.8);\n  font-weight: 400;\n  font-size: 18px;\n  letter-spacing: -0.02em;\n  line-height: 1.3;\n  font-style: italic;\n  border: none;\n  padding: 0;\n  margin: 0;\n}\n\n/* Responsive styles */\n@media (max-width: 640px) {\n  .testimonial-card {\n    padding: 1.5rem;\n  }\n\n  .profile-name,\n  .testimonial-quote {\n    font-size: 1.5rem;\n  }\n\n  .brand-logo {\n    font-size: 1.875rem;\n  }\n\n  .profile-image {\n    width: 3rem;\n    height: 3rem;\n  }\n}\n{% endstyle %}"
+          }
+        },
+        "icon_with_text_rLViKi": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "truck",
+            "heading_1": "<strong>Fast Shipping</strong>",
+            "icon_2": "lock",
+            "heading_2": "<strong>Secure Checkout</strong>",
+            "icon_3": "return",
+            "heading_3": ""
+          }
+        },
+        "collapsible_tab_G8qDVx": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How it works?",
+            "icon": "question_mark",
+            "content": "<ul><li>Wear the mouthguard every night and as much as you can during the day (eg. 1-2 hours)</li><li>The soft tissue of the jaw and skull begin to unwind and many health issues begin to improve.</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_iAYGya": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Our Guarantee",
+            "icon": "heart",
+            "content": "<p>Our 90-day guarantee only applies when purchasing the package with support as that is the only way we can ensure you are doing the method correctly.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_8F6AEe": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping Information",
+            "icon": "truck",
+            "content": "<ul><li>Shipping typically takes 7-10 days to most destinations including the US.</li><li>Orders typically ship within 24 hours and you will receive a tracking number by email as soon as it ships.</li></ul>",
+            "page": ""
+          }
+        },
+        "share_YmqPGb": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_MyNTAX",
+        "title_aLgaXn",
+        "price_9iG3Gn",
+        "variant_picker_B9A6EV",
+        "quantity_selector_YGJn7p",
+        "buy_buttons_byeWGr",
+        "custom_liquid_yVCfyH",
+        "icon_with_text_rLViKi",
+        "collapsible_tab_G8qDVx",
+        "collapsible_tab_iAYGya",
+        "collapsible_tab_8F6AEe",
+        "share_YmqPGb"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "r2-reviv-two-support-package",
+        "color_scheme": "scheme-4",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "alternate_product": [
+          "reviv-two"
+        ],
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_faCUPg": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_e6aEBa": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ken-leaver.png",
+            "title": "<strong>- THE FOUNDER -</strong>",
+            "text": "<p>\"In 2020 I was exhausted by 6pm and got sick a couple times a year.  For the last two years at the age of 47 I work from 8am till past 10pm everyday without burning out.  I haven't been sick in over four years and I feel like a beast everyday.\"</p><p>★★★★★<br/>- Ken</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        }
+      },
+      "block_order": [
+        "column_e6aEBa"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "box_link": false,
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 1,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-0b5397a7-cffb-42ac-88ef-8cf9135047b7",
+        "section_color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": ""
+      }
+    },
+    "rich_text_eaACRR": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_dnUmn3": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why People Love Reviv",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_dnUmn3"
+      ],
+      "custom_css": [
+        "h2 {font-size: 62px; font-weight: 400; letter-spacing: -0.02em; text-transform: uppercase;}",
+        "@media screen and (max-width: 767px) {h2 {font-size: 40px; }}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-0b5397a7-cffb-42ac-88ef-8cf9135047b7",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 12,
+        "custom__class": ""
+      }
+    },
+    "multicolumn_ipnJHW": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Yz8xwB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/zap-icon.png",
+            "title": "Fast results",
+            "text": "<p>95%+ of folks that start Reviv feel something improving in the first week.</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_CXRKBF": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/phone-icon.png",
+            "title": "Personalized support",
+            "text": "<p>Ken reviews everyone's journals each week to stay up on their progress and give them personalized advice.</p><p>You can also ask Ken a question as a message anytime.</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_xyxV3r": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/coin-icon.png",
+            "title": "Affordability",
+            "text": "<p>We view that we are democratizing health to the masses.  While TMJ dentists charge thousands of dollars we're delivering far better results at something like 1-2% of what they cost.</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        }
+      },
+      "block_order": [
+        "column_Yz8xwB",
+        "column_CXRKBF",
+        "column_xyxV3r"
+      ],
+      "custom_css": [
+        ".media--transparent {padding: 0 !important;}",
+        ".media.media--transparent.media--adapt img {position: relative !important; margin: 0 auto; width: 48px;}",
+        ".multicolumn-card__info {text-align: center;}",
+        ".multicolumn-card__info .rte p {font-size: 18px !important;}",
+        "h3 {color: rgba(35, 32, 33, 0.8); font-family: Roboto, sans-serif !important; letter-spacing: -0.02em; font-weight: bold; font-size: 32px; line-height: 110%; margin-bottom: 16px;}",
+        "p {color: rgba(35, 32, 33, 0.6); letter-spacing: -0.02em; font-weight: 400; font-size: 24px; line-height: 150%;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "box_link": false,
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-0b5397a7-cffb-42ac-88ef-8cf9135047b7",
+        "section_color_scheme": "scheme-0b5397a7-cffb-42ac-88ef-8cf9135047b7",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 24,
+        "padding_bottom": 0,
+        "custom_class": ""
+      }
+    },
+    "image_with_text_TcFbgM": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_WqQPBa": {
+          "type": "heading",
+          "settings": {
+            "heading": "Addresses TMJ",
+            "heading_size": "h1"
+          }
+        },
+        "text_zqK9PV": {
+          "type": "text",
+          "settings": {
+            "text": "<p>\"Ive been wearing my appliance for 3 weeks now.  No more TMJ pain at all! I can do chin tuck exercises without my neck muscles spasming and cramping.\" - Jay</p>",
+            "text_style": "body",
+            "text_size": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "heading_WqQPBa",
+        "text_zqK9PV"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/image.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "wrap_image_to_container": false,
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom__class": ""
+      }
+    },
+    "image_with_text_XBXFze": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_PhyCA4": {
+          "type": "heading",
+          "settings": {
+            "heading": "Gives you back energy",
+            "heading_size": "h1"
+          }
+        },
+        "text_iVxD8w": {
+          "type": "text",
+          "settings": {
+            "text": "<p>\"I wear it when driving the bus.  A day of work that normally knocks me out the next day had me full of energy.  Even when i got home after a very long day.  I love this thing!\" - George</p>",
+            "text_style": "body",
+            "text_size": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "heading_PhyCA4",
+        "text_iVxD8w"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/image_2.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "wrap_image_to_container": false,
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom__class": ""
+      }
+    },
+    "image_with_text_dFNbFe": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_6JbiDX": {
+          "type": "heading",
+          "settings": {
+            "heading": "Posture",
+            "heading_size": "h1"
+          }
+        },
+        "text_YVycYK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>\"I noticed the other day the area where my neck meets my upper back is more flat .  I always had a bit of kyphosis and rounded soldiers and it seems to be correcting.\" - Harvwin</p>",
+            "text_style": "body",
+            "text_size": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "heading_6JbiDX",
+        "text_YVycYK"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/image_3.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "wrap_image_to_container": false,
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom__class": ""
+      }
+    },
+    "multicolumn_HQbB6H": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_xrzKRj": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<p>\"My posture seems to be steadily improving.  Noticing less of a feeling of things pulling downwards around my whole skull.\" - Evelyn</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_zYitYF": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<p>\"I noticed the other day the area where my neck meets my upper back is more flat .  I always had a bit of kyphosis and rounded soldiers and it seems to be correcting.\" - Harvwin</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_gfLcLb": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<p>\"Im a long time practitioner of various forms of yoga and have been using Reviv for one week now.  I liked it so much I added using Reviv to my yoga practice.\" - Margarita</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_JRqLem": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<p>\"I have been using Reviv every night for about a month now.  My main issue was brain fog and pain/migraines caused by a bike accident.  Since wearing it, i have had a migraine or any of the localised pain.  How amazing is that?  Also my neurological function has improved.\" - Heather C</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_dU8nUX": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<p>\"I am obsessed with wearing it.  My disposition relaxes, my thoughts focus and I enjoy being ME.  And i have been so surprised at how much my energy is present all day, in shockingly steady form.  Wow.  I'm still trying to wrap my head around all this.\" - Heather P</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_Y9Mayb": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<p>\"At work ive been uncharacteristically positive to the point where i can see in customers and cowokrers faces that im making their day better.  And at home im just more positive and talkative.\" - Dallas</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_dE4wFG": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<p>\"I am having so much less pain, for the first time since 2021.  I could cry!\" - Genevieve</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_X4Trgd": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<p>\"The biggest improvement has been my energy and mood during the day has greatly imporved.  Its made it much easier to 'dad'.\" - Andrew G</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        }
+      },
+      "block_order": [
+        "column_xrzKRj",
+        "column_zYitYF",
+        "column_gfLcLb",
+        "column_JRqLem",
+        "column_dU8nUX",
+        "column_Y9Mayb",
+        "column_dE4wFG",
+        "column_X4Trgd"
+      ],
+      "custom_css": [
+        "h2 {width: 100%; text-align: center;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "What our community says",
+        "box_link": false,
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "square",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-4",
+        "section_color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": ""
+      }
+    },
+    "rich_text_GeicmM": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_6eAQqp": {
+          "type": "heading",
+          "settings": {
+            "heading": "90-Day Guarantee",
+            "heading_size": "h1"
+          }
+        },
+        "text_m4q4Ww": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If you wear the appliance consistently and don't agree that your health issues are improving in the first 90 days we give you your money back.  Period.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_6eAQqp",
+        "text_m4q4Ww"
+      ],
+      "disabled": true,
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-522b6c27-788f-4b7e-bbb7-d4f61d40572f",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "custom__class": ""
+      }
+    },
+    "featured_blog_9YFVXE": {
+      "type": "featured-blog",
+      "disabled": true,
+      "custom_css": [
+        "h2 {text-align: center; width: 100%; color: #e5c085; text-transform: uppercase; max-width: 600px; margin: 0 auto;}",
+        ".article-card .card__heading {font-family: \"Roboto\" !important; font-style: normal; font-weight: 600; font-size: 24px; line-height: 32px;}"
+      ],
+      "name": "t:sections.featured-blog.presets.name",
+      "settings": {
+        "heading": "Learn more about how this method works",
+        "heading_size": "h1",
+        "blog": "content",
+        "post_limit": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-4",
+        "show_image": true,
+        "show_date": false,
+        "show_author": false,
+        "show_view_all": false,
+        "padding_top": 100,
+        "padding_bottom": 72
+      }
+    },
+    "substack_blog_EWLk44": {
+      "type": "substack-blog",
+      "blocks": {
+        "column_EixMkt": {
+          "type": "column",
+          "settings": {
+            "category": "",
+            "article_type": "",
+            "date": "",
+            "image": "shopify://shop_images/article-1.png",
+            "title": "I Am Going to Challenge What You Believe About Health",
+            "text": "<p>Challenges traditional health views, introduces the balloon theory, and explores how dental health affects overall well-being.</p>",
+            "link_label": "Read post",
+            "link": "https://reviv.substack.com/p/i-am-going-to-challenge-what-you",
+            "youtube_video_url": ""
+          }
+        },
+        "column_nfCTVk": {
+          "type": "column",
+          "settings": {
+            "category": "",
+            "article_type": "",
+            "date": "",
+            "image": "shopify://shop_images/article-2.png",
+            "title": "The Balloon Theory",
+            "text": "<p>Explains how dental health impacts overall well-being by linking teeth to various health issues and introduces methods for addressing these connections.</p>",
+            "link_label": "Read post",
+            "link": "https://reviv.substack.com/p/so-why-do-the-teeth-relate-to-your",
+            "youtube_video_url": ""
+          }
+        },
+        "column_WRhmbb": {
+          "type": "column",
+          "settings": {
+            "category": "",
+            "article_type": "",
+            "date": "",
+            "image": "shopify://shop_images/article-3.png",
+            "title": "How to Correct the Problem",
+            "text": "<p>Provides strategies for addressing dental health issues and correcting related problems for improved overall well-being.</p>",
+            "link_label": "Read post",
+            "link": "https://reviv.substack.com/p/how-to-solve-the-problem",
+            "youtube_video_url": ""
+          }
+        },
+        "column_Jt6B9d": {
+          "type": "column",
+          "settings": {
+            "category": "",
+            "article_type": "",
+            "date": "",
+            "image": "shopify://shop_images/article-4.png",
+            "title": "What Is Impacted by These Biomechanics?",
+            "text": "<p>Explores how dental biomechanics affect various aspects of health and well-being.</p>",
+            "link_label": "Read post",
+            "link": "https://reviv.substack.com/p/what-is-impacted-by-these-biomechanics",
+            "youtube_video_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_EixMkt",
+        "column_nfCTVk",
+        "column_WRhmbb",
+        "column_Jt6B9d"
+      ],
+      "custom_css": [
+        "h2 {text-align: center;}",
+        ".rte {color: #fff;}"
+      ],
+      "name": "Substack Blogs",
+      "settings": {
+        "title": "Learn More About How This Method Works",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-2ab1995e-c67e-4402-af73-6a85779ae883",
+        "section_color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": "blog-cards-style",
+        "custom__class2": ""
+      }
+    },
+    "collapsible_content_BPhtfa": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_prjAyP": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Why does this work?",
+            "icon": "lightning_bolt",
+            "row_content": "<p>Think of the soft tissue (e.g., fascia & skin) covering the bones of the skull as a balloon. When you grind your teeth down, it is as if you're taking air out of the balloon.<br/><br/>When this balloon deflates, it crushes the skull, which in turn crushes the brain and causes cognitive and neurological issues over time.<br/><br/>In general, we as a society like to call this process 'aging.' But if you grind down your teeth faster, you 'age' faster. The good part is you can reverse the process by using the same physics in reverse, i.e., you 'add' height back to the teeth.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_bdLKUB": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How many people have done this process?",
+            "icon": "lightning_bolt",
+            "row_content": "<p>About 500 people have been using the appliance and this method starting early 2023.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_tYLgEH": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How does sizing work?",
+            "icon": "check_mark",
+            "row_content": "<p>Generally we think most folks should get a large size appliance.<br/><br/>If you have a smaller mouth than we recommend you get a small.  We only have two sizes.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_yxpbUG": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is this similar to \"Mewing\"?",
+            "icon": "check_mark",
+            "row_content": "<p>While \"Mewing\" has some of the same benefits and leverages some of the same mechanics, Ken's view is that this approach is far more efficient (ie. faster) than Mewing.<br/>Also it will work for a far higher percentage of folks than Mewing will.  <br/><br/>In fact it should work on everyone, which is why there is the guarantee.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_prjAyP",
+        "collapsible_row_bdLKUB",
+        "collapsible_row_tYLgEH",
+        "collapsible_row_yxpbUG"
+      ],
+      "custom_css": [
+        ".icon-accordion {display: none;}",
+        "h3 {font-size: 1em;}",
+        "h3:hover {text-decoration: none;}",
+        "summary {padding-left: 16px;}",
+        ".accordion__content {padding-left: 16px;}"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "scheme-0b5397a7-cffb-42ac-88ef-8cf9135047b7",
+        "container_color_scheme": "scheme-4",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": ""
+      }
+    },
+    "featured_collection_iRBYLr": {
+      "type": "featured-collection",
+      "disabled": true,
+      "custom_css": [
+        "h2.title {text-align: center; color: #e5c085; font-size: 48px;}",
+        ".card__content {padding: 0; margin: 0;}",
+        ".card__information {padding-left: 0;}",
+        ".card__information a {color: #e5c085; font-size: 18px; padding: 0 !important; margin: 0 !important;}",
+        ".product-grid {justify-content: center;}"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "OTHER PRODUCTS",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "reviv-one",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-4",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "other_product_UYUEig": {
+      "type": "other-product",
+      "blocks": {
+        "product_block_Qck7cb": {
+          "type": "product_block",
+          "settings": {
+            "product": "reviv-one-without-support-alex-variations-for-l-s",
+            "custom_title": "R1 (Reviv One) Without Support Package.",
+            "custom_price": "25 USD",
+            "custom_link": "/pages/r1-no-support"
+          }
+        },
+        "product_block_XmJhrJ": {
+          "type": "product_block",
+          "settings": {
+            "product": "revivone-w-support-alex-variations-for-l-s",
+            "custom_title": "R1 (Reviv One) + Support Package.",
+            "custom_price": "80 USD",
+            "custom_link": "shopify://pages/r1-with-support"
+          }
+        },
+        "product_block_GziADy": {
+          "type": "product_block",
+          "settings": {
+            "product": "reviv-two-without-support",
+            "custom_title": "R2 (RevivTwo) without Support",
+            "custom_price": "80 USD",
+            "custom_link": "shopify://pages/r2-no-support"
+          }
+        },
+        "product_block_BffAEV": {
+          "type": "product_block",
+          "settings": {
+            "product": "r2-reviv-two-support-package",
+            "custom_title": "R2 (Reviv Two) + Support Package",
+            "custom_price": "150 USD",
+            "custom_link": "shopify://pages/r2-with-support"
+          }
+        }
+      },
+      "block_order": [
+        "product_block_Qck7cb",
+        "product_block_XmJhrJ",
+        "product_block_GziADy",
+        "product_block_BffAEV"
+      ],
+      "name": "Other Products",
+      "settings": {
+        "heading": "OTHER PRODUCTS",
+        "color_scheme": "scheme-4"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product_navbar_exWwk4",
+    "featured_product_W8Pde8",
+    "multicolumn_faCUPg",
+    "rich_text_eaACRR",
+    "multicolumn_ipnJHW",
+    "image_with_text_TcFbgM",
+    "image_with_text_XBXFze",
+    "image_with_text_dFNbFe",
+    "multicolumn_HQbB6H",
+    "rich_text_GeicmM",
+    "featured_blog_9YFVXE",
+    "substack_blog_EWLk44",
+    "collapsible_content_BPhtfa",
+    "featured_collection_iRBYLr",
+    "other_product_UYUEig"
+  ]
+}

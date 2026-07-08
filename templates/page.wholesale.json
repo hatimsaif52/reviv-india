@@ -1,0 +1,89 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_XyMqhr": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_gXBtzd": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>WHOLESALE</strong>",
+            "heading_size": "h0"
+          }
+        },
+        "text_tbKPhc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Wholesale inquiries? We'd love to hear them.<br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_gXBtzd",
+        "text_tbKPhc"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 28,
+        "custom__class": ""
+      }
+    },
+    "17562841410f094335": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_nmyrxK": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "628502",
+            "text_color": "#202020",
+            "button_background_color": "#e5c085",
+            "button_label_color": "#000000",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 5,
+            "padding_bottom": 24,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_nmyrxK"
+      ],
+      "custom_css": [
+        "._inline_1q1d2_47 {--inline-container-max-width: 650px;}"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_XyMqhr",
+    "17562841410f094335"
+  ]
+}

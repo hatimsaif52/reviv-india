@@ -1,0 +1,56 @@
+{%- liquid
+  assign video_url = block.settings.youtube_video_url
+  assign video_id = ''
+
+  if video_url contains 'youtube.com'
+    if video_url contains 'watch?v='
+      assign video_id_parts = video_url | split: 'v='
+      assign video_id_param_parts = video_id_parts[1] | split: '&'
+      assign video_id = video_id_param_parts[0]
+    elsif video_url contains 'embed/'
+      assign video_id_parts = video_url | split: 'embed/'
+      assign video_id = video_id_parts[1]
+    endif
+  elsif video_url contains 'youtu.be'
+    assign video_id_parts = video_url | split: 'youtu.be/'
+    assign video_id = video_id_parts[1]
+  endif
+-%}
+
+{%- if video_id != blank -%}
+  <div class="multicolumn-card__video-wrapper multicolumn-card__video-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}">
+    <div class="multicolumn-card__video">
+      <iframe
+        title="Youtube Video"
+        src="https://www.youtube.com/embed/{{ video_id }}?iv_load_policy=3&rel=0&modestbranding=1&playsinline=1&color=white"
+        style="position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
+        allow="presentation; fullscreen; accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        frameborder="0"
+      ></iframe>
+    </div>
+  </div>
+{%- else -%}
+  <p>Invalid YouTube URL format.</p>
+{%- endif -%}
+
+{%- style -%}
+  .multicolumn-card__video-wrapper {
+    position: relative; /* For aspect ratio positioning */
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
+    height: 0;
+    overflow: hidden;
+  }
+
+  .multicolumn-card__video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    loading="lazy";
+  }
+
+  .multicolumn-card__video.media--adapt {
+    padding-bottom: 0 !important; /* Override inline style if any */
+  }
+{%- endstyle -%}

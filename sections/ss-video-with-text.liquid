@@ -1,0 +1,260 @@
+{{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+.section-{{ section.id }}-padding {
+  padding-top: {{ section.settings.padding_top }}px;
+  padding-bottom: {{ section.settings.padding_bottom }}px;
+}
+
+/* .support-video-section {
+  background: linear-gradient(90deg, #000 0%, #111 60%, #0a1a33 100%);
+  border-radius: 12px;
+} */
+
+.support-video-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 40px;
+align-items: flex-start;
+}
+
+@media screen and (max-width: 750px) {
+  .support-video-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.support-video-text {
+  color: #fff;
+  h2{
+    font-size: 28px;
+  }
+}
+
+.support-video-text h2 {
+  margin-bottom: 14px;    
+  margin-top: 0;
+}
+
+.support-video-text .rte {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.support-video-media {
+  position: relative;
+  /* border-radius: 14px; */
+  overflow: hidden;
+  align-self: center;
+  /* background: #000; */
+}
+
+.support-video-media video,
+.support-video-media iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.support-play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.support-play-overlay svg {
+  width: 64px;
+  height: 64px;
+  fill: white;
+  opacity: 0.9;
+}
+.support-video-poster {
+  position: relative;
+  cursor: pointer;
+}
+
+.support-video-poster img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+{%- endstyle -%}
+
+<div class="section-{{ section.id }}-padding color-{{ section.settings.section_color_scheme }}">
+  <div class="page-width">
+    <div class="support-video-section">
+      <div class="support-video-grid color-{{ section.settings.color_scheme }}">
+
+        <!-- TEXT SIDE -->
+        <div class="support-video-text">
+          {% if section.settings.heading != blank %}
+            <h2>{{ section.settings.heading }}</h2>
+          {% endif %}
+
+          {% if section.settings.text != blank %}
+            <div class="rte">{{ section.settings.text }}</div>
+          {% endif %}
+        </div>
+
+        <!-- VIDEO SIDE -->
+        <div class="support-video-media">
+
+          {% if section.settings.video_url != blank %}
+            <video
+              src="{{ section.settings.video_url }}"
+              poster="{{ section.settings.poster | image_url }}"
+              controls
+              preload="metadata"
+            ></video>
+          {% elsif section.settings.embed_url != blank %}
+            <div class="support-video-poster"
+                data-embed="{{ section.settings.embed_url }}">
+
+                <img class="yt-thumb" alt="Video thumbnail" loading="lazy">
+
+                {% if section.settings.show_play_icon %}
+                <div class="support-play-overlay">
+                    <svg width="119" height="119" viewBox="0 0 119 119" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="59.5" cy="59.5" r="59.5" fill="#232021" fill-opacity="0.35"/>
+                        <path d="M78.25 56.1025C81.25 57.8346 81.25 62.1654 78.25 63.8975L52.75 78.6191C49.7501 80.3512 46.0002 78.1866 46 74.7227L46 45.2773C46.0002 41.8134 49.7501 39.6488 52.75 41.3809L78.25 56.1025Z" fill="#232021" stroke="black"/>
+                    </svg>
+
+                </div>
+                {% endif %}
+            </div>
+          {% else %}
+            {{ 'image' | placeholder_svg_tag }}
+          {% endif %}
+{% comment %} 
+          {% if section.settings.show_play_icon %}
+            <div class="support-play-overlay">
+              <svg viewBox="0 0 64 64"><polygon points="24,18 24,46 46,32" /></svg>
+            </div>
+          {% endif %} {% endcomment %}
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.support-video-poster').forEach(function(poster) {
+
+    const url = poster.dataset.embed;
+
+    // Extract YouTube ID (works for watch, embed, youtu.be)
+    function getYouTubeID(url) {
+      const regExp = /(?:youtube\.com\/.*v=|youtu\.be\/|youtube\.com\/embed\/)([^&?/]+)/;
+      const match = url.match(regExp);
+      return match ? match[1] : null;
+    }
+
+    const videoId = getYouTubeID(url);
+
+    if (videoId) {
+      // Use high quality YouTube thumbnail
+      const thumb = poster.querySelector('.yt-thumb');
+      thumb.src = 'https://img.youtube.com/vi/' + videoId + '/maxresdefault.jpg';
+
+      poster.addEventListener('click', function () {
+        const iframe = document.createElement('iframe');
+        iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0';
+        iframe.setAttribute('frameborder', '0');
+        iframe.setAttribute('allow', 'autoplay; encrypted-media; fullscreen; picture-in-picture');
+        iframe.setAttribute('allowfullscreen', '');
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+
+        poster.replaceWith(iframe);
+      });
+    }
+  });
+});
+</script>
+
+{% schema %}
+{
+  "name": "SS Video with Text",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "section_color_scheme",
+      "label": "Section background color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Card color scheme",
+      "default": "scheme-2"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Should you add support to your purchase?"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p><strong>Support includes 12 months of:</strong></p><ul><li>Access to Skool community with 60+ videos</li><li>Weekly topical group calls</li><li>Direct DM access to Ken</li><li>Weekly journal review & feedback</li></ul>"
+    },
+    {
+      "type": "text",
+      "id": "video_url",
+      "label": "Self-hosted video URL (.mp4)"
+    },
+    {
+      "type": "url",
+      "id": "embed_url",
+      "label": "Embed URL (YouTube / Vimeo)"
+    },
+    {
+      "type": "image_picker",
+      "id": "poster",
+      "label": "Video poster image"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_play_icon",
+      "label": "Show play icon overlay",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "SS Video with Text"
+    }
+  ]
+}
+{% endschema %}

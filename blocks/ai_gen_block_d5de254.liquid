@@ -1,0 +1,357 @@
+{% doc %}
+  @prompt
+    add a title nulber at the iddle and another title, can u add another title before the number?, can u animate the number to start incrementing  to 50 k, up to 50000+ not 5000
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-title-number-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: {{ block.settings.spacing }}px;
+    padding: {{ block.settings.padding_top }}px 20px {{ block.settings.padding_bottom }}px;
+    background-color: {{ block.settings.background_color }};
+  }
+
+  .ai-title-number__first-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.first_title_size }}px;
+    font-weight: {{ block.settings.first_title_weight }};
+    color: {{ block.settings.first_title_color }};
+    text-align: center;
+    margin: 0;
+    max-width: {{ block.settings.title_max_width }}px;
+  }
+
+  .ai-title-number__number-{{ ai_gen_id }} {
+    font-size: {{ block.settings.number_size }}px;
+    font-weight: 700;
+    color: {{ block.settings.number_color }};
+    line-height: 1;
+    margin: 0;
+  }
+
+  .ai-title-number__title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    font-weight: {{ block.settings.title_weight }};
+    color: {{ block.settings.title_color }};
+    text-align: center;
+    margin: 0;
+    max-width: {{ block.settings.title_max_width }}px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-title-number__first-title-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.first_title_size }}px * 0.8);
+    }
+
+    .ai-title-number__number-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.number_size }}px * 0.7);
+    }
+
+    .ai-title-number__title-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.title_size }}px * 0.8);
+    }
+  }
+{% endstyle %}
+
+<animated-counter-{{ ai_gen_id }}
+  class="ai-title-number-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  {% if block.settings.first_title != blank %}
+    <h2 class="ai-title-number__first-title-{{ ai_gen_id }}">
+      {{ block.settings.first_title }}
+    </h2>
+  {% endif %}
+
+  <div class="ai-title-number__number-{{ ai_gen_id }}" data-target="{{ block.settings.target_number | times: 1000 }}">
+    0{{ block.settings.number_suffix }}
+  </div>
+
+  {% if block.settings.title != blank %}
+    <h3 class="ai-title-number__title-{{ ai_gen_id }}">
+      {{ block.settings.title }}
+    </h3>
+  {% endif %}
+</animated-counter-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class AnimatedCounter{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.hasAnimated = false;
+      }
+
+      connectedCallback() {
+        this.numberElement = this.querySelector('.ai-title-number__number-{{ ai_gen_id }}');
+        this.targetNumber = parseInt(this.numberElement.getAttribute('data-target'));
+        this.suffix = '{{ block.settings.number_suffix }}';
+        this.duration = {{ block.settings.animation_duration }};
+        
+        this.setupObserver();
+      }
+
+      setupObserver() {
+        const options = {
+          threshold: 0.5,
+          rootMargin: '0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && !this.hasAnimated) {
+              this.hasAnimated = true;
+              this.animateCounter();
+            }
+          });
+        }, options);
+
+        observer.observe(this);
+      }
+
+      animateCounter() {
+        const startTime = performance.now();
+        const startValue = 0;
+        const endValue = this.targetNumber;
+
+        const animate = (currentTime) => {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / this.duration, 1);
+          
+          const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+          const currentValue = Math.floor(startValue + (endValue - startValue) * easeOutQuart);
+          
+          this.numberElement.textContent = this.formatNumber(currentValue) + this.suffix;
+
+          if (progress < 1) {
+            requestAnimationFrame(animate);
+          } else {
+            this.numberElement.textContent = this.formatNumber(endValue) + this.suffix;
+          }
+        };
+
+        requestAnimationFrame(animate);
+      }
+
+      formatNumber(num) {
+        if (num >= 1000) {
+          return (num / 1000).toFixed(num % 1000 === 0 ? 0 : 1) + 'k';
+        }
+        return num.toString();
+      }
+    }
+
+    customElements.define('animated-counter-{{ ai_gen_id }}', AnimatedCounter{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Title with number",
+  "settings": [
+    {
+      "type": "header",
+      "content": "First title"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "first_title",
+      "label": "First title",
+      "default": "First heading"
+    },
+    {
+      "type": "range",
+      "id": "first_title_size",
+      "min": 16,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Size",
+      "default": 24
+    },
+    {
+      "type": "select",
+      "id": "first_title_weight",
+      "label": "Weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "500"
+    },
+    {
+      "type": "color",
+      "id": "first_title_color",
+      "label": "Color",
+      "default": "#e5c085"
+    },
+    {
+      "type": "header",
+      "content": "Number"
+    },
+    {
+      "type": "range",
+      "id": "target_number",
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "label": "Target number (in thousands)",
+      "default": 50
+    },
+    {
+      "type": "text",
+      "id": "number_suffix",
+      "label": "Number suffix",
+      "default": "+"
+    },
+    {
+      "type": "range",
+      "id": "animation_duration",
+      "min": 500,
+      "max": 5000,
+      "step": 100,
+      "unit": "ms",
+      "label": "Animation duration",
+      "default": 2000
+    },
+    {
+      "type": "range",
+      "id": "number_size",
+      "min": 40,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Size",
+      "default": 100
+    },
+    {
+      "type": "color",
+      "id": "number_color",
+      "label": "Color",
+      "default": "#e5c085"
+    },
+    {
+      "type": "header",
+      "content": "Second title"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Second title",
+      "default": "Your heading here"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 16,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Size",
+      "default": 32
+    },
+    {
+      "type": "select",
+      "id": "title_weight",
+      "label": "Weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "title_max_width",
+      "min": 300,
+      "max": 1000,
+      "step": 50,
+      "unit": "px",
+      "label": "Title max width",
+      "default": 600
+    },
+    {
+      "type": "range",
+      "id": "spacing",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "label": "Spacing between elements",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 40
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#232021"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Title with number"
+    }
+  ]
+}
+{% endschema %}

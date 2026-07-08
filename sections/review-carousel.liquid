@@ -1,0 +1,291 @@
+{% schema %}
+{
+  "name": "Review Carousel",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Customer Reviews"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "scheme-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "review_text",
+          "label": "Review Text",
+          "default": "This is an amazing product! Highly recommend."
+        },
+        {
+          "type": "text",
+          "id": "reviewer_name",
+          "label": "Reviewer Name",
+          "default": "John Doe"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Review Carousel"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+  /* Add styles for color schemes */
+  .review-carousel.color-scheme-1 {
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --accent-color: #EFC98B;
+  }
+
+  .review-carousel.color-scheme-2 {
+    --background-color: #f0f0f0;
+    --text-color: #222222;
+    --accent-color: #33c1ff;
+  }
+
+  /* Apply variables to review card */
+  .review-carousel .review-card {
+    background-color: rgba(239, 201, 139, 0.04);
+    color: var(--text-color);
+    border: 1px solid rgba(239, 201, 139, 0.6);
+  }
+
+  .review-carousel .carousel-arrow {
+    color: var(--accent-color);
+  }
+
+  .review-carousel .carousel-arrow:hover {
+    color: var(--accent-color);
+  }
+
+  /* Existing Review Carousel Styles */
+
+  .review-carousel {
+    position: relative;
+    width: 100%;
+    padding: 40px 12px;
+    overflow: hidden;
+  }
+
+  .review-carousel .section-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: var(--color-text);
+  }
+
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 24px;
+    margin: 0 auto;
+  }
+
+  .carousel-item {
+    flex: 0 0 345px;
+    min-width: 345px;
+    transition: transform 0.5s ease-in-out;
+    padding: 10px;
+  }
+
+  .carousel-item.active {
+    transform: scale(1.1);
+  }
+
+  .review-card {
+    padding: 20px;
+    border-radius: 8px;
+    height: 100%;
+    width: calc(100vw - 82px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shadow-small);
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .review-text {
+    font-size: 1em;
+    color: var(--text-color);
+    text-align: center;
+    font-weight: light;
+    font-style: italic;
+    letter-spacing: -0.02em;
+    flex-grow: 1;
+  }
+
+  .review-author {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 1.25em;
+    color: white;
+    letter-spacing: -0.02em;
+    text-align: center;
+  }
+
+  .carousel-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .carousel-index {
+    margin: 0 20px;
+    font-size: 1em;
+    color: var(--text-color);
+  }
+
+  .carousel-arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 53px;
+    height: auto;
+  }
+
+  .carousel-arrow:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  @media screen and (min-width: 500px) {
+    .carousel-item {
+      flex: 0 0 345px;
+    }
+    .review-card {
+        width: 100%;
+    }
+  }
+{% endstylesheet %}
+
+{% javascript %}
+  document.addEventListener('DOMContentLoaded', function() {
+    const container = document.querySelector('.carousel-container');
+    const carouselInner = document.querySelector('.carousel-inner');
+    const items = document.querySelectorAll('.carousel-item');
+    const prevButton = document.querySelector('.carousel-arrow.prev');
+    const nextButton = document.querySelector('.carousel-arrow.next');
+    const indexDisplay = document.querySelector('.carousel-index');
+    const totalItems = items.length;
+    let currentIndex = 2;
+
+    function calculateOffset() {
+      const containerWidth = container.offsetWidth;
+      const itemWidth = 345;
+      const offset = (containerWidth - itemWidth) / 2;
+      return offset;
+    }
+
+    function updateCarousel() {
+      const offset = calculateOffset();
+      const itemWidth = 345;
+      const gapWidth = 24; // Match the gap CSS value
+      const itemTotalWidth = itemWidth + gapWidth;
+      let translateX;
+
+      if (currentIndex === 0) {
+        translateX = offset;
+      } else if (currentIndex === totalItems - 1) {
+        translateX = -(currentIndex * itemTotalWidth) + offset;
+      } else {
+        // Center the current card for middle positions
+        translateX = -(currentIndex * itemTotalWidth) + (container.offsetWidth - itemWidth) / 2;
+      }
+
+      carouselInner.style.transform = `translateX(${translateX}px)`;
+      
+      // Update active state for scaling
+      items.forEach((item, index) => {
+        item.classList.toggle('active', index === currentIndex);
+      });
+      
+      // Update index display
+      indexDisplay.textContent = `${currentIndex + 1}/${totalItems}`;
+      
+      // Update button states
+      prevButton.disabled = currentIndex === 0;
+      nextButton.disabled = currentIndex === totalItems - 1;
+    }
+
+    function handleResize() {
+      updateCarousel();
+    }
+
+    prevButton.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateCarousel();
+      }
+    });
+
+    nextButton.addEventListener('click', () => {
+      if (currentIndex < totalItems - 1) {
+        currentIndex++;
+        updateCarousel();
+      }
+    });
+
+    window.addEventListener('resize', handleResize);
+    
+    // Initial setup
+    updateCarousel();
+  });
+{% endjavascript %}
+
+<div class="review-carousel color-{{ section.settings.color_scheme }} gradient">
+  {% if section.settings.section_title != blank %}
+    <h2 class="section-title">{{ section.settings.section_title }}</h2>
+  {% endif %}
+  <div class="carousel-container">
+    <div class="carousel-inner">
+      {% for block in section.blocks %}
+        <div class="carousel-item{% if forloop.first %} active{% endif %}">
+          <div class="review-card">
+            <p class="review-text">{{ block.settings.review_text }}</p>
+            <span class="review-author">{{ block.settings.reviewer_name }}</span>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="carousel-navigation">
+    <button class="carousel-arrow prev" aria-label="Previous Review" disabled>
+      <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M28.6667 18L18 28.6667M18 28.6667L28.6667 39.3333M18 28.6667H39.3333M55.3333 28.6667C55.3333 43.3943 43.3943 55.3333 28.6667 55.3333C13.9391 55.3333 2 43.3943 2 28.6667C2 13.9391 13.9391 2 28.6667 2C43.3943 2 55.3333 13.9391 55.3333 28.6667Z" stroke="#EFC98B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <span class="carousel-index">1/{{ section.blocks.size }}</span>
+    <button class="carousel-arrow next" aria-label="Next Review">
+      <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M29 39.3333L39.6666 28.6667M39.6666 28.6667L29 18M39.6666 28.6667H18.3333M55.6666 28.6667C55.6666 43.3943 43.7276 55.3333 29 55.3333C14.2724 55.3333 2.33331 43.3943 2.33331 28.6667C2.33331 13.9391 14.2724 2 29 2C43.7276 2 55.6666 13.9391 55.6666 28.6667Z" stroke="#EFC98B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+</div>

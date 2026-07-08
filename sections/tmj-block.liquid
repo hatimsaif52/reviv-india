@@ -1,0 +1,164 @@
+<style>
+.tmj-section {
+    max-width: 1400px;
+    margin: 0 auto;
+padding:40px 30px;
+}
+.tmj-block-row h2 {
+    text-align: center;
+}
+.tmj-block-row .tmj-block .tmj-richtext {
+    background: #e5c085;
+    margin: 30px;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 250px;
+    text-align: center;
+}
+.tmj-block-row .tmj-block .tmj-richtext:last-child {
+    position: static !important;
+}
+.tmj-block-row .tmj-block .tmj-richtext:nth-child(odd):last-child::after{
+display:none;
+}
+.tmj-block-row .tmj-block .tmj-richtext:nth-child(odd) {
+position:relative;
+    max-width: 800px;
+    margin: 51px auto 26px 0;
+}
+.tmj-block-row .tmj-block .tmj-richtext:nth-child(even) {
+    max-width: 800px;
+position:relative;
+       margin: 51px 0 26px auto;
+}
+.tmj-block-row .tmj-block .tmj-richtext p {
+    padding: 0px 15px;
+}
+.tmj-block-row .tmj-block .tmj-richtext:nth-child(odd):after {
+    content: "";
+    display: block;
+    width: 260px;
+    position: absolute;
+    background: url(https://cdn.shopify.com/s/files/1/0706/4243/4289/files/qzGBFS.svg?v=1744618192) no-repeat;
+    height: 150px;
+    top: 70px;
+    z-index: -1;
+    right: -250px;
+}
+.tmj-block-row .tmj-block .tmj-richtext:nth-child(even):before {
+    content: "";
+    display: block;
+    width: 260px;
+    transform: rotateY(183deg);
+    position: absolute;
+    background: url(https://cdn.shopify.com/s/files/1/0706/4243/4289/files/qzGBFS.svg?v=1744618192) no-repeat;
+    height: 150px;
+    top: 70px;
+    z-index: -1;
+    left: -250px;
+}
+@media screen and (max-width: 1200px) {
+.tmj-block-row .tmj-block .tmj-richtext:nth-child(odd),
+.tmj-block-row .tmj-block .tmj-richtext:nth-child(even) {
+    max-width: 56vw;
+}
+}
+@media screen and (max-width: 768px) {
+.tmj-block-row .tmj-block .tmj-richtext:nth-child(odd):after,
+.tmj-block-row .tmj-block .tmj-richtext:nth-child(even):before {
+    display:none;
+}
+.tmj-block-row .tmj-block .tmj-richtext:nth-child(odd),
+.tmj-block-row .tmj-block .tmj-richtext:nth-child(even) {
+    max-width: 100%;
+}
+.tmj-block-row .tmj-block .tmj-richtext {
+    font-size:14px;
+}
+  .tmj-block-row .tmj-block .tmj-richtext {
+    border-radius: 16px;
+}
+}
+</style>
+
+
+{% assign pt = section.settings.padding_top %}
+{% assign pb = section.settings.padding_bottom %}
+<div class="tmj-section">
+<div class="tmj-block-row {{ pt }} {{ pb }}">
+  {% if section.settings.heading != blank %}
+    <h2 class="hxxl font-bold mb-4">{{ section.settings.heading }}</h2>
+  {% endif %}
+<div class="tmj-block {{ pt }} {{ pb }}">
+
+
+  {% for block in section.blocks %}
+    {% if block.type == 'rich_text' %}
+      <div class="tmj-richtext mb-4">
+        {{ block.settings.rich_text }}
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+</div>
+</div>
+{% schema %}
+{
+  "name": "TMJ Block",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "default": "pt-4",
+      "options": [
+        { "value": "pt-0", "label": "None" },
+        { "value": "pt-4", "label": "Small" },
+        { "value": "pt-8", "label": "Medium" },
+        { "value": "pt-12", "label": "Large" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "default": "pb-4",
+      "options": [
+        { "value": "pb-0", "label": "None" },
+        { "value": "pb-4", "label": "Small" },
+        { "value": "pb-8", "label": "Medium" },
+        { "value": "pb-12", "label": "Large" }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "rich_text",
+      "name": "Rich Text",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "rich_text",
+          "label": "Rich Text"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 10,
+  "presets": [
+    {
+      "name": "TMJ Block",
+      "blocks": [
+        {
+          "type": "rich_text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

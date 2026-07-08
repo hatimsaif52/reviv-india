@@ -1,0 +1,129 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "gp_section_607121637388583479": {
+      "settings": {
+        "checksum": "2c95e3f2fcb7230e2a3c73d15e32a32fa3dc639ca8f02f61be2cf2fedce5a330_1_1_0_0__1",
+        "gg3uWmPxzx4_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/image_demo.jpg",
+        "gg3uWmPxzx4_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/1-5-2_Jaw_Line_LP_-_V2-Mobile.png",
+        "ggE3gZUIio3_text": "<p>True definition often comes from balance — not extremes. Reviv is designed to support natural jaw positioning while you sleep.</p>",
+        "ggKm4viJ2Ag_childItem_0": "<p><strong>Price: $150</strong></p>",
+        "ggKm4viJ2Ag_childItem_1": "<p>Includes Access To Skool Community &amp; Support</p>",
+        "ggKm4viJ2Ag_childItem_2": "<p>1-Year Replacement Warranty</p>",
+        "ggOnsUze4Ys_text": "<span style=\"color:#B76C45;font-size:48px;\">“Sharper”</span><span style=\"color:#000000;font-size:48px;\"> Isn’t&nbsp;</span><br><span style=\"color:#000000;font-size:48px;\">Always About Angles.</span>",
+        "ggSloM-vGEY_label": "<p>Support My Jaw Balance</p>",
+        "ggiQ_OtI6ff_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/1-5-2_Jaw_Line_LP_-_V2.png",
+        "ggiQ_OtI6ff_background_mobile_videoHtml5": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+        "section_preload": "true"
+      },
+      "type": "gp-section-607121637388583479"
+    },
+    "gp_section_607536429307789910": {
+      "settings": {
+        "checksum": "3657aebc36c07b0b89627defab4e471e5947bf1b3ddebc50938f450cb4584646_1_1_0_0__1",
+        "ggFpi5SvqRi_text": "<p>Facial definition is often marketed as something dramatic.&nbsp;<br>In reality, balance and resting position influence how the lower face appears.&nbsp;<br><br>Jaw positioning during sleep may contribute to how the jaw rests throughout the day.&nbsp;<br><strong>Reviv </strong>supports positioning — consistently and passively.</p>",
+        "ggdDy_U5GIn_text": "<span style=\"color:#FFFFFF;\">The Internet Promises Sharp.&nbsp;</span><br><span style=\"color:#FFFFFF;\">Structure Creates Definition.</span>",
+        "ggglaqlBVgT_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/The_Internet_Promises.png",
+        "ggpIXOb0kPw_label": "<p>Explore Structural Support&nbsp;</p>"
+      },
+      "type": "gp-section-607536429307789910"
+    },
+    "gp_section_610229231112160155": {
+      "settings": {
+        "checksum": "9b49770cc73c7deeb5a60343c82fb296928749758d72fdaf50d57ab23dfc58d4_1_1_0_0__1",
+        "ggJ0NNeu2wH_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/Support_the_Position.png",
+        "ggLaAjdxeL5_text": "<span style=\"color:#FFFFFF;\">Support the Position.</span><br><span style=\"color:#FFFFFF;\">Influence the Resting Shape.</span>",
+        "ggcWvyaRzy6_text": "<p>Not cosmetic surgery • Not an invasive procedure • Not an overnight transformation</p>",
+        "ggd49futQRf_text": "<p>Reviv is built to encourage relaxed, natural jaw positioning overnight. Consistent&nbsp;</p><p>positioning may contribute to a more balanced-looking lower face over time.</p>"
+      },
+      "type": "gp-section-610229231112160155"
+    },
+    "gp_section_610229467134034726": {
+      "settings": {
+        "checksum": "9d1c5541ece3a70e32ee8f620c2380b09b2fe955117e23f3867152afcfdcc1f3_1_1_0_0__1",
+        "gg2EnBMU994_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/Not.png",
+        "gg7MTUV5jNg_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/Not_cosmetic_surgery.png",
+        "gg8iV-tAflV_text": "<p>Not an invasive procedure</p>",
+        "ggcb9YOqzfx_text": "<p>Not an overnight transformation</p>",
+        "ggg17WYOL63_text": "<span style=\"color:#FFFFFF;\">What This Is Not.</span>",
+        "ggh2wuHKEq0_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/Not_an_invasive_procedure.png",
+        "ggmjkq1zAA7_text": "<p>Reviv is structural support for positioning. Subtle. Consistent. Designed for nightly use.</p>",
+        "ggxrRgtUUBe_text": "<p>Not cosmetic surgery</p>"
+      },
+      "type": "gp-section-610229467134034726"
+    },
+    "gp_section_610230240748241623": {
+      "settings": {
+        "checksum": "17dce0ad27096d1a980ba8ed6b065f5b5d90987a7deb6fccabff234dc453772b_1_1_0_0__1",
+        "gg45IqYqc3g_text": "<span style=\"color:#FFFFFF;\">Contour Illusion vs Structural Support</span>",
+        "ggKZS4OuMtI_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/Contour_Illusion_vs_Structural_Support_ea709441-5765-4c3c-9de9-7bc2d2cb2f0c.png",
+        "ggX5rG3JNj__text": "<p>No claims of visible transformation.</p>"
+      },
+      "type": "gp-section-610230240748241623"
+    },
+    "gp_section_610230463734219558": {
+      "settings": {
+        "checksum": "a4080b4db0c8a1c463d1ba37ec14563a133acc8b336e5abc5d96acf6ffcdfa46_1_1_0_0__1",
+        "gg7_YkzLUG-_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/Evelyn_50afd46c-6b98-47a1-b09f-bc7ae5c67ac4.png",
+        "gg8LO5FQOf2_text": "<p>I didn’t expect a huge change, but after a couple of weeks I noticed my jaw feels more centered in the morning. It’s subtle, but it makes waking up feel more comfortable.</p>",
+        "gg8j3ywbDXU_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/Gerogia.png",
+        "ggCtOrbk-OQ_text": "<p>At first it just felt different sleeping with it, but after a while my jaw started feeling more relaxed when I wake up. It’s like it settles into a more natural position overnight.</p>",
+        "ggFjCz2lXdx_text": "<p>Michael</p>",
+        "ggIEf9yvs8r_text": "<p>&nbsp;Evelyn</p>",
+        "ggOUWnhKlKx_text": "<p>Georgia</p>",
+        "ggkT3CNcwxt_text": "A Subtle Shift in Resting Balance",
+        "ggoSKklq1Iu_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/Michael.png",
+        "ggr_y56mJ65_text": "<p>What I appreciate is that it’s not extreme. It just feels like my jaw rests more evenly at night, and mornings feel a bit more balanced.</p>"
+      },
+      "type": "gp-section-610230463734219558"
+    },
+    "gp_section_610230666352657307": {
+      "settings": {
+        "checksum": "bf36f11387e434e7bbe06dbd8fc69123d3fc18530a3a9ab1f0087be19e9e52a9_1_1_0_0__1",
+        "gg7us2vS7T3_childItem_0": "<p><strong>Price: $150</strong></p>",
+        "gg7us2vS7T3_childItem_1": "<p>Includes Access To Skool Community &amp; Support</p>",
+        "gg7us2vS7T3_childItem_2": "<p>1-Year Replacement Warranty</p>",
+        "ggCrdxG7PhT_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/Refinement_Starts.png",
+        "ggCrdxG7PhT_background_mobile_videoHtml5": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+        "ggEl4SkdKWd_text": "<p>Small nightly positioning support may&nbsp;</p><p>influence how your jawline rests over time.</p>",
+        "ggPxfMxaT2O_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/image_demo.jpg",
+        "ggPxfMxaT2O_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/Refinement_Starts_mobile.jpg",
+        "ggYKZQCVLI-_text": "Refinement Starts&nbsp;<br>With Positioning.",
+        "ggxVLcrrGI4_label": "<p>Support My Jaw Balance</p>"
+      },
+      "type": "gp-section-610230666352657307"
+    },
+    "gp_section_610790240075907799": {
+      "settings": {
+        "checksum": "42021833a3189ad416a081682185213d8b27440172d5aa102a15353e2599ff7f_1_1_0_0__1",
+        "ggHIOpSKLWM_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/image_demo.jpg",
+        "ggHIOpSKLWM_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/For_Those-mobile.png",
+        "ggPgD-TuYNF_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/For_Those.png",
+        "ggPgD-TuYNF_background_mobile_videoHtml5": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+        "ggPgD-TuYNF_background_tablet_image_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/For_Those.png",
+        "ggfVaSP32TM_text": "<p>True definition often comes from balance — not extremes. Reviv is designed to support natural jaw positioning while you sleep.</p>",
+        "ggqN2CUil0u_label": "<p>Start Supporting My Jawline</p>",
+        "ggwDKS7gvcO_text": "<span style=\"color:#FFFFFF;font-size:46px;\">For Those Who Prefer Subtle Refinement.</span>"
+      },
+      "type": "gp-section-610790240075907799"
+    }
+  },
+  "order": [
+    "gp_section_607121637388583479",
+    "gp_section_607536429307789910",
+    "gp_section_610229231112160155",
+    "gp_section_610229467134034726",
+    "gp_section_610790240075907799",
+    "gp_section_610230240748241623",
+    "gp_section_610230463734219558",
+    "gp_section_610230666352657307"
+  ]
+}

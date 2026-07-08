@@ -1,0 +1,153 @@
+
+
+<style>
+.other-products {
+  padding: 40px 20px;
+  text-align: center;
+}
+.section-heading {
+    text-align: center;
+    color: #e5c085;
+    font-size: 48px;
+}
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 5px;
+}
+.product-card {
+  transition: 0.3s ease;
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+}
+.product-info {
+  margin-top: 10px;
+}
+.product-info h3 {
+ color: #e5c085;
+    font-size: 18px;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.product-card a {
+    text-decoration: none;
+}
+.product-info .price {
+  font-size: 16px;
+  color: #fff;
+}
+</style>
+
+
+
+
+<section class="other-products color-{{ section.settings.color_scheme }} isolate gradient">
+  <div class="container page-width">
+    {% if section.settings.heading != blank %}
+      <h2 class="section-heading">{{ section.settings.heading }}</h2>
+    {% endif %}
+
+    <div class="products-grid">
+      {% for block in section.blocks %}
+        {% assign product = all_products[block.settings.product] %}
+        <div class="product-card">
+          {% if block.settings.custom_link != blank %}
+            <a href="{{ block.settings.custom_link }}">
+          {% else %}
+            <a href="javascript:void(0)">  
+          {% endif %}
+
+            <div class="product-image">
+              {% if block.settings.custom_image != blank %}
+                <img src="{{ block.settings.custom_image | img_url: '400x' }}" alt="">
+              {% elsif product.featured_image != blank %}
+                <img src="{{ product.featured_image | img_url: '400x' }}" alt="">
+              {% endif %}
+            </div>
+
+            <div class="product-info">
+              <h3>
+                {{ block.settings.custom_title  }}
+              </h3>
+              <p class="price">
+                {{ block.settings.custom_price  }}
+              </p>
+            </div>
+
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "Other Products",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "OTHER PRODUCTS"
+    },
+     {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "info": "t:sections.all.colors.has_cards_info",
+      "default": "scheme-1"
+    },
+  ],
+  "blocks": [
+    {
+      "type": "product_block",
+      "name": "Product Block",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Select Product"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_image",
+          "label": "Custom Image (optional)"
+        },
+        {
+          "type": "text",
+          "id": "custom_title",
+          "label": "Custom Title",
+          "default": "Product Title"
+        },
+        {
+          "type": "text",
+          "id": "custom_price",
+          "label": "Custom Price",
+          "default": "Price"
+        },
+        {
+          "type": "url",
+          "id": "custom_link",
+          "label": "Custom Link (optional)"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Other Products",
+      "category": "Products"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,47 @@
+{% assign lowercase_title = product.url | downcase %}
+{% if lowercase_title contains 'reviv-two' %}
+  {%- liquid
+    assign is_large_size = false
+
+    # Check if the current variant has a "Large" size option
+    if current_variant.option1 == 'Large'
+      assign is_large_size = true
+    endif
+  %}
+
+  {%- if is_large_size -%}
+    {% comment %} <div class="large-size-alert" id="large-size-alert">
+      <div class="large-size-alert__content">
+        <h4 class="large-size-alert__title">For Large Sizes</h4>
+        <p class="large-size-alert__message">
+          We will dispatch the order within 1 week as we are restocking. Thank you for your patience!
+        </p>
+      </div>
+    </div>
+
+    <style>
+      .large-size-alert {
+        display: flex;
+        align-items: center;
+        margin: 15px 0;
+        padding: 15px;
+        background-color: rgba(229, 192, 133, 0.15);
+        border: 1px solid #e5c085;
+        border-radius: 6px;
+      }
+
+      .large-size-alert__title {
+        margin: 0 0 5px;
+        font-weight: 600;
+        font-size: 1em;
+        color: white;
+      }
+
+      .large-size-alert__message {
+        margin: 0;
+        font-size: 0.95em;
+        color: #ffffffa0;
+      }
+    </style> {% endcomment %}
+  {%- endif -%}
+{% endif %}

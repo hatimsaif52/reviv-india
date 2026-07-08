@@ -1,0 +1,59 @@
+.hmp-hero--baner .image-with-text__content a.button{
+    border-radius: 8px;
+    font-weight: 700;
+}
+.hmp-btn .button{
+  width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #e5c085;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #232021;
+    color: #fff;
+    font-size: 12px;
+    border-color: #e5c085;
+    text-transform: uppercase;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.hmp-btn .button:hover {
+  background: #e5bf854f;
+  font-weight: 600;
+}
+.hmp-btn .button:before, .hmp-btn .button:after{
+  content: none;
+}
+.shopify-section:has(.jdgm-carousel-wrapper) {
+  background: #232021;
+  color: white;
+  .jdgm-carousel-title, .jdgm-carousel__rev-sum-header, .jdgm-carousel__rev-sum-content {
+    color: white;
+  }
+}
+.jdgm-carousel__left-arrow,
+.jdgm-carousel__right-arrow{
+  border: none !important;
+  background-image: url('https://cdn.shopify.com/s/files/1/0706/4243/4289/files/Testiomonial_carousel_arrow.png?v=1764075864');
+  background-repeat: no-repeat;
+  background-size: 30px;
+  width: 30px !important;
+  height: 30px !important;
+}
+.jdgm-carousel__left-arrow{
+  transform: rotate(0deg) !important;
+}
+.jdgm-carousel__right-arrow{
+  transform: rotate(180deg) !important;
+}
+.jdgm-carousel__rev-sum-wrapper{
+    display: none;
+}
+.jdgm-line-clamp{
+  display: block !important;
+}
+@media screen and (min-width: 990px) {
+ .hmp-hero--baner .image-with-text__content {
+     padding: 0 4rem 5rem 1rem;
+    }
+}

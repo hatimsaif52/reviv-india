@@ -1,0 +1,1030 @@
+{% assign heading_left = section.settings.heading_left %}
+{% assign heading_accent = section.settings.heading_accent %}
+
+<section class="md-toe-toc color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width">
+    <div class="md-toe-toc__inner">
+      <h2 class="md-toe-toc__title">
+        <span class="md-toe-toc__title-left">{{ heading_left }}</span>
+        <span class="md-toe-toc__title-accent">{{ heading_accent }}</span>
+      </h2>
+
+      <ol class="md-toe-toc__list" role="list">
+        {%- for block in section.blocks -%}
+          {% if block.type == 'toc_item' %}
+            <li class="md-toe-toc__item" {{ block.shopify_attributes }}>
+              <a class="md-toe-toc__link" href="{% if block.settings.anchor_id != blank %}#{{ block.settings.anchor_id }}{% else %}#{% endif %}">
+                <span class="md-toe-toc__text">{{ block.settings.title }}</span>
+                <span class="md-toe-toc__chev" aria-hidden="true"></span>
+              </a>
+
+              {% if block.settings.subitems != blank %}
+                <div class="md-toe-toc__sub rte">{{ block.settings.subitems }}</div>
+              {% endif %}
+            </li>
+          {% endif %}
+        {%- endfor -%}
+      </ol>
+    </div>
+
+    <div class="md-toe-points">
+      {%- for block in section.blocks -%}
+        {% if block.type == 'point' %}
+          <section class="md-toe-point md-toe-point--{{ block.settings.layout }}" id="{{ block.settings.anchor_id | default: block.id }}" {{ block.shopify_attributes }}>
+            <div class="md-toe-point__media">
+              {% if block.settings.image != blank %}
+                {{ block.settings.image | image_url: width: 1400 | image_tag: loading: 'lazy', class: 'md-toe-point__img' }}
+              {% endif %}
+            </div>
+
+            <div class="md-toe-point__text">
+              {% if block.settings.eyebrow != blank %}
+                <div class="md-toe-point__eyebrow">
+                  <span class="md-toe-point__eyebrow-line" aria-hidden="true"></span>
+                  <span class="md-toe-point__eyebrow-text">{{ block.settings.eyebrow }}</span>
+                </div>
+              {% endif %}
+
+              {% if block.settings.title != blank or block.settings.title_accent != blank %}
+                <h2 class="md-toe-point__title">
+                  {{ block.settings.title }}
+                  {% if block.settings.title_accent != blank %}
+                    <span class="md-toe-point__title-accent">{{ block.settings.title_accent }}</span>
+                  {% endif %}
+                </h2>
+              {% endif %}
+
+              {% if block.settings.subtitle != blank %}
+                <div class="md-toe-point__subtitle">{{ block.settings.subtitle }}</div>
+              {% endif %}
+
+              {% if block.settings.body != blank %}
+                <div class="md-toe-point__body rte">{{ block.settings.body }}</div>
+              {% endif %}
+
+              {% if block.settings.bullets != blank %}
+                <div class="md-toe-point__bullets rte">{{ block.settings.bullets }}</div>
+              {% endif %}
+
+              {% if block.settings.callout_title != blank or block.settings.callout != blank %}
+                <div class="md-toe-point__callout rte">
+                  {% if block.settings.callout_title != blank %}
+                    <strong>{{ block.settings.callout_title }}</strong>
+                  {% endif %}
+                  {{ block.settings.callout }}
+                </div>
+              {% endif %}
+
+              {% if block.settings.footer_line != blank %}
+                <div class="md-toe-point__footer">{{ block.settings.footer_line }}</div>
+              {% endif %}
+            </div>
+          </section>
+        {% elsif block.type == 'point_story' %}
+          <section class="md-toe-story" id="{{ block.settings.anchor_id | default: block.id }}" {{ block.shopify_attributes }}>
+            <div class="md-toe-story__sep md-toe-story__sep--top" aria-hidden="true">
+              <span class="md-toe-story__sep-line"></span>
+              <span class="md-toe-story__sep-dot"></span>
+              <span class="md-toe-story__sep-line"></span>
+            </div>
+            <header class="md-toe-story__head">
+              {% if block.settings.title != blank or block.settings.title_accent != blank %}
+                <h2 class="md-toe-story__title">
+                  {{ block.settings.title }}
+                  {% if block.settings.title_accent != blank %}
+                    <span class="md-toe-story__title-accent">{{ block.settings.title_accent }}</span>
+                  {% endif %}
+                </h2>
+              {% endif %}
+
+              {% if block.settings.subtitle != blank %}
+                <div class="md-toe-story__subtitle">{{ block.settings.subtitle }}</div>
+              {% endif %}
+            </header>
+
+            <div class="md-toe-story__stack">
+              <div class="md-toe-story__row">
+                <div class="md-toe-story__media">
+                  {% if block.settings.image_1 != blank %}
+                    {{ block.settings.image_1 | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'md-toe-story__img' }}
+                  {% endif %}
+                </div>
+
+                <div class="md-toe-story__text">
+                  {% if block.settings.text_1 != blank %}
+                    <div class="md-toe-story__rte rte">{{ block.settings.text_1 }}</div>
+                  {% endif %}
+                </div>
+              </div>
+
+              <div class="md-toe-story__arrow-row" aria-hidden="true">
+                <div class="md-toe-story__arrow">
+                  <svg class="md-toe-story__arrow-svg" width="48" height="89" viewBox="0 0 48 89" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24.0002 3.69214C7.38589 22.1524 40.6144 44.3048 20.3081 79.3793" stroke="currentColor" stroke-width="1.38452" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12.9238 71.9952L20.3079 79.3793L27.6921 70.1492" stroke="currentColor" stroke-width="1.38452" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="md-toe-story__row">
+                <div class="md-toe-story__media">
+                  {% if block.settings.image_2 != blank %}
+                    {{ block.settings.image_2 | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'md-toe-story__img' }}
+                  {% endif %}
+                </div>
+
+                <div class="md-toe-story__text">
+                  {% if block.settings.heading_2 != blank %}
+                    <h3 class="md-toe-story__heading">{{ block.settings.heading_2 }}</h3>
+                  {% endif %}
+
+                  {% if block.settings.text_2 != blank %}
+                    <div class="md-toe-story__rte rte">{{ block.settings.text_2 }}</div>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+
+            <div class="md-toe-story__sep md-toe-story__sep--mid" aria-hidden="true">
+              <span class="md-toe-story__sep-line"></span>
+              <span class="md-toe-story__sep-dot"></span>
+              <span class="md-toe-story__sep-line"></span>
+            </div>
+
+            <div class="md-toe-story__bottom">
+              <div class="md-toe-story__bottom-text">
+                {% if block.settings.bottom_intro != blank %}
+                  <div class="md-toe-story__bottom-intro rte">{{ block.settings.bottom_intro }}</div>
+                {% endif %}
+
+                {% if block.settings.bottom_bullets != blank %}
+                  <div class="md-toe-story__bottom-bullets rte">{{ block.settings.bottom_bullets }}</div>
+                {% endif %}
+              </div>
+
+              <div class="md-toe-story__bottom-media">
+                {% if block.settings.bottom_image != blank %}
+                  {{ block.settings.bottom_image | image_url: width: 1400 | image_tag: loading: 'lazy', class: 'md-toe-story__bottom-img' }}
+                {% endif %}
+              </div>
+            </div>
+          </section>
+        {% endif %}
+      {%- endfor -%}
+    </div>
+  </div>
+
+  {% style %}
+    .md-toe-toc {
+      --md-toc-text: rgba(255, 255, 255, 0.82);
+      --md-toc-title: rgba(255, 255, 255, 0.95);
+      --md-toc-line: rgba(255, 255, 255, 0.08);
+      --md-toc-accent: #e5c085;
+      --md-toe-subtext: rgba(255, 255, 255, 0.66);
+      --md-toe-panel: rgba(255, 255, 255, 0.04);
+      padding: 56px 0;
+    }
+
+    .md-toe-toc .page-width {
+      max-width: 920px;
+    }
+
+    .md-toe-toc__inner {
+      padding: 10px 0;
+    }
+
+    .md-toe-toc__title {
+      margin: 0 0 22px;
+      font-size: 36px;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      text-align: center;
+      color: var(--md-toc-title);
+      font-weight: 600;
+    }
+
+    .md-toe-toc__title-accent {
+      color: var(--md-toc-accent);
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    .md-toe-toc__list {
+      margin: 0;
+      padding: 0;
+      list-style: lower-roman;
+      color: var(--md-toc-text);
+    }
+
+    .md-toe-toc__item {
+      border-top: 1px solid var(--md-toc-line);
+      padding: 14px 0;
+      margin-left: 18px;
+    }
+
+    .md-toe-toc__item:first-child {
+      border-top: 1px solid var(--md-toc-line);
+    }
+
+    .md-toe-toc__link {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 20px;
+      gap: 12px;
+      align-items: center;
+      color: var(--md-toc-text);
+      text-decoration: none;
+    }
+
+    .md-toe-toc__text {
+      font-size: 14px;
+      line-height: 1.35;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.86);
+    }
+
+    .md-toe-toc__chev {
+      width: 10px;
+      height: 10px;
+      border-right: 1px solid rgba(255, 255, 255, 0.22);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+      transform: rotate(-45deg);
+      justify-self: end;
+    }
+
+    .md-toe-toc__sub {
+      margin: 10px 0 0;
+      padding-left: 12px;
+      color: rgba(255, 255, 255, 0.60);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .md-toe-toc__sub ul,
+    .md-toe-toc__sub ol {
+      margin: 0;
+      padding-left: 14px;
+    }
+
+    .md-toe-toc__sub li {
+      margin: 6px 0;
+    }
+
+    .md-toe-points {
+      padding-top: 42px;
+    }
+
+    .md-toe-point {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 56px;
+      align-items: center;
+      padding: 44px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .md-toe-point--image_left {
+      grid-template-areas: "media text";
+    }
+
+    .md-toe-point--image_right {
+      grid-template-areas: "text media";
+    }
+
+    .md-toe-point--image_left .md-toe-point__media {
+      grid-area: media;
+    }
+
+    .md-toe-point--image_left .md-toe-point__text {
+      grid-area: text;
+    }
+
+    .md-toe-point--image_right .md-toe-point__media {
+      grid-area: media;
+    }
+
+    .md-toe-point--image_right .md-toe-point__text {
+      grid-area: text;
+    }
+
+    .md-toe-point__img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+    }
+
+    .md-toe-point__media {
+      display: flex;
+      justify-content: center;
+    }
+
+    .md-toe-point__eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .md-toe-point__eyebrow-line {
+      width: 34px;
+      height: 1px;
+      background: rgba(229, 192, 133, 0.55);
+      flex: 0 0 auto;
+    }
+
+    .md-toe-point__eyebrow-text {
+      color: rgba(229, 192, 133, 0.85);
+      font-size: 12px;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+    }
+
+    .md-toe-point__title {
+      margin: 0 0 16px;
+      color: rgba(255, 255, 255, 0.95);
+      font-size: 44px;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      font-weight: 600;
+    }
+
+    .md-toe-point__title-accent {
+      color: var(--md-toc-accent);
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    .md-toe-point__subtitle {
+      margin: -6px 0 16px;
+      color: rgba(229, 192, 133, 0.86);
+      font-size: 14px;
+      letter-spacing: 0.02em;
+      font-weight: 600;
+    }
+
+    .md-toe-point__body {
+      color: var(--md-toe-subtext);
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .md-toe-point__body p {
+      margin: 0 0 14px;
+    }
+
+    .md-toe-point__bullets {
+      margin-top: 14px;
+      color: rgba(255, 255, 255, 0.76);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .md-toe-point__bullets ul {
+      margin: 0;
+      padding-left: 18px;
+      list-style: none;
+    }
+
+    .md-toe-point__bullets li {
+      margin: 10px 0;
+      position: relative;
+      padding-left: 14px;
+    }
+
+    .md-toe-point__bullets li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.7em;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: rgba(229, 192, 133, 0.85);
+      transform: translateY(-50%);
+    }
+
+    .md-toe-point__callout {
+      margin-top: 18px;
+      padding: 16px 18px;
+      border-radius: 8px;
+      background: rgba(229, 192, 133, 0.06);
+      border: 1px solid rgba(229, 192, 133, 0.20);
+      border-left-width: 3px;
+      border-left-color: rgba(229, 192, 133, 0.65);
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .md-toe-point__callout strong {
+      color: rgba(229, 192, 133, 0.90);
+      font-weight: 600;
+    }
+
+    .md-toe-point__footer {
+      margin-top: 16px;
+      color: rgba(229, 192, 133, 0.80);
+      font-size: 14px;
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    .md-toe-story {
+      padding: 44px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .md-toe-story__head {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 26px;
+    }
+
+    .md-toe-story__title {
+      margin: 0 0 10px;
+      color: rgba(255, 255, 255, 0.95);
+      font-size: 44px;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      font-weight: 600;
+    }
+
+    .md-toe-story__title-accent {
+      color: var(--md-toc-accent);
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    .md-toe-story__subtitle {
+      color: rgba(229, 192, 133, 0.86);
+      font-size: 14px;
+      letter-spacing: 0.02em;
+      font-weight: 600;
+    }
+
+    .md-toe-story__stack {
+      display: grid;
+      gap: 22px;
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    .md-toe-story__row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 56px;
+      align-items: start;
+    }
+
+    .md-toe-story__media {
+      display: flex;
+      justify-content: center;
+    }
+
+    .md-toe-story__img {
+      width: 100%;
+      max-width: 420px;
+      height: auto;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+    }
+
+    .md-toe-story__text {
+      color: var(--md-toe-subtext);
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .md-toe-story__heading {
+      margin: 0 0 10px;
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 22px;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+      font-weight: 600;
+    }
+
+    .md-toe-story__rte p {
+      margin: 0 0 14px;
+    }
+
+    .md-toe-story__arrow-row {
+      max-width: 920px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      align-items: start;
+      gap: 56px;
+    }
+
+    .md-toe-story__arrow {
+      width: 48px;
+      height: 89px;
+      opacity: 0.9;
+      justify-self: center;
+      color: rgba(229, 192, 133, 0.85);
+    }
+
+    .md-toe-story__arrow-svg {
+      display: block;
+      width: 48px;
+      height: 89px;
+      color: var(--md-toc-accent);
+    }
+
+    .md-toe-story__sep {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      max-width: 920px;
+      margin-left: auto;
+      margin-right: auto;
+      color: rgba(229, 192, 133, 0.85);
+    }
+
+    .md-toe-story__sep--top {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .md-toe-story__sep--mid {
+      margin-top: 28px;
+      margin-bottom: 0;
+    }
+
+    .md-toe-story__sep-line {
+      height: 1px;
+      width: 120px;
+      background: rgba(255, 255, 255, 0.10);
+    }
+
+    .md-toe-story__sep-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: currentColor;
+      flex: 0 0 auto;
+    }
+
+    .md-toe-story__bottom {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 56px;
+      align-items: center;
+      max-width: 920px;
+      margin: 24px auto 0;
+    }
+
+    .md-toe-story__bottom-intro {
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+
+    .md-toe-story__bottom-bullets {
+      color: rgba(255, 255, 255, 0.76);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .md-toe-story__bottom-bullets ul {
+      margin: 0;
+      padding-left: 18px;
+      list-style: none;
+    }
+
+    .md-toe-story__bottom-bullets li {
+      margin: 10px 0;
+      position: relative;
+      padding-left: 14px;
+    }
+
+    .md-toe-story__bottom-bullets li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.7em;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: rgba(229, 192, 133, 0.85);
+      transform: translateY(-50%);
+    }
+
+    .md-toe-story__bottom-media {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .md-toe-story__bottom-img {
+      width: 100%;
+      max-width: 520px;
+      height: auto;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+    }
+
+    @media screen and (max-width: 989px) {
+      .md-toe-toc {
+        padding: 40px 0;
+      }
+
+      .md-toe-toc__title {
+        font-size: 30px;
+      }
+
+      .md-toe-point {
+        grid-template-columns: 1fr;
+        grid-template-areas: "media" "text";
+        gap: 18px;
+        padding: 30px 0;
+        align-items: start;
+      }
+
+      .md-toe-point__title {
+        font-size: 34px;
+      }
+
+      .md-toe-point__subtitle {
+        margin: -4px 0 14px;
+      }
+
+      .md-toe-point__img {
+        max-width: 640px;
+      }
+
+      .md-toe-story {
+        padding: 30px 0;
+      }
+
+      .md-toe-story__title {
+        font-size: 34px;
+      }
+
+      .md-toe-story__row {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        align-items: start;
+      }
+
+      .md-toe-story__img {
+        max-width: 640px;
+      }
+
+      .md-toe-story__arrow {
+        justify-self: center;
+      }
+
+      .md-toe-story__arrow-row {
+        justify-content: center;
+        margin: -4px auto;
+        grid-template-columns: 1fr;
+        align-items: start;
+      }
+
+      .md-toe-story__sep--top {
+        margin-bottom: 16px;
+      }
+
+      .md-toe-story__sep--mid {
+        margin-top: 20px;
+      }
+
+      .md-toe-story__bottom {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-top: 20px;
+      }
+
+      .md-toe-story__bottom-img {
+        max-width: 640px;
+      }
+
+      .md-toe-story__bottom-media {
+        justify-content: center;
+      }
+    }
+
+    @media screen and (max-width: 749px) {
+      .md-toe-toc {
+        padding: 32px 0;
+      }
+
+      .md-toe-toc__title {
+        font-size: 26px;
+        margin-bottom: 18px;
+      }
+
+      .md-toe-toc__item {
+        padding: 12px 0;
+      }
+
+      .md-toe-points {
+        padding-top: 28px;
+      }
+
+      .md-toe-point {
+        padding: 26px 0;
+        gap: 16px;
+      }
+
+      .md-toe-point__title {
+        font-size: 28px;
+        margin-bottom: 14px;
+      }
+
+      .md-toe-point__subtitle {
+        font-size: 13px;
+        margin: -4px 0 12px;
+      }
+
+      .md-toe-point__body {
+        font-size: 15px;
+      }
+
+      .md-toe-point__body p {
+        margin-bottom: 12px;
+      }
+
+      .md-toe-point__bullets {
+        margin-top: 12px;
+      }
+
+      .md-toe-point__bullets li {
+        margin: 8px 0;
+      }
+
+      .md-toe-point__callout {
+        margin-top: 14px;
+        padding: 14px 14px;
+      }
+
+      .md-toe-point__footer {
+        margin-top: 12px;
+      }
+
+      .md-toe-story {
+        padding: 26px 0;
+      }
+
+      .md-toe-story__head {
+        margin-bottom: 18px;
+      }
+
+      .md-toe-story__title {
+        font-size: 28px;
+        margin-bottom: 8px;
+      }
+
+      .md-toe-story__subtitle {
+        font-size: 13px;
+      }
+
+      .md-toe-story__stack {
+        gap: 16px;
+      }
+
+      .md-toe-story__text {
+        font-size: 15px;
+      }
+
+      .md-toe-story__heading {
+        font-size: 18px;
+        margin-bottom: 8px;
+      }
+
+      .md-toe-story__rte p {
+        margin-bottom: 12px;
+      }
+
+      .md-toe-story__bottom {
+        margin-top: 16px;
+      }
+
+      .md-toe-story__sep-line {
+        width: 92px;
+      }
+
+      .md-toe-story__sep--top {
+        margin-bottom: 14px;
+      }
+
+      .md-toe-story__sep--mid {
+        margin-top: 16px;
+      }
+    }
+  {% endstyle %}
+</section>
+
+{% schema %}
+{
+  "name": "Toe Separator Longform",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading_left",
+      "label": "Heading (left)",
+      "default": "Table of"
+    },
+    {
+      "type": "text",
+      "id": "heading_accent",
+      "label": "Heading (accent)",
+      "default": "contents"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-4"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "toc_item",
+      "name": "TOC item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "anchor_id",
+          "label": "Anchor ID",
+          "info": "This links to #anchor-id on the page."
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Supporting your body's foundation"
+        },
+        {
+          "type": "richtext",
+          "id": "subitems",
+          "label": "Sub items",
+          "info": "Use a bullet list to match the screenshot indentation."
+        }
+      ]
+    },
+    {
+      "type": "point",
+      "name": "Point",
+      "settings": [
+        {
+          "type": "text",
+          "id": "anchor_id",
+          "label": "Anchor ID",
+          "info": "This section will use this as its #anchor for TOC links."
+        },
+        {
+          "type": "select",
+          "id": "layout",
+          "label": "Layout",
+          "default": "image_left",
+          "options": [
+            { "value": "image_left", "label": "Image left" },
+            { "value": "image_right", "label": "Image right" }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "eyebrow",
+          "label": "Eyebrow",
+          "default": "Foundation"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title (main)",
+          "default": "Supporting your body's"
+        },
+        {
+          "type": "text",
+          "id": "title_accent",
+          "label": "Title (accent)",
+          "default": "foundation"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle"
+        },
+        {
+          "type": "richtext",
+          "id": "body",
+          "label": "Body"
+        },
+        {
+          "type": "richtext",
+          "id": "bullets",
+          "label": "Bullets"
+        },
+        {
+          "type": "text",
+          "id": "callout_title",
+          "label": "Callout title",
+          "default": "Usage tip."
+        },
+        {
+          "type": "richtext",
+          "id": "callout",
+          "label": "Callout"
+        },
+        {
+          "type": "text",
+          "id": "footer_line",
+          "label": "Footer line"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
+      "type": "point_story",
+      "name": "Point (story)",
+      "settings": [
+        {
+          "type": "text",
+          "id": "anchor_id",
+          "label": "Anchor ID",
+          "info": "This section will use this as its #anchor for TOC links."
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title (main)"
+        },
+        {
+          "type": "text",
+          "id": "title_accent",
+          "label": "Title (accent)"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_1",
+          "label": "Image 1"
+        },
+        {
+          "type": "richtext",
+          "id": "text_1",
+          "label": "Text 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "Image 2"
+        },
+        {
+          "type": "text",
+          "id": "heading_2",
+          "label": "Heading 2"
+        },
+        {
+          "type": "richtext",
+          "id": "text_2",
+          "label": "Text 2"
+        },
+        {
+          "type": "richtext",
+          "id": "bottom_intro",
+          "label": "Bottom intro"
+        },
+        {
+          "type": "richtext",
+          "id": "bottom_bullets",
+          "label": "Bottom bullets"
+        },
+        {
+          "type": "image_picker",
+          "id": "bottom_image",
+          "label": "Bottom image"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 20,
+  "presets": [
+    {
+      "name": "Toe Separator Longform",
+      "blocks": [
+        { "type": "toc_item" },
+        { "type": "toc_item" },
+        { "type": "toc_item" }
+      ]
+    }
+  ]
+}
+{% endschema %}

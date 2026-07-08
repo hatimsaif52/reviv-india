@@ -1,0 +1,246 @@
+{% comment %}
+  Product Terms and Conditions Checkbox
+  - Renders a checkbox that must be checked before adding to cart
+  - Include with: {% render 'product-term' %}
+{% endcomment %}
+
+{{ 'component-product-terms.css' | asset_url | stylesheet_tag }}
+{{ 'component-modal-product-terms.css' | asset_url | stylesheet_tag }}
+<style>
+    .product-terms-modal__section-detail a {
+    color: #007BFF;             /* Blue for normal links */
+    text-decoration: underline; /* Optional underline */
+  }
+
+  .product-terms-modal__section-detail a:visited {
+    color: #007BFF;             /* Keep visited links blue */
+  }
+
+  .product-terms-modal__section-detail a:hover {
+    color: #0056b3;             /* Darker blue on hover */
+  }
+  .product-terms-modal__section-detail a {
+    color: #007BFF;             /* Blue for normal links */
+    text-decoration: underline; /* Optional underline */
+  }
+
+  .product-terms-modal__section-detail a:visited {
+    color: #007BFF;             /* Keep visited links blue */
+  }
+
+  .product-terms-modal__section-detail a:hover {
+    color: #0056b3;             /* Darker blue on hover */
+  }
+
+  .product-terms-modal__section-detail a {
+    color: #007BFF;             /* Blue for normal links */
+    text-decoration: underline; /* Optional underline */
+  }
+
+  .product-terms-modal__section-detail a:visited {
+    color: #007BFF;             /* Keep visited links blue */
+  }
+
+  .product-terms-modal__section-detail a:hover {
+    color: #0056b3;             /* Darker blue on hover */
+  }
+</style>
+<div class="product-terms-container">
+  <div class="product-terms-checkbox-wrapper">
+    <input type="checkbox" id="ProductTerms-{{ section.id }}" class="product-terms-checkbox" name="terms_accepted" data-terms-required="true">
+    <label for="ProductTerms-{{ section.id }}" class="product-terms-label">I agree to the <div class="terms-link-button" aria-haspopup="dialog">Product terms and conditions</div></label>
+  </div>
+  <div class="product-terms-error hidden" role="alert">You must agree to the product terms and conditions before adding to cart.</div>
+</div>
+
+<!-- Modal markup - initially hidden -->
+<div class="product-terms-modal" id="ProductTermsModal-{{ section.id }}" style="display: none;">
+    <div class="product-terms-modal__content">
+        <div class="product-terms-modal__header">
+        <div class="product-terms-modal__header-heading">Reviv RS1 — Terms & Conditions</div>
+        <button type="button" class="product-terms-modal__close" id="product-terms-modal__close" aria-label="Close">&times;</button>
+        <div class="product-terms-modal__header-subheading">By purchasing the RS1 Sport Performance Mouthguard, you acknowledge that you have read, understood, and agree to be bound by the following terms and conditions.</div>
+        </div>
+        <div class="product-terms-modal__body">
+            <div class="product-terms-modal__section">
+                <div class="product-terms-modal__section-heading">General Use & Disclaimer</div>
+                <div class="product-terms-modal__section-content">
+                    <div class="product-terms-modal__section-order">1.</div>
+                    <div class="product-terms-modal__section-detail">The RS1 is a sport performance mouthguard designed to be worn during athletic activity to support jaw positioning, tooth protection, and performance.</div>
+                </div>
+                <div class="product-terms-modal__section-content">
+                    <div class="product-terms-modal__section-order">2.</div>
+                    <div class="product-terms-modal__section-detail">Reviv makes no claims to diagnose, treat, cure, or prevent any disease or medical condition. Performance-related benefits described on our website are based on biomechanical principles and user experience, and are educational in nature.</div>
+                </div>
+                <div class="product-terms-modal__section-content">
+                    <div class="product-terms-modal__section-order">3.</div>
+                    <div class="product-terms-modal__section-detail">You acknowledge that you are using the RS1 at your own risk and that individual results may vary.</div>
+                </div>
+                <div class="product-terms-modal__section-content">
+                    <div class="product-terms-modal__section-order">4.</div>
+                    <div class="product-terms-modal__section-detail">You agree that Reviv is not responsible for any injuries, discomfort, or adverse effects that may result from the use of the RS1.</div>
+                </div>
+                </div>
+
+                <div class="product-terms-modal__section">
+                <div class="product-terms-modal__section-heading">Intended Use</div>
+                <div class="product-terms-modal__section-content">
+                    <div class="product-terms-modal__section-order">1.</div>
+                    <div class="product-terms-modal__section-detail">The RS1 is intended for use during athletic and sports activities only. It is not designed for nighttime wear or sleep use.</div>
+                </div>
+
+                <div class="product-terms-modal__section-content">
+                    <div class="product-terms-modal__section-order">2.</div>
+                    <div class="product-terms-modal__section-detail">The RS1 is not intended for use while eating or drinking anything other than water.</div>
+                </div>
+
+                <div class="product-terms-modal__section-content">
+                    <div class="product-terms-modal__section-order">3.</div>
+                    <div class="product-terms-modal__section-detail">RS1 is designed for adults. If purchasing for a minor, a parent or legal guardian must review and accept these terms on their behalf.</div>
+                </div>
+            </div>
+
+            <div class="product-terms-modal__section">
+                <div class="product-terms-modal__section-heading">Recommended Usage</div>
+
+                <div class="product-terms-modal__section-content">
+                    <div class="product-terms-modal__section-order">1.</div>
+                    <div class="product-terms-modal__section-detail">
+                    You agree to follow the recommended usage guidelines for the RS1, which include:
+                    <div class="product-terms-modal__section-content">
+                        <div class="product-terms-modal__section-order">●</div>
+                        <div class="product-terms-modal__section-detail">Wearing the RS1 only during athletic activity or physical training</div>
+                    </div>
+                    <div class="product-terms-modal__section-content">
+                        <div class="product-terms-modal__section-order">●</div>
+                        <div class="product-terms-modal__section-detail">Removing the RS1 when eating, drinking (other than water), or at rest</div>
+                    </div>
+                    <div class="product-terms-modal__section-content">
+                        <div class="product-terms-modal__section-order">●</div>
+                        <div class="product-terms-modal__section-detail">Cleaning the appliance after every use</div>
+                    </div>
+                    <div class="product-terms-modal__section-content">
+                        <div class="product-terms-modal__section-order">●</div>
+                        <div class="product-terms-modal__section-detail">Storing the RS1 in the included protective case when not in use</div>
+                    </div>
+                    <div class="product-terms-modal__section-content">
+                        <div class="product-terms-modal__section-order">●</div>
+                        <div class="product-terms-modal__section-detail">Keeping the appliance away from hot water, direct sunlight, and heat sources, as these may deform the device</div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="product-terms-modal__section-content">
+                    <div class="product-terms-modal__section-order">2.</div>
+                    <div class="product-terms-modal__section-detail">
+                    You acknowledge that initial use of the RS1 may cause temporary adjustment effects, including:
+                    <div class="product-terms-modal__section-content">
+                        <div class="product-terms-modal__section-order">●</div>
+                        <div class="product-terms-modal__section-detail">Mild jaw soreness or muscle awareness</div>
+                    </div>
+                    <div class="product-terms-modal__section-content">
+                        <div class="product-terms-modal__section-order">●</div>
+                        <div class="product-terms-modal__section-detail">Temporary changes in bite sensation</div>
+                    </div>
+                    <div class="product-terms-modal__section-content">
+                        <div class="product-terms-modal__section-order">●</div>
+                        <div class="product-terms-modal__section-detail">Minor speech adjustment during early use</div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="product-terms-modal__section-content">
+                    <div class="product-terms-modal__section-order">3.</div>
+                    <div class="product-terms-modal__section-detail">You understand these are normal initial responses and not necessarily signs of something going wrong. If discomfort persists or worsens, discontinue use and consult a dental professional.</div>
+                </div>
+            </div>
+
+            <div class="product-terms-modal__section">
+                <div class="product-terms-modal__section-heading">Important Health & Dental Considerations</div>
+                <div class="product-terms-modal__section-content">
+                    <div class="product-terms-modal__section-order">1.</div>
+                    <div class="product-terms-modal__section-detail">If you have veneers, crowns, bridges, or other dental restorations, you must exercise caution when using the RS1. The appliance may exert pressure on your teeth that could affect dental restorations. Reviv strongly recommends consulting your dentist before use, and agrees that Reviv is not liable for any damage to existing dental restorations resulting from use.</div>
+                </div>
+
+                <div class="product-terms-modal__section-content">
+                    <div class="product-terms-modal__section-order">2.</div>
+                    <div class="product-terms-modal__section-detail">You confirm that you do not have loose teeth, are not currently wearing braces, and do not have untreated dental or gum disease. If any of these conditions apply, you agree to consult a licensed dental professional before use.</div>
+                </div>
+
+                <div class="product-terms-modal__section-content">
+                    <div class="product-terms-modal__section-order">3.</div>
+                    <div class="product-terms-modal__section-detail">If you experience gum irritation or any signs of gum recession, you agree to pause use immediately and allow full recovery before resuming. Persistent or worsening symptoms should be evaluated by a dental professional before continuing use.</div>
+                </div>
+
+                <div class="product-terms-modal__section-content">
+                    <div class="product-terms-modal__section-order">4.</div>
+                    <div class="product-terms-modal__section-detail">The RS1 is not a substitute for professionally fitted sport mouthguards where required by your sport's governing body or league rules. Please verify compliance with your sport's regulations before use.</div>
+                </div>
+
+                <div class="product-terms-modal__section-content">
+                    <div class="product-terms-modal__section-order">5.</div>
+                    <div class="product-terms-modal__section-detail">If you have been diagnosed with or suspect TMJ disorder, you agree to consult a dental professional before using the RS1.</div>
+                </div>
+            </div>
+
+            <div class="product-terms-modal__section">
+                <div class="product-terms-modal__section-heading">Performance Claims</div>
+                <div class="product-terms-modal__section-content">
+                    <div class="product-terms-modal__section-order">1.</div>
+                    <div class="product-terms-modal__section-detail">Reviv makes no guarantee of specific athletic performance outcomes. Individual results depend on a wide range of factors including fitness level, sport, and consistency of use.</div>
+                </div>
+
+                <div class="product-terms-modal__section-content">
+                    <div class="product-terms-modal__section-order">2.</div>
+                    <div class="product-terms-modal__section-detail">Claims regarding jaw alignment, airflow, stability, and strength are based on biomechanical research and user experience. They are not intended as medical claims.</div>
+                </div>
+
+                <div class="product-terms-modal__section-content">
+                    <div class="product-terms-modal__section-order">3.</div>
+                    <div class="product-terms-modal__section-detail">The RS1 is not intended to diagnose, treat, cure, or prevent any disease or medical condition. Consult a dental professional before use if you have existing dental conditions.</div>
+                </div>
+            </div>
+
+            <div class="product-terms-modal__section">
+                <div class="product-terms-modal__section-heading">Important Health Notice</div>
+                <div class="product-terms-modal__section-content">
+                    <div class="product-terms-modal__section-order">1.</div>
+                    <div class="product-terms-modal__section-detail">You confirm that you have either consulted a healthcare professional about your specific health conditions before using the RS1, or have made an informed decision to proceed without such consultation.</div>
+                </div>
+
+                <div class="product-terms-modal__section-content">
+                    <div class="product-terms-modal__section-order">2.</div>
+                    <div class="product-terms-modal__section-detail">You agree to stop using the RS1 and consult a healthcare professional if you experience severe pain, significant changes in bite, difficulty breathing, or any other concerning symptoms during use.</div>
+                </div>
+            </div>
+
+            <div class="product-terms-modal__section">
+                <div class="product-terms-modal__section-heading">Returns and Refunds</div>
+                <div class="product-terms-modal__section-content">
+                <div class="product-terms-modal__section-order"></div>
+                <div class="product-terms-modal__section-detail">By accepting these terms, you are explicitly agreeing to our <a href="https://getreviv.com/pages/return-and-refund-policy" target="_blank">return & refund policy</a>.</div>
+                </div>
+            </div>
+
+            <div class="product-terms-modal__section">
+                <div class="product-terms-modal__section-heading">Limitation of Liability</div>
+                <div class="product-terms-modal__section-content">
+                    <div class="product-terms-modal__section-order">1.</div>
+                    <div class="product-terms-modal__section-detail">To the maximum extent permitted by applicable law, Reviv shall not be liable for any direct, indirect, incidental, special, consequential, or exemplary damages resulting from your use or inability to use the RS1.</div>
+                </div>
+
+                <div class="product-terms-modal__section-content">
+                    <div class="product-terms-modal__section-order">2.</div>
+                    <div class="product-terms-modal__section-detail">You agree to indemnify and hold harmless Reviv and its affiliates, officers, employees, and agents from any claims, liabilities, damages, losses, and expenses arising from your use of the RS1.</div>
+                </div>
+            </div>
+        </div>
+        <div class="product-terms-modal__footer">
+            <button type="button" class="button button--secondary" id="product-terms-modal__refuse">Refuse</button>
+            <button type="button" class="button button--primary" id="product-terms-modal__accept">Accept</button>
+        </div>
+    </div>
+</div>
+
+<script src="{{ 'product-terms-modal.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'product-terms-validation.js' | asset_url }}" defer="defer"></script>

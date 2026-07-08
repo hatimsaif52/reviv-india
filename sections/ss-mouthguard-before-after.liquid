@@ -1,0 +1,190 @@
+<section class="reviv-results">
+  <div class="reviv-container">
+
+    <!-- Heading -->
+    <div class="reviv-header">
+      <p class="reviv-tag">Mouthguard Before and After:</p>
+      <h2 class="reviv-title">Real Results From Reviv Users</h2>
+      <p class="reviv-sub">
+        See how real users improved jaw alignment, breathing & overall
+        comfort - backed by thousands of verified reviews.
+      </p>
+
+      <a href="#" class="reviv-btn">See how it works</a>
+    </div>
+
+    <!-- Before After -->
+    <div class="reviv-compare">
+      
+      <div class="reviv-image before">
+        <span class="label before-label">Before</span>
+        <img src="{{ section.settings.before_image | image_url }}" alt="Before">
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="reviv-image after">
+        <span class="label after-label">After</span>
+        <img src="{{ section.settings.after_image | image_url }}" alt="After">
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+.reviv-results {
+  background: radial-gradient(circle at top, #2a2422, #0f0f0f);
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* angled corners */
+.reviv-results::before,
+.reviv-results::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, #aaa, transparent);
+  top: 0;
+}
+
+.reviv-results::before {
+  left: 0;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.reviv-results::after {
+  right: 0;
+  transform: scaleX(-1);
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.reviv-container {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+  color: #fff;
+}
+
+.reviv-tag {
+  color: #d6b37a;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.reviv-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.reviv-sub {
+  max-width: 600px;
+  margin: 0 auto 25px;
+  color: #ccc;
+}
+
+.reviv-btn {
+  display: inline-block;
+  background: #d6b37a;
+  color: #000;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.reviv-compare {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.reviv-image {
+  position: relative;
+  width: 50%;
+}
+
+.reviv-image img {
+  width: 100%;
+  display: block;
+}
+
+.divider {
+  width: 2px;
+  background: #fff;
+  height: 100%;
+}
+
+.label {
+  position: absolute;
+  top: 15px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.before-label {
+  left: 15px;
+  background: #d6b37a;
+  color: #000;
+}
+
+.after-label {
+  right: 15px;
+  background: #fff;
+  color: #000;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .reviv-title {
+    font-size: 32px;
+  }
+
+  .reviv-compare {
+    flex-direction: column;
+  }
+
+  .reviv-image {
+    width: 100%;
+  }
+
+  .divider {
+    width: 100%;
+    height: 2px;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Before After Results",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "before_image",
+      "label": "Before Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "after_image",
+      "label": "After Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Before After Results"
+    }
+  ]
+}
+{% endschema %}

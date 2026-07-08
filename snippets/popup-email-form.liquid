@@ -1,0 +1,128 @@
+
+{%- style -%}
+div#appoitment-form {
+    max-height: 90vh;
+    overflow-x: hidden;
+    border-radius: 5px;
+}
+.booking-form .booking-form-inner {
+    max-width: 630px;
+    padding: 44px 50px;
+    margin: 0px auto 20px auto;
+}
+
+.booking-form .booking-form-inner input {
+    width: 100%;
+    height: 50px;
+    margin: 20px 0 0 0;
+    border-radius: 5px;
+    border: 1px solid #E5C085;
+    padding: 5px 20px;
+    background: rgba(229, 192, 133, .3);
+    box-shadow: none;
+    font-size: 16px;
+    outline: none;
+}
+.booking-form .booking-form-inner label {
+display:none;
+}
+.booking-form .booking-form-inner .submit {
+    text-align: right;
+}
+
+.booking-form .booking-form-inner input[type="submit"] {
+    display: inline-block;
+    width: auto;
+    padding: 14px 28px;
+    height: auto;
+    font-family: Roboto, sans-serif;
+    text-transform: uppercase;
+    margin-top: 20px;
+    border-radius: 3px !important;
+    color: #000;
+    font-weight: 700;
+    background-color: #E5C085;
+    border: 2px solid #E5C085;
+    text-decoration: none;
+    transition: .5s;
+}
+.booking-form .booking-form-inner input[type="submit"]:hover{
+    border: 2px solid #fff;
+    color: #fff;
+    background-color: #000;
+}
+.booking-form .booking-form-inner .form-title{
+text-align:left;
+}
+
+.booking-form .booking-form-inner .form-title h2 {
+    font-size: 35px;
+    font-family: "Font-1737687022306" !important;
+    margin: 10px 0px 10px 0px;
+}
+.booking-form .booking-form-inner .form-title p {
+    margin: 0;
+    color: #6a6164;
+}
+#form-wrapper.hide{
+display:none;
+}
+@media screen and (max-width: 767px) {
+.booking-form .booking-form-inner .form-title h2 {
+    font-size: 23px;
+}
+.booking-form .booking-form-inner input[type="submit"] {
+font-size:14px;
+    padding: 12px 22px;
+}
+.booking-form .booking-form-inner .submit {
+    text-align: center;
+}
+.booking-form .booking-form-inner input {
+    height: 44px;
+}
+}
+{%- endstyle -%} 
+
+ <div id="appoitment-form" class="booking-form">
+  <div class="booking-form-inner">
+{% comment %}{% form 'contact' %}
+    {{ form.errors | default_errors }}
+    <div id="form-wrapper">
+<div class="form-title">
+<h2>JOIN THE<br>SKOOL COMMUNITY</h2>
+<p>To start your 1-month free trial with Skool, enter a valid email address and click the button to request to join the community.</p>
+</div>
+        <div class="email">
+            <label for="email">Email</label>
+            <input type="email" name="contact[email]" id="email" placeholder="Enter your email..." required />
+        </div>
+        <div class="submit">
+            <input type="submit" value="Go To Skool" />
+        </div>
+    </div>
+    {% if form.posted_successfully? %}
+        <p style="font-size:19px; font-weight:500; text-align:center;">Thank you for submitting the form.</p>
+    {% endif %}
+{% endform %} {% endcomment %}
+   <!-- Your Form Embed Goes Here -->
+    <div id="AUXkvUnpXazJHb0RxW__forms_inline_RjGj3h"
+         data-form-root="true"
+         data-forms-id="forms-root-414780"
+         data-forms-text-color="#202020"
+         data-forms-button-background-color="#202020"
+         data-forms-button-label-color="#ffffff"
+         data-forms-links-color="#1878b9"
+         data-forms-errors-color="#e02229"
+         data-forms-text-alignment="center"
+         data-forms-alignment="center"
+         data-forms-padding-top="0"
+         data-forms-padding-right="0"
+         data-forms-padding-bottom="0"
+         data-forms-padding-left="0"
+         style="--inline-container-min-height: 125px">
+      <form-embed id="app-embed" style="display: block;"></form-embed>
+    </div>
+    <!-- <div style="width: 100%; max-width: 1200px; padding: 12px 15px; margin: 0 auto;"><div><script type="text/javascript" src="https://forms-akamai.smsbump.com/858082/form_363745.js"></script></div></div> -->
+  </div>
+  </div>

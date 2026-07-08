@@ -1,0 +1,530 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "17614717889e48d521": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_b86cb15_t6KTQC": {
+          "type": "ai_gen_block_b86cb15",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Heading_72.png",
+            "mobile_image": "shopify://shop_images/Untitled_design_31.png",
+            "border_radius": 0
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_8893024_yrJ7Kh": {
+          "type": "ai_gen_block_8893024",
+          "name": "Divider",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "divider_style": "solid",
+            "divider_thickness": 1,
+            "divider_color": "#232021",
+            "divider_opacity": 100,
+            "dash_length": 20,
+            "dash_gap": 10,
+            "dot_gap": 8,
+            "spacing_top": 4,
+            "spacing_bottom": 4
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_5517a7f_JVtP6q": {
+          "type": "ai_gen_block_5517a7f",
+          "settings": {
+            "card_background": "#434343",
+            "border_color": "#232021",
+            "border_thickness": 1,
+            "border_radius": 0,
+            "shadow_vertical": 0,
+            "shadow_blur": 12,
+            "shadow_opacity": 10,
+            "padding_desktop": 32,
+            "padding_mobile": 20,
+            "section_spacing": 20,
+            "product_image": "shopify://shop_images/R2-Z_55.jpg",
+            "image_size": 56,
+            "image_border_radius": 8,
+            "primary_text": "R2 (RevivTwo)",
+            "primary_text_size": 22,
+            "main_value": "$80 USD",
+            "main_value_size": 30,
+            "secondary_value": "$110",
+            "secondary_value_size": 20,
+            "text_color": "#ffffff",
+            "muted_text_color": "#999999",
+            "divider_color": "#e0e0e0",
+            "icon_color": "#e5c085",
+            "row_spacing": 14,
+            "icon_size": 20,
+            "row_text_size": 17,
+            "row_1_enabled": true,
+            "row_1_icon": "gift",
+            "row_1_text": "FREE 1-month Skool community acces - with 2,000+ Reviv customers",
+            "row_2_enabled": true,
+            "row_2_icon": "heart",
+            "row_2_text": "Daily direct support on Skool from our team and founder Ken",
+            "row_3_enabled": true,
+            "row_3_icon": "gift",
+            "row_3_text": "FREE Mouthguard Case",
+            "row_4_enabled": true,
+            "row_4_icon": "truck",
+            "row_4_text": "FREE Shipping",
+            "row_5_enabled": true,
+            "row_5_icon": "shield",
+            "row_5_text": "FREE 1-Year Warranty",
+            "button_text": "Buy Now",
+            "button_link": "https://getreviv.com/cart/47060284178673:1?checkout",
+            "button_background": "#e5c085",
+            "button_hover_background": "#e5c085",
+            "button_text_color": "#232021",
+            "button_text_size": 16,
+            "button_padding": 16,
+            "button_border_radius": 8
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_8893024_9mVL8p": {
+          "type": "ai_gen_block_8893024",
+          "name": "Divider",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "divider_style": "solid",
+            "divider_thickness": 1,
+            "divider_color": "#e5c085",
+            "divider_opacity": 100,
+            "dash_length": 20,
+            "dash_gap": 10,
+            "dot_gap": 8,
+            "spacing_top": 16,
+            "spacing_bottom": 16
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_b86cb15_YnECBy": {
+          "type": "ai_gen_block_b86cb15",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Heading_74.png",
+            "mobile_image": "shopify://shop_images/The_New_Biomechanics_Approach_1.png",
+            "border_radius": 0
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_8893024_EUyGJW": {
+          "type": "ai_gen_block_8893024",
+          "name": "Divider",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "divider_style": "solid",
+            "divider_thickness": 1,
+            "divider_color": "#e5c085",
+            "divider_opacity": 100,
+            "dash_length": 20,
+            "dash_gap": 10,
+            "dot_gap": 8,
+            "spacing_top": 16,
+            "spacing_bottom": 16
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_b86cb15_KDdeMt": {
+          "type": "ai_gen_block_b86cb15",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Heading_73.png",
+            "mobile_image": "shopify://shop_images/The_New_Biomechanics_Approach.png",
+            "border_radius": 0
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_8893024_bCtLRq": {
+          "type": "ai_gen_block_8893024",
+          "name": "Divider",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "divider_style": "solid",
+            "divider_thickness": 1,
+            "divider_color": "#e5c085",
+            "divider_opacity": 100,
+            "dash_length": 20,
+            "dash_gap": 10,
+            "dot_gap": 8,
+            "spacing_top": 16,
+            "spacing_bottom": 16
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_b86cb15_FxwjRn": {
+          "type": "ai_gen_block_b86cb15",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Heading_75.png",
+            "mobile_image": "shopify://shop_images/The_New_Biomechanics_Approach_5.png",
+            "border_radius": 0
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_8893024_XTpn88": {
+          "type": "ai_gen_block_8893024",
+          "name": "Divider",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "divider_style": "solid",
+            "divider_thickness": 1,
+            "divider_color": "#e5c085",
+            "divider_opacity": 100,
+            "dash_length": 20,
+            "dash_gap": 10,
+            "dot_gap": 8,
+            "spacing_top": 16,
+            "spacing_bottom": 16
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_b86cb15_wwCkm4": {
+          "type": "ai_gen_block_b86cb15",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Heading_76.png",
+            "mobile_image": "shopify://shop_images/The_New_Biomechanics_Approach_6.png",
+            "border_radius": 0
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_1a6ad08_MbMXXm": {
+          "type": "ai_gen_block_1a6ad08",
+          "settings": {
+            "button_text": "Buy Now",
+            "button_link": "https://getreviv.com/cart/47060284178673:1?checkout",
+            "open_in_new_tab": false,
+            "desktop_width_percent": 100,
+            "container_alignment": "center",
+            "button_alignment": "center",
+            "container_padding_top": 5,
+            "container_padding_bottom": 0,
+            "container_padding_horizontal": 10,
+            "container_bg_color": "#242021",
+            "button_width": "100%",
+            "button_padding_vertical": 15,
+            "button_padding_horizontal": 30,
+            "button_font_size": 16,
+            "button_font_weight": "500",
+            "button_border_radius": 12,
+            "button_border_width": 1,
+            "button_bg_color": "#e5c085",
+            "button_text_color": "#121212",
+            "button_border_color": "#e5c085",
+            "button_hover_bg_color": "#121212",
+            "button_hover_text_color": "#ffffff",
+            "button_hover_border_color": "#121212"
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_54f1af9_4CBB4t": {
+          "type": "ai_gen_block_54f1af9",
+          "name": "Scrollable gallery",
+          "settings": {
+            "title": "<p>Reak Results from real customers</p>",
+            "title_size": 34,
+            "title_weight": "700",
+            "title_alignment": "left",
+            "title_color": "#ffffff",
+            "title_spacing": 30,
+            "image_1": "shopify://shop_images/32.jpg",
+            "image_2": "shopify://shop_images/31.jpg",
+            "image_3": "shopify://shop_images/30.jpg",
+            "image_4": "shopify://shop_images/33.jpg",
+            "image_width": 400,
+            "image_height": 400,
+            "image_gap": 16,
+            "image_fit": "cover",
+            "image_radius": 8,
+            "image_border_width": 0,
+            "image_border_color": "#ffffff",
+            "scroll_snap": "start",
+            "scrollbar_style": "thin",
+            "scrollbar_height": 6,
+            "scrollbar_radius": 3,
+            "scrollbar_spacing": 10,
+            "scrollbar_color": "#ffffff",
+            "scrollbar_hover_color": "#e5c085",
+            "scrollbar_track_color": "#ffffff1a",
+            "placeholder_bg_color": "#ffffff1a",
+            "placeholder_opacity": 30,
+            "mobile_title_scale": 80,
+            "mobile_image_width": 280,
+            "mobile_image_height": 280,
+            "container_width": 1200,
+            "background_color": "#232021",
+            "padding_top": 10,
+            "padding_bottom": 10,
+            "padding_horizontal": 20
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_5c950f6_A4UWRW": {
+          "type": "ai_gen_block_5c950f6",
+          "name": "Info box with bullets",
+          "settings": {
+            "title": "How to wear it & when to start seeing results?",
+            "bullet_1": "Wear the mouthguard every night and as much as you can during the day (1-2 hours)",
+            "bullet_2": "The soft tissue of the jaw and skull will start to unwind starting the first 4 weeks",
+            "bullet_3": "Results build over months & years, but most notice improvement within 1–3 months.",
+            "color_scheme": "scheme-4",
+            "section_background": "#232021",
+            "section_padding": 10,
+            "box_padding": 15,
+            "border_radius": 16,
+            "border_width": 1,
+            "border_color": "#e5c085",
+            "max_width": 600,
+            "title_size": 24,
+            "title_weight": "600",
+            "title_spacing": 20,
+            "text_size": 16,
+            "icon_color": "#e5c085",
+            "icon_size": 20,
+            "icon_spacing": 12,
+            "bullet_spacing": 16,
+            "text_alignment": "left"
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_d5de254_HpUHin": {
+          "type": "ai_gen_block_d5de254",
+          "name": "Title with number",
+          "settings": {
+            "first_title": "Join up to",
+            "first_title_size": 24,
+            "first_title_weight": "500",
+            "first_title_color": "#e5c085",
+            "target_number": 50,
+            "number_suffix": "+",
+            "animation_duration": 2000,
+            "number_size": 100,
+            "number_color": "#e5c085",
+            "title": "of daily Reviv users",
+            "title_size": 32,
+            "title_weight": "600",
+            "title_color": "#ffffff",
+            "title_max_width": 600,
+            "spacing": 20,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "background_color": "#232021"
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_8893024_kKte6E": {
+          "type": "ai_gen_block_8893024",
+          "name": "Divider",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "divider_style": "solid",
+            "divider_thickness": 1,
+            "divider_color": "#e5c085",
+            "divider_opacity": 100,
+            "dash_length": 20,
+            "dash_gap": 10,
+            "dot_gap": 8,
+            "spacing_top": 16,
+            "spacing_bottom": 0
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_1111c26_rkdCAC": {
+          "type": "ai_gen_block_1111c26",
+          "name": "Video carousel",
+          "settings": {
+            "color_scheme": "",
+            "background_color": "#232021",
+            "title_color": "#ffffff",
+            "video_container_bg": "#000000",
+            "placeholder_bg": "#f4f4f4",
+            "empty_state_text_color": "#666666",
+            "title": "What People said on Tiktok",
+            "title_size": 28,
+            "title_alignment": "left",
+            "title_spacing": 0,
+            "video_1": "shopify://files/videos/d99dbfa0-6c20-11f0-a10d-0a58a9feac02_video (1).mp4",
+            "video_2": "shopify://files/videos/af1f582f-6c20-11f0-a10d-0a58a9feac02_video (1).mp4",
+            "video_3": "shopify://files/videos/cff3da10-6c20-11f0-a10d-0a58a9feac02_video (1).mp4",
+            "video_4": "shopify://files/videos/9531587c-6c20-11f0-a10d-0a58a9feac02_video (1).mp4",
+            "video_5": "shopify://files/videos/77cad6b7-6c20-11f0-a10d-0a58a9feac02_video (1).mp4",
+            "video_6": "shopify://files/videos/6529886a-6c20-11f0-a10d-0a58a9feac02_video (1).mp4",
+            "video_width": 280,
+            "gap": 16,
+            "border_radius": 12,
+            "control_button_bg": "#00000099",
+            "control_button_bg_hover": "#000000cc",
+            "control_button_icon": "#ffffff",
+            "fullscreen_close_bg": "#00000099",
+            "fullscreen_close_bg_hover": "#000000cc",
+            "fullscreen_close_icon": "#ffffff",
+            "show_navigation": false,
+            "nav_button_color": "#e5c085",
+            "nav_button_hover_color": "#d4af74",
+            "nav_button_icon_color": "#121212",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_left": 4,
+            "padding_right": 0,
+            "margin_top": 0,
+            "margin_bottom": 0
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_54f1af9_Ytr9a9": {
+          "type": "ai_gen_block_54f1af9",
+          "name": "Scrollable gallery",
+          "settings": {
+            "title": "<p>What our customers said</p>",
+            "title_size": 32,
+            "title_weight": "700",
+            "title_alignment": "left",
+            "title_color": "#ffffff",
+            "title_spacing": 30,
+            "image_1": "shopify://shop_images/R2-Z_60.jpg",
+            "image_2": "shopify://shop_images/R2-Z_59.jpg",
+            "image_3": "shopify://shop_images/R2-Z_59.jpg",
+            "image_width": 400,
+            "image_height": 400,
+            "image_gap": 16,
+            "image_fit": "cover",
+            "image_radius": 8,
+            "image_border_width": 0,
+            "image_border_color": "#ffffff",
+            "scroll_snap": "start",
+            "scrollbar_style": "thin",
+            "scrollbar_height": 6,
+            "scrollbar_radius": 3,
+            "scrollbar_spacing": 10,
+            "scrollbar_color": "#ffffff",
+            "scrollbar_hover_color": "#e5c085",
+            "scrollbar_track_color": "#ffffff1a",
+            "placeholder_bg_color": "#ffffff1a",
+            "placeholder_opacity": 30,
+            "mobile_title_scale": 80,
+            "mobile_image_width": 280,
+            "mobile_image_height": 280,
+            "container_width": 1200,
+            "background_color": "#232021",
+            "padding_top": 10,
+            "padding_bottom": 0,
+            "padding_horizontal": 20
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_5517a7f_zNKAee": {
+          "type": "ai_gen_block_5517a7f",
+          "settings": {
+            "card_background": "#434343",
+            "border_color": "#232021",
+            "border_thickness": 1,
+            "border_radius": 0,
+            "shadow_vertical": 4,
+            "shadow_blur": 12,
+            "shadow_opacity": 10,
+            "padding_desktop": 32,
+            "padding_mobile": 20,
+            "section_spacing": 20,
+            "product_image": "shopify://shop_images/R2-Z_55.jpg",
+            "image_size": 56,
+            "image_border_radius": 8,
+            "primary_text": "R2 (RevivTwo)",
+            "primary_text_size": 22,
+            "main_value": "$80 USD",
+            "main_value_size": 30,
+            "secondary_value": "$110",
+            "secondary_value_size": 20,
+            "text_color": "#ffffff",
+            "muted_text_color": "#999999",
+            "divider_color": "#e0e0e0",
+            "icon_color": "#e5c085",
+            "row_spacing": 14,
+            "icon_size": 20,
+            "row_text_size": 17,
+            "row_1_enabled": true,
+            "row_1_icon": "gift",
+            "row_1_text": "FREE 1-month Skool community acces - with 2,000+ Reviv customers",
+            "row_2_enabled": true,
+            "row_2_icon": "heart",
+            "row_2_text": "Daily direct support on Skool from our team and founder Ken",
+            "row_3_enabled": true,
+            "row_3_icon": "gift",
+            "row_3_text": "FREE Mouthguard Case",
+            "row_4_enabled": true,
+            "row_4_icon": "truck",
+            "row_4_text": "FREE Shipping",
+            "row_5_enabled": true,
+            "row_5_icon": "shield",
+            "row_5_text": "FREE 1-Year Warranty",
+            "button_text": "Buy Now",
+            "button_link": "https://getreviv.com/cart/47060284178673:1?checkout",
+            "button_background": "#e5c085",
+            "button_hover_background": "#e5c085",
+            "button_text_color": "#232021",
+            "button_text_size": 16,
+            "button_padding": 16,
+            "button_border_radius": 8
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_b86cb15_t6KTQC",
+        "ai_gen_block_8893024_yrJ7Kh",
+        "ai_gen_block_5517a7f_JVtP6q",
+        "ai_gen_block_8893024_9mVL8p",
+        "ai_gen_block_b86cb15_YnECBy",
+        "ai_gen_block_8893024_EUyGJW",
+        "ai_gen_block_b86cb15_KDdeMt",
+        "ai_gen_block_8893024_bCtLRq",
+        "ai_gen_block_b86cb15_FxwjRn",
+        "ai_gen_block_8893024_XTpn88",
+        "ai_gen_block_b86cb15_wwCkm4",
+        "ai_gen_block_1a6ad08_MbMXXm",
+        "ai_gen_block_54f1af9_4CBB4t",
+        "ai_gen_block_5c950f6_A4UWRW",
+        "ai_gen_block_d5de254_HpUHin",
+        "ai_gen_block_8893024_kKte6E",
+        "ai_gen_block_1111c26_rkdCAC",
+        "ai_gen_block_54f1af9_Ytr9a9",
+        "ai_gen_block_5517a7f_zNKAee"
+      ],
+      "custom_css": [],
+      "settings": {}
+    },
+    "custom_liquid_P7GgN4": {
+      "type": "custom-liquid",
+      "custom_css": [],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n\n#zoko-8aec0844-b70f-11ec-b909-0242ac120002 {\n  display: none !important;\n}\n\n.ai-gallery-placeholder-amhhsbg1wyvfrrjc2uaigenblock54f1af9ytr9a9 {\n  visibility: hidden !important;\n}\n.utility-bar.color-scheme-0b5397a7-cffb-42ac-88ef-8cf9135047b7.gradient.utility-bar--bottom-border {\n  display: none !important;\n}\n\n</style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "17614717889e48d521",
+    "custom_liquid_P7GgN4"
+  ]
+}

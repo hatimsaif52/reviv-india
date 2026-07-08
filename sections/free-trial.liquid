@@ -1,0 +1,285 @@
+<style>
+
+.free-trail-sec .free-trail-sec-inner{
+display:flex;
+max-width:1200px;
+margin:0 auto;
+padding:0rem 5rem;
+align-items:center;
+justify-content:space-between;
+}
+.free-trail-sec h3{
+font-size:25px;
+font-family: Roboto !important;
+}
+.free-trail-sec h3, .free-trail-sec p {
+    margin: 0;
+}
+.free-trail-sec a.btn {
+    border-radius: 8px !important;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 700;
+background-color:#E5C085;
+    border: 2px solid #E5C085;
+    text-decoration: none;
+    padding: 2rem 5rem;
+    transition: .5s;
+}
+.free-trail-sec a.btn:hover{
+border: 2px solid #fff;
+color: #fff;
+background-color:#000;
+}
+@media screen and (max-width: 767px) {
+.free-trail-sec .free-trail-sec-inner {
+        justify-content: space-between;
+        padding: 0 20px;
+        display: grid;
+        grid-template-columns: 1.3fr 1fr;
+        gap: 10px;
+    }
+  .free-trail-sec a.btn{
+    padding: 1rem 2rem;
+  }
+.free-trail-sec h3, .free-trail-sec p {
+    text-align: left;
+    font-size: 18px;
+}
+  .free-trail-sec p {
+    display: none;
+}
+.free-trail-sec .free-trail-sec-inner .btn-col{
+
+}
+}
+</style>
+<div class="free-trail-sec {{ section.settings.custom_class }} section-padding-{{ section.id }}" style="background-color:{{ section.settings.back_color }}; padding-top:{{ section.settings.padding_top }}px; padding-bottom:{{ section.settings.padding_bottom }}px;">
+<div class="free-trail-sec-inner">
+
+<div class="content-col">
+ {% for block in section.blocks %}
+{% if block.settings.heading != blank %}
+<h3 style="color:{{ block.settings.title_color }};">{{ block.settings.heading }}</h3>
+{% endif %}
+{% if block.settings.text_para != blank %}
+<p style="color:{{ block.settings.desc_color }};">{{ block.settings.text_para }}</p>
+{% endif %}
+ {% endfor  %}
+</div>
+<div class="btn-col">
+ {% for block in section.blocks %}
+{% if block.settings.button_link != blank and block.settings.button_label != blank %}
+ <a  href="{{ block.settings.button_link }}" class="btn {% if block.settings.button_id != blank %}{{ block.settings.button_id }}{% endif %}">
+        {{ block.settings.button_label }}
+    </a>
+{% endif %}
+{% endfor %}
+</div>
+
+</div>
+</div>
+
+<!-- <div id="appointment-popup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" id="close-btn">&times;</span>
+       {% comment %} {% render 'popup-email-form' %} {% endcomment %}
+    </div>
+</div> -->
+<script>
+//for sticky free trial section
+document.addEventListener("DOMContentLoaded", function () {
+  const freeTrialSection = document.querySelector(".free-trail-sec");
+  const heroBanner = document.querySelector(".sk-main-banner");
+
+  if (!freeTrialSection || !heroBanner) return;
+
+  const heroBottom = () => heroBanner.getBoundingClientRect().bottom + window.scrollY;
+
+  window.addEventListener("scroll", function () {
+    const scrollY = window.scrollY;
+
+    if (scrollY > heroBottom()) {
+      freeTrialSection.classList.add("fixed");
+    } else {
+      freeTrialSection.classList.remove("fixed");
+    }
+  });
+});
+</script>
+
+<div id="appointment-popup" class="popup">
+  <div class="popup-content">
+    <span class="close-btn" id="close-btn">&times;</span>
+    {% render 'popup-email-form' %}
+  </div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var popup = document.getElementById('appointment-popup');
+    var openBtns = document.querySelectorAll('.form-popup-btn'); // Select all buttons with class
+    var closeBtn = document.getElementById('close-btn');
+    var formWrapper = document.getElementById('form-wrapper');
+
+    // Show popup when clicking any button with class "form-popup-btn"
+    openBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (popup) {
+          popup.style.display = 'flex';
+        }
+      });
+    });
+
+    // Close popup when clicking the close button
+    closeBtn?.addEventListener('click', function () {
+      if (popup) {
+        popup.style.display = 'none';
+      }
+    });
+
+    // Check if the URL contains "contact_posted=true#"
+    if (window.location.href.includes('contact_posted=true#')) {
+      if (formWrapper) {
+        formWrapper.style.display = 'none'; // Hide form
+      }
+      openBtns[0]?.click(); // Trigger click on the first button with class "form-popup-btn"
+    }
+  });
+
+</script>
+{% schema %}
+  {
+    "name": "Free Trial Section",
+    "settings": [
+      {
+        "type": "color",
+        "id": "back_color",
+        "default": "#ccc",
+        "label": "Background Color"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 36
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+      },
+      {
+        "type": "text",
+        "id": "custom_class",
+        "label": "Custom Class"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "heading",
+        "name": "Heading",
+        "limit": 4,
+        "settings": [
+          {
+            "type": "inline_richtext",
+            "id": "heading",
+            "label": "Title",
+            "default": "Enter your Text"
+          },
+          {
+            "type": "color",
+            "id": "title_color",
+            "label": "Title Color",
+            "default": "#000"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "name": "Text",
+        "limit": 3,
+        "settings": [
+          {
+            "type": "inline_richtext",
+            "id": "text_para",
+            "label": "Description",
+            "default": "Enter your text here"
+          },
+          {
+            "type": "color",
+            "id": "desc_color",
+            "label": "Description Color",
+            "default": "#000"
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "name": "Button",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "button_label",
+            "label": "Button Label",
+            "default": "Learn More"
+          },
+         {
+          "type": "text",
+          "id": "button_id",
+          "label": "Custom Button Class",
+        },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button Link",
+            "default": "/"
+          },
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Free Trial Section",
+        "category": "Custom Sections",
+        "settings": {
+          "back_color": "#ccc",
+          "padding_top": 36,
+          "padding_bottom": 36
+        },
+        "blocks": [
+          {
+            "type": "heading",
+            "settings": {
+              "heading": "Try for Free",
+              "title_color": "#000"
+            }
+          },
+          {
+            "type": "text",
+            "settings": {
+              "text_para": "Experience our service with a free trial today!",
+              "desc_color": "#000"
+            }
+          },
+          {
+            "type": "button",
+            "settings": {
+              "button_label": "Get Started",
+              "button_link": "/free-trial",
+            }
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

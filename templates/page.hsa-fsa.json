@@ -1,0 +1,402 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_banner_FnTFRd": {
+      "type": "image-banner",
+      "custom_css": [
+        ".banner__media {height: 100%; position: relative; width: 100% !important; flex: 1 0 100%; margin: 0 auto;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/hero_banner_1_1.webp",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-522b6c27-788f-4b7e-bbb7-d4f61d40572f",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "custom_classes": ""
+      }
+    },
+    "multicolumn_H7HhVr": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_WmVyiw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/3.webp",
+            "title": "Checkout",
+            "text": "<p>Find the Reviv logo during checkout. <br/>Exit the \"Shop Pay\" pop-up if prompted.</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_bdBbBV": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/1.webp",
+            "title": "Complete Assesment",
+            "text": "<p>Find the Reviv logo during checkout. <br/>Exit the \"Shop Pay\" pop-up if prompted.</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_Ba3RDX": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/4.webp",
+            "title": "Make Your Purchase",
+            "text": "<p>Pay with your HSA/FSA card or a credit card. If you use a regular credit card, follow the guide included with your LMN to submit your purchase for reimbursement.</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        }
+      },
+      "block_order": [
+        "column_WmVyiw",
+        "column_bdBbBV",
+        "column_Ba3RDX"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "How it Works",
+        "box_link": false,
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-4540b7cc-ec6e-4efc-a43d-660203f6eae9",
+        "section_color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": "hsa-multi"
+      }
+    },
+    "image_with_text_YehDfL": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_jy6AVp": {
+          "type": "heading",
+          "settings": {
+            "heading": "How does using my HSA/FSA save me money?",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_jy6AVp"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Text.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "wrap_image_to_container": false,
+        "image_behavior": "none",
+        "mobile_content_order": "column-reverse",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom__class": "hsa-img-w-txt"
+      }
+    },
+    "rich_text_hqjQPT": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_hcUeMD": {
+          "type": "heading",
+          "settings": {
+            "heading": "Eligible Products",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_hcUeMD"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "custom__class": ""
+      }
+    },
+    "product_cards_bXGxML": {
+      "type": "product-cards",
+      "blocks": {
+        "product_card_h8jfUM": {
+          "type": "product_card",
+          "settings": {
+            "product": "rd1-revivday-daytime-mouthguard",
+            "is_new": false
+          }
+        },
+        "product_card_N3zGgU": {
+          "type": "product_card",
+          "settings": {
+            "product": "r3-revivthree-without-support",
+            "is_new": false
+          }
+        },
+        "product_card_DUX8Xx": {
+          "type": "product_card",
+          "settings": {
+            "product": "r3-revivthree-support-package",
+            "is_new": false
+          }
+        },
+        "product_card_GTBm9m": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-two-without-support",
+            "is_new": false
+          }
+        },
+        "product_card_NbHwHf": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-two",
+            "is_new": false
+          }
+        },
+        "product_card_9dyFTB": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-one-without-support",
+            "is_new": false
+          }
+        },
+        "product_card_TGP79t": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-one",
+            "is_new": false
+          }
+        }
+      },
+      "block_order": [
+        "product_card_h8jfUM",
+        "product_card_N3zGgU",
+        "product_card_DUX8Xx",
+        "product_card_GTBm9m",
+        "product_card_NbHwHf",
+        "product_card_9dyFTB",
+        "product_card_TGP79t"
+      ],
+      "custom_css": [],
+      "name": "Product Cards",
+      "settings": {
+        "section_color_scheme": "scheme-4",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_classes": "hsa-prd-cards"
+      }
+    },
+    "collapsible_content_kx79gi": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_PqzzC7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How does using my HSA/FSA account save me money?",
+            "icon": "check_mark",
+            "row_content": "<p>HSA/FSA accounts were created so individuals could use pre-tax money to pay for expenses used to treat, mitigate, or prevent a diagnosed medical condition. Because HSA/FSAs use pre-tax money, you’re getting more purchasing power for your dollars. Rather than pay taxes on income and then spend it on health items, qualified customers can use pre-tax funds to invest in their health.</p><p>An individual can contribute up to $4,150 pretax to their HSA per year, or $8,300 for a family (plus an additional $1,000 if you are at least 55 years old. Individuals can contribute up to $3,200 pretax to their FSA per year (with an additional $500 in employer contributions allowed).</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_nFwdfN": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What are FSA and HSA accounts?",
+            "icon": "check_mark",
+            "row_content": "<p>Health savings accounts (HSA) and flexible spending accounts (FSA) are programs that allow you to set aside pre-tax dollars for eligible healthcare expenses. If you’re unsure whether or not you have an HSA or FSA account, please check with your employer or insurance company.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_gcABzQ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I use my HSA/ FSA at Reviv?",
+            "icon": "check_mark",
+            "row_content": "<p>Yes, if qualified. Simply select Reviv as your payment option at checkout and use your FSA or HSA card as you would any other credit card. If you do not have sufficient HSA/FSA funds, you can split your payment between your credit card and HSA/FSA card.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_zPxeBW": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I use my regular credit card at checkout?",
+            "icon": "check_mark",
+            "row_content": "<p>Yes. If you’d like to use your regular credit card, simply select that in Reviv checkout. After your purchase, Reviv will email you instructions on how to submit the receipt to your HSA/FSA administrator for reimbursement.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_4QyhmQ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is a Letter of Medical Necessity, and how is this compliant?",
+            "icon": "check_mark",
+            "row_content": "<p>The items in your Letter of Medical Necessity (“LMN”) are now qualified medical expenses in the same way a visit to the doctor’s office or pharmaceutical product is.</p><p><br/>There are thousands of studies showing food and exercise is often the best medicine to prevent and reverse disease. Exercise qualifies as a qualified medical expense with an LMN. Food, supplements, and other health purchases qualify as medical expenses if they treat or prevent an illness, and a doctor substantiates the need. Your LMN satisfies all IRS requirements to make your wellness spend fully reimbursable.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_KM6TFM": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are there fees associated with using Reviv's services?",
+            "icon": "check_mark",
+            "row_content": "<p>There is no cost to you, as long as you are shopping with a Truemed partner merchant.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_t3bMdM": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "When should I use my FSA/HSA dollars?",
+            "icon": "check_mark",
+            "row_content": "<p>You can use your HSA/FSA dollars all year long. However, most FSA dollars expire at the end of the year and unused money may not rollover into the next year. Make sure to spend the rest of your FSA dollars before December 31st — use it, so you don’t lose it!</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_LqzPhq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long does it take for me to receive my Letter of Medical Necessity?",
+            "icon": "check_mark",
+            "row_content": "<p>Generally it takes 2-5 hours. In some cases, Reviv’s provider team will require additional time to issue a letter of medical necessity based on the needs associated with an individual qualification survey. If you aren’t seeing your letter in your inbox, check spam, then reach out to us at <a href=\"mailto:support@get-reviv.com\" title=\"mailto:support@get-reviv.com\">support@get-reviv.com </a>for help.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_EWq8T6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "I don’t have an HSA/FSA. Can I still benefit from Truemed? ",
+            "icon": "check_mark",
+            "row_content": "<p>Unfortunately, Truemed’s services are for individuals who have HSA or FSA accounts (or plan to fund one during open enrollment). We encourage you to ask your employer about information on your HSA or FSA!</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_iEQHgQ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "I don’t live in the US. Can I still get reimbursed with Truemed?",
+            "icon": "check_mark",
+            "row_content": "<p>Unfortunately, Truemed is currently only available in the United States.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_PqzzC7",
+        "collapsible_row_nFwdfN",
+        "collapsible_row_gcABzQ",
+        "collapsible_row_zPxeBW",
+        "collapsible_row_4QyhmQ",
+        "collapsible_row_KM6TFM",
+        "collapsible_row_t3bMdM",
+        "collapsible_row_LqzPhq",
+        "collapsible_row_EWq8T6",
+        "collapsible_row_iEQHgQ"
+      ],
+      "custom_css": [
+        ".icon-accordion {display: none;}",
+        ".accordion__title {font-size: 1.2em; letter-spacing: 0.02em; font-family: Roboto !important; line-height: 100%; padding-top: 12px;}",
+        "h2:hover {text-decoration: none;}",
+        ".accordion__content {padding-left: 0;}",
+        "p {letter-spacing: -0.02em; font-weight: 400; font-size: 18px; line-height: 150%; padding-left: 16px;}",
+        ".collapsible-content__heading {display: block; font-family: Cardillac, serif; padding-bottom: 16px; color: #efc98b;}"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "FAQ's",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "scheme-4",
+        "container_color_scheme": "scheme-4",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": ""
+      }
+    },
+    "rich_text_eaGg9F": {
+      "type": "rich-text",
+      "blocks": {
+        "text_7UxwGQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>“Powered by </strong><a href=\"https://truemed.com\" target=\"_blank\" title=\"https://truemed.com\"><strong>Truemed</strong></a><strong>”</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_7UxwGQ"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-0b5397a7-cffb-42ac-88ef-8cf9135047b7",
+        "full_width": true,
+        "padding_top": 4,
+        "padding_bottom": 4,
+        "custom__class": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_FnTFRd",
+    "multicolumn_H7HhVr",
+    "image_with_text_YehDfL",
+    "rich_text_hqjQPT",
+    "product_cards_bXGxML",
+    "collapsible_content_kx79gi",
+    "rich_text_eaGg9F"
+  ]
+}

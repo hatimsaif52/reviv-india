@@ -1,0 +1,833 @@
+{% doc %}
+  @prompt
+    Create a product image carousel section similar to the example shown.
+    
+    The main image or video should appear large and centered, taking up the same width and height ratio as a typical Shopify product media block.
+    
+    Below the main image, add a horizontal row of smaller preview thumbnails (exact same sizing and spacing as in the reference), allowing users to click or hover to change the main display.
+    
+    Maintain consistent sizing, padding, and border radius across all images and videos — make sure the preview thumbnails align perfectly with even spacing.
+    
+    Include customization options for:
+    
+    Padding and margins (top, bottom, left, right)
+    
+    Thumbnail border color, size, and active state (e.g., highlight when selected)
+    
+    Overall carousel width and height scaling for desktop and mobile
+    
+    Allow both images and videos to be uploaded directly from the Shopify theme editor — users should be able to drag and drop or upload from their Shopify files or connect TikTok-hosted videos.
+    
+    Ensure smooth swipe/scroll behavior for mobile and click navigation for desktop.
+    
+    The section should support up to 11 media items (images or videos) with the same layout consistency., make sure the whole carouseel is 414x380.88, can we remove the scroll indicators, and make the whole carousel responsive on desktop as well, so that there isn't much empty space
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-carousel-{{ ai_gen_id }} {
+    padding-top: {{ block.settings.padding_top }}px;
+    padding-bottom: {{ block.settings.padding_bottom }}px;
+    padding-left: {{ block.settings.padding_left }}px;
+    padding-right: {{ block.settings.padding_right }}px;
+    margin-top: {{ block.settings.margin_top }}px;
+    margin-bottom: {{ block.settings.margin_bottom }}px;
+    margin-left: {{ block.settings.margin_left }}px;
+    margin-right: {{ block.settings.margin_right }}px;
+    max-width: 100%;
+  }
+
+  .ai-carousel-container-{{ ai_gen_id }} {
+    width: 100%;
+    max-width: 414px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ai-carousel-main-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 414 / 300;
+    overflow: hidden;
+    border-radius: {{ block.settings.media_border_radius }}px;
+    margin-bottom: {{ block.settings.thumbnail_spacing }}px;
+    background-color: #f4f4f4;
+  }
+
+  .ai-carousel-main-media-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  .ai-carousel-main-media-{{ ai_gen_id }}.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .ai-carousel-main-media-{{ ai_gen_id }} img,
+  .ai-carousel-main-media-{{ ai_gen_id }} video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .ai-carousel-nav-{{ ai_gen_id }} {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: background-color 0.3s ease;
+  }
+
+  .ai-carousel-nav-{{ ai_gen_id }}:hover {
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+  .ai-carousel-nav-{{ ai_gen_id }}.prev {
+    left: 16px;
+  }
+
+  .ai-carousel-nav-{{ ai_gen_id }}.next {
+    right: 16px;
+  }
+
+  .ai-carousel-nav-{{ ai_gen_id }} svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .ai-carousel-thumbnails-{{ ai_gen_id }} {
+    display: flex;
+    gap: {{ block.settings.thumbnail_gap }}px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    flex-shrink: 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .ai-carousel-thumbnails-{{ ai_gen_id }}::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ai-carousel-thumbnail-{{ ai_gen_id }} {
+    flex-shrink: 0;
+    width: {{ block.settings.thumbnail_size }}px;
+    height: {{ block.settings.thumbnail_size }}px;
+    border-radius: {{ block.settings.thumbnail_border_radius }}px;
+    overflow: hidden;
+    cursor: pointer;
+    border: {{ block.settings.thumbnail_border_width }}px solid {{ block.settings.thumbnail_border_color }};
+    transition: border-color 0.3s ease, transform 0.2s ease;
+    background-color: #f4f4f4;
+  }
+
+  .ai-carousel-thumbnail-{{ ai_gen_id }}:hover {
+    transform: scale(1.05);
+  }
+
+  .ai-carousel-thumbnail-{{ ai_gen_id }}.active {
+    border-color: {{ block.settings.thumbnail_active_border_color }};
+    border-width: {{ block.settings.thumbnail_active_border_width }}px;
+  }
+
+  .ai-carousel-thumbnail-{{ ai_gen_id }} img,
+  .ai-carousel-thumbnail-{{ ai_gen_id }} video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .ai-carousel-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+  }
+
+  .ai-carousel-placeholder-{{ ai_gen_id }} svg {
+    width: 50%;
+    height: 50%;
+    opacity: 0.3;
+  }
+
+  .ai-carousel-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-carousel-thumbnail-{{ ai_gen_id }} {
+      width: {{ block.settings.mobile_thumbnail_size }}px;
+      height: {{ block.settings.mobile_thumbnail_size }}px;
+    }
+
+    .ai-carousel-nav-{{ ai_gen_id }} {
+      width: 32px;
+      height: 32px;
+    }
+
+    .ai-carousel-nav-{{ ai_gen_id }}.prev {
+      left: 8px;
+    }
+
+    .ai-carousel-nav-{{ ai_gen_id }}.next {
+      right: 8px;
+    }
+
+    .ai-carousel-nav-{{ ai_gen_id }} svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+{% endstyle %}
+
+<product-carousel-{{ ai_gen_id }} class="ai-carousel-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-carousel-container-{{ ai_gen_id }}">
+    <div class="ai-carousel-main-{{ ai_gen_id }}">
+      {% liquid
+        assign has_media = false
+        for i in (1..11)
+          assign image_key = 'media_' | append: i | append: '_image'
+          assign video_key = 'media_' | append: i | append: '_video'
+          assign image = block.settings[image_key]
+          assign video = block.settings[video_key]
+          if image != blank or video != blank
+            assign has_media = true
+            break
+          endif
+        endfor
+      %}
+
+      {% if has_media == false %}
+        <div class="ai-carousel-placeholder-{{ ai_gen_id }}">
+          {{ 'product-1' | placeholder_svg_tag }}
+        </div>
+        <div class="ai-carousel-empty-state-{{ ai_gen_id }}">
+          Add images or videos to get started
+        </div>
+      {% else %}
+        {% for i in (1..11) %}
+          {% liquid
+            assign image_key = 'media_' | append: i | append: '_image'
+            assign video_key = 'media_' | append: i | append: '_video'
+            assign image = block.settings[image_key]
+            assign video = block.settings[video_key]
+          %}
+
+          {% if video != blank %}
+            <div class="ai-carousel-main-media-{{ ai_gen_id }} {% if forloop.first %}active{% endif %}" data-index="{{ forloop.index0 }}">
+              <video
+                src="{{ video }}"
+                {% if block.settings.video_autoplay %}autoplay{% endif %}
+                {% if block.settings.video_loop %}loop{% endif %}
+                {% if block.settings.video_muted %}muted{% endif %}
+                playsinline
+                {% if block.settings.video_controls %}controls{% endif %}
+              ></video>
+            </div>
+          {% elsif image != blank %}
+            <div class="ai-carousel-main-media-{{ ai_gen_id }} {% if forloop.first %}active{% endif %}" data-index="{{ forloop.index0 }}">
+              <img
+                src="{{ image | image_url: width: 1200 }}"
+                alt="{{ image.alt | escape }}"
+                loading="lazy"
+                width="{{ image.width }}"
+                height="{{ image.height }}"
+              >
+            </div>
+          {% endif %}
+        {% endfor %}
+
+        {% if block.settings.show_nav_arrows %}
+          <button class="ai-carousel-nav-{{ ai_gen_id }} prev" aria-label="Previous image">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <button class="ai-carousel-nav-{{ ai_gen_id }} next" aria-label="Next image">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        {% endif %}
+      {% endif %}
+    </div>
+
+    {% if has_media %}
+      <div class="ai-carousel-thumbnails-{{ ai_gen_id }}">
+        {% for i in (1..11) %}
+          {% liquid
+            assign image_key = 'media_' | append: i | append: '_image'
+            assign video_key = 'media_' | append: i | append: '_video'
+            assign image = block.settings[image_key]
+            assign video = block.settings[video_key]
+          %}
+
+          {% if video != blank %}
+            <div class="ai-carousel-thumbnail-{{ ai_gen_id }} {% if forloop.first %}active{% endif %}" data-index="{{ forloop.index0 }}">
+              <video src="{{ video }}" muted playsinline></video>
+            </div>
+          {% elsif image != blank %}
+            <div class="ai-carousel-thumbnail-{{ ai_gen_id }} {% if forloop.first %}active{% endif %}" data-index="{{ forloop.index0 }}">
+              <img
+                src="{{ image | image_url: width: 200 }}"
+                alt="{{ image.alt | escape }}"
+                loading="lazy"
+                width="200"
+                height="200"
+              >
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</product-carousel-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class ProductCarousel{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.currentIndex = 0;
+        this.touchStartX = 0;
+        this.touchEndX = 0;
+      }
+
+      connectedCallback() {
+        this.mainMedia = this.querySelectorAll('.ai-carousel-main-media-{{ ai_gen_id }}');
+        this.thumbnails = this.querySelectorAll('.ai-carousel-thumbnail-{{ ai_gen_id }}');
+        this.prevButton = this.querySelector('.ai-carousel-nav-{{ ai_gen_id }}.prev');
+        this.nextButton = this.querySelector('.ai-carousel-nav-{{ ai_gen_id }}.next');
+        this.mainContainer = this.querySelector('.ai-carousel-main-{{ ai_gen_id }}');
+        this.thumbnailsContainer = this.querySelector('.ai-carousel-thumbnails-{{ ai_gen_id }}');
+
+        if (this.mainMedia.length === 0) return;
+
+        this.setupEventListeners();
+      }
+
+      setupEventListeners() {
+        this.thumbnails.forEach((thumbnail, index) => {
+          thumbnail.addEventListener('click', () => this.goToSlide(index));
+          thumbnail.addEventListener('mouseenter', () => {
+            if (window.innerWidth >= 750) {
+              this.goToSlide(index);
+            }
+          });
+        });
+
+        if (this.prevButton) {
+          this.prevButton.addEventListener('click', () => this.previousSlide());
+        }
+
+        if (this.nextButton) {
+          this.nextButton.addEventListener('click', () => this.nextSlide());
+        }
+
+        this.mainContainer.addEventListener('touchstart', (e) => {
+          this.touchStartX = e.changedTouches[0].screenX;
+        });
+
+        this.mainContainer.addEventListener('touchend', (e) => {
+          this.touchEndX = e.changedTouches[0].screenX;
+          this.handleSwipe();
+        });
+
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowLeft') {
+            this.previousSlide();
+          } else if (e.key === 'ArrowRight') {
+            this.nextSlide();
+          }
+        });
+      }
+
+      handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = this.touchStartX - this.touchEndX;
+
+        if (Math.abs(diff) > swipeThreshold) {
+          if (diff > 0) {
+            this.nextSlide();
+          } else {
+            this.previousSlide();
+          }
+        }
+      }
+
+      goToSlide(index) {
+        this.mainMedia[this.currentIndex].classList.remove('active');
+        this.thumbnails[this.currentIndex].classList.remove('active');
+
+        this.currentIndex = index;
+
+        this.mainMedia[this.currentIndex].classList.add('active');
+        this.thumbnails[this.currentIndex].classList.add('active');
+
+        const activeVideo = this.mainMedia[this.currentIndex].querySelector('video');
+        if (activeVideo && activeVideo.hasAttribute('autoplay')) {
+          activeVideo.play();
+        }
+
+        this.mainMedia.forEach((media, i) => {
+          if (i !== this.currentIndex) {
+            const video = media.querySelector('video');
+            if (video) {
+              video.pause();
+              video.currentTime = 0;
+            }
+          }
+        });
+
+        this.scrollThumbnailIntoView();
+      }
+
+      nextSlide() {
+        const nextIndex = (this.currentIndex + 1) % this.mainMedia.length;
+        this.goToSlide(nextIndex);
+      }
+
+      previousSlide() {
+        const prevIndex = (this.currentIndex - 1 + this.mainMedia.length) % this.mainMedia.length;
+        this.goToSlide(prevIndex);
+      }
+
+      scrollThumbnailIntoView() {
+        if (!this.thumbnailsContainer) return;
+
+        const activeThumbnail = this.thumbnails[this.currentIndex];
+        const containerWidth = this.thumbnailsContainer.offsetWidth;
+        const thumbnailLeft = activeThumbnail.offsetLeft;
+        const thumbnailWidth = activeThumbnail.offsetWidth;
+        const scrollLeft = this.thumbnailsContainer.scrollLeft;
+
+        if (thumbnailLeft < scrollLeft) {
+          this.thumbnailsContainer.scrollLeft = thumbnailLeft;
+        } else if (thumbnailLeft + thumbnailWidth > scrollLeft + containerWidth) {
+          this.thumbnailsContainer.scrollLeft = thumbnailLeft + thumbnailWidth - containerWidth;
+        }
+      }
+    }
+
+    customElements.define('product-carousel-{{ ai_gen_id }}', ProductCarousel{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Product media carousel",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_left",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding left",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_right",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding right",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin bottom",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_left",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin left",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_right",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin right",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Main media"
+    },
+    {
+      "type": "range",
+      "id": "media_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 8
+    },
+    {
+      "type": "checkbox",
+      "id": "show_nav_arrows",
+      "label": "Show navigation arrows",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Thumbnails"
+    },
+    {
+      "type": "range",
+      "id": "thumbnail_size",
+      "min": 50,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Size",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "mobile_thumbnail_size",
+      "min": 40,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Mobile size",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "thumbnail_gap",
+      "min": 4,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Gap between thumbnails",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "thumbnail_spacing",
+      "min": 8,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Space above thumbnails",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "thumbnail_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "thumbnail_border_width",
+      "min": 0,
+      "max": 5,
+      "step": 1,
+      "unit": "px",
+      "label": "Border width",
+      "default": 2
+    },
+    {
+      "type": "color",
+      "id": "thumbnail_border_color",
+      "label": "Border color",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "range",
+      "id": "thumbnail_active_border_width",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "unit": "px",
+      "label": "Active border width",
+      "default": 2
+    },
+    {
+      "type": "color",
+      "id": "thumbnail_active_border_color",
+      "label": "Active border color",
+      "default": "#121212"
+    },
+    {
+      "type": "header",
+      "content": "Video settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "video_autoplay",
+      "label": "Autoplay videos",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "video_loop",
+      "label": "Loop videos",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "video_muted",
+      "label": "Mute videos",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "video_controls",
+      "label": "Show video controls",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Media 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "media_1_image",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "media_1_video",
+      "label": "Video URL"
+    },
+    {
+      "type": "header",
+      "content": "Media 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "media_2_image",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "media_2_video",
+      "label": "Video URL"
+    },
+    {
+      "type": "header",
+      "content": "Media 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "media_3_image",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "media_3_video",
+      "label": "Video URL"
+    },
+    {
+      "type": "header",
+      "content": "Media 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "media_4_image",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "media_4_video",
+      "label": "Video URL"
+    },
+    {
+      "type": "header",
+      "content": "Media 5"
+    },
+    {
+      "type": "image_picker",
+      "id": "media_5_image",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "media_5_video",
+      "label": "Video URL"
+    },
+    {
+      "type": "header",
+      "content": "Media 6"
+    },
+    {
+      "type": "image_picker",
+      "id": "media_6_image",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "media_6_video",
+      "label": "Video URL"
+    },
+    {
+      "type": "header",
+      "content": "Media 7"
+    },
+    {
+      "type": "image_picker",
+      "id": "media_7_image",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "media_7_video",
+      "label": "Video URL"
+    },
+    {
+      "type": "header",
+      "content": "Media 8"
+    },
+    {
+      "type": "image_picker",
+      "id": "media_8_image",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "media_8_video",
+      "label": "Video URL"
+    },
+    {
+      "type": "header",
+      "content": "Media 9"
+    },
+    {
+      "type": "image_picker",
+      "id": "media_9_image",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "media_9_video",
+      "label": "Video URL"
+    },
+    {
+      "type": "header",
+      "content": "Media 10"
+    },
+    {
+      "type": "image_picker",
+      "id": "media_10_image",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "media_10_video",
+      "label": "Video URL"
+    },
+    {
+      "type": "header",
+      "content": "Media 11"
+    },
+    {
+      "type": "image_picker",
+      "id": "media_11_image",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "media_11_video",
+      "label": "Video URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product media carousel"
+    }
+  ]
+}
+{% endschema %}

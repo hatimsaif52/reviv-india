@@ -1,0 +1,14 @@
+.revivone-purchase-check-container {
+  margin-bottom: 15px;
+}
+
+.revivone-purchase-dropdown {
+  background: transparent;
+  color: wheat;
+  padding: 10px 20px;
+  border-radius: 0px;
+}
+
+.revivone-purchase-dropdown option {
+  background: #232021;
+}

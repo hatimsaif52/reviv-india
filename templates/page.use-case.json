@@ -1,0 +1,747 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_banner_g8wcVV": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_N68zMY": {
+          "type": "heading",
+          "settings": {
+            "heading": "Does Reviv address TMJ?",
+            "heading_size": "hxl"
+          }
+        },
+        "text_tmWeXJ": {
+          "type": "text",
+          "settings": {
+            "text": "In my experience it does help.",
+            "text_style": "subtitle"
+          }
+        },
+        "buttons_YMPP3D": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Join now",
+            "button_id": "form-popup-btn",
+            "button_link_1": "#",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_N68zMY",
+        "text_tmWeXJ",
+        "buttons_YMPP3D"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/c813bbd513e4fac634d99065e31a746d.webp",
+        "image_overlay_opacity": 50,
+        "image_height": "medium",
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-522b6c27-788f-4b7e-bbb7-d4f61d40572f",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "custom_classes": "sk-main-banner"
+      }
+    },
+    "free_trial_CX8H9e": {
+      "type": "free-trial",
+      "blocks": {
+        "heading_MgDHRz": {
+          "type": "heading",
+          "settings": {
+            "heading": "START 1-MONTH FREE TRIAL TODAY",
+            "title_color": "#ffffff"
+          }
+        },
+        "text_FqcRn7": {
+          "type": "text",
+          "settings": {
+            "text_para": "$00.00",
+            "desc_color": "#e5c085"
+          }
+        },
+        "button_YBCQ63": {
+          "type": "button",
+          "settings": {
+            "button_label": "JOIN NOW",
+            "button_id": "form-popup-btn",
+            "button_link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MgDHRz",
+        "text_FqcRn7",
+        "button_YBCQ63"
+      ],
+      "settings": {
+        "back_color": "#232021",
+        "padding_top": 16,
+        "padding_bottom": 16,
+        "custom_class": ""
+      }
+    },
+    "tmj_block_UtYCDW": {
+      "type": "tmj-block",
+      "blocks": {
+        "rich_text_7Mewpm": {
+          "type": "rich_text",
+          "settings": {
+            "rich_text": "<p>Reviv acts like a door jam preventing the jaw from closing</p>"
+          }
+        },
+        "rich_text_D4G9EG": {
+          "type": "rich_text",
+          "settings": {
+            "rich_text": "<p>This causes the soft tissue covering the jaw and skull to stretch.  </p>"
+          }
+        },
+        "rich_text_ntGJxe": {
+          "type": "rich_text",
+          "name": "3rd bullet",
+          "settings": {
+            "rich_text": "<p>The skull inflates allowing more space for cranial bones to revert to where they should go and for jaw to return back to where it should be.</p>"
+          }
+        },
+        "rich_text_C4jMHz": {
+          "type": "rich_text",
+          "settings": {
+            "rich_text": "<p>As the jaw reverts to where it should be the TMJ joint where it connects to the skull is able to heal.</p>"
+          }
+        },
+        "rich_text_FBPAdU": {
+          "type": "rich_text",
+          "settings": {
+            "rich_text": "<p>As the joint heals I found that various symptoms associated with TMJ improved.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "rich_text_7Mewpm",
+        "rich_text_D4G9EG",
+        "rich_text_ntGJxe",
+        "rich_text_C4jMHz",
+        "rich_text_FBPAdU"
+      ],
+      "settings": {
+        "heading": "How I view it helps TMJ",
+        "padding_top": "pt-8",
+        "padding_bottom": "pb-12"
+      }
+    },
+    "multicolumn_HzjGGH": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_HqVALW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/44dcbc390e99de29005268d9d2fc26bc.png",
+            "title": "TMJ is a function of your deflating skull",
+            "text": "<p>Temperomandibular Joint Disorder (TMD) is the dysfunction of the TMJ joint and is rocketing up in terms of sufferers. But it is completely misunderstood.</p>",
+            "link_label": "Read More",
+            "link": "https://reviv.substack.com/p/tmj-is-a-function-of-your-deflating",
+            "youtube_video_url": "",
+            "isNewTab": true
+          }
+        },
+        "column_MQQHXx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/b2d5e4bd5fa366da2ad527a8cdb312a2.png",
+            "title": "I am confident this solves most TMJ issues",
+            "text": "<p>Temperomandibular Joint Dysfunctions are complex and can have lots of varieties. But I believe these biomechanics address the underlying cause of all of them.</p>",
+            "link_label": "Read More",
+            "link": "https://substack.com/home/post/p-147615661?utm_campaign=post&utm_medium=web",
+            "youtube_video_url": "",
+            "isNewTab": true
+          }
+        },
+        "column_9KzYyy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/48ae0156b26cce967f6b0a60f1af06b7.png",
+            "title": "My thoughts on \"TMJ dentists\"",
+            "text": "<p>Ok, I'll be honest. TMJ dentists are only a step above palm readers in my book... hahahahaha</p>",
+            "link_label": "Read More",
+            "link": "https://substack.com/home/post/p-147740179?utm_campaign=post&utm_medium=web",
+            "youtube_video_url": "",
+            "isNewTab": true
+          }
+        },
+        "column_9QpMhY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/6eefd547cc9e642e7a3664e0786c76a3.png",
+            "title": "Dr. Brendan Stack: The TMJ Legend",
+            "text": "<p>Dr. Stack was one of the first dentists to consistently solve neurological diseases and complex TMJ disorders with a dental splint.</p>",
+            "link_label": "Read More",
+            "link": "https://substack.com/home/post/p-151809495?utm_campaign=post&utm_medium=web",
+            "youtube_video_url": "",
+            "isNewTab": true
+          }
+        }
+      },
+      "block_order": [
+        "column_HqVALW",
+        "column_MQQHXx",
+        "column_9KzYyy",
+        "column_9QpMhY"
+      ],
+      "settings": {
+        "title": "Articles I have written",
+        "box_link": false,
+        "heading_size": "hxl",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "section_color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": "sk-multi-col uc-multi-col"
+      }
+    },
+    "skool_image_slider_dhbCwq": {
+      "type": "skool-image-slider",
+      "blocks": {
+        "image_d9UTXy": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/0566d63318c1f07adae9e95cd7e6468f.png"
+          }
+        },
+        "image_Nqnm9h": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/ab4caac789e7b58aebe523df6f63fc31.png"
+          }
+        },
+        "image_74QiWf": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/0566d63318c1f07adae9e95cd7e6468f.png"
+          }
+        },
+        "image_WjzMVb": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/0566d63318c1f07adae9e95cd7e6468f.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_d9UTXy",
+        "image_Nqnm9h",
+        "image_74QiWf",
+        "image_WjzMVb"
+      ],
+      "settings": {
+        "section_head": "Take a look at skool",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_cmmbXX": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_UFy37y": {
+          "type": "heading",
+          "settings": {
+            "heading": "Not ready to purchase?",
+            "heading_size": "h1"
+          }
+        },
+        "text_HiNLnk": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Try a free month trial of our Skool community instead and see what hundreds of others who are doing the process are posting.</p>"
+          }
+        },
+        "button_ktXcj4": {
+          "type": "button",
+          "settings": {
+            "button_label": "Join now",
+            "button_link": "#",
+            "button_id": "form-popup-btn yellow-btn",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_UFy37y",
+        "text_HiNLnk",
+        "button_ktXcj4"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "custom__class": ""
+      }
+    },
+    "product_cards_j8jV4n": {
+      "type": "product-cards",
+      "blocks": {
+        "product_card_rnJawi": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-two",
+            "is_new": true
+          }
+        },
+        "product_card_jBbiK3": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-two-without-support",
+            "is_new": true
+          }
+        },
+        "product_card_VYkMzd": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-one",
+            "is_new": false
+          }
+        },
+        "product_card_Jf3L8L": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-one-without-support",
+            "is_new": false
+          }
+        },
+        "product_card_kiLBxy": {
+          "type": "product_card",
+          "settings": {
+            "product": "1-year-subscription-only",
+            "is_new": false
+          }
+        }
+      },
+      "block_order": [
+        "product_card_rnJawi",
+        "product_card_jBbiK3",
+        "product_card_VYkMzd",
+        "product_card_Jf3L8L",
+        "product_card_kiLBxy"
+      ],
+      "custom_css": [
+        ".product-card__price,.product-card__title {color: #000 !important;}",
+        ".product-card__title {font-size: 18px; line-height: normal;}",
+        ".swiper-pagination-bullet: not(.swiper-pagination-bullet-active) {border-color: #000;}",
+        ".product-form {margin-top: 0;}",
+        "span.swiper-pagination-bullet {margin: 0 5px !important;}",
+        ".swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {border-color: #000; opacity: 1;}",
+        ".swiper {width: auto; overflow: hidden;}",
+        ".add-to-cart__button {border: 1px solid #000000; color: black;}"
+      ],
+      "settings": {
+        "section_color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_classes": ""
+      }
+    },
+    "collapsible_content_JN3rhi": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_UjR4JN": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long does it take to see results with Reviv?",
+            "icon": "none",
+            "row_content": "<p>Most users begin noticing improvements within the first few weeks, though the timeline varies based on your specific condition. <br/><br/>Some experience reduced pain and improved jaw mobility within days, while others with more severe or long-term TMJ issues may take 2-3 months to see significant changes. <br/><br/>Remember that Reviv addresses the root cause rather than just masking symptoms, so the healing process is gradual but leads to lasting improvements.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_tUj3HX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Will Reviv work if I've tried other TMJ treatments without success?",
+            "icon": "none",
+            "row_content": "<p>We cannot promise anything.</p><p>But wearing a mouthguard is a very cheap and easy thing to test.</p><p>So I personally view it as being worth a try.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_6bErhk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is Reviv uncomfortable to wear?",
+            "icon": "none",
+            "row_content": "<p>Yes it can be uncomfortable to wear at times.  Especially at the beginning.</p><p>Sometimes there will be pain in the teeth or gums.</p><p>And some folks might get headaches.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_jEbzGk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do I need to wear Reviv forever?",
+            "icon": "none",
+            "row_content": "<p>Generally the teeth will extrude to close the posterior open bite that is created when improving curve of spee.</p><p>But you should continue to wear the mouthguard till that happens.</p><p>Or you can get composite as discussed here:  https://reviv.substack.com/p/the-mystery-around-posterior-open </p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_UjR4JN",
+        "collapsible_row_tUj3HX",
+        "collapsible_row_6bErhk",
+        "collapsible_row_jEbzGk"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "frequently asked questions",
+        "heading_size": "hxxl",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": "sk-faqs"
+      }
+    },
+    "1743752606d7c9c7a3": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_RjGj3h": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "414780",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_RjGj3h"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "multicolumn_9Vm9Vw": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_jDjA4i": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_8986965a-6016-465d-ae9e-1c5926da57dd_00000925_000.webp",
+            "title": "TMJ and Facial Symmetry",
+            "text": "<p>The Connection Nobody Talks About</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/tmj-and-facial-symmetry-the-connection-nobody-talks-about?_pos=21&_sid=7c1910555&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_eKaaf4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_8986965a-6016-465d-ae9e-1c5926da57dd_00001065_000.webp",
+            "title": "Best TMJ Mouthguards in 2025",
+            "text": "<p>Top Picks Compared</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/best-tmj-mouthguards-in-2025-top-picks-compared?_pos=28&_sid=93c40b4aa&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_NFEqe4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/3f62ea49-90f8-41ea-904f-18ece128b061_620x342_73159b2f-315d-4ab1-8fd8-8fe5e23123de.webp",
+            "title": "A few thoughts on TMJ groups on Facebook and Reddit",
+            "text": "<p>My history on TMJ groups of various sorts runs very deep.</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/a-few-thoughts-on-tmj-groups-on-facebook-and-reddit?_pos=34&_sid=93c40b4aa&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_GdQ3z4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-08-06_110052.webp",
+            "title": "What Are the Risks of Untreated TMJ?",
+            "text": "<p>In this post, I’ll break down the real risks of untreated TMJ.. no fluff, just straight talk.</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/what-are-the-risks-of-untreated-tmj?_pos=1&_sid=7c1910555&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_HkbzLW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-08-04_092446.webp",
+            "title": "The Relationship Between TMJ, Headaches, and Migraines",
+            "text": "<p>In this guide, I’ll walk you through how your jaw might be the hidden root of your head pain, what to do about it, and why most treatments miss the mark.</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/the-relationship-between-tmj-headaches-and-migraines?_pos=4&_sid=7c1910555&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_nacU6E": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Reviv-_-Metaobjects-_-Shopify-07-31-2025_03_41_PM.webp",
+            "title": "TMJ and Digestive Health",
+            "text": "<p>Unexpected Connections</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/tmj-and-digestive-health-unexpected-connections?_pos=5&_sid=7c1910555&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_hY7x9V": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-08-09_121223_122de5ee-4521-402d-8fbe-ccdaecf4b8d2.webp",
+            "title": "Are Custom Mouthguards Effective for TMJ Relief?",
+            "text": "<p>This post will break down the science, the hype, and the pitfalls so you can make an informed decision before spending a dime.</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/are-custom-mouthguards-effective-for-tmj-relief?_pos=6&_sid=7c1910555&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_Dd6bXX": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-08-01_081728_a4bad56f-88e2-4aa5-8cdd-6c71c7ee7664.webp",
+            "title": "Stress, Anxiety, and Their Impact on TMJ",
+            "text": "<p>Let’s cut the fluff and fix your jaw pain</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/stress-anxiety-and-their-impact-on-tmj?_pos=7&_sid=7c1910555&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_cgN6ih": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-08-04_094529.webp",
+            "title": "Mouthguards for Athletes",
+            "text": "<p>TMJ Prevention and Performance</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/mouthguards-for-athletes-tmj-prevention-and-performance?_pos=9&_sid=7c1910555&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_raERT4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-08-04_103031_1288311a-b296-4979-916e-88d515be0937.webp",
+            "title": "Innovations in TMJ Therapy",
+            "text": "<p>What’s New in 2025?</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/innovations-in-tmj-therapy-what-s-new-in-2025?_pos=10&_sid=7c1910555&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_qQyt6x": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_00001546_001_c1535b43-5c3d-4a99-a2eb-819f1e022db2.webp",
+            "title": "TMJ in Women",
+            "text": "<p>Hormones, Perimenopause & Night Grinding</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/tmj-in-women-hormones-perimenopause-night-grinding",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_UCU6xy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___M_72975f27-d798-4f99-92e5-c2f666e424ee.webp",
+            "title": "TMJ, Tinnitus, and Ear Pain",
+            "text": "<p>What’s the Connection and Where a Mouthguard Fits</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/tmj-tinnitus-and-ear-pain-what-s-the-connection-and-where-a-mouthguard-fits",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_agm4jM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2568-05-26_at_21.06.36_1.webp",
+            "title": "TMJ vs Stress",
+            "text": "<p>How to Tell the Difference & What Actually Works</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/tmj-vs-stress-how-to-tell-the-difference-what-actually-works",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_d6N9j3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2568-04-05_at_18.38.44.webp",
+            "title": "TMJ Treatment Timeline",
+            "text": "<p>What to Expect When Using Oral Appliances</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/tmj-treatment-timeline-what-to-expect-when-using-oral-appliances",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_jdFt6k": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_00002989_003_989dc05f-6004-4974-83d2-911fd4e7eca2.webp",
+            "title": "The Future of TMJ Mouth Guards",
+            "text": "<p>Innovations, Smart Tech, and Eco-Friendly Options</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/the-future-of-tmj-mouth-guards-innovations-smart-tech-and-eco-friendly-options",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_3LrcrY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2568-04-05_at_18.35.29.webp",
+            "title": "The Complete Guide to TMJ Exercises",
+            "text": "<p>Natural Relief Without a Mouth Guard</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/the-complete-guide-to-tmj-exercises-natural-relief-without-a-mouth-guard",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_dbC6Vj": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/image_-_2025-09-20T144748.407.png",
+            "title": "The TMJ Diet",
+            "text": "<p>Foods That Help Reduce Inflammation and Pain</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/the-tmj-diet-foods-that-help-reduce-inflammation-and-pain",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_nijVEf": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_8986965a-6016-465d-ae9e-1c5926da57dd_00003831_001.webp",
+            "title": "The TMJ Diet",
+            "text": "<p>Foods That Help Reduce Inflammation and Pain.</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/the-tmj-diet-foods-that-help-reduce-inflammation-and-pain",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        }
+      },
+      "block_order": [
+        "column_jDjA4i",
+        "column_eKaaf4",
+        "column_NFEqe4",
+        "column_GdQ3z4",
+        "column_HkbzLW",
+        "column_nacU6E",
+        "column_hY7x9V",
+        "column_Dd6bXX",
+        "column_cgN6ih",
+        "column_raERT4",
+        "column_qQyt6x",
+        "column_UCU6xy",
+        "column_agm4jM",
+        "column_d6N9j3",
+        "column_jdFt6k",
+        "column_3LrcrY",
+        "column_dbC6Vj",
+        "column_nijVEf"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "OTHER RELATED ARTICLES",
+        "box_link": false,
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "section_color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_g8wcVV",
+    "free_trial_CX8H9e",
+    "tmj_block_UtYCDW",
+    "multicolumn_HzjGGH",
+    "skool_image_slider_dhbCwq",
+    "rich_text_cmmbXX",
+    "product_cards_j8jV4n",
+    "collapsible_content_JN3rhi",
+    "1743752606d7c9c7a3",
+    "multicolumn_9Vm9Vw"
+  ]
+}

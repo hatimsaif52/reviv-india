@@ -1,0 +1,1059 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "product_navbar_7EB9E4": {
+      "type": "product-navbar",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "judge_me_reviews_preview_badge_EAUeai": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+            "quantity_style": "default"
+          }
+        },
+        "custom_liquid_zeyt9h": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<p style=\"font-size:14px; margin:0; padding:0; color:yellow; text-align:center;\">\n    ★★★★★ Google Reviews\n</p>"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "text_EMq7Cg": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "body"
+          }
+        },
+        "custom_liquid_zK6p4z": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div dark-mode id=\"truemed-instructions\" style=\"font-size: 14px;\" icon-height=\"12\" data-public-id=\"tm_qual_mw7eoyby3p\"></div>\n<script src=\"https://static.truemed.com/widgets/product-page-widget.min.js\" defer></script>"
+          }
+        },
+        "custom_liquid_aFheq7": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"testimonial-card\">\n      <div class=\"testimonial-header\">\n        <div class=\"profile\">\n          <img class=\"profile-image\" width=\"100\" height=\"100\" src=\"{{ 'andrew-testimonial.png' | asset_url }}\" alt=\"Andrew from SKOOL Community\">\n          <strong class=\"profile-name\">Andrew</strong>\n        </div>\n        <div class=\"brand-logo\">\n          <span class=\"logo-letter logo-s\">s</span>\n          <span class=\"logo-letter logo-k\">k</span>\n          <span class=\"logo-letter logo-o1\">o</span>\n          <span class=\"logo-letter logo-o2\">o</span>\n          <span class=\"logo-letter logo-l\">l</span>\n        </div>\n      </div>\n      <blockquote class=\"testimonial-quote\">\n        \"Structurally and neurologically I feel so much better after I started the Reviv.\"\n      </blockquote>\n    </div>\n\n{% style %}\n.testimonial-card {\n  max-width: 42rem;\n  background: rgba(239, 201, 139, 0.04);\n  border: 1px solid #ffd7ba;\n  border-radius: 32px;\n  padding: 2rem;\n  position: relative;\n}\n\n.testimonial-header {\n  display: flex;\n  align-items: flex-start;\n  justify-content: space-between;\n  margin-bottom: 2rem;\n}\n\n.profile {\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n}\n\n.profile-image {\n  width: 4rem;\n  height: 4rem;\n  border-radius: 50%;\n  object-fit: cover;\n}\n\n.profile-name {\n  color: white;\n  font-size: 1.875rem;\n  font-weight: 600;\n}\n\n.brand-logo {\n  font-size: 2.25rem;\n  font-weight: 700;\n}\n\n.logo-letter {\n  font-weight: bold;\n}\n\n.logo-s {\n  color: #1b3bdb;\n}\n\n.logo-k {\n  color: #db1b1b;\n}\n\n.logo-o1 {\n  color: #dbc31b;\n}\n\n.logo-o2 {\n  color: #1bdbdb;\n}\n\n.logo-l {\n  color: #db1b1b;\n}\n\n.testimonial-quote {\n  color: rgba(255, 255, 255, 0.8);\n  font-weight: 400;\n  font-size: 18px;\n  letter-spacing: -0.02em;\n  line-height: 1.3;\n  font-style: italic;\n  border: none;\n  padding: 0;\n  margin: 0;\n}\n\n/* Responsive styles */\n@media (max-width: 640px) {\n  .testimonial-card {\n    padding: 1.5rem;\n  }\n\n  .profile-name,\n  .testimonial-quote {\n    font-size: 1.5rem;\n  }\n\n  .brand-logo {\n    font-size: 1.875rem;\n  }\n\n  .profile-image {\n    width: 3rem;\n    height: 3rem;\n  }\n}\n{% endstyle %}"
+          }
+        },
+        "custom_liquid_4YiTcD": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<p style=\"font-size:14px; margin:0; padding:0; color:white; text-align:center;\">\n    <span style=\"height:8px; width:8px; background-color:green; border-radius:50%; display:inline-block; animation:blinking 1.5s infinite;\"></span>\n    <span style=\"color:green;\">Note:</span> Only <span style=\"font-weight:bold;\">7</span> units left in stock\n</p>\n\n<style>\n@keyframes blinking {\n    0% { opacity: 1.0; }\n    50% { opacity: 0.0; }\n    100% { opacity: 1.0; }\n}\n</style>"
+          }
+        },
+        "icon_with_text_cbe7i6": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "center_content": false,
+            "icon_1": "truck",
+            "heading_1": "<strong>Fast Shipping</strong>",
+            "icon_2": "lock",
+            "heading_2": "<strong>Secure Checkout</strong>",
+            "icon_3": "return",
+            "heading_3": ""
+          }
+        },
+        "collapsible_tab_LfJKQ9": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How do I mold it?",
+            "icon": "question_mark",
+            "content": "<p>RevivDay (RD1) is designed for regular re-molding (once a week). Learn more <a href=\"https://youtube.com/shorts/8t0ObAOROs8?si=tuxKy0IQ5tGiiJ2D\" target=\"_blank\" title=\"https://youtube.com/shorts/8t0ObAOROs8?si=tuxKy0IQ5tGiiJ2D\">here</a></p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_bETJ9W": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How it works?",
+            "icon": "question_mark",
+            "content": "<p>The RD1 offers the same superior tooth protection in a low-profile design. It is optimized for comfort during daytime activities such as gym sessions, jogging, or social settings where ease of speech is a priority.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_MdA9x7": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Our Guarantee",
+            "icon": "heart",
+            "content": "<p>If you wear the appliance consistently and don't agree that your health issues are improving in the first 90 days we give you your money back. See terms <a href=\"https://getreviv.com/pages/our-guarantee\" title=\"Our Guarantee\">here</a></p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_PmmWBf": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping Information",
+            "icon": "truck",
+            "content": "<ul><li>Shipping typically takes 7-10 days to most destinations including the US. More remote countries can take longer.</li><li>Orders typically ship within 24 hours and you will receive a tracking number by email as soon as it ships.</li></ul>",
+            "page": ""
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "judge_me_reviews_preview_badge_EAUeai",
+        "title",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "custom_liquid_zeyt9h",
+        "buy_buttons",
+        "text_EMq7Cg",
+        "custom_liquid_zK6p4z",
+        "custom_liquid_aFheq7",
+        "custom_liquid_4YiTcD",
+        "icon_with_text_cbe7i6",
+        "collapsible_tab_LfJKQ9",
+        "collapsible_tab_bETJ9W",
+        "collapsible_tab_MdA9x7",
+        "collapsible_tab_PmmWBf",
+        "description",
+        "share"
+      ],
+      "custom_css": [
+        ".product__title h1 {color: #e5c085;}",
+        ".icon-with-text .icon {fill: #e5c085;}",
+        ".icon-accordion {fill: #e5c085;}",
+        ".icon-caret {fill: #e5c085;}",
+        ".product__media img,.thumbnail.global-media-settings img {border-radius: 10px;}"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "show_sold_alert": true,
+        "color_scheme": "scheme-4",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "hover",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12,
+        "show_benefits": false
+      }
+    },
+    "product_compact_AdJkiV": {
+      "type": "product-compact",
+      "disabled": true,
+      "name": "Compact Product Detail",
+      "settings": {
+        "back_color": "#232021",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "show_title": false,
+        "show_price": true,
+        "show_add_to_cart": true,
+        "title_color": "#ffffff",
+        "desc_color": "#ffffff",
+        "button_text": "Add to Cart"
+      }
+    },
+    "multicolumn_ei3pmP": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_tR7EUC": {
+          "type": "column",
+          "settings": {
+            "text_top": "",
+            "image": "shopify://shop_images/ken-leaver.png",
+            "title": "<strong>Ken Leaver</strong>",
+            "text": "<p>Reviv Founder<br/><br/><strong>Precision-Engineered Protection for Your Active Life.</strong><br/>\"I designed Reviv to provide a level of dental protection I couldn't find anywhere else. For years, my teeth-grinding caused deep aches that impacted my sleep and energy. Reviv changed everything. It provides immediate, precise relief, making my jaw feel rested and protected. It's not just a mouthguard; it's a foundation for a powerful, injury-free performance, giving me the resilience to feel like a beast every single day.\"</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        }
+      },
+      "block_order": [
+        "column_tR7EUC"
+      ],
+      "custom_css": [
+        ".multicolumn-card {background-color: #e5c085 !important; color: #0009; border-radius: 12px; width: 100%; padding: 32px 0;}"
+      ],
+      "settings": {
+        "title": "",
+        "box_link": false,
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 1,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-4",
+        "section_color_scheme": "scheme-4",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": ""
+      }
+    },
+    "rich_text_qxtniB": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_QxT9Ta": {
+          "type": "heading",
+          "settings": {
+            "heading": "KEY FEATURES & BENEFITS",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_QxT9Ta"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "full_width": true,
+        "padding_top": 48,
+        "padding_bottom": 28,
+        "custom__class": "repod-banner-bottom-text"
+      }
+    },
+    "image_banner_TaWFxp": {
+      "type": "image-banner",
+      "disabled": true,
+      "custom_css": [
+        "{background: #232021;}",
+        "* {max-width: 1200px; margin: 0 auto;}",
+        "img {object-fit: contain;}"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/clipboard-image-1757069241.webp",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false,
+        "custom_classes": ""
+      }
+    },
+    "floating_text_image_F88zJc": {
+      "type": "floating-text-image",
+      "blocks": {
+        "text_block_h7T6An": {
+          "type": "text_block",
+          "settings": {
+            "heading": "SAME HEALTH BENEFITS",
+            "subtext": "<p>Supports neutral jaw positioning, relieves muscle fatigue, encourages natural oral posture.</p>",
+            "position": "top_left",
+            "text_align": "center",
+            "self_align": "center",
+            "self_justify": "center"
+          }
+        },
+        "text_block_khGeda": {
+          "type": "text_block",
+          "settings": {
+            "heading": "DAYTIME COMFORT",
+            "subtext": "<p>Lightweight and discreet, designed for<br/>working, gym, jogging, or social settings.</p>",
+            "position": "top_right",
+            "text_align": "center",
+            "self_align": "center",
+            "self_justify": "center"
+          }
+        },
+        "text_block_Gde7DA": {
+          "type": "text_block",
+          "settings": {
+            "heading": "GENTLE ON GUMS & TEETH",
+            "subtext": "<p>Allows for a break to maintain consistent wear and comfort.</p>",
+            "position": "bottom_left",
+            "text_align": "center",
+            "self_align": "center",
+            "self_justify": "center"
+          }
+        },
+        "text_block_8cJPDB": {
+          "type": "text_block",
+          "settings": {
+            "heading": "COMPLEMENTS R1/R2",
+            "subtext": "<p>Pairs with nighttime appliances for<br/>a comprehensive daily routine.</p>",
+            "position": "bottom_right",
+            "text_align": "center",
+            "self_align": "center",
+            "self_justify": "center"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_h7T6An",
+        "text_block_khGeda",
+        "text_block_Gde7DA",
+        "text_block_8cJPDB"
+      ],
+      "name": "Floating Text with Image",
+      "settings": {
+        "center_image": "shopify://shop_images/ChatGPT_Image_Oct_31_2025_05_28_45_PM.png",
+        "image_shadow": true,
+        "color_scheme": "scheme-7bfe666f-6be9-46e3-88a6-1be40f4a8ea4"
+      }
+    },
+    "rich_text_e4JCNE": {
+      "type": "rich-text",
+      "blocks": {
+        "button_z8djdP": {
+          "type": "button",
+          "settings": {
+            "button_label": "BUY IT NOW",
+            "button_link": "#",
+            "button_id": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_z8djdP"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "full_width": true,
+        "padding_top": 32,
+        "padding_bottom": 48,
+        "custom__class": "repod-banner-bottom-btn"
+      }
+    },
+    "custom_liquid_c9KcdA": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{% assign video_url = 'https://cdn.shopify.com/videos/c/o/v/d973ca43a4de4b7dbd6d68fb2f812f19.mp4' %}\n<div class=\"video-wrapper\">\n<h2 class=\"h1 color-{{ section.settings.color_scheme }}\">HOW REVIV WORKS</h2>\n<div class=\"video-container\">\n<video controls width=\"100%\" preload=\"auto\" autoplay loop muted controls=\"false\">\n  <source src=\"{{ video_url | media }}\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</video></div></div>\n\n<style>\n.video-wrapper {\n    display: flex;\n    width: 100%;\n    flex-direction: column;\n    justify-items: center;\n    align-content: center;\n    align-items: center;\n    padding-left: 16px;\n    padding-right: 16px;\n    max-width: 1050px;\n    margin: 0 auto;\n}\n\n.video-container {\n    position: relative;\n    padding-bottom: 56.25%;\n    height: 0;\n    max-width: 1050px;\n    display: flex;\n    justify-content: center;\n    flex-wrap: nowrap;\n    flex-direction: column;\n    align-items: center;\n    width: 100%;\n    margin: 0 auto;\n    border-radius: 12px;\n    overflow: hidden;\n}\n\n.video-container video {\n    position: absolute;\n    inset: 0;\n    width: 100%;\n    height: 100%;\n    max-width: 1200px;\n}\n</style>",
+        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "padding_top": 40,
+        "padding_bottom": 8
+      }
+    },
+    "rich_text_Lyxah9": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_LkTjBX": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "h1"
+          }
+        },
+        "text_GVrHCD": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We believe there are some biomechanics to how the skeleton and skull work, which result in it collapsing over time.</p><p>Particularly if you did orthodontics, extractions, or grind your teeth our experience is that this could result in the skull sort of 'deflating'.</p><p>And a simple mouthguard like Reviv can 'reinflate' it by stretching the soft tissue that covers the skull.</p>"
+          }
+        },
+        "button_cPrUXK": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_id": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_LkTjBX",
+        "text_GVrHCD",
+        "button_cPrUXK"
+      ],
+      "custom_css": [
+        ".rich-text__wrapper {max-width: 1050px; padding: 0 1em;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "full_width": true,
+        "padding_top": 16,
+        "padding_bottom": 52,
+        "custom__class": ""
+      }
+    },
+    "image_with_text_Bb4P3V": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_rj3ACf": {
+          "type": "heading",
+          "settings": {
+            "heading": "Jaw comfort",
+            "heading_size": "h2"
+          }
+        },
+        "text_NGrzma": {
+          "type": "text",
+          "settings": {
+            "text": "<p>\"I've been wearing my appliance for 3 weeks now. My jaw feels noticeably more comfortable and I'm finding it easier to do my daily exercises.\" - <strong>Jay</strong></p>",
+            "text_style": "body",
+            "text_size": "medium",
+            "show_below_image": false
+          }
+        },
+        "button_kDhEeW": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_style_purchase": false,
+            "full_width_button": false,
+            "custom_buy_btns": false,
+            "purchase_btn_text": "",
+            "button_1_text": "",
+            "button_1_url": "",
+            "button_2_text": "",
+            "button_2_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_rj3ACf",
+        "text_NGrzma",
+        "button_kDhEeW"
+      ],
+      "custom_css": [
+        "h2 {color: #e5c085;}",
+        ".image-with-text__media {border-radius: 10px; padding-bottom: 350px !important;}",
+        ".image-with-text__media img {border-radius: 10px; height: 350px; object-fit: cover;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/image.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "color_scheme": "scheme-4",
+        "wrap_image_to_container": false,
+        "image_behavior": "none",
+        "mobile_content_order": "column",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom__class": ""
+      }
+    },
+    "image_with_text_tqdFKd": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_LCWYPq": {
+          "type": "heading",
+          "settings": {
+            "heading": "Everyday comfort",
+            "heading_size": "h2"
+          }
+        },
+        "text_xab87a": {
+          "type": "text",
+          "settings": {
+            "text": "<p>\"I wear it when driving the bus. I've been really happy with how it feels during long days at work. I love this thing!\" - <strong>George</strong></p>",
+            "text_style": "body",
+            "text_size": "medium",
+            "show_below_image": false
+          }
+        },
+        "button_8wWiLq": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_style_purchase": false,
+            "full_width_button": false,
+            "custom_buy_btns": false,
+            "purchase_btn_text": "",
+            "button_1_text": "",
+            "button_1_url": "",
+            "button_2_text": "",
+            "button_2_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_LCWYPq",
+        "text_xab87a",
+        "button_8wWiLq"
+      ],
+      "custom_css": [
+        "h2 {color: #e5c085;}",
+        ".image-with-text__media {border-radius: 10px; padding-bottom: 350px !important;}",
+        ".image-with-text__media img {border-radius: 10px; height: 350px; object-fit: cover;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/image_2.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "wrap_image_to_container": false,
+        "image_behavior": "none",
+        "mobile_content_order": "column",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom__class": ""
+      }
+    },
+    "image_with_text_YBcpYq": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_aWgq8V": {
+          "type": "heading",
+          "settings": {
+            "heading": "Back to work",
+            "heading_size": "h2"
+          }
+        },
+        "text_Tfw6CF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>\"I'm a software developer and went through a difficult period working warehouse jobs for about a year. Since November I've been wearing Reviv consistently and feel like I'm getting back on track. I just started a new developer role and couldn't be happier.\" - <strong>Ivan</strong></p>",
+            "text_style": "body",
+            "text_size": "medium",
+            "show_below_image": false
+          }
+        },
+        "button_pQyWEP": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_style_purchase": false,
+            "full_width_button": false,
+            "custom_buy_btns": false,
+            "purchase_btn_text": "",
+            "button_1_text": "",
+            "button_1_url": "",
+            "button_2_text": "",
+            "button_2_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_aWgq8V",
+        "text_Tfw6CF",
+        "button_pQyWEP"
+      ],
+      "custom_css": [
+        "h2 {color: #e5c085;}",
+        ".image-with-text__media {border-radius: 10px; padding-bottom: 350px !important;}",
+        ".image-with-text__media img {border-radius: 10px; height: 350px; object-fit: cover;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/image_1.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "wrap_image_to_container": false,
+        "image_behavior": "none",
+        "mobile_content_order": "column",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom__class": ""
+      }
+    },
+    "image_with_text_PRUqUV": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_cBCqax": {
+          "type": "heading",
+          "settings": {
+            "heading": "Posture",
+            "heading_size": "h2"
+          }
+        },
+        "text_gbqVjk": {
+          "type": "text",
+          "settings": {
+            "text": "<p>\"I noticed the other day the area where my neck meets my upper back is more flat .  I always had a bit of kyphosis and rounded soldiers and it seems to be correcting.\" - <strong>Harvwin</strong></p>",
+            "text_style": "body",
+            "text_size": "medium",
+            "show_below_image": false
+          }
+        },
+        "button_xkMdLb": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_style_purchase": false,
+            "full_width_button": false,
+            "custom_buy_btns": false,
+            "purchase_btn_text": "",
+            "button_1_text": "",
+            "button_1_url": "",
+            "button_2_text": "",
+            "button_2_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_cBCqax",
+        "text_gbqVjk",
+        "button_xkMdLb"
+      ],
+      "custom_css": [
+        "h2 {color: #e5c085;}",
+        ".image-with-text__media {border-radius: 10px; padding-bottom: 350px !important;}",
+        ".image-with-text__media img {border-radius: 10px; height: 350px; object-fit: cover;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/image_3.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "wrap_image_to_container": false,
+        "image_behavior": "none",
+        "mobile_content_order": "column",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom__class": ""
+      }
+    },
+    "1777795313f54a279b": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_dVVgF7": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_dVVgF7"
+      ],
+      "custom_css": [
+        "{background: #232021;}"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "substack_blog_BMDpyd": {
+      "type": "substack-blog",
+      "blocks": {
+        "column_aAMFJK": {
+          "type": "column",
+          "settings": {
+            "category": "",
+            "article_type": "",
+            "date": "",
+            "image": "shopify://shop_images/article-1.png",
+            "title": "I Am Going to Challenge What You Believe About Health",
+            "text": "<p>Challenges traditional health views, introduces the balloon theory, and explores how dental health affects overall well-being.</p>",
+            "link_label": "Read post",
+            "link": "https://reviv.substack.com/p/i-am-going-to-challenge-what-you",
+            "youtube_video_url": ""
+          }
+        },
+        "column_wJbqdQ": {
+          "type": "column",
+          "settings": {
+            "category": "",
+            "article_type": "",
+            "date": "",
+            "image": "shopify://shop_images/article-2.png",
+            "title": "The Balloon Theory",
+            "text": "<p>Explains how dental health impacts overall well-being by linking teeth to various health issues and introduces methods for addressing these connections.</p>",
+            "link_label": "Read post",
+            "link": "https://reviv.substack.com/p/so-why-do-the-teeth-relate-to-your",
+            "youtube_video_url": ""
+          }
+        },
+        "column_BRPMe7": {
+          "type": "column",
+          "settings": {
+            "category": "",
+            "article_type": "",
+            "date": "",
+            "image": "shopify://shop_images/article-3.png",
+            "title": "How to Correct the Problem",
+            "text": "<p>Provides strategies for addressing dental health issues and correcting related problems for improved overall well-being.</p>",
+            "link_label": "Read post",
+            "link": "https://reviv.substack.com/p/how-to-solve-the-problem",
+            "youtube_video_url": ""
+          }
+        },
+        "column_J3eidb": {
+          "type": "column",
+          "settings": {
+            "category": "",
+            "article_type": "",
+            "date": "",
+            "image": "shopify://shop_images/article-4.png",
+            "title": "What Is Impacted by These Biomechanics?",
+            "text": "<p>Explores how dental biomechanics affect various aspects of health and well-being.</p>",
+            "link_label": "Read post",
+            "link": "https://reviv.substack.com/p/what-is-impacted-by-these-biomechanics",
+            "youtube_video_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_aAMFJK",
+        "column_wJbqdQ",
+        "column_BRPMe7",
+        "column_J3eidb"
+      ],
+      "custom_css": [
+        "h2 {text-align: center;}",
+        ".rte {color: #fff;}"
+      ],
+      "settings": {
+        "title": "LEARN MORE ABOUT HOW THIS WORKS",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-2ab1995e-c67e-4402-af73-6a85779ae883",
+        "section_color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": "blog-cards-style",
+        "custom__class2": ""
+      }
+    },
+    "featured_blog_rbHQbw": {
+      "type": "featured-blog",
+      "disabled": true,
+      "custom_css": [
+        "h2 {text-align: center; width: 100%; color: #e5c085; text-transform: uppercase; max-width: 600px; margin: 0 auto;}",
+        ".article-card .card__heading {font-family: \"Roboto\" !important; font-style: normal; font-weight: 600; font-size: 24px; line-height: 32px;}"
+      ],
+      "settings": {
+        "heading": "Learn more about how this method works",
+        "heading_size": "h1",
+        "blog": "content",
+        "post_limit": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-4",
+        "show_image": true,
+        "show_date": false,
+        "show_author": false,
+        "show_view_all": false,
+        "padding_top": 100,
+        "padding_bottom": 72
+      }
+    },
+    "collapsible_content_HA7hTA": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_bdwWYh": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is RevivDay?",
+            "icon": "lightning_bolt",
+            "row_content": "<p>RevivDay is a lightweight, discreet daytime mouthguard engineered for comfort and protection. Unlike traditional guards, it’s designed for working, gym, jogging, or social settings.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_b3Aq6U": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How is it different from R1 & R2?",
+            "icon": "lightning_bolt",
+            "row_content": "<p>RD1 provides the same health benefits but is lighter and easier to wear, making it perfect for daytime activities.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_46p3KR": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How should I start Reviv?  Is there anything to be aware of?",
+            "icon": "check_mark",
+            "row_content": "<p>Yes there are a few things to know going in.</p><p><strong>On wearing it:</strong> The standard pattern is overnight + 2-3 hours during the day. Build up gradually with shorter intervals during the day first rather than going straight to overnights — that helps the soft tissue adjust. Most folks find the early phase is the hardest part and it gets significantly easier after a few weeks usually.</p><p><strong>On early discomfort:</strong> Pretty common in the first few weeks. Sore teeth, achy gums, occasional small sores in the mouth, the lips not closing fully, extra saliva — all signs the soft tissue is stretching, not signs something is wrong. Take it at your own pace. If the soreness gets sharp, take a short break — a few hours or even a day or two off is fine. Stick with it but don't push through pain.</p><p><strong>On accelerating results:</strong> What matters most is consistent use and then stretching to accelerate. The Fast Method in our Skool community has some stretches we recommend, including the Bite & Hold exercise that works alongside the mouthguard: <a href=\"https://www.skool.com/reviv-2885/classroom/8ca49f79?md=90728adac0e5463680dc40a43e294104\" target=\"_blank\">https://www.skool.com/reviv-2885/classroom/8ca49f79?md=90728adac0e5463680dc40a43e294104</a></p><p><strong>On mouth taping:</strong> A lot of folks tape at night to keep the mouth closed and help with guard retention while the tissue is still adjusting. Pairs well with the Reviv.</p><p><br/>A good place to learn more before and during the process is our Skool community — 1 month free trial: <a href=\"https://www.skool.com/reviv-2885/about\" target=\"_blank\">https://www.skool.com/reviv-2885/about</a></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_zVraUA": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I wear it at night?",
+            "icon": "lightning_bolt",
+            "row_content": "<p>No. RD1 is optimized for daytime wear. For nighttime protection, use R1 or R2.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_wYPXBk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Will I get the same results as R1/R2?",
+            "icon": "lightning_bolt",
+            "row_content": "<p>Yes. RD1 maintains the same benefits, but is best used alongside R1/R2 for 24-hour coverage.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_7ExR9g": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I clean RevivDay?",
+            "icon": "lightning_bolt",
+            "row_content": "<p>Clean with soap and warm water (not boiling). We also recommend using Repod Repod Ultrasonic Cleaner for Dentist-Level Cleaning in just 3 Minutes</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_zHYD8j": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I mold it?",
+            "icon": "check_mark",
+            "row_content": "<p><strong>Watch Video here: </strong><a href=\"https://youtube.com/shorts/8t0ObAOROs8?si=tuxKy0IQ5tGiiJ2D\" target=\"_blank\" title=\"https://youtube.com/shorts/8t0ObAOROs8?si=tuxKy0IQ5tGiiJ2D\">https://youtube.com/shorts/8t0ObAOROs8?si=tuxKy0IQ5tGiiJ2D</a><strong><br/><br/>Step 1: Boil <br/></strong>Fill a pot with enough water to submerge the RevivDay mouthguard without touching the bottom. Bring the water to a gentle boil.<br/><br/><strong>Step 2: Drop<br/></strong>Turn off the heat and carefully place the mouthguard into the hot water. Let it soak for 60 seconds.<br/><br/><strong>Step 3: Retrieve & Cool<br/></strong>Use a slotted spoon to remove the mouthguard and immediately place it into a bowl of cold water for 3-5 seconds.<br/><br/><strong>Step 4: Mold<br/></strong>Stand in front of a mirror and place RevivDay onto your lower teeth. Ensure your teeth sit in the center of the bite channel (not pressing against the side walls).<br/>- Gently bite down<br/>- Press your fingers against the side walls to shape the fit around your teeth<br/>- Keep it in your mouth for at least 5 minutes for best molding results</p><p><strong>Step 5: Set<br/></strong>After molding, place the mouthguard back in cold water for 5 minutes to solidify the fit.<br/><br/><strong>Step 6: Ready for Use<br/></strong>After you take the appliance out of the cold water it is ready to be used!<br/>Note that the lower teeth will still move a little bit with this process even though you are wearing the RD1 on top of them. And that movement is good.<br/>For this reason you should re-mold your RD1 about once a week to continue to allow the lower teeth to move and upright.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_VrBWRK": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the appliance made out of?",
+            "icon": "check_mark",
+            "row_content": "<p>The appliance is made of EVA which is a non-toxic, BPA-free, and safe material.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_bdwWYh",
+        "collapsible_row_b3Aq6U",
+        "collapsible_row_46p3KR",
+        "collapsible_row_zVraUA",
+        "collapsible_row_wYPXBk",
+        "collapsible_row_7ExR9g",
+        "collapsible_row_zHYD8j",
+        "collapsible_row_VrBWRK"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h0",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "scheme-4",
+        "container_color_scheme": "scheme-4",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "custom_class": "repod-faq-section"
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "custom_css": [
+        ".card__heading a {color: #e5c085; font-size: 18px;}",
+        "h2.related-products__heading.inline-richtext.h2 {text-align: center; color: #e5c085; font-size: 48px;}",
+        "ul.grid.product-grid.grid--4-col-desktop.grid--1-col-tablet-down {justify-content: center;}"
+      ],
+      "settings": {
+        "heading": "OTHER PRODUCTS",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-4",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "1",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "product_cards_wKGKUV": {
+      "type": "product-cards",
+      "blocks": {
+        "product_card_YWn3tN": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-two",
+            "is_new": true
+          }
+        },
+        "product_card_qAgEHV": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-two-without-support",
+            "is_new": true
+          }
+        },
+        "product_card_3EANmB": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-one",
+            "is_new": false
+          }
+        },
+        "product_card_6QpAza": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-one-without-support",
+            "is_new": false
+          }
+        },
+        "product_card_MAiyJb": {
+          "type": "product_card",
+          "settings": {
+            "product": "1-year-subscription-only",
+            "is_new": false
+          }
+        }
+      },
+      "block_order": [
+        "product_card_YWn3tN",
+        "product_card_qAgEHV",
+        "product_card_3EANmB",
+        "product_card_6QpAza",
+        "product_card_MAiyJb"
+      ],
+      "settings": {
+        "section_color_scheme": "scheme-4",
+        "padding_top": 72,
+        "padding_bottom": 36,
+        "custom_classes": ""
+      }
+    }
+  },
+  "order": [
+    "product_navbar_7EB9E4",
+    "main",
+    "product_compact_AdJkiV",
+    "multicolumn_ei3pmP",
+    "rich_text_qxtniB",
+    "image_banner_TaWFxp",
+    "floating_text_image_F88zJc",
+    "rich_text_e4JCNE",
+    "custom_liquid_c9KcdA",
+    "rich_text_Lyxah9",
+    "image_with_text_Bb4P3V",
+    "image_with_text_tqdFKd",
+    "image_with_text_YBcpYq",
+    "image_with_text_PRUqUV",
+    "1777795313f54a279b",
+    "substack_blog_BMDpyd",
+    "featured_blog_rbHQbw",
+    "collapsible_content_HA7hTA",
+    "related-products",
+    "product_cards_wKGKUV"
+  ]
+}

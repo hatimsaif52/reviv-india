@@ -1,0 +1,249 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "ss_phil_hero_FRUNpJ": {
+      "type": "ss-phil-hero",
+      "name": "SS Hero Phil",
+      "settings": {
+        "tag": "VOCAL MASTERY",
+        "heading_line1": "I help singers",
+        "heading_line2": "unlock their voice.",
+        "text": "I’m Phil Moufarrege. I taught myself how to sing from scratch by reverse-engineering what the best naturally gifted singers do instinctively, and breaking it down into a clear, step-by-step process anyone can follow.",
+        "btn_text": "Learn how to unlock your voice here",
+        "btn_link": "https://www.philmoufarrege.com/",
+        "heading_color": "#ffffff",
+        "text_color": "#b2b2b2",
+        "tag_color": "#e5c085",
+        "tag_dot_color": "#e5c085",
+        "btn_color": "#e5c085",
+        "btn_text_color": "#000000",
+        "show_tag_dot": true,
+        "show_badge": true,
+        "image": "shopify://shop_images/eees.png",
+        "badge_title": "Expert Analysis",
+        "badge_text": "Over 15 years of transformation",
+        "reverse": false,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "ss_meet_phil_TDVftP": {
+      "type": "ss-meet-phil",
+      "blocks": {
+        "heading_dgy43b": {
+          "type": "heading",
+          "settings": {
+            "text": "Meet Phil Moufarrege",
+            "color": "#ffffff"
+          }
+        },
+        "text_j3dncd": {
+          "type": "text",
+          "settings": {
+            "text": "Phil Moufarrege is a vocal mentor who reverse-engineered how naturally gifted singers use their voice, and turned it into a clear, step-by-step method anyone can understand.",
+            "color": "#b2b2b2"
+          }
+        },
+        "text_yzd34q": {
+          "type": "text",
+          "settings": {
+            "text": "He works with singers, songwriters, and music producers who feel blocked, strained, or inconsistent, helping them build a reliable, resilient voice without overthinking technique.",
+            "color": "#b2b2b2"
+          }
+        },
+        "badge_gKGypN": {
+          "type": "badge",
+          "settings": {
+            "number": "15+",
+            "label": "Years Experience",
+            "number_color": "#e5c085",
+            "label_color": "#b2b2b2"
+          }
+        },
+        "badge_TFTwXe": {
+          "type": "badge",
+          "settings": {
+            "number": "1000s",
+            "label": "Voices Unlocked",
+            "number_color": "#e5c085",
+            "label_color": "#b2b2b2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_dgy43b",
+        "text_j3dncd",
+        "text_yzd34q",
+        "badge_gKGypN",
+        "badge_TFTwXe"
+      ],
+      "name": "SS Meet Phil",
+      "settings": {
+        "image": "shopify://shop_images/Untitled_design_1.png",
+        "border_color": "#e5c085",
+        "reverse": false,
+        "padding_top": 40,
+        "padding_bottom": 60
+      }
+    },
+    "ss_points_phil_dEPeYY": {
+      "type": "ss-points-phil",
+      "blocks": {
+        "point_jfyfFY": {
+          "type": "point",
+          "settings": {
+            "text": "Increasing your full-voice vocal range and using it effortlessly without straining"
+          }
+        },
+        "point_TRprDg": {
+          "type": "point",
+          "settings": {
+            "text": "Controlling your volume so you can sing soft, medium, or powerfully with stability"
+          }
+        },
+        "point_grDFxY": {
+          "type": "point",
+          "settings": {
+            "text": "Singing consistently, live or in the studio and with confidence & reliability"
+          }
+        },
+        "point_Ff3EDe": {
+          "type": "point",
+          "settings": {
+            "text": "Healing vocal damage and building a healthy, resilient voice"
+          }
+        },
+        "point_f7t67w": {
+          "type": "point",
+          "settings": {
+            "text": "Singing reflexively without overthinking technique"
+          }
+        },
+        "point_BhW3E7": {
+          "type": "point",
+          "settings": {
+            "text": "Finally finishing original songs that were shelved because the voice “wasn’t ready”"
+          }
+        }
+      },
+      "block_order": [
+        "point_jfyfFY",
+        "point_TRprDg",
+        "point_grDFxY",
+        "point_Ff3EDe",
+        "point_f7t67w",
+        "point_BhW3E7"
+      ],
+      "name": "SS Phil Video Points",
+      "settings": {
+        "heading": "Singers Phil works with often want to:",
+        "video": "https://www.youtube.com/watch?v=laIn3mOBWRE",
+        "poster": "shopify://shop_images/photo-1511671782779-c97d3d27a1d4.avif",
+        "autoplay": false,
+        "padding_top": 40,
+        "padding_bottom": 20
+      }
+    },
+    "ss_meet_phil_cdbXmd": {
+      "type": "ss-meet-phil",
+      "blocks": {
+        "heading_i8Qq3i": {
+          "type": "heading",
+          "settings": {
+            "text": "Phil is also a proud user of Reviv",
+            "color": "#ffffff"
+          }
+        },
+        "text_DQYz6J": {
+          "type": "text",
+          "settings": {
+            "text": "I use Reviv mouthguard to help relax the jaw, reduce tension, and unlock natural voice control.",
+            "color": "#b2b2b2"
+          }
+        },
+        "text_cM3kXa": {
+          "type": "text",
+          "settings": {
+            "text": "With students that are trying to reduce tension in their singing I encourage them to try Reviv.",
+            "color": "#b2b2b2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_i8Qq3i",
+        "text_DQYz6J",
+        "text_cM3kXa"
+      ],
+      "name": "Reviv User",
+      "settings": {
+        "image": "shopify://shop_images/Order_your_R3_Support_2c2c822f-47f7-4d99-8687-410177ee57e2.png",
+        "border_color": "#e5c085",
+        "reverse": true,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "rich_text_zrCrNd": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_aUJH7R": {
+          "type": "heading",
+          "settings": {
+            "heading": "Discover how to unlock your voice here",
+            "heading_size": "h0"
+          }
+        },
+        "button_M3QcHN": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn more →",
+            "button_link": "https://www.philmoufarrege.com/",
+            "button_id": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_aUJH7R",
+        "button_M3QcHN"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-7bfe666f-6be9-46e3-88a6-1be40f4a8ea4",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "custom__class": "phill-r_c-bottom"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ss_phil_hero_FRUNpJ",
+    "ss_meet_phil_TDVftP",
+    "ss_points_phil_dEPeYY",
+    "ss_meet_phil_cdbXmd",
+    "rich_text_zrCrNd"
+  ]
+}

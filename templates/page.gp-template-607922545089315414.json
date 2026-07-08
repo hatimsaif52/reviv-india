@@ -1,0 +1,187 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "gp_section_607922545189978710": {
+      "type": "gp-section-607922545189978710",
+      "settings": {
+        "checksum": "54297cc3c7e36a2bc476cb1b8ad2a53ba8d4ab9d69f677b4e29987746a08fe7d_1_1_1_0__1",
+        "ggxzyESdgSq_childItem_0": "<p>Designed for nightly use</p>",
+        "ggxzyESdgSq_childItem_1": "<p>Helps reduce clenching intensity</p>",
+        "ggxzyESdgSq_childItem_2": "<p>Comfortable, reusable, easy to clean</p>",
+        "ggZCckuwRBv_label": "Add to cart",
+        "ggZCckuwRBv_outOfStockLabel": "Out Of Stock",
+        "ggZCckuwRBv_unavailableLabel": "Unavailable",
+        "ggZCckuwRBv_variantSelectionRequiredMessage": "Please select a variant to add product to cart"
+      }
+    },
+    "gp_section_607922545190044246": {
+      "type": "gp-section-607922545190044246",
+      "settings": {
+        "checksum": "19adbcb8f96d979a199a3c48c3e7a37ce2698bd5ecdce61bd0d062fe99feca33_1_1_1_0__1",
+        "ggfuQy3tXli_text": "<span style=\"color:#151515;\">The Engineering</span><span style=\"color:#E5C085;\"> of the Jaw</span>",
+        "ggIe0iDtsg5_text": "<p>The jaw actually has a complex set of movements that can be easily disrupted, thereby contributing to bruxism:</p>",
+        "gg7FE_LxBx4_childItem_0": "<p><span style=\"color:#E5C085;\"><strong>Elevation and Depression:</strong></span> <span style=\"color:#4B5563;\">Elevation closes the mouth, while depression opens it.</span></p>",
+        "gg7FE_LxBx4_childItem_1": "<p><span style=\"color:#E5C085;\"><strong>Protrusion and Retrusion:</strong></span> <span style=\"color:#4B5563;\">Elevation closes the mouth, while depression opens it.</span></p>",
+        "gg7FE_LxBx4_childItem_2": "<p><span style=\"color:#E5C085;\"><strong>Lateral Excursion (Side-to-Side Movement):</strong></span> <span style=\"color:#4B5563;\">This allows the jaw to move left or right, essential for grinding food.</span></p>",
+        "gg7FE_LxBx4_childItem_3": "<p><span style=\"color:#E5C085;\"><strong>Rotational and Translational Movements:</strong></span> <span style=\"color:#4B5563;\">These combined motions allow for complex movements such as chewing. The jaw rotates initially, then slides down the TMJ socket to open fully.</span></p>"
+      }
+    },
+    "gp_section_607922545190109782": {
+      "type": "gp-section-607922545190109782",
+      "settings": {
+        "section_preload": "true",
+        "checksum": "4ea9dc22e7e8327cc6355687f3cb2dbd85d08cd874571a00edfe4c09341b7044_1_1_1_0__1",
+        "ggVryAelVXj_text": "<span style=\"color:#151515;\">Want to wake up without teeth grinding or jaw tension?</span>",
+        "gg9d5zygj0C_text": "<p>Designed to help minimize night-time clenching, support your teeth, and encourage a more relaxed jaw while you sleep.</p>",
+        "ggUsUFGwJjH_text": "<p>Trusted by thousands for nightly jaw relief</p>"
+      }
+    },
+    "gp_section_607922545190175318": {
+      "type": "gp-section-607922545190175318",
+      "settings": {
+        "checksum": "d44d7070a61251f52c5168312975b0c8f4471142f32661783bf9e85f2932fefd_1_1_1_0__1",
+        "ggwdZ1yHpLW_text": "<span style=\"color:#151515;\">Why Do We Really</span><span style=\"color:#E5C085;\"> Grind&nbsp;&amp; Clench?</span>",
+        "ggy1c_a2wFu_text": "<p>Our view is that it's because the teeth don't fit together correctly. Sometimes this occurs due to malocclussion, but sometimes it is induced from orthodontics, extractions or bad dental work.</p>"
+      }
+    },
+    "gp_section_607922545190830678": {
+      "type": "gp-section-607922545190830678",
+      "settings": {
+        "checksum": "ee0bdf16dd1c3ab6dbebdc51a355129e06311022b0db56a0574f0fd3434aff7c_1_1_1_0__1",
+        "ggLlzIenFpW_text": "<span style=\"color:#151515;\">Why </span><span style=\"color:#E5C185;\">Grinding &amp; Clenching</span><span style=\"color:#151515;\"> Shouldn't Be Ignored</span>",
+        "ggYeEheYm5x_text": "<p><span style=\"color:#E5C185;\">Tooth Damage &amp; Sensitivity</span></p>",
+        "ggCzv6G9-eN_text": "<p>Enamel doesn't regenerate. Grinding wears it down permanently, exposing inner layers and causing sensitivity to hot, cold, and sweet foods.</p>",
+        "gggvqLg6zjw_text": "<p><span style=\"color:#E5C185;\">Headaches &amp; Facial Fatigue</span></p>",
+        "ggl71JLespp_text": "<p>Chronic jaw muscle tension often radiates to the temples and forehead, causing persistent tension headaches and facial discomfort.</p>",
+        "ggZ3DnGlD-__text": "<p><span style=\"color:#E5C185;\">Morning Jaw Tightness</span></p>",
+        "gg6GJbX6CM9_text": "<p>Waking up with a sore, stiff jaw is a clear sign of overnight clenching. This tension can last throughout the day and affect eating and speaking.</p>",
+        "ggMA-nF0TQw_text": "<p><span style=\"color:#E5C185;\">Poor Sleep Quality</span></p>",
+        "ggaX5TeAaCU_text": "<p>Grinding disrupts your sleep architecture, preventing deep, restorative rest. Poor sleep increases stress, which worsens grinding—a vicious cycle.</p>"
+      }
+    },
+    "gp_section_607922545190896214": {
+      "type": "gp-section-607922545190896214",
+      "settings": {
+        "checksum": "47e60631b306d2a54514628f1c01e320c1758254fb95ccdebac533cbe62698eb_1_1_1_0__1",
+        "ggMvAYHLtBa_text": "<span style=\"color:#151515;\">How Reviv Is Designed to Help&nbsp;</span><span style=\"color:#E5C185;\">With Grinding &amp; Clenching</span>",
+        "ggy1tb5k3NI_text": "<p>Our approach is simple: support natural jaw positioning, reduce muscle overactivity, and relieve pressure on teeth and joints—all while you sleep.</p>",
+        "ggD5tgVNvlE_text": "<p><span style=\"color:#1F2937;\">Supports Proper Jaw Positioning</span></p>",
+        "ggkS0HJBIQ0_text": "<p>Chronic jaw muscle tension often radiates to the temples and forehead, causing persistent tension headaches and facial discomfort.</p>",
+        "gg_RsFeuHfp_text": "<p><span style=\"color:#1F2937;\">Reduces Muscle Overactivity</span></p>",
+        "ggNDez-uJSc_text": "<p>Interrupts the neuromuscular patterns that trigger involuntary grinding and clenching episodes.</p>",
+        "ggKaOA1g5xy_text": "<p><span style=\"color:#1F2937;\">Relieves Pressure on Teeth &amp; Joints</span></p>",
+        "ggqxZAVDA2Y_text": "<p>Distributes force more evenly, protecting enamel and reducing strain on the TMJ.</p>",
+        "ggL6PwH_kYp_text": "<p>Calm, science-backed, non-invasive relief</p>"
+      }
+    },
+    "gp_section_607922545190961750": {
+      "type": "gp-section-607922545190961750",
+      "settings": {
+        "checksum": "b1ee6940311b0a33b4ba76c098f17b46b09338010f606d3800826a8d39315f79_1_1_1_0__1",
+        "ggSOupKlIcG_text": "<span style=\"color:#151515;\">Why People </span><span style=\"color:#E5C185;\">Grinding &amp; Clenching</span><span style=\"color:#151515;\">&nbsp;</span>",
+        "ggDpqaXnBsc_text": "<p>4.7 out of 5</p>"
+      }
+    },
+    "gp_section_607922545191027286": {
+      "type": "gp-section-607922545191027286",
+      "settings": {
+        "checksum": "933ab812fb52c4357e1c2669bdb5b3223b408e1d4ccfb36606332c759b6a0989_1_1_1_0__1",
+        "ggTQobSsNWH_text": "<span style=\"color:#151515;\">Designed for Real Night-Time Support</span>",
+        "ggDHvguZb2w_text": "<p>REVIV</p>",
+        "ggdGEl3EWe1_text": "<p>Our Solution</p>",
+        "gg3sLSg6Xkm_text": "<p>Generic Guards</p>",
+        "ggDJt27G61-_text": "<p>Designed for grinding &amp; clenching relief</p>",
+        "ggQBld2WIgn_text": "<p>Comfortable for nightly use</p>",
+        "gg5eOcdEY6r_text": "<p>Reusable &amp; easy to clean</p>",
+        "ggUwFormzP__text": "<p>Supports healthy jaw positioning</p>",
+        "gghsmSTzo3x_text": "<p>Premium materials</p>"
+      }
+    },
+    "gp_section_607922545191092822": {
+      "type": "gp-section-607922545191092822",
+      "settings": {
+        "checksum": "823e620769698d818f21148beb0071eb86f401421961792217f3da1580b5359a_1_1_1_0__1",
+        "ggSwVIET39L_text": "73%",
+        "gggEbA57DvL_text": "<p>Report reduced clenching intensity</p>",
+        "ggN7Xm85uKp_text": "85%",
+        "ggac6s62jcs_text": "<p>Experience improved sleep comfort</p>",
+        "gg-GJExO1Ux_text": "91%",
+        "ggwUws9u7Gu_text": "<p>Certified Professionals</p>"
+      }
+    },
+    "gp_section_607922545191158358": {
+      "type": "gp-section-607922545191158358",
+      "settings": {
+        "checksum": "97e9f4b84b5fbc19ad7722c7cbeece608d89ee2c232b4cde007c97de9315d790_1_1_1_0__1",
+        "ggdC2vVYiv0_text": "Testimonials"
+      }
+    },
+    "gp_section_607922545191289430": {
+      "type": "gp-section-607922545191289430",
+      "settings": {
+        "checksum": "47a2cd8a9148e28e59353bd66a471d37f2172eaa62dd7f9fef8c8e35de1e3b9a_1_1_1_0__1",
+        "gg4zycTCPlF_text": "<span style=\"color:#151515;\">\"I didn't realize how much I clenched at night until I started waking up pain-free. My jaw feels relaxed, my teeth don't hurt, and I'm sleeping through the night.\"</span>",
+        "gg1A9fVeOIA_text": "<span style=\"color:#151515;\">— Sarah M.</span>",
+        "gg_Am8_qLXo_text": "<span style=\"color:#E5C185;\">Verified Customer</span>"
+      }
+    },
+    "gp_section_607922545191420502": {
+      "type": "gp-section-607922545191420502",
+      "settings": {
+        "checksum": "adf728992691aa0f20b38e1f56b44888d2b6a7217aae9c6a3303c9f1da17b73c_1_1_1_0__1"
+      }
+    },
+    "gp_section_608073589391885210": {
+      "type": "gp-section-608073589391885210",
+      "settings": {
+        "checksum": "4263e6319185b0240a82d51a4b2b45228675520d80a518cc7ddc5e6deb178856_1_1_1_0__1",
+        "ggoqzIgFZKL_text": "Ergonomically Inspired Design",
+        "ggg6ZXfPL5S_text": "<p>Based on flat-plane stabilization principles</p>",
+        "ggomwooxEli_text": "Protective Barrier",
+        "ggkNN-lIPx6_text": "<p>Creates a cushioning barrier between teeth during grinding</p>"
+      }
+    },
+    "gp_section_608942616280564310": {
+      "type": "gp-section-608942616280564310",
+      "settings": {
+        "checksum": "4c7ab161e7839d7e4498bfdd4103115fd582582a9444405695fe7c63071128bf_1_1_1_0__1",
+        "ggV10DdLq7B_text": "<p>R2 (RevivTwo)</p>",
+        "ggKov_zeVk__text": "<p>80 USD</p>",
+        "ggq6REaypft_childItem_0": "<p>Helps reduce nighttime teeth clenching</p>",
+        "ggq6REaypft_childItem_1": "<p>Cushions bite pressure during sleep with a flexible design</p>",
+        "ggq6REaypft_childItem_2": "<p>Wake up with less jaw tension in the morning</p>",
+        "ggbvqy9mX5H_label": "<p>Add to cart</p>",
+        "ggfrX9PPK4n_text": "<p>R3 (RevivThree)</p>",
+        "ggJ_P23TmZR_text": "<p>150 USD</p>",
+        "ggup4XWbXu8_childItem_0": "<p>Helps minimize nighttime teeth clenching</p>",
+        "ggup4XWbXu8_childItem_1": "<p>Absorbs and redistributes stronger bite pressure</p>",
+        "ggup4XWbXu8_childItem_2": "<p>Wake up with a noticeably more relaxed jaw</p>",
+        "gglWKgaoP0V_label": "<p>Add to cart</p>"
+      }
+    }
+  },
+  "order": [
+    "gp_section_607922545190109782",
+    "gp_section_607922545190175318",
+    "gp_section_607922545190044246",
+    "gp_section_607922545190830678",
+    "gp_section_607922545190896214",
+    "gp_section_607922545189978710",
+    "gp_section_608942616280564310",
+    "gp_section_607922545190961750",
+    "gp_section_607922545191420502",
+    "gp_section_607922545191289430",
+    "gp_section_607922545191092822",
+    "gp_section_608073589391885210",
+    "gp_section_607922545191027286",
+    "gp_section_607922545191158358"
+  ]
+}

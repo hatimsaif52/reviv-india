@@ -1,0 +1,51 @@
+{% comment %}
+  Accepts:
+  - text: {String} Text content
+  - icon: {Object} Icon image object
+  - icon_position: {String} 'start' or 'end'
+  - text_style: {String} Text style class
+  - alignment: {String} 'left', 'center', or 'right'
+  - block_attributes: {String} Block attributes for theme editor
+{% endcomment %}
+
+<div
+  class="text-with-icon text-with-icon--{{ icon_position }} text-with-icon--{{ alignment }} {{ text_style }}"
+  {{ block_attributes }}
+>
+  {%- if icon != blank -%}
+    {{ icon | image_url: width: 48 | image_tag: class: 'text-with-icon__icon' }}
+  {%- endif -%}
+  <div class="text-with-icon__text">
+    {{ text }}
+  </div>
+</div>
+
+{%- style -%}
+  .text-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .text-with-icon--end {
+    flex-direction: row-reverse;
+  }
+
+  .text-with-icon__icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+
+  .text-with-icon--left {
+    justify-content: flex-start;
+  }
+
+  .text-with-icon--center {
+    justify-content: center;
+  }
+
+  .text-with-icon--right {
+    justify-content: flex-end;
+  }
+{%- endstyle -%}

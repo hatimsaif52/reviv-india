@@ -1,0 +1,824 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "before_after_hero": {
+      "type": "before-after-hero",
+      "settings": {
+        "eyebrow": "Mouthguard Before and After",
+        "heading": "Real Results From Reviv Users",
+        "subtext": "<p>See how real users improved jaw alignment, breathing & overall comfort - backed by thousands of verified reviews.</p>",
+        "button_label": "See how it works",
+        "button_link": "#ba-how-it-works",
+        "before_image": "shopify://shop_images/Get_more_before_and_afters___86etn40a2_1.png",
+        "before_label": "Before",
+        "after_image": "shopify://shop_images/Get_more_before_and_afters___86etn40a2.png",
+        "after_label": "After",
+        "corner_overlay_image": "shopify://shop_images/7a184cdb56497a8eb2a6a54421dfdb1213b9f851.png",
+        "background_top": "#2b2628",
+        "background_bottom": "#0f0d0e",
+        "accent_color": "#e5c085",
+        "heading_color": "#ffffff",
+        "subtext_color": "#ffffff",
+        "subtext_opacity": 85,
+        "button_bg": "#e5c085",
+        "button_text": "#232021",
+        "pill_bg_left": "#e5c085",
+        "pill_text_left": "#232021",
+        "pill_bg_right": "#ffffff",
+        "pill_text_right": "#232021"
+      }
+    },
+    "before_after_counters": {
+      "type": "before-after-counters",
+      "blocks": {
+        "counter_1": {
+          "type": "counter",
+          "settings": {
+            "icon": "shopify://shop_images/customers.png",
+            "value": "50,000+",
+            "label": "Customers Worldwide"
+          }
+        },
+        "counter_2": {
+          "type": "counter",
+          "settings": {
+            "icon": "shopify://shop_images/rating.png",
+            "value": "4.8",
+            "label": "Average Ratings"
+          }
+        },
+        "counter_3": {
+          "type": "counter",
+          "settings": {
+            "icon": "shopify://shop_images/country.png",
+            "value": "130+",
+            "label": "Countries"
+          }
+        },
+        "counter_4": {
+          "type": "counter",
+          "settings": {
+            "icon": "shopify://shop_images/calendar_d9e902e2-53fc-48e0-b993-863c6d2cab04.png",
+            "value": "94%",
+            "label": "See results in 60 days"
+          }
+        }
+      },
+      "block_order": [
+        "counter_1",
+        "counter_2",
+        "counter_3",
+        "counter_4"
+      ],
+      "settings": {
+        "background_color": "#000000",
+        "card_bg": "#e5c085",
+        "text_color": "#000000"
+      }
+    },
+    "before_after_proof_gallery": {
+      "type": "ss-proof-gallery-slider",
+      "blocks": {
+        "card_mDxrFC": {
+          "type": "card",
+          "settings": {
+            "before": "shopify://shop_images/robert.png",
+            "name": "Robert Ś.",
+            "text": "Here is the proof after a month — the skull is inflating.",
+            "tag": "R1"
+          }
+        },
+        "card_VaUpyP": {
+          "type": "card",
+          "settings": {
+            "before": "shopify://shop_images/no_labels.png",
+            "name": "Lasha",
+            "text": "“Okay so, I noticed that after Reviv my appetite has increased and I was actually able to eat balanced and I gained some more muscle and I also noticed that my stuttering has decreased significantly.”",
+            "tag": "R1"
+          }
+        },
+        "card_KCMcDF": {
+          "type": "card",
+          "settings": {
+            "before": "shopify://shop_images/Sid__Figma_5.png",
+            "name": "George",
+            "text": "\"I started wearing the Reviv right around Christmas of 2024, so it's been close to 3 months. I wear it as much as I can, including most of the time I'm driving the bus. I shaved my big Santa beard at the start so I could compare my future face. Things that I notice is my skin and complexion, and the amount of hair (head and beard) growth in only 3 months. Enjoy!\"",
+            "tag": "R1"
+          }
+        },
+        "card_EFtg7R": {
+          "type": "card",
+          "settings": {
+            "before": "shopify://shop_images/Sid__Figma_6.png",
+            "name": "Richard B.",
+            "text": "",
+            "tag": "R2"
+          }
+        },
+        "card_aNPnhJ": {
+          "type": "card",
+          "settings": {
+            "before": "shopify://shop_images/Sid__Figma_8.png",
+            "name": "Jason T.",
+            "text": "",
+            "tag": "R2"
+          }
+        },
+        "card_Jayfdh": {
+          "type": "card",
+          "settings": {
+            "before": "shopify://shop_images/Sid__Figma_7.png",
+            "name": "Tiara",
+            "text": "This mouthguard's dental mechanics will unwind your soft tissue, improving both looks and health.",
+            "tag": "R1"
+          }
+        },
+        "card_LxTBDh": {
+          "type": "card",
+          "settings": {
+            "before": "shopify://shop_images/image_-_2026-05-08T173540.430.png",
+            "name": "Abdullah K.",
+            "text": "Don't pay dentist prices - try Reviv.",
+            "tag": "R2"
+          }
+        },
+        "card_mEy99P": {
+          "type": "card",
+          "settings": {
+            "before": "shopify://shop_images/Sid__Figma_2.png",
+            "name": "Konstantinos",
+            "text": "\"Straighter teeth with reviv than with beaces\n2 months btw\"",
+            "tag": "R2"
+          }
+        },
+        "card_8hfCna": {
+          "type": "card",
+          "settings": {
+            "before": "shopify://shop_images/Sid__Figma_4.png",
+            "name": "Jeremy",
+            "text": "Here are photos of my teeth after 6 months of consistent use. I have slept with a mouth guard every night and used clip ons every day along with stretching face, head, neck, and body.",
+            "tag": "R1"
+          }
+        },
+        "card_Ea68FB": {
+          "type": "card",
+          "settings": {
+            "before": "shopify://shop_images/image_2ab6bff1-0852-49c4-b45c-3bdb73431a52.png",
+            "name": "Ousama",
+            "text": "",
+            "tag": "R2"
+          }
+        },
+        "card_qVJJUz": {
+          "type": "card",
+          "settings": {
+            "before": "shopify://shop_images/Sid__Figma.png",
+            "name": "Richard B.",
+            "text": "",
+            "tag": "R2"
+          }
+        },
+        "card_4jwTyA": {
+          "type": "card",
+          "settings": {
+            "before": "shopify://shop_images/Sid__Figma_1.png",
+            "name": "Lina",
+            "text": "",
+            "tag": "R1"
+          }
+        }
+      },
+      "block_order": [
+        "card_mDxrFC",
+        "card_VaUpyP",
+        "card_KCMcDF",
+        "card_EFtg7R",
+        "card_aNPnhJ",
+        "card_VaUpyP",
+        "card_Jayfdh",
+        "card_LxTBDh",
+        "card_mEy99P",
+        "card_8hfCna",
+        "card_Ea68FB",
+        "card_qVJJUz",
+        "card_4jwTyA"
+      ],
+      "settings": {
+        "cards_per_slide_desktop": 9,
+        "cards_per_slide_mobile": 1
+      }
+    },
+    "before_after_user_stories": {
+      "type": "before-after-user-stories",
+      "blocks": {
+        "story_QcmmNh": {
+          "type": "story",
+          "settings": {
+            "initials": "GB",
+            "name": "Gijs B.",
+            "verified": true,
+            "text": "<p>Really felt the difference over the past months, I sleep better and my facial structure started to align pretty quickly.</p>",
+            "stars": 5
+          }
+        },
+        "story_qJcjhj": {
+          "type": "story",
+          "settings": {
+            "initials": "BL",
+            "name": "Bret L.",
+            "verified": true,
+            "text": "<p>The Best!***** I think at this point, it is the best on the market.</p>",
+            "stars": 5
+          }
+        },
+        "story_Mh3VVM": {
+          "type": "story",
+          "settings": {
+            "initials": "I",
+            "name": "Ivan",
+            "verified": true,
+            "text": "<p>The hardest part is behind: my back doesn't bother me as much anymore, and most importantly, the brain fog is gone.\"</p>",
+            "stars": 5
+          }
+        },
+        "story_wKeT43": {
+          "type": "story",
+          "settings": {
+            "initials": "AW",
+            "name": "Angela W",
+            "verified": true,
+            "text": "<p>Reviv does prevent me from snoring. I am not a big snoring person but it was enough that on occasion my husband would nudge me awake. </p>",
+            "stars": 5
+          }
+        },
+        "story_KH967e": {
+          "type": "story",
+          "settings": {
+            "initials": "E",
+            "name": "Evelyn",
+            "verified": true,
+            "text": "<p>My first few weeks with the reviv I noticed my body able to relax more while sleeping. Like it allowed my tense muscles to release. </p>",
+            "stars": 5
+          }
+        },
+        "story_VECPk4": {
+          "type": "story",
+          "settings": {
+            "initials": "KY",
+            "name": "Kin Yu",
+            "verified": true,
+            "text": "<p>It's only been 45 days, but Reviv has already transformed my life. For the first time in years, I've had uninterrupted sleep.</p>",
+            "stars": 5
+          }
+        },
+        "story_UHNkhf": {
+          "type": "story",
+          "settings": {
+            "initials": "RJ",
+            "name": "Rebecca J.",
+            "verified": true,
+            "text": "<p>I immediately noticed a significant reduction in chronic myofascial pain I'd been suffering with for many years! </p>",
+            "stars": 5
+          }
+        },
+        "story_tqayWy": {
+          "type": "story",
+          "settings": {
+            "initials": "A",
+            "name": "Anonymous",
+            "verified": true,
+            "text": "<p>Phenomenal. Countless improvements: teeth, energy, sleep. Will be buying the R3 soon.</p>",
+            "stars": 5
+          }
+        },
+        "story_3d6QPm": {
+          "type": "story",
+          "settings": {
+            "initials": "A",
+            "name": "Anonymous",
+            "verified": true,
+            "text": "<p>Feels like it has saved my life</p>",
+            "stars": 5
+          }
+        },
+        "story_RcWhFJ": {
+          "type": "story",
+          "settings": {
+            "initials": "SK",
+            "name": "Sharon K.",
+            "verified": true,
+            "text": "<p>Based off less than 2 months of use, I can feel my mouth (and skin around my mouth) expanding, and it feels good.</p>",
+            "stars": 5
+          }
+        },
+        "story_gmdMBz": {
+          "type": "story",
+          "settings": {
+            "initials": "JF",
+            "name": "Jules F.",
+            "verified": true,
+            "text": "<p>ADHD fixing. just got an A for the first time in many years, looks like reviv is working</p>",
+            "stars": 5
+          }
+        },
+        "story_kEzH7G": {
+          "type": "story",
+          "settings": {
+            "initials": "EO",
+            "name": "Erik O",
+            "verified": true,
+            "text": "<p>I had lower back pain for a week leading up to wearing the Reviv for the first time, that went away gradually within day</p>",
+            "stars": 5
+          }
+        },
+        "story_Phr8a6": {
+          "type": "story",
+          "settings": {
+            "initials": "BC",
+            "name": "Birte C",
+            "verified": true,
+            "text": "<p>I haven't slept so deeply since before my teenage years. I actually wake up refreshed. I feel incredibly happy and light.</p>",
+            "stars": 5
+          }
+        },
+        "story_Hezb3j": {
+          "type": "story",
+          "settings": {
+            "initials": "JL",
+            "name": "Jonathan L.",
+            "verified": true,
+            "text": "<p>No more jaw clicking! My jaw used to click every time I opened wide — now it's completely gone and my TMJ inflammation went down.</p>",
+            "stars": 5
+          }
+        },
+        "story_ArdMPz": {
+          "type": "story",
+          "settings": {
+            "initials": "OB",
+            "name": "Olav B.",
+            "verified": true,
+            "text": "<p>Before, chewing gum was painful. Today, my left jaw joint felt completely normal. The right side no longer hurts either.</p>",
+            "stars": 5
+          }
+        },
+        "story_3paMt7": {
+          "type": "story",
+          "settings": {
+            "initials": "JA",
+            "name": "Jonah A",
+            "verified": true,
+            "text": "<p>I have recently gotten comments several times that I look 'better.' There is now a gap between my bottom front teeth that was never there before.</p>",
+            "stars": 5
+          }
+        },
+        "story_KrqAWb": {
+          "type": "story",
+          "settings": {
+            "initials": "JT",
+            "name": "Jason T.",
+            "verified": true,
+            "text": "<p>My lower molar pain is down by 90%. Old injuries are getting healed in real time. And my flexibility is increasing.</p>",
+            "stars": 5
+          }
+        },
+        "story_DxcXNA": {
+          "type": "story",
+          "settings": {
+            "initials": "CM",
+            "name": "Callie M.",
+            "verified": true,
+            "text": "<p>When I woke up this morning, my TMJ was gone — in just one week! I moved my jaw around and there was no clicking at all.</p>",
+            "stars": 5
+          }
+        },
+        "story_aYQyUe": {
+          "type": "story",
+          "settings": {
+            "initials": "TL",
+            "name": "Tojumi L.",
+            "verified": true,
+            "text": "<p>3 months in and my energy levels are through the roof. I'm blowing through tasks without much effort. </p>",
+            "stars": 5
+          }
+        },
+        "story_1": {
+          "type": "story",
+          "settings": {
+            "initials": "DM",
+            "name": "Dakota M.",
+            "verified": true,
+            "text": "<p>I've noticed better body coordination — my left hand is now easier to use, and my OCD has been calming down significantly.</p>",
+            "stars": 5
+          }
+        },
+        "story_2": {
+          "type": "story",
+          "settings": {
+            "initials": "RD",
+            "name": "Reined D.",
+            "verified": true,
+            "text": "<p>I fixed my facial asymmetry in less than 1–2 weeks with Reviv. I used to only show my left side in photos.. now both sides of my face are even.</p>",
+            "stars": 5
+          }
+        },
+        "story_3": {
+          "type": "story",
+          "settings": {
+            "initials": "DM",
+            "name": "Dakota M.",
+            "verified": true,
+            "text": "<p>This completely transformed me socially. I have less anxiety, Now breathe through my nose with ease after being a mouth breather my whole life.</p>",
+            "stars": 5
+          }
+        },
+        "story_4": {
+          "type": "story",
+          "settings": {
+            "initials": "YY",
+            "name": "Yeoup Y.",
+            "verified": true,
+            "text": "<p>In less than 2 months, my skull, posture, and face have improved in endless ways. My hair also looks healthier and my hairline is noticeably better.</p>",
+            "stars": 5
+          }
+        },
+        "story_rigEyF": {
+          "type": "story",
+          "settings": {
+            "initials": "VA",
+            "name": "VA",
+            "verified": true,
+            "text": "<p>I had a chronic dry cough every single day from age 16 to 23.. nothing ever worked. After Reviv, it's completely gone. Even my parents noticed the change.</p>",
+            "stars": 5
+          }
+        }
+      },
+      "block_order": [
+        "story_QcmmNh",
+        "story_qJcjhj",
+        "story_Mh3VVM",
+        "story_wKeT43",
+        "story_KH967e",
+        "story_VECPk4",
+        "story_UHNkhf",
+        "story_tqayWy",
+        "story_3d6QPm",
+        "story_RcWhFJ",
+        "story_gmdMBz",
+        "story_kEzH7G",
+        "story_Phr8a6",
+        "story_Hezb3j",
+        "story_ArdMPz",
+        "story_3paMt7",
+        "story_KrqAWb",
+        "story_DxcXNA",
+        "story_aYQyUe",
+        "story_1",
+        "story_2",
+        "story_BdUpBr",
+        "story_3",
+        "story_RB9Xzc",
+        "story_4",
+        "story_rigEyF",
+        "story_ftQajk",
+        "story_aeTnz4",
+        "story_7GmDpm",
+        "story_QBjCjb",
+        "story_dVNXHY",
+        "story_WNLHe3",
+        "story_jFhzGn",
+        "story_rRgAQK",
+        "story_AKKKq6",
+        "story_U4N7a9",
+        "story_tcdUBJ",
+        "story_8gk7ak",
+        "story_XBqFFh",
+        "story_JfYYkj",
+        "story_y4LN3A",
+        "story_RKVDB3",
+        "story_nCMGfg"
+      ],
+      "settings": {
+        "eyebrow": "USER STORIES",
+        "heading": "In their own words",
+        "subtext": "Real experiences from verified Reviv customers.",
+        "cards_per_slide_desktop": 4,
+        "cards_per_slide_mobile": 1
+      }
+    },
+    "before_after_how_it_works": {
+      "type": "before-after-how-it-works",
+      "blocks": {
+        "step_eF9wYi": {
+          "type": "step",
+          "settings": {
+            "title": "Wear the device",
+            "text": "Place Reviv comfortably during sleep. No adjustment period needed."
+          }
+        },
+        "step_BH9WGG": {
+          "type": "step",
+          "settings": {
+            "title": "Jaw repositioning",
+            "text": "Gentle guidance shifts the jaw into a neutral, relaxed position."
+          }
+        },
+        "step_NmeJiR": {
+          "type": "step",
+          "settings": {
+            "title": "Muscle relaxation",
+            "text": "Overactive muscles soften over time, reducing tension and grinding."
+          }
+        },
+        "step_gDLnAU": {
+          "type": "step",
+          "settings": {
+            "title": "Gradual Improvement",
+            "text": "Results build week by week-most users notice change within 30 days."
+          }
+        }
+      },
+      "block_order": [
+        "step_eF9wYi",
+        "step_BH9WGG",
+        "step_NmeJiR",
+        "step_gDLnAU"
+      ],
+      "settings": {
+        "eyebrow": "HOW IT WORKS",
+        "heading": "Four steps to results",
+        "subtext": "Simple nightly routine, compounding improvement.",
+        "image": "shopify://shop_images/skull.png"
+      }
+    },
+    "before_after_product_recs": {
+      "type": "before-after-product-recs",
+      "blocks": {
+        "card_qCGf8J": {
+          "type": "card",
+          "settings": {
+            "product": "r3-revivthree-without-support",
+            "custom_link": "",
+            "badge_text": "Recommended",
+            "title": "Best Overall Starting Point",
+            "r_label": "R3",
+            "description": "Choose R3 if you want the best balance of comfort + airflow, and you want an appliance designed to feel gentler on gums.",
+            "pill_1": "Gentler on gums",
+            "pill_2": "Easier airflow / mouthbreathing",
+            "pill_3": "Great long-term option",
+            "guarantee": "1-year guarantee with one free replacement.",
+            "button_label": "Purchase R3",
+            "primary_button": true
+          }
+        },
+        "card_nkKYEa": {
+          "type": "card",
+          "settings": {
+            "product": "reviv-two-without-support",
+            "custom_link": "",
+            "badge_text": "",
+            "title": "To Encourage Nose Breathing",
+            "r_label": "R2",
+            "description": "Choose R2 if you want a solid, durable appliance that encourages nose breathing through it's small air holes.",
+            "pill_1": "Durable for strong clenching",
+            "pill_2": "Good option for grinders",
+            "pill_3": "",
+            "guarantee": "1-year guarantee with one free replacement.",
+            "button_label": "Shop R2",
+            "primary_button": false
+          }
+        },
+        "card_MK8rdR": {
+          "type": "card",
+          "settings": {
+            "product": "reviv-two-without-support",
+            "custom_link": "",
+            "badge_text": "",
+            "title": "Lowest cost entry",
+            "r_label": "R1",
+            "description": "Choose R1 if budget is your main priority and you’re not a heavy clencher/grinder. Health benefits is same as R2 or R3.",
+            "pill_1": "Lowest cost",
+            "pill_2": "Good for trying the concept",
+            "pill_3": "",
+            "guarantee": "No guarantee, no replacement.",
+            "button_label": "Shop R1",
+            "primary_button": false
+          }
+        }
+      },
+      "block_order": [
+        "card_qCGf8J",
+        "card_nkKYEa",
+        "card_MK8rdR"
+      ],
+      "settings": {
+        "note": "Note: Reviv appliances are not medical devices and have not been evaluated by the FDA. If you have significant symptoms or concerns, consult a healthcare professional."
+      }
+    },
+    "before_after_support": {
+      "type": "before-after-support",
+      "blocks": {
+        "item_jxWLwb": {
+          "type": "item",
+          "settings": {
+            "text": "Access to Skool community which also has 60+ instructional videos"
+          }
+        },
+        "item_G3dpUR": {
+          "type": "item",
+          "settings": {
+            "text": "Weekly topical group calls led by Ken"
+          }
+        },
+        "item_zMqHiV": {
+          "type": "item",
+          "settings": {
+            "text": "Ability to DM Ken on the Skool platform anytime"
+          }
+        },
+        "item_ycqHzg": {
+          "type": "item",
+          "settings": {
+            "text": "Maintain a journal that Ken will check and comment on weekly"
+          }
+        }
+      },
+      "block_order": [
+        "item_jxWLwb",
+        "item_G3dpUR",
+        "item_zMqHiV",
+        "item_ycqHzg"
+      ],
+      "settings": {
+        "title": "Should you add support to your purchase?",
+        "lead": "Support includes 12 months of:",
+        "image": "shopify://shop_images/reviv-video-poster.jpg",
+        "video_url": ""
+      }
+    },
+    "collapsible_content_nezAhy": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_3etDht": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "1. Can a mouthguard change your face?",
+            "icon": "none",
+            "row_content": "<p>Yes. A properly designed mouthguard like Reviv can produce measurable changes in jaw alignment and facial symmetry over 1-6 months by restoring dental height and supporting the mandible in its natural position. Results are most visible in side-profile photos.  ( Read more - <a href=\"https://getreviv.com/blogs/content/do-night-guards-really-change-your-face-the-science-behind-jawline-symmetry\" target=\"_blank\">GetrevivDo Night Guards Change Your Face? Science of Jawline & Symmetry</a>﻿)</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_EYq3mq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "2. Can wearing a night guard change your face?",
+            "icon": "none",
+            "row_content": "<p>Yes. A night guard designed for jaw alignment (not just teeth protection) can change your face shape by relaxing the muscles and gradually correcting bite imbalances while you sleep. This is different from a standard night guard. ( read more - <a href=\"https://getreviv.com/blogs/content/do-night-guards-really-change-your-face-the-science-behind-jawline-symmetry\" target=\"_blank\">GetrevivDo Night Guards Change Your Face? Science of Jawline & Symmetry</a>﻿)</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Qrx6w9": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "3. Does wearing a night guard slim your face?",
+            "icon": "none",
+            "row_content": "<p>It can. By reducing chronic jaw clenching, a mouthguard like Reviv relaxes the  muscle over time, which can result in a slimmer-appearing jawline. This isn't fat loss, it's muscle relaxation from reduced grinding and clenching. ( read more - <a href=\"https://getreviv.com/blogs/content/can-a-mouthguard-change-your-bite-safely-the-reviv-safety-efficacy-guide\" target=\"_blank\">GetrevivCan a Mouthguard Safely Change Your Bite? Reviv’s Efficacy & Safety Guide</a>﻿)</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_xPWtxA": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "4. How long does it take to see mouthguard before and after results?",
+            "icon": "none",
+            "row_content": "<p>Most Reviv users report jaw tension relief within 1-2 weeks, visible alignment changes at 2-3 months, and noticeable facial symmetry improvements at 3-6 months. 94% of users see results within 60 days based on community data. ( read more - <a href=\"https://getreviv.com/blogs/content/reviv-mouthguard-reviews-and-before-after-journal-hub-user-gallery-hrv-sleep-charts\" target=\"_blank\">GetrevivReviv Mouthguard Reviews and Before/After Journal Hub (User Gallery + HRV/Sleep Charts) | Reviv</a>﻿)</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_JFnMmD": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "5. Is mewing or a mouthguard better for jawline?",
+            "icon": "none",
+            "row_content": "<p>They work differently and complement each other. Mewing focuses on tongue posture during the day, while a mouthguard like Reviv supports jaw alignment during sleep. Many users combine both for the best results. (read more - <a href=\"https://getreviv.com/blogs/content/mewing-vs-mouth-guards-which-works-faster-for-facial-symmetry\" target=\"_blank\">GetrevivMewing vs. Mouth Guards: Which Works Faster for Facial Symmetry?</a>﻿)</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Mpm87w": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "6. TMJ mouth guard before and after, what should I expect?",
+            "icon": "none",
+            "row_content": "<p>In the first two weeks, expect an adjustment period as your jaw adapts. By month 1, most users experience reduced TMJ pain and better sleep. By months 2-3, visible alignment changes appear in before/after photos.(Read more - <a href=\"https://getreviv.com/blogs/content/reviv-mouthguard-reviews-and-before-after-journal-hub-user-gallery-hrv-sleep-charts\" target=\"_blank\">GetrevivReviv Mouthguard Reviews and Before/After Journal Hub (User Gallery + HRV/Sleep Charts) | Reviv</a>)</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_3pVKbp": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "7. Can a mouthguard fix facial asymmetry?",
+            "icon": "none",
+            "row_content": "<p>A mouthguard designed for jaw alignment can improve facial asymmetry by addressing bite imbalances and reducing one-sided muscle tension. Reviv users have documented measurable symmetry improvements over 3-6 months of consistent use.(Read more - <a href=\"https://getreviv.com/blogs/content/best-mouthguards-for-facial-symmetry-and-jawline-alignment\" target=\"_blank\">GetrevivMorning Oral Recovery for People Who Grind: What to Do and What to Exp</a>)</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Ybxg7C": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "8. Does Reviv mouthguard actually work?",
+            "icon": "none",
+            "row_content": "<p>Based on our community data from 50,000+ users across 130+ countries, 94% report seeing results within 60 days.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_cVgTLB": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "9. Does a night guard change your face shape?",
+            "icon": "none",
+            "row_content": "<p>A standard teeth-protection night guard typically won't change your face. But a jaw alignment guard like Reviv can - by restoring dental height and repositioning the mandible, it influences facial structure over time. The key difference is design intent. (Read more - <a href=\"https://getreviv.com/blogs/content/does-a-night-guard-change-your-face-shape-the-honest-answer\" target=\"_blank\">GetrevivDoes a Night Guard Change Your Face Shape? The Honest Answer</a>﻿)</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_cHLkHm": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "10. How is R3 different from R1 and R2? Can I start with R3?",
+            "icon": "none",
+            "row_content": "<p>R1 is the entry-level option for trying the concept. R2 adds durability and is good for grinders. R3 is the most advanced, offering the best balance of comfort, airflow, and long-term results. Yes, you can start with R3 - it's our recommended starting point. ( read more - <a href=\"https://getreviv.com/pages/how-to-choose-reviv-appliances\" target=\"_blank\">GetrevivHow to Choose Reviv Appliances</a>﻿)</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_3etDht",
+        "collapsible_row_EYq3mq",
+        "collapsible_row_Qrx6w9",
+        "collapsible_row_xPWtxA",
+        "collapsible_row_JFnMmD",
+        "collapsible_row_Mpm87w",
+        "collapsible_row_3pVKbp",
+        "collapsible_row_Ybxg7C",
+        "collapsible_row_cVgTLB",
+        "collapsible_row_cHLkHm"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "<strong>FAQ</strong>",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "scheme-0b5397a7-cffb-42ac-88ef-8cf9135047b7",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": ""
+      }
+    },
+    "ba_divider_zcNUH3": {
+      "type": "ba-divider",
+      "name": "BA Divider",
+      "settings": {
+        "background_color": "#000000",
+        "full_width": true,
+        "style": "solid",
+        "thickness": 1,
+        "color": "#000000",
+        "opacity": 0,
+        "spacing_top": 40,
+        "spacing_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "main",
+    "before_after_hero",
+    "before_after_counters",
+    "before_after_proof_gallery",
+    "before_after_user_stories",
+    "before_after_how_it_works",
+    "before_after_product_recs",
+    "before_after_support",
+    "collapsible_content_nezAhy",
+    "ba_divider_zcNUH3"
+  ]
+}

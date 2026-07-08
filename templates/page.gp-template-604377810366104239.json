@@ -1,0 +1,151 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "gp_section_604377810433213103": {
+      "settings": {
+        "checksum": "b8dccae453e4ec67a6a0176467a6d1761e9d96706bf65d8c3c239cc2252d92e4_1_1_0_0__1",
+        "ggdC2vVYiv0_text": "Testimonials"
+      },
+      "type": "gp-section-604377810433213103"
+    },
+    "gp_section_604377810433278639": {
+      "settings": {
+        "checksum": "1e165cc787b7b3a85025348b93ec451f922279ca5df71a6a0f892fc9bf03cc4c_1_1_0_0__1",
+        "ggO_3djyy9r_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/85c5cb4e5e52ed076d626917eb00271e6b650e34_1.png",
+        "section_preload": "true"
+      },
+      "type": "gp-section-604377810433278639"
+    },
+    "gp_section_604377810433344175": {
+      "settings": {
+        "checksum": "39b665df97f608914b4fe879e47a41ddf98a4a911c4d60b893892037f9d74994_1_1_0_0__1",
+        "gg55SdJeB2E_label": "<p>Buy now&nbsp;</p>",
+        "gg64elpXO80_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/Screenshot_2026-03-11_005852.jpg",
+        "ggImuyO0dqW_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/Screenshot_2026-03-10_215651.jpg",
+        "ggM2dqwtX6q_text": "<p>150 USD</p>",
+        "ggPm8DmRlLR_text": "<p>100 USD</p>",
+        "gg_-P1Jk2p5_label": "<p>Compare Reviv Mouthguards</p>",
+        "ggaw_fmuSUW_label": "<p>Buy now&nbsp;</p>",
+        "gggGP4hB4GL_text": "<p>150 USD</p>",
+        "gggqREcnwWB_text": "R2 (RevivTwo)",
+        "gghYtRaYzxw_label": "<p>Buy now&nbsp;</p>",
+        "ggo-TfWihjl_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/Product_Image.png",
+        "ggt54955eGp_text": "<span style=\"font-size:27px;\">Or want help choosing which one is best for you?</span>",
+        "ggtZgZD-ZZO_text": "R3 (RevivThree) without Support",
+        "gguYEf3muOn_text": "R1 (RevivOne) without Support"
+      },
+      "type": "gp-section-604377810433344175"
+    },
+    "gp_section_604377810433540783": {
+      "settings": {
+        "checksum": "a758d0df47cfaa9b0d36f3034bfb73fb5dd334507125f424ecaa0510600a902c_1_1_0_0__1",
+        "ggDhZ4fdYtb_text": "Brain Fog → Mental Clarity",
+        "ggEw2qT0mkW_text": "Pain → Freedom",
+        "ggcsA15yP7T_text": "Aging → Youth",
+        "ggorAgLeufm_text": "Athletic Performance",
+        "ggrwWmtvQvR_text": "Neurological Shift",
+        "ggwpZC6W1Pf_text": "Sleep Issues → Deep Sleep"
+      },
+      "type": "gp-section-604377810433540783"
+    },
+    "gp_section_604377810433606319": {
+      "settings": {
+        "checksum": "20ffba6f69ec0d168a01d3a748b8c2f36d517d0878f5a766a094059b56b0564a_1_1_0_0__1",
+        "ggDjkW-_DU8_text": "See What Members of Our Community Are Experiencing: Real Results From Our Community",
+        "ggYeME-H2v-_text": "<p><span style=\"font-size:16px;\">&nbsp;&nbsp;Introducing Reviv: The device designed to bring lasting relief and peace to your nights. Discover the difference true support can make.</span></p>"
+      },
+      "type": "gp-section-604377810433606319"
+    },
+    "gp_section_604377810433671855": {
+      "settings": {
+        "checksum": "402547ea023a49d475520adceb765fa31d31e468ab50ea4f88a0cd144fc956ee_1_1_0_0__1",
+        "ggRCkKsal1c_text": "FREQUENTLY ASKED QUESTIONS"
+      },
+      "type": "gp-section-604377810433671855"
+    },
+    "gp_section_604377810433802927": {
+      "settings": {
+        "checksum": "e361ae9538e88188c7ddf5e1e9141a616545ed93cea2747b26ddaf4895ade75a_1_1_0_0__1",
+        "ggVCivblqCC_text": "Buy your \"REVIV\" now !"
+      },
+      "type": "gp-section-604377810433802927"
+    },
+    "gp_section_606959650197209860": {
+      "settings": {
+        "checksum": "6c458431854fd4228799e11720e8b88b7aa3d5814295a388fdaf24155e4d36c0_1_1_0_0__1",
+        "ggSrZ5AP9Vh_text": "You Weren't Told the Full Story About Braces. Here's Another Perspective",
+        "gglq6oGPrq9_text": "<p>Millions of people got braces to fix their smile. What they didn't know is it came at a cost —</p><p>and that cost is being paid every single day.</p>"
+      },
+      "type": "gp-section-606959650197209860"
+    },
+    "gp_section_607021007093367351": {
+      "settings": {
+        "checksum": "d3564a57f7a5192aff42c9d945ed33bef99ab362058905cbc5a6efb032fd4a17_1_1_0_0__1",
+        "ggCpMlV4Kwa_text": "There's a Way to Support Stuctural Space: Gradual Expansion Support",
+        "ggDcqEtwral_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/851930ca66ce31a899a699ab530bd93596946988.jpg",
+        "ggUWx6FTrjk_text": "<p><span style=\"font-size:15px;\">Your teeth have a natural curve called the Curve of Spee. This curve isn't random—it's engineered.</span><br><br><span style=\"font-size:15px;\">The curve reflects the health of the skull in our view. Orthodontics will often flatten this curve either intentionally or unintentionally</span><br><br><span style=\"font-size:15px;\">This isn't theoretical. We have hundreds of people in our community that did braces and got:</span></p>",
+        "ggW6c5vCIMc_text": "<p><span style=\"font-size:15px;\">Reviv doesn't straighten teeth the way braces do. It supports natural facial balance and encourages structural integrity.</span></p><p>&nbsp;</p><p><span style=\"font-size:15px;\">Reviv works on a different principle than orthodontics.</span><br><span style=\"font-size:15px;\">Rather than traditional methods, Reviv focuses on providing vertical support to your bite:</span></p>",
+        "ggX6Gl7rClt_text": "<p><span style=\"font-size:15px;\">If you got braces and then noticed:</span><br><br><span style=\"font-size:15px;\">- You felt a shift in your daily energy or mental clarity</span><br><br><span style=\"font-size:15px;\">- You noticed gradual changes in your overall well-being over the years</span><br><br><span style=\"font-size:15px;\">- You felt your facial aesthetics were changing prematurely</span><br><br><span style=\"font-size:15px;\">- Your physical drive or performance didn't feel the same</span><br><br><span style=\"font-size:15px;\">- You noticed a shift in your general mood and ease</span><br><br><span style=\"font-size:15px;\">... you weren't imagining it. There is a connection.</span><br><br><span style=\"font-size:15px;\">Most traditional approaches focus primarily on the teeth, often overlooking the broader impact on jaw positioning.</span></p><p>&nbsp;</p><p><span style=\"font-size:15px;\">But thousands of people are now connecting the dots, and the pattern is undeniable.</span></p>",
+        "ggX8JEL8fCf_text": "You Got Braces To Fix Your Teeth. But Some Treatments May Have Unintended Structural Effects. Dentist Probably Damaged Your Skull.",
+        "ggdhahSmBqf_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/bae9e017d8ce3c1a4a3dee522680c31d7b1f9464.png",
+        "ggj9eXNZ_zV_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/adb94291ef899f874f876c38f04e3f103efc0d27-Picsart-AiImageEnhancer.png",
+        "ggjVFZ-f1q2_text": "How Certain Dental Changes May Affect Structural Space Over Time: The Curve of Spee",
+        "ggor7kGraL-_text": "<p><span style=\"font-size:15px;\"><strong>Here's what happened:</strong></span><br><br><span style=\"font-size:15px;\">Your orthodontist straightened your teeth. But to do that, they had to change your bite in a way that most likely damaged your skull.&nbsp;</span><br><br><span style=\"font-size:15px;\">What you didn't know: Your skull operates like a balloon with 29 interconnected bones. When your orthodontist compressed your dental structure, they likely deflated that balloon.</span><br><br><span style=\"font-size:15px;\">And when the balloon deflates, everything inside collapses.</span><br><br><span style=\"font-size:15px;\">And that's when the real problems start</span></p>",
+        "ggqxfir1zgx_text": "You're Not Crazy. Your Health Didn't<br>Randomly Decline.",
+        "ggrwGxsfgrx_text": "<p><span style=\"font-size:15px;\">- Supports your jaw in finding its natural, optimal position.</span><br><br><span style=\"font-size:15px;\">- Encourages space and positioning that may have &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;changed over time..</span><br><br><span style=\"font-size:15px;\">- Supports more natural breathing patterns.</span><br><br><span style=\"font-size:15px;\">- Supports overall well-being and mental clarity</span><br><br><span style=\"font-size:15px;\">&nbsp;</span></p>",
+        "ggw5SyJIsl0_text": "<p><span style=\"font-size:15px;\">- Jaw tension or facial tightness</span><br><br><span style=\"font-size:15px;\">- Changes some people associate with reduced clarity</span><br><br><span style=\"font-size:15px;\">- Disrupted sleep patterns</span><br><br><span style=\"font-size:15px;\">- Shifts in posture and overall alignment</span><br><br><span style=\"font-size:15px;\">- Changes in facial aesthetics over time</span></p>"
+      },
+      "type": "gp-section-607021007093367351"
+    },
+    "gp_section_607318143517328282": {
+      "settings": {
+        "checksum": "46498ccbe83b6fd840560c203f532707912e0edb64778ddfb02bc5d1d2eef996_1_1_0_0__1",
+        "gg2imGkNRfc_text": "Now That You Have More Context. Here's One Option to Constider"
+      },
+      "type": "gp-section-607318143517328282"
+    },
+    "gp_section_610096042901242779": {
+      "settings": {
+        "checksum": "4dabd2c86e1395cf83cbbf1d17b6a5b6db5d7e85f06f662b38ab063be7aea6dc_1_1_0_0__1",
+        "gg_l4iqxlpt_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/0e1d271384a9d2db9eb135a0935d6c4f683c4014-Picsart-AiImageEnhancer.png",
+        "ggx89wnuO3M_text": "<p>You spent years thinking your declining health was random. Or genetic. Or just bad luck.</p><p><br>&nbsp;<br>Now you know the truth. Your orthodontist didn't intend to damage you. But damage happened. And you've been living with the consequences.</p><p><br>&nbsp;<br>Reviv gives you a way to undo it.</p><p><br>&nbsp;<br>Not to manage it. Not to cover it up with supplements or therapy.<br>But to actually reverse the structural collapse and rebuild your foundation</p><p><br><br>The people in our community didn't wait. They started their recovery.&nbsp;</p><p>And they're experiencing transformations they thought were</p><p>impossible.</p><p><br><br>You can too.</p>"
+      },
+      "type": "gp-section-610096042901242779"
+    },
+    "gp_section_610209691124892454": {
+      "settings": {
+        "checksum": "6d6b14c30e8b484f59d4b6287a326c4059ea0d93bcc427f9eb35f998ea6d5587_1_1_0_0__1"
+      },
+      "type": "gp-section-610209691124892454"
+    },
+    "gp_section_610213076246987558": {
+      "settings": {
+        "checksum": "fd495b47e1140dff20ce51aea479b8febc80e9c281acf68e1230ae2b97bb7e73_1_1_0_0__1"
+      },
+      "type": "gp-section-610213076246987558"
+    }
+  },
+  "order": [
+    "gp_section_604377810433278639",
+    "gp_section_606959650197209860",
+    "gp_section_607021007093367351",
+    "gp_section_604377810433606319",
+    "gp_section_604377810433540783",
+    "gp_section_604377810433671855",
+    "gp_section_604377810433802927",
+    "gp_section_604377810433344175",
+    "gp_section_607318143517328282",
+    "gp_section_610096042901242779",
+    "gp_section_604377810433213103",
+    "gp_section_610213076246987558",
+    "gp_section_610209691124892454"
+  ]
+}

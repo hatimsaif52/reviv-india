@@ -1,0 +1,891 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "product_navbar_7EB9E4": {
+      "type": "product-navbar",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "judge_me_reviews_preview_badge_EAUeai": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+            "quantity_style": "default"
+          }
+        },
+        "custom_liquid_zeyt9h": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<p style=\"font-size:14px; margin:0; padding:0; color:yellow; text-align:center;\">\n    ★★★★★ Google Reviews\n</p>"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "custom_liquid_aFheq7": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div class=\"testimonial-card\">\n      <div class=\"testimonial-header\">\n        <div class=\"profile\">\n          <img class=\"profile-image\" width=\"100\" height=\"100\" src=\"{{ 'andrew-testimonial.png' | asset_url }}\" alt=\"Andrew from SKOOL Community\">\n          <strong class=\"profile-name\">Andrew</strong>\n        </div>\n        <div class=\"brand-logo\">\n          <span class=\"logo-letter logo-s\">s</span>\n          <span class=\"logo-letter logo-k\">k</span>\n          <span class=\"logo-letter logo-o1\">o</span>\n          <span class=\"logo-letter logo-o2\">o</span>\n          <span class=\"logo-letter logo-l\">l</span>\n        </div>\n      </div>\n      <blockquote class=\"testimonial-quote\">\n        \"Structurally and neurologically I feel so much better after I started the Reviv.\"\n      </blockquote>\n    </div>\n\n{% style %}\n.testimonial-card {\n  max-width: 42rem;\n  background: rgba(239, 201, 139, 0.04);\n  border: 1px solid #ffd7ba;\n  border-radius: 32px;\n  padding: 2rem;\n  position: relative;\n}\n\n.testimonial-header {\n  display: flex;\n  align-items: flex-start;\n  justify-content: space-between;\n  margin-bottom: 2rem;\n}\n\n.profile {\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n}\n\n.profile-image {\n  width: 4rem;\n  height: 4rem;\n  border-radius: 50%;\n  object-fit: cover;\n}\n\n.profile-name {\n  color: white;\n  font-size: 1.875rem;\n  font-weight: 600;\n}\n\n.brand-logo {\n  font-size: 2.25rem;\n  font-weight: 700;\n}\n\n.logo-letter {\n  font-weight: bold;\n}\n\n.logo-s {\n  color: #1b3bdb;\n}\n\n.logo-k {\n  color: #db1b1b;\n}\n\n.logo-o1 {\n  color: #dbc31b;\n}\n\n.logo-o2 {\n  color: #1bdbdb;\n}\n\n.logo-l {\n  color: #db1b1b;\n}\n\n.testimonial-quote {\n  color: rgba(255, 255, 255, 0.8);\n  font-weight: 400;\n  font-size: 18px;\n  letter-spacing: -0.02em;\n  line-height: 1.3;\n  font-style: italic;\n  border: none;\n  padding: 0;\n  margin: 0;\n}\n\n/* Responsive styles */\n@media (max-width: 640px) {\n  .testimonial-card {\n    padding: 1.5rem;\n  }\n\n  .profile-name,\n  .testimonial-quote {\n    font-size: 1.5rem;\n  }\n\n  .brand-logo {\n    font-size: 1.875rem;\n  }\n\n  .profile-image {\n    width: 3rem;\n    height: 3rem;\n  }\n}\n{% endstyle %}"
+          }
+        },
+        "custom_liquid_4YiTcD": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<p style=\"font-size:14px; margin:0; padding:0; color:white; text-align:center;\">\n    <span style=\"height:8px; width:8px; background-color:green; border-radius:50%; display:inline-block; animation:blinking 1.5s infinite;\"></span>\n    <span style=\"color:green;\">Note:</span> Only <span style=\"font-weight:bold;\">7</span> units left in stock\n</p>\n\n<style>\n@keyframes blinking {\n    0% { opacity: 1.0; }\n    50% { opacity: 0.0; }\n    100% { opacity: 1.0; }\n}\n</style>"
+          }
+        },
+        "icon_with_text_cbe7i6": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "center_content": false,
+            "icon_1": "heart",
+            "heading_1": "<strong>Trusted by 30k+ Customers</strong>",
+            "icon_2": "lock",
+            "heading_2": "<strong>Secure Checkout</strong>",
+            "icon_3": "return",
+            "heading_3": ""
+          }
+        },
+        "collapsible_tab_zPhB4z": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "What is included in the support package?",
+            "icon": "star",
+            "content": "<ul><li>You get 1 year of access to our Skool community which has 60+ videos explaining how this process works.</li><li>On Skool you have direct access to Ken and hundreds of others that are doing the process.</li><li>Ken provides personalized support by checking your progress journal weekly.</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_bETJ9W": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "How it works?",
+            "icon": "question_mark",
+            "content": "<ul><li>Wear the mouthguard every night and as much as you can during the day (eg. 1-2 hours)</li><li>The soft tissue of the jaw and skull begin to unwind and many health issues begin to improve.</li><li>You get 1 year of access to our Skool community where you have direct access to Ken and hundreds of others that are doing the process.</li><li>Ken provides personalized support by checking your progress journal weekly.</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_MdA9x7": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Our Guarantee",
+            "icon": "heart",
+            "content": "<p>If you wear the appliance consistently and don't agree that your health issues are improving in the first 90 days we give you your money back. See terms <a href=\"/pages/our-guarantee\" title=\"Our Guarantee\">here</a></p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_pyn6z6": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Power & Plug Compatibility",
+            "icon": "lightning_bolt",
+            "content": "<p>• Voltage: 100–240V (works mostly worldwide)<br/>• Plug type: US standard plug included<br/>• If you're outside the US, a plug adapter may be required. We’ll refund up to $15 for a plug adapter, just contact support with your receipt</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_PmmWBf": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping Information",
+            "icon": "truck",
+            "content": "<ul><li>Shipping typically takes 7-10 days to most destinations including the US. More remote countries can take longer.</li><li>Orders typically ship within 48 hours and you will receive a tracking number by email as soon as it ships.</li></ul>",
+            "page": ""
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "judge_me_reviews_preview_badge_EAUeai",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "custom_liquid_zeyt9h",
+        "buy_buttons",
+        "custom_liquid_aFheq7",
+        "custom_liquid_4YiTcD",
+        "icon_with_text_cbe7i6",
+        "collapsible_tab_zPhB4z",
+        "collapsible_tab_bETJ9W",
+        "collapsible_tab_MdA9x7",
+        "collapsible_tab_pyn6z6",
+        "collapsible_tab_PmmWBf",
+        "description",
+        "share"
+      ],
+      "custom_css": [
+        ".product__title h1 {color: #e5c085;}",
+        ".icon-with-text .icon {fill: #e5c085;}",
+        ".icon-accordion {fill: #e5c085;}",
+        ".icon-caret {fill: #e5c085;}",
+        ".product__media img,.thumbnail.global-media-settings img {border-radius: 10px;}",
+        ".size-chart-container {display: none;}"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "show_sold_alert": true,
+        "color_scheme": "scheme-4",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "hover",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12,
+        "show_benefits": false
+      }
+    },
+    "apps_hwTPPH": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_itqFba": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_itqFba"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "custom_liquid_XQMfKa": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "{% assign video_url = 'https://cdn.shopify.com/videos/c/o/v/d973ca43a4de4b7dbd6d68fb2f812f19.mp4' %}\n<div class=\"video-wrapper\">\n<h2 class=\"h1 color-{{ section.settings.color_scheme }}\">HOW REVIV WORKS</h2>\n<div class=\"video-container\">\n<video controls width=\"100%\" preload=\"auto\" autoplay loop muted controls=\"false\">\n  <source src=\"{{ video_url | media }}\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</video></div></div>\n\n<style>\n.video-wrapper {\n    display: flex;\n    width: 100%;\n    flex-direction: column;\n    justify-items: center;\n    align-content: center;\n    align-items: center;\n    padding-left: 16px;\n    padding-right: 16px;\n    max-width: 600px;\n    margin: 0 auto;\n}\n\n.video-container {\n    position: relative;\n    padding-bottom: 56.25%;\n    height: 0;\n    max-width: 600px;\n    display: flex;\n    justify-content: center;\n    flex-wrap: nowrap;\n    flex-direction: column;\n    align-items: center;\n    width: 100%;\n    margin: 0 auto;\n    border-radius: 12px;\n    overflow: hidden;\n}\n\n.video-container video {\n    position: absolute;\n    inset: 0;\n    width: 100%;\n    height: 100%;\n    max-width: 1200px;\n}\n</style>",
+        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "padding_top": 40,
+        "padding_bottom": 8
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "custom_css": [
+        ".card__heading a {color: #e5c085; font-size: 18px;}",
+        "h2.related-products__heading.inline-richtext.h2 {text-align: center; color: #e5c085; font-size: 48px;}",
+        "ul.grid.product-grid.grid--4-col-desktop.grid--1-col-tablet-down {justify-content: center;}"
+      ],
+      "settings": {
+        "heading": "OTHER PRODUCTS",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-4",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "1",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_gjHUz7": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_YEXF3n": {
+          "type": "heading",
+          "settings": {
+            "heading": "HOW REPOD WORKS",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_YEXF3n"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "full_width": true,
+        "padding_top": 80,
+        "padding_bottom": 0,
+        "custom__class": ""
+      }
+    },
+    "image_with_text_kYg34E": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_dxqWez": {
+          "type": "heading",
+          "settings": {
+            "heading": "Step 1: Fill & Load",
+            "heading_size": "h2"
+          }
+        },
+        "text_JkiMGt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Open the Repod’s lid, pour in clean water up to the MAX line, and place your mouthguard inside. Optionally, add a cleaning tablet for extra freshness.</p>",
+            "text_style": "body",
+            "text_size": "medium",
+            "show_below_image": false
+          }
+        },
+        "button_ghDBKP": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_style_purchase": false,
+            "full_width_button": false,
+            "custom_buy_btns": false,
+            "purchase_btn_text": "",
+            "button_1_text": "",
+            "button_1_url": "",
+            "button_2_text": "",
+            "button_2_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_dxqWez",
+        "text_JkiMGt",
+        "button_ghDBKP"
+      ],
+      "custom_css": [
+        "h2 {color: #e5c085;}",
+        ".image-with-text__media {border-radius: 10px;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Opened_R2_Square.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "color_scheme": "scheme-4",
+        "wrap_image_to_container": false,
+        "image_behavior": "none",
+        "mobile_content_order": "column",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom__class": ""
+      }
+    },
+    "image_with_text_pGfhNe": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_FWpyzJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Step 2: Start Cleaning",
+            "heading_size": "h2"
+          }
+        },
+        "text_EVN6TJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Close the lid and plug in the device.</p><ol><li>Tap once for a 3-minute quick clean</li><li>Tap twice for a 6-minute deep clean</li></ol>",
+            "text_style": "body",
+            "text_size": "medium",
+            "show_below_image": false
+          }
+        },
+        "button_VgKbMU": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_style_purchase": false,
+            "full_width_button": false,
+            "custom_buy_btns": false,
+            "purchase_btn_text": "",
+            "button_1_text": "",
+            "button_1_url": "",
+            "button_2_text": "",
+            "button_2_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_FWpyzJ",
+        "text_EVN6TJ",
+        "button_VgKbMU"
+      ],
+      "custom_css": [
+        "h2 {color: #e5c085;}",
+        ".image-with-text__media {border-radius: 10px;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Bathroom_Landscape.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "color_scheme": "scheme-4",
+        "wrap_image_to_container": false,
+        "image_behavior": "none",
+        "mobile_content_order": "column",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom__class": ""
+      }
+    },
+    "image_with_text_gCFxVz": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_xgxWHn": {
+          "type": "heading",
+          "settings": {
+            "heading": "Step 3: Rinse & Dry",
+            "heading_size": "h2"
+          }
+        },
+        "text_8rcNKb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>When the cycle finishes, unplug the Repod, remove your clean mouthguard, pour out the water, and wipe the tank dry.</p>",
+            "text_style": "body",
+            "text_size": "medium",
+            "show_below_image": false
+          }
+        },
+        "button_4TWaU7": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_style_purchase": false,
+            "full_width_button": false,
+            "custom_buy_btns": false,
+            "purchase_btn_text": "",
+            "button_1_text": "",
+            "button_1_url": "",
+            "button_2_text": "",
+            "button_2_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_xgxWHn",
+        "text_8rcNKb",
+        "button_4TWaU7"
+      ],
+      "custom_css": [
+        "h2 {color: #e5c085;}",
+        ".image-with-text__media {border-radius: 10px;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/image_2_aaf68375-b005-49ae-8a83-6d65c60a8b8d.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "color_scheme": "scheme-4",
+        "wrap_image_to_container": false,
+        "image_behavior": "none",
+        "mobile_content_order": "column",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 48,
+        "custom__class": ""
+      }
+    },
+    "rich_text_NR6Kdk": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_TQbU6D": {
+          "type": "heading",
+          "settings": {
+            "heading": "GENTLE ON REVIV APPLIANCES. TOUGH ON BACTERIA.",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_TQbU6D"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 500px) {h2 {font-size: 26px; }}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "full_width": true,
+        "padding_top": 48,
+        "padding_bottom": 44,
+        "custom__class": "repod-banner-bottom-text"
+      }
+    },
+    "image_banner_8HjkMa": {
+      "type": "image-banner",
+      "custom_css": [
+        "{background: #232021;}",
+        "* {max-width: 1200px; margin: 0 auto;}",
+        "img {object-fit: contain;}"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Web_-_Product_Page_RePod.png",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false,
+        "custom_classes": ""
+      }
+    },
+    "rich_text_9kr93T": {
+      "type": "rich-text",
+      "blocks": {
+        "button_XwRPTf": {
+          "type": "button",
+          "settings": {
+            "button_label": "BUY IT NOW",
+            "button_link": "#",
+            "button_id": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_XwRPTf"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "full_width": true,
+        "padding_top": 32,
+        "padding_bottom": 48,
+        "custom__class": "repod-banner-bottom-btn"
+      }
+    },
+    "image_with_text_4ePHPd": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_JNm3Qt": {
+          "type": "heading",
+          "settings": {
+            "heading": "Powerful, Dentist-Level Cleaning — In Just 3 Minutes",
+            "heading_size": "h2"
+          }
+        },
+        "text_XthkCQ": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Brushing can’t reach every crevice of your mouthguard. That’s where Repod steps in—with over 42,000 ultrasonic vibrations per second, it removes hidden dirt and bacteria from every curve and corner.</li><li>No harsh scrubbing. No damage. Just deep, effortless cleaning.</li><li>A cleaner, safer, and smarter way to maintain your Revi appliance in minutes.</li></ul>",
+            "text_style": "body",
+            "text_size": "medium",
+            "show_below_image": false
+          }
+        },
+        "button_AqiKa6": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP NOW",
+            "button_link": "#",
+            "button_style_secondary": false,
+            "button_style_purchase": false,
+            "full_width_button": true,
+            "custom_buy_btns": false,
+            "purchase_btn_text": "",
+            "button_1_text": "",
+            "button_1_url": "",
+            "button_2_text": "",
+            "button_2_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_JNm3Qt",
+        "text_XthkCQ",
+        "button_AqiKa6"
+      ],
+      "custom_css": [
+        ".image-with-text__media {border-radius: 10px;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Top_View_Square.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "color_scheme": "scheme-4",
+        "wrap_image_to_container": false,
+        "image_behavior": "none",
+        "mobile_content_order": "column",
+        "mobile_content_alignment": "left",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "custom__class": "repod-banner-bottom-btn"
+      }
+    },
+    "collapsible_content_wfc3CF": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_RCbmXQ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Who is Repod for?",
+            "icon": "lightning_bolt",
+            "row_content": "<p>Repod is made for anyone who uses a Reviv mouthguard, or any night guard and wants a fast, effective, and hands-free way to keep it clean and bacteria-free without harsh scrubbing.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_4yBbK4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What are the cleaning modes?",
+            "icon": "lightning_bolt",
+            "row_content": "<p>Repod offers two modes:<br/>- Tap once for a 3-minute quick clean<br/>- Tap twice for a 6-minute deep clean</p><p>Please note that RePod automatically shuts off after each cycle.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_GRLFkq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Will Repod damage my appliance?",
+            "icon": "lightning_bolt",
+            "row_content": "<p>No. Repod uses gentle ultrasonic technology: no heat, no friction which makes it safe for dental appliances of all types.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_4D3KW7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I use any cleaning solution?",
+            "icon": "lightning_bolt",
+            "row_content": "<p>Daily cleaning requires only water. Avoid any harsh or abrasive cleaners.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_PbTwYc": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I clean the Repod after use?",
+            "icon": "lightning_bolt",
+            "row_content": "<p>After each use, unplug the unit, pour out the water, and wipe the tank dry with a soft cloth. Never submerge the entire device in water.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_qELnMc": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Will this work in my country?",
+            "icon": "check_mark",
+            "row_content": "<p>Yes. Repod supports 100–240V, so it works worldwide. The device ships with a US plug. If you're outside the US, you may need a simple plug adapter.<br/>To make it easy, we’ll refund up to $15 for the adapter, just send us the receipt.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_RCbmXQ",
+        "collapsible_row_4yBbK4",
+        "collapsible_row_GRLFkq",
+        "collapsible_row_4D3KW7",
+        "collapsible_row_PbTwYc",
+        "collapsible_row_qELnMc"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h0",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "scheme-4",
+        "container_color_scheme": "scheme-4",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "custom_class": "repod-faq-section"
+      }
+    },
+    "substack_blog_ehmiBw": {
+      "type": "substack-blog",
+      "blocks": {
+        "column_gHcCX8": {
+          "type": "column",
+          "settings": {
+            "category": "",
+            "article_type": "",
+            "date": "",
+            "image": "shopify://shop_images/article-1.png",
+            "title": "I Am Going to Challenge What You Believe About Health",
+            "text": "<p>Challenges traditional health views, introduces the balloon theory, and explores how dental health affects overall well-being.</p>",
+            "link_label": "Read post",
+            "link": "https://reviv.substack.com/p/i-am-going-to-challenge-what-you",
+            "youtube_video_url": ""
+          }
+        },
+        "column_HHxCrw": {
+          "type": "column",
+          "settings": {
+            "category": "",
+            "article_type": "",
+            "date": "",
+            "image": "shopify://shop_images/article-2.png",
+            "title": "The Balloon Theory",
+            "text": "<p>Explains how dental health impacts overall well-being by linking teeth to various health issues and introduces methods for addressing these connections.</p>",
+            "link_label": "Read post",
+            "link": "https://reviv.substack.com/p/so-why-do-the-teeth-relate-to-your",
+            "youtube_video_url": ""
+          }
+        },
+        "column_TAykPV": {
+          "type": "column",
+          "settings": {
+            "category": "",
+            "article_type": "",
+            "date": "",
+            "image": "shopify://shop_images/article-3.png",
+            "title": "How to Correct the Problem",
+            "text": "<p>Provides strategies for addressing dental health issues and correcting related problems for improved overall well-being.</p>",
+            "link_label": "Read post",
+            "link": "https://reviv.substack.com/p/how-to-solve-the-problem",
+            "youtube_video_url": ""
+          }
+        },
+        "column_RzUiKN": {
+          "type": "column",
+          "settings": {
+            "category": "",
+            "article_type": "",
+            "date": "",
+            "image": "shopify://shop_images/article-4.png",
+            "title": "What Is Impacted by These Biomechanics?",
+            "text": "<p>Explores how dental biomechanics affect various aspects of health and well-being.</p>",
+            "link_label": "Read post",
+            "link": "https://reviv.substack.com/p/what-is-impacted-by-these-biomechanics",
+            "youtube_video_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_gHcCX8",
+        "column_HHxCrw",
+        "column_TAykPV",
+        "column_RzUiKN"
+      ],
+      "custom_css": [
+        "h2 {text-align: center;}",
+        ".rte {color: #fff;}",
+        ".substack-blog.multicolumn.background-primary .multicolumn-card {background: #232021;}"
+      ],
+      "settings": {
+        "title": "LEARN MORE ABOUT HOW THIS PRODUCT WORKS",
+        "heading_size": "h0",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-2ab1995e-c67e-4402-af73-6a85779ae883",
+        "section_color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "custom_class": "blog-cards-style",
+        "custom__class2": "repod-blog-section"
+      }
+    },
+    "rich_text_K8WtGB": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_HHXWND": {
+          "type": "heading",
+          "settings": {
+            "heading": "OTHER PRODUCTS",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_HHXWND"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "full_width": true,
+        "padding_top": 48,
+        "padding_bottom": 44,
+        "custom__class": "repod-banner-bottom-text"
+      }
+    },
+    "product_cards_fifhGD": {
+      "type": "product-cards",
+      "blocks": {
+        "product_card_QEpKQ6": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-two",
+            "is_new": true
+          }
+        },
+        "product_card_GJAHWU": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-two-without-support",
+            "is_new": true
+          }
+        },
+        "product_card_XYJqzP": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-one",
+            "is_new": false
+          }
+        },
+        "product_card_C6aPfa": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-one-without-support",
+            "is_new": false
+          }
+        },
+        "product_card_NhKpFr": {
+          "type": "product_card",
+          "settings": {
+            "product": "1-year-subscription-only",
+            "is_new": false
+          }
+        }
+      },
+      "block_order": [
+        "product_card_QEpKQ6",
+        "product_card_GJAHWU",
+        "product_card_XYJqzP",
+        "product_card_C6aPfa",
+        "product_card_NhKpFr"
+      ],
+      "settings": {
+        "section_color_scheme": "scheme-4",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_classes": ""
+      }
+    }
+  },
+  "order": [
+    "product_navbar_7EB9E4",
+    "main",
+    "apps_hwTPPH",
+    "custom_liquid_XQMfKa",
+    "related-products",
+    "rich_text_gjHUz7",
+    "image_with_text_kYg34E",
+    "image_with_text_pGfhNe",
+    "image_with_text_gCFxVz",
+    "rich_text_NR6Kdk",
+    "image_banner_8HjkMa",
+    "rich_text_9kr93T",
+    "image_with_text_4ePHPd",
+    "collapsible_content_wfc3CF",
+    "substack_blog_ehmiBw",
+    "rich_text_K8WtGB",
+    "product_cards_fifhGD"
+  ]
+}

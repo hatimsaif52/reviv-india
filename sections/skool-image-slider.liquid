@@ -1,0 +1,171 @@
+<style>
+.sk-imge-slider {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.sk-imge-slider .slider-title h2{
+text-align:center;
+font-size:72px;
+    text-transform: uppercase;
+    font-family: Font-1737687022306;
+line-height:75px;
+}
+.swiper {
+    width: 80%;
+    overflow: visible;
+    padding: 0 50px;
+}
+
+ .swiper-slide {
+  position: relative;
+  transform: scale(0.9);
+  transition: transform 0.4s ease-in-out;
+}
+.sk-imge-slide .swiper-slide-active {
+  transform: scale(1);
+}
+ .swiper-button-next:after, .swiper-button-prev:after{
+font-size:28px !important;
+}
+.sk-imge-slider .swiper-slide img{
+width:100% !Important;
+height:auto;
+}
+.sk-imge-slider .swiper-button-prev, .sk-imge-slider .swiper-button-next {
+    background: #E5C085;
+    width: 60px;
+color:#000;
+border-radius:50px;
+    height: 60px;
+}
+.sk-imge-slider .swiper-button-prev {
+    left: -60px;
+}
+.sk-imge-slider .swiper-button-next {
+    right: -60px;
+}
+@media only screen and (max-width: 1240px) {
+.sk-imge-slider {
+    margin: 0 40px;
+}
+}
+  @media only screen and (max-width: 1340px) {
+.sk-imge-slider .slider-title h2{
+text-align:center;
+font-size:62px;
+}
+}
+  @media only screen and (max-width: 767px) {
+.sk-imge-slider .slider-title h2{
+text-align:center;
+font-size:40px;
+line-height:45px;
+}
+    .sk-imge-slider {
+        margin: 0 20px;
+    }
+.swiper {
+    padding: 0 0px;
+}
+.sk-imge-slider .swiper-button-next {
+    right: -40px;
+}
+.sk-imge-slider .swiper-button-prev {
+    left: -40px;
+}
+.sk-imge-slider .swiper-button-prev, .sk-imge-slider .swiper-button-next {
+    width: 40px;
+    height: 40px;
+}
+ .swiper-button-next:after, .swiper-button-prev:after{
+font-size:21px !important;
+}
+}
+</style>
+
+<div class="sk-imge-slider"  style=" padding-top:{{ section.settings.padding_top }}px; padding-bottom:{{ section.settings.padding_bottom }}px;">
+<div class="slider-title">
+{% if section.settings.section_head != blank %}
+<h2>{{ section.settings.section_head }}</h2>
+{% endif %}
+</div>
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+ {% for block in section.blocks %}
+    <div class="swiper-slide">
+<img 
+  src="{{ block.settings.image | image_url: width: 800 }}" 
+  alt="{{ block.settings.image.image_alt_1 | default: 'Default Alt Text' }}" 
+  style="width: 100%; height: auto;">
+</div>
+{% endfor %}
+  </div>
+  <div class="swiper-button-next"><span></span> </div>
+  <div class="swiper-button-prev"> <span></span> </div>
+</div>
+</div>
+
+{% schema %}
+  {
+    "name": "Image Slider",
+    "settings": [
+      {
+        "type": "text",
+        "id": "section_head",
+        "default": "#000",
+        "label": "Section Title"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 36
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+      }
+    ],
+    "blocks": [
+      {
+        "type": "Image",
+        "name": "Image",
+        "limit": 9,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Select Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image Slider",
+        "category": "Custom Sections",
+        "settings": {
+          "section_head": "Start Your Free Trial Today",
+          "padding_top": 36,
+          "padding_bottom": 36
+        },
+        "blocks": [
+          {
+            "type": "Image"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

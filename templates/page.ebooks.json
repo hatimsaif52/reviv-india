@@ -1,0 +1,84 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_with_text_slider_bhFYpe": {
+      "type": "image-with-text-slider",
+      "blocks": {
+        "slide_YFfgE9": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/eBooks-2.png",
+            "heading": "I solved my TMJ and I think I can solve yours too",
+            "author": "Ken Leaver",
+            "description": "<p>Up until my TMJ nightmare began, I was just a normal guy who believed in exercise and a healthy diet. But then a TMJ dentist threw me a curveball—telling me he needed to \"correct\" my dental contacts. He flattened some of my back teeth, and from that moment, everything changed...</p>",
+            "button_label": "Buy it on Amazon",
+            "button_link": "https://www.amazon.com/dp/B0F3P4P2HT"
+          }
+        },
+        "slide_e9PHRc": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/eBooks-1.png",
+            "heading": "I think Everyone can be a model",
+            "author": "Ken Leaver",
+            "description": "<p>What if we could all be model-level beautiful?  Meaning perfect symmetry of the face and body at any age and regardless of genetics?</p><p>Sounds crazy right?</p><p>But Ken believes it is not only possible... he wants to prove it on himself. While doing no exercise and eating whatever he wants the whole time at age 47...</p>",
+            "button_label": "Buy it on Amazon",
+            "button_link": "https://www.amazon.com/dp/B0F3VQRT8Z"
+          }
+        },
+        "slide_nMtntV": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_Apr_22_2026_05_00_03_PM.png",
+            "heading": "Simple Practices for Lifelong Strength",
+            "author": "George Hults",
+            "description": "<p>Strong to 100 is a practical approach to building strength, improving posture, and increasing energy through simple daily habits.<br/><br/>The book focuses on reducing hidden tension and improving how the body functions throughout the day, rather than relying on traditional workouts. The Reviv mouthguard is included as one tool to support relaxed breathing and better coordination by interrupting jaw and neck tension.<br/><br/>A simple, sustainable system for long-term strength.</p>",
+            "button_label": "Buy it on Gumroad",
+            "button_link": "https://geohult.gumroad.com/l/pdziqy"
+          }
+        },
+        "slide_WBhJaP": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Frame_14434_1_ec35e352-ed47-4396-a0d3-4020556ec3ac.png",
+            "heading": "The Second Tooth Fairy",
+            "author": "DJ King",
+            "description": "<p>There's always been two Tooth Fairies.</p><p>The younger sister collects baby teeth.</p><p>The older sister builds adult teeth.</p><p>Obviously.</p>",
+            "button_label": "Buy it on Gumroad",
+            "button_link": "https://djkingwrites.gumroad.com/l/ezdidr?layout=profile"
+          }
+        }
+      },
+      "block_order": [
+        "slide_YFfgE9",
+        "slide_e9PHRc",
+        "slide_nMtntV",
+        "slide_WBhJaP"
+      ],
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_slider_bhFYpe"
+  ]
+}

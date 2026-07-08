@@ -1,0 +1,87 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "gp_section_609720388670391214": {
+      "settings": {
+        "checksum": "3cd0110452ae50a52435d79568ad2816fd0115dd21554cde99a3c7f5e016f4cb_1_1_0_0__1",
+        "ggdC2vVYiv0_text": "Testimonials"
+      },
+      "type": "gp-section-609720388670391214"
+    },
+    "gp_section_609720388670456750": {
+      "settings": {
+        "checksum": "a41a98aef105627ddef4ed9882791da7f8431130e369660bb29566dcfbf50bce_1_1_0_0__1",
+        "gg2N6Sziny1_text": "<p>Many people living with jaw tension feel unheard after trying standard approaches. <i>You are not alone</i> in that experience.</p>",
+        "ggFMOxJzq58_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/b6ab451337ace488bf7132cc8e825fcc21072e0e.png",
+        "ggGuphxayyv_label": "<p>Explore A Different Approach →</p>",
+        "ggfbnH2IGJz_text": "<p>There may be another way to think about night time jaw support.</p>",
+        "ggqCuc90_Rl_text": "If You Have Tried<br><span style=\"color:#904F06;\">Everything</span>, Read This"
+      },
+      "type": "gp-section-609720388670456750"
+    },
+    "gp_section_609720388670522286": {
+      "settings": {
+        "checksum": "0f5a6142bf55fd286c191facf9a6a877d25eefc8d49366ddf7768a4dfc09d39c_1_1_0_0__1"
+      },
+      "type": "gp-section-609720388670522286"
+    },
+    "gp_section_609720699333902921": {
+      "settings": {
+        "checksum": "fab166631408dfbbf889272c2fc769099c7a0ede5b900c099e5469cb4bf06690_1_1_0_0__1",
+        "ggP2QLTbzFk_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/hf_20260204_081858_af32c920-bdff-4e00-a16c-759bcf6ba642.png",
+        "ggP2QLTbzFk_background_desktop_video": "https://cdn.shopify.com/videos/c/o/v/f4db20df1068469a872644a4e0c19054.mp4",
+        "section_preload": "true"
+      },
+      "type": "gp-section-609720699333902921"
+    },
+    "gp_section_609744904645509705": {
+      "settings": {
+        "checksum": "d27093a3bf4862c91b559d8c0483c2979337f60740f969b403f123dd2c8fd8f7_1_1_0_0__1",
+        "gg-pKWN_ipd_label": "<p>Reviv is built around that perspective.</p>",
+        "ggFLqXLTTk5_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/Screenshot_2026-03-08_161624.jpg",
+        "ggLECSmNrOl_text": "<p>Instead of focusing only on protection, some people are exploring how structured jaw support during sleep may contribute to improved balance and comfort over time.</p>",
+        "ggTpm_BJQHN_text": "<p>Designed to support jaw mechanics overnight.</p>",
+        "ggVkEpmzdGt_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/Screenshot_2026-03-08_161602.jpg",
+        "ggczwtPK341_text": "A Different Way To Think About<br><span style=\"color:#904F06;\">Night time Support</span>",
+        "ggdpTmjPfq0_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/eac107f8e67b8ece868066b33794dab7fd9f0671.png",
+        "ggh5JumheD9_text": "<p>Built for people looking beyond basic protection.</p>",
+        "ggrzrZ1uMrt_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/1db8d93b2beab093f58e154bf52ec668391f1fac.png",
+        "ggsfFOSOI-d_text": "<p>Designed to help &nbsp;reduce involuntary clenching pressure.</p>",
+        "ggwUEqld8_Z_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/Screenshot_2026-03-08_161539.jpg"
+      },
+      "type": "gp-section-609744904645509705"
+    },
+    "gp_section_609760417379517358": {
+      "settings": {
+        "checksum": "6eecadf203732451aee9bc647dd00c13dc4b40113729258f170b3f8acc8f1e86_1_1_0_0__1",
+        "ggkMyArPCyI_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/Mask_grou-2.png",
+        "ggmeaaj_bVb_text": "What People In <span style=\"color:#904F06;\">Our Community</span> Share",
+        "ggoJxTS1fwQ_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/Mask_group.png"
+      },
+      "type": "gp-section-609760417379517358"
+    },
+    "gp_section_610330247836992411": {
+      "settings": {
+        "checksum": "a1dbadf2d8fe835b6a31b567e8c0414a7b31b1b258b7278b1b90caad2af364d2_1_1_0_0__1"
+      },
+      "type": "gp-section-610330247836992411"
+    }
+  },
+  "order": [
+    "gp_section_609720699333902921",
+    "gp_section_609720388670456750",
+    "gp_section_609744904645509705",
+    "gp_section_609760417379517358",
+    "gp_section_610330247836992411",
+    "gp_section_609720388670391214",
+    "gp_section_609720388670522286"
+  ]
+}

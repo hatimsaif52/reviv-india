@@ -1,0 +1,200 @@
+{%- style -%}
+  .before-after-counters {
+    padding: 44px 0 56px;
+    background: {{ section.settings.background_color }};
+  }
+
+  .before-after-counters__inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .before-after-counters__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .before-after-counters__card {
+    background: {{ section.settings.card_bg }};
+    border-radius: 16px;
+    padding: 22px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .before-after-counters__icon {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .before-after-counters__icon img,
+  .before-after-counters__icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+  }
+
+  .before-after-counters__value {
+    margin: 0;
+    font-size: 32px;
+    line-height: 1;
+    font-weight: 800;
+    color: {{ section.settings.text_color }};
+  }
+
+  .before-after-counters__label {
+    margin: 8px 0 0;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: {{ section.settings.text_color }};
+    opacity: 0.9;
+  }
+
+  @media (max-width: 989px) {
+    .before-after-counters__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 600px) {
+    .before-after-counters {
+      padding: 36px 0 44px;
+    }
+
+    .before-after-counters__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .before-after-counters__value {
+      font-size: 30px;
+    }
+  }
+{%- endstyle -%}
+
+<section class="before-after-counters" role="region" aria-label="Counters">
+  <div class="before-after-counters__inner">
+    <div class="before-after-counters__grid">
+      {%- for block in section.blocks -%}
+        <div class="before-after-counters__card" {{ block.shopify_attributes }}>
+          {%- if block.settings.icon != blank -%}
+            <div class="before-after-counters__icon">
+              {{
+                block.settings.icon
+                | image_url: width: 120
+                | image_tag: loading: 'lazy'
+              }}
+            </div>
+          {%- endif -%}
+
+          {%- if block.settings.value != blank -%}
+            <p class="before-after-counters__value">{{ block.settings.value }}</p>
+          {%- endif -%}
+
+          {%- if block.settings.label != blank -%}
+            <p class="before-after-counters__label">{{ block.settings.label }}</p>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Before / After - Counters",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "card_bg",
+      "label": "Card background",
+      "default": "#E5C085"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#000000"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "counter",
+      "name": "Counter",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "value",
+          "label": "Value",
+          "default": "50,000+"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Customers Worldwide"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 4,
+  "presets": [
+    {
+      "name": "Before / After - Counters",
+      "blocks": [
+        {
+          "type": "counter",
+          "settings": {
+            "value": "50,000+",
+            "label": "Customers Worldwide"
+          }
+        },
+        {
+          "type": "counter",
+          "settings": {
+            "value": "4.8",
+            "label": "Average Ratings"
+          }
+        },
+        {
+          "type": "counter",
+          "settings": {
+            "value": "130+",
+            "label": "Countries"
+          }
+        },
+        {
+          "type": "counter",
+          "settings": {
+            "value": "94%",
+            "label": "See results in 60 days"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,1059 @@
+{% liquid
+  assign section_id = 'rd1-middle-sections-' | append: section.id
+%}
+
+{% if section.settings.load_google_fonts %}
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+{% endif %}
+
+<style>
+  .{{ section_id }} {
+    --rd1-bg:        {{ section.settings.bg_color }};
+    --rd1-bg-card:   {{ section.settings.card_bg_color }};
+    --rd1-gold-btn:  {{ section.settings.accent_color }};
+    --rd1-text:      {{ section.settings.text_color }};
+    --rd1-text-2:    {{ section.settings.text_color_2 }};
+    --rd1-text-3:    {{ section.settings.text_color_3 }};
+    --rd1-border:    {{ section.settings.border_color }};
+
+    background: var(--rd1-bg);
+    color: var(--rd1-text);
+    font-family: {{ section.settings.font_sans }};
+    font-size: 14px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  .{{ section_id }} *,
+  .{{ section_id }} *::before,
+  .{{ section_id }} *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .{{ section_id }} .rd1-container {
+    max-width: {{ section.settings.max_width }}px;
+    margin: 0 auto;
+    padding-left: {{ section.settings.side_padding }}px;
+    padding-right: {{ section.settings.side_padding }}px;
+  }
+
+  .{{ section_id }} .rd1-eyebrow {
+    text-align: center;
+    font-family: {{ section.settings.font_serif }};
+    font-style: italic;
+    font-size: 14px;
+    color: var(--rd1-gold-btn);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    font-weight: 500;
+  }
+
+  .{{ section_id }} .rd1-title {
+    font-family: {{ section.settings.font_serif }};
+    font-size: 56px;
+    font-weight: 500;
+    line-height: 1.05;
+    text-align: center;
+    color: var(--rd1-text);
+    max-width: 920px;
+    margin: 0 auto 22px;
+    letter-spacing: -0.012em;
+  }
+
+  .{{ section_id }} .rd1-title em {
+    font-style: italic;
+    color: var(--rd1-gold-btn);
+  }
+
+  .{{ section_id }} .rd1-sub {
+    text-align: center;
+    color: var(--rd1-text-2);
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 680px;
+    margin: 0 auto 60px;
+  }
+
+  .{{ section_id }} .rd1-idea {
+    padding-top: 110px;
+    padding-bottom: 60px;
+  }
+
+  .{{ section_id }} .rd1-idea-list {
+    list-style: none;
+    max-width: 580px;
+    margin: 0 auto 50px;
+  }
+
+  .{{ section_id }} .rd1-idea-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 13px 0;
+    font-size: 16px;
+    color: var(--rd1-text);
+    border-bottom: 1px solid var(--rd1-border);
+    line-height: 1.5;
+  }
+
+  .{{ section_id }} .rd1-idea-list li:last-child {
+    border-bottom: 0;
+  }
+
+  .{{ section_id }} .rd1-idea-list li::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='11.4' fill='%23dfb88a'/%3E%3Cpath d='M7 12.5l3.5 3.5 6.5-7' stroke='%231a1a1a' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+
+  .{{ section_id }} .rd1-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .{{ section_id }} .rd1-tag {
+    background: var(--rd1-bg-card);
+    color: var(--rd1-text);
+    padding: 9px 18px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid var(--rd1-border);
+    transition: all 0.2s;
+  }
+
+  .{{ section_id }} .rd1-tag:hover {
+    border-color: var(--rd1-gold-btn);
+    color: var(--rd1-gold-btn);
+  }
+
+  .{{ section_id }} .rd1-day {
+    padding-top: 60px;
+    padding-bottom: 110px;
+  }
+
+  .{{ section_id }} .rd1-day-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+
+  .{{ section_id }} .rd1-day-card {
+    aspect-ratio: 0.72 / 1;
+    overflow: hidden;
+    position: relative;
+    background: var(--rd1-bg-card);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: transform 0.4s ease;
+  }
+
+  .{{ section_id }} .rd1-day-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .{{ section_id }} .rd1-day-card .rd1-scene {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .{{ section_id }} .rd1-day-card .rd1-scene-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  .{{ section_id }} .rd1-day-card .rd1-scene::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,0) 45%,
+      rgba(0,0,0,0.78) 100%
+    );
+    z-index: 1;
+  }
+
+  .{{ section_id }} .rd1-day-card .rd1-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 24px 22px;
+    color: white;
+    z-index: 2;
+  }
+
+  .{{ section_id }} .rd1-day-card .rd1-label h3 {
+    font-family: {{ section.settings.font_serif }};
+    font-size: 24px;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 4px;
+    color: #fff;
+  }
+
+  .{{ section_id }} .rd1-day-card .rd1-label p {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.45;
+  }
+
+
+  .{{ section_id }} .rd1-day-card {
+    background: var(--rd1-bg-card);
+  }
+
+  .{{ section_id }} .rd1-mold {
+    padding-top: 30px;
+    padding-bottom: 60px;
+    text-align: center;
+  }
+
+  .{{ section_id }} .rd1-mold-inner {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .{{ section_id }} .rd1-mold h2 {
+    font-family: {{ section.settings.font_serif }};
+    font-size: 50px;
+    line-height: 1.08;
+    margin-bottom: 32px;
+    font-weight: 500;
+    letter-spacing: -0.012em;
+    color: var(--rd1-text);
+  }
+
+  .{{ section_id }} .rd1-mold h2 em {
+    font-style: italic;
+    color: var(--rd1-gold-btn);
+  }
+
+  .{{ section_id }} .rd1-mold p {
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--rd1-text-2);
+    margin-bottom: 18px;
+  }
+
+  .{{ section_id }} .rd1-video-wrap {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .{{ section_id }} .rd1-video-wrap--steps {
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  .{{ section_id }} .rd1-video {
+    max-width: 880px;
+    margin: 0 auto;
+    aspect-ratio: 16/9;
+    background: var(--rd1-bg-card);
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+
+  .{{ section_id }} .rd1-video::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 50%, rgba(223,184,138,0.18), transparent 55%),
+      linear-gradient(135deg, #2a221a 0%, #050403 100%);
+  }
+
+  .{{ section_id }} .rd1-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: var(--rd1-gold-btn);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+  }
+
+  .{{ section_id }} .rd1-video:hover .rd1-play {
+    transform: translate(-50%, -50%) scale(1.06);
+  }
+
+  .{{ section_id }} .rd1-play::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 22px solid #1a1a1a;
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+    margin-left: 6px;
+  }
+
+  .{{ section_id }} .rd1-video-embed {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .{{ section_id }} .rd1-video-embed iframe,
+  .{{ section_id }} .rd1-video-embed video {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .{{ section_id }} .rd1-steps {
+    padding-top: 110px;
+    padding-bottom: 40px;
+  }
+
+  .{{ section_id }} .rd1-steps-sub {
+    text-align: center;
+    color: var(--rd1-text-2);
+    font-size: 15px;
+    margin-bottom: 60px;
+    line-height: 1.6;
+  }
+
+  .{{ section_id }} .rd1-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--rd1-border);
+    border-left: 1px solid var(--rd1-border);
+  }
+
+  .{{ section_id }} .rd1-step {
+    padding: 44px 32px;
+    border-right: 1px solid var(--rd1-border);
+    border-bottom: 1px solid var(--rd1-border);
+  }
+
+  .{{ section_id }} .rd1-step-num {
+    font-family: {{ section.settings.font_serif }};
+    font-style: italic;
+    font-size: 64px;
+    font-weight: 500;
+    color: var(--rd1-gold-btn);
+    line-height: 0.85;
+    margin-bottom: 22px;
+  }
+
+  .{{ section_id }} .rd1-step h4 {
+    font-family: {{ section.settings.font_serif }};
+    font-style: italic;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    line-height: 1.2;
+    color: var(--rd1-text);
+  }
+
+  .{{ section_id }} .rd1-step p {
+    font-size: 14px;
+    color: var(--rd1-text-2);
+    line-height: 1.65;
+  }
+
+  .{{ section_id }} .rd1-remold-wrap {
+    padding-top: 0;
+    padding-bottom: 90px;
+  }
+
+  .{{ section_id }} .rd1-remold {
+    background:
+      radial-gradient(ellipse at 20% 30%, rgba(223,184,138,0.06), transparent 50%),
+      var(--rd1-bg-card);
+    border: 1px solid rgba(223,184,138,0.18);
+    padding: 80px 50px;
+    margin: 0 auto;
+    max-width: 1280px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+
+  .{{ section_id }} .rd1-remold::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 1px;
+    background: var(--rd1-gold-btn);
+  }
+
+  .{{ section_id }} .rd1-remold h2 {
+    font-family: {{ section.settings.font_serif }};
+    font-size: 64px;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 28px;
+    line-height: 1;
+    letter-spacing: -0.012em;
+    color: var(--rd1-gold-btn);
+  }
+
+  .{{ section_id }} .rd1-remold p {
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 640px;
+    margin: 0 auto 16px;
+    color: var(--rd1-text-2);
+  }
+
+  .{{ section_id }} .rd1-remold p strong {
+    color: var(--rd1-text);
+    font-weight: 600;
+  }
+
+  .{{ section_id }} .rd1-footnote {
+    margin-top: 32px;
+    font-size: 13px;
+    color: var(--rd1-text-3);
+    font-style: italic;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 1024px) {
+    .{{ section_id }} .rd1-day-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .{{ section_id }} .rd1-steps-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .{{ section_id }} .rd1-title,
+    .{{ section_id }} .rd1-mold h2 {
+      font-size: 36px;
+    }
+
+    .{{ section_id }} .rd1-remold h2 {
+      font-size: 42px;
+    }
+
+    .{{ section_id }} .rd1-step-num {
+      font-size: 50px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .{{ section_id }} .rd1-day-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .{{ section_id }} .rd1-steps-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .{{ section_id }} {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .{{ section_id }} .rd1-container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .{{ section_id }} .rd1-remold {
+      padding: 50px 24px;
+    }
+  }
+</style>
+
+<div class="{{ section_id }}" data-section-type="rd1-middle-sections">
+  <div class="rd1-idea">
+    <div class="rd1-container">
+      {% if section.settings.idea_eyebrow != blank %}
+        <div class="rd1-eyebrow">{{ section.settings.idea_eyebrow }}</div>
+      {% endif %}
+
+      {% if section.settings.idea_title != blank %}
+        <h2 class="rd1-title">{{ section.settings.idea_title }}</h2>
+      {% endif %}
+
+      <ul class="rd1-idea-list" role="list">
+        {% for block in section.blocks %}
+          {% if block.type == 'idea_item' %}
+            <li {{ block.shopify_attributes }}>{{ block.settings.text }}</li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+
+      {% if section.settings.idea_subtext != blank %}
+        <div class="rd1-sub">{{ section.settings.idea_subtext }}</div>
+      {% endif %}
+
+      <div class="rd1-tags">
+        {% for block in section.blocks %}
+          {% if block.type == 'tag' %}
+            <span class="rd1-tag" {{ block.shopify_attributes }}>{{ block.settings.text }}</span>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="rd1-day">
+    <div class="rd1-container">
+      {% if section.settings.day_eyebrow != blank %}
+        <div class="rd1-eyebrow">{{ section.settings.day_eyebrow }}</div>
+      {% endif %}
+
+      {% if section.settings.day_title != blank %}
+        <h2 class="rd1-title" style="margin-bottom: 60px;">{{ section.settings.day_title }}</h2>
+      {% endif %}
+
+      <div class="rd1-day-grid">
+        {% for block in section.blocks %}
+          {% if block.type == 'day_card' %}
+            <div class="rd1-day-card" {{ block.shopify_attributes }}>
+              <div class="rd1-scene">
+                {% if block.settings.image != blank %}
+                  {{ block.settings.image | image_url: width: 1600 | image_tag: loading: 'lazy', class: 'rd1-scene-img' }}
+                {% endif %}
+              </div>
+              <div class="rd1-label">
+                <h3>{{ block.settings.title }}</h3>
+                <p>{{ block.settings.text }}</p>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="rd1-mold">
+    <div class="rd1-container">
+      <div class="rd1-mold-inner">
+        {% if section.settings.mold_eyebrow != blank %}
+          <div class="rd1-eyebrow">{{ section.settings.mold_eyebrow }}</div>
+        {% endif %}
+
+        {% if section.settings.mold_title != blank %}
+          <h2>{{ section.settings.mold_title }}</h2>
+        {% endif %}
+
+        {% if section.settings.mold_body != blank %}{{ section.settings.mold_body }}{% endif %}
+      </div>
+    </div>
+  </div>
+
+  {% if section.settings.video_file != blank or section.settings.video_external != blank %}
+    <div class="rd1-video-wrap">
+      <div class="rd1-container">
+        <div class="rd1-video">
+          {% if section.settings.video_file != blank %}
+            <div class="rd1-video-embed">
+              {{ section.settings.video_file | video_tag: controls: true, preload: 'metadata' }}
+            </div>
+          {% elsif section.settings.video_external != blank %}
+            <div class="rd1-video-embed">
+              {% if section.settings.video_external.type == 'youtube' %}
+                <iframe
+                  src="https://www.youtube.com/embed/{{ section.settings.video_external.id }}?rel=0&modestbranding=1"
+                  title="{{ section.settings.video_link_label | escape }}"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              {% elsif section.settings.video_external.type == 'vimeo' %}
+                <iframe
+                  src="https://player.vimeo.com/video/{{ section.settings.video_external.id }}"
+                  title="{{ section.settings.video_link_label | escape }}"
+                  frameborder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              {% else %}
+                <iframe
+                  src="{{ section.settings.video_external }}"
+                  title="{{ section.settings.video_link_label | escape }}"
+                  frameborder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="rd1-steps">
+    <div class="rd1-container">
+      {% if section.settings.steps_title != blank %}
+        <h2 class="rd1-title" style="margin-bottom: 14px;">{{ section.settings.steps_title }}</h2>
+      {% endif %}
+
+      {% if section.settings.steps_subtext != blank %}
+        <div class="rd1-steps-sub">{{ section.settings.steps_subtext }}</div>
+      {% endif %}
+
+      <div class="rd1-steps-grid">
+        {% for block in section.blocks %}
+          {% if block.type == 'step' %}
+            <div class="rd1-step" {{ block.shopify_attributes }}>
+              <div class="rd1-step-num">{{ block.settings.number }}</div>
+              <h4>{{ block.settings.title }}</h4>
+              <p>{{ block.settings.text }}</p>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  {% if section.settings.steps_video_file != blank or section.settings.steps_video_external != blank %}
+    <div class="rd1-video-wrap rd1-video-wrap--steps">
+      <div class="rd1-container">
+        <div class="rd1-video">
+          {% if section.settings.steps_video_file != blank %}
+            <div class="rd1-video-embed">
+              {{ section.settings.steps_video_file | video_tag: controls: true, preload: 'metadata' }}
+            </div>
+          {% elsif section.settings.steps_video_external != blank %}
+            <div class="rd1-video-embed">
+              {% if section.settings.steps_video_external.type == 'youtube' %}
+                <iframe
+                  src="https://www.youtube.com/embed/{{ section.settings.steps_video_external.id }}?rel=0&modestbranding=1"
+                  title="{{ section.settings.steps_video_link_label | escape }}"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              {% elsif section.settings.steps_video_external.type == 'vimeo' %}
+                <iframe
+                  src="https://player.vimeo.com/video/{{ section.settings.steps_video_external.id }}"
+                  title="{{ section.settings.steps_video_link_label | escape }}"
+                  frameborder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              {% else %}
+                <iframe
+                  src="{{ section.settings.steps_video_external }}"
+                  title="{{ section.settings.steps_video_link_label | escape }}"
+                  frameborder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="rd1-remold-wrap">
+    <div class="rd1-container">
+      <div class="rd1-remold">
+        {% if section.settings.remold_title != blank %}
+          <h2>{{ section.settings.remold_title }}</h2>
+        {% endif %}
+
+        {% if section.settings.remold_body != blank %}{{ section.settings.remold_body }}{% endif %}
+
+        {% if section.settings.remold_footnote != blank %}
+          <div class="rd1-footnote">{{ section.settings.remold_footnote }}</div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "RD1 Middle Sections",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "load_google_fonts",
+      "label": "Load Google Fonts (Cormorant Garamond + Inter)",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "font_serif",
+      "label": "Serif font-family",
+      "default": "'Cormorant Garamond', 'Times New Roman', serif"
+    },
+    {
+      "type": "text",
+      "id": "font_sans",
+      "label": "Sans font-family",
+      "default": "'Inter', -apple-system, BlinkMacSystemFont, sans-serif"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 960,
+      "max": 1600,
+      "step": 10,
+      "unit": "px",
+      "label": "Max width",
+      "default": 1280
+    },
+    {
+      "type": "range",
+      "id": "side_padding",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Side padding",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Section padding top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Section padding bottom",
+      "default": 0
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#1c1c1c"
+    },
+    {
+      "type": "color",
+      "id": "card_bg_color",
+      "label": "Card background color",
+      "default": "#262626"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#dfb88a"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color_2",
+      "label": "Secondary text color",
+      "default": "#bfbfbf"
+    },
+    {
+      "type": "color",
+      "id": "text_color_3",
+      "label": "Tertiary text color",
+      "default": "#8a8a8a"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border color",
+      "default": "rgba(255,255,255,0.08)"
+    },
+
+    {
+      "type": "header",
+      "content": "The Idea Behind RD1"
+    },
+    {
+      "type": "text",
+      "id": "idea_eyebrow",
+      "label": "Eyebrow",
+      "default": "— The idea behind RD1 —"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "idea_title",
+      "label": "Title",
+      "default": "We believe the day is where a lot of the <em>damage happens.</em>"
+    },
+    {
+      "type": "richtext",
+      "id": "idea_subtext",
+      "label": "Subtext",
+      "default": "<p>RD1 was designed to fill that gap — a lightweight, discreet daytime appliance that supports your jaw during normal life, while you work, talk, train, or commute.</p>"
+    },
+
+    {
+      "type": "header",
+      "content": "Where You'll Wear It"
+    },
+    {
+      "type": "text",
+      "id": "day_eyebrow",
+      "label": "Eyebrow",
+      "default": "— Where you'll wear it —"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "day_title",
+      "label": "Title",
+      "default": "Designed for Your <em>Whole Day</em>"
+    },
+
+    {
+      "type": "header",
+      "content": "How to Mold It"
+    },
+    {
+      "type": "text",
+      "id": "mold_eyebrow",
+      "label": "Eyebrow",
+      "default": "— How to mold it —"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "mold_title",
+      "label": "Title",
+      "default": "You're wearing this through your whole day. <em>It needs to fit perfectly.</em>"
+    },
+    {
+      "type": "richtext",
+      "id": "mold_body",
+      "label": "Body",
+      "default": "<p>You're talking, training, commuting, going about your day life — RD1 needs to move with you, not against you. That only happens when it's molded specifically to your mouth. Not a generic average. Yours.</p><p>A good fit means it stays in place, feels natural, and you forget it's even there. A poor fit means you'll take it out and stop wearing it altogether.</p><p>Because your bite subtly shifts as your jaw improves over time, we recommend remolding once a week. It takes 10 minutes and keeps RD1 tracking your progress the whole way through.</p>"
+    },
+
+    {
+      "type": "header",
+      "content": "Video"
+    },
+    {
+      "type": "video",
+      "id": "video_file",
+      "label": "Video file (Shopify hosted)"
+    },
+    {
+      "type": "video_url",
+      "id": "video_external",
+      "label": "Video URL (YouTube/Vimeo)",
+      "accept": ["youtube", "vimeo"]
+    },
+    {
+      "type": "text",
+      "id": "video_link_label",
+      "label": "Video link label (accessibility)",
+      "default": "Watch the RD1 molding video"
+    },
+
+    {
+      "type": "header",
+      "content": "6 Simple Steps"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "steps_title",
+      "label": "Title",
+      "default": "6 Simple Steps. <em>Perfect Fit.</em>"
+    },
+    {
+      "type": "richtext",
+      "id": "steps_subtext",
+      "label": "Subtext",
+      "default": "<p>The boil-and-bite process takes under 10 minutes.<br>Here's exactly how to do it right.</p>"
+    },
+
+    {
+      "type": "header",
+      "content": "Steps Video"
+    },
+    {
+      "type": "video",
+      "id": "steps_video_file",
+      "label": "Video file (Shopify hosted)"
+    },
+    {
+      "type": "video_url",
+      "id": "steps_video_external",
+      "label": "Video URL (YouTube/Vimeo)",
+      "accept": ["youtube", "vimeo"]
+    },
+    {
+      "type": "text",
+      "id": "steps_video_link_label",
+      "label": "Video link label (accessibility)",
+      "default": "Watch the steps video"
+    },
+
+    {
+      "type": "header",
+      "content": "Remold Banner"
+    },
+    {
+      "type": "text",
+      "id": "remold_title",
+      "label": "Title",
+      "default": "Remold Once a Week."
+    },
+    {
+      "type": "richtext",
+      "id": "remold_body",
+      "label": "Body",
+      "default": "<p><strong>RD1</strong> is designed for regular remolding — <strong>once per week</strong> is what we recommend.</p><p>Why? Because your bite subtly shifts as your structure improves over time. Weekly remolding ensures RD1 keeps up with your progress and continues to fit perfectly — so it never stops doing its job.</p>"
+    },
+    {
+      "type": "textarea",
+      "id": "remold_footnote",
+      "label": "Footnote",
+      "default": "If it ever feels loose, tight, or uncomfortable before the week is up — remold it. Your comfort is your signal."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "idea_item",
+      "name": "Idea bullet",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "You clench at your desk without knowing it"
+        }
+      ]
+    },
+    {
+      "type": "tag",
+      "name": "Tag",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "At Your Desk"
+        }
+      ]
+    },
+    {
+      "type": "day_card",
+      "name": "Day card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "At Work"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Description",
+          "default": "Low profile enough for meetings and calls."
+        }
+      ]
+    },
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Number",
+          "default": "01"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Boil Water"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "Bring a pot of water to a full boil on the stove or kettle."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "RD1 Middle Sections",
+      "blocks": [
+        { "type": "idea_item" },
+        { "type": "idea_item", "settings": { "text": "You grind through stressful moments" } },
+        { "type": "idea_item", "settings": { "text": "Your jaw never gets a true break" } },
+        { "type": "idea_item", "settings": { "text": "Your nighttime progress slowly unravels during the day" } },
+
+        { "type": "tag" },
+        { "type": "tag", "settings": { "text": "At the Gym" } },
+        { "type": "tag", "settings": { "text": "Commuting" } },
+        { "type": "tag", "settings": { "text": "On Calls" } },
+        { "type": "tag", "settings": { "text": "Jogging" } },
+        { "type": "tag", "settings": { "text": "In Meetings" } },
+
+        { "type": "day_card" },
+        { "type": "day_card", "settings": { "title": "At the Gym", "text": "Built for movement, lifting and effort." } },
+        { "type": "day_card", "settings": { "title": "On a Run", "text": "Stays put during cardio and outdoor sessions." } },
+        { "type": "day_card", "settings": { "title": "Commuting", "text": "Stays in on the train or in the car." } },
+
+        { "type": "step" },
+        { "type": "step", "settings": { "number": "02", "title": "Soak for 60 Seconds", "text": "Submerge the RD1 in the boiling water for exactly 60 seconds." } },
+        { "type": "step", "settings": { "number": "03", "title": "Cool Briefly — 3 to 5 Seconds", "text": "Remove the guard and dip it in cold water for 3–5 seconds." } },
+        { "type": "step", "settings": { "number": "04", "title": "Place and Bite Down", "text": "Place RD1 on your lower teeth and gently bite down." } },
+        { "type": "step", "settings": { "number": "05", "title": "Hold for 5 Minutes", "text": "Keep the guard in your mouth for at least 5 minutes." } },
+        { "type": "step", "settings": { "number": "06", "title": "Set in Cold Water", "text": "Place the molded guard back in cold water for 5 minutes." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

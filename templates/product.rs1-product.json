@@ -1,0 +1,606 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "judge_me_reviews_preview_badge_EAUeai": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+            "quantity_style": "default"
+          }
+        },
+        "custom_liquid_zeyt9h": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<p style=\"font-size:14px; margin:0; padding:0; color:yellow; text-align:center;\">\n    ★★★★★ Google Reviews\n</p>"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "text_EMq7Cg": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "body"
+          }
+        },
+        "custom_liquid_zK6p4z": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div dark-mode id=\"truemed-instructions\" style=\"font-size: 14px;\" icon-height=\"12\" data-public-id=\"tm_qual_mw7eoyby3p\"></div>\n<script src=\"https://static.truemed.com/widgets/product-page-widget.min.js\" defer></script>"
+          }
+        },
+        "custom_liquid_aFheq7": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"testimonial-card\">\n      <div class=\"testimonial-header\">\n        <div class=\"profile\">\n          <img class=\"profile-image\" width=\"100\" height=\"100\" src=\"{{ 'andrew-testimonial.png' | asset_url }}\" alt=\"Andrew from SKOOL Community\">\n          <strong class=\"profile-name\">Andrew</strong>\n        </div>\n        <div class=\"brand-logo\">\n          <span class=\"logo-letter logo-s\">s</span>\n          <span class=\"logo-letter logo-k\">k</span>\n          <span class=\"logo-letter logo-o1\">o</span>\n          <span class=\"logo-letter logo-o2\">o</span>\n          <span class=\"logo-letter logo-l\">l</span>\n        </div>\n      </div>\n      <blockquote class=\"testimonial-quote\">\n        \"Structurally and neurologically I feel so much better after I started the Reviv.\"\n      </blockquote>\n    </div>\n\n{% style %}\n.testimonial-card {\n  max-width: 42rem;\n  background: rgba(239, 201, 139, 0.04);\n  border: 1px solid #ffd7ba;\n  border-radius: 32px;\n  padding: 2rem;\n  position: relative;\n}\n\n.testimonial-header {\n  display: flex;\n  align-items: flex-start;\n  justify-content: space-between;\n  margin-bottom: 2rem;\n}\n\n.profile {\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n}\n\n.profile-image {\n  width: 4rem;\n  height: 4rem;\n  border-radius: 50%;\n  object-fit: cover;\n}\n\n.profile-name {\n  color: white;\n  font-size: 1.875rem;\n  font-weight: 600;\n}\n\n.brand-logo {\n  font-size: 2.25rem;\n  font-weight: 700;\n}\n\n.logo-letter {\n  font-weight: bold;\n}\n\n.logo-s {\n  color: #1b3bdb;\n}\n\n.logo-k {\n  color: #db1b1b;\n}\n\n.logo-o1 {\n  color: #dbc31b;\n}\n\n.logo-o2 {\n  color: #1bdbdb;\n}\n\n.logo-l {\n  color: #db1b1b;\n}\n\n.testimonial-quote {\n  color: rgba(255, 255, 255, 0.8);\n  font-weight: 400;\n  font-size: 18px;\n  letter-spacing: -0.02em;\n  line-height: 1.3;\n  font-style: italic;\n  border: none;\n  padding: 0;\n  margin: 0;\n}\n\n/* Responsive styles */\n@media (max-width: 640px) {\n  .testimonial-card {\n    padding: 1.5rem;\n    border-radius: 24px;\n  }\n\n  .testimonial-header {\n    flex-direction: column;\n    align-items: flex-start;\n    gap: 1rem;\n  }\n\n  .profile-name {\n    font-size: 1.5rem;\n  }\n\n  .brand-logo {\n    font-size: 1.75rem;\n  }\n\n  .testimonial-quote {\n    font-size: 16px;\n  }\n}\n{% endstyle %}"
+          }
+        },
+        "custom_liquid_4YiTcD": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<p style=\"font-size:14px; margin:0; padding:0; color:white; text-align:center;\">\n    <span style=\"height:8px; width:8px; background-color:green; border-radius:50%; display:inline-block; animation:blinking 1.5s infinite;\"></span>\n    <span style=\"color:green;\">Note:</span> Only <span style=\"font-weight:bold;\">7</span> units left in stock\n</p>\n\n<style>\n@keyframes blinking {\n    0% { opacity: 1.0; }\n    50% { opacity: 0.0; }\n    100% { opacity: 1.0; }\n}\n</style>"
+          }
+        },
+        "icon_with_text_cbe7i6": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "center_content": false,
+            "icon_1": "truck",
+            "heading_1": "<strong>Trusted by 30k+ Customers</strong>",
+            "icon_2": "heart",
+            "heading_2": "<strong>Secure Checkout</strong>",
+            "icon_3": "return",
+            "heading_3": ""
+          }
+        },
+        "collapsible_tab_LfJKQ9": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Does RS1 require molding?",
+            "icon": "question_mark",
+            "content": "<p>No molding required. RS1 is ready to use straight out of the box — just fit it in and train.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_bETJ9W": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What sports is RS1 designed for?",
+            "icon": "question_mark",
+            "content": "<p>RS1 is designed for all high-intensity sports and training — powerlifting, bodybuilding, CrossFit, combat sports, team sports, and any activity where strength, stability, and oxygen intake matter.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_MdA9x7": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Our Guarantee",
+            "icon": "heart",
+            "content": "<p>If you wear the appliance consistently and don't agree that your health issues are improving in the first 90 days we give you your money back. See terms <a href=\"https://getreviv.com/pages/our-guarantee\" title=\"Our Guarantee\">here</a></p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_PmmWBf": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping Information",
+            "icon": "truck",
+            "content": "<ul><li>Shipping typically takes 7-10 days to most destinations including the US. More remote countries can take longer.</li><li>Orders typically ship within 24 hours and you will receive a tracking number by email as soon as it ships.</li></ul>",
+            "page": ""
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "judge_me_reviews_preview_badge_EAUeai",
+        "title",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "custom_liquid_zeyt9h",
+        "buy_buttons",
+        "text_EMq7Cg",
+        "custom_liquid_zK6p4z",
+        "custom_liquid_aFheq7",
+        "custom_liquid_4YiTcD",
+        "icon_with_text_cbe7i6",
+        "collapsible_tab_LfJKQ9",
+        "collapsible_tab_bETJ9W",
+        "collapsible_tab_MdA9x7",
+        "collapsible_tab_PmmWBf",
+        "description",
+        "share"
+      ],
+      "custom_css": [
+        ".product__title h1 {color: #e5c085;}",
+        ".icon-with-text .icon {fill: #e5c085;}",
+        ".icon-accordion {fill: #e5c085;}",
+        ".icon-caret {fill: #e5c085;}",
+        ".product__media img,.thumbnail.global-media-settings img {border-radius: 10px;}"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "show_sold_alert": true,
+        "color_scheme": "scheme-4",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "hover",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12,
+        "show_benefits": false
+      }
+    },
+    "video_M74Qnd": {
+      "type": "video",
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https://www.youtube.com/watch?v=BK_Qj5KVEic",
+        "cover_image": "shopify://shop_images/ChatGPT_Image_Jun_8_2026_11_41_48_PM.png",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rs1_middle_sections": {
+      "type": "rs1-middle-sections",
+      "blocks": {
+        "point_1": {
+          "type": "point",
+          "settings": {
+            "image": "shopify://shop_images/photo-1534438327276-14e5300c3a48.avif",
+            "number": "01",
+            "title": "Powerlifting",
+            "text": "Maximum jaw stability under max load."
+          }
+        },
+        "point_2": {
+          "type": "point",
+          "settings": {
+            "image": "shopify://shop_images/photo-1581009146145-b5ef050c2e1e.avif",
+            "number": "02",
+            "title": "Bodybuilding",
+            "text": "Better posture, cleaner muscle activation."
+          }
+        },
+        "point_3": {
+          "type": "point",
+          "settings": {
+            "image": "shopify://shop_images/photo-1517963879433-6ad2b056d712.avif",
+            "number": "03",
+            "title": "CrossFit",
+            "text": "Sustain output with better oxygen intake."
+          }
+        },
+        "point_4": {
+          "type": "point",
+          "settings": {
+            "image": "shopify://shop_images/photo-1549719386-74dfcbf7dbed.avif",
+            "number": "04",
+            "title": "Combat Sports",
+            "text": "Protection and performance in one."
+          }
+        },
+        "point_5": {
+          "type": "point",
+          "settings": {
+            "image": "shopify://shop_images/photo-1546519638-68e109498ffc.avif",
+            "number": "05",
+            "title": "Team Sports",
+            "text": "Stay composed deep into the game."
+          }
+        },
+        "problem_item_1": {
+          "type": "problem_item",
+          "settings": {
+            "number": "01",
+            "text": "Muscle tension from jaw clenching wastes energy"
+          }
+        },
+        "problem_item_2": {
+          "type": "problem_item",
+          "settings": {
+            "number": "02",
+            "text": "Misaligned jaw disrupts posture from head to toe"
+          }
+        },
+        "problem_item_3": {
+          "type": "problem_item",
+          "settings": {
+            "number": "03",
+            "text": "Restricted airflow limits oxygen under load"
+          }
+        },
+        "problem_item_4": {
+          "type": "problem_item",
+          "settings": {
+            "number": "04",
+            "text": "Chronic grinding damages teeth and accelerates fatigue"
+          }
+        },
+        "solution_item_1": {
+          "type": "solution_item",
+          "settings": {
+            "icon": "shopify://shop_images/sol-jaw.png",
+            "title": "Jaw Spacing",
+            "text": "Creates spacing between your upper and lower jaw, supporting natural posture, efficient breathing, and full-body stability from the ground up."
+          }
+        },
+        "solution_item_2": {
+          "type": "solution_item",
+          "settings": {
+            "icon": "shopify://shop_images/sol-airway.png",
+            "title": "Airway Optimization",
+            "text": "Opens your airway under load so you breathe harder, fatigue slower."
+          }
+        },
+        "solution_item_3": {
+          "type": "solution_item",
+          "settings": {
+            "icon": "shopify://shop_images/sol-clench.png",
+            "title": "Clenching Surface",
+            "text": "Converts jaw tension into raw power while protecting your teeth."
+          }
+        },
+        "works_item_1": {
+          "type": "works_item",
+          "settings": {
+            "number": "01",
+            "icon": "shopify://shop_images/how-jaw.png",
+            "title": "Jaw Spacing for Total-Body Power",
+            "text": "Creates precise space between your upper and lower teeth, decompressing the jaw."
+          }
+        },
+        "works_item_2": {
+          "type": "works_item",
+          "settings": {
+            "number": "02",
+            "icon": "shopify://shop_images/how-energy.png",
+            "title": "Reduced Tension & Energy Leaks",
+            "text": "Eliminates the energy drain from clenching and muscle tension — more of your output goes into raw performance."
+          }
+        },
+        "works_item_3": {
+          "type": "works_item",
+          "settings": {
+            "number": "03",
+            "icon": "shopify://shop_images/how-airway.png",
+            "title": "Airway Support Under Load",
+            "text": "Keeps your airway open during peak effort. More oxygen in, more fatigue out."
+          }
+        },
+        "works_item_4": {
+          "type": "works_item",
+          "settings": {
+            "number": "04",
+            "icon": "shopify://shop_images/how-results.png",
+            "title": "Immediate Results",
+            "text": "No break-in period. Stronger, more stable, better breathing from your very first use."
+          }
+        },
+        "who_item_1": {
+          "type": "who_item",
+          "settings": {
+            "title": "At the gym",
+            "text": "Wear it through your workout the same way you wear RS1 at night. Keep the jaw spacing going around the clock."
+          }
+        },
+        "who_item_2": {
+          "type": "who_item",
+          "settings": {
+            "title": "In a class or group session",
+            "text": "Yoga, spin, HIIT—whatever moves you. RS1 fits discreetly and stays out of your way."
+          }
+        },
+        "who_item_3": {
+          "type": "who_item",
+          "settings": {
+            "title": "Playing a sport",
+            "text": "Tennis, golf, basketball, pickleball. Any activity where you'll benefit from jaw spacing and tooth protection."
+          }
+        },
+        "who_item_4": {
+          "type": "who_item",
+          "settings": {
+            "title": "Just active in daily life",
+            "text": "Gardening, hiking, cycling—if you're moving, RS1 extends the benefits of your Reviv routine into your waking hours."
+          }
+        }
+      },
+      "block_order": [
+        "point_1",
+        "point_2",
+        "point_3",
+        "point_4",
+        "point_5",
+        "problem_item_1",
+        "problem_item_2",
+        "problem_item_3",
+        "problem_item_4",
+        "solution_item_1",
+        "solution_item_2",
+        "solution_item_3",
+        "works_item_1",
+        "works_item_2",
+        "works_item_3",
+        "works_item_4",
+        "who_item_1",
+        "who_item_2",
+        "who_item_3",
+        "who_item_4"
+      ],
+      "settings": {
+        "adv_eyebrow": "— THE RS1 ADVANTAGE —",
+        "adv_title": "Built for your <em>sport.</em>",
+        "problem_eyebrow": "THE PROBLEM",
+        "problem_title": "Your body is leaking performance — <em>and your jaw is why.</em>",
+        "problem_body": "<p>When your jaw is out of alignment, your entire skeletal system compensates. You lose stability, burn extra energy fighting tension, and hit a performance ceiling that no supplement or training program can fix.</p>",
+        "problem_image": "shopify://shop_images/the-problem.png",
+        "solution_eyebrow": "THE SOLUTION",
+        "solution_title": "One simple spacing shift <em>unlocks everything.</em>",
+        "solution_body": "<p>The RS1 creates spacing between your upper and lower jaw, helping promote a more relaxed jaw position and natural oral posture. This subtle shift can support better breathing, improved comfort, and more efficient movement. So you can perform, recover, and feel your best from the very first use.</p>",
+        "works_eyebrow": "HOW IT WORKS",
+        "works_title": "How RS1 <em>works.</em>",
+        "works_body": "<p>Four mechanisms working together — measured at the jaw, felt through the whole kinetic chain.</p>",
+        "works_video_url": "",
+        "who_eyebrow": "WHO IT'S FOR",
+        "who_title": "Already a Reviv user? RS1 is what you <em>wear when you move.</em>",
+        "who_image": "shopify://shop_images/who-its-for.png"
+      }
+    },
+    "1777795313f54a279b": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_dVVgF7": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_dVVgF7"
+      ],
+      "custom_css": [
+        "{background: #232021;}"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "collapsible_content_HA7hTA": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_bdwWYh": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is RS1?",
+            "icon": "lightning_bolt",
+            "row_content": "<p>RS1 is Reviv's performance sport mouthguard — designed to align your jaw into its optimal neuromuscular position during athletic activity, improving strength, airflow, and full-body stability.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_b3Aq6U": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How is RS1 different from R1, R2, or R3?",
+            "icon": "lightning_bolt",
+            "row_content": "<p>R1, R2, and R3 are designed for nighttime wear and dental recovery during sleep. RS1 is purpose-built for sport — with a design that keeps your airway open, provides a clenching surface for maximum output, and delivers results from your very first use.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_46p3KR": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does RS1 require any molding or fitting?",
+            "icon": "check_mark",
+            "row_content": "<p>No molding required. RS1 is ready to use straight out of the box — just fit it in and train.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_zVraUA": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Will I feel a difference right away?",
+            "icon": "lightning_bolt",
+            "row_content": "<p>Yes. There's no break-in period. The jaw repositioning creates immediate changes in posture, stability, and breathing — stronger, more stable, better breathing from your very first use.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_wYPXBk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What sports is RS1 designed for?",
+            "icon": "lightning_bolt",
+            "row_content": "<p>RS1 is built for all high-intensity sports and training — powerlifting, bodybuilding, CrossFit, combat sports, team sports, and any activity where strength, stability, and oxygen intake matter. It also works for yoga, HIIT, tennis, golf, pickleball, hiking, and everyday active movement.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_zHYD8j": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I wear RS1 all day?",
+            "icon": "check_mark",
+            "row_content": "<p>RS1 is designed specifically for athletic use — gym sessions, classes, sport, and active daily movement. For all-day daytime wear in work, commuting, or social settings, we recommend the RD1 (RevivDay), which is engineered for comfort and ease of speech.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_RaENdr": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I clean RS1?",
+            "icon": "check_mark",
+            "row_content": "<p>Rinse with cold water before and after each use. For a deeper clean, use a soft toothbrush with mild soap. Avoid hot water — it can distort the shape. You can also use Repod for a thorough clean.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_VrBWRK": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the appliance made out of?",
+            "icon": "check_mark",
+            "row_content": "<p>RS1 is made from EVA + PP (Ethylene-Vinyl Acetate + Polypropylene) — BPA-free, food-grade, and FDA-compliant. Safe for daily athletic use.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_bdwWYh",
+        "collapsible_row_b3Aq6U",
+        "collapsible_row_46p3KR",
+        "collapsible_row_zVraUA",
+        "collapsible_row_wYPXBk",
+        "collapsible_row_zHYD8j",
+        "collapsible_row_RaENdr",
+        "collapsible_row_VrBWRK"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h0",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "scheme-4",
+        "container_color_scheme": "scheme-4",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "custom_class": "repod-faq-section"
+      }
+    },
+    "product_cards_wKGKUV": {
+      "type": "product-cards",
+      "blocks": {
+        "product_card_YWn3tN": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-two",
+            "is_new": true
+          }
+        },
+        "product_card_qAgEHV": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-two-without-support",
+            "is_new": true
+          }
+        },
+        "product_card_3EANmB": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-one",
+            "is_new": false
+          }
+        },
+        "product_card_6QpAza": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-one-without-support",
+            "is_new": false
+          }
+        },
+        "product_card_MAiyJb": {
+          "type": "product_card",
+          "settings": {
+            "product": "1-year-subscription-only",
+            "is_new": false
+          }
+        }
+      },
+      "block_order": [
+        "product_card_YWn3tN",
+        "product_card_qAgEHV",
+        "product_card_3EANmB",
+        "product_card_6QpAza",
+        "product_card_MAiyJb"
+      ],
+      "settings": {
+        "section_color_scheme": "scheme-4",
+        "padding_top": 72,
+        "padding_bottom": 36,
+        "custom_classes": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "video_M74Qnd",
+    "rs1_middle_sections",
+    "1777795313f54a279b",
+    "collapsible_content_HA7hTA",
+    "product_cards_wKGKUV"
+  ]
+}

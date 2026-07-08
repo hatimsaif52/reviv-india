@@ -1,0 +1,159 @@
+{%- style -%}
+  :root {
+    --card-gap: 38px;
+  }
+
+  .section-{{ section.id }} {
+    background: #232021;
+  }
+
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .biomechancis-header {
+    font-size: 48px;
+    line-height: 1.5;
+    color: #efc98b;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 48px;
+    font-family: "Cardillac";
+  }
+
+  @media screen and (max-width: 750px) {
+    .biomechancis-header {
+      font-size: 32px;
+      line-height: 1;
+    }
+  }
+
+  .biomechanics-reasons {
+    width: 100%;
+  }
+
+  .biomechanics-reasons {
+    display: grid;
+    grid-template-columns: repeat(3, calc((100% - 2 * var(--card-gap)) / 3));
+    gap: var(--card-gap);
+    margin-bottom: 24px;
+  }
+
+  .reason-card {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 600;
+    font-family: "Roboto";
+    color: #232021;
+    text-decoration: none;
+  }
+
+  /* .biomechanics-reasons .flex-row {
+    display: flex;
+    justify-content: center;
+    gap: var(--card-gap);
+  }
+
+  .flex-row .reason-card {
+    flex: 0 0 calc((100% - 2 * var(--card-gap)) / 3);
+  } */
+
+  @media screen and (max-width: 600px) {
+    .biomechanics-reasons
+    {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .biomechanics-reasons .reason-card,
+    {
+      padding: 12px;
+      font-size: 16px;
+      line-height: 28px;
+      width: 100%;
+    }
+  }
+{%- endstyle -%}
+
+<div class="section-{{ section.id }}-padding section-{{ section.id }}">
+  <div class="page-width">
+    <div class="biomechancis-header">These dental biomechanics are most likely at the root cause of things like:</div>
+    <div class="biomechanics-reasons">
+      <a class="reason-card" href="https://reviv.substack.com/p/the-real-root-cause-of-adhd" target="_blank">ADHD</a>
+      <a class="reason-card" href="https://reviv.substack.com/p/this-is-likely-at-the-root-cause" target="_blank">
+        Mental health disorders
+      </a>
+      <a
+        class="reason-card"
+        href="https://reviv.substack.com/p/addressing-brain-fog-with-these-biomechanics"
+        target="_blank"
+      >
+        Brain fog
+      </a>
+      <a class="reason-card" href="https://reviv.substack.com/p/guess-what-the-easy-cure-to-sleep" target="_blank">
+        Sleep Apnea
+      </a>
+      <a class="reason-card" href="https://reviv.substack.com/p/how-this-stuff-connects-to-anxiety" target="_blank">
+        Anxiety
+      </a>
+      <a class="reason-card" href="https://reviv.substack.com/p/i-dont-think-aging-exists" target="_blank">Aging</a>
+      {% comment %}
+        <div class="flex-row">
+          <div class="reason-card">Joint healths</div>
+          <div class="reason-card">And more!</div>
+        </div>
+      {% endcomment %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "biomechanics reasons",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "biomechanics reasons"
+    }
+  ]
+}
+{% endschema %}

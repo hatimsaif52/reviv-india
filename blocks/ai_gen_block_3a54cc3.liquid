@@ -1,0 +1,462 @@
+{% doc %}
+  @prompt
+    animeted number going up , with title at the top and bottom , make sure to add custumaition of paddings margins and size
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-counter-{{ ai_gen_id }} {
+    padding-top: {{ block.settings.padding_top }}px;
+    padding-bottom: {{ block.settings.padding_bottom }}px;
+    padding-left: {{ block.settings.padding_left }}px;
+    padding-right: {{ block.settings.padding_right }}px;
+    margin-top: {{ block.settings.margin_top }}px;
+    margin-bottom: {{ block.settings.margin_bottom }}px;
+    margin-left: {{ block.settings.margin_left }}px;
+    margin-right: {{ block.settings.margin_right }}px;
+    background-color: {{ block.settings.background_color }};
+    text-align: {{ block.settings.text_alignment }};
+  }
+
+  .ai-counter-title-top-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_top_size }}px;
+    color: {{ block.settings.title_top_color }};
+    margin: 0 0 {{ block.settings.title_top_spacing }}px 0;
+    font-weight: {{ block.settings.title_top_weight }};
+  }
+
+  .ai-counter-number-{{ ai_gen_id }} {
+    font-size: {{ block.settings.number_size }}px;
+    color: {{ block.settings.number_color }};
+    font-weight: {{ block.settings.number_weight }};
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .ai-counter-title-bottom-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_bottom_size }}px;
+    color: {{ block.settings.title_bottom_color }};
+    margin: {{ block.settings.title_bottom_spacing }}px 0 0 0;
+    font-weight: {{ block.settings.title_bottom_weight }};
+  }
+{% endstyle %}
+
+<animated-counter-{{ ai_gen_id }}
+  class="ai-counter-{{ ai_gen_id }}"
+  data-target="{{ block.settings.target_number }}"
+  data-duration="{{ block.settings.animation_duration }}"
+  data-prefix="{{ block.settings.number_prefix }}"
+  data-suffix="{{ block.settings.number_suffix }}"
+  {{ block.shopify_attributes }}
+>
+  {% if block.settings.title_top != blank %}
+    <h3 class="ai-counter-title-top-{{ ai_gen_id }}">{{ block.settings.title_top }}</h3>
+  {% endif %}
+
+  <div class="ai-counter-number-{{ ai_gen_id }}">
+    <span class="ai-counter-prefix-{{ ai_gen_id }}">{{ block.settings.number_prefix }}</span>
+    <span class="ai-counter-value-{{ ai_gen_id }}">0</span>
+    <span class="ai-counter-suffix-{{ ai_gen_id }}">{{ block.settings.number_suffix }}</span>
+  </div>
+
+  {% if block.settings.title_bottom != blank %}
+    <p class="ai-counter-title-bottom-{{ ai_gen_id }}">{{ block.settings.title_bottom }}</p>
+  {% endif %}
+</animated-counter-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class AnimatedCounter{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.hasAnimated = false;
+      }
+
+      connectedCallback() {
+        this.target = parseFloat(this.dataset.target) || 0;
+        this.duration = parseFloat(this.dataset.duration) || 2000;
+        this.counterElement = this.querySelector('.ai-counter-value-{{ ai_gen_id }}');
+        
+        this.setupObserver();
+      }
+
+      setupObserver() {
+        const options = {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.3
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && !this.hasAnimated) {
+              this.hasAnimated = true;
+              this.animateCounter();
+            }
+          });
+        }, options);
+
+        observer.observe(this);
+      }
+
+      animateCounter() {
+        const startTime = performance.now();
+        const startValue = 0;
+        const endValue = this.target;
+
+        const animate = (currentTime) => {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / this.duration, 1);
+          
+          const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+          const currentValue = startValue + (endValue - startValue) * easeOutQuart;
+          
+          if (Number.isInteger(this.target)) {
+            this.counterElement.textContent = Math.floor(currentValue);
+          } else {
+            const decimals = this.target.toString().split('.')[1]?.length || 0;
+            this.counterElement.textContent = currentValue.toFixed(decimals);
+          }
+
+          if (progress < 1) {
+            requestAnimationFrame(animate);
+          } else {
+            if (Number.isInteger(this.target)) {
+              this.counterElement.textContent = Math.floor(endValue);
+            } else {
+              const decimals = this.target.toString().split('.')[1]?.length || 0;
+              this.counterElement.textContent = endValue.toFixed(decimals);
+            }
+          }
+        };
+
+        requestAnimationFrame(animate);
+      }
+    }
+
+    customElements.define('animated-counter-{{ ai_gen_id }}', AnimatedCounter{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Animated counter",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Top title"
+    },
+    {
+      "type": "text",
+      "id": "title_top",
+      "label": "Top title"
+    },
+    {
+      "type": "range",
+      "id": "title_top_size",
+      "min": 12,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Font size",
+      "default": 18
+    },
+    {
+      "type": "color",
+      "id": "title_top_color",
+      "label": "Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "select",
+      "id": "title_top_weight",
+      "label": "Font weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "range",
+      "id": "title_top_spacing",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Bottom spacing",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Counter number"
+    },
+    {
+      "type": "text",
+      "id": "target_number",
+      "label": "Target number",
+      "default": "1000"
+    },
+    {
+      "type": "text",
+      "id": "number_prefix",
+      "label": "Prefix"
+    },
+    {
+      "type": "text",
+      "id": "number_suffix",
+      "label": "Suffix"
+    },
+    {
+      "type": "range",
+      "id": "number_size",
+      "min": 24,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Font size",
+      "default": 64
+    },
+    {
+      "type": "color",
+      "id": "number_color",
+      "label": "Color",
+      "default": "#e5c085"
+    },
+    {
+      "type": "select",
+      "id": "number_weight",
+      "label": "Font weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        },
+        {
+          "value": "800",
+          "label": "Extra bold"
+        }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "range",
+      "id": "animation_duration",
+      "min": 500,
+      "max": 5000,
+      "step": 100,
+      "unit": "ms",
+      "label": "Animation duration",
+      "default": 2000
+    },
+    {
+      "type": "header",
+      "content": "Bottom title"
+    },
+    {
+      "type": "text",
+      "id": "title_bottom",
+      "label": "Bottom title"
+    },
+    {
+      "type": "range",
+      "id": "title_bottom_size",
+      "min": 12,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Font size",
+      "default": 18
+    },
+    {
+      "type": "color",
+      "id": "title_bottom_color",
+      "label": "Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "select",
+      "id": "title_bottom_weight",
+      "label": "Font weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "range",
+      "id": "title_bottom_spacing",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Top spacing",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#232021"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_left",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Left",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_right",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Right",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Margin"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_left",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Left",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_right",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Right",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Animated counter"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,470 @@
+{% doc %}
+  @prompt
+    videos 9:t6 ration carouseel, all mute, when clicked on they go full screen, there volum can be toggled, add the option tochoose a color scheme, and add a title at the top, add padding and margin options 
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-video-carousel-{{ ai_gen_id }} {
+    padding-top: {{ block.settings.padding_top }}px;
+    padding-bottom: {{ block.settings.padding_bottom }}px;
+    margin-top: {{ block.settings.margin_top }}px;
+    margin-bottom: {{ block.settings.margin_bottom }}px;
+  }
+
+  .ai-video-carousel-container-{{ ai_gen_id }} {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .ai-video-carousel-title-{{ ai_gen_id }} {
+    text-align: center;
+    margin: 0 0 32px;
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  .ai-video-carousel-wrapper-{{ ai_gen_id }} {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 0 20px 20px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .ai-video-carousel-wrapper-{{ ai_gen_id }}::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .ai-video-carousel-wrapper-{{ ai_gen_id }}::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+
+  .ai-video-carousel-wrapper-{{ ai_gen_id }}::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+  }
+
+  .ai-video-carousel-item-{{ ai_gen_id }} {
+    flex: 0 0 auto;
+    width: 280px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .ai-video-carousel-video-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .ai-video-carousel-video-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-video-carousel-play-icon-{{ ai_gen_id }} {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .ai-video-carousel-play-icon-{{ ai_gen_id }} svg {
+    width: 24px;
+    height: 24px;
+    fill: #000;
+    margin-left: 4px;
+  }
+
+  .ai-video-carousel-fullscreen-{{ ai_gen_id }} {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-video-carousel-fullscreen-{{ ai_gen_id }}.active {
+    display: flex;
+  }
+
+  .ai-video-carousel-fullscreen-content-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    max-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-video-carousel-fullscreen-video-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .ai-video-carousel-close-btn-{{ ai_gen_id }} {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+
+  .ai-video-carousel-close-btn-{{ ai_gen_id }}:hover {
+    background: #fff;
+  }
+
+  .ai-video-carousel-close-btn-{{ ai_gen_id }} svg {
+    width: 20px;
+    height: 20px;
+    stroke: #000;
+  }
+
+  .ai-video-carousel-volume-btn-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+
+  .ai-video-carousel-volume-btn-{{ ai_gen_id }}:hover {
+    background: #fff;
+  }
+
+  .ai-video-carousel-volume-btn-{{ ai_gen_id }} svg {
+    width: 20px;
+    height: 20px;
+    fill: #000;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-video-carousel-item-{{ ai_gen_id }} {
+      width: 220px;
+    }
+
+    .ai-video-carousel-title-{{ ai_gen_id }} {
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+
+    .ai-video-carousel-fullscreen-content-{{ ai_gen_id }} {
+      max-width: 100%;
+    }
+  }
+{% endstyle %}
+
+<video-carousel-{{ ai_gen_id }} class="ai-video-carousel-{{ ai_gen_id }} color-{{ block.settings.color_scheme }}" {{ block.shopify_attributes }}>
+  <div class="ai-video-carousel-container-{{ ai_gen_id }}">
+    {% if block.settings.title != blank %}
+      <h2 class="ai-video-carousel-title-{{ ai_gen_id }}">{{ block.settings.title }}</h2>
+    {% endif %}
+
+    <div class="ai-video-carousel-wrapper-{{ ai_gen_id }}">
+      {% for i in (1..6) %}
+        {% liquid
+          assign video_key = 'video_' | append: i
+          assign video = block.settings[video_key]
+        %}
+
+        {% if video != blank %}
+          <div class="ai-video-carousel-item-{{ ai_gen_id }}" data-video-index="{{ i }}">
+            <div class="ai-video-carousel-video-wrapper-{{ ai_gen_id }}">
+              <video
+                class="ai-video-carousel-video-{{ ai_gen_id }}"
+                src="{{ video.sources[1].url }}"
+                muted
+                loop
+                playsinline
+                preload="metadata"
+              ></video>
+              <div class="ai-video-carousel-play-icon-{{ ai_gen_id }}">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="ai-video-carousel-fullscreen-{{ ai_gen_id }}">
+    <div class="ai-video-carousel-fullscreen-content-{{ ai_gen_id }}">
+      <button class="ai-video-carousel-close-btn-{{ ai_gen_id }}" aria-label="Close fullscreen">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <button class="ai-video-carousel-volume-btn-{{ ai_gen_id }}" aria-label="Toggle volume">
+        <svg class="ai-video-carousel-muted-icon-{{ ai_gen_id }}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+        </svg>
+        <svg class="ai-video-carousel-unmuted-icon-{{ ai_gen_id }}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="display: none;">
+          <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+        </svg>
+      </button>
+      <video
+        class="ai-video-carousel-fullscreen-video-{{ ai_gen_id }}"
+        muted
+        loop
+        playsinline
+        controls
+      ></video>
+    </div>
+  </div>
+</video-carousel-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class VideoCarousel{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.videos = this.querySelectorAll('.ai-video-carousel-video-{{ ai_gen_id }}');
+        this.items = this.querySelectorAll('.ai-video-carousel-item-{{ ai_gen_id }}');
+        this.fullscreen = this.querySelector('.ai-video-carousel-fullscreen-{{ ai_gen_id }}');
+        this.fullscreenVideo = this.querySelector('.ai-video-carousel-fullscreen-video-{{ ai_gen_id }}');
+        this.closeBtn = this.querySelector('.ai-video-carousel-close-btn-{{ ai_gen_id }}');
+        this.volumeBtn = this.querySelector('.ai-video-carousel-volume-btn-{{ ai_gen_id }}');
+        this.mutedIcon = this.querySelector('.ai-video-carousel-muted-icon-{{ ai_gen_id }}');
+        this.unmutedIcon = this.querySelector('.ai-video-carousel-unmuted-icon-{{ ai_gen_id }}');
+        this.isMuted = true;
+      }
+
+      connectedCallback() {
+        this.setupEventListeners();
+        this.setupIntersectionObserver();
+      }
+
+      setupEventListeners() {
+        this.items.forEach((item, index) => {
+          item.addEventListener('click', () => {
+            this.openFullscreen(index);
+          });
+        });
+
+        this.closeBtn.addEventListener('click', () => {
+          this.closeFullscreen();
+        });
+
+        this.volumeBtn.addEventListener('click', () => {
+          this.toggleVolume();
+        });
+
+        this.fullscreen.addEventListener('click', (e) => {
+          if (e.target === this.fullscreen) {
+            this.closeFullscreen();
+          }
+        });
+
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && this.fullscreen.classList.contains('active')) {
+            this.closeFullscreen();
+          }
+        });
+      }
+
+      setupIntersectionObserver() {
+        const options = {
+          root: null,
+          threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            const video = entry.target.querySelector('.ai-video-carousel-video-{{ ai_gen_id }}');
+            if (entry.isIntersecting) {
+              video.play();
+            } else {
+              video.pause();
+            }
+          });
+        }, options);
+
+        this.items.forEach(item => {
+          observer.observe(item);
+        });
+      }
+
+      openFullscreen(index) {
+        const video = this.videos[index];
+        this.fullscreenVideo.src = video.src;
+        this.fullscreenVideo.muted = this.isMuted;
+        this.fullscreen.classList.add('active');
+        this.fullscreenVideo.play();
+        document.body.style.overflow = 'hidden';
+      }
+
+      closeFullscreen() {
+        this.fullscreen.classList.remove('active');
+        this.fullscreenVideo.pause();
+        this.fullscreenVideo.src = '';
+        document.body.style.overflow = '';
+      }
+
+      toggleVolume() {
+        this.isMuted = !this.isMuted;
+        this.fullscreenVideo.muted = this.isMuted;
+
+        if (this.isMuted) {
+          this.mutedIcon.style.display = 'block';
+          this.unmutedIcon.style.display = 'none';
+        } else {
+          this.mutedIcon.style.display = 'none';
+          this.unmutedIcon.style.display = 'block';
+        }
+      }
+    }
+
+    customElements.define('video-carousel-{{ ai_gen_id }}', VideoCarousel{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Video carousel",
+  "tag": null,
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Title",
+      "default": "Watch Our Stories"
+    },
+    {
+      "type": "header",
+      "content": "Videos"
+    },
+    {
+      "type": "video",
+      "id": "video_1",
+      "label": "Video 1"
+    },
+    {
+      "type": "video",
+      "id": "video_2",
+      "label": "Video 2"
+    },
+    {
+      "type": "video",
+      "id": "video_3",
+      "label": "Video 3"
+    },
+    {
+      "type": "video",
+      "id": "video_4",
+      "label": "Video 4"
+    },
+    {
+      "type": "video",
+      "id": "video_5",
+      "label": "Video 5"
+    },
+    {
+      "type": "video",
+      "id": "video_6",
+      "label": "Video 6"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin bottom",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video carousel"
+    }
+  ]
+}
+{% endschema %}

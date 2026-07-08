@@ -1,0 +1,51 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "custom_liquid_ebqhRP": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "li {margin: 1rem 0; text-indent: -22px; padding-left: 20px;}",
+        "p,ul {margin: 0;}",
+        "@media (max-width: 600px) {img {width: 100px; } .rte ul, .rte ol {padding-left: 0.5rem; }}"
+      ],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n.page-width {\n    padding-top: 0;\n}\n@media (max-width: 768px){\nh1.main-page-title {\n    margin: 1rem 0 2rem;\n}\n}\n</style>\n<div class=\"page-width page-width--narrow section-{{ section.id }}-padding\">\n  <h1 class=\"main-page-title page-title h0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}\">\n    {{ page.title | escape }}\n  </h1>\n  <div class=\"rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}\">\n    {{ page.content }}\n  </div>\n</div>",
+        "color_scheme": "scheme-4",
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_TpNhBa": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"info-strip\">\n  <div class=\"info-item\">\n    <div class=\"info-icon\">\n      <!-- Mail Icon -->\n      <img src=\"https://cdn.shopify.com/s/files/1/0706/4243/4289/files/Group_37130_1.png?v=1768829907\"/>\n    </div>\n    <div class=\"info-text rte\">\n      <strong>Have A Question?</strong>\n      <span><a href=\"mailto:cs@getreviv.com\">cs@getreviv.com</a></span>\n    </div>\n  </div>\n\n  <div class=\"info-divider\"></div>\n\n  <div class=\"info-item\">\n    <div class=\"info-icon\">\n      <!-- Truck Icon -->\n      <img src=\"https://cdn.shopify.com/s/files/1/0706/4243/4289/files/Group_37132.png?v=1768829908\"/>\n    </div>\n    <div class=\"info-text\">\n      <strong>Reliable Shipping</strong>\n      <span>We ship the orders within 24-hours</span>\n    </div>\n  </div>\n</div>\n<style>\n.info-strip {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 40px;\n  padding: 20px 30px;\n  max-width: 900px;\n  margin: 40px auto;\n  border-radius: 6px;\n}\n.info-item {\n  display: flex;\n  align-items: center;\n  gap: 15px;\n}\n\n.info-icon {\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\nimg{width: 100%;}\n}\n\n.info-text {\n  display: flex;\n  flex-direction: column;\n  line-height: 1.3;\n}\n\n.info-text strong {\n  font-size: 16px;\n  font-weight: 700;\n}\n\n.info-text span {\n  font-size: 14px;\n}\n\n.info-divider {\ndisplay:block !Important;\n  width: 2px;\n  height: 70px;\n  background: rgba(244, 201, 139, 0.5);\n}\n\n/* 📱 Mobile layout */\n@media (max-width: 640px) {\n  .info-strip {\n    flex-direction: column;\n    gap: 20px;\n    text-align: center;\n  }\n\n  .info-item {\n    justify-content: center;\n  }\n\n  .info-divider {\n    width: 80%;\n    height: 1px;\n  }\n}\n</style>",
+        "color_scheme": "scheme-4",
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_ebqhRP",
+    "custom_liquid_TpNhBa"
+  ]
+}

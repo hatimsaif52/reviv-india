@@ -1,0 +1,497 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_banner_GqUe4Y": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_DMNHQx": {
+          "type": "heading",
+          "settings": {
+            "heading": "Become a <em>Reviv Affiliate</em> & Earn up to 20% Comission",
+            "heading_size": "h0"
+          }
+        },
+        "text_XbGPyL": {
+          "type": "text",
+          "settings": {
+            "text": "Join a fast-growing wellness movement helping people relieve jaw tension, sleep better, and feel mentally sharper—while earning.",
+            "text_style": "body"
+          }
+        },
+        "buttons_DtfGeQ": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Join now",
+            "button_id": "",
+            "button_link_1": "mailto:affiliates@getreviv.com",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_DMNHQx",
+        "text_XbGPyL",
+        "buttons_DtfGeQ"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/affiliate_hero_banner.webp",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-522b6c27-788f-4b7e-bbb7-d4f61d40572f",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "custom_classes": "sk-main-banner aff-hero-banner"
+      }
+    },
+    "free_trial_eLt6Gg": {
+      "type": "free-trial",
+      "blocks": {
+        "heading_4fLhCA": {
+          "type": "heading",
+          "settings": {
+            "heading": "BECOME A REVIV AFFILIATE",
+            "title_color": "#ffffff"
+          }
+        },
+        "button_zk9L8A": {
+          "type": "button",
+          "settings": {
+            "button_label": "JOIN NOW",
+            "button_id": "",
+            "button_link": "mailto:affiliates@getreviv.com"
+          }
+        }
+      },
+      "block_order": [
+        "heading_4fLhCA",
+        "button_zk9L8A"
+      ],
+      "name": "Free Trial Section",
+      "settings": {
+        "back_color": "#232021",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": "aff-trial-sec"
+      }
+    },
+    "multicolumn_MUEPEa": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_ECb9BQ": {
+          "type": "column",
+          "settings": {
+            "text_top": "",
+            "image": "shopify://shop_images/bank-note-01.png",
+            "title": "High Commission Potential",
+            "text": "<p>Earn 20% commission on sales of all our mouthguards and accessories.</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_JQra3e": {
+          "type": "column",
+          "settings": {
+            "text_top": "",
+            "image": "shopify://shop_images/face-happy.png",
+            "title": "50,000+ Happy Customers",
+            "text": "<p>Trusted over 15,000 customers, with real customers reporting better sleep, less clenching, improved posture, and clearer focus.</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_T4L7FR": {
+          "type": "column",
+          "settings": {
+            "text_top": "",
+            "image": "shopify://shop_images/beaker-02.png",
+            "title": "An Impactful Product",
+            "text": "<p>The Reviv mouthguard touches on and improves pretty much everything that is important to humans: our health, how we look, our relationships, how we function, and more.</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_UYJrq4": {
+          "type": "column",
+          "settings": {
+            "text_top": "",
+            "image": "shopify://shop_images/headphones-01.png",
+            "title": "A Unique, High Quality Product",
+            "text": "<p>We are pretty confident that our mouthguards are the best of their kind that are available direct to consumer.  Plus they are far cheaper than brands like Myobrace and Toothpillow that are only available through dentists.</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        }
+      },
+      "block_order": [
+        "column_ECb9BQ",
+        "column_JQra3e",
+        "column_T4L7FR",
+        "column_UYJrq4"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Why Promote Reviv?",
+        "box_link": false,
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "section_color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 64,
+        "padding_bottom": 36,
+        "custom_class": "aff-multicolumn"
+      }
+    },
+    "multicolumn_8zN4LJ": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_LVgk8R": {
+          "type": "column",
+          "settings": {
+            "text_top": "",
+            "image": "shopify://shop_images/package.png",
+            "title": "Home Delivery",
+            "text": "<ul><li>Available in 100+ countries and our mouthguard can be use comfortably at home or anywhere.</li></ul>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_ymgjLk": {
+          "type": "column",
+          "settings": {
+            "text_top": "",
+            "image": "shopify://shop_images/message-chat-circle.png",
+            "title": "Community Driven",
+            "text": "<p>Interact with thousands of others doing the process on our Skool community. Trade tips, insights, create relationships, and more!</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_9NFFtw": {
+          "type": "column",
+          "settings": {
+            "text_top": "",
+            "image": "shopify://shop_images/shield-tick.png",
+            "title": "Expert Support Included",
+            "text": "<ul><li>If customer brought support package, they get direct access to Ken, where he tracks your journal weekly and offers advice, plus you get onboarding, direct messaging access, and a strong patient network.</li><li>Full access to video guidance and community camaraderie.</li></ul>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        }
+      },
+      "block_order": [
+        "column_LVgk8R",
+        "column_ymgjLk",
+        "column_9NFFtw"
+      ],
+      "custom_css": [],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "What Makes REVIV Stand Out?",
+        "box_link": false,
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "section_color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 64,
+        "padding_bottom": 48,
+        "custom_class": "aff-multi-centered"
+      }
+    },
+    "how_it_works_KyDDQf": {
+      "type": "how-it-works",
+      "blocks": {
+        "step_qiEJj3": {
+          "type": "step",
+          "settings": {
+            "step_number": "1",
+            "step_title": "Step 1: Click the 'Join Now' button",
+            "step_text": "<ul><li>Send us an email at affiliates@getreviv.com with your name, country, background, and a short note on why you'd like to join the affiliate program.</li></ul>",
+            "pill_content": ""
+          }
+        },
+        "step_peiR4H": {
+          "type": "step",
+          "settings": {
+            "step_number": "2",
+            "step_title": "Step 2: Onboarding",
+            "step_text": "<ul><li>Our team will reach out to guide you through the onboarding process and provide your unique affiliate links.</li></ul>",
+            "pill_content": ""
+          }
+        },
+        "step_CkcGQk": {
+          "type": "step",
+          "settings": {
+            "step_number": "3",
+            "step_title": "Step 3: Promote Reviv products",
+            "step_text": "<ul><li>Start sharing your affiliate link while promoting our flagship products — R1 and R2 mouthguards — on your content channels, website, or social media.</li></ul>",
+            "pill_content": ""
+          }
+        },
+        "step_WLe9UK": {
+          "type": "step",
+          "settings": {
+            "step_number": "4",
+            "step_title": "Step 4: Earn commission",
+            "step_text": "<ul><li>We pay to your Paypal or Wise account by the end of the first week of the following month.  </li><li>For example we pay for your March sales by April 7.</li></ul>",
+            "pill_content": ""
+          }
+        }
+      },
+      "block_order": [
+        "step_qiEJj3",
+        "step_peiR4H",
+        "step_CkcGQk",
+        "step_WLe9UK"
+      ],
+      "name": "How It Works",
+      "settings": {
+        "heading": "How does it work?",
+        "color_scheme": "",
+        "section_color_scheme": "",
+        "pills_enabled": false,
+        "switch_direction": false
+      }
+    },
+    "rich_text_tWkWFq": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_tJRrHX": {
+          "type": "heading",
+          "settings": {
+            "heading": "Ready to Launch a Meaningful Collab?",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_tJRrHX"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": false,
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "custom__class": "aff-rich-heading"
+      }
+    },
+    "image_with_text_VDb3UW": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_9WaT7D": {
+          "type": "heading",
+          "settings": {
+            "heading": "Be an Affiliate with Purpose",
+            "heading_size": "h1"
+          }
+        },
+        "text_7NE8QT": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This isn’t just an affiliate gig, it’s a health and wellness movement. Empower your audience, promote with integrity, and earn as they transform.</p>",
+            "text_style": "body",
+            "text_size": "medium",
+            "show_below_image": false
+          }
+        },
+        "button_RfQMdD": {
+          "type": "button",
+          "settings": {
+            "button_label": "JOIN NOW",
+            "button_link": "mailto:affiliates@getreviv.com",
+            "button_style_secondary": false,
+            "button_style_purchase": false,
+            "full_width_button": false,
+            "custom_buy_btns": false,
+            "purchase_btn_text": "",
+            "button_1_text": "",
+            "button_1_url": "",
+            "button_2_text": "",
+            "button_2_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_9WaT7D",
+        "text_7NE8QT",
+        "button_RfQMdD"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/image.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-91d299fe-08de-45b7-8ffd-78080b0e86fe",
+        "wrap_image_to_container": false,
+        "image_behavior": "none",
+        "mobile_content_order": "column",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom__class": "aff-img-w-txt"
+      }
+    },
+    "collapsible_content_rcwa6M": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_BUnWrU": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the Reviv's affiliate program?",
+            "icon": "lightning_bolt",
+            "row_content": "<p>The Reviv Affiliate Program lets you earn commissions by promoting our products: R1 and R2 mouthguards through your content, website, or social media. You help others improve their health and get paid for it.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_xDCMtJ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I join?",
+            "icon": "lightning_bolt",
+            "row_content": "<ol><li>Click <strong>“Join Now”</strong> on this page. It will open an email to <a href=\"mailto:affiliates@getreviv.com\" target=\"_blank\">affiliates@getreviv.com</a>.</li><li>Just let us know you’re interested in joining, and we’ll guide you through the process.</li></ol>",
+            "page": ""
+          }
+        },
+        "collapsible_row_CLEUqJ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How does the program work?",
+            "icon": "lightning_bolt",
+            "row_content": "<ol><li>Once you're approved, you'll receive your own <strong>unique affiliate link</strong>.</li><li>Share this link with your audience. Every time someone purchases through it, you’ll earn a commission.</li></ol>",
+            "page": ""
+          }
+        },
+        "collapsible_row_4DFcB9": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What products can I promote?",
+            "icon": "lightning_bolt",
+            "row_content": "<p>You can promote our flagship offerings:</p><ol><li><strong>R1 Mouthguard</strong></li><li><strong>R2 Mouthguard</strong></li><li><strong>Reviv Community Subscriptions</strong></li></ol>",
+            "page": ""
+          }
+        },
+        "collapsible_row_kmrrhe": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How much commission can I earn?",
+            "icon": "lightning_bolt",
+            "row_content": "<ul><li>We calculate commissions based on monthly sales.</li><li>Earn 20% commission on all sales.</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_row_CCXy8y": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "When and how do I get paid?",
+            "icon": "check_mark",
+            "row_content": "<ol><li>We pay once a month via your preferred method:</li><li>Paypal, Wise, UPI or Crypto (by request)</li></ol>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_BUnWrU",
+        "collapsible_row_xDCMtJ",
+        "collapsible_row_CLEUqJ",
+        "collapsible_row_4DFcB9",
+        "collapsible_row_kmrrhe",
+        "collapsible_row_CCXy8y"
+      ],
+      "custom_css": [
+        ".icon-accordion {display: none;}",
+        ".accordion__title {font-size: 1.5em; letter-spacing: 0.02em; font-family: Roboto !important; line-height: 100%; padding-top: 12px; color: #212121 !important;}",
+        "h2:hover {text-decoration: none;}",
+        ".accordion__content {padding-left: 0;}",
+        "p {color: #232021; letter-spacing: -0.02em; font-weight: 400; font-size: 24px; line-height: 150%; padding-left: 16px;}",
+        ".collapsible-content__heading {color: #232021 !important; display: block; color: rgba(239, 201, 139, 1); font-family: Cardillac, serif; padding-bottom: 16px;}"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "scheme-1",
+        "container_color_scheme": "scheme-1",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": "aff-faq"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_GqUe4Y",
+    "free_trial_eLt6Gg",
+    "multicolumn_MUEPEa",
+    "multicolumn_8zN4LJ",
+    "how_it_works_KyDDQf",
+    "rich_text_tWkWFq",
+    "image_with_text_VDb3UW",
+    "collapsible_content_rcwa6M"
+  ]
+}

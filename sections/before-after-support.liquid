@@ -1,0 +1,357 @@
+{%- style -%}
+  .before-after-support {
+    background: #000000;
+    color: #ffffff;
+    padding: 64px 0;
+    border-bottom: 1px solid rgba(226, 192, 137, 0.6);
+  }
+
+  .before-after-support__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .before-after-support__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 460px);
+    gap: 42px;
+    align-items: center;
+  }
+
+  .before-after-support__title {
+    margin: 0;
+    font-size: clamp(30px, 4.2vw, 54px);
+    line-height: 1.05;
+    font-weight: 800;
+    color: #ffffff;
+  }
+
+  .before-after-support__lead {
+    margin: 16px 0 0;
+    font-size: 15px;
+    line-height: 1.45;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 700;
+  }
+
+  .before-after-support__list {
+    margin: 14px 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 10px;
+  }
+
+  .before-after-support__list-item {
+    display: grid;
+    grid-template-columns: 14px 1fr;
+    gap: 10px;
+    align-items: start;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 15px;
+    line-height: 1.45;
+  }
+
+  .before-after-support__dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.8);
+    margin-top: 9px;
+  }
+
+  .before-after-support__media {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #0b1630;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  }
+
+  .before-after-support__media-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .before-after-support__media-link {
+    display: block;
+    position: relative;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    text-align: inherit;
+  }
+
+  .before-after-support__media-link img,
+  .before-after-support__media-link svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .before-after-support__play {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+  }
+
+  .before-after-support__play-circle {
+    width: 72px;
+    height: 72px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.46);
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    display: grid;
+    place-items: center;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+  }
+
+  .before-after-support__play-circle svg {
+    width: 26px;
+    height: 26px;
+    margin-left: 4px;
+    display: block;
+    fill: #ffffff;
+  }
+
+  .before-after-support__inline-player {
+    position: absolute;
+    inset: 0;
+    display: none;
+    background: #000;
+  }
+
+  .before-after-support__inline-player iframe,
+  .before-after-support__inline-player video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 0;
+  }
+
+  .before-after-support__media-frame.is-playing .before-after-support__inline-player {
+    display: block;
+  }
+
+  .before-after-support__media-frame.is-playing .before-after-support__media-link {
+    visibility: hidden;
+  }
+
+  @media (max-width: 900px) {
+    .before-after-support {
+      padding: 48px 0;
+    }
+
+    .before-after-support__grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  }
+{%- endstyle -%}
+
+<section class="before-after-support" id="BeforeAfterSupport-{{ section.id }}" role="region" aria-label="Support add-on">
+  <div class="before-after-support__inner">
+    <div class="before-after-support__grid">
+      <div class="before-after-support__content">
+        {%- if section.settings.title != blank -%}
+          <h2 class="before-after-support__title">{{ section.settings.title }}</h2>
+        {%- endif -%}
+
+        {%- if section.settings.lead != blank -%}
+          <div class="before-after-support__lead">{{ section.settings.lead }}</div>
+        {%- endif -%}
+
+        {%- if section.blocks.size > 0 -%}
+          <ul class="before-after-support__list">
+            {%- for block in section.blocks -%}
+              {%- if block.settings.text != blank -%}
+                <li class="before-after-support__list-item" {{ block.shopify_attributes }}>
+                  <span class="before-after-support__dot" aria-hidden="true"></span>
+                  <span>{{ block.settings.text }}</span>
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+      </div>
+
+      <div class="before-after-support__media">
+        <div class="before-after-support__media-frame" data-before-after-support-frame>
+          <button class="before-after-support__media-link" type="button" data-before-after-support-trigger>
+            {%- if section.settings.image != blank -%}
+              {{ section.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', sizes: '(min-width: 990px) 460px, 90vw' }}
+            {%- else -%}
+              {{ 'lifestyle-1' | placeholder_svg_tag }}
+            {%- endif -%}
+
+            <span class="before-after-support__play" aria-hidden="true">
+              <span class="before-after-support__play-circle">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 7.5v9l8-4.5-8-4.5z" />
+                </svg>
+              </span>
+            </span>
+          </button>
+
+          <div class="before-after-support__inline-player" data-before-after-support-player></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    const sectionId = "{{ section.id }}";
+    const videoUrl = {{ section.settings.video_url | json }};
+
+    function isDirectVideo(url) {
+      return /\.(mp4|webm|mov)(\?.*)?$/i.test(url || "");
+    }
+
+    function youtubeEmbed(url) {
+      const m = (url || "").match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([A-Za-z0-9_-]{6,})/);
+      if (!m) return null;
+      return "https://www.youtube.com/embed/" + m[1] + "?autoplay=1&rel=0";
+    }
+
+    function vimeoEmbed(url) {
+      const m = (url || "").match(/vimeo\.com\/(?:video\/)?(\d+)/);
+      if (!m) return null;
+      return "https://player.vimeo.com/video/" + m[1] + "?autoplay=1";
+    }
+
+    function mountInline(root) {
+      const frame = root.querySelector("[data-before-after-support-frame]");
+      const player = root.querySelector("[data-before-after-support-player]");
+      if (!frame || !player) return;
+      if (!videoUrl) return;
+
+      if (frame.classList.contains("is-playing")) return;
+
+      player.innerHTML = "";
+      if (isDirectVideo(videoUrl)) {
+        const v = document.createElement("video");
+        v.src = videoUrl;
+        v.controls = true;
+        v.autoplay = true;
+        v.playsInline = true;
+        player.appendChild(v);
+      } else {
+        const yt = youtubeEmbed(videoUrl);
+        const vm = vimeoEmbed(videoUrl);
+        const src = yt || vm || videoUrl;
+        const iframe = document.createElement("iframe");
+        iframe.src = src;
+        iframe.allow = "autoplay; fullscreen; picture-in-picture";
+        iframe.allowFullscreen = true;
+        player.appendChild(iframe);
+      }
+
+      frame.classList.add("is-playing");
+    }
+
+    function init() {
+      const root = document.getElementById("BeforeAfterSupport-" + sectionId);
+      if (!root) return;
+
+      if (root.dataset.beforeAfterSupportInit === "1") return;
+      root.dataset.beforeAfterSupportInit = "1";
+
+      const trigger = root.querySelector("[data-before-after-support-trigger]");
+      if (!trigger) return;
+
+      trigger.addEventListener("click", function () {
+        mountInline(root);
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", init);
+    document.addEventListener("shopify:section:load", init);
+    init();
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "BA Support",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Should you add support to your purchase?"
+    },
+    {
+      "type": "text",
+      "id": "lead",
+      "label": "Intro line",
+      "default": "Support includes 12 months of:"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Media image"
+    },
+    {
+      "type": "url",
+      "id": "video_url",
+      "label": "Video link (optional)"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Access to Skool community which also has 60+ instructional videos"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "BA Support",
+      "blocks": [
+        {
+          "type": "item"
+        },
+        {
+          "type": "item",
+          "settings": {
+            "text": "Weekly topical group calls led by Ken"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "text": "Ability to DM Ken on the Skool platform anytime"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "text": "Maintain a journal that Ken will check and comment on weekly"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,102 @@
+
+    
+{% if product != blank and product.id %}
+    {% assign featured_image = product.media | first %}
+    <div class="swiper-slide product-card {{ class }}" style="display:none" data-category="{{category}}">
+    <a href="{{ product.url }}" class="product-card__link">
+        <div class="product-card-image-wrapper">
+        {% if featured_image %}
+            {{
+            featured_image
+            | image_url: width: 1200
+            | image_tag: alt: product.title, class: 'product-card__image', loading: 'lazy'
+            }}
+        {% else %}
+            <div style="width:100%;height:100%;background:#eee;display:flex;align-items:center;justify-content:center;">
+            <span>No Image</span>
+            </div>
+        {% endif %}
+
+        {% if block.settings.is_new %}
+            <div class="product-card__badge-wrapper">
+            {{ 'new-badge.png' | file_url | img_tag: 'New Badge image' }}
+            </div>
+        {% endif %}
+        </div>
+
+        <div class="product-card__title">
+        {{ product.title }}
+        </div>
+
+        <!-- ✅ Presentment-currency price (no hardcoded USD) -->
+        {%- liquid
+            if settings.currency_code_enabled
+            assign formatted_price = product.first_available_variant.price | money_with_currency
+            else
+            assign formatted_price = product.first_available_variant.price | money
+            endif
+            if cart.currency.iso_code == 'EUR'
+            assign formatted_price = formatted_price | replace: ',', '.'
+            endif
+        -%}
+        <div class="product-card__price">{{ formatted_price }}</div>
+    </a>
+
+    <product-form
+        class="product-form"
+        data-section-id="{{ product.id }}"
+    >
+        {%- form 'product',
+        product,
+        id: product.id,
+        class: 'form',
+        novalidate: 'novalidate',
+        data-type: 'add-to-cart-form'
+        -%}
+        <input
+            type="hidden"
+            name="id"
+            value="{{ product.selected_or_first_available_variant.id }}"
+            {% if product.selected_or_first_available_variant.available == false
+            or quantity_rule_soldout
+            or product.selected_or_first_available_variant == null
+            %}
+            disabled
+            {% endif %}
+            class="product-variant-id"
+        >
+
+        <div class="product-form__buttons-wrapper product-form__buttons-wrapper--mobile-fixed">
+            <div class="product-form__buttons">
+            {%- liquid
+                assign check_against_inventory = true
+                if product.selected_or_first_available_variant.inventory_management != 'shopify' or product.selected_or_first_available_variant.inventory_policy == 'continue'
+                assign check_against_inventory = false
+                endif
+                if product.selected_or_first_available_variant.quantity_rule.min > product.selected_or_first_available_variant.inventory_quantity and check_against_inventory
+                assign quantity_rule_soldout = true
+                endif
+            -%}
+            <button
+                id="ProductSubmitButton-{{ product.id }}"
+                type="submit"
+                name="add"
+                class="product-form__submit add-to-cart__button"
+                {% if product.selected_or_first_available_variant.available == false
+                or quantity_rule_soldout
+                or product.selected_or_first_available_variant == null
+                %}
+                disabled
+                {% endif %}
+            >
+                <span> Add to Cart </span>
+                {%- render 'loading-spinner' -%}
+            </button>
+            </div>
+        </div>
+        {%- endform -%}
+    </product-form>
+    </div>
+{% endif %}
+ 
+    

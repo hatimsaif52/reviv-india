@@ -1,0 +1,219 @@
+{% schema %}
+{
+  "name": "Creator Partnership Hero",
+  "settings": [
+    {
+      "type": "text",
+      "id": "tagline",
+      "label": "Top Tagline",
+      "default": "CREATOR PARTNERSHIP PROGRAM"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Grow your audience."
+    },
+    {
+      "type": "text",
+      "id": "highlight",
+      "label": "Highlighted Line",
+      "default": "Earn while you sleep."
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "We put paid spend behind your existing posts — and pay you 10% of every sale your content drives. No extra work on your end."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Email us to apply →"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Right Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Creator Partnership Hero"
+    }
+  ]
+}
+{% endschema %}
+
+<section class="creator-hero">
+  <div class="creator-hero__wrapper">
+
+    <!-- LEFT CONTENT -->
+    <div class="creator-hero__content">
+      
+      <span class="tagline">{{ section.settings.tagline }}</span>
+
+      <h1>
+        {{ section.settings.heading }} <br>
+        <span class="highlight">{{ section.settings.highlight }}</span>
+      </h1>
+
+      <p>{{ section.settings.description }}</p>
+
+      <a href="{{ section.settings.button_link }}" class="cta-btn">
+        {{ section.settings.button_text }}
+      </a>
+
+    </div>
+
+    <!-- RIGHT IMAGE WITH FLOATING CARD -->
+    <div class="creator-hero__image">
+      {% if section.settings.main_image != blank %}
+        
+        <div class="insta-card">
+          <img src="{{ section.settings.main_image | image_url: width: 900 }}" alt="Hero">
+
+        </div>
+
+      {% endif %}
+    </div>
+
+  </div>
+</section>
+
+<style>
+.creator-hero {
+  background: radial-gradient(circle at center, #1a1a1a, #0a0a0a);
+  color: #fff;
+  padding: 100px 20px;
+  overflow: hidden;
+}
+
+.creator-hero__wrapper {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.creator-hero__content {
+  max-width: 520px;
+}
+
+.tagline {
+  display: inline-block;
+  border: 1px solid #6b5c3e;
+  color: #c9a96e;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.creator-hero h1 {
+  font-size: 52px;
+  line-height: 1.2;
+  color:#fff;
+  margin-bottom: 20px;
+}
+
+.creator-hero .highlight {
+  color: #c9a96e;
+  font-style: italic;
+}
+
+.creator-hero p {
+  color: #aaa;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: #c9a96e;
+  color: #000;
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #e0c48c;
+}
+
+/* IMAGE + FLOAT */
+.creator-hero__image {
+  position: relative;
+}
+
+/* Floating Card */
+.insta-card {
+  position: relative;
+  display: inline-block;
+  animation: floatCard 6s ease-in-out infinite;
+  transform: rotate(-3deg);
+}
+
+.insta-card img {
+  width: 100%;
+  display: block;
+}
+
+/* Glass Badge */
+.insta-badge {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  border: 1px solid rgba(255,255,255,0.2);
+  animation: floatBadge 5s ease-in-out infinite;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Animations */
+@keyframes floatCard {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-25px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes floatBadge {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .creator-hero__wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .creator-hero h1 {
+    font-size: 34px;
+  }
+
+  .insta-badge {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+</style>

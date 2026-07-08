@@ -1,0 +1,94 @@
+<section class="customer-stories">
+  {% if section.settings.heading != blank %}
+    <p>{{ section.settings.heading }}</p>
+  {% endif %}
+  {% if section.settings.subheading != blank %}
+    <h2>{{ section.settings.subheading }}</h2>
+  {% endif %}
+  {% if section.settings.description != blank %}
+    <p>{{ section.settings.description }}</p>
+  {% endif %}
+
+  <div class="customer-stories__list">
+    {% for block in section.blocks %}
+      <article class="customer-stories__item" {{ block.shopify_attributes }}>
+        <h3>{{ block.settings.name }}</h3>
+        <p>{{ block.settings.story }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+{% stylesheet %}
+  .customer-stories {
+    padding: 24px 20px;
+  }
+
+  .customer-stories__list {
+    display: grid;
+    gap: 12px;
+  }
+
+  .customer-stories__item {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 14px;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Customer stories",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "User stories"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "In their own words"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "story",
+      "name": "Story",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name",
+          "default": "Customer name"
+        },
+        {
+          "type": "textarea",
+          "id": "story",
+          "label": "Story",
+          "default": "Customer story text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Customer stories",
+      "blocks": [
+        {
+          "type": "story"
+        },
+        {
+          "type": "story"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

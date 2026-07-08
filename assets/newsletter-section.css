@@ -1,0 +1,136 @@
+.newsletter__wrapper {
+  padding-right: calc(4rem / var(--font-body-scale));
+  padding-left: calc(4rem / var(--font-body-scale));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+
+@media screen and (min-width: 750px) {
+  .newsletter__wrapper {
+    padding-right: 9rem;
+    padding-left: 9rem;
+  }
+}
+
+.newsletter__wrapper > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.newsletter__wrapper > * + * {
+  margin-top: 2rem;
+}
+
+.newsletter__wrapper > * + .newsletter-form {
+  margin-top: 3rem;
+}
+
+.newsletter__subheading {
+  max-width: 70rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 16px;
+}
+
+.newsletter__wrapper .newsletter-form__field-wrapper {
+  max-width: 36rem;
+  padding-top: 16px;
+}
+
+.newsletter-form__field-wrapper .newsletter-form__message {
+  margin-top: 1.5rem;
+}
+
+.newsletter__button {
+  margin-top: 3rem;
+  width: fit-content;
+}
+
+.newsletter__image {
+  display: flex;
+  align-items: center;
+}
+
+.newsletter__details h2 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.newsletter__wrapper {
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 16px;
+  }
+
+  .social-links a {
+    display: inline-flex;
+    align-items: center;
+    color: #e5c085;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 0.5rem;
+  }
+
+  .social-links a:hover {
+    color: #e5c085;
+  }
+
+  .social-links svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .social-links span {
+    padding-left: 0.5rem;
+  }
+}
+
+.newsletter-form__field-wrapper {
+  .newsletter-form__button {
+    background-color: #e5c085 !important;
+    padding: 12px;
+    border-radius: 12px;
+    height: auto;
+    top: 4px;
+    right: 4px;
+    width: auto;
+    color: black;
+    font-weight: bold;
+  }
+  .field__input {
+    border: rgba(239, 201, 139, 0.6);
+    background-color: rgba(239, 201, 139, 0.04);
+  }
+  .field__label {
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .newsletter__button {
+    flex-shrink: 0;
+    margin: 0 0 0 1rem;
+  }
+  .newsletter__wrapper {
+    flex-direction: row;
+
+    .social-links {
+      justify-content: start;
+    }
+    .social-links svg {
+      width: 72px;
+      height: 72px;
+    }
+  }
+  .newsletter__details {
+    text-align: left;
+  }
+  form#contact_form {
+    margin: 0;
+    padding: 12px 0;
+  }
+}

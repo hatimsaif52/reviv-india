@@ -1,0 +1,1292 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "product_navbar_7EB9E4": {
+      "type": "product-navbar",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "judge_me_reviews_preview_badge_EAUeai": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+            "quantity_style": "default"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "custom_liquid_zeyt9h": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<p style=\"font-size:14px; margin:0; padding:0; color:yellow; text-align:center;\">\n    ★★★★★ Google Reviews\n</p>"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "custom_liquid_twdagK": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div dark-mode id=\"truemed-instructions\" style=\"font-size: 14px;\" icon-height=\"12\" data-public-id=\"tm_qual_mw7eoyby3p\"></div>\n<script src=\"https://static.truemed.com/widgets/product-page-widget.min.js\" defer></script>"
+          }
+        },
+        "custom_liquid_aFheq7": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"testimonial-card\">\n      <div class=\"testimonial-header\">\n        <div class=\"profile\">\n          <img class=\"profile-image\" width=\"100\" height=\"100\" src=\"{{ 'andrew-testimonial.png' | asset_url }}\" alt=\"Andrew from SKOOL Community\">\n          <strong class=\"profile-name\">Andrew</strong>\n        </div>\n        <div class=\"brand-logo\">\n          <span class=\"logo-letter logo-s\">s</span>\n          <span class=\"logo-letter logo-k\">k</span>\n          <span class=\"logo-letter logo-o1\">o</span>\n          <span class=\"logo-letter logo-o2\">o</span>\n          <span class=\"logo-letter logo-l\">l</span>\n        </div>\n      </div>\n      <blockquote class=\"testimonial-quote\">\n        \"Structurally and neurologically I feel so much better after I started the Reviv.\"\n      </blockquote>\n    </div>\n\n{% style %}\n.testimonial-card {\ntext-align: left !important;\n background: #242424 !important;\n  border: 1px solid #3D3A3B !important;\n  border-radius: 32px;\n  padding: 2rem;\n  position: relative;\n}\n\n.testimonial-header {\n  display: flex;\n  align-items: flex-start;\n  justify-content: space-between;\n  margin-bottom: 2rem;\n}\n\n.profile {\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n}\n\n.profile-image {\n  width: 4rem;\n  height: 4rem;\n  border-radius: 50%;\n  object-fit: cover;\n}\n\n.profile-name {\n  color: white;\n  font-size: 1.875rem;\n  font-weight: 600;\n}\n\n.brand-logo {\n  font-size: 2.25rem;\n  font-weight: 700;\n}\n\n.logo-letter {\n  font-weight: bold;\n}\n\n.logo-s {\n  color: #1b3bdb;\n}\n\n.logo-k {\n  color: #db1b1b;\n}\n\n.logo-o1 {\n  color: #dbc31b;\n}\n\n.logo-o2 {\n  color: #1bdbdb;\n}\n\n.logo-l {\n  color: #db1b1b;\n}\n\n.testimonial-quote {\n  color: rgba(255, 255, 255, 0.8);\n  font-weight: 400;\n  font-size: 16px;\n  letter-spacing: -0.02em;\n  line-height: 1.3;\n  font-style: normal;\n  border: none;\n  padding: 0;\n  margin: 0;\n}\n\n/* Responsive styles */\n@media (max-width: 640px) {\n  .testimonial-card {\n    padding: 1.5rem;\n  }\n\n  .profile-name,\n  .testimonial-quote {\n    font-size: 1.5rem;\n  }\n\n  .brand-logo {\n    font-size: 1.875rem;\n  }\n\n  .profile-image {\n    width: 3rem;\n    height: 3rem;\n  }\n}\n{% endstyle %}"
+          }
+        },
+        "custom_liquid_4YiTcD": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<p style=\"font-size:14px; margin:0; padding:0; color:white; text-align:center;\">\n    <span style=\"height:8px; width:8px; background-color:green; border-radius:50%; display:inline-block; animation:blinking 1.5s infinite;\"></span>\n    <span style=\"color:green;\">Note:</span> Only <span style=\"font-weight:bold;\">7</span> units left in stock\n</p>\n\n<style>\n@keyframes blinking {\n    0% { opacity: 1.0; }\n    50% { opacity: 0.0; }\n    100% { opacity: 1.0; }\n}\n</style>"
+          }
+        },
+        "icon_with_text_cbe7i6": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "center_content": false,
+            "icon_1": "heart",
+            "heading_1": "<strong>Trusted by 30k+ Customers</strong>",
+            "icon_2": "lock",
+            "heading_2": "<strong>Secure Checkout</strong>",
+            "icon_3": "return",
+            "heading_3": ""
+          }
+        },
+        "custom_liquid_pQTFXY": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<h3>Frequently Asked Questions</h3>\n<style>h3{margin-bottom:0;}</style>"
+          }
+        },
+        "collapsible_tab_bETJ9W": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How it works?",
+            "icon": "question_mark",
+            "content": "<ul><li>Wear the mouthguard every night. Short daytime sessions of 1–2 hours can also support consistent use.</li><li>The flat-plane design provides stable vertical jaw support without locking the bite, allowing the jaw to rest more naturally during sleep.</li><li>You get 1 year of access to our Skool community where you have direct access to Ken and hundreds of others going through the same process.</li><li>Ken provides personalised support by checking your progress journal weekly.</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_PmmWBf": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping Information",
+            "icon": "truck",
+            "content": "<ul><li>Shipping typically takes 7-10 days to most destinations including the US. More remote countries can take longer.</li><li>Orders typically ship within 48 hours and you will receive a tracking number by email as soon as it ships.</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_MdA9x7": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Our Guarantee",
+            "icon": "heart",
+            "content": "<p>If you wear the appliance consistently and don't agree that your health issues are improving in the first 90 days we give you your money back. See terms <a href=\"https://getreviv.com/pages/our-guarantee\" title=\"Our Guarantee\">here</a></p>",
+            "page": ""
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_preview_badge_EAUeai",
+        "vendor",
+        "title",
+        "price",
+        "quantity_selector",
+        "variant_picker",
+        "custom_liquid_zeyt9h",
+        "buy_buttons",
+        "custom_liquid_twdagK",
+        "custom_liquid_aFheq7",
+        "custom_liquid_4YiTcD",
+        "icon_with_text_cbe7i6",
+        "custom_liquid_pQTFXY",
+        "collapsible_tab_bETJ9W",
+        "collapsible_tab_PmmWBf",
+        "collapsible_tab_MdA9x7",
+        "description",
+        "share"
+      ],
+      "custom_css": [
+        "/* .product__title h1 {color: #e5c085;} */.icon-with-text .icon {fill: #e5c085;}",
+        ".icon-accordion {fill: #e5c085;}",
+        ".icon-caret {fill: #e5c085;}",
+        ".product__media img,.thumbnail.global-media-settings img {border-radius: 10px;}",
+        ".icon-with-text--horizontal .icon-with-text__item {width: 50%; background: #242424; padding: 12px 20px; border-radius: 20px; border: 1px solid #3d3a3b;}"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "show_sold_alert": true,
+        "color_scheme": "scheme-4",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "hover",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "show_benefits": false
+      }
+    },
+    "custom_liquid_c9KcdA": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "{% assign video_url = 'https://cdn.shopify.com/videos/c/o/v/d973ca43a4de4b7dbd6d68fb2f812f19.mp4' %}\n<div class=\"video-wrapper\">\n<h2 class=\"h1 color-{{ section.settings.color_scheme }}\">HOW REVIV WORKS</h2>\n<div class=\"video-container\">\n<video controls width=\"100%\" preload=\"auto\" autoplay loop muted controls=\"false\">\n  <source src=\"{{ video_url | media }}\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</video></div></div>\n\n<style>\n.video-wrapper {\n    display: flex;\n    width: 100%;\n    flex-direction: column;\n    justify-items: center;\n    align-content: center;\n    align-items: center;\n    padding-left: 16px;\n    padding-right: 16px;\n    max-width: 1050px;\n    margin: 0 auto;\n}\n\n.video-container {\n    position: relative;\n    padding-bottom: 56.25%;\n    height: 0;\n    max-width: 1050px;\n    display: flex;\n    justify-content: center;\n    flex-wrap: nowrap;\n    flex-direction: column;\n    align-items: center;\n    width: 100%;\n    margin: 0 auto;\n    border-radius: 12px;\n    overflow: hidden;\n}\n\n.video-container video {\n    position: absolute;\n    inset: 0;\n    width: 100%;\n    height: 100%;\n    max-width: 1200px;\n}\n</style>",
+        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "padding_top": 40,
+        "padding_bottom": 8
+      }
+    },
+    "rich_text_Lyxah9": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_LkTjBX": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Problem",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_LkTjBX"
+      ],
+      "custom_css": [
+        ".rich-text__wrapper {max-width: 1050px; padding: 0 1em;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-716b1c4a-8f77-44b3-b0ef-264afbd35f50",
+        "full_width": true,
+        "padding_top": 44,
+        "padding_bottom": 16,
+        "custom__class": ""
+      }
+    },
+    "image_with_text_Bb4P3V": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_rj3ACf": {
+          "type": "heading",
+          "settings": {
+            "heading": "People today are having more physical and mental health issues than ever before",
+            "heading_size": "h2"
+          }
+        },
+        "text_with_icon_KWm9Gx": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "Postural issues",
+            "icon": "shopify://shop_images/check_gold_188bdbb7-7481-45a4-98f2-73f78fdd9f75.png",
+            "icon_position": "start",
+            "text_style": "body",
+            "alignment": "left",
+            "show_below_image": false
+          }
+        },
+        "text_with_icon_UTPtQk": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "Depression and Anxiety",
+            "icon": "shopify://shop_images/check_gold_188bdbb7-7481-45a4-98f2-73f78fdd9f75.png",
+            "icon_position": "start",
+            "text_style": "body",
+            "alignment": "left",
+            "show_below_image": false
+          }
+        },
+        "text_with_icon_9iRQhF": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "Chronic fatigue and poor energy",
+            "icon": "shopify://shop_images/check_gold_188bdbb7-7481-45a4-98f2-73f78fdd9f75.png",
+            "icon_position": "start",
+            "text_style": "body",
+            "alignment": "left",
+            "show_below_image": false
+          }
+        },
+        "text_with_icon_LW9YeG": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "ADHD, OCD, etc.",
+            "icon": "shopify://shop_images/check_gold_188bdbb7-7481-45a4-98f2-73f78fdd9f75.png",
+            "icon_position": "start",
+            "text_style": "body",
+            "alignment": "left",
+            "show_below_image": false
+          }
+        },
+        "text_with_icon_dFB6nQ": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "Obesity",
+            "icon": "shopify://shop_images/check_gold_188bdbb7-7481-45a4-98f2-73f78fdd9f75.png",
+            "icon_position": "start",
+            "text_style": "body",
+            "alignment": "left",
+            "show_below_image": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_rj3ACf",
+        "text_with_icon_KWm9Gx",
+        "text_with_icon_UTPtQk",
+        "text_with_icon_9iRQhF",
+        "text_with_icon_LW9YeG",
+        "text_with_icon_dFB6nQ"
+      ],
+      "custom_css": [
+        "image-with-text__media {border-radius: 10px; padding-bottom: 350px !important;}",
+        ".image-with-text__media img {border-radius: 10px; height: 350px; object-fit: cover;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Image1_1582cdc1-3a23-4b49-8d7b-9f7679251b37.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-716b1c4a-8f77-44b3-b0ef-264afbd35f50",
+        "color_scheme": "scheme-716b1c4a-8f77-44b3-b0ef-264afbd35f50",
+        "wrap_image_to_container": false,
+        "image_behavior": "none",
+        "mobile_content_order": "column",
+        "mobile_content_alignment": "left",
+        "padding_top": 24,
+        "padding_bottom": 16,
+        "custom__class": "pdp-v2-img-text"
+      }
+    },
+    "image_with_text_fWRpH9": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_pXcf7z": {
+          "type": "heading",
+          "settings": {
+            "heading": "The traditional ways of fighting these things is falling way short",
+            "heading_size": "h2"
+          }
+        },
+        "text_with_icon_MDmmzT": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "Pharmaceuticals",
+            "icon": "shopify://shop_images/check_gold_188bdbb7-7481-45a4-98f2-73f78fdd9f75.png",
+            "icon_position": "start",
+            "text_style": "body",
+            "alignment": "left",
+            "show_below_image": false
+          }
+        },
+        "text_with_icon_kJVTW6": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "Diet / Eating healthy",
+            "icon": "shopify://shop_images/check_gold_188bdbb7-7481-45a4-98f2-73f78fdd9f75.png",
+            "icon_position": "start",
+            "text_style": "body",
+            "alignment": "left",
+            "show_below_image": false
+          }
+        },
+        "text_with_icon_DMbGqd": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "Exercise",
+            "icon": "shopify://shop_images/check_gold_188bdbb7-7481-45a4-98f2-73f78fdd9f75.png",
+            "icon_position": "start",
+            "text_style": "body",
+            "alignment": "left",
+            "show_below_image": false
+          }
+        },
+        "text_with_icon_XjEGey": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "Medical procedures",
+            "icon": "shopify://shop_images/check_gold_188bdbb7-7481-45a4-98f2-73f78fdd9f75.png",
+            "icon_position": "start",
+            "text_style": "body",
+            "alignment": "left",
+            "show_below_image": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_pXcf7z",
+        "text_with_icon_MDmmzT",
+        "text_with_icon_kJVTW6",
+        "text_with_icon_DMbGqd",
+        "text_with_icon_XjEGey"
+      ],
+      "custom_css": [
+        "image-with-text__media {border-radius: 10px; padding-bottom: 350px !important;}",
+        ".image-with-text__media img {border-radius: 10px; height: 350px; object-fit: cover;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Image2_8ffe8f15-95f3-4c1c-9abf-cc0979add509.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-716b1c4a-8f77-44b3-b0ef-264afbd35f50",
+        "color_scheme": "scheme-716b1c4a-8f77-44b3-b0ef-264afbd35f50",
+        "wrap_image_to_container": false,
+        "image_behavior": "none",
+        "mobile_content_order": "column",
+        "mobile_content_alignment": "left",
+        "padding_top": 24,
+        "padding_bottom": 16,
+        "custom__class": "pdp-v2-img-text"
+      }
+    },
+    "image_with_text_NhKBPg": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_axfFiE": {
+          "type": "heading",
+          "settings": {
+            "heading": "We at Reviv believe that there might be a structural root cause",
+            "heading_size": "h2"
+          }
+        },
+        "text_with_icon_Ypy9db": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "There is essentially a set of physics that hold the body up and teeth play a critical role in this",
+            "icon": "shopify://shop_images/check_gold_188bdbb7-7481-45a4-98f2-73f78fdd9f75.png",
+            "icon_position": "start",
+            "text_style": "body",
+            "alignment": "left",
+            "show_below_image": false
+          }
+        },
+        "text_with_icon_4PT8yF": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "Because of these physics the skull can essentially collapse inwards due to changes in the teeth",
+            "icon": "shopify://shop_images/check_gold_188bdbb7-7481-45a4-98f2-73f78fdd9f75.png",
+            "icon_position": "start",
+            "text_style": "body",
+            "alignment": "left",
+            "show_below_image": false
+          }
+        },
+        "text_with_icon_UW77ej": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "The health of the skull is reflected by the quality of the curve of spee (how the upper and lower teeth come together)",
+            "icon": "shopify://shop_images/check_gold_188bdbb7-7481-45a4-98f2-73f78fdd9f75.png",
+            "icon_position": "start",
+            "text_style": "body",
+            "alignment": "left",
+            "show_below_image": false
+          }
+        },
+        "text_with_icon_DhgLhX": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "Orthodontics, extractions and grinding result in the flattening of this curve of spee",
+            "icon": "shopify://shop_images/check_gold_188bdbb7-7481-45a4-98f2-73f78fdd9f75.png",
+            "icon_position": "start",
+            "text_style": "body",
+            "alignment": "left",
+            "show_below_image": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_axfFiE",
+        "text_with_icon_Ypy9db",
+        "text_with_icon_4PT8yF",
+        "text_with_icon_UW77ej",
+        "text_with_icon_DhgLhX"
+      ],
+      "custom_css": [
+        "image-with-text__media {border-radius: 10px; padding-bottom: 350px !important;}",
+        ".image-with-text__media img {border-radius: 10px; height: 350px; object-fit: cover;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Image3_37154a95-7e67-422e-9c75-13854b2b64c8.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-716b1c4a-8f77-44b3-b0ef-264afbd35f50",
+        "color_scheme": "scheme-716b1c4a-8f77-44b3-b0ef-264afbd35f50",
+        "wrap_image_to_container": false,
+        "image_behavior": "none",
+        "mobile_content_order": "column",
+        "mobile_content_alignment": "left",
+        "padding_top": 24,
+        "padding_bottom": 40,
+        "custom__class": "pdp-v2-img-text"
+      }
+    },
+    "video_with_icon_text_UjUNfJ": {
+      "type": "video-with-icon-text",
+      "blocks": {
+        "bullet_BLAYDG": {
+          "type": "bullet",
+          "settings": {
+            "icon": "shopify://shop_images/check_gold_188bdbb7-7481-45a4-98f2-73f78fdd9f75.png",
+            "text": "<p>Deflating is what we believe causes aging, asymetry and is at the root cause of most disease</p>"
+          }
+        },
+        "bullet_VJKBp9": {
+          "type": "bullet",
+          "settings": {
+            "icon": "shopify://shop_images/check_gold_188bdbb7-7481-45a4-98f2-73f78fdd9f75.png",
+            "text": "<p>Inflating reverses all of those things and can be achieved with the help of a mouthguard</p>"
+          }
+        },
+        "bullet_8PtX3C": {
+          "type": "bullet",
+          "settings": {
+            "icon": "shopify://shop_images/check_gold_188bdbb7-7481-45a4-98f2-73f78fdd9f75.png",
+            "text": "<p>As the skull 'inflates' the curve of spee improves</p>"
+          }
+        }
+      },
+      "block_order": [
+        "bullet_BLAYDG",
+        "bullet_VJKBp9",
+        "bullet_8PtX3C"
+      ],
+      "name": "Video with icon text",
+      "settings": {
+        "heading": "We believe the skull can be inflated like a ball",
+        "heading_size": "h2",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/d973ca43a4de4b7dbd6d68fb2f812f19.mp4",
+        "color_scheme": "scheme-7bfe666f-6be9-46e3-88a6-1be40f4a8ea4",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": "pdp-v2-img-text"
+      }
+    },
+    "rich_text_RUwzBm": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_3MRQBW": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Solution",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_3MRQBW"
+      ],
+      "custom_css": [
+        ".rich-text__wrapper {max-width: 1050px; padding: 0 1em;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-716b1c4a-8f77-44b3-b0ef-264afbd35f50",
+        "full_width": true,
+        "padding_top": 44,
+        "padding_bottom": 16,
+        "custom__class": ""
+      }
+    },
+    "image_with_text_CzVVH9": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_7xXV8k": {
+          "type": "heading",
+          "settings": {
+            "heading": "A simple mouthguard addresses this structural collapse at its root cause",
+            "heading_size": "h2"
+          }
+        },
+        "text_with_icon_fChmn7": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "The mouthguard acts like a doorstop that prevents the jaw from closing",
+            "icon": "shopify://shop_images/check_gold_188bdbb7-7481-45a4-98f2-73f78fdd9f75.png",
+            "icon_position": "start",
+            "text_style": "body",
+            "alignment": "left",
+            "show_below_image": false
+          }
+        },
+        "text_with_icon_iTdYwY": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "This stretches the soft tissue in the mouth and covering the skull",
+            "icon": "shopify://shop_images/check_gold_188bdbb7-7481-45a4-98f2-73f78fdd9f75.png",
+            "icon_position": "start",
+            "text_style": "body",
+            "alignment": "left",
+            "show_below_image": false
+          }
+        },
+        "text_with_icon_TiQfV6": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "When the soft tissue stretches the skull inflates and the skeleton untwists",
+            "icon": "shopify://shop_images/check_gold_188bdbb7-7481-45a4-98f2-73f78fdd9f75.png",
+            "icon_position": "start",
+            "text_style": "body",
+            "alignment": "left",
+            "show_below_image": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_7xXV8k",
+        "text_with_icon_fChmn7",
+        "text_with_icon_iTdYwY",
+        "text_with_icon_TiQfV6"
+      ],
+      "custom_css": [
+        "image-with-text__media {border-radius: 10px; padding-bottom: 350px !important;}",
+        ".image-with-text__media img {border-radius: 10px; height: 350px; object-fit: cover;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Image5.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-716b1c4a-8f77-44b3-b0ef-264afbd35f50",
+        "color_scheme": "scheme-716b1c4a-8f77-44b3-b0ef-264afbd35f50",
+        "wrap_image_to_container": false,
+        "image_behavior": "none",
+        "mobile_content_order": "column",
+        "mobile_content_alignment": "left",
+        "padding_top": 24,
+        "padding_bottom": 16,
+        "custom__class": "pdp-v2-img-text"
+      }
+    },
+    "image_with_text_tfEMFw": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_wtk798": {
+          "type": "heading",
+          "settings": {
+            "heading": "The teeth correct as a function of the skull correcting",
+            "heading_size": "h2"
+          }
+        },
+        "text_with_icon_XfGUxq": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "The cranial bones move outwards into better symmetry, the jaw moves to where it should be",
+            "icon": "shopify://shop_images/check_gold_188bdbb7-7481-45a4-98f2-73f78fdd9f75.png",
+            "icon_position": "start",
+            "text_style": "body",
+            "alignment": "left",
+            "show_below_image": false
+          }
+        },
+        "text_with_icon_t8ceCm": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "The teeth are connected to the bones & jaw, and so they 'go for the ride' and straighten as a result",
+            "icon": "shopify://shop_images/check_gold_188bdbb7-7481-45a4-98f2-73f78fdd9f75.png",
+            "icon_position": "start",
+            "text_style": "body",
+            "alignment": "left",
+            "show_below_image": false
+          }
+        },
+        "text_with_icon_gmky4V": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "The body will function better and be stronger and more flexible as a result",
+            "icon": "shopify://shop_images/check_gold_188bdbb7-7481-45a4-98f2-73f78fdd9f75.png",
+            "icon_position": "start",
+            "text_style": "body",
+            "alignment": "left",
+            "show_below_image": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_wtk798",
+        "text_with_icon_XfGUxq",
+        "text_with_icon_t8ceCm",
+        "text_with_icon_gmky4V"
+      ],
+      "custom_css": [
+        "image-with-text__media {border-radius: 10px; padding-bottom: 350px !important;}",
+        ".image-with-text__media img {border-radius: 10px; height: 350px; object-fit: cover;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Image6.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-716b1c4a-8f77-44b3-b0ef-264afbd35f50",
+        "color_scheme": "scheme-716b1c4a-8f77-44b3-b0ef-264afbd35f50",
+        "wrap_image_to_container": false,
+        "image_behavior": "none",
+        "mobile_content_order": "column",
+        "mobile_content_alignment": "left",
+        "padding_top": 24,
+        "padding_bottom": 16,
+        "custom__class": "pdp-v2-img-text"
+      }
+    },
+    "multicolumn_neQRxw": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_PnBpT7": {
+          "type": "column",
+          "settings": {
+            "text_top": "Root cause of almost all disease",
+            "image": "shopify://shop_images/Rectangle_31.webp",
+            "title": "",
+            "text": "<p>Is disease a function of biomechanical collapse?</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_xRt3i3": {
+          "type": "column",
+          "settings": {
+            "text_top": "Root cause of aging",
+            "image": "shopify://shop_images/Rectangle_32.webp",
+            "title": "",
+            "text": "<p>If we don't collapse, maybe we don't die?</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_hPQUt8": {
+          "type": "column",
+          "settings": {
+            "text_top": "Root cause of beauty",
+            "image": "shopify://shop_images/Rectangle_33.webp",
+            "title": "",
+            "text": "<p>Can we look like a model if we take this to the end?</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        }
+      },
+      "block_order": [
+        "column_PnBpT7",
+        "column_xRt3i3",
+        "column_hPQUt8"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Reviv makes three big hypotheses about the future of biomechanics:",
+        "box_link": false,
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-716b1c4a-8f77-44b3-b0ef-264afbd35f50",
+        "section_color_scheme": "scheme-7bfe666f-6be9-46e3-88a6-1be40f4a8ea4",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": "pdp-v2-muticolumn"
+      }
+    },
+    "how_it_works_kfFXA8": {
+      "type": "how-it-works",
+      "blocks": {
+        "step_JdXy7K": {
+          "type": "step",
+          "settings": {
+            "step_number": "‎",
+            "step_title": "",
+            "step_text": "<ul><li>Likely some initial discomfort in the teeth and gums </li><li>May take a few nights to get used to sleeping with it</li></ul>",
+            "pill_content": "1 Week"
+          }
+        },
+        "step_jxBJre": {
+          "type": "step",
+          "settings": {
+            "step_number": "‎",
+            "step_title": "",
+            "step_text": "<ul><li>The mouthguard is starting to get more comfortable</li><li>You might notice some differences in how your teeth fit together</li><li>Many users find their jaw feels less tense in the mornings</li><li>You may notice you're waking up without the tight, clenched feeling</li></ul>",
+            "pill_content": "1 Month"
+          }
+        },
+        "step_Ph6rGF": {
+          "type": "step",
+          "settings": {
+            "step_number": "‎",
+            "step_title": "",
+            "step_text": "<ul><li>You will likely function better (concentration, ability to handle complexity, etc)</li><li>There's a good chance you have more energy and stamina than in years</li><li>You probably will look better than you have in years</li></ul>",
+            "pill_content": "1 Year"
+          }
+        },
+        "step_AbtrEb": {
+          "type": "step",
+          "settings": {
+            "step_number": "‎",
+            "step_title": "",
+            "step_text": "<ul><li>The mouthguard alone has plateaud but you're doing the 'fast method' stretches that are recommended in the community</li><li>Things just keep improving functionally and aesthetically</li><li>It seems almost difficult to get sick and you seem to be in a good mood naturally most of the time</li></ul>",
+            "pill_content": "2 Years"
+          }
+        },
+        "step_mkExXh": {
+          "type": "step",
+          "settings": {
+            "step_number": "‎",
+            "step_title": "",
+            "step_text": "<ul><li>You're playing for the 'end'</li><li>Does this process really go as far as this crazy guy, Ken, thinks it does?</li></ul>",
+            "pill_content": "Beyond 2 Years"
+          }
+        }
+      },
+      "block_order": [
+        "step_JdXy7K",
+        "step_jxBJre",
+        "step_Ph6rGF",
+        "step_AbtrEb",
+        "step_mkExXh"
+      ],
+      "custom_css": [
+        ".step-number {width: 22px; height: 22px;}",
+        "@media screen and (min-width: 768px) {.step-content-right, .step-content-left {padding: 0 12px; border-radius: 20px; } .step-content-right {text-align: left; }}",
+        "h2.section-title.title {padding-bottom: 20px; margin-top: 0px;}"
+      ],
+      "name": "How It Works - 2 Column",
+      "settings": {
+        "heading": "What should I expect from doing Reviv?",
+        "color_scheme": "scheme-716b1c4a-8f77-44b3-b0ef-264afbd35f50",
+        "section_color_scheme": "scheme-7bfe666f-6be9-46e3-88a6-1be40f4a8ea4",
+        "pills_enabled": true,
+        "switch_direction": true
+      }
+    },
+    "ss_how_to_use_Qxmd8A": {
+      "type": "ss-how-to-use",
+      "blocks": {
+        "step_HgqK83": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/R2-_1.gif",
+            "text": "Take it out of the box and wash it"
+          }
+        },
+        "step_zw84G4": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/R2-_2.gif",
+            "text": "Wear it to sleep and 2-3 hours during the day"
+          }
+        },
+        "step_rLn9gM": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/R2-_3.gif",
+            "text": "Wash it and let it dry"
+          }
+        }
+      },
+      "block_order": [
+        "step_HgqK83",
+        "step_zw84G4",
+        "step_rLn9gM"
+      ],
+      "name": "SS How to use",
+      "settings": {
+        "heading": "How to use",
+        "color_scheme": "scheme-7bfe666f-6be9-46e3-88a6-1be40f4a8ea4",
+        "padding_top": 20,
+        "padding_bottom": 36
+      }
+    },
+    "1769418126c8416a97": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_th8TNE": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_th8TNE"
+      ],
+      "custom_css": [
+        "{background: #232021;}"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "1769420153d2fd959a": {
+      "type": "apps",
+      "blocks": {
+        "shoppable_video_instagram_reel_app_block_Tp7d6H": {
+          "type": "shopify://apps/shoppable-video-instagram-reel/blocks/app-block/f19e5d4b-198e-478b-9f10-15eb1964910e",
+          "settings": {
+            "carousel_name": "Homepage 1"
+          }
+        }
+      },
+      "block_order": [
+        "shoppable_video_instagram_reel_app_block_Tp7d6H"
+      ],
+      "custom_css": [
+        "{background: #242424;}"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "substack_blog_BMDpyd": {
+      "type": "substack-blog",
+      "blocks": {
+        "column_aAMFJK": {
+          "type": "column",
+          "settings": {
+            "category": "",
+            "article_type": "",
+            "date": "",
+            "image": "shopify://shop_images/Imageb1.webp",
+            "title": "I Am Going to Challenge",
+            "text": "<p>Challenges traditional health views, introduces the balloon theory, and explores how dental health affects overall well-being.</p>",
+            "link_label": "Read more",
+            "link": "https://reviv.substack.com/p/i-am-going-to-challenge-what-you",
+            "youtube_video_url": ""
+          }
+        },
+        "column_wJbqdQ": {
+          "type": "column",
+          "settings": {
+            "category": "",
+            "article_type": "",
+            "date": "",
+            "image": "shopify://shop_images/Imageb2.webp",
+            "title": "The Balloon Theory",
+            "text": "<p>Explains how dental health impacts overall well-being by linking teeth to various health issues and introduces methods for addressing these connections.</p>",
+            "link_label": "Read post",
+            "link": "https://reviv.substack.com/p/so-why-do-the-teeth-relate-to-your",
+            "youtube_video_url": ""
+          }
+        },
+        "column_BRPMe7": {
+          "type": "column",
+          "settings": {
+            "category": "",
+            "article_type": "",
+            "date": "",
+            "image": "shopify://shop_images/Imageb3.webp",
+            "title": "How to Correct the Problem",
+            "text": "<p>Provides strategies for addressing dental health issues and correcting related problems for improved overall well-being.</p>",
+            "link_label": "Read post",
+            "link": "https://reviv.substack.com/p/how-to-solve-the-problem",
+            "youtube_video_url": ""
+          }
+        },
+        "column_J3eidb": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "category": "",
+            "article_type": "",
+            "date": "",
+            "image": "shopify://shop_images/article-4.png",
+            "title": "What Is Impacted by These Biomechanics?",
+            "text": "<p>Explores how dental biomechanics affect various aspects of health and well-being.</p>",
+            "link_label": "Read post",
+            "link": "https://reviv.substack.com/p/what-is-impacted-by-these-biomechanics",
+            "youtube_video_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_aAMFJK",
+        "column_wJbqdQ",
+        "column_BRPMe7",
+        "column_J3eidb"
+      ],
+      "custom_css": [
+        "h2 {text-align: center; color: #fff;}",
+        ".substack-blog .multicolumn-list h3 {color: #e5bf85; font-size: 1.8rem !important;}",
+        ".media {background-color: transparent;}"
+      ],
+      "settings": {
+        "title": "Learn More About How This Method Works",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-7bfe666f-6be9-46e3-88a6-1be40f4a8ea4",
+        "section_color_scheme": "scheme-7bfe666f-6be9-46e3-88a6-1be40f4a8ea4",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": "blog-cards-style",
+        "custom__class2": ""
+      }
+    },
+    "ss_comp_banner_CRpMT3": {
+      "type": "ss-comp-banner",
+      "name": "SS Comp Banner",
+      "settings": {
+        "heading": "Need Help Selecting Which <br> Reviv‎‎‎ Mouthguard Is Best For You?",
+        "left_image": "shopify://shop_images/Banner_for_how_to_select_a_product.webp",
+        "right_title": "Compare‎‎‎ <br> ‎‎‎‎‎‎Reviv Mouthguards",
+        "button_label": "Go",
+        "button_link": "https://getreviv.com/pages/how-to-choose-reviv-appliances",
+        "color_scheme": "scheme-7bfe666f-6be9-46e3-88a6-1be40f4a8ea4",
+        "bg_color": "#e5c085",
+        "border_color": "#e5c085",
+        "heading_color": "#121212",
+        "text_color": "#121212",
+        "button_bg": "#121212",
+        "button_text": "#e5c085",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "multicolumn_LqFdTP": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_VXMJwQ": {
+          "type": "column",
+          "settings": {
+            "text_top": "",
+            "image": "shopify://shop_images/Banner_for_how_to_select_a_product_8_1.webp",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://pages/how-to-choose-reviv-appliances",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        }
+      },
+      "block_order": [
+        "column_VXMJwQ"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "box_link": true,
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 1,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-7bfe666f-6be9-46e3-88a6-1be40f4a8ea4",
+        "section_color_scheme": "scheme-7bfe666f-6be9-46e3-88a6-1be40f4a8ea4",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": "htc-multi_img__banner"
+      }
+    },
+    "collapsible_content_HA7hTA": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_TnGbeP": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How should I start Reviv?  Is there anything to be aware of?",
+            "icon": "check_mark",
+            "row_content": "<p>Yes there are a few things to know going in.</p><p><strong>On wearing it:</strong> The standard pattern is overnight + 2-3 hours during the day. Build up gradually with shorter intervals during the day first rather than going straight to overnights — that helps the soft tissue adjust. Most folks find the early phase is the hardest part and it gets significantly easier after a few weeks usually.</p><p><strong>On early discomfort:</strong> Pretty common in the first few weeks. Sore teeth, achy gums, occasional small sores in the mouth, the lips not closing fully, extra saliva — all signs the soft tissue is stretching, not signs something is wrong. Take it at your own pace. If the soreness gets sharp, take a short break — a few hours or even a day or two off is fine. Stick with it but don't push through pain.</p><p><strong>On accelerating results:</strong> What matters most is consistent use and then stretching to accelerate. The Fast Method in our Skool community has some stretches we recommend, including the Bite & Hold exercise that works alongside the mouthguard: <a href=\"https://www.skool.com/reviv-2885/classroom/8ca49f79?md=90728adac0e5463680dc40a43e294104\" target=\"_blank\">https://www.skool.com/reviv-2885/classroom/8ca49f79?md=90728adac0e5463680dc40a43e294104</a></p><p><strong>On mouth taping:</strong> A lot of folks tape at night to keep the mouth closed and help with guard retention while the tissue is still adjusting. Pairs well with the Reviv.</p><p><br/>A good place to learn more before and during the process is our Skool community — 1 month free trial: <a href=\"https://www.skool.com/reviv-2885/about\" target=\"_blank\">https://www.skool.com/reviv-2885/about</a></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_bdwWYh": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Why does this work?",
+            "icon": "lightning_bolt",
+            "row_content": "<p>Think of the soft tissue (e.g., fascia & skin) covering the bones of the skull as a balloon. When you grind your teeth down, it is as if you're taking air out of the balloon.</p><p>When this balloon deflates, it crushes the skull, which in turn crushes the brain and causes cognitive and neurological issues over time.</p><p>In general, we as a society like to call this process 'aging.' But if you grind down your teeth faster, you 'age' faster. The good part is you can reverse the process by using the same physics in reverse, i.e., you 'add' height back to the teeth.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_b3Aq6U": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How many people have done this process?",
+            "icon": "lightning_bolt",
+            "row_content": "<p>Over 20,000 people have started using the appliance and this method since late 2024.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_zVraUA": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How does sizing work?",
+            "icon": "lightning_bolt",
+            "row_content": "<p>Generally the width is the most important criteria and we recommend measuring the width of the outer edges of your upper molars at their widest point as we show in this size guide: <a href=\"https://www.loom.com/share/e3b870cc3438409b883471f4de0d6e1b\" target=\"_blank\">https://www.loom.com/share/e3b870cc3438409b883471f4de0d6e1b</a></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_wYPXBk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is support?",
+            "icon": "lightning_bolt",
+            "row_content": "<p>When you purchase the 1-year support package you get access to:</p><ul><li>Our highly engaged Skool community of 3000+ members that are doing this process</li><li>Classroom of 60+ videos explaining how this works</li><li>A journal to track your progress, which Ken tracks and comments on a weekly basis on</li><li>Ability to DM Ken with your questions</li></ul><p>Watch this video for more information about support <a href=\"https://www.youtube.com/watch?v=yPYIALdB0F8\" target=\"_blank\">https://www.youtube.com/watch?v=yPYIALdB0F8</a></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_7ExR9g": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the appliance made out of?",
+            "icon": "lightning_bolt",
+            "row_content": "<p>It is made of premium soft silicone</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_TnGbeP",
+        "collapsible_row_bdwWYh",
+        "collapsible_row_b3Aq6U",
+        "collapsible_row_zVraUA",
+        "collapsible_row_wYPXBk",
+        "collapsible_row_7ExR9g"
+      ],
+      "custom_css": [
+        ".icon-accordion {display: none;}",
+        "h3 {font-family: Poppins, sans-serif !important; letter-spacing: 0.02em; font-size: 18px; line-height: 100%; padding-top: 10px; padding-bottom: 6px;}",
+        "h3:hover {text-decoration: none;}",
+        "summary {padding-left: 0;}",
+        ".accordion__content {padding-left: 0;}",
+        "p {color: #a7a6a6; letter-spacing: -0.02em; font-weight: 400; font-size: 14px; line-height: 150%;}",
+        ".collapsible-content__heading {display: block; font-family: Cardillac, serif; text-transform: capitalize; padding-bottom: 16px;}"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "scheme-716b1c4a-8f77-44b3-b0ef-264afbd35f50",
+        "container_color_scheme": "scheme-716b1c4a-8f77-44b3-b0ef-264afbd35f50",
+        "open_first_collapsible_row": false,
+        "image": "shopify://shop_images/Rectangle_4055.webp",
+        "image_ratio": "adapt",
+        "desktop_layout": "image_first",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "custom_class": ""
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "custom_css": [
+        ".card__heading a {color: #e5c085; font-size: 18px;}",
+        "h2.related-products__heading.inline-richtext.h2 {text-align: center; color: #fff;}",
+        "ul.grid.product-grid.grid--4-col-desktop.grid--1-col-tablet-down {justify-content: center;}",
+        ".card__media {border-radius: 20px;}"
+      ],
+      "settings": {
+        "heading": "Other Products",
+        "heading_size": "h1",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-4",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "1",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "ss_other_prds_slider_zCMUML": {
+      "type": "ss-other-prds-slider",
+      "blocks": {
+        "product_card_adWiB3": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-two-without-support",
+            "is_new": false
+          }
+        },
+        "product_card_6CTgRF": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-one",
+            "is_new": false
+          }
+        },
+        "product_card_UYUQkK": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-one-without-support",
+            "is_new": false
+          }
+        },
+        "product_card_Qhtj3J": {
+          "type": "product_card",
+          "settings": {
+            "product": "r3-revivthree-support-package",
+            "is_new": false
+          }
+        },
+        "product_card_LhpRY4": {
+          "type": "product_card",
+          "settings": {
+            "product": "r3-revivthree-without-support",
+            "is_new": false
+          }
+        },
+        "product_card_7JRMXG": {
+          "type": "product_card",
+          "settings": {
+            "product": "rd1-revivday-daytime-mouthguard",
+            "is_new": false
+          }
+        }
+      },
+      "block_order": [
+        "product_card_adWiB3",
+        "product_card_6CTgRF",
+        "product_card_UYUQkK",
+        "product_card_Qhtj3J",
+        "product_card_LhpRY4",
+        "product_card_7JRMXG"
+      ],
+      "custom_css": [],
+      "name": "SS Other Products Slider",
+      "settings": {
+        "heading": "Other products",
+        "section_color_scheme": "scheme-716b1c4a-8f77-44b3-b0ef-264afbd35f50",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_classes": ""
+      }
+    }
+  },
+  "order": [
+    "product_navbar_7EB9E4",
+    "main",
+    "custom_liquid_c9KcdA",
+    "rich_text_Lyxah9",
+    "image_with_text_Bb4P3V",
+    "image_with_text_fWRpH9",
+    "image_with_text_NhKBPg",
+    "video_with_icon_text_UjUNfJ",
+    "rich_text_RUwzBm",
+    "image_with_text_CzVVH9",
+    "image_with_text_tfEMFw",
+    "multicolumn_neQRxw",
+    "how_it_works_kfFXA8",
+    "ss_how_to_use_Qxmd8A",
+    "1769418126c8416a97",
+    "1769420153d2fd959a",
+    "substack_blog_BMDpyd",
+    "ss_comp_banner_CRpMT3",
+    "multicolumn_LqFdTP",
+    "collapsible_content_HA7hTA",
+    "related-products",
+    "ss_other_prds_slider_zCMUML"
+  ]
+}

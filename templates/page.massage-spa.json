@@ -1,0 +1,678 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_ibpmiT": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_t8hFrk": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Solution",
+            "heading_size": "h1"
+          }
+        },
+        "text_jjEzEP": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>The RevivOne appliance</strong> prevents massage benefits from reverting back, creating compounding results with each session.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_t8hFrk",
+        "text_jjEzEP"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "custom__class": ""
+      }
+    },
+    "image_banner_cdj4qf": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_TjqM43": {
+          "type": "heading",
+          "settings": {
+            "heading": "Transform Your Massage Results Forever",
+            "heading_size": "h0"
+          }
+        },
+        "text_XtQLX7": {
+          "type": "text",
+          "settings": {
+            "text": "Get 2 Professional Massages + Revolutionary RevivOne Appliance for Just $150 (Save $200+)",
+            "text_style": "body"
+          }
+        },
+        "buttons_jgz3aW": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Claim Your Deal - Only $45 Today",
+            "button_id": "",
+            "button_link_1": "#",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_TjqM43",
+        "text_XtQLX7",
+        "buttons_jgz3aW"
+      ],
+      "custom_css": [
+        ".banner__text.rte p {color: rgb(26 35 45);}"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/hero_spa_banner.webp",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-d420bbdc-e71f-4f0c-b328-99efe6053997",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": false,
+        "custom_classes": ""
+      }
+    },
+    "rich_text_Cmb7nJ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_L6MXVE": {
+          "type": "heading",
+          "settings": {
+            "heading": "Over 20,000 RevivOne appliances sold worldwide",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_L6MXVE"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-d420bbdc-e71f-4f0c-b328-99efe6053997",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "custom__class": ""
+      }
+    },
+    "image_with_text_EkMqAg": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_FAFrtC": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why settle for temporary massage relief when you can make the benefits permanent?",
+            "heading_size": "h2"
+          }
+        },
+        "text_Ty4Ub9": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Traditional massages feel amazing but effects fade within days</li><li>Chronic pain and tension return quickly</li><li>You're stuck in a cycle of constant appointments</li></ul>",
+            "text_style": "body",
+            "text_size": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "heading_FAFrtC",
+        "text_Ty4Ub9"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/image_-_2025-09-09T164158.715.png",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "wrap_image_to_container": false,
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom__class": ""
+      }
+    },
+    "custom_liquid_xYWXQh": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"process\">\n  <h2 class=\"h1\">Step-by-Step Process</h2>\n  <div class=\"steps\">\n    <div class=\"step\">\n      <h3>Purchase Your Voucher</h3>\n      <p>Pay just $45 today</p>\n    </div>\n    <div class=\"step\">\n      <h3>Visit Our Partner Spa</h3>\n      <p>Present your voucher</p>\n    </div>\n    <div class=\"step\">\n      <h3>Enjoy 2 Professional Massages</h3>\n      <p>Expert therapeutic massage</p>\n    </div>\n    <div class=\"step\">\n      <h3>Receive Your RevivOne</h3>\n      <p>Take home your appliance</p>\n    </div>\n    <div class=\"step\">\n      <h3>Pay Remaining Balance</h3>\n      <p>$105 directly to the spa</p>\n    </div>\n    <div class=\"step\">\n      <h3>Experience Lasting Results</h3>\n      <p>Use RevivOne to maintain and amplify benefits</p>\n    </div>\n  </div>\n</section>\n\n<style>\n  .process {\n    max-width: 500px;\n    margin: 40px auto;\n    text-align: center;\n    font-family: Arial, sans-serif;\n  }\n\n  .process h2 {\n    font-weight: bold;\n    margin-bottom: 30px;\n  }\n\n  .steps {\n    display: flex;\n    flex-direction: column;\n    gap: 12px;\n  }\n\n  .step {\n    background: #BDDCD73D;\n    padding: 15px;\n    border-radius: 8px;\n    transition: transform 0.2s ease;\n  }\n\n  .step:hover {\n    transform: translateY(-3px);\n  }\n\n  .step h3 {\n    font-family: Roboto !important;\n    margin: 0;\n    font-weight: 600;\n  }\n\n  .step p {\n    margin: 5px 0 0;\n    color: #555;\n  }\n</style>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_G8fw7b": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_jUjGPN": {
+          "type": "heading",
+          "settings": {
+            "heading": "Meet the RevivOne:",
+            "heading_size": "h1"
+          }
+        },
+        "text_nUzNPj": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>The Breakthrough That Changes Everything</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_jUjGPN",
+        "text_nUzNPj"
+      ],
+      "custom_css": [
+        ".rich-text__text {margin-top: 1rem;}",
+        ".rich-text__text p {font-size: 22px;}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 52,
+        "custom__class": ""
+      }
+    },
+    "floating_text_image_QXjXLH": {
+      "type": "floating-text-image",
+      "blocks": {
+        "text_block_awjNCD": {
+          "type": "text_block",
+          "settings": {
+            "heading": "PROVEN RESULTS",
+            "subtext": "Over 20,000 units sold globally",
+            "position": "top_left",
+            "text_align": "center",
+            "self_align": "start",
+            "self_justify": "center"
+          }
+        },
+        "text_block_4mYLbb": {
+          "type": "text_block",
+          "settings": {
+            "heading": "ADDRESSES ROOT CAUSE",
+            "subtext": "Targets postural and chronic pain at the source",
+            "position": "top_right",
+            "text_align": "center",
+            "self_align": "end",
+            "self_justify": "center"
+          }
+        },
+        "text_block_P9XYpC": {
+          "type": "text_block",
+          "settings": {
+            "heading": "VERSATILE RELIEF",
+            "subtext": "Helps with back pain, neck tension, headaches, and posture issues",
+            "position": "middle_left",
+            "text_align": "center",
+            "self_align": "center",
+            "self_justify": "center"
+          }
+        },
+        "text_block_Qjpwk9": {
+          "type": "text_block",
+          "settings": {
+            "heading": "EASY TO USE",
+            "subtext": "Wear during sleep or daily activities",
+            "position": "middle_right",
+            "text_align": "center",
+            "self_align": "center",
+            "self_justify": "center"
+          }
+        },
+        "text_block_rJr9yA": {
+          "type": "text_block",
+          "settings": {
+            "heading": "LONG-TERM SOLUTION",
+            "subtext": "Creates lasting improvements, not temporary fixes",
+            "position": "bottom_right",
+            "text_align": "center",
+            "self_align": "start",
+            "self_justify": "start"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_awjNCD",
+        "text_block_4mYLbb",
+        "text_block_P9XYpC",
+        "text_block_Qjpwk9",
+        "text_block_rJr9yA"
+      ],
+      "name": "Floating Text with Image",
+      "settings": {
+        "center_image": "shopify://shop_images/Group_4.webp",
+        "image_shadow": false,
+        "color_scheme": ""
+      }
+    },
+    "custom_liquid_dJGGmx": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"conditions\">\n  <h2 class=\"h2\">Conditions Helped</h2>\n  <div class=\"conditions-list\">\n    <div class=\"condition\">\n      <span class=\"check\">✔</span> Chronic back and neck pain\n    </div>\n    <div class=\"condition\">\n      <span class=\"check\">✔</span> Poor posture (lordosis, kyphosis, scoliosis)\n    </div>\n    <div class=\"condition\">\n      <span class=\"check\">✔</span> Tension headaches\n    </div>\n    <div class=\"condition\">\n      <span class=\"check\">✔</span> TMJ and jaw issues\n    </div>\n    <div class=\"condition\">\n      <span class=\"check\">✔</span> Sleep quality problems\n    </div>\n    <div class=\"condition\">\n      <span class=\"check\">✔</span> General body stiffness\n    </div>\n  </div>\n</section>\n\n<style>\n  .conditions {\n    max-width: 700px;\n    margin: 40px auto;\n    text-align: center;\n    font-family: Arial, sans-serif;\n  }\n\n  .conditions h2 {\n    font-weight: bold;\n    margin-bottom: 20px;\n  }\n\n  .conditions-list {\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));\n    gap: 15px 20px;\n  }\n\n  .condition {\n    display: flex;\n    align-items: center;\n    background: #fff;\nfont-size: 12px;\n    padding: 12px 16px;\n    border-radius: 25px;\n    box-shadow: 6px 6px 8px rgba(0,0,0,0.3);\n    text-align: left;\n  }\n\n  .check {\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    background: #BDDCD7;\n    color: #000;\n    font-size: 0.8rem;\n    font-weight: bold;\n    border-radius: 50%;\n    width: 20px;\n    height: 20px;\n    margin-right: 10px;\n    flex-shrink: 0;\n  }\n</style>",
+        "color_scheme": "",
+        "padding_top": 16,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_7hikCi": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_hGJPFx": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why Massage + RevivOne = Breakthrough Results",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_hGJPFx"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom__class": ""
+      }
+    },
+    "image_with_text_MFB7Ta": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_nLXhjg": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>MASSAGE OPENS THE DOOR</strong><br/>Relaxes tissues and improves circulation</p>",
+            "text_style": "body",
+            "text_size": "medium"
+          }
+        },
+        "text_JRKt8h": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>REVIVONE KEEPS IT OPEN</strong><br/>Prevents tissues from returning to problematic patterns</p>",
+            "text_style": "body",
+            "text_size": "medium"
+          }
+        },
+        "text_iEKMYy": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>COMPOUNDING BENEFITS<br/></strong>Each massage becomes more effective than the last</p>",
+            "text_style": "body",
+            "text_size": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "text_nLXhjg",
+        "text_JRKt8h",
+        "text_iEKMYy"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Rectangle_161.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "",
+        "wrap_image_to_container": false,
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom__class": ""
+      }
+    },
+    "image_with_text_pEqR6m": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_KqVrdt": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>LASTING RELIEF<br/></strong>Break free from the cycle of temporary fixes</p>",
+            "text_style": "body",
+            "text_size": "medium"
+          }
+        },
+        "text_TjpVwg": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>BETTER SLEEP</strong><br/>Improved alignment leads to better rest</p>",
+            "text_style": "body",
+            "text_size": "medium"
+          }
+        },
+        "text_adNmqR": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>ENHANCED DAILY FUNCTION<br/></strong>Move better, feel better, think clearer</p>",
+            "text_style": "body",
+            "text_size": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "text_KqVrdt",
+        "text_TjpVwg",
+        "text_adNmqR"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Rectangle_162.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "",
+        "wrap_image_to_container": false,
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom__class": ""
+      }
+    },
+    "multicolumn_eY6UQf": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_LN7MNz": {
+          "type": "column",
+          "settings": {
+            "title": "Ann-Marie’s Journal",
+            "text": "<p>The pain in my jaw as it’s stretching feels very nice. I like this stretching feeling. I feel more energetic. My body feels more align and I feel less tension in my muscles generally.</p><p></p>",
+            "link_label": "Laura B.",
+            "link": "#",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_TPYLjy": {
+          "type": "column",
+          "settings": {
+            "title": "TMJ discomfort 70% gone!",
+            "text": "<p>“Every day my tmj area feels better than the day before. My head literally feels like there’s more room in it and there is not that much of compression anymore. My ears are still block but they are getting better day by day.</p><p></p>",
+            "link_label": "Oaitse M.",
+            "link": "#",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_pMBM43": {
+          "type": "column",
+          "settings": {
+            "title": "So much better!",
+            "text": "<p>My body is soooo much better. Most tension is gone, my hips feel weightless, and I feel like rubber. I can basically kiss my knee now.</p><p></p>",
+            "link_label": "Tonatiuh M.",
+            "link": "#",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        }
+      },
+      "block_order": [
+        "column_LN7MNz",
+        "column_TPYLjy",
+        "column_pMBM43"
+      ],
+      "custom_css": [
+        ".multicolumn-card__info .link {bottom: 12px; position: absolute;}",
+        ".multicolumn-card__info {font-size: 20px;}",
+        ".multicolumn-card__info h3 {font-size: 36px;}",
+        ".multicolumn.background-primary .multicolumn-card {box-shadow: 6px 8px 24px 0 #00000061;}",
+        ".icon-wrap {display: none;}",
+        "@media screen and (min-width: 990px) {.multicolumn-list {gap: 15px; } .multicolumn-list__item {width: calc(33.33% - 15px); }}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "box_link": true,
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-86b2bbd0-6377-4c0e-84fd-f5f434566fb7",
+        "section_color_scheme": "scheme-d420bbdc-e71f-4f0c-b328-99efe6053997",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 52,
+        "padding_bottom": 36,
+        "custom_class": ""
+      }
+    },
+    "multicolumn_Pc3yHt": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_fjFyTh": {
+          "type": "column",
+          "settings": {
+            "title": "Pricing Breakdown",
+            "text": "<p><strong>2 Professional Massages</strong><br/>(Value: $150)</p><p><strong><br/>RevivOne Appliance<br/></strong>(Value: $25)</p><p><strong><br/>Your Cost:<br/></strong>Only $150 (save $25)</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_XTa4YE": {
+          "type": "column",
+          "settings": {
+            "title": "Payment Structure",
+            "text": "<p></p><p><strong><br/>Today:<br/></strong>$45 (secures your voucher)<br/></p><p><br/><strong>At Spa:</strong><br/>$105 (pay remaining balance)</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        }
+      },
+      "block_order": [
+        "column_fjFyTh",
+        "column_XTa4YE"
+      ],
+      "custom_css": [
+        ".multicolumn-list__item {text-align: center;}",
+        ".multicolumn-card__info {font-size: 20px;}",
+        ".multicolumn-card__info h3 {font-size: 36px; color: #bddcd7;}",
+        ".multicolumn.background-primary .multicolumn-card {box-shadow: 6px 12px 16px 0 #00000061;}",
+        "@media screen and (min-width: 990px) {.multicolumn-list {gap: 25px; } .multicolumn-list__item {width: calc(33.33% - 15px); }}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "box_link": false,
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-25a46390-d294-4993-bb18-663f2913acca",
+        "section_color_scheme": "scheme-d420bbdc-e71f-4f0c-b328-99efe6053997",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 52,
+        "padding_bottom": 72,
+        "custom_class": ""
+      }
+    },
+    "rich_text_mAHJA6": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_4xVenP": {
+          "type": "heading",
+          "settings": {
+            "heading": "Limited Time Offer",
+            "heading_size": "h1"
+          }
+        },
+        "text_w3VTWX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Limited spots available in [City Name]! Partner spa capacity is limited. This introductory price won't last long.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_4xVenP",
+        "text_w3VTWX"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-25a46390-d294-4993-bb18-663f2913acca",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "custom__class": ""
+      }
+    },
+    "collapsible_content_pKkUHm": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_fWD8gH": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long do I have to use my voucher?",
+            "icon": "check_mark",
+            "row_content": "<p>Vouchers are valid for 90 days from purchase date.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Fb79tX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I choose any massage type?",
+            "icon": "check_mark",
+            "row_content": "<p>Work with our partner spa to choose the best therapeutic massage for your needs.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_ftACnq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What if the RevivOne doesn't work for me?",
+            "icon": "check_mark",
+            "row_content": "<p>We stand behind our product with a satisfaction guarantee.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_ifHJdL": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How quickly will I see results?",
+            "icon": "check_mark",
+            "row_content": "<p>Many users notice improvements within the first few sessions when combining massage with RevivOne use.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_fWD8gH",
+        "collapsible_row_Fb79tX",
+        "collapsible_row_ftACnq",
+        "collapsible_row_ifHJdL"
+      ],
+      "custom_css": [
+        ".collapsible-content__heading {color: black; text-transform: Capitalize;}",
+        ".accordion__content p {color: black; font-size: 16px;}"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 52,
+        "padding_bottom": 36,
+        "custom_class": "repod-faq-section"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_cdj4qf",
+    "rich_text_Cmb7nJ",
+    "image_with_text_EkMqAg",
+    "rich_text_ibpmiT",
+    "custom_liquid_xYWXQh",
+    "rich_text_G8fw7b",
+    "floating_text_image_QXjXLH",
+    "custom_liquid_dJGGmx",
+    "rich_text_7hikCi",
+    "image_with_text_MFB7Ta",
+    "image_with_text_pEqR6m",
+    "multicolumn_eY6UQf",
+    "multicolumn_Pc3yHt",
+    "rich_text_mAHJA6",
+    "collapsible_content_pKkUHm"
+  ]
+}

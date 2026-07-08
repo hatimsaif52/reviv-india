@@ -1,0 +1,245 @@
+{% comment %}
+  Production‑ready Shopify section – Video with Text & Icon Bullets
+  Matches layout from reference image (heading + icon bullets + rounded video card)
+{% endcomment %}
+
+<style>
+.section-{{ section.id }}-padding {
+  padding-top: {{ section.settings.padding_top }}px;
+  padding-bottom: {{ section.settings.padding_bottom }}px;
+}
+
+.reviv-video-block {
+  position: relative;
+}
+
+.reviv-video-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+/* LEFT SIDE */
+
+.reviv-video-text .image-with-text__heading {
+  margin-bottom: 26px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+.reviv-video-text{
+  padding: 0 3rem;
+}
+.reviv-video-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.text-with-icon {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.text-with-icon__icon {
+  width: 16px !important;
+  height: 16px !important;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.text-with-icon__text {
+  font-size: 15px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.9);
+     p{
+      margin: 5px 0;
+    }
+}
+
+/* VIDEO CARD */
+
+.reviv-video-card {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #000;
+}
+
+.reviv-video-card video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+}
+
+/* MOBILE */
+
+@media (max-width: 749px) {
+  .reviv-video-inner {
+    grid-template-columns: 1fr;
+    gap: 12px;;
+  }
+
+  .reviv-video-card {
+    order: -1; /* video first on mobile */
+  }
+
+  .text-with-icon__text {
+    font-size: 14px;
+  }
+}
+</style>
+
+<div class="reviv-video-block color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding {{ section.settings.custom_class }}">
+  <div class="page-width reviv-video-inner">
+
+    <!-- LEFT CONTENT -->
+    <div class="reviv-video-text">
+
+      {% if section.settings.heading != blank %}
+        <h2
+          class="image-with-text__heading inline-richtext {{ section.settings.heading_size }}"
+        >
+          {{ section.settings.heading }}
+        </h2>
+      {% endif %}
+
+      <div class="reviv-video-list">
+        {% for block in section.blocks %}
+          <div
+            class="text-with-icon text-with-icon--left text-with-icon--left-align"
+            {{ block.shopify_attributes }}
+          >
+            {% if block.settings.icon != blank %}
+              {{ block.settings.icon | image_url: width: 48 | image_tag: class: 'text-with-icon__icon' }}
+            {% endif %}
+
+            <div class="text-with-icon__text">
+              {{ block.settings.text }}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+    </div>
+
+    <!-- RIGHT VIDEO -->
+    <div class="reviv-video-card">
+        {% if section.settings.video != blank %}
+            {{ section.settings.video | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, controls: true }}
+
+        {% elsif section.settings.video_url != blank %}
+            <video
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="auto"
+            controls
+            >
+               <source src="{{ section.settings.video_url }}" type="video/mp4">
+            </video>
+      {% endif %}
+</div>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Video with icon text",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Luckily the skull can be reinflated like a ball"
+    },
+    {
+        "type": "select",
+        "id": "heading_size",
+        "label": "Heading size",
+        "default": "h2",
+        "options": [
+        { "value": "h1", "label": "Large" },
+        { "value": "h2", "label": "Medium" },
+        { "value": "h3", "label": "Small" }
+      ]
+    },
+    {
+        "type": "video",
+        "id": "video",
+        "label": "Video"
+    },
+    {
+        "type": "url",
+        "id": "video_url",
+        "label": "Video Url"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "background-1"
+    },
+    {
+        "type": "range",
+        "id": "padding_top",
+        "label": "Padding top",
+        "min": 0,
+        "max": 120,
+        "step": 4,
+        "default": 80
+    },
+    {
+        "type": "range",
+        "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 80
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Customization Class"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "bullet",
+      "name": "Text with icon",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon image"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Video with icon text",
+      "blocks": [
+        { "type": "bullet" },
+        { "type": "bullet" },
+        { "type": "bullet" }
+      ]
+    }
+  ]
+}
+{% endschema %}

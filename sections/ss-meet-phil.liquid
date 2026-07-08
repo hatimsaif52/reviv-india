@@ -1,0 +1,251 @@
+{% style %}
+.c-meet {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #252220;
+  padding-top: {{ section.settings.padding_top }}px;
+  padding-bottom: {{ section.settings.padding_bottom }}px;
+  font-family: "Roboto" !important;
+}
+
+.c-meet__wrap {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.c-meet.reverse .c-meet__wrap {
+  flex-direction: row-reverse;
+}
+
+/* IMAGE */
+.c-meet__media {
+  flex: 1;
+}
+
+.c-meet__img-wrap {
+  position: relative;
+  border-radius: 16px;
+  /* background: #00000014;
+  box-shadow: 3px 5px 10px 2px rgb(27 25 25); */
+  padding: 10px;
+}
+
+.c-meet__img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* CORNER BORDERS */
+.c-meet__img-wrap:before,
+.c-meet__img-wrap:after {
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    border: 1px solid {{ section.settings.border_color }};
+}
+
+.c-meet__img-wrap:before {
+  top: -6px;
+  left: -6px;
+  border-right: none;
+border-top-left-radius: 18px;
+  border-bottom: none;
+}
+
+.c-meet__img-wrap:after {
+    bottom: 2px;
+    right: -6px;
+    border-left: none;
+    border-top: none;
+    border-bottom-right-radius: 18px;
+}
+
+/* CONTENT */
+.c-meet__content {
+  flex: 1;
+  color: #fff;
+}
+
+/* BLOCK ELEMENTS */
+.c-meet__heading {
+    font-size: 32px;
+    margin-bottom: 16px;
+    font-family: 'Roboto' !important;
+}
+
+.c-meet__text {
+  opacity: 0.75;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+/* BADGES GROUP */
+.c-meet__badges {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.c-meet__badge {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 6px 12px;
+    border-radius: 7px;
+    min-width: 140px;
+    background: rgb(0 0 0 / 19%);
+    flex: 1;
+}
+
+.c-meet__badge strong {
+  font-size: 20px;
+  display: block;
+}
+
+.c-meet__badge span {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px){
+  .c-meet__wrap {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .c-meet__badges {
+    justify-content: center;
+  }
+}
+{% endstyle %}
+
+<section class="c-meet {% if section.settings.reverse %}reverse{% endif %}">
+  <div class="c-meet__wrap page-width">
+
+    <!-- IMAGE -->
+    <div class="c-meet__media">
+      <div class="c-meet__img-wrap">
+        <img 
+          src="{{ section.settings.image | image_url: width: 800 }}"
+          class="c-meet__img"
+          alt="">
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="c-meet__content">
+
+      {% assign badges_html = '' %}
+
+      {% capture badges %}
+        <div class="c-meet__badges">
+          {% for block in section.blocks %}
+            {% if block.type == 'badge' %}
+              <div class="c-meet__badge" {{ block.shopify_attributes }}>
+                <strong style="color: {{ block.settings.number_color }}">
+                  {{ block.settings.number }}
+                </strong>
+                <span style="color: {{ block.settings.label_color }}">
+                  {{ block.settings.label }}
+                </span>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endcapture %}
+
+      {% for block in section.blocks %}
+        {% case block.type %}
+
+          {% when 'heading' %}
+            <h2 class="c-meet__heading"
+                style="color: {{ block.settings.color }}"
+                {{ block.shopify_attributes }}>
+              {{ block.settings.text }}
+            </h2>
+
+          {% when 'text' %}
+            <div class="c-meet__text"
+                 style="color: {{ block.settings.color }}"
+                 {{ block.shopify_attributes }}>
+              {{ block.settings.text }}
+            </div>
+
+          {% when 'badge' %}
+            {%- comment -%} handled in grouped badges {%- endcomment -%}
+
+        {% endcase %}
+      {% endfor %}
+
+      {{ badges }}
+
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "SS Meet Phil",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Image" },
+
+    { "type": "color", "id": "border_color", "label": "Corner Border Color", "default": "#e5c085" },
+
+    { "type": "checkbox", "id": "reverse", "label": "Image Right", "default": false },
+
+    { "type": "range", "id": "padding_top", "min": 0, "max": 150, "step": 10, "unit": "px", "label": "Top Padding", "default": 80 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 150, "step": 10, "unit": "px", "label": "Bottom Padding", "default": 80 }
+  ],
+
+  "blocks": [
+
+    {
+      "type": "heading",
+      "name": "Heading",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Heading", "default": "Meet Phil Moufarrege" },
+        { "type": "color", "id": "color", "label": "Color", "default": "#ffffff" }
+      ]
+    },
+
+    {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        { "type": "textarea", "id": "text", "label": "Text" },
+        { "type": "color", "id": "color", "label": "Color", "default": "#b2b2b2" }
+      ]
+    },
+
+    {
+      "type": "badge",
+      "name": "Badge",
+      "settings": [
+        { "type": "text", "id": "number", "label": "Number", "default": "15+" },
+        { "type": "text", "id": "label", "label": "Label", "default": "Years Experience" },
+
+        { "type": "color", "id": "number_color", "label": "Number Color", "default": "#ffffff" },
+        { "type": "color", "id": "label_color", "label": "Label Color", "default": "#b2b2b2" }
+      ]
+    }
+
+  ],
+
+  "presets": [
+    {
+      "name": "SS Meet Phil",
+      "blocks": [
+        { "type": "heading" },
+        { "type": "text" },
+        { "type": "text" },
+        { "type": "badge" },
+        { "type": "badge" }
+      ]
+    }
+  ]
+}
+{% endschema %}

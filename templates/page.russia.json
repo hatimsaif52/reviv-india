@@ -1,0 +1,965 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Browse our latest products",
+            "heading_size": "h0"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop all",
+            "button_id": "",
+            "button_link_1": "#",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "button"
+      ],
+      "disabled": true,
+      "settings": {
+        "image_overlay_opacity": 40,
+        "image_height": "large",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false,
+        "custom_classes": ""
+      }
+    },
+    "image_with_text_gUUdkq": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_HTp6kF": {
+          "type": "heading",
+          "settings": {
+            "heading": "Я создал биомеханизмы, которые оказали на меня потрясающий эффект:",
+            "heading_size": "h2"
+          }
+        },
+        "text_with_icon_MYYi66": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "Процесс старения, как будто-бы, пошёл в обратную сторону.",
+            "icon": "shopify://shop_images/check-circled-icon.png",
+            "icon_position": "start",
+            "text_style": "subtitle",
+            "alignment": "left"
+          }
+        },
+        "text_with_icon_HfM8nR": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "Мои проблемы с ВНЧС (височно-нижнечелюстным суставом) исчезли.",
+            "icon": "shopify://shop_images/check-circled-icon.png",
+            "icon_position": "start",
+            "text_style": "body",
+            "alignment": "left"
+          }
+        },
+        "text_with_icon_teCwdT": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "Все мои проблемы со спиной и шеей исчезли.",
+            "icon": "shopify://shop_images/check-circled-icon.png",
+            "icon_position": "start",
+            "text_style": "subtitle",
+            "alignment": "left"
+          }
+        },
+        "text_with_icon_8Jx84G": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "Я избавился от тумана в голове и стал сообразительнее, чем был 20 лет назад.",
+            "icon": "shopify://shop_images/check-circled-icon.png",
+            "icon_position": "start",
+            "text_style": "subtitle",
+            "alignment": "left"
+          }
+        },
+        "text_with_icon_6At4Uj": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "Я перестал чувствовать усталость и начал ощущать прилив энергии.",
+            "icon": "shopify://shop_images/check-circled-icon.png",
+            "icon_position": "start",
+            "text_style": "subtitle",
+            "alignment": "left"
+          }
+        },
+        "text_bV39YQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Эти утверждения основаны на личном опыте и не были оценены Управлением по контролю за продуктами и лекарствами США (FDA). Этот продукт не предназначен для диагностики, лечения или излечения каких-либо конкретных заболеваний.</p>",
+            "text_style": "body",
+            "text_size": "small"
+          }
+        },
+        "button_EqNRjn": {
+          "type": "button",
+          "settings": {
+            "button_label": "Купить сейчас!",
+            "button_link": "https://www.ozon.ru/product/espander-dlya-chelyusti-myuing-trenazher-dlya-skul-kapa-stomatologicheskaya-dlya-vyravnivaniya-2495356927/?from_sku=2495356394&oos_search=false",
+            "button_style_secondary": false,
+            "button_style_purchase": true,
+            "full_width_button": true,
+            "custom_buy_btns": true,
+            "purchase_btn_text": "Купите сейчас на:",
+            "button_1_text": "OZON",
+            "button_1_url": "https://www.ozon.ru/product/espander-dlya-chelyusti-myuing-trenazher-dlya-skul-kapa-stomatologicheskaya-dlya-vyravnivaniya-2495356394/",
+            "button_2_text": "wildberries",
+            "button_2_url": "https://www.wildberries.ru/catalog/471115343/detail.aspx?targetUrl=GP"
+          }
+        }
+      },
+      "block_order": [
+        "heading_HTp6kF",
+        "text_with_icon_MYYi66",
+        "text_with_icon_HfM8nR",
+        "text_with_icon_teCwdT",
+        "text_with_icon_8Jx84G",
+        "text_with_icon_6At4Uj",
+        "text_bV39YQ",
+        "button_EqNRjn"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Group_47.png",
+        "height": "large",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "wrap_image_to_container": false,
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "custom__class": ""
+      }
+    },
+    "product_cards_rs_4HFJn6": {
+      "type": "product-cards-rs",
+      "blocks": {
+        "product_card_iN9R83": {
+          "type": "product_card",
+          "disabled": true,
+          "settings": {
+            "product": "r2-reviv-two-support-package",
+            "is_new": true,
+            "product_url": "https://www.ozon.ru/",
+            "custom_buy_btns": true,
+            "purchase_btn_text": "Купите сейчас на:",
+            "button_1_text": "OZON",
+            "button_1_url": "https://www.ozon.ru/product/espander-dlya-chelyusti-myuing-trenazher-dlya-skul-kapa-stomatologicheskaya-dlya-vyravnivaniya-2495356394/",
+            "button_2_text": "wildberries",
+            "button_2_url": "https://www.wildberries.ru/catalog/471115343/detail.aspx?targetUrl=GP"
+          }
+        },
+        "product_card_7qTM9F": {
+          "type": "product_card",
+          "settings": {
+            "product": "r2-reviv-two-without-support",
+            "is_new": true,
+            "product_url": "https://www.ozon.ru/product/espander-dlya-chelyusti-myuing-trenazher-dlya-skul-kapa-stomatologicheskaya-dlya-vyravnivaniya-2495356927/?from_sku=2495356394&oos_search=false",
+            "custom_buy_btns": true,
+            "purchase_btn_text": "Купите сейчас на:",
+            "button_1_text": "OZON",
+            "button_1_url": "https://www.ozon.ru/product/espander-dlya-chelyusti-myuing-trenazher-dlya-skul-kapa-stomatologicheskaya-dlya-vyravnivaniya-2495356394/",
+            "button_2_text": "wildberries",
+            "button_2_url": "https://www.wildberries.ru/catalog/471115343/detail.aspx?targetUrl=GP"
+          }
+        },
+        "product_card_adkfyQ": {
+          "type": "product_card",
+          "disabled": true,
+          "settings": {
+            "product": "1-year-subscription-only",
+            "is_new": false,
+            "product_url": "https://www.ozon.ru/",
+            "custom_buy_btns": true,
+            "purchase_btn_text": "Купите сейчас на:",
+            "button_1_text": "OZON",
+            "button_1_url": "https://www.ozon.ru/product/espander-dlya-chelyusti-myuing-trenazher-dlya-skul-kapa-stomatologicheskaya-dlya-vyravnivaniya-2495356394/",
+            "button_2_text": "wildberries",
+            "button_2_url": "https://www.wildberries.ru/catalog/471115343/detail.aspx?targetUrl=GP"
+          }
+        }
+      },
+      "block_order": [
+        "product_card_iN9R83",
+        "product_card_7qTM9F",
+        "product_card_adkfyQ"
+      ],
+      "settings": {
+        "section_color_scheme": "scheme-4",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_classes": ""
+      }
+    },
+    "multicolumn_PC6bp9": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_69ynG4": {
+          "type": "column",
+          "settings": {
+            "title": "Our Story",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "https://youtu.be/_qqllF0ONMc",
+            "isNewTab": false
+          }
+        }
+      },
+      "block_order": [
+        "column_69ynG4"
+      ],
+      "custom_css": [],
+      "settings": {
+        "title": "",
+        "box_link": false,
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-0b5397a7-cffb-42ac-88ef-8cf9135047b7",
+        "section_color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": ""
+      }
+    },
+    "rich_text_HNPaLz": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_XBCzFg": {
+          "type": "heading",
+          "settings": {
+            "heading": "Истории преобразований во всех возрастах",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_XBCzFg"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "custom__class": ""
+      }
+    },
+    "review_card_carousel_qkMTNj": {
+      "type": "review-card-carousel",
+      "blocks": {
+        "review_NEwYmX": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "quote": "\"Туман в голове исчез. Все проблемы с напряжением в спине ушли.\"",
+            "author_name": "Макс",
+            "author_description": "32-летний мужчина, который испытывал туман в голове и напряжение в спине.",
+            "author_image": "shopify://shop_images/testi-2.jpg"
+          }
+        },
+        "review_8kViri": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "quote": "У меня был туман в голове, и Кен сказал, что его метод поможет. Честно говоря, я был скептически настроен. Но, к моему удивлению, я избавился от тумана в голове.",
+            "author_name": "Kate",
+            "author_description": "32-летняя женщина, которая испытывала туман в голове.",
+            "author_image": "shopify://shop_images/testi-3.jpg"
+          }
+        },
+        "review_EjQhLy": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "quote": "\"Кен — это человек, который мыслит нестандартно. Я — пациент, восстанавливающийся после химиотерапии, и использую этот метод уже около года. Я определённо переживаю изменения и с нетерпением жду дальнейших результатов.\"",
+            "author_name": "Чарли",
+            "author_description": "72-летний мужчина, который страдал от хронической боли после химиотерапии при раке 4 стадии.",
+            "author_image": "shopify://shop_images/testi-1.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "review_NEwYmX",
+        "review_8kViri",
+        "review_EjQhLy"
+      ],
+      "settings": {
+        "color_scheme": "scheme-4",
+        "full_width": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_yrFJTW": {
+      "type": "rich-text",
+      "blocks": {
+        "button_7Gkza3": {
+          "type": "button",
+          "settings": {
+            "button_label": "Купить сейчас",
+            "button_link": "shopify://products/reviv-one",
+            "button_id": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_7Gkza3"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 44,
+        "custom__class": ""
+      }
+    },
+    "rich_text_BYe6rQ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_KXGH6G": {
+          "type": "heading",
+          "settings": {
+            "heading": "Некоторые из изменений в жизни, которые я пережил.",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_KXGH6G"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "custom__class": ""
+      }
+    },
+    "image_with_text_rKP8GA": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_QLW3a6": {
+          "type": "heading",
+          "settings": {
+            "heading": "Помогло решить мои проблемы с ВНЧС.",
+            "heading_size": "h2"
+          }
+        },
+        "text_x8FkNE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>У меня получилось убрать дисфункцию ВЧНС и улучшить структуру сустава, которая является основной причиной множества проблем с ВНЧС</p>",
+            "text_style": "body",
+            "text_size": "medium"
+          }
+        },
+        "button_XHnLFP": {
+          "type": "button",
+          "settings": {
+            "button_label": "Узнать больше",
+            "button_link": "https://reviv.substack.com/p/i-am-confident-this-solves-most-tmj?utm_source=publication-search",
+            "button_style_secondary": false,
+            "button_style_purchase": false,
+            "full_width_button": false,
+            "custom_buy_btns": false,
+            "purchase_btn_text": "",
+            "button_1_text": "",
+            "button_1_url": "",
+            "button_2_text": "",
+            "button_2_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_QLW3a6",
+        "text_x8FkNE",
+        "button_XHnLFP"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/xWOUEj2YZcuCsq4IMrf3Y0S9xLw.webp",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "wrap_image_to_container": true,
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom__class": ""
+      }
+    },
+    "image_with_text_99PzRw": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_trYCYY": {
+          "type": "heading",
+          "settings": {
+            "heading": "Избавился от тумана в голове и значительно улучшил свою когнитивную и нейрологическую функцию.",
+            "heading_size": "h2"
+          }
+        },
+        "text_C3VMnc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Я считаю, что туман в голове возникает из-за «сжатия черепа», что этот процесс и исправляет.</p>",
+            "text_style": "body",
+            "text_size": "medium"
+          }
+        },
+        "button_9xeYG6": {
+          "type": "button",
+          "settings": {
+            "button_label": "Узнать больше",
+            "button_link": "https://reviv.substack.com/p/biomechanics-and-neurology",
+            "button_style_secondary": false,
+            "button_style_purchase": false,
+            "full_width_button": false,
+            "custom_buy_btns": false,
+            "purchase_btn_text": "",
+            "button_1_text": "",
+            "button_1_url": "",
+            "button_2_text": "",
+            "button_2_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_trYCYY",
+        "text_C3VMnc",
+        "button_9xeYG6"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/QoP5U30JDeM49qEApZT2mkkw.webp",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "wrap_image_to_container": true,
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom__class": ""
+      }
+    },
+    "image_with_text_X9RnUV": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_bEHzhf": {
+          "type": "heading",
+          "settings": {
+            "heading": "Улучшил симметрию лица и придал ему больше объёма.",
+            "heading_size": "h2"
+          }
+        },
+        "text_JJQgza": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Я считаю, что эти биомеханизмы лежат в самом основе красоты и симметрии, гораздо больше, чем генетика.</p>",
+            "text_style": "body",
+            "text_size": "medium"
+          }
+        },
+        "button_Dp7FLa": {
+          "type": "button",
+          "settings": {
+            "button_label": "Узнать больше",
+            "button_link": "https://reviv.substack.com/p/these-biomechanics-are-at-the-core",
+            "button_style_secondary": false,
+            "button_style_purchase": false,
+            "full_width_button": false,
+            "custom_buy_btns": false,
+            "purchase_btn_text": "",
+            "button_1_text": "",
+            "button_1_url": "",
+            "button_2_text": "",
+            "button_2_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_bEHzhf",
+        "text_JJQgza",
+        "button_Dp7FLa"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/L0ECYT6C7BjTmtmv2IBAqVsaJM.webp",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "wrap_image_to_container": true,
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom__class": ""
+      }
+    },
+    "image_with_text_yRabXU": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_8bK8fW": {
+          "type": "heading",
+          "settings": {
+            "heading": "Улучшил форму челюсти.",
+            "heading_size": "h2"
+          }
+        },
+        "text_LXFUyW": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Забудьте о миуинге. По моему опыту, он будет работать только у некоторых людей и ухудшит состояние у многих. Reviv для меня оказался гораздо более прямым и быстрым способом достижения лучших результатов.</p>",
+            "text_style": "body",
+            "text_size": "medium"
+          }
+        },
+        "button_Wjmczi": {
+          "type": "button",
+          "settings": {
+            "button_label": "Узнать больше",
+            "button_link": "https://reviv.substack.com/p/my-take-on-the-mews",
+            "button_style_secondary": false,
+            "button_style_purchase": false,
+            "full_width_button": false,
+            "custom_buy_btns": false,
+            "purchase_btn_text": "",
+            "button_1_text": "",
+            "button_1_url": "",
+            "button_2_text": "",
+            "button_2_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_8bK8fW",
+        "text_LXFUyW",
+        "button_Wjmczi"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Hknpv5FA1BjytQjxsfzpLzUr3Q.webp",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "wrap_image_to_container": true,
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom__class": ""
+      }
+    },
+    "image_with_text_f4AHHC": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_J6V6BJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Я улучшил своё тело, вернув его в правильные пропорции и повысив гибкость.",
+            "heading_size": "h2"
+          }
+        },
+        "text_hwDErn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Устали от диет и программ тренировок? Результаты почти всегда краткосрочны, потому что они не изменяют вашу структуру. Reviv нацелен на изменение вашей структуры, а не только на снижение жира.</p>",
+            "text_style": "body",
+            "text_size": "medium"
+          }
+        },
+        "button_hqy47W": {
+          "type": "button",
+          "settings": {
+            "button_label": "Узнать больше",
+            "button_link": "https://reviv.substack.com/p/what-this-does-to-your-body",
+            "button_style_secondary": false,
+            "button_style_purchase": false,
+            "full_width_button": false,
+            "custom_buy_btns": false,
+            "purchase_btn_text": "",
+            "button_1_text": "",
+            "button_1_url": "",
+            "button_2_text": "",
+            "button_2_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_J6V6BJ",
+        "text_hwDErn",
+        "button_hqy47W"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/w8AEIn4atgKQONvhrfjMENIYm90.webp",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "wrap_image_to_container": true,
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom__class": ""
+      }
+    },
+    "reviews_judgeme_BJnTpf": {
+      "type": "reviews-judgeme",
+      "blocks": {
+        "review_px3Vj4": {
+          "type": "review",
+          "settings": {
+            "review_writer": "Angela W",
+            "review_rating": 5,
+            "review_content": "<p>Я ношу Reviv размера L уже около месяца. Вот несколько моих наблюдений и впечатлений:</p><p>1. У меня была небольшая рецессия дёсен, и, хотя я ещё не была у стоматолога, я думаю, что большая часть проблем уже решена.<br/><br/>2. До того как начала носить Reviv, я просыпалась с общей скованностью и характерной болью в плече, бедре, колене и левой ступне. Сейчас большая часть этой боли по утрам исчезла — на 80–90% я просыпаюсь без боли.</p><p>3. Reviv помогает мне не храпеть. Я не сильно храплю, но бывало, что муж подталкивал меня ночью. Теперь я сплю всю ночь без храпа.</p><p>4. Я просыпаюсь гораздо более отдохнувшей и в спокойном состоянии, чем раньше.</p><p>5. Было непросто привыкнуть к ношению устройства, и моё тело до сих пор полностью не адаптировалось. Приходилось делать перерывы, чтобы дёсны привыкли к Reviv.</p><p><br/>Мой  овет потенциальным новым пользователям — не позволяйте первоначальному дискомфорту отпугнуть вас. Несмотря на трудности на старте, я бы всё равно настоятельно рекомендовала попробовать.</p><p>Я в этом надолго, как говорит Кен! (ура!)</p>"
+          }
+        },
+        "review_6t3mTX": {
+          "type": "review",
+          "settings": {
+            "review_writer": "Evelyn",
+            "review_rating": 5,
+            "review_content": "<p>До того как я начал использовать Reviv, у меня была плохая осанка — лёгкий кифоз в верхней части спины. Уровень энергии всегда был очень низким. С неврологической точки зрения моя способность концентрироваться была нарушена, и тревожность сильно мешала. Также у меня была односторонняя скованность в теле из-за автомобильной аварии.</p><p>В первые несколько недель использования Reviv я заметил, что моё тело стало лучше расслабляться во время сна. Будто кто-то нажал кнопку, и напряжённые мышцы начали отпускать. У меня хорошая телесная осознанность, поэтому я смог уловить множество тонких внутренних изменений, которые вели к улучшению физической структуры.</p><p>На данный момент моя верхняя спина выпрямилась, что уменьшило выдвижение головы вперёд. Моя походка улучшилась, я ощущаю активацию мышц, словно тело стало более скоординированным. Шея стала менее жёсткой и обрела большую подвижность. Тревожность уменьшилась, и я стал лучше концентрироваться. Это небольшие, но значимые изменения, которые в совокупности создают ощущение, что тело стало работать более эффективно. Также я заметил улучшение пищеварения.</p><p>Я считаю, что Reviv сильно помогает компенсировать физическую осанку, вызывающую реакцию «бей или беги», и в конечном итоге способствует более эффективной работе всех систем организма.</p><p>Кен был великолепен на всём этом пути. Он действительно заботится и вдохновляет всех не соглашаться на посредственное здоровье. Наличие человека, который сам прошёл путь улучшений и понимает, что происходит, очень помогает держаться курса.</p><p>Я всё ещё на ранней стадии этого процесса, но использование Reviv — это минимальное усилие для того, чтобы продолжать улучшать структуру тела. Вы действительно ничего не теряете, попробовав его.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "review_px3Vj4",
+        "review_6t3mTX"
+      ],
+      "name": "Reviews Judge.me-like",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1744641492b07314de": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_featured_carousel_gp8GFi": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_featured_carousel_gp8GFi"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "custom_liquid_6tdQXd": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<section class=\"what-you-get-section\">\n  <div class=\"what-you-get-section__container\">\n\n    <div class=\"what-you-get-section__three-column-grid\">\n      <div class=\"what-you-get-section__column-one\"><div class=\"what-you-get-section__section-header-wrapper\">\n      <div class=\"what-you-get-section__section-header\">\n        <div class=\"what-you-get-section__icon-wrapper\">\n          <div class=\"what-you-get-section__icon what-you-get-section__featured-icon\">\n            <div data-framer-component-type=\"SVG\" data-framer-name=\"Icon\" class=\"what-you-get-section__framer-icon\" aria-hidden=\"true\">\n              <div class=\"what-you-get-section__svgContainer\">\n               <svg width=\"22\" height=\"26\" viewBox=\"-1 -1 22 26\" fill=\"none\" id=\"svg243528306_580\">\n<path d=\"M11.1667 0.333374L0.7757 12.8025C0.368757 13.2909 0.165285 13.535 0.162176 13.7412C0.159473 13.9205 0.239355 14.0911 0.378801 14.2037C0.539208 14.3334 0.857041 14.3334 1.49271 14.3334H10L8.83334 23.6667L19.2243 11.1975C19.6312 10.7092 19.8347 10.465 19.8378 10.2588C19.8405 10.0796 19.7606 9.90902 19.6212 9.79633C19.4608 9.66671 19.143 9.66671 18.5073 9.66671H10L11.1667 0.333374Z\" stroke=\"#E5C085\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n</svg>\n              </div>\n            </div>\n          </div>\n        </div>\n        <div class=\"what-you-get-section__heading-text\">\n          <h2 class=\"what-you-get-section__section-heading\">Что вы получите</h2>\n        </div>\n      </div>\n      <div class=\"what-you-get-section__supporting-text\">\n        <p class=\"what-you-get-section__section-description\">Достигните сбалансированных пропорций и улучшенной гибкости для более здорового и выровненного тела</p>\n      </div>\n    </div></div>\n      <div class=\"what-you-get-section__column-two\">\n\n        <div class=\"what-you-get-section__feature-item\">\n          <div class=\"what-you-get-section__item-content\">\n            <div class=\"what-you-get-section__image-wrapper\">\n              <div class=\"what-you-get-section__image-container\">\n                <img src=\"https://framerusercontent.com/images/4IV3FrLTitXTh2ew2ZH13WsJApo.png\" alt=\"Reviv One Appliance\" class=\"what-you-get-section__framer-feature-image\" loading=\"lazy\">\n              </div>\n            </div>\n            <div class=\"what-you-get-section__text-content\">\n              <div class=\"what-you-get-section__description-group\">\n                <div class=\"what-you-get-section__feature-title-wrapper\">\n                  <h3 class=\"what-you-get-section__feature-title\">\n                    <span class=\"what-you-get-section__feature-title-span\">Устройство R1</span>\n                  </h3>\n                </div>\n                <div class=\"what-you-get-section__feature-description-wrapper\">\n                  <p class=\"what-you-get-section__feature-description\">\n                    <span class=\"what-you-get-section__feature-description-span\">Та же конструкция устройства, которое Кен использует уже около 10 лет. Отправляется вам домой в течение недели.</span>\n                  </p>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n\n        <div class=\"what-you-get-section__feature-item\">\n          <div class=\"what-you-get-section__item-content\">\n            <div class=\"what-you-get-section__text-content\">\n              <div class=\"what-you-get-section__description-group\">\n                <div class=\"what-you-get-section__feature-title-wrapper\">\n                  <h3 class=\"what-you-get-section__feature-title\">\n                    <span class=\"what-you-get-section__feature-title-span\">1 год доступа к закрытому сообществу Skool (<a href=\"https://www.skool.com/reviv-2885\" target=\"_blank\" rel=\"noopener\" style=\"color: inherit; text-decoration: underline;\">ссылка</a>)</span>\n                  </h3>\n                </div>\n                <div class=\"what-you-get-section__feature-description-wrapper\">\n                  <p class=\"what-you-get-section__feature-description\">\n                    <span class=\"what-you-get-section__feature-description-span\">Поддерживающее сообщество людей, которые тоже проходят процесс Reviv.</span>\n                  </p>\n                </div>\n              </div>\n            </div>\n\n          </div>\n        </div><div class=\"what-you-get-section__feature-item\">\n          <div class=\"what-you-get-section__item-content\">\n            <div class=\"what-you-get-section__text-content\">\n              <div class=\"what-you-get-section__description-group\">\n                <div class=\"what-you-get-section__feature-title-wrapper\">\n                  <h3 class=\"what-you-get-section__feature-title\">\n                    <span class=\"what-you-get-section__feature-title-span\">Кен отслеживает ваш прогресс в журнале</span>\n                  </h3>\n                </div>\n                <div class=\"what-you-get-section__feature-description-wrapper\">\n                  <p class=\"what-you-get-section__feature-description\">\n                    <span class=\"what-you-get-section__feature-description-span\">Вам предоставляется шаблон журнала, чтобы отслеживать свои ощущения и задавать вопросы. Кен проверяет и комментирует не реже одного раза в неделю.</span>\n                  </p>\n                <p class=\"what-you-get-section__feature-description\">\n                    <span class=\"what-you-get-section__feature-description-span\">Это очень мощный инструмент, который поможет вам оставаться на правильном пути, так как вы, вероятно, будете испытывать много изменений на своем пути.</span>\n                  </p></div>\n              </div>\n            </div>\n\n          </div>\n        </div>\n\n      </div>\n      <div class=\"what-you-get-section__column-three\">\n\n        <div class=\"what-you-get-section__feature-item\">\n          <div class=\"what-you-get-section__item-content\">\n            <div class=\"what-you-get-section__image-wrapper\">\n              <div class=\"what-you-get-section__image-container\">\n                <img src=\"https://framerusercontent.com/images/I9ftSvP2iE5I1MchDJY7JYcGE.png\" alt=\"60+ Educational Videos\" class=\"what-you-get-section__framer-feature-image\" loading=\"lazy\">\n              </div>\n            </div>\n            <div class=\"what-you-get-section__text-content\">\n              <div class=\"what-you-get-section__description-group\">\n                <div class=\"what-you-get-section__feature-title-wrapper\">\n                  <h3 class=\"what-you-get-section__feature-title\">\n                    <span class=\"what-you-get-section__feature-title-span\">60+ образовательных видео</span>\n                  </h3>\n                </div>\n                <div class=\"what-you-get-section__feature-description-wrapper\">\n                  <p class=\"what-you-get-section__feature-description\">\n                    <span class=\"what-you-get-section__feature-description-span\">Видео охватывают все, что Кен узнал за 10 лет своего пути.</span>\n                  </p>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n\n        <div class=\"what-you-get-section__feature-item\">\n          <div class=\"what-you-get-section__item-content\">\n            <div class=\"what-you-get-section__text-content\">\n              <div class=\"what-you-get-section__description-group\">\n                <div class=\"what-you-get-section__feature-title-wrapper\">\n                  <h3 class=\"what-you-get-section__feature-title\">\n                    <span class=\"what-you-get-section__feature-title-span\">Прямой доступ к Кену</span>\n                  </h3>\n                </div>\n                <div class=\"what-you-get-section__feature-description-wrapper\">\n                  <p class=\"what-you-get-section__feature-description\">\n                    <span class=\"what-you-get-section__feature-description-span\">Получите 30 минутный индивидуальный вводный звонок с Кеном. Получите поддержку от него через сообщения в любое время во время вашего пути.</span>\n                  </p>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n\n         <div class=\"what-you-get-section__feature-item\">\n          <div class=\"what-you-get-section__item-content\">\n            <div class=\"what-you-get-section__text-content\">\n              <div class=\"what-you-get-section__description-group\">\n                <div class=\"what-you-get-section__feature-title-wrapper\">\n                  <h3 class=\"what-you-get-section__feature-title\">\n                    <span class=\"what-you-get-section__feature-title-span\">90-дневная гарантия возврата денег</span>\n                  </h3>\n                </div>\n                <div class=\"what-you-get-section__feature-description-wrapper\">\n                  <p class=\"what-you-get-section__feature-description\">\n                    <span class=\"what-you-get-section__feature-description-span\">Вы можете попробовать программу без риска. Если она вам не подходит, вернем деньги.</span>\n                  </p>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n\n  </div>\n</section>\n\n<style>\n  .what-you-get-section {\n    padding-top: 70px;\n    padding-bottom: 80px;\n  }\n\n  .what-you-get-section__container {\n    max-width: 1200px;\n    margin-left: auto;\n    margin-right: auto;\n    padding-left: 25px;\n    padding-right: 25px;\n  }\n\n  .what-you-get-section__section-header-wrapper {\n    margin-bottom: 70px;\n    text-align: left; /* Changed to left align for column layout */\n  }\n\n  .what-you-get-section__section-header {\n    display: flex;\n    align-items: flex-start;\n    justify-content: flex-start;\n    gap: 15px;\n    margin-bottom: 15px;\n    flex-direction: column;\n  }\n\n  .what-you-get-section__icon-wrapper {\n    width: 45px;\n    height: 45px;\n    flex-shrink: 0;\n  }\n\n  .what-you-get-section__framer-icon {\n    border-radius: 12px;\n    padding: 12px 11px;\n    background: #212121;\n    display: flex;\n    justify-content: center;\n    align-items: stretch;\n    width: auto;\n  }\n\n.what-you-get-section__svgContainer {\n    display: flex;\n}\n\n  .what-you-get-section__heading-text {\n    outline: none;\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-start;\n    flex-shrink: 0;\n    transform: none;\n    text-align: left; /* Left align heading text */\n  }\n\n  .what-you-get-section__section-heading {\n    margin: 0;\n    font-size: 40px;\n    letter-spacing: -0.02em;\n    line-height: 70px;\n    color: rgb(35, 32, 33);\n    font-weight: bold;\n  }\n\n  .what-you-get-section__supporting-text {\n    outline: none;\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-start;\n    flex-shrink: 0;\n    transform: none;\n    max-width: 400px;\n    text-align: left;\n  }\n\n  .what-you-get-section__section-description {\n    margin: 0;\n    font-size: 23px;\n    line-height: 34px;\n    color: rgb(35, 32, 33);\n  }\n\n  .what-you-get-section__three-column-grid {\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr; /* Explicit 3-column grid */\n    gap: 35px;\n    margin-top: 50px;\n  }\n\n  .what-you-get-section__column-one {\n    /* Column 1 is just for spacing in this layout */\n  }\n\n  .what-you-get-section__column-two, .what-you-get-section__column-three {\n    display: flex;\n    flex-direction: column; /* Stack items vertically in columns 2 and 3 */\n    gap: 30px; /* Spacing between feature items in columns */\n  }\n\n\n  .what-you-get-section__feature-item {\n    display: flex;\n    flex-direction: row;\n  }\n\n  .what-you-get-section__item-content {\n    display: flex;\n    flex-direction: column-reverse;\n    gap: 20px;\n    align-items: flex-start;\n  }\n\n  .what-you-get-section__image-wrapper {\n    width: auto;\n    height: 300px;\n    flex-shrink: 0;\n    border-radius: 10px;\n    overflow: hidden;\n    margin-right: 0;\n  }\n\n  .what-you-get-section__image-container {\n    position: relative;\n    width: 100%;\n    height: 100%;\n  }\n\n  .what-you-get-section__framer-image-wrapper {\n    position: absolute;\n    border-radius: inherit;\n    inset: 0px;\n  }\n\n  .what-you-get-section__framer-feature-image {\n    display: block;\n    width: 100%;\n    height: 100%;\n    border-radius: inherit;\n    object-position: center center;\n    object-fit: cover;\n  }\n\n  .what-you-get-section__text-content {\n    flex: 1;\n  }\n\n  .what-you-get-section__description-group {\n    margin-bottom: 0;\n  }\n\n  .what-you-get-section__feature-title-wrapper {\n    outline: none;\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-start;\n    flex-shrink: 0;\n    transform: none;\n  }\n\n  .what-you-get-section__feature-title {\n    margin: 0;\n    font-size: 21px;\n    line-height: 28px;\n    margin-bottom: 8px;\n    font-weight: 600;\n  }\n\n  .what-you-get-section__feature-title-span {\n    font-family: \"Inter-SemiBold\", \"Inter\", sans-serif;\n    font-weight: inherit;\n    color: rgba(35, 32, 33, 1);\n    font-size: inherit;\n  }\n\n  .what-you-get-section__feature-description-wrapper {\n    outline: none;\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-start;\n    flex-shrink: 0;\n    transform: none;\n  }\n\n  .what-you-get-section__feature-description {\n    margin: 0;\n    font-size: 17px;\n    line-height: 26px;\n    padding-bottom: 16px;\n  }\n\n  .what-you-get-section__feature-description-span {\n    font-family: \"Inter\";\n    color: rgba(35, 32, 33, 1);\n    font-size: inherit;\n  }\n\n  .what-you-get-section__image-wrapper.what-you-get-section__hidden-image {\n    display: block;\n  }\n\n  /* Responsive adjustments for smaller screens */\n  @media screen and (max-width: 768px) {\n    .what-you-get-section__three-column-grid {\n      grid-template-columns: 1fr; /* Stack columns on smaller screens */\n    }\n    .what-you-get-section__section-header-wrapper,\n    .what-you-get-section__heading-text,\n    .what-you-get-section__supporting-text {\n      text-align: center; /* Center align header and text on smaller screens */\n    }\n    .what-you-get-section__section-header {\n      justify-content: center; /* Center header icon and text */\n    }\n    .what-you-get-section__column-one, .what-you-get-section__column-two, .what-you-get-section__column-three {\n      width: 100%; /* Make columns full width */\n    }\n    .what-you-get-section__feature-item .what-you-get-section__item-content {\n      flex-direction: column; /* Stack image and text in feature items */\n      align-items: center; /* Center align feature item content */\n      text-align: center; /* Center text in feature items */\n    }\n    .what-you-get-section__image-wrapper {\n      margin-right: 0;\n      margin-bottom: 15px; /* Add margin below image when stacked */\n    }\n    .what-you-get-section__section-heading {\n      font-size: 46px;\n      line-height: 50px;\n    }\n    .what-you-get-section__section-description {\n      font-size: 19px;\n      line-height: 28px;\n      max-width: 100%; /* Remove max-width for full-width on smaller screens */\n    }\n    .what-you-get-section__section-header-wrapper {\n      margin-bottom: 50px;\n    }\n    .what-you-get-section {\n      padding-top: 50px;\n      padding-bottom: 60px;\n    }\n    .what-you-get-section__container {\n      padding-left: 15px;\n      padding-right: 15px;\n    }\n  }\n</style>",
+        "color_scheme": "scheme-0b5397a7-cffb-42ac-88ef-8cf9135047b7",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_b6RWtx": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_pxVyLB": {
+          "type": "heading",
+          "settings": {
+            "heading": "Гарантия",
+            "heading_size": "h1"
+          }
+        },
+        "text_GeV3tJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Теперь мы понимаем, что это всё равно требует от вас большого шага веры. Но помните, что это полностью неинвазивное лечение, которое требует, чтобы вы спали с прибором в рту.<br/><br/>Это стоит всего $100, и мы полностью возвращаем ваши деньги в течение 90 дней, если после постоянных усилий вы решите, что это не работает для вас. Для того чтобы продемонстрировать это, мы просим вас попробовать спать с прибором в течение 30 дней.<br/><br/>Обратите внимание, что гарантия действует только при покупке пакета поддержки. Если вы покупаете только прибор, гарантия не распространяется, так как это подход «сделай сам».</p>",
+            "text_style": "body",
+            "text_size": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "heading_pxVyLB",
+        "text_GeV3tJ"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/S7jmHvHf2xfE0T05mAMxk29ruGQ.webp",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "wrap_image_to_container": false,
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom__class": ""
+      }
+    },
+    "collapsible_content_8jpLEJ": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_aAjJVt": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Почему это работает?",
+            "icon": "none",
+            "row_content": "<p>Представьте, что мягкие ткани (например, фасция и кожа), покрывающие кости черепа, — это воздушный шар. Когда вы стираете зубы, это похоже на то, как если бы вы вынимали воздух из шара.<br/><br/>Когда этот шар сдувается, он сжимает череп, что в свою очередь сжимает мозг и вызывает когнитивные и неврологические проблемы со временем.<br/><br/>В общем, мы как общество привыкли называть этот процесс «старением». Но если вы стираете зубы быстрее, вы «стареете» быстрее. Хорошая новость заключается в том, что вы можете обратить этот процесс, используя те же физические принципы, только в обратном порядке, то есть «добавляя» высоту обратно в зубы.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_xtxRYM": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Сколько людей прошли этот процесс?",
+            "icon": "none",
+            "row_content": "<p>Около 5,000 человек начали использовать этот аппарат и метод с начала 2023 года.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_zzKbFp": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Как работает процесс подбора размера?",
+            "icon": "none",
+            "row_content": "<p>Обратите внимание, что выше есть «Таблица размеров», к которой следует обратиться для измерения наших приборов.<br/><br/><strong>Для R1:</strong><br/>- Обычно мы рекомендуем взрослым брать большой размер, так как наш большой размер не такой уж большой, а наш маленький довольно маленький.<br/>- Маленький размер можно использовать для детей от 8 лет и старше.<br/>- Большинству взрослых с маленьким ртом подойдет как маленький, так и большой, но, как правило, наш большой размер будет немного больше.<br/>- У нас есть специальное предложение, чтобы получить оба размера по одинаковой цене при покупке пакета поддержки. Поэтому напишите на cs@getreviv.com, если вам нужны инструкции о том, как это сделать.<br/><br/><strong>Для R2:</strong><br/>- Большой размер R2 такой же ширины, как и большой размер R1, но немного длиннее. Поэтому, если вам удобно с большим размером R1, мы рекомендуем вам выбрать большой размер R2.<br/>- Средний размер R2 немного больше, чем маленький размер R1, поэтому подходит для взрослых с маленьким размером рта.<br/>- В настоящее время маленький размер R2 не выпускается.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_xPaU4W": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Чем отличаются R1 и R2?",
+            "icon": "none",
+            "row_content": "<p>Вот наше мнение:<br/><strong>Материал</strong>: R2 изготовлен из жидкого силикона, который прочнее и намного долговечнее, чем R1. Это делает R2 лучшим прибором для людей, которые стискивают и скрежещут.<br/><strong>Сколько он прослужит</strong>: R1, вероятно, прослужит 3-4 месяца, прежде чем деформируется, тогда как мы считаем, что R2 прослужит не менее года.<br/><strong>Гарантия:</strong> R1 не имеет гарантии. Гарантия на R2 составляет один год с максимум двумя бесплатными заменами.<br/><strong>Конструкция:</strong> R2 немного мягче для десен, так как он не поднимается так высоко, как R1</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Vy9BEL": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Из чего сделан этот прибор?",
+            "icon": "none",
+            "row_content": "<p>Он сделан из 100% силикона, подходящего для контакта с пищей.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_aAjJVt",
+        "collapsible_row_xtxRYM",
+        "collapsible_row_zzKbFp",
+        "collapsible_row_xPaU4W",
+        "collapsible_row_Vy9BEL"
+      ],
+      "custom_css": [
+        ".icon-accordion {display: none;}",
+        ".accordion__title {font-size: 1.5em; letter-spacing: 0.02em; font-family: Roboto !important; line-height: 100%; padding-top: 12px; color: #212121 !important;}",
+        "h2:hover {text-decoration: none;}",
+        ".accordion__content {padding-left: 0;}",
+        "p {color: #232021; letter-spacing: -0.02em; font-weight: 400; font-size: 24px; line-height: 150%; padding-left: 16px;}",
+        ".collapsible-content__heading {color: #232021 !important; display: block; color: rgba(239, 201, 139, 1); font-family: Cardillac, serif; padding-bottom: 16px;}"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Часто задаваемые вопросы",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "row",
+        "color_scheme": "scheme-0b5397a7-cffb-42ac-88ef-8cf9135047b7",
+        "container_color_scheme": "scheme-0b5397a7-cffb-42ac-88ef-8cf9135047b7",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": ""
+      }
+    },
+    "substack_blog_4RTTmR": {
+      "type": "substack-blog",
+      "blocks": {
+        "column_Axjbhj": {
+          "type": "column",
+          "settings": {
+            "category": "",
+            "article_type": "",
+            "date": "",
+            "image": "shopify://shop_images/article-1.png",
+            "title": "Я собираюсь оспорить то, во что вы верите о здоровье",
+            "text": "<p>Оспаривает традиционные взгляды на здоровье, вводит теорию воздушного шара и исследует, как здоровье зубов влияет на общее благополучие.</p>",
+            "link_label": "Прочитать пост",
+            "link": "https://reviv.substack.com/p/i-am-going-to-challenge-what-you",
+            "youtube_video_url": ""
+          }
+        },
+        "column_xNBQCT": {
+          "type": "column",
+          "settings": {
+            "category": "",
+            "article_type": "",
+            "date": "",
+            "image": "shopify://shop_images/article-2.png",
+            "title": "Теория воздушного шара",
+            "text": "<p>Объясняет, как здоровье зубов влияет на общее самочувствие, связывая зубы с различными проблемами здоровья, и вводит методы для устранения этих связей.</p>",
+            "link_label": "Прочитать пост",
+            "link": "https://reviv.substack.com/p/so-why-do-the-teeth-relate-to-your",
+            "youtube_video_url": ""
+          }
+        },
+        "column_t6fCjt": {
+          "type": "column",
+          "settings": {
+            "category": "",
+            "article_type": "",
+            "date": "",
+            "image": "shopify://shop_images/article-3.png",
+            "title": "Как исправить проблему",
+            "text": "<p>Предоставляет стратегии для решения проблем с зубами и исправления сопутствующих нарушений с целью улучшения общего самочувствия.</p>",
+            "link_label": "Прочитать пост",
+            "link": "https://reviv.substack.com/p/how-to-solve-the-problem",
+            "youtube_video_url": ""
+          }
+        },
+        "column_bcBnDc": {
+          "type": "column",
+          "settings": {
+            "category": "",
+            "article_type": "",
+            "date": "",
+            "image": "shopify://shop_images/article-4.png",
+            "title": "На что влияют эти биомеханические процессы?",
+            "text": "<p>Изучает, как дентальная биомеханика влияет на различные аспекты здоровья и общего самочувствия.</p>",
+            "link_label": "Прочитать пост",
+            "link": "https://reviv.substack.com/p/what-is-impacted-by-these-biomechanics",
+            "youtube_video_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_Axjbhj",
+        "column_xNBQCT",
+        "column_t6fCjt",
+        "column_bcBnDc"
+      ],
+      "settings": {
+        "title": "Узнайте больше о том, как работает этот метод",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-2ab1995e-c67e-4402-af73-6a85779ae883",
+        "section_color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": "",
+        "custom__class2": ""
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "image_with_text_gUUdkq",
+    "product_cards_rs_4HFJn6",
+    "multicolumn_PC6bp9",
+    "rich_text_HNPaLz",
+    "review_card_carousel_qkMTNj",
+    "rich_text_yrFJTW",
+    "rich_text_BYe6rQ",
+    "image_with_text_rKP8GA",
+    "image_with_text_99PzRw",
+    "image_with_text_X9RnUV",
+    "image_with_text_yRabXU",
+    "image_with_text_f4AHHC",
+    "reviews_judgeme_BJnTpf",
+    "1744641492b07314de",
+    "custom_liquid_6tdQXd",
+    "image_with_text_b6RWtx",
+    "collapsible_content_8jpLEJ",
+    "substack_blog_4RTTmR"
+  ]
+}

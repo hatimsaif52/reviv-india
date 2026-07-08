@@ -1,0 +1,234 @@
+{% schema %}
+{
+  "name": "Floating Text with Image",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "center_image",
+      "label": "Center Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "image_shadow",
+      "label": "Enable Image Glow?"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "background-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text_block",
+      "name": "Text Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon_image",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Heading text"
+        },
+        {
+          "type": "richtext",
+          "id": "subtext",
+          "label": "Subtext"
+        },
+        {
+          "type": "select",
+          "id": "position",
+          "label": "Block Position",
+          "default": "top_left",
+          "options": [
+            { "value": "top_left", "label": "Top Left" },
+            { "value": "top_right", "label": "Top Right" },
+            { "value": "middle_left", "label": "Middle Left" },
+            { "value": "middle_right", "label": "Middle Right" },
+            { "value": "bottom_left", "label": "Bottom Left" },
+            { "value": "bottom_right", "label": "Bottom Right" }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "text_align",
+          "label": "Text Alignment",
+          "default": "left",
+          "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "center", "label": "Center" },
+            { "value": "right", "label": "Right" }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "self_align",
+          "label": "Self Justify",
+          "default": "start",
+          "options": [
+            { "value": "start", "label": "Start" },
+            { "value": "center", "label": "Center" },
+            { "value": "end", "label": "End" }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "self_justify",
+          "label": "Self Align",
+          "default": "start",
+          "options": [
+            { "value": "start", "label": "Start" },
+            { "value": "center", "label": "Center" },
+            { "value": "end", "label": "End" }
+          ]
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Floating Text with Image",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="benefits-layout color-{{ section.settings.color_scheme }}">
+  <div class="benefits-inner">
+    <div class="benefits-center-image">
+      {% if section.settings.center_image != blank %}
+        <img src="{{ section.settings.center_image | img_url: '600x' }}" alt="">
+      {% endif %}
+    </div>
+ {% assign feature_headings = product.metafields.custom.features_heading_merch %}
+{% assign feature_texts = product.metafields.custom.features_text_merch %}
+{% assign feature_icons = product.metafields.custom.features_icon_merch.value %}
+
+{% for block in section.blocks %}
+  {% assign index = forloop.index0 %}
+  {% assign feature_heading = feature_headings.value[index] %}
+  {% assign feature_text = feature_texts.value[index] %}
+
+  {% comment %}
+    Looping through the MediaListDrop to get the image at the matching index
+  {% endcomment %}
+  {% assign feature_icon_url = blank %}
+  {% for media in feature_icons %}
+    {% if forloop.index0 == index and media.media_type == 'image' %}
+      {% assign feature_icon_url = media.image.src %}
+    {% endif %}
+  {% endfor %}
+
+  <div class="benefits-block {{ block.settings.position }}"
+       style="text-align: {{ block.settings.text_align }};
+              justify-self: {{ block.settings.self_justify }};
+              align-self: {{ block.settings.self_align }};"
+       {{ block.shopify_attributes }}>
+
+    {% if feature_icon_url != blank %}
+      <img src="{{ feature_icon_url | img_url: '100x' }}" alt="Feature icon" loading="lazy">
+    {% elsif block.settings.icon_image != blank %}
+      <img src="{{ block.settings.icon_image | img_url: '100x' }}" alt="{{ block.settings.heading }}" loading="lazy">
+    {% endif %}
+
+    <h4 class="h2">{{ feature_heading | default: block.settings.heading }}</h4>
+    <p class="featured-text">{{ feature_text | default: block.settings.subtext }}</p>
+
+  </div>
+{% endfor %}
+
+
+  </div>
+</div>
+
+<style>
+  {% if section.settings.image_shadow %}
+.benefits-center-image img {
+  filter: drop-shadow(0 0 70px #72460078);
+}
+  {% endif %}
+.benefits-layout {
+  display: flex;
+  justify-content: center;
+  {% comment %} padding: 40px 20px; {% endcomment %}
+}
+.benefits-inner {
+  max-width: 1100px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 3 equal columns */
+  grid-template-rows: auto auto auto;   /* 3 rows */
+  align-items: center;
+  justify-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+.benefits-center-image {
+  grid-column: 2/4; /* Always middle column */
+  grid-row: 2/4;    /* Always middle row */
+}
+
+.benefits-center-image img {
+  max-width: 340px;
+  height: auto;
+  display: block;
+  background: transparent;
+}
+
+/* Top row: 2 blocks */
+.benefits-block.top_left  { grid-column: 1/3; grid-row: 1; justify-self: end; }
+.benefits-block.top_right { grid-column: 3/5; grid-row: 1; justify-self: start; }
+
+/* Middle row: 3 blocks + image */
+.benefits-block.middle_left   { grid-column: 1/3; grid-row: 2; justify-self: end; }
+.benefits-block.middle_center { grid-column: 2; grid-row: 2; margin-top: -120%; } /* optional block above/below image */
+.benefits-block.middle_right  { grid-column: 3/5; grid-row: 2; justify-self: start; }
+
+/* Bottom row: 2 blocks */
+.benefits-block.bottom_left  { grid-column: 1/3; grid-row: 3; justify-self: end; }
+.benefits-block.bottom_right { grid-column: 3/5; grid-row: 3; justify-self: start; }
+
+/* Shared block styles */
+.benefits-block {
+  max-width: 220px;
+}
+
+.benefits-block img {
+  width: 60px;
+}
+.benefits-block h4 {
+  margin: 0 0 6px;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.benefits-block p {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+/* Responsive: stack everything under image */
+@media (max-width: 768px) {
+  .benefits-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .benefits-block {
+    max-width: 100%;
+    text-align: center !important;
+    align-self: center !important;
+  }
+}
+
+</style>

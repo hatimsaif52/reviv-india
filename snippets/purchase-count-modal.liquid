@@ -1,0 +1,70 @@
+{{ 'purchase-count-modal.css' | asset_url | stylesheet_tag }}
+{% assign lowercase_title = product.url | downcase  %}
+<div class="purchase-count-modal" id="purchaseCountModal-{{ section.id }}" style="display: none;">
+  <div class="purchase-count-modal__content">
+    {% comment %} <div class="purchase-count-modal__header"> {% endcomment %}
+      {% comment %} <div class="purchase-count-modal__header-heading"></div> {% endcomment %}
+      <button type="button" class="purchase-count-modal__close"onclick="document.getElementById('purchaseCountModal-{{ section.id }}').style.display='none'" aria-label="Close">
+        &times;
+      </button>
+      {% comment %} <div class="purchase-count-modal__header-subheading">
+      </div>
+    </div> {% endcomment %}
+    <div class="purchase-count-modal__body">
+      <div class="purchase-count-modal__section">
+          <div class="purchase-count-modal__section-detail">
+            We reduce the price of R2 and R3 for customers that purchased appliances from us in the past.
+          </div>
+      </div>
+
+      <div class="purchase-count-modal__section">
+        <div class="purchase-count-modal__section-heading">Why do we do this?</div>
+          <div class="purchase-count-modal__section-detail">
+            We do this to reduce the price of our appliances for return customers.  The reality of using ads on Meta/Google/Tiktok is that it is very expensive to acquire a customer.  
+          </div>
+          <br>
+          <div class="purchase-count-modal__section-detail">
+            And so the first purchase is often very costly to us whereas we can pass on these savings for follow-on purchases.
+          </div>
+        </div>
+
+      <div class="purchase-count-modal__section">
+        <div class="purchase-count-modal__section-heading">What purchases count?</div>
+          <div class="purchase-count-modal__section-detail">
+            We count purchases of all appliances, which include R1, R2, R3, and RD1.
+          </div>
+          <br>
+          <div class="purchase-count-modal__section-detail">
+            We also count purchases on all channels where Reviv is sold.  This includes on our site (<a href="https://getreviv.com/">www.getreviv.com</a>), on Amazon, and on Tiktokshop.
+          </div>
+      </div>
+
+      <div class="purchase-count-modal__section">
+        <div class="purchase-count-modal__section-heading">How will you know if I purchased on Amazon or Tiktokshop?</div>
+          <div class="purchase-count-modal__section-detail">
+            While we clearly see past purchases on Shopify it is harder to see who has purchased on other channels.  And so we will email you if we don't see previous Shopify purchases and ask for proof of your other purchases (order#, etc.).
+          </div>
+      </div>
+      <div class="purchase-count-modal__section">
+          <div class="purchase-count-modal__section-heading">What if I use this discount and I have not made past purchases?</div>
+          {% if lowercase_title contains 'r3-revivthree' %}
+            <div class="purchase-count-modal__section-detail">
+              We will email you and give you the option of paying the difference.  If you pay the difference then we will activate the 1-year replacement guarantee.
+          </div>
+          <br>
+          <div class="purchase-count-modal__section-detail">
+            If you don't pay the difference we will still ship you the appliance but the 1-year replacement guarantee will not be activated.
+          </div>
+          {% else %}
+          <div class="purchase-count-modal__section-detail">
+            We will email you and give you the option of paying the difference.  If you pay the difference then we will activate the 1-year replacement guarantee.
+          </div>
+          <br>
+          <div class="purchase-count-modal__section-detail">
+            If you don't pay the difference we will still ship you the appliance but the 1-year replacement guarantee will not be activated.
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

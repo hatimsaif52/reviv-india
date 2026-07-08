@@ -1,0 +1,114 @@
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  #shopify-section-{{ section.id }} .ba-divider-outer {
+    background: {{ section.settings.background_color }};
+  }
+
+  #shopify-section-{{ section.id }} .ba-divider {
+    background: {% if section.settings.full_width %}transparent{% else %}{{ section.settings.background_color }}{% endif %};
+  }
+
+  #shopify-section-{{ section.id }} .ba-divider {
+    padding-top: {{ section.settings.spacing_top }}px;
+    padding-bottom: {{ section.settings.spacing_bottom }}px;
+  }
+
+  #shopify-section-{{ section.id }} .ba-divider__line {
+    width: 100%;
+    height: 0;
+    border: 0;
+    border-top-width: {{ section.settings.thickness }}px;
+    border-top-style: {{ section.settings.style }};
+    border-top-color: {{ section.settings.color }};
+    opacity: {{ section.settings.opacity | divided_by: 100.0 }};
+    margin: 0;
+  }
+{%- endstyle -%}
+
+<div class="ba-divider-outer">
+  <div class="ba-divider" role="separator" aria-label="Divider">
+    <hr class="ba-divider__line">
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "BA Divider",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Background full width",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "style",
+      "label": "Style",
+      "default": "solid",
+      "options": [
+        { "value": "solid", "label": "Solid" },
+        { "value": "dashed", "label": "Dashed" },
+        { "value": "dotted", "label": "Dotted" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "thickness",
+      "label": "Thickness",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 1
+    },
+    {
+      "type": "color",
+      "id": "color",
+      "label": "Color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "opacity",
+      "label": "Opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "spacing_top",
+      "label": "Top spacing",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "spacing_bottom",
+      "label": "Bottom spacing",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 24
+    }
+  ],
+  "presets": [
+    {
+      "name": "BA Divider"
+    }
+  ]
+}
+{% endschema %}

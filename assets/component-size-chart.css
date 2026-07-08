@@ -1,0 +1,188 @@
+.size-chart-button {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 0.9rem;
+  color: #333;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.size-chart-button__text {
+  font-size: 1.3rem;
+  color: white;
+  margin-right: 10px;
+}
+
+.size-chart-button__secondtext {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: rgb(var(--color-secondary-button-text));
+}
+
+.size-chart-modal {
+  position: fixed;
+  max-width: 700px;
+  margin: 0 auto;
+  top: 150px;
+  bottom: 150px;
+  left: 0px;
+  right: 0px;
+  z-index: 1000;
+  background: rgb(var(--color-background));
+  border: 1px solid rgb(var(--color-link));
+}
+
+@media screen and (max-width: 749px) {
+  .size-chart-modal {
+    top: 0;
+    bottom: 0;
+  }
+}
+
+.size-chart-modal__content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.size-chart-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.size-chart-modal__header-heading {
+  font-weight: bold;
+  font-size: 3rem;
+  color: rgb(var(--color-secondary-button-text));
+}
+
+.size-chart-modal__close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: white;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.size-chart-modal__body {
+  padding: 3rem;
+  flex: 1;
+  overflow-y: scroll;
+  /* scrollbar-width: none; */
+}
+
+.size-chart-wrapper {
+  margin-bottom: 1rem;
+}
+
+.size-chart__heading {
+  color: rgb(var(--color-secondary-button-text));
+  font-size: 1.9rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.size-chart__subheading {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.size-chart-wrapper .size-description { margin-bottom: 10px; }
+
+.size-chart__table-wrapper {
+  overflow-x: auto;
+}
+
+.size-chart-specification {
+  display: flex;
+}
+
+.size-chart-specification__dot {
+  min-width: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.size-chart-table {
+  width: 100%;
+  border: 2px solid grey;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.size-chart-table tr {
+  border: 1px solid #e6e6e6;
+}
+
+.size-chart-table th {
+  color: rgb(var(--color-secondary-button-text));
+  padding: 0px 20px;
+}
+
+.size-chart-table td {
+}
+
+.size-chart__email {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(var(--color-secondary-button-text));
+}
+
+.size-chart-modal__footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.reviv-big-image,
+.reviv-small-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(229, 192, 133, 0.2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #e5c085, #d4b37a);
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #d4b37a, #e5c085);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Make sure Firefox users get a nice scrollbar too */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #e5c085 rgba(229, 192, 133, 0.2);
+}

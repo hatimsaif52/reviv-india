@@ -1,0 +1,302 @@
+{{ 'component-size-chart.css' | asset_url | stylesheet_tag }}
+
+<style>
+.section-{{ section.id }}-padding {
+  padding-top: {{ section.settings.padding_top }}px;
+  padding-bottom: {{ section.settings.padding_bottom }}px;
+}
+
+/* Table wrapper for horizontal scroll */
+.comparison-table-wrapper {
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.comparison-table-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.comparison-table {
+  width: max-content;
+  min-width: 100%;
+  border-collapse: separate;
+  border-spacing: 20px 0;
+  max-width: 1024px;
+  --color-secondary-button-text: 229, 192, 133;
+}
+
+.comparison-table th{
+    background: #EFC98B;
+    border-top-left-radius: 29px;
+    border-top-right-radius: 29px;
+    text-align: center;
+    width: 26%;
+}
+
+.comparison-table td {
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid #EFC98B;
+    border-top: none;
+    border-bottom: none;
+    color: #fff;
+    background: #232021;
+    padding: 1.5rem 2rem;
+    position: relative;
+}
+.comparison-table td:after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: rgba(97, 97, 97, 1);
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 100%;
+}
+.comparison-table th:first-child{width: 18%;}
+.comparison-table th:first-child,
+.comparison-table td:first-child {
+    text-align: left;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    background: none;
+    padding: 1.5rem 0;
+}
+tr:first-child td {
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+tr:last-child td {
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom: 2px solid #EFC98B;
+}
+tr:last-child td:after {
+content: none;}
+.comparison-table th img,
+.comparison-table td img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 0.5rem;
+}
+
+/* Highlighted middle column */
+{% comment %} .comparison-table th.is-highlight,
+.comparison-table td.is-highlight {
+  font-weight: 600;
+} {% endcomment %}
+table.comparison-table h2 {
+    position:relative;
+    margin: 1.2rem 0px;
+}
+table.comparison-table h2:before {
+    content: "";
+    width: 100.6%;
+    height: 100%;
+    background: #EFC98B;
+    z-index: -1;
+    position: absolute;
+    left: -0.4%;
+    top: 140%;
+}
+/* Buttons */
+.comparison-table button {
+  background: #EFC98B;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  min-width: 150px;
+  font-weight: 600;
+}
+
+/* Modal */
+.compare-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.compare-modal.active {
+  display: flex;
+}
+.size-chart-modal{
+  background: #232021;
+}
+.compare-modal__box {
+    color: #ffffffbf;
+    text-align: left;
+}
+
+.compare-modal__close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.size-chart-modal {
+    td, th, td:first-child, th:first-child {
+        all: revert;
+        border: none !important;
+    }
+    th,th:first-child{
+    color:#EFC98B; }
+    .size-chart-modal__close-btn{
+        background: transparent;
+    }
+}
+</style>
+
+<section class="comparison-table-section section section-{{ section.id }}-padding">
+  <div class="page-width" style="padding:0;">
+    <div class="comparison-table-wrapper">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th></th>
+            {% for col in (2..4) %}
+              {% assign img_key = 'col_' | append: col | append: '_image' %}
+              {% assign label_key = 'col_' | append: col | append: '_label' %}
+              {% assign img = section.settings[img_key] %}
+              {% assign label = section.settings[label_key] %}
+              <th
+                 {% comment %} class="{% if col == 2 %}is-highlight{% endif %}" {% endcomment %}
+                >
+                {% if img != blank %}
+                  {{ img | image_url: width:400 | image_tag }}
+                {% endif %}
+                {% if label != blank %}
+                  <h2>{{ label }}</h2>
+                {% endif %}
+              </th>
+            {% endfor %}
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for block in section.blocks %}
+            <tr>
+              <!-- Feature column -->
+              <td>{{ block.settings.feature }}</td>
+
+              <!-- 3 columns for content -->
+              {% for col in (2..4) %}
+                {% assign text_key = 'col_' | append: col | append: '_text' %}
+                {% assign btn_key = 'col_' | append: col | append: '_is_button' %}
+                {% assign modal_key = 'col_' | append: col | append: '_modal' %}
+
+                {% assign value = block.settings[text_key] %}
+                {% assign is_btn = block.settings[btn_key] %}
+                {% assign modal_html = block.settings[modal_key] %}
+
+                <td 
+                {% comment %} class="{% if col == 2 %}is-highlight{% endif %}" {% endcomment %}
+                >
+                  {% if is_btn %}
+                    <button data-modal-id="modal-{{ section.id }}-{{ block.id }}-{{ col }}">
+                      {{ value }}
+                    </button>
+
+                    <div class="compare-modal" id="modal-{{ section.id }}-{{ block.id }}-{{ col }}">
+                      <div class="compare-modal__box">
+                            <!-- Modal markup - initially hidden -->
+                            <div class="size-chart-modal">
+                                <div class="size-chart-modal__content">
+                                    <div class="size-chart-modal__header">
+                                        <div class="size-chart-modal__header-heading">Size Guide</div>
+                                          <div class="size-chart-modal__close-btn compare-modal__close">&times;</div>
+                                        {% comment %} <button type="button" class="size-chart-modal__close" id="size-chart-modal__close" aria-label="Close">
+                                            &times;
+                                        </button> {% endcomment %}
+                                    </div>
+                                    <div class="size-chart-modal__body">
+                                    {{ modal_html }}
+                                    </div>
+                                    <div class="size-chart-modal__footer">
+                                        <button type="button" class="button button--secondary size-chart-modal__close-btn">Close</button>
+                                    </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  {% else %}
+                    <span>{{ value }}</span>
+                  {% endif %}
+                </td>
+              {% endfor %}
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('click', function(e) {
+  if (e.target.matches('[data-modal-id]')) {
+    const id = e.target.getAttribute('data-modal-id');
+    document.getElementById(id).classList.add('active');
+  }
+
+  if (e.target.classList.contains('size-chart-modal__close-btn') || e.target.classList.contains('compare-modal')) {
+    const modal = e.target.closest('.compare-modal');
+    modal.classList.remove('active');
+  }
+});
+</script>
+
+{% schema %}
+{
+  "name": "SS Properties Comparison",
+  "settings": [
+    { "type": "range", "id": "padding_top", "label": "Padding top", "min": 0, "max": 100, "step": 4, "default": 48 },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 100, "step": 4, "default": 48 },
+
+    { "type": "image_picker", "id": "col_2_image", "label": "Column 2 image/logo" },
+    { "type": "text", "id": "col_2_label", "label": "Column 2 label", "default": "Reviv" },
+
+    { "type": "image_picker", "id": "col_3_image", "label": "Column 3 image/logo" },
+    { "type": "text", "id": "col_3_label", "label": "Column 3 label", "default": "ShockDoctor" },
+
+    { "type": "image_picker", "id": "col_4_image", "label": "Column 4 image/logo" },
+    { "type": "text", "id": "col_4_label", "label": "Column 4 label", "default": "Brand 4" }
+  ],
+  "blocks": [
+    {
+      "type": "row",
+      "name": "Comparison row",
+      "settings": [
+        { "type": "text", "id": "feature", "label": "Feature Label" },
+
+        { "type": "text", "id": "col_2_text", "label": "Column 2 text" },
+        { "type": "checkbox", "id": "col_2_is_button", "label": "Column 2 is button" },
+        { "type": "html", "id": "col_2_modal", "label": "Column 2 modal HTML" },
+
+        { "type": "text", "id": "col_3_text", "label": "Column 3 text" },
+        { "type": "checkbox", "id": "col_3_is_button", "label": "Column 3 is button" },
+        { "type": "html", "id": "col_3_modal", "label": "Column 3 modal HTML" },
+
+        { "type": "text", "id": "col_4_text", "label": "Column 4 text" },
+        { "type": "checkbox", "id": "col_4_is_button", "label": "Column 4 is button" },
+        { "type": "html", "id": "col_4_modal", "label": "Column 4 modal HTML" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "SS Properties Comparison",
+      "blocks": [{ "type": "row" }, { "type": "row" }, { "type": "row" }]
+    }
+  ]
+}
+{% endschema %}

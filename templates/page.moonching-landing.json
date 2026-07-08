@@ -1,0 +1,198 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "ss_phil_hero_FRUNpJ": {
+      "type": "ss-phil-hero",
+      "custom_css": [
+        ".c-hero__tag {display: none;}",
+        ".c-hero__text {opacity: 1;}"
+      ],
+      "name": "SS Hero Phil",
+      "settings": {
+        "tag": "",
+        "heading_line1": "Dissolve Chronic Pain at the Root",
+        "heading_line2": "",
+        "text": "You don’t have chronic pain. You inhabit a pain story.<br><br>\nFor years, the medical system has told you to \"manage\"\nyour chronic pain. You spend thousands of dollars on\nphysical treatments, specialists, and supplements—but\nthe pain always comes back. It's time to step off the\nMedical Merry-Go-Round. Stop managing symptoms and\nstart dissolving the energetic habit driving them.",
+        "btn_text": "Book Your Free Diagnostic Call",
+        "btn_link": "https://calendly.com/sunmoonlake/painstorydiagnostic",
+        "heading_color": "#ffffff",
+        "text_color": "#ffffff",
+        "tag_color": "#e5c085",
+        "tag_dot_color": "#e5c085",
+        "btn_color": "#e5c085",
+        "btn_text_color": "#000000",
+        "show_tag_dot": true,
+        "show_badge": true,
+        "image": "shopify://shop_images/Gemini_Generated_Image_5f61085f61085f61_1.png",
+        "badge_title": "Root Cause Analysis",
+        "badge_text": "Solving Chronic Pain",
+        "reverse": false,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "rich_text_XPErQV": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_fcpzTg": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why physical treatments alone keep failing you.",
+            "heading_size": "h1"
+          }
+        },
+        "text_i4bbH8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Physical treatments and supplements only act as a security blanket. They chase the pain from your jaw to your shoulder to your back, ignoring the one thing powering the entire machine.</p><p>If you are an \"Over-Responsible Achiever\" carrying the weight of your family or business, that decision pressure manifests as real, physical pain. This constant drain of energy—the work of managing a body you believe is broken—is called the Vitality Leak. You cannot heal a physical symptom when the root cause is a story your body is proving true.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_fcpzTg",
+        "text_i4bbH8"
+      ],
+      "custom_css": [
+        ".rich-text__text {color: #fff; line-height: 1.4;}",
+        ".rich-text {background: linear-gradient(90deg, #0a0a0a 0%, #161515 50%, #0a0a0a 100%);}",
+        ".rich-text__heading {font-family: inherit !important; font-weight: 600; display: block; background: linear-gradient(90deg, #e5c085, #e5c085, #ffffff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "full_width": true,
+        "padding_top": 92,
+        "padding_bottom": 92,
+        "custom__class": ""
+      }
+    },
+    "ss_meet_phil_TDVftP": {
+      "type": "ss-meet-phil",
+      "blocks": {
+        "heading_dgy43b": {
+          "type": "heading",
+          "settings": {
+            "text": "The Solution: Instant Story Dissolution",
+            "color": "#ffffff"
+          }
+        },
+        "text_j3dncd": {
+          "type": "text",
+          "settings": {
+            "text": "We partner with Moonching Wu, founder of Quantum Acupuncture and a pioneer\nin the practice of Instant Story Dissolution. Rather than physically manipulating\nthe body, she uses the acupuncture map to locate the exact psychological\n\"story\" your nervous system is proving true, and dissolves it at the source. When\nyou dissolve the story, the physical pressure drops instantly",
+            "color": "#b2b2b2"
+          }
+        },
+        "badge_gKGypN": {
+          "type": "badge",
+          "settings": {
+            "number": "The Pain Story Map",
+            "label": "We make the invisible source of your pain visible. You will receive the lens to see the exact story driving your physical pain, shifting you from victim to cause.",
+            "number_color": "#e5c085",
+            "label_color": "#ffffff"
+          }
+        },
+        "badge_TFTwXe": {
+          "type": "badge",
+          "settings": {
+            "number": "The Freedom Declaration",
+            "label": "A single, potent mental tool installed during our session.This acts as your direct mechanism to dissolve the old story the moment it tries to reappear in your daily life.",
+            "number_color": "#e5c085",
+            "label_color": "#ffffff"
+          }
+        },
+        "badge_ALfNhQ": {
+          "type": "badge",
+          "settings": {
+            "number": "The Freedom Commitment",
+            "label": "We don't just exit the pain; we ensure it doesn't comeback. You receive a dedicated 20-minute follow-up check-in to reinforce the exit and ensure your freedom from chronic pain is permanent.",
+            "number_color": "#e5c085",
+            "label_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "heading_dgy43b",
+        "text_j3dncd",
+        "badge_gKGypN",
+        "badge_TFTwXe",
+        "badge_ALfNhQ"
+      ],
+      "custom_css": [
+        ".c-meet__badge {padding: 11px 12px;}",
+        ".c-meet__badge strong {font-size: 13px; display: block; line-height: 1.3; min-height: 47px;}",
+        ".c-meet__badge span {font-size: 12px; opacity: 1; line-height: 1.3; display: block;}",
+        ".c-meet__heading {font-weight: 600;}",
+        ".c-meet {background: #252220;}"
+      ],
+      "name": "SS Meet Phil",
+      "settings": {
+        "image": "shopify://shop_images/New_Project_f2408690-737e-4f37-b6d2-a72d658d2e02.webp",
+        "border_color": "#e5c085",
+        "reverse": false,
+        "padding_top": 40,
+        "padding_bottom": 60
+      }
+    },
+    "ss_points_phil_dEPeYY": {
+      "type": "ss-points-phil",
+      "blocks": {
+        "point_TRprDg": {
+          "type": "point",
+          "settings": {
+            "heading": "Step 1: The Exit Ramp (Free Diagnostic)",
+            "text": "Your transformation starts with a Free 20-Minute\nDiagnostic Call. On this call, we will map the exact outline\nof the pain story you are inhabiting, and show you the\ndirect connection to your physical pain. For the first time,\nyou will see the perspective you are trapped in from the\noutside, and you will be shown the exit."
+          }
+        }
+      },
+      "block_order": [
+        "point_TRprDg"
+      ],
+      "custom_css": [
+        ".c-hero__btn {width: max-content;}",
+        ".c-phil__list {gap: 20px;}",
+        ".c-phil__item {opacity: 1;}"
+      ],
+      "name": "SS Phil Video Points",
+      "settings": {
+        "heading": "Built for the Over-Responsible Achiever",
+        "section_content": "This is specifically for the high-performer who is the\ndesignated problem-solver for everyone else, but whose\nbody is now paying the price. If you have a graveyard of\nfailed supplements, recurring appointments on your\ncalendar, and a gut feeling that your severe physical pain\nisn't just a structural problem—you are ready for the exit.",
+        "show_video": false,
+        "video": "https://www.youtube.com/watch?v=XIMLoLxmTDw",
+        "poster": "shopify://shop_images/image_a3a4ff4d-64b3-4a94-95a3-27a5e3fd6d09.png",
+        "autoplay": false,
+        "padding_top": 90,
+        "padding_bottom": 90,
+        "btn_color": "#efc98b",
+        "btn_text_color": "#000000",
+        "button_label": "Book Your Free Diagnostic Call",
+        "button_link": "https://calendly.com/sunmoonlake/painstorydiagnostic"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ss_phil_hero_FRUNpJ",
+    "rich_text_XPErQV",
+    "ss_meet_phil_TDVftP",
+    "ss_points_phil_dEPeYY"
+  ]
+}

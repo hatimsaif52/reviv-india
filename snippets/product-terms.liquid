@@ -1,0 +1,421 @@
+{% comment %}
+  Product Terms and Conditions Checkbox
+  - Renders a checkbox that must be checked before adding to cart
+  - Include with: {% render 'product-term' %}
+{% endcomment %}
+
+{{ 'component-product-terms.css' | asset_url | stylesheet_tag }}
+{{ 'component-modal-product-terms.css' | asset_url | stylesheet_tag }}
+{% assign lowercase_title = product.url | downcase  %}
+{% assign appliance_product = true %}
+{% if lowercase_title contains 'reviv-two' or lowercase_title contains 'r2-revivtwo' %}
+  {% assign product_name = 'R2 appliance' %}
+{% elsif lowercase_title contains 'rd1' %}
+  {% assign product_name = 'RD1 appliance' %}
+{% elsif lowercase_title contains 'r3-revivthree' %}
+  {% assign product_name = 'R3 appliance' %}
+{% elsif lowercase_title contains '1-year-subscription-only' %}
+  {% assign product_name = 'EGK Biomechanics Community & Support Membership' %}
+  {% assign appliance_product = false %}
+{% else %}
+  {% assign product_name = 'Reviv One appliance' %}
+{% endif %}
+<script>console.log('{{ lowercase_title }}');</script>
+
+<div class="product-terms-container">
+  <div class="product-terms-checkbox-wrapper">
+    <input
+      type="checkbox"
+      id="ProductTerms-{{ section.id }}"
+      class="product-terms-checkbox"
+      name="terms_accepted"
+      data-terms-required="true"
+    >
+    <label for="ProductTerms-{{ section.id }}" class="product-terms-label">
+      I agree to the
+      <div class="terms-link-button" aria-haspopup="dialog">Product terms and conditions</div>
+    </label>
+  </div>
+  <div class="product-terms-error hidden" role="alert">
+    You must agree to the product terms and conditions before adding to cart.
+  </div>
+</div>
+
+<!-- Modal markup - initially hidden -->
+<div class="product-terms-modal" id="ProductTermsModal-{{ section.id }}" style="display: none;">
+  <div class="product-terms-modal__content">
+    <div class="product-terms-modal__header">
+      <div class="product-terms-modal__header-heading">Reviv Product Terms & Conditions</div>
+      <button type="button" class="product-terms-modal__close" id="product-terms-modal__close" aria-label="Close">
+        &times;
+      </button>
+      <div class="product-terms-modal__header-subheading">
+        By purchasing the {{ product_name }}, you acknowledge that you have read, understood, and agree to be
+        bound by the following terms and conditions:
+      </div>
+    </div>
+    <div class="product-terms-modal__body">
+      <div class="product-terms-modal__section">
+        <div class="product-terms-modal__section-heading">General usage and Disclaimer</div>
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">1.</div>
+          <div class="product-terms-modal__section-detail">
+            The {{ product_name }} is an appliance designed to be worn in the mouth to help address various
+            issues related to dental biomechanics. It is not a medical device and has not been evaluated by the FDA.
+          </div>
+        </div>
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">2.</div>
+          <div class="product-terms-modal__section-detail">
+            Reviv makes no claims to diagnose, treat, cure, or prevent any disease. The information provided on our
+            website and in our community is based on personal experience and is educational in nature.
+          </div>
+        </div>
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">3.</div>
+          <div class="product-terms-modal__section-detail">
+            You acknowledge that you are using the {{ product_name }} at your own risk and that results may
+            vary from person to person.
+          </div>
+        </div>
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">4.</div>
+          <div class="product-terms-modal__section-detail">
+            You agree that Reviv is not responsible for any injuries, discomfort, or adverse effects that may result
+            from the use of the {{ product_name }}.
+          </div>
+        </div>
+      </div>
+
+      <div class="product-terms-modal__section">
+        <div class="product-terms-modal__section-heading">Recommended Usage</div>
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">1.</div>
+          <div class="product-terms-modal__section-detail">
+            You agree to follow the recommended usage guidelines for the {{ product_name }}, which typically
+            include:
+            <div class="product-terms-modal__section-content">
+              <div class="product-terms-modal__section-order">●</div>
+              <div class="product-terms-modal__section-detail">
+                Initially wearing the appliance for shorter periods and gradually increasing wear time
+              </div>
+            </div>
+            <div class="product-terms-modal__section-content">
+              <div class="product-terms-modal__section-order">●</div>
+              <div class="product-terms-modal__section-detail">Not wearing the appliance while eating</div>
+            </div>
+            <div class="product-terms-modal__section-content">
+              <div class="product-terms-modal__section-order">●</div>
+              <div class="product-terms-modal__section-detail">Cleaning the appliance regularly</div>
+            </div>
+            <div class="product-terms-modal__section-content">
+              <div class="product-terms-modal__section-order">●</div>
+              <div class="product-terms-modal__section-detail">
+                Taking breaks from wearing the appliance if experiencing significant discomfort
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">2.</div>
+          <div class="product-terms-modal__section-detail">
+            You acknowledge that the process of wearing the {{ product_name }} may cause temporary discomfort,
+            including:
+            <div class="product-terms-modal__section-content">
+              <div class="product-terms-modal__section-order">●</div>
+              <div class="product-terms-modal__section-detail">Headaches or pressure in the head</div>
+            </div>
+            <div class="product-terms-modal__section-content">
+              <div class="product-terms-modal__section-order">●</div>
+              <div class="product-terms-modal__section-detail">Soreness in the jaw, teeth, or gums</div>
+            </div>
+            <div class="product-terms-modal__section-content">
+              <div class="product-terms-modal__section-order">●</div>
+              <div class="product-terms-modal__section-detail">Changes in bite alignment</div>
+            </div>
+            <div class="product-terms-modal__section-content">
+              <div class="product-terms-modal__section-order">●</div>
+              <div class="product-terms-modal__section-detail">Temporary changes in speech</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">3.</div>
+          <div class="product-terms-modal__section-detail">
+            You understand that these are normal parts of the process and not necessarily signs of something going
+            wrong.
+          </div>
+        </div>
+        {% if appliance_product %}
+          <div class="product-terms-modal__section-content">
+            <div class="product-terms-modal__section-order">4.</div>
+            <div class="product-terms-modal__section-detail">If you have veneers, crowns, bridges, or other dental restorations, you acknowledge that you must exercise caution when using the {{ product_name }}. The appliance may exert pressure on your teeth that could cause dental restorations to loosen or dislodge. Reviv strongly recommends consulting your dentist before use if this applies to you, and agrees that Reviv is not liable for any damage to existing dental restorations resulting from use of the appliance.</div>
+          </div>
+          <div class="product-terms-modal__section-content">
+            <div class="product-terms-modal__section-order">5.</div>
+            <div class="product-terms-modal__section-detail">You confirm that you do not have loose teeth, are not currently wearing braces, and do not have untreated dental or gum disease. If any of these conditions apply, you agree to consult a licensed dental professional before using the {{ product_name }}.</div>
+          </div>
+          <div class="product-terms-modal__section-content">
+            <div class="product-terms-modal__section-order">6.</div>
+            <div class="product-terms-modal__section-detail">Keeping the appliance away from hot water, dishwashers, and direct sunlight, as heat may deform the device</div>
+          </div>
+          <div class="product-terms-modal__section-content">
+            <div class="product-terms-modal__section-order">7.</div>
+            <div class="product-terms-modal__section-detail">If you experience gum irritation or notice any signs of gum recession, you agree to pause use immediately and allow your gums to fully heal before resuming. When you resume, you should do so gradually, starting with shorter wear periods and increasing slowly. Persistent or worsening gum recession should be evaluated by a dental professional before continuing use.</div>
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="product-terms-modal__section">
+        <div class="product-terms-modal__section-heading">Important Biomechanical Considerations</div>
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">1.</div>
+          <div class="product-terms-modal__section-detail">
+            You acknowledge that you understand the Reviv process may create a posterior open bite (a condition where
+            the back teeth do not touch when biting down) over time.
+          </div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">2.</div>
+          <div class="product-terms-modal__section-detail">
+            You understand that if a posterior open bite develops, it must be supported either by:
+            <div class="product-terms-modal__section-content">
+              <div class="product-terms-modal__section-order">●</div>
+              <div class="product-terms-modal__section-detail">
+                Continuing to wear the {{ product_name }} or a similar appliance at night, OR
+              </div>
+            </div>
+            <div class="product-terms-modal__section-content">
+              <div class="product-terms-modal__section-order">●</div>
+              <div class="product-terms-modal__section-detail">
+                Consulting with a dentist about placing composite material on your teeth to support the bite
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">3.</div>
+          <div class="product-terms-modal__section-detail">
+            You understand that failing to support a posterior open bite could lead to:
+            <div class="product-terms-modal__section-content">
+              <div class="product-terms-modal__section-order">●</div>
+              <div class="product-terms-modal__section-detail">Regression of progress</div>
+            </div>
+            <div class="product-terms-modal__section-content">
+              <div class="product-terms-modal__section-order">●</div>
+              <div class="product-terms-modal__section-detail">Potential development of TMJ issues</div>
+            </div>
+            <div class="product-terms-modal__section-content">
+              <div class="product-terms-modal__section-order">●</div>
+              <div class="product-terms-modal__section-detail">Structural changes in the skull, spine, and body</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">4.</div>
+          <div class="product-terms-modal__section-detail">
+            You agree to consult with a healthcare professional if you experience any severe or concerning symptoms
+            while using the {{ product_name }}.
+          </div>
+        </div>
+      </div>
+
+      <div class="product-terms-modal__section">
+        <div class="product-terms-modal__section-heading">EGK Biomechanics Community & Support Membership</div>
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">1.</div>
+          <div class="product-terms-modal__section-detail">You understand that participating in the EGK community is optional and that any advice or suggestions received from other community members should not replace professional medical advice.</div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">2.</div>
+          <div class="product-terms-modal__section-detail">You acknowledge that sharing your experience in the community is voluntary and that you do so at your own discretion.</div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">3.</div>
+          <div class="product-terms-modal__section-detail">The EGK community is an independently operated, peer-led support space. It is not managed, monitored, or endorsed by Reviv as a company, and participation in the community does not constitute a formal support relationship with Reviv.</div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">4.</div>
+          <div class="product-terms-modal__section-detail">Any information, advice, or guidance shared by community members reflects personal experience only and does not represent the official views, recommendations, or positions of Reviv.</div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">5.</div>
+          <div class="product-terms-modal__section-detail">Community access does not entitle you to official product support, professional medical or dental consultation, or guaranteed responses from Reviv staff.</div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">6.</div>
+          <div class="product-terms-modal__section-detail">For official product support, warranty queries, returns, or refunds, you must contact Reviv directly through our official support channels.</div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">7.</div>
+          <div class="product-terms-modal__section-detail">Participation in the community is also subject to the Community's own Terms & Conditions, which apply separately and in addition to these Product Terms & Conditions.</div>
+        </div>
+      </div>
+
+      <div class="product-terms-modal__section">
+        <div class="product-terms-modal__section-heading">Communication and Community</div>
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">1.</div>
+          <div class="product-terms-modal__section-detail">
+            You understand that participating in the Reviv community is optional and that any advice or suggestions
+            received from other community members should not replace professional medical advice.
+          </div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">2.</div>
+          <div class="product-terms-modal__section-detail">
+            You acknowledge that sharing your experience in the community is voluntary and that you do so at your own
+            discretion.
+          </div>
+        </div>
+      </div>
+      <style>
+  .product-terms-modal__section-detail a {
+    color: #007BFF;             /* Blue for normal links */
+    text-decoration: underline; /* Optional underline */
+  }
+
+  .product-terms-modal__section-detail a:visited {
+    color: #007BFF;             /* Keep visited links blue */
+  }
+
+  .product-terms-modal__section-detail a:hover {
+    color: #0056b3;             /* Darker blue on hover */
+  }
+</style>
+
+            <style>
+  .product-terms-modal__section-detail a {
+    color: #007BFF;             /* Blue for normal links */
+    text-decoration: underline; /* Optional underline */
+  }
+
+  .product-terms-modal__section-detail a:visited {
+    color: #007BFF;             /* Keep visited links blue */
+  }
+
+  .product-terms-modal__section-detail a:hover {
+    color: #0056b3;             /* Darker blue on hover */
+  }
+</style>
+
+      <style>
+  .product-terms-modal__section-detail a {
+    color: #007BFF;             /* Blue for normal links */
+    text-decoration: underline; /* Optional underline */
+  }
+
+  .product-terms-modal__section-detail a:visited {
+    color: #007BFF;             /* Keep visited links blue */
+  }
+
+  .product-terms-modal__section-detail a:hover {
+    color: #0056b3;             /* Darker blue on hover */
+  }
+</style>
+
+      <div class="product-terms-modal__section">
+        <div class="product-terms-modal__section-heading">Returns and Refunds</div>
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order"></div>
+          <div class="product-terms-modal__section-detail">
+            By accepting these terms, you are explicitly agreeing to our 
+      <a href="https://getreviv.com/pages/return-and-refund-policy" target="_blank">
+        return & refund policy
+      </a>.
+          </div>
+        </div>
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order"></div>
+          <div class="product-terms-modal__section-detail">
+          </div>
+        </div>
+      </div>
+
+      <div class="product-terms-modal__section">
+        <div class="product-terms-modal__section-heading">Limitation of Liability</div>
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">1.</div>
+          <div class="product-terms-modal__section-detail">
+            To the maximum extent permitted by applicable law, Reviv shall not be liable for any direct, indirect,
+            incidental, special, consequential, or exemplary damages resulting from your use or inability to use the
+            {{ product_name }}.
+          </div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">2.</div>
+          <div class="product-terms-modal__section-detail">
+            You agree to indemnify and hold harmless Reviv and its affiliates, officers, employees, and agents from any
+            claims, liabilities, damages, losses, and expenses arising from your use of the
+            {{ product_name }}.
+          </div>
+        </div>
+      </div>
+
+      <div class="product-terms-modal__section">
+        <div class="product-terms-modal__section-heading">Important Health Notice</div>
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">1.</div>
+          <div class="product-terms-modal__section-detail">
+            You confirm that you have consulted with a healthcare professional about your specific health conditions and
+            concerns before using the {{ product_name }}, or you have made an informed decision to proceed
+            without such consultation.
+          </div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">2.</div>
+          <div class="product-terms-modal__section-detail">
+            You acknowledge that the {{ product_name }} is not a substitute for professional dental or medical
+            care.
+          </div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">3.</div>
+          <div class="product-terms-modal__section-detail">
+            You agree to stop using the {{ product_name }} and consult a healthcare professional if you
+            experience severe pain, significant changes in bite that cause difficulty eating, breathing problems, or any
+            other concerning symptoms.
+          </div>
+        </div>
+        {% if appliance_product %}
+          <div class="product-terms-modal__section-content">
+            <div class="product-terms-modal__section-order">4.</div>
+            <div class="product-terms-modal__section-detail">If you have been diagnosed with or suspect you may have sleep apnea, you agree to consult a physician before using the {{ product_name }}. This product is not designed to address sleep apnea and is not a substitute for medically approved sleep apnea treatments.</div>
+          </div>
+          <div class="product-terms-modal__section-content">
+            <div class="product-terms-modal__section-order">5.</div>
+            <div class="product-terms-modal__section-detail">You acknowledge that in rare cases, if the appliance becomes loose or dislodged during sleep, it may present a choking hazard. You agree to stop use immediately and consult a dental professional if this occurs.</div>
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="product-terms-modal__section-content">
+        By clicking "Accept" and completing your purchase, you confirm that you have read, understood, and agree to be
+        bound by these Terms and Conditions.
+      </div>
+    </div>
+
+    <div class="product-terms-modal__footer">
+      <button type="button" class="button button--secondary" id="product-terms-modal__refuse">Refuse</button>
+      <button type="button" class="button button--primary" id="product-terms-modal__accept">Accept</button>
+    </div>
+  </div>
+</div>
+
+<script src="{{ 'product-terms-modal.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'product-terms-validation.js' | asset_url }}" defer="defer"></script>

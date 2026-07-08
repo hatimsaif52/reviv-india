@@ -1,0 +1,589 @@
+{%- style -%}
+  .before-after-product-recs {
+    background: #ffffff;
+    padding: 0 0 56px;
+  }
+
+  .before-after-product-recs__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .before-after-product-recs__viewport {
+    position: relative;
+  }
+
+  .before-after-product-recs__track {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 54px 8px 30px;
+  }
+
+  .before-after-product-recs__track::-webkit-scrollbar {
+    height: 0;
+  }
+
+  .before-after-product-recs__card {
+    scroll-snap-align: start;
+    flex: 0 0 min(320px, 85vw);
+    border-radius: 26px;
+    overflow: visible;
+    background: transparent;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .before-after-product-recs__clip {
+    border-radius: 26px;
+    overflow: hidden;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+
+  .before-after-product-recs__badge {
+    position: absolute;
+    background: #e2c089;
+    color: #111111;
+    font-weight: 800;
+    font-size: 26px;
+    text-align: center;
+    padding: 15px 18px;
+    line-height: 1.1;
+    border-radius: 26px 26px 18px 18px;
+    margin: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 80px;
+    top: -50px;
+    left: 0;
+    right: 0;
+  }
+
+  .before-after-product-recs__badge.is-empty {
+    visibility: hidden;
+    background: transparent;
+  }
+
+  .before-after-product-recs__media {
+    background: #ffffff;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    border-top-left-radius: 26px;
+    border-top-right-radius: 26px;
+  }
+
+  .before-after-product-recs__media::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 90px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.78) 100%);
+    pointer-events: none;
+  }
+
+  .before-after-product-recs__media img,
+  .before-after-product-recs__media svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .before-after-product-recs__body {
+    background: linear-gradient(180deg, #1b1a18 0%, #070707 60%, #000000 100%);
+    color: #ffffff;
+    padding: 22px 22px 24px;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    border-bottom-left-radius: 26px;
+    border-bottom-right-radius: 26px;
+  }
+
+  .before-after-product-recs__title-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 14px;
+  }
+
+  .before-after-product-recs__title {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.05;
+    font-weight: 900;
+    max-width: 210px;
+    white-space: pre-line;
+    color: #ffffff;
+  }
+
+  .before-after-product-recs__r {
+    font-size: 44px;
+    line-height: 1;
+    font-weight: 900;
+    opacity: 0.95;
+    color: #ffffff;
+  }
+
+  .before-after-product-recs__desc {
+    margin: 12px 0 0;
+    font-size: 14px;
+    line-height: 1.35;
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  .before-after-product-recs__pills {
+    margin-top: 14px;
+    display: grid;
+    gap: 8px;
+  }
+
+  .before-after-product-recs__pill {
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 999px;
+    padding: 12px 14px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+  }
+
+  .before-after-product-recs__guarantee {
+    margin-top: 12px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.86);
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+    padding: 12px 14px;
+    display: block;
+    text-align: center;
+  }
+
+  .before-after-product-recs__cta {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    padding-top: 18px;
+  }
+
+  @media (min-width: 750px) {
+    .before-after-product-recs__body {
+      min-height: 420px;
+    }
+  }
+
+  .before-after-product-recs__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: transparent;
+    border: 1px solid rgba(226, 192, 137, 0.85);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 15px;
+    min-width: 190px;
+  }
+
+  .before-after-product-recs__button--primary {
+    background: #e2c089;
+    border-color: #e2c089;
+    color: #111111;
+  }
+
+  .before-after-product-recs__nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 46px;
+    height: 46px;
+    border-radius: 999px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.65);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    transition: background 160ms ease, opacity 160ms ease, border-color 160ms ease;
+  }
+
+  .before-after-product-recs__nav:hover {
+    background: rgba(255, 255, 255, 0.92);
+    border-color: rgba(0, 0, 0, 0.22);
+  }
+
+  .before-after-product-recs__nav.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .before-after-product-recs__nav[disabled] {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .before-after-product-recs__nav--prev {
+    left: -10px;
+  }
+
+  .before-after-product-recs__nav--next {
+    right: -10px;
+  }
+
+  .before-after-product-recs__nav svg {
+    width: 18px;
+    height: 18px;
+    display: block;
+  }
+
+  .before-after-product-recs__note {
+    margin: 18px 0 0;
+    font-size: 15px;
+    line-height: 1.45;
+    color: rgba(0, 0, 0, 0.65);
+  }
+
+  @media (min-width: 990px) {
+    .before-after-product-recs__card {
+      flex-basis: 360px;
+    }
+  }
+
+  @media (max-width: 749px) {
+    .before-after-product-recs {
+      padding: 40px 0 44px;
+    }
+
+    .before-after-product-recs__nav {
+      display: none;
+    }
+  }
+{%- endstyle -%}
+
+<section class="before-after-product-recs" id="ba-product-recs" role="region" aria-label="Product recommendations">
+  <div class="before-after-product-recs__inner">
+    <div class="before-after-product-recs__viewport">
+      <button class="before-after-product-recs__nav before-after-product-recs__nav--prev" type="button" aria-label="Previous" data-before-after-recs-prev>
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+
+      <div class="before-after-product-recs__track" data-before-after-recs-track>
+        {%- for block in section.blocks -%}
+          {%- assign product_obj = block.settings.product -%}
+          {%- assign product_url = '' -%}
+          {%- if product_obj != blank -%}
+            {%- assign product_url = product_obj.url -%}
+          {%- endif -%}
+
+          {%- if block.settings.custom_link != blank -%}
+            {%- assign product_url = block.settings.custom_link -%}
+          {%- endif -%}
+
+          <div class="before-after-product-recs__card" {{ block.shopify_attributes }}>
+            <div class="before-after-product-recs__clip">
+              <div class="before-after-product-recs__badge{% if block.settings.badge_text == blank %} is-empty{% endif %}">{% if block.settings.badge_text != blank %}{{ block.settings.badge_text }}{% endif %}</div>
+
+              <div class="before-after-product-recs__media">
+                {%- if block.settings.image != blank -%}
+                  {{
+                    block.settings.image
+                    | image_url: width: 900
+                    | image_tag: loading: 'lazy', sizes: '(min-width: 990px) 360px, 85vw'
+                  }}
+                {%- elsif product_obj != blank and product_obj.featured_image != blank -%}
+                  {{
+                    product_obj.featured_image
+                    | image_url: width: 900
+                    | image_tag: loading: 'lazy', sizes: '(min-width: 990px) 360px, 85vw'
+                  }}
+                {%- else -%}
+                  {{ 'product-1' | placeholder_svg_tag }}
+                {%- endif -%}
+              </div>
+
+              <div class="before-after-product-recs__body">
+                <div class="before-after-product-recs__title-row">
+                  <h3 class="before-after-product-recs__title">{{ block.settings.title }}</h3>
+                  {%- if block.settings.r_label != blank -%}
+                    <div class="before-after-product-recs__r">{{ block.settings.r_label }}</div>
+                  {%- endif -%}
+                </div>
+
+                {%- if block.settings.description != blank -%}
+                  <p class="before-after-product-recs__desc">{{ block.settings.description }}</p>
+                {%- endif -%}
+
+                <div class="before-after-product-recs__pills">
+                  {%- if block.settings.pill_1 != blank -%}
+                    <div class="before-after-product-recs__pill">{{ block.settings.pill_1 }}</div>
+                  {%- endif -%}
+                  {%- if block.settings.pill_2 != blank -%}
+                    <div class="before-after-product-recs__pill">{{ block.settings.pill_2 }}</div>
+                  {%- endif -%}
+                  {%- if block.settings.pill_3 != blank -%}
+                    <div class="before-after-product-recs__pill">{{ block.settings.pill_3 }}</div>
+                  {%- endif -%}
+                </div>
+
+                {%- if block.settings.guarantee != blank -%}
+                  <div class="before-after-product-recs__guarantee">{{ block.settings.guarantee }}</div>
+                {%- endif -%}
+
+                {%- if product_url != blank -%}
+                  <div class="before-after-product-recs__cta">
+                    <a class="before-after-product-recs__button{% if block.settings.primary_button %} before-after-product-recs__button--primary{% endif %}" href="{{ product_url }}">{{ block.settings.button_label }}</a>
+                  </div>
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+
+      <button class="before-after-product-recs__nav before-after-product-recs__nav--next" type="button" aria-label="Next" data-before-after-recs-next>
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+
+    {%- if section.settings.note != blank -%}
+      <p class="before-after-product-recs__note"><b>Note:</b> {{ section.settings.note }}</p>
+    {%- endif -%}
+  </div>
+</section>
+
+<script>
+  (function () {
+    const sectionId = "{{ section.id }}";
+
+    function init() {
+      const root = document.getElementById("ba-product-recs");
+      if (!root) return;
+
+      const track = root.querySelector("[data-before-after-recs-track]");
+      const prevBtn = root.querySelector("[data-before-after-recs-prev]");
+      const nextBtn = root.querySelector("[data-before-after-recs-next]");
+      if (!track || !prevBtn || !nextBtn) return;
+
+      function getStep() {
+        const firstCard = track.querySelector(".before-after-product-recs__card");
+        if (!firstCard) return 0;
+        const styles = window.getComputedStyle(track);
+        const gap = parseFloat(styles.columnGap || styles.gap || "0") || 0;
+        return firstCard.getBoundingClientRect().width + gap;
+      }
+
+      function updateNav() {
+        const maxScroll = track.scrollWidth - track.clientWidth;
+        const hasOverflow = maxScroll > 4;
+        const atStart = track.scrollLeft <= 2;
+        const atEnd = track.scrollLeft >= maxScroll - 2;
+
+        prevBtn.disabled = !hasOverflow || atStart;
+        nextBtn.disabled = !hasOverflow || atEnd;
+
+        prevBtn.classList.toggle("is-hidden", !hasOverflow || atStart);
+        nextBtn.classList.toggle("is-hidden", !hasOverflow || atEnd);
+      }
+
+      prevBtn.addEventListener("click", function () {
+        const step = getStep();
+        track.scrollBy({ left: -step, behavior: "smooth" });
+      });
+
+      nextBtn.addEventListener("click", function () {
+        const step = getStep();
+        track.scrollBy({ left: step, behavior: "smooth" });
+      });
+
+      track.addEventListener("scroll", updateNav, { passive: true });
+      window.addEventListener("resize", updateNav);
+      updateNav();
+      requestAnimationFrame(updateNav);
+      setTimeout(updateNav, 250);
+      window.addEventListener("load", updateNav);
+    }
+
+    document.addEventListener("DOMContentLoaded", init);
+    document.addEventListener("shopify:section:load", function (event) {
+      if (event && event.target && event.target.id === "ba-product-recs") {
+        init();
+      }
+    });
+
+    init();
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "BA Product Recs",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "note",
+      "label": "Note",
+      "default": "Note: Reviv appliances are not medical devices and have not been evaluated by the FDA. If you have significant symptoms or concerns, consult a healthcare professional."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "url",
+          "id": "custom_link",
+          "label": "Custom link (optional)"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image (optional)"
+        },
+        {
+          "type": "text",
+          "id": "badge_text",
+          "label": "Badge",
+          "default": "Recommended"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Best Overall Starting Point"
+        },
+        {
+          "type": "text",
+          "id": "r_label",
+          "label": "R label",
+          "default": "R3"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Choose R3 if you want the best balance of comfort + airflow, and you want an appliance designed to feel gentler on gums."
+        },
+        {
+          "type": "text",
+          "id": "pill_1",
+          "label": "Feature 1",
+          "default": "Gentler on gums"
+        },
+        {
+          "type": "text",
+          "id": "pill_2",
+          "label": "Feature 2",
+          "default": "Easier airflow / mouthbreathing"
+        },
+        {
+          "type": "text",
+          "id": "pill_3",
+          "label": "Feature 3",
+          "default": "Great long-term option"
+        },
+        {
+          "type": "text",
+          "id": "guarantee",
+          "label": "Guarantee",
+          "default": "1-year guarantee with one free replacement."
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label",
+          "default": "Shop"
+        },
+        {
+          "type": "checkbox",
+          "id": "primary_button",
+          "label": "Primary button style",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "BA Product Recs",
+      "blocks": [
+        {
+          "type": "card",
+          "settings": {
+            "badge_text": "Recommended",
+            "title": "Best Overall\nStarting Point",
+            "r_label": "R3",
+            "pill_1": "Gentler on gums",
+            "pill_2": "Easier airflow / mouthbreathing",
+            "pill_3": "Great long-term option",
+            "guarantee": "1-year guarantee with one free replacement.",
+            "button_label": "Purchase R3",
+            "primary_button": true
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "badge_text": "",
+            "title": "To Encourage Nose\nBreathing",
+            "r_label": "R2",
+            "pill_1": "Durable for strong clenching",
+            "pill_2": "Good option for grinders",
+            "pill_3": "",
+            "guarantee": "1-year guarantee with one free replacement.",
+            "button_label": "Shop R2",
+            "primary_button": false
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "badge_text": "",
+            "title": "Lowest cost entry",
+            "r_label": "R1",
+            "pill_1": "Lowest cost",
+            "pill_2": "Good for trying the concept",
+            "pill_3": "",
+            "guarantee": "No guarantee, no replacement.",
+            "button_label": "Shop R1",
+            "primary_button": false
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

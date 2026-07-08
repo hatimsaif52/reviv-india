@@ -1,0 +1,1053 @@
+{% doc %}
+  @prompt
+    Create a responsive offer information card.
+    
+    The card should be a white container with:
+    
+    A visible solid border
+    
+    Large rounded corners
+    
+    Soft shadow
+    
+    Generous padding that scales down slightly on mobile
+    
+    Full-width behavior with clean spacing on desktop and mobile
+    
+    Top section
+    
+    At the top, place a horizontal row with space between left and right.
+    
+    Left side:
+    
+    A small square or circular image placeholder (this will be a product image)
+    
+    The image should be small, aligned vertically with text, and have slight rounding
+    
+    Next to the image, place a short line of bold text (this is a primary text line)
+    
+    The text should be visually dominant but not oversized
+    
+    Keep the image and text aligned as a single unit
+    
+    Right side:
+    
+    A larger bold text value (this is the main value)
+    
+    Next to it, a secondary muted text value with strikethrough styling
+    
+    Both values should align neatly and remain readable on mobile
+    
+    On smaller screens, allow this section to wrap naturally without breaking layout
+    
+    Divider
+    
+    Insert a thin horizontal divider spanning the width of the card
+    
+    Divider should be subtle and spaced from the top section
+    
+    Content section
+    
+    Below the divider, place a vertical list of short text rows.
+    
+    Each row should:
+    
+    Have a small icon placeholder on the left
+    
+    Have a single line of text to the right
+    
+    Be evenly spaced from the next row
+    
+    Maintain good readability on mobile and desktop
+    
+    Use consistent icon sizing and alignment across all rows.
+    
+    Responsiveness
+    
+    Desktop: everything remains in a clean single-card layout
+    
+    Mobile: elements stack or wrap gracefully without overflow
+    
+    Maintain touch-friendly spacing and readable font sizes
+    
+    Styling notes
+    
+    Emphasize hierarchy using font weight and size, not labels
+    
+    Avoid hardcoded wording or meaning
+    
+    All text should be treated as interchangeable placeholders
+    
+    No assumptions about purchase type, frequency, or behavior, add a buy button at the bottom, this buttton wil have a link not opening in a new window, can u make the icons of the each row choosable from icons of shopify not images, add space possibility to change space between title and rows
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-offer-card-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    background-color: {{ block.settings.card_background }};
+    border: {{ block.settings.border_thickness }}px solid {{ block.settings.border_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+    box-shadow: 0 {{ block.settings.shadow_vertical }}px {{ block.settings.shadow_blur }}px rgba(0, 0, 0, {{ block.settings.shadow_opacity | divided_by: 100.0 }});
+    padding: {{ block.settings.padding_desktop }}px;
+  }
+
+  .ai-offer-card__top-{{ ai_gen_id }} {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: {{ block.settings.title_to_rows_spacing }}px;
+  }
+
+  .ai-offer-card__left-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .ai-offer-card__image-{{ ai_gen_id }} {
+    width: {{ block.settings.image_size }}px;
+    height: {{ block.settings.image_size }}px;
+    flex-shrink: 0;
+    border-radius: {{ block.settings.image_radius }}px;
+    overflow: hidden;
+  }
+
+  .ai-offer-card__image-{{ ai_gen_id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-offer-card__image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: {{ block.settings.placeholder_bg }};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-offer-card__image-placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    opacity: 0.3;
+  }
+
+  .ai-offer-card__primary-text-{{ ai_gen_id }} {
+    font-size: {{ block.settings.primary_text_size }}px;
+    font-weight: 700;
+    color: {{ block.settings.text_color }};
+    line-height: 1.3;
+  }
+
+  .ai-offer-card__right-{{ ai_gen_id }} {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+
+  .ai-offer-card__main-value-{{ ai_gen_id }} {
+    font-size: {{ block.settings.main_value_size }}px;
+    font-weight: 700;
+    color: {{ block.settings.text_color }};
+    line-height: 1.2;
+  }
+
+  .ai-offer-card__secondary-value-{{ ai_gen_id }} {
+    font-size: {{ block.settings.secondary_value_size }}px;
+    font-weight: 400;
+    color: {{ block.settings.muted_text_color }};
+    text-decoration: line-through;
+    line-height: 1.2;
+  }
+
+  .ai-offer-card__divider-{{ ai_gen_id }} {
+    width: 100%;
+    height: 1px;
+    background-color: {{ block.settings.divider_color }};
+    margin: {{ block.settings.divider_spacing }}px 0;
+  }
+
+  .ai-offer-card__content-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: {{ block.settings.row_spacing }}px;
+  }
+
+  .ai-offer-card__row-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .ai-offer-card__icon-{{ ai_gen_id }} {
+    width: {{ block.settings.icon_size }}px;
+    height: {{ block.settings.icon_size }}px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: {{ block.settings.icon_color }};
+  }
+
+  .ai-offer-card__icon-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ai-offer-card__row-text-{{ ai_gen_id }} {
+    font-size: {{ block.settings.row_text_size }}px;
+    font-weight: 400;
+    color: {{ block.settings.text_color }};
+    line-height: 1.4;
+    flex: 1;
+  }
+
+  .ai-offer-card__button-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    margin-top: {{ block.settings.button_spacing }}px;
+    padding: {{ block.settings.button_padding }}px;
+    background-color: {{ block.settings.button_background }};
+    color: {{ block.settings.button_text_color }};
+    text-align: center;
+    text-decoration: none;
+    font-size: {{ block.settings.button_text_size }}px;
+    font-weight: 600;
+    border-radius: {{ block.settings.button_radius }}px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .ai-offer-card__button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_background }};
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-offer-card-{{ ai_gen_id }} {
+      padding: {{ block.settings.padding_mobile }}px;
+    }
+
+    .ai-offer-card__primary-text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.primary_text_size | times: 0.9 }}px;
+    }
+
+    .ai-offer-card__main-value-{{ ai_gen_id }} {
+      font-size: {{ block.settings.main_value_size | times: 0.9 }}px;
+    }
+
+    .ai-offer-card__secondary-value-{{ ai_gen_id }} {
+      font-size: {{ block.settings.secondary_value_size | times: 0.9 }}px;
+    }
+
+    .ai-offer-card__row-text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.row_text_size | times: 0.9 }}px;
+    }
+
+    .ai-offer-card__button-{{ ai_gen_id }} {
+      font-size: {{ block.settings.button_text_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-offer-card-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-offer-card__top-{{ ai_gen_id }}">
+    <div class="ai-offer-card__left-{{ ai_gen_id }}">
+      <div class="ai-offer-card__image-{{ ai_gen_id }}">
+        {% if block.settings.product_image %}
+          <img
+            src="{{ block.settings.product_image | image_url: width: 200 }}"
+            alt="{{ block.settings.product_image.alt | escape }}"
+            loading="lazy"
+            width="200"
+            height="200"
+          >
+        {% else %}
+          <div class="ai-offer-card__image-placeholder-{{ ai_gen_id }}">
+            {{ 'product-1' | placeholder_svg_tag }}
+          </div>
+        {% endif %}
+      </div>
+      {% if block.settings.primary_text != blank %}
+        <div class="ai-offer-card__primary-text-{{ ai_gen_id }}">
+          {{ block.settings.primary_text }}
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="ai-offer-card__right-{{ ai_gen_id }}">
+      {% if block.settings.main_value != blank %}
+        <div class="ai-offer-card__main-value-{{ ai_gen_id }}">
+          {{ block.settings.main_value }}
+        </div>
+      {% endif %}
+      {% if block.settings.secondary_value != blank %}
+        <div class="ai-offer-card__secondary-value-{{ ai_gen_id }}">
+          {{ block.settings.secondary_value }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="ai-offer-card__divider-{{ ai_gen_id }}"></div>
+
+  <div class="ai-offer-card__content-{{ ai_gen_id }}">
+    {% for i in (1..5) %}
+      {% liquid
+        assign row_enabled_key = 'row_' | append: i | append: '_enabled'
+        assign row_text_key = 'row_' | append: i | append: '_text'
+        assign row_icon_key = 'row_' | append: i | append: '_icon'
+
+        assign row_enabled = block.settings[row_enabled_key]
+        assign row_text = block.settings[row_text_key]
+        assign row_icon = block.settings[row_icon_key]
+      %}
+
+      {% if row_enabled %}
+        <div class="ai-offer-card__row-{{ ai_gen_id }}">
+          <div class="ai-offer-card__icon-{{ ai_gen_id }}">
+            {% case row_icon %}
+              {% when 'checkmark' %}
+                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              {% when 'star' %}
+                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 2L12.163 7.406L18 8.292L14 12.206L14.944 18L10 15.292L5.056 18L6 12.206L2 8.292L7.837 7.406L10 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              {% when 'heart' %}
+                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.3667 3.84172C16.9412 3.41589 16.4369 3.07778 15.8798 2.84663C15.3227 2.61547 14.7235 2.49609 14.1184 2.49609C13.5133 2.49609 12.9141 2.61547 12.357 2.84663C11.7999 3.07778 11.2956 3.41589 10.8701 3.84172L10.0001 4.71172L9.13008 3.84172C8.27098 2.98262 7.11032 2.49655 5.90175 2.49655C4.69318 2.49655 3.53252 2.98262 2.67341 3.84172C1.81431 4.70083 1.32825 5.86149 1.32825 7.07005C1.32825 8.27862 1.81431 9.43928 2.67341 10.2984L3.54341 11.1684L10.0001 17.6251L16.4567 11.1684L17.3267 10.2984C17.7526 9.87286 18.0907 9.36857 18.3218 8.81148C18.553 8.25439 18.6724 7.65517 18.6724 7.05005C18.6724 6.44494 18.553 5.84571 18.3218 5.28862C18.0907 4.73153 17.7526 4.22724 17.3267 3.80172L17.3667 3.84172Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              {% when 'gift' %}
+                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.6667 10V17.5H3.33333V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M18.3333 5.83333H1.66667V10H18.3333V5.83333Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M10 17.5V5.83333" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M10 5.83333H6.25C5.58696 5.83333 4.95107 5.57008 4.48223 5.10124C4.01339 4.6324 3.75 3.99638 3.75 3.33333C3.75 2.67029 4.01339 2.03441 4.48223 1.56557C4.95107 1.09673 5.58696 0.833333 6.25 0.833333C9.16667 0.833333 10 5.83333 10 5.83333Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M10 5.83333H13.75C14.413 5.83333 15.0489 5.57008 15.5178 5.10124C15.9866 4.6324 16.25 3.99638 16.25 3.33333C16.25 2.67029 15.9866 2.03441 15.5178 1.56557C15.0489 1.09673 14.413 0.833333 13.75 0.833333C10.8333 0.833333 10 5.83333 10 5.83333Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              {% when 'truck' %}
+                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.3333 1.66667H1.66667V12.5H13.3333V1.66667Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M13.3333 6.66667H16.6667L18.3333 8.33333V12.5H13.3333V6.66667Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M4.58333 18.3333C5.73393 18.3333 6.66667 17.4006 6.66667 16.25C6.66667 15.0994 5.73393 14.1667 4.58333 14.1667C3.43274 14.1667 2.5 15.0994 2.5 16.25C2.5 17.4006 3.43274 18.3333 4.58333 18.3333Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M15.4167 18.3333C16.5673 18.3333 17.5 17.4006 17.5 16.25C17.5 15.0994 16.5673 14.1667 15.4167 14.1667C14.2661 14.1667 13.3333 15.0994 13.3333 16.25C13.3333 17.4006 14.2661 18.3333 15.4167 18.3333Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              {% when 'shield' %}
+                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 18.3333C10 18.3333 16.6667 15 16.6667 10V4.16667L10 1.66667L3.33333 4.16667V10C3.33333 15 10 18.3333 10 18.3333Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              {% when 'clock' %}
+                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M10 5V10L13.3333 11.6667" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              {% when 'tag' %}
+                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.0751 11.0751L11.0751 17.0751C10.9114 17.2388 10.7169 17.3686 10.5029 17.4571C10.2889 17.5456 10.0596 17.5911 9.82841 17.5911C9.59722 17.5911 9.36794 17.5456 9.15393 17.4571C8.93992 17.3686 8.74541 17.2388 8.58175 17.0751L1.66675 10.1667V1.66667H10.1667L17.0751 8.575C17.4039 8.90596 17.5898 9.35502 17.5898 9.82333C17.5898 10.2916 17.4039 10.7407 17.0751 11.0717V11.0751Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M5.83325 6.66667H5.84159" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              {% when 'phone' %}
+                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.3333 14.1V16.6C18.3343 16.8321 18.2867 17.0618 18.1937 17.2744C18.1008 17.487 17.9644 17.6779 17.7933 17.8349C17.6222 17.9919 17.4203 18.1112 17.2005 18.1855C16.9806 18.2599 16.7477 18.2876 16.5167 18.2667C13.9523 17.988 11.489 17.1118 9.32499 15.7084C7.31151 14.4289 5.60443 12.7218 4.32499 10.7084C2.91663 8.53438 2.04019 6.05916 1.76666 3.48337C1.74583 3.25293 1.77334 3.02067 1.84718 2.80139C1.92102 2.58211 2.03963 2.38064 2.19562 2.2096C2.35162 2.03856 2.54149 1.90178 2.75314 1.80763C2.9648 1.71349 3.19348 1.66421 3.42499 1.66337H5.92499C6.32953 1.65941 6.72148 1.80021 7.028 2.05976C7.33452 2.31931 7.53493 2.67976 7.59166 3.07504C7.69718 3.86593 7.89286 4.64202 8.17499 5.39171C8.28713 5.68 8.31137 5.99403 8.24478 6.29565C8.17819 6.59727 8.02392 6.87336 7.79999 7.09171L6.74166 8.15004C7.92795 10.2361 9.59394 11.902 11.68 13.0884L12.7383 12.03C12.9567 11.8061 13.2328 11.6518 13.5344 11.5852C13.836 11.5186 14.15 11.5429 14.4383 11.655C15.188 11.9372 15.9641 12.1328 16.755 12.2384C17.1552 12.2955 17.5199 12.4993 17.7795 12.8112C18.0391 13.1231 18.1755 13.5214 18.1667 13.93L18.3333 14.1Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              {% when 'mail' %}
+                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3.33333 3.33333H16.6667C17.5833 3.33333 18.3333 4.08333 18.3333 5V15C18.3333 15.9167 17.5833 16.6667 16.6667 16.6667H3.33333C2.41667 16.6667 1.66667 15.9167 1.66667 15V5C1.66667 4.08333 2.41667 3.33333 3.33333 3.33333Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M18.3333 5L10 10.8333L1.66667 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              {% else %}
+                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            {% endcase %}
+          </div>
+          {% if row_text != blank %}
+            <div class="ai-offer-card__row-text-{{ ai_gen_id }}">
+              {{ row_text }}
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  {% if block.settings.show_button %}
+    <a
+      href="{{ block.settings.button_link }}"
+      class="ai-offer-card__button-{{ ai_gen_id }}"
+    >
+      {{ block.settings.button_text }}
+    </a>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Offer information card",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Card style"
+    },
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "muted_text_color",
+      "label": "Muted text color",
+      "default": "#999999"
+    },
+    {
+      "type": "range",
+      "id": "border_thickness",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "unit": "px",
+      "label": "Border thickness",
+      "default": 1
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border color",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Corner radius",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "shadow_vertical",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Shadow vertical offset",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "shadow_blur",
+      "min": 0,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "label": "Shadow blur",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "shadow_opacity",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "unit": "%",
+      "label": "Shadow opacity",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "padding_desktop",
+      "min": 16,
+      "max": 48,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding (desktop)",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "padding_mobile",
+      "min": 12,
+      "max": 32,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding (mobile)",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Top section"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_image",
+      "label": "Image"
+    },
+    {
+      "type": "range",
+      "id": "image_size",
+      "min": 32,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Image size",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "image_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Image corner radius",
+      "default": 8
+    },
+    {
+      "type": "color",
+      "id": "placeholder_bg",
+      "label": "Placeholder background",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "text",
+      "id": "primary_text",
+      "label": "Primary text",
+      "default": "Premium Plan"
+    },
+    {
+      "type": "range",
+      "id": "primary_text_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Primary text size",
+      "default": 16
+    },
+    {
+      "type": "text",
+      "id": "main_value",
+      "label": "Main value",
+      "default": "$49"
+    },
+    {
+      "type": "range",
+      "id": "main_value_size",
+      "min": 16,
+      "max": 36,
+      "step": 2,
+      "unit": "px",
+      "label": "Main value size",
+      "default": 24
+    },
+    {
+      "type": "text",
+      "id": "secondary_value",
+      "label": "Secondary value",
+      "default": "$99"
+    },
+    {
+      "type": "range",
+      "id": "secondary_value_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Secondary value size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "title_to_rows_spacing",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Space below title",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Divider"
+    },
+    {
+      "type": "color",
+      "id": "divider_color",
+      "label": "Divider color",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "range",
+      "id": "divider_spacing",
+      "min": 8,
+      "max": 32,
+      "step": 4,
+      "unit": "px",
+      "label": "Divider spacing",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Content rows"
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "min": 16,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Icon size",
+      "default": 20
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon color",
+      "default": "#121212"
+    },
+    {
+      "type": "range",
+      "id": "row_text_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Row text size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "row_spacing",
+      "min": 8,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Row spacing",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Row 1"
+    },
+    {
+      "type": "checkbox",
+      "id": "row_1_enabled",
+      "label": "Enable row 1",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "row_1_icon",
+      "label": "Icon",
+      "options": [
+        {
+          "value": "checkmark",
+          "label": "Checkmark"
+        },
+        {
+          "value": "star",
+          "label": "Star"
+        },
+        {
+          "value": "heart",
+          "label": "Heart"
+        },
+        {
+          "value": "gift",
+          "label": "Gift"
+        },
+        {
+          "value": "truck",
+          "label": "Truck"
+        },
+        {
+          "value": "shield",
+          "label": "Shield"
+        },
+        {
+          "value": "clock",
+          "label": "Clock"
+        },
+        {
+          "value": "tag",
+          "label": "Tag"
+        },
+        {
+          "value": "phone",
+          "label": "Phone"
+        },
+        {
+          "value": "mail",
+          "label": "Mail"
+        }
+      ],
+      "default": "checkmark"
+    },
+    {
+      "type": "text",
+      "id": "row_1_text",
+      "label": "Text",
+      "default": "Free shipping on all orders"
+    },
+    {
+      "type": "header",
+      "content": "Row 2"
+    },
+    {
+      "type": "checkbox",
+      "id": "row_2_enabled",
+      "label": "Enable row 2",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "row_2_icon",
+      "label": "Icon",
+      "options": [
+        {
+          "value": "checkmark",
+          "label": "Checkmark"
+        },
+        {
+          "value": "star",
+          "label": "Star"
+        },
+        {
+          "value": "heart",
+          "label": "Heart"
+        },
+        {
+          "value": "gift",
+          "label": "Gift"
+        },
+        {
+          "value": "truck",
+          "label": "Truck"
+        },
+        {
+          "value": "shield",
+          "label": "Shield"
+        },
+        {
+          "value": "clock",
+          "label": "Clock"
+        },
+        {
+          "value": "tag",
+          "label": "Tag"
+        },
+        {
+          "value": "phone",
+          "label": "Phone"
+        },
+        {
+          "value": "mail",
+          "label": "Mail"
+        }
+      ],
+      "default": "checkmark"
+    },
+    {
+      "type": "text",
+      "id": "row_2_text",
+      "label": "Text",
+      "default": "Cancel anytime, no commitment"
+    },
+    {
+      "type": "header",
+      "content": "Row 3"
+    },
+    {
+      "type": "checkbox",
+      "id": "row_3_enabled",
+      "label": "Enable row 3",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "row_3_icon",
+      "label": "Icon",
+      "options": [
+        {
+          "value": "checkmark",
+          "label": "Checkmark"
+        },
+        {
+          "value": "star",
+          "label": "Star"
+        },
+        {
+          "value": "heart",
+          "label": "Heart"
+        },
+        {
+          "value": "gift",
+          "label": "Gift"
+        },
+        {
+          "value": "truck",
+          "label": "Truck"
+        },
+        {
+          "value": "shield",
+          "label": "Shield"
+        },
+        {
+          "value": "clock",
+          "label": "Clock"
+        },
+        {
+          "value": "tag",
+          "label": "Tag"
+        },
+        {
+          "value": "phone",
+          "label": "Phone"
+        },
+        {
+          "value": "mail",
+          "label": "Mail"
+        }
+      ],
+      "default": "checkmark"
+    },
+    {
+      "type": "text",
+      "id": "row_3_text",
+      "label": "Text",
+      "default": "Priority customer support"
+    },
+    {
+      "type": "header",
+      "content": "Row 4"
+    },
+    {
+      "type": "checkbox",
+      "id": "row_4_enabled",
+      "label": "Enable row 4",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "row_4_icon",
+      "label": "Icon",
+      "options": [
+        {
+          "value": "checkmark",
+          "label": "Checkmark"
+        },
+        {
+          "value": "star",
+          "label": "Star"
+        },
+        {
+          "value": "heart",
+          "label": "Heart"
+        },
+        {
+          "value": "gift",
+          "label": "Gift"
+        },
+        {
+          "value": "truck",
+          "label": "Truck"
+        },
+        {
+          "value": "shield",
+          "label": "Shield"
+        },
+        {
+          "value": "clock",
+          "label": "Clock"
+        },
+        {
+          "value": "tag",
+          "label": "Tag"
+        },
+        {
+          "value": "phone",
+          "label": "Phone"
+        },
+        {
+          "value": "mail",
+          "label": "Mail"
+        }
+      ],
+      "default": "checkmark"
+    },
+    {
+      "type": "text",
+      "id": "row_4_text",
+      "label": "Text",
+      "default": "Exclusive member benefits"
+    },
+    {
+      "type": "header",
+      "content": "Row 5"
+    },
+    {
+      "type": "checkbox",
+      "id": "row_5_enabled",
+      "label": "Enable row 5",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "row_5_icon",
+      "label": "Icon",
+      "options": [
+        {
+          "value": "checkmark",
+          "label": "Checkmark"
+        },
+        {
+          "value": "star",
+          "label": "Star"
+        },
+        {
+          "value": "heart",
+          "label": "Heart"
+        },
+        {
+          "value": "gift",
+          "label": "Gift"
+        },
+        {
+          "value": "truck",
+          "label": "Truck"
+        },
+        {
+          "value": "shield",
+          "label": "Shield"
+        },
+        {
+          "value": "clock",
+          "label": "Clock"
+        },
+        {
+          "value": "tag",
+          "label": "Tag"
+        },
+        {
+          "value": "phone",
+          "label": "Phone"
+        },
+        {
+          "value": "mail",
+          "label": "Mail"
+        }
+      ],
+      "default": "checkmark"
+    },
+    {
+      "type": "text",
+      "id": "row_5_text",
+      "label": "Text",
+      "default": "Early access to new products"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_button",
+      "label": "Show button",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Buy now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "Button background",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_background",
+      "label": "Button hover background",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "button_text_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Button text size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "button_padding",
+      "min": 8,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Button padding",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "button_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Button corner radius",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "button_spacing",
+      "min": 12,
+      "max": 32,
+      "step": 4,
+      "unit": "px",
+      "label": "Button top spacing",
+      "default": 20
+    }
+  ],
+  "presets": [
+    {
+      "name": "Offer information card"
+    }
+  ]
+}
+{% endschema %}

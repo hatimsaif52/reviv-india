@@ -1,0 +1,20 @@
+{% assign lowercase_title = product.url | downcase %}
+{% if lowercase_title contains 'reviv-two' %}
+  {{ 'component-revivone-purchase-check.css' | asset_url | stylesheet_tag }}
+
+  <div class="revivone-purchase-check-container">
+    <label for="revivone-purchase-count">How many RevivOne purchases have you made?</label>
+    <div class="select-wrapper">
+      <select id="revivone-purchase-count" class="revivone-purchase-dropdown">
+        <option value="" selected disabled>Select number</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+      </select>
+    </div>
+    <div id="revivone-discount-message" class="discount-message"></div>
+  </div>
+
+  <input type="hidden" name="properties[revivone_purchase]" id="revivone-purchase-hidden" value="0">
+  <script src="{{ 'revivone-purchase-check.js' | asset_url }}" defer="defer"></script>
+{% endif %}

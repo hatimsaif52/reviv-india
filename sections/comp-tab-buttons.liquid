@@ -1,0 +1,131 @@
+{% schema %}
+{
+  "name": "Comparison Tabs",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Tab",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Tab text",
+          "default": "Vs. Example"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Tab link"
+        },
+        {
+          "type": "checkbox",
+          "id": "is_active",
+          "label": "Set as active tab",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Comparison Tabs",
+      "blocks": [
+        { "type": "tab" },
+        { "type": "tab" },
+        { "type": "tab" },
+        { "type": "tab" }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<section
+  class="comparison-tabs-section color-{{ section.settings.color_scheme }}"
+  style="
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  "
+>
+  <div class="page-width" style="padding:0;">
+    <div class="comparison-tabs">
+      {% for block in section.blocks %}
+        <a
+          href="{{ block.settings.link }}"
+          class="comparison-tab {% if block.settings.is_active %}is-active{% endif %}"
+          {{ block.shopify_attributes }}
+        >
+          {{ block.settings.label }}
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<style>
+.comparison-tabs-section{
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.comparison-tabs {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 999px;
+    padding: 5px;
+    gap: 4px;
+    max-width: 100%;
+    min-width: 80rem;
+}
+
+.comparison-tab {
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+  width: 25%;
+  text-align: center;
+}
+
+.comparison-tab:hover {
+  color: #EFC98B;
+}
+
+.comparison-tab.is-active {
+  background: #232021;
+  color: #EFC98B;
+}
+</style>

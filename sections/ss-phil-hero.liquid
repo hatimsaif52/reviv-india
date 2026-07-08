@@ -1,0 +1,268 @@
+{% style %}
+.c-hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: radial-gradient(circle at 20% 30%, rgba(255,180,120,0.15), transparent 40%),
+              radial-gradient(circle at 80% 70%, rgba(255,180,120,0.1), transparent 40%),
+              #0f0f10;
+  padding-top: {{ section.settings.padding_top }}px;
+  padding-bottom: {{ section.settings.padding_bottom }}px;
+}
+
+.c-hero__wrap {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.c-hero.reverse .c-hero__wrap {
+  flex-direction: row-reverse;
+}
+
+/* LEFT CONTENT */
+.c-hero__content {
+  flex: 1;
+  color: #fff;
+}
+
+.c-hero__tag {
+display: inline-block;
+    font-size: 12px;
+    padding: 4px 16px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    vertical-align: sub;
+}
+
+.c-hero__heading {
+    font-size: 48px;
+    line-height: 1;
+    font-weight: 600;
+    margin: 20px 0;
+    font-family: "Roboto" !important;
+
+}
+
+.c-hero__heading span {
+display: block;
+background: linear-gradient(90deg, #e5c085, #e5c085, #ffffff);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.c-hero__text {
+    margin-top: 16px;
+    opacity: 0.7;
+    max-width: 480px;
+    line-height: 1.4;
+}
+
+.c-hero__btn {
+    margin-top: 32px;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+.c-hero__btn svg{
+    vertical-align: middle;
+    width: 18px;
+    height: 18px;
+}
+
+.c-hero__btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* RIGHT IMAGE */
+.c-hero__media {
+    flex: 1;
+    position: relative;
+    background: #00000014;
+    border-radius: 12px;
+    box-shadow: 3px 5px 10px 2px rgb(27 25 25);
+}
+
+.c-hero__img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+/* MIC BADGE */
+.c-hero__badge {
+    position: absolute;
+    bottom: 30px;
+    transform: translateX(-50%);
+    left: 50%;
+    background: rgb(26 26 26 / 72%);
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 90%;
+    color: #fff;
+    line-height: 1.4;
+    transition: 0.3s ease;
+}
+.c-hero__badge small {
+    color: #b2b2b2;
+}
+
+.c-hero__badge-icon {
+width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #ffb46e33;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
+
+.c-hero__media:hover .c-hero__badge {
+  transform: translate(-50%, -3px);
+}
+
+/* BACKGROUND FLOAT GLOW */
+/* .c-hero::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,180,120,0.25), transparent 60%);
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: blur(80px);
+  animation: floatGlow 6s ease-in-out infinite alternate;
+}
+
+@keyframes floatGlow {
+  from { transform: translate(-50%, 0); }
+  to { transform: translate(-50%, 40px); }
+} */
+
+/* RESPONSIVE */
+@media(max-width: 768px){
+  .c-hero__wrap {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .c-hero.reverse .c-hero__wrap {
+    flex-direction: column;
+  }
+
+  .c-hero__heading {
+    font-size: 34px;
+  }
+
+  .c-hero__badge {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+{% endstyle %}
+
+<section class="c-hero {% if section.settings.reverse %}reverse{% endif %}">
+  <div class="c-hero__wrap page-width">
+
+    <!-- CONTENT -->
+<div class="c-hero__content">
+  <div class="c-hero__tag" style="color: {{ section.settings.tag_color }}">
+    {% if section.settings.show_tag_dot %}
+      <span style="display:inline-block;width:6px;height:6px;background:{{ section.settings.tag_dot_color }};border-radius:50%;margin-right:6px;"></span>
+    {% endif %}
+    {{ section.settings.tag }}
+  </div>
+
+  <h2 class="c-hero__heading" style="color: {{ section.settings.heading_color }}">
+    {{ section.settings.heading_line1 }}
+    <span>{{ section.settings.heading_line2 }}</span>
+  </h2>
+
+  <div class="c-hero__text" style="color: {{ section.settings.text_color }}">
+    {{ section.settings.text }}
+  </div>
+
+  <a href="{{ section.settings.btn_link }}"
+     class="c-hero__btn"
+     style="background: {{ section.settings.btn_color }}; color: {{ section.settings.btn_text_color }}">
+    {{ section.settings.btn_text }} <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M11 4H4V18C4 19.1046 4.89543 20 6 20H18C19.1046 20 20 19.1046 20 18V13" stroke="#292929" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M9 15L20 4" stroke="#292929" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M15 4H20V9" stroke="#292929" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></g></svg>
+  </a>
+</div>
+
+    <!-- IMAGE -->
+    <div class="c-hero__media">
+      <img class="c-hero__img"
+           src="{{ section.settings.image | image_url: width: 800 }}"
+           alt="Hero">
+
+    {% if section.settings.show_badge %}
+    <div class="c-hero__badge">
+        <div class="c-hero__badge-icon">
+            <svg width="24" height="24" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g fill="#e5c085"> <path fill-rule="evenodd" d="M8 0c-.78 0-1.538.29-2.104.821A2.797 2.797 0 005 2.861V8.14c0 .775.328 1.507.896 2.04.566.53 1.323.821 2.104.821.78 0 1.538-.29 2.104-.821A2.797 2.797 0 0011 8.139V2.86c0-.775-.329-1.507-.896-2.04A3.077 3.077 0 008 0zM6.922 1.915A1.578 1.578 0 018 1.5c.413 0 .8.154 1.078.415.276.26.422.601.422.946V8.14c0 .345-.146.686-.422.946A1.578 1.578 0 018 9.5c-.413 0-.8-.154-1.078-.415-.276-.26-.422-.601-.422-.946V2.86c0-.345.146-.686.422-.946z" clip-rule="evenodd"></path> <path d="M4 6.75a.75.75 0 00-1.5 0v1.385a5.3 5.3 0 001.619 3.801A5.553 5.553 0 007.25 13.45v1.05H5.5a.75.75 0 000 1.5h5a.75.75 0 000-1.5H8.75v-1.05a5.553 5.553 0 003.131-1.514A5.3 5.3 0 0013.5 8.135V6.75a.75.75 0 00-1.5 0v1.385a3.8 3.8 0 01-1.164 2.725A4.071 4.071 0 018 12a4.071 4.071 0 01-2.836-1.14A3.8 3.8 0 014 8.135V6.75z"></path> </g> </g></svg>
+        </div>
+        <div>
+            <strong>{{ section.settings.badge_title }}</strong><br>
+            <small>{{ section.settings.badge_text }}</small>
+        </div>
+    </div>
+    {% endif %}
+    </div>
+
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "SS Hero Phil",
+  "settings": [
+    { "type": "text", "id": "tag", "label": "Tag", "default": "VOCAL MASTERY" },
+
+    { "type": "text", "id": "heading_line1", "label": "Heading Line 1", "default": "I help singers" },
+    { "type": "text", "id": "heading_line2", "label": "Heading Line 2", "default": "unlock their voice." },
+
+    { "type": "textarea", "id": "text", "label": "Description" },
+
+    { "type": "text", "id": "btn_text", "label": "Button Text", "default": "Learn more" },
+    { "type": "url", "id": "btn_link", "label": "Button Link" },
+    { "type": "header", "content": "Colors" },
+
+    { "type": "color", "id": "heading_color", "label": "Heading Color", "default": "#ffffff" },
+    { "type": "color", "id": "text_color", "label": "Description Color", "default": "#b2b2b2" },
+    { "type": "color", "id": "tag_color", "label": "Tag Text Color", "default": "#ffffff" },
+
+    { "type": "color", "id": "tag_dot_color", "label": "Tag Dot Color", "default": "#ffb46e" },
+    { "type": "color", "id": "btn_color", "label": "Button Color", "default": "#ffb46e" },
+    { "type": "color", "id": "btn_text_color", "label": "Button Text Color", "default": "#000000" },
+
+    { "type": "header", "content": "Tag Options" },
+    { "type": "checkbox", "id": "show_tag_dot", "label": "Show Dot Before Tag", "default": true },
+
+    { "type": "header", "content": "Image Badge" },
+    { "type": "checkbox", "id": "show_badge", "label": "Show Image Badge", "default": true },
+
+    { "type": "image_picker", "id": "image", "label": "Hero Image" },
+
+    { "type": "text", "id": "badge_title", "label": "Badge Title", "default": "Expert Analysis" },
+    { "type": "text", "id": "badge_text", "label": "Badge Text", "default": "Over 15 years of transformation" },
+
+    { "type": "checkbox", "id": "reverse", "label": "Image Left", "default": false },
+
+    { "type": "range", "id": "padding_top", "min": 0, "max": 150, "step": 10, "unit": "px", "label": "Top Padding", "default": 80 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 150, "step": 10, "unit": "px", "label": "Bottom Padding", "default": 80 }
+  ],
+  "presets": [
+    {
+      "name": "SS Hero Phil"
+    }
+  ]
+}
+{% endschema %}

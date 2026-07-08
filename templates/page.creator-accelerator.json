@@ -1,0 +1,650 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_banner_xc3NBt": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_twgXPq": {
+          "type": "heading",
+          "settings": {
+            "heading": "Become a <em>High-Earning Tiktok Creator</em> with REVIV",
+            "heading_size": "h0"
+          }
+        },
+        "text_nwKfqy": {
+          "type": "text",
+          "settings": {
+            "text": "Join our Accelerator for FREE to get paid, coached and featured while all creating short videos you love",
+            "text_style": "body"
+          }
+        },
+        "buttons_33wpxH": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Join now",
+            "button_id": "",
+            "button_link_1": "#AbmtXalluZzBzNUhtZ__forms_inline_6R4tfw",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_twgXPq",
+        "text_nwKfqy",
+        "buttons_33wpxH"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/creators.webp",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-522b6c27-788f-4b7e-bbb7-d4f61d40572f",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "custom_classes": "sk-main-banner aff-hero-banner"
+      }
+    },
+    "free_trial_rLPkLj": {
+      "type": "free-trial",
+      "blocks": {
+        "heading_DhRBWY": {
+          "type": "heading",
+          "settings": {
+            "heading": "BECOME A REVIV CREATOR",
+            "title_color": "#ffffff"
+          }
+        },
+        "button_7cpUU9": {
+          "type": "button",
+          "settings": {
+            "button_label": "JOIN NOW",
+            "button_id": "",
+            "button_link": "#AbmtXalluZzBzNUhtZ__forms_inline_6R4tfw"
+          }
+        }
+      },
+      "block_order": [
+        "heading_DhRBWY",
+        "button_7cpUU9"
+      ],
+      "name": "Free Trial Section",
+      "settings": {
+        "back_color": "#232021",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": "aff-trial-sec"
+      }
+    },
+    "video_b8WR4Y": {
+      "type": "video",
+      "custom_css": [
+        ".video-section__media {border-radius: 20px; overflow: hidden !important;}",
+        "h2 {text-align: center;}"
+      ],
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "heading": "Why Join the Program?",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https://www.youtube.com/watch?v=UQqABMbdalU",
+        "cover_image": "shopify://shop_images/Reviv-s-Tiktok-Creator-Accelerator-Program-YouTube-09-16-2025_03_54_PM.png",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_7HrG3L": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_3aJyKe": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/users-02.png",
+            "title": "",
+            "text": "<p>Work directly with the Reviv team</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_WNGPBP": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/bank-note-01.png",
+            "title": "",
+            "text": "<p>Paid per video + TikTok Shop affiliate commissions</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_nYiHpm": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/trophy-01.png",
+            "title": "",
+            "text": "<p>Weekly creator call led by our top performing Reviv affiliate, Cranium Autist</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_4pbDXC": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/trophy-01.png",
+            "title": "",
+            "text": "<p>Boosted exposure with TikTok ads for top content</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        }
+      },
+      "block_order": [
+        "column_3aJyKe",
+        "column_WNGPBP",
+        "column_nYiHpm",
+        "column_4pbDXC"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "box_link": false,
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "section_color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": "ca-multicolumn"
+      }
+    },
+    "image_grid_with_text_L8pRLJ": {
+      "type": "image-grid-with-text",
+      "blocks": {
+        "image_jtAKi7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image_bdbb09fc-1c18-4059-819f-19d82b75f7a2.jpg",
+            "alt_text": "",
+            "column_span": 1,
+            "block_heading": "Reiv Skool Community Members",
+            "block_subtitle": "Alredy passionate about reviv, ready to start earning"
+          }
+        },
+        "image_k49BLt": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image_1.jpg",
+            "alt_text": "",
+            "column_span": 1,
+            "block_heading": "External TikTok Affiliates",
+            "block_subtitle": "Already in TikTok Shop or looking to join with samples."
+          }
+        }
+      },
+      "block_order": [
+        "image_jtAKi7",
+        "image_k49BLt"
+      ],
+      "name": "Image Grid with Text",
+      "settings": {
+        "heading": "Who Can Join?",
+        "heading_size": "h1",
+        "columns": 2,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": "ca-image-grid"
+      }
+    },
+    "rich_text_bBUDGY": {
+      "type": "rich-text",
+      "blocks": {
+        "text_E7xn4M": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "button_wYn69M": {
+          "type": "button",
+          "settings": {
+            "button_label": "Become a Reviv Creator",
+            "button_link": "#AbmtXalluZzBzNUhtZ__forms_inline_6R4tfw",
+            "button_id": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "text_E7xn4M",
+        "button_wYn69M"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-91d299fe-08de-45b7-8ffd-78080b0e86fe",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "custom__class": ""
+      }
+    },
+    "rich_text_CyaRNY": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_YwBWqn": {
+          "type": "heading",
+          "settings": {
+            "heading": "What's Required?",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_YwBWqn"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 28,
+        "custom__class": ""
+      }
+    },
+    "image_with_text_Nd6RG6": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_with_icon_Ep7pqj": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "Create 1 - 2 videos per week",
+            "icon": "shopify://shop_images/check-circle.jpg",
+            "icon_position": "start",
+            "text_style": "body",
+            "alignment": "left"
+          }
+        },
+        "text_with_icon_CdG9Gf": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "Must mention the Reviv appliance",
+            "icon": "shopify://shop_images/check-circle.jpg",
+            "icon_position": "start",
+            "text_style": "body",
+            "alignment": "left"
+          }
+        },
+        "text_with_icon_wFGgpk": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "Content posted on TikTok, Instagram, YouTube, or X",
+            "icon": "shopify://shop_images/check-circle.jpg",
+            "icon_position": "start",
+            "text_style": "body",
+            "alignment": "left"
+          }
+        },
+        "text_with_icon_7j7dHE": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "Weekly check-ins with the group",
+            "icon": "shopify://shop_images/check-circle.jpg",
+            "icon_position": "start",
+            "text_style": "body",
+            "alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "text_with_icon_Ep7pqj",
+        "text_with_icon_CdG9Gf",
+        "text_with_icon_wFGgpk",
+        "text_with_icon_7j7dHE"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/image_2.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "wrap_image_to_container": false,
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 36,
+        "custom__class": ""
+      }
+    },
+    "rich_text_nBbbWA": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_8weTak": {
+          "type": "heading",
+          "settings": {
+            "heading": "Rewards & Compensation",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_8weTak"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 28,
+        "custom__class": ""
+      }
+    },
+    "image_with_text_UDRXnQ": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_with_icon_B8ff8h": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "$10 per approved video for up to 5K views, and then $2 per 1,000 views after that (up to $300 max/post)",
+            "icon": "shopify://shop_images/check-circle.jpg",
+            "icon_position": "start",
+            "text_style": "body",
+            "alignment": "left"
+          }
+        },
+        "text_with_icon_hhL4YR": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "10-15% commission depending on the product",
+            "icon": "shopify://shop_images/check-circle.jpg",
+            "icon_position": "start",
+            "text_style": "body",
+            "alignment": "left"
+          }
+        },
+        "text_with_icon_QKVEKj": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "Bonuses of $100 - 300 for each video we use as a Meta ad",
+            "icon": "shopify://shop_images/check-circle.jpg",
+            "icon_position": "start",
+            "text_style": "body",
+            "alignment": "left"
+          }
+        },
+        "text_with_icon_BEki9e": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "Ad spend support if your video drives sales",
+            "icon": "shopify://shop_images/check-circle.jpg",
+            "icon_position": "start",
+            "text_style": "body",
+            "alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "text_with_icon_B8ff8h",
+        "text_with_icon_hhL4YR",
+        "text_with_icon_QKVEKj",
+        "text_with_icon_BEki9e"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/image_d46ea8f1-79be-438a-ba20-5ddb898a992d.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "wrap_image_to_container": false,
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 36,
+        "custom__class": ""
+      }
+    },
+    "ss_progress_steps_N8Tzc6": {
+      "type": "ss-progress-steps",
+      "blocks": {
+        "grid_item_Q4EBTC": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify://shop_images/Frame_27414.png",
+            "alt_text": "",
+            "block_heading": "",
+            "block_subtitle": "Each week we give a topic/idea for a video, your \"homework\"",
+            "column_span": 1
+          }
+        },
+        "grid_item_Vx37pg": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify://shop_images/Frame_27414_1.png",
+            "alt_text": "",
+            "block_heading": "",
+            "block_subtitle": "You create and post the video. See how it performs.",
+            "column_span": 1
+          }
+        },
+        "grid_item_XTVzE9": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify://shop_images/Frame_27414_2.png",
+            "alt_text": "",
+            "block_heading": "",
+            "block_subtitle": "We evaluate during our weekly call and give feedback on how to improve.",
+            "column_span": 1
+          }
+        }
+      },
+      "block_order": [
+        "grid_item_Q4EBTC",
+        "grid_item_Vx37pg",
+        "grid_item_XTVzE9"
+      ],
+      "name": "Progress Steps",
+      "settings": {
+        "heading": "Content & Approval",
+        "heading_size": "h1",
+        "columns": 3,
+        "section_color_scheme": "scheme-0b5397a7-cffb-42ac-88ef-8cf9135047b7",
+        "color_scheme": "scheme-0b5397a7-cffb-42ac-88ef-8cf9135047b7",
+        "divider_icon": "shopify://shop_images/chevron-right-svgrepo-com.webp",
+        "custom_class": "",
+        "padding_top": 12,
+        "padding_bottom": 48
+      }
+    },
+    "rich_text_pXWdPP": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_XykgrE": {
+          "type": "heading",
+          "settings": {
+            "heading": "What Happens Next?",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_XykgrE"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 48,
+        "padding_bottom": 28,
+        "custom__class": ""
+      }
+    },
+    "ss_collapsible_image_with_text_iE3rRC": {
+      "type": "ss-collapsible-image-with-text",
+      "blocks": {
+        "accordion_block_r4TNmb": {
+          "type": "accordion_block",
+          "settings": {
+            "icon": "shopify://shop_images/file-alt-svgrepo-com_1.png",
+            "image": "shopify://shop_images/clipboard-image-1755858957.png",
+            "heading": "Fill out the form",
+            "text": "<p>Fill out the form by expressing interest, by tapping <a href=\"#AbmtXalluZzBzNUhtZ__forms_inline_6R4tfw\" title=\"#AbmtXalluZzBzNUhtZ__forms_inline_6R4tfw\">here</a></p>",
+            "button_link": "",
+            "button_text": "Learn more"
+          }
+        },
+        "accordion_block_rc3aPj": {
+          "type": "accordion_block",
+          "settings": {
+            "icon": "shopify://shop_images/mail-alt-svgrepo-com_1.png",
+            "image": "shopify://shop_images/clipboard-image-1755859410.png",
+            "heading": "Program Invite",
+            "text": "<p>We'll add you to the Content Rewards program if you do qualify.</p>",
+            "button_link": "",
+            "button_text": "Learn more"
+          }
+        },
+        "accordion_block_dz74mK": {
+          "type": "accordion_block",
+          "settings": {
+            "icon": "shopify://shop_images/stars-02-svgrepo-com_1.png",
+            "image": "shopify://shop_images/clipboard-image-1755863685.png",
+            "heading": "Kickoff",
+            "text": "<p>We'll send you an invite to our weekly call as well as our Whatsapp Group</p>",
+            "button_link": "",
+            "button_text": "Learn more"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_block_r4TNmb",
+        "accordion_block_rc3aPj",
+        "accordion_block_dz74mK"
+      ],
+      "name": "Image + Accordion Content",
+      "settings": {
+        "background_color": "#ffffff",
+        "layout": "right"
+      }
+    },
+    "rich_text_YbVgKe": {
+      "type": "rich-text",
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 32,
+        "padding_bottom": 52,
+        "custom__class": ""
+      }
+    },
+    "1755523165a4e64824": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_6R4tfw": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "614717",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 24,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_6R4tfw"
+      ],
+      "custom_css": [],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_xc3NBt",
+    "free_trial_rLPkLj",
+    "video_b8WR4Y",
+    "multicolumn_7HrG3L",
+    "image_grid_with_text_L8pRLJ",
+    "rich_text_bBUDGY",
+    "rich_text_CyaRNY",
+    "image_with_text_Nd6RG6",
+    "rich_text_nBbbWA",
+    "image_with_text_UDRXnQ",
+    "ss_progress_steps_N8Tzc6",
+    "rich_text_pXWdPP",
+    "ss_collapsible_image_with_text_iE3rRC",
+    "rich_text_YbVgKe",
+    "1755523165a4e64824"
+  ]
+}

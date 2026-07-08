@@ -1,0 +1,200 @@
+<div class="image-accordion-section" style="background: {{ section.settings.background_color }};">
+  <div class="container page-width grid {% if section.settings.layout == 'right' %}flex-row{% else %}flex-row-reverse{% endif %}">
+    
+    <!-- Accordion text side -->
+    <div class="accordion w-1/2">
+      {% for block in section.blocks %}
+        <div class="accordion-item" data-index="{{ forloop.index0 }}">
+          <button class="accordion-header">
+            {% if block.settings.icon != blank %}
+              <img src="{{ block.settings.icon | img_url: '64x64' }}" class="accordion-icon" alt="">
+            {% endif %}
+            <h3 class="accordion-title">{{ block.settings.heading }}</h3>
+          </button>
+          <div class="accordion-content">
+            <p>{{ block.settings.text }}</p>
+            {% if block.settings.button_link != blank %}
+              <a href="{{ block.settings.button_link }}" class="btn">{{ block.settings.button_text }}</a>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <!-- Image side -->
+    <div class="accordion-images w-1/2 relative">
+      {% for block in section.blocks %}
+        {% if block.settings.image != blank %}
+          <img src="{{ block.settings.image | img_url: '800x' }}" 
+               class="accordion-image {% if forloop.first %}active{% endif %}" 
+               data-index="{{ forloop.index0 }}" />
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<style>
+.accordion.w-1\/2{
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    width: 50%;
+}
+.image-accordion-section .grid{
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;  
+  gap: 40px;
+}
+.accordion-images{
+  width: 50%;
+}
+
+.accordion-header { 
+  display:flex; 
+  align-items:center; 
+  width:100%; 
+  padding:1rem; 
+  font-weight:600; 
+  cursor:pointer; 
+  background:#f9f9f9; 
+  gap:10px;
+  text-align:left;
+}
+button.accordion-header {
+    border: none;
+    border-radius: 12px;
+    background: transparent !important;
+}
+.accordion-item {
+    padding: 22px 5px;
+    border-radius: 12px;
+    background: #fff !important;
+    border: 1px solid #23202133;
+}
+.accordion-header .accordion-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+/* When expanded (active) → icon moves above title */
+.accordion-item.active{
+  background: #EFC98B33 !important;
+}
+.accordion-item.active .accordion-header {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.accordion-item.active .accordion-header .accordion-icon {
+  margin-bottom: 8px;
+}
+
+.accordion-content { display:none; padding:1rem; }
+.accordion-item.active .accordion-content { display:block; }
+
+.accordion-image { 
+  display:none; 
+  position:relative; 
+  top:0; left:0; 
+  width:100%; 
+  height:auto; 
+  border-radius: 20px;
+}
+.accordion-image.active { display:block; }
+.accordion-title{
+    margin: 0;
+    font-size: 28px;
+}
+.accordion-content p{
+    margin: 0;
+
+    a{
+        color: black;
+    }
+}
+@media screen and (max-width: 999px){
+.image-accordion-section .grid{
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+}
+.accordion.w-1\/2{
+  width: 100%;
+}
+.accordion-images{
+  width: 100%;
+}
+.accordion-content { width: 100%; }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+  const items = document.querySelectorAll(".accordion-item");
+  const images = document.querySelectorAll(".accordion-image");
+
+  items.forEach((item, idx) => {
+    item.querySelector(".accordion-header").addEventListener("mouseover", () => {
+      // collapse all
+      items.forEach(i => i.classList.remove("active"));
+      images.forEach(img => img.classList.remove("active"));
+
+      // activate clicked
+      item.classList.add("active");
+      const img = document.querySelector(`.accordion-image[data-index="${idx}"]`);
+      if(img) img.classList.add("active");
+    });
+  });
+
+  // Activate first by default
+  if(items.length > 0) items[0].classList.add("active");
+});
+</script>
+
+{% schema %}
+{
+  "name": "Image + Accordion Content",
+  "settings": [
+    {
+      "type": "header",
+      "content": "General Settings"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Image position",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "right"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "accordion_block",
+      "name": "Accordion Item",
+      "settings": [
+        { "type": "image_picker", "id": "icon", "label": "Icon" },
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "heading", "label": "Heading" },
+        { "type": "richtext", "id": "text", "label": "Text" },
+        { "type": "url", "id": "button_link", "label": "Button link" },
+        { "type": "text", "id": "button_text", "label": "Button text", "default": "Learn more" }
+      ]
+    }
+  ],
+  "presets": [
+    { "name": "Image + Accordion Content", "category": "Custom" }
+  ]
+}
+{% endschema %}

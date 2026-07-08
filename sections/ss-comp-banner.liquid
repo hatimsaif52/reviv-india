@@ -1,0 +1,276 @@
+{% comment %}
+  Reviv Mouthguard Help Section (Dawn)
+{% endcomment %}
+
+<section class="reviv-help reviv-help--{{ section.id }} color-{{ section.settings.color_scheme }}">
+  <div class="reviv-help__outer page-width">
+    <div class="reviv-help__wrap">
+      
+      {% if section.settings.heading != blank %}
+        <h2 class="reviv-help__heading">
+          {{ section.settings.heading }}
+        </h2>
+      {% endif %}
+
+      <div class="reviv-help__grid">
+        
+        <!-- LEFT IMAGE AREA -->
+        <div class="reviv-help__left">
+          <div class="reviv-help__image-card">
+            {% if section.settings.left_image != blank %}
+              <img
+                src="{{ section.settings.left_image | image_url: width: 1200 }}"
+                alt="{{ section.settings.left_image.alt | escape }}"
+                loading="lazy"
+                class="reviv-help__image"
+              >
+            {% else %}
+              <div class="reviv-help__placeholder">
+                Upload image in section settings
+              </div>
+            {% endif %}
+          </div>
+        </div>
+
+        <!-- RIGHT CONTENT AREA -->
+        <div class="reviv-help__right">
+          {% if section.settings.right_title != blank %}
+            <p class="reviv-help__right-title">
+              {{ section.settings.right_title }}
+            </p>
+          {% endif %}
+
+          {% if section.settings.button_label != blank %}
+            <a
+              class="reviv-help__button"
+              href="{{ section.settings.button_link | default: '#' }}"
+            >
+              {{ section.settings.button_label }}
+            </a>
+          {% endif %}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .reviv-help--{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  .reviv-help--{{ section.id }} .reviv-help__wrap {
+    background: {{ section.settings.bg_color }};
+    border-radius: 12px;
+    padding: 25px 30px 15px 4px;
+    border: 3px solid {{ section.settings.border_color }};
+  }
+
+  .reviv-help--{{ section.id }} .reviv-help__heading {
+    margin: 0 auto 8px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    max-width: 550px;
+    color: {{ section.settings.heading_color }};
+    line-height: 1.15;
+  }
+
+  .reviv-help--{{ section.id }} .reviv-help__grid {
+    display: grid;
+    grid-template-columns: 1.35fr 0.65fr;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .reviv-help--{{ section.id }} .reviv-help__image-card {
+    {% comment %} background: #fff; {% endcomment %}
+    border-radius: 16px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 160px;
+  }
+
+  .reviv-help--{{ section.id }} .reviv-help__image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  .reviv-help--{{ section.id }} .reviv-help__placeholder {
+    font-size: 14px;
+    opacity: 0.7;
+    text-align: center;
+    padding: 30px 10px;
+  }
+
+  .reviv-help--{{ section.id }} .reviv-help__right {
+    text-align: center;
+  }
+
+  .reviv-help--{{ section.id }} .reviv-help__right-title {
+    margin: 0 0 10px;
+    font-size: clamp(24px, 2.6vw, 31px);
+    font-weight: 800;
+    color: {{ section.settings.text_color }};
+    line-height: 1.2;
+  }
+
+  .reviv-help--{{ section.id }} .reviv-help__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 45px;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 22px;
+    text-decoration: none;
+    background: {{ section.settings.button_bg }};
+    color: {{ section.settings.button_text }};
+    min-width: 170px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .reviv-help--{{ section.id }} .reviv-help__button:hover {
+    transform: translateY(-1px);
+    opacity: 0.92;
+  }
+  
+  /* Mobile */
+  @media (max-width: 749px) {
+    .reviv-help--{{ section.id }} .reviv-help__wrap {
+      padding: 22px 18px;
+    }
+    .reviv-help--{{ section.id }} .reviv-help__heading {
+      font-size: 24px !important;
+    }
+    
+    .reviv-help--{{ section.id }} .reviv-help__grid {
+      grid-template-columns: 1fr;
+      gap: 0px;
+    }
+
+    .reviv-help--{{ section.id }} .reviv-help__right {
+      text-align: center;
+    }
+
+    .reviv-help--{{ section.id }} .reviv-help__button {
+      width: 100%;
+      max-width: 280px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "SS Comp Banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "NEED HELP SELECTING WHICH REVIV MOUTHGUARD IS BEST FOR YOU?"
+    },
+    {
+      "type": "image_picker",
+      "id": "left_image",
+      "label": "Left image (the mouthguards image)"
+    },
+    {
+      "type": "text",
+      "id": "right_title",
+      "label": "Right title",
+      "default": "Compare\nReviv Mouthguards"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Go"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Section Scheme"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#c8aa6a"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border color",
+      "default": "#1f1a18"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#1f1a18"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Right text color",
+      "default": "#1f1a18"
+    },
+    {
+      "type": "color",
+      "id": "button_bg",
+      "label": "Button background",
+      "default": "#1f1a18"
+    },
+    {
+      "type": "color",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "#c8aa6a"
+    },
+
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "label": "Padding top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "label": "Padding bottom",
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "SS Comp Banner"
+    }
+  ]
+}
+{% endschema %}

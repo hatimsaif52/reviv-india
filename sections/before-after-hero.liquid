@@ -1,0 +1,437 @@
+{%- style -%}
+  .before-after-hero {
+    background: radial-gradient(1200px 600px at 50% 0%, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 55%),
+      linear-gradient(180deg, {{ section.settings.background_top }} 0%, {{ section.settings.background_bottom }} 100%);
+    padding: 56px 0 64px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .before-after-hero__corner {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: min(320px, 25vw);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .before-after-hero__corner--left {
+    left: 0;
+  }
+
+  .before-after-hero__corner--right {
+    right: 0;
+    transform: scaleX(-1);
+  }
+
+  .before-after-hero__corner img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    opacity: 0.6;
+  }
+
+  .before-after-hero__inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .before-after-hero__eyebrow {
+    margin: 0 0 10px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: {{ section.settings.accent_color }};
+  }
+
+  .before-after-hero__heading {
+    margin: 0;
+    font-size: clamp(32px, 3.6vw, 56px);
+    line-height: 1.05;
+    font-weight: 800;
+    color: {{ section.settings.heading_color }};
+  }
+
+  .before-after-hero__subtext {
+    margin: 14px auto 0;
+    max-width: 640px;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 600;
+    color: {{ section.settings.subtext_color }};
+    opacity: {{ section.settings.subtext_opacity | divided_by: 100.0 }};
+  }
+
+  .before-after-hero__cta {
+    margin-top: 18px;
+  }
+
+  .before-after-hero__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 22px;
+    border-radius: 8px;
+    background: {{ section.settings.button_bg }};
+    color: {{ section.settings.button_text }};
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    border: 1px solid transparent;
+  }
+
+  .before-after-hero__button:hover {
+    filter: brightness(0.98);
+  }
+
+  .before-after-hero__compare {
+    margin: 34px auto 0;
+    max-width: 760px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+  }
+
+  .before-after-hero__compare-grid {
+    display: flex;
+    gap: 0;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .before-after-hero__divider {
+    flex: 0 0 6px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 999px;
+  }
+
+  .before-after-hero__panel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+    min-height: 290px;
+    min-width: 0;
+    flex: 1 1 0%;
+  }
+
+  .before-after-hero__panel:first-child {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+
+  .before-after-hero__panel:last-child {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  .before-after-hero__panel img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  .before-after-hero__panel svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .before-after-hero__pill {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    padding: 7px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1;
+    background: {{ section.settings.pill_bg_left }};
+    color: {{ section.settings.pill_text_left }};
+  }
+
+  .before-after-hero__pill--right {
+    left: auto;
+    right: 14px;
+    background: {{ section.settings.pill_bg_right }};
+    color: {{ section.settings.pill_text_right }};
+  }
+
+  @media (max-width: 749px) {
+    .before-after-hero {
+      padding: 44px 0 52px;
+    }
+
+    .before-after-hero__subtext {
+      font-size: 13px;
+    }
+
+    .before-after-hero__compare {
+      border-radius: 16px;
+    }
+
+    .before-after-hero__compare-grid {
+      flex-direction: column;
+    }
+
+    .before-after-hero__divider {
+      display: none;
+    }
+
+    .before-after-hero__panel {
+      min-height: 230px;
+    }
+
+    .before-after-hero__panel + .before-after-hero__panel {
+      margin-top: 0;
+    }
+
+    .before-after-hero__panel:first-child {
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .before-after-hero__panel:last-child {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+    }
+
+  }
+{%- endstyle -%}
+
+<section class="before-after-hero" role="region" aria-label="{{ section.settings.heading | strip_html | escape }}">
+  {%- if section.settings.corner_overlay_image != blank -%}
+    <div class="before-after-hero__corner before-after-hero__corner--left" aria-hidden="true">
+      {{
+        section.settings.corner_overlay_image
+        | image_url: width: 900
+        | image_tag: loading: 'lazy'
+      }}
+    </div>
+    <div class="before-after-hero__corner before-after-hero__corner--right" aria-hidden="true">
+      {{
+        section.settings.corner_overlay_image
+        | image_url: width: 900
+        | image_tag: loading: 'lazy'
+      }}
+    </div>
+  {%- endif -%}
+
+  <div class="before-after-hero__inner">
+    {%- if section.settings.eyebrow != blank -%}
+      <p class="before-after-hero__eyebrow">{{ section.settings.eyebrow }}</p>
+    {%- endif -%}
+
+    {%- if section.settings.heading != blank -%}
+      <h1 class="before-after-hero__heading">{{ section.settings.heading }}</h1>
+    {%- endif -%}
+
+    {%- if section.settings.subtext != blank -%}
+      <div class="before-after-hero__subtext">{{ section.settings.subtext }}</div>
+    {%- endif -%}
+
+    {%- if section.settings.button_label != blank -%}
+      <div class="before-after-hero__cta">
+        <a class="before-after-hero__button" href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
+      </div>
+    {%- endif -%}
+
+    <div class="before-after-hero__compare">
+      <div class="before-after-hero__compare-grid">
+        <div class="before-after-hero__panel">
+          {%- if section.settings.before_image != blank -%}
+            {{
+              section.settings.before_image
+              | image_url: width: 1200
+              | image_tag: loading: 'lazy', sizes: '(min-width: 750px) 420px, 100vw'
+            }}
+          {%- else -%}
+            {{ 'image' | placeholder_svg_tag }}
+          {%- endif -%}
+          {%- if section.settings.before_label != blank -%}
+            <div class="before-after-hero__pill">{{ section.settings.before_label }}</div>
+          {%- endif -%}
+        </div>
+
+        <div class="before-after-hero__divider" aria-hidden="true"></div>
+
+        <div class="before-after-hero__panel">
+          {%- if section.settings.after_image != blank -%}
+            {{
+              section.settings.after_image
+              | image_url: width: 1200
+              | image_tag: loading: 'lazy', sizes: '(min-width: 750px) 420px, 100vw'
+            }}
+          {%- else -%}
+            {{ 'image' | placeholder_svg_tag }}
+          {%- endif -%}
+          {%- if section.settings.after_label != blank -%}
+            <div class="before-after-hero__pill before-after-hero__pill--right">{{ section.settings.after_label }}</div>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Before / After - Hero",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Mouthguard Before and After:"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Real Results From Reviv Users"
+    },
+    {
+      "type": "richtext",
+      "id": "subtext",
+      "label": "Subtext",
+      "default": "<p>See how real users improved jaw alignment, breathing &amp; overall comfort - backed by thousands of verified reviews.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "See how it works"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "image_picker",
+      "id": "before_image",
+      "label": "Before image"
+    },
+    {
+      "type": "text",
+      "id": "before_label",
+      "label": "Before label",
+      "default": "Before"
+    },
+    {
+      "type": "image_picker",
+      "id": "after_image",
+      "label": "After image"
+    },
+    {
+      "type": "text",
+      "id": "after_label",
+      "label": "After label",
+      "default": "After"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "image_picker",
+      "id": "corner_overlay_image",
+      "label": "Corner overlay image"
+    },
+    {
+      "type": "color",
+      "id": "background_top",
+      "label": "Background top",
+      "default": "#2B2628"
+    },
+    {
+      "type": "color",
+      "id": "background_bottom",
+      "label": "Background bottom",
+      "default": "#0F0D0E"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#E5C085"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "subtext_color",
+      "label": "Subtext color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "subtext_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Subtext opacity",
+      "default": 85
+    },
+    {
+      "type": "color",
+      "id": "button_bg",
+      "label": "Button background",
+      "default": "#E5C085"
+    },
+    {
+      "type": "color",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "#232021"
+    },
+    {
+      "type": "color",
+      "id": "pill_bg_left",
+      "label": "Before pill background",
+      "default": "#E5C085"
+    },
+    {
+      "type": "color",
+      "id": "pill_text_left",
+      "label": "Before pill text",
+      "default": "#232021"
+    },
+    {
+      "type": "color",
+      "id": "pill_bg_right",
+      "label": "After pill background",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "pill_text_right",
+      "label": "After pill text",
+      "default": "#232021"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Before / After - Hero"
+    }
+  ]
+}
+{% endschema %}

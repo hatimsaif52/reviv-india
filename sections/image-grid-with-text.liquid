@@ -1,0 +1,210 @@
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .image-grid__image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+
+  .image-grid__block-text {
+    margin-top: 0.75rem;
+    text-align: center;
+  }
+
+  .image-grid__block-heading {
+    font-weight: 400;
+    font-size: 24px;
+    margin: 0;
+    color: black;
+  }
+
+  .image-grid__block-subtitle {
+    font-size: 16px;
+    color: rgba(0,0,0,0.7);
+    margin-top: 0.25rem;
+  }
+{%- endstyle -%}
+
+<div class="image-grid-section color-{{ section.settings.color_scheme }} gradient{% if section.settings.heading == blank %} no-heading{% endif %} {{ section.settings.custom_class }}">
+  <div class="page-width isolate section-{{ section.id }}-padding">
+    
+    {%- unless section.settings.heading == blank -%}
+      <div class="title-wrapper title-wrapper--no-top-margin">
+        <h2
+          id="SectionHeading-{{ section.id }}"
+          class="image-grid__title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          {% if settings.animations_reveal_on_scroll %}
+            data-cascade
+          {% endif %}
+        >
+          {{ section.settings.heading }}
+        </h2>
+      </div>
+    {%- endunless -%}
+
+    <div class="grid grid--{{ section.settings.columns }}-col-desktop grid--1-col-tablet-down" role="list">
+      {% for block in section.blocks %}
+        <div class="grid__item{% if block.settings.column_span %} grid__item--{{ block.settings.column_span }}-col{% endif %}" {{ block.shopify_attributes }}>
+          {% if block.settings.image != blank %}
+            <img
+              src="{{ block.settings.image | image_url: width: 1600 }}"
+              alt="{{ block.settings.alt_text | escape }}"
+              class="image-grid__image{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              loading="lazy"
+            >
+          {% else %}
+            <div class="image-grid__placeholder">
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+            </div>
+          {% endif %}
+
+          {% if block.settings.block_heading != blank or block.settings.block_subtitle != blank %}
+            <div class="image-grid__block-text">
+              {% if block.settings.block_heading != blank %}
+                <p class="image-grid__block-heading">{{ block.settings.block_heading }}</p>
+              {% endif %}
+              {% if block.settings.block_subtitle != blank %}
+                <p class="image-grid__block-subtitle">{{ block.settings.block_subtitle }}</p>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image Grid with Text",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Image Grid",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        { "value": "h2", "label": "Heading 2" },
+        { "value": "h1", "label": "Heading 1" },
+        { "value": "h0", "label": "Extra Large" }
+      ],
+      "default": "h2",
+      "label": "Heading size"
+    },
+    {
+      "type": "range",
+      "id": "columns",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 3,
+      "label": "Number of columns (desktop)"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    },
+    {
+    "type": "text",
+    "id": "custom_class",
+    "label": "Custom Class"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "alt_text",
+          "label": "Alt text"
+        },
+        {
+          "type": "range",
+          "id": "column_span",
+          "min": 1,
+          "max": 4,
+          "step": 1,
+          "default": 1,
+          "label": "Column span"
+        },
+        {
+          "type": "text",
+          "id": "block_heading",
+          "label": "Block heading"
+        },
+        {
+          "type": "textarea",
+          "id": "block_subtitle",
+          "label": "Block subtitle / text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image Grid with Text",
+      "blocks": [
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" }
+      ]
+    }
+  ]
+}
+{% endschema %}

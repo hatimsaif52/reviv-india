@@ -1,0 +1,386 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .product-card {
+    min-height: 531px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-card__link {
+    text-decoration: none;
+  }
+
+  .product-card-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+
+  .product-card__image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+
+  .product-card__badge-wrapper {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+  }
+
+  .product-card-image-wrapper {
+    cursor: pointer;
+  }
+
+  .product-card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .product-card__title {
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 500;
+    color: white;
+    margin-top: 32px;
+  }
+
+  .product-card__price {
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 400;
+    color: #FFFFFFCC;
+    margin-top: 12px;
+    margin-bottom: 32px;
+  }
+
+  .product-card__cart-button {
+    background: transparent;
+    margin-top: auto;
+    border-radius: 100px;
+    border: 1px solid #FFFFFF;
+    font-size: 20px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: white;
+    padding: 12px 24px;
+    width: fit-content;
+    cursor: pointer;
+  }
+
+  .product-cards-slider-footer {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+  }
+
+  .product-cards-pagination {
+    width: fit-content !important;
+  }
+
+  .swiper-pagination-bullet {
+    background: transparent;
+    border: 3px solid white;
+    width: 14px;
+    height: 14px;
+    margin: 0px 20px !important;
+  }
+
+  .product-cards-button-prev,
+  .product-cards-button-next,
+  .swiper-pagination-bullet {
+    cursor: pointer;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: wheat;
+    border: 3px solid wheat;
+
+  }
+
+  @media screen and (max-width: 550px) {
+    .product-cards-slider-footer {
+      gap: 20px;
+    }
+
+    .swiper-pagination-bullet {
+      margin: 0px 10px !important;
+    }
+  }
+
+  .product-form {
+    margin-top: auto;
+  }
+
+  .add-to-cart__button {
+    padding: 12px 24px;
+    background-color: transparent;
+    border-radius: 100px;
+    border: 1px solid #FFFFFF;
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+    cursor: pointer;
+    text-decoration: none;
+  }
+{%- endstyle -%}
+
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+
+<div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
+  <div class="page-width">
+    <div class="product-cards-wrapper">
+      <div class="swiper product-cards-swiper">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            {% assign product = all_products[block.settings.product] %}
+            {% if product != blank and product.id %}
+              {% assign featured_image = product.media | first %}
+              <div class="swiper-slide product-card">
+                <a href="https://www.ozon.ru/" class="product-card__link">
+                  <div class="product-card-image-wrapper">
+                    {% if featured_image %}
+                      {{
+                        featured_image
+                        | image_url: width: 1900
+                        | image_tag: alt: product.title, class: 'product-card__image', loading: 'lazy'
+                      }}
+                    {% else %}
+                      <div style="width:100%;height:100%;background:#eee;display:flex;align-items:center;justify-content:center;">
+                        <span>No Image</span>
+                      </div>
+                    {% endif %}
+
+                    {% if block.settings.is_new %}
+                      <div class="product-card__badge-wrapper">
+                        {{ 'new-badge.png' | file_url | img_tag: 'New Badge image' }}
+                      </div>
+                    {% endif %}
+                  </div>
+
+                  <div class="product-card__title">
+                    {{ product.title }}
+                  </div>
+
+                  <div class="product-card__price">
+                    {{ product.first_available_variant.price | money_without_currency }} USD
+                  </div>
+                </a>
+
+              {% unless block.settings.custom_buy_btns %}
+                
+                <product-form
+                  class="product-form"
+                  data-section-id="{{ product.id }}"
+                >
+                  {%- form 'product',
+                    product,
+                    id: product.id,
+                    class: 'form',
+                    novalidate: 'novalidate',
+                    data-type: 'add-to-cart-form'
+                  -%}
+                    <input
+                      type="hidden"
+                      name="id"
+                      value="{{ product.selected_or_first_available_variant.id }}"
+                      {% if product.selected_or_first_available_variant.available == false
+                        or quantity_rule_soldout
+                        or product.selected_or_first_available_variant == null
+                      %}
+                        disabled
+                      {% endif %}
+                      class="product-variant-id"
+                    >
+
+                    <div class="product-form__buttons-wrapper product-form__buttons-wrapper--mobile-fixed">
+                      <div class="product-form__buttons">
+                        {%- liquid
+                          assign check_against_inventory = true
+                          if product.selected_or_first_available_variant.inventory_management != 'shopify' or product.selected_or_first_available_variant.inventory_policy == 'continue'
+                            assign check_against_inventory = false
+                          endif
+                          if product.selected_or_first_available_variant.quantity_rule.min > product.selected_or_first_available_variant.inventory_quantity and check_against_inventory
+                            assign quantity_rule_soldout = true
+                          endif
+                        -%}
+                                                  {% comment %} <button
+                            id="ProductSubmitButton-{{ product.id }}"
+                            type="submit"
+                            name="add"
+                            class="product-form__submit add-to-cart__button"
+                            {% if product.selected_or_first_available_variant.available == false
+                              or quantity_rule_soldout
+                              or product.selected_or_first_available_variant == null
+                            %}
+                              disabled
+                            {% endif %}
+                          >
+                            <span> Add to Cart </span>
+                            {%- render 'loading-spinner' -%}
+                          </button>
+                        {% endcomment %}
+
+                        <a
+                          href="{{ block.settings.product_url }}"
+                          class="add-to-cart__button"
+                        >
+                          Купить сейчас
+                        </a>
+                      </div>
+                    </div>
+                  {%- endform -%}
+                </product-form>
+                {% else %}
+                
+                <span class="purchase_btn_text">{{ block.settings.purchase_btn_text }}</span>
+                <div class="purchase__btns">
+                  
+                <a
+                 href="{{ block.settings.button_1_url }}"
+                 class="add-to-cart__button"
+                 >
+                  {{ block.settings.button_1_text }}
+                </a>
+                <a
+                 href="{{ block.settings.button_2_url }}"
+                 class="add-to-cart__button"
+                 >
+                  {{ block.settings.button_2_text }}
+                </a>
+                
+                </div>
+              {% endunless %}
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="product-cards-slider-footer">
+          <div class="product-cards-button-prev">{{ 'slider-prev.svg' | inline_asset_content }}</div>
+          <div class="product-cards-pagination"></div>
+          <div class="product-cards-button-next">{{ 'slider-next.svg' | inline_asset_content }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="{{ 'product-cards.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+{
+  "name": "Product Cards RS",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "section_color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
+    {
+      "type": "text",
+      "id": "custom_classes",
+      "label": "Custom Classes"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_card",
+      "name": "Product Card",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "checkbox",
+          "id": "is_new",
+          "label": "Show new badge"
+        },
+        { 
+          "type": "url", 
+          "id": "product_url", 
+          "label": "Product URL" 
+        },
+        {
+          "type": "header",
+          "content": "Custom Buttons"
+        },
+        {
+          "type": "checkbox",
+          "id": "custom_buy_btns",
+          "label": "Custom Buy Buttons",
+          "default":false
+        },
+        {
+          "type": "text",
+          "id": "purchase_btn_text",
+          "label": "Buttons Heading"
+        },
+        {
+          "type": "text",
+          "id": "button_1_text",
+          "label": "Buttons#1 Text"
+        },
+        {
+          "type": "url",
+          "id": "button_1_url",
+          "label": "Buttons#1 URL"
+        },
+        {
+          "type": "text",
+          "id": "button_2_text",
+          "label": "Buttons#2 Text"
+        },
+        {
+          "type": "url",
+          "id": "button_2_url",
+          "label": "Buttons#2 URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Cards RS",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

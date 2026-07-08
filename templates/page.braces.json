@@ -1,0 +1,655 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_banner_g8wcVV": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_N68zMY": {
+          "type": "heading",
+          "settings": {
+            "heading": "Do biomechanics fix the damage done by braces?",
+            "heading_size": "hxl"
+          }
+        },
+        "text_tmWeXJ": {
+          "type": "text",
+          "settings": {
+            "text": "I view that it can help.",
+            "text_style": "subtitle"
+          }
+        },
+        "buttons_YMPP3D": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Join now",
+            "button_id": "form-popup-btn",
+            "button_link_1": "#",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_N68zMY",
+        "text_tmWeXJ",
+        "buttons_YMPP3D"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/image_70.png",
+        "image_overlay_opacity": 50,
+        "image_height": "medium",
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-522b6c27-788f-4b7e-bbb7-d4f61d40572f",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "custom_classes": "sk-main-banner"
+      }
+    },
+    "free_trial_CX8H9e": {
+      "type": "free-trial",
+      "blocks": {
+        "heading_MgDHRz": {
+          "type": "heading",
+          "settings": {
+            "heading": "START 1-MONTH FREE TRIAL TODAY",
+            "title_color": "#ffffff"
+          }
+        },
+        "text_FqcRn7": {
+          "type": "text",
+          "settings": {
+            "text_para": "$00.00",
+            "desc_color": "#e5c085"
+          }
+        },
+        "button_YBCQ63": {
+          "type": "button",
+          "settings": {
+            "button_label": "JOIN NOW",
+            "button_id": "form-popup-btn",
+            "button_link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MgDHRz",
+        "text_FqcRn7",
+        "button_YBCQ63"
+      ],
+      "settings": {
+        "back_color": "#232021",
+        "padding_top": 16,
+        "padding_bottom": 16,
+        "custom_class": ""
+      }
+    },
+    "tmj_block_UtYCDW": {
+      "type": "tmj-block",
+      "blocks": {
+        "rich_text_7Mewpm": {
+          "type": "rich_text",
+          "settings": {
+            "rich_text": "<p>I've consistently seen that braces will typically flattens the 'curve of spee' a bit. Because the jaw is no longer supported in multiple positions.</p>"
+          }
+        },
+        "rich_text_D4G9EG": {
+          "type": "rich_text",
+          "settings": {
+            "rich_text": "<p>A mouthguard serves almost like a doorstop that prevents the jaw from closing and stretches the soft tissue that surround the jaw and the skull.</p>"
+          }
+        },
+        "rich_text_ntGJxe": {
+          "type": "rich_text",
+          "settings": {
+            "rich_text": "<p>This 'inflates' the skull which allows cranial bones and the jaw to revert back to healthier positions over time.</p>"
+          }
+        },
+        "rich_text_C4jMHz": {
+          "type": "rich_text",
+          "settings": {
+            "rich_text": "<p>I've observed that the teeth will also move during this process (upright, untwist).  And the arches often expand.</p>"
+          }
+        },
+        "rich_text_FBPAdU": {
+          "type": "rich_text",
+          "settings": {
+            "rich_text": "<p>And so over time the damage that was done by the braces is slowly reversed (in my experience).</p>"
+          }
+        }
+      },
+      "block_order": [
+        "rich_text_7Mewpm",
+        "rich_text_D4G9EG",
+        "rich_text_ntGJxe",
+        "rich_text_C4jMHz",
+        "rich_text_FBPAdU"
+      ],
+      "settings": {
+        "heading": "How a flat mouthguard works (in my view)?",
+        "padding_top": "pt-8",
+        "padding_bottom": "pb-12"
+      }
+    },
+    "multicolumn_HzjGGH": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_HqVALW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/9f36555f-80c0-477d-9add-ffd7a7edf01d_1200x625_81e76e7a-f6f1-4e27-a6d0-1a4f4c550e44.webp",
+            "title": "The impact of orthodontics",
+            "text": "<p>Orthodontics 'melts' faces as Mike and John Mew like to put it.</p>",
+            "link_label": "Read More",
+            "link": "https://reviv.substack.com/p/the-impact-of-orthodontics?utm_source=publication-search",
+            "youtube_video_url": "",
+            "isNewTab": true
+          }
+        },
+        "column_MQQHXx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/de647ce4-df41-4e17-beb3-63edf279a104_600x338_5c3f5613-eaef-4218-811f-af63d06c661e.webp",
+            "title": "Orthodontics will be the biggest medical scandal of our time",
+            "text": "<p>I predict that there will be $billions in lawsuits related to braces and aligners (eg. Invisalign) within the next couple of decades.</p>",
+            "link_label": "Read More",
+            "link": "https://reviv.substack.com/p/orthodontics-will-be-the-biggest",
+            "youtube_video_url": "",
+            "isNewTab": true
+          }
+        },
+        "column_9KzYyy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/e1627724-b55e-49a2-a58f-f0c61feeff31_1000x667_09cf776f-7991-4162-936d-99d215c9d64e.webp",
+            "title": "I want to ruin the legacy of orthodontists",
+            "text": "<p>I predict in 1-2 decades anyone that was an orthodontist will one day hide it... as if it was the equivalent of admitting they were a pedophile.</p>",
+            "link_label": "Read More",
+            "link": "https://reviv.substack.com/p/i-want-to-ruin-the-legacy-of-orthodontists",
+            "youtube_video_url": "",
+            "isNewTab": true
+          }
+        },
+        "column_9QpMhY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ddc29125-a191-4672-8ab7-1ae3e55a61e6_1524x930_6ff6e629-d64b-4b75-a64b-61d4b3b33b3b.webp",
+            "title": "The Flattening of the Curve of Spee",
+            "text": "<p>Once you will understand this, you will understand why this changes everything.</p>",
+            "link_label": "Read More",
+            "link": "https://reviv.substack.com/p/the-flattening-of-the-curve-of-spee",
+            "youtube_video_url": "",
+            "isNewTab": true
+          }
+        }
+      },
+      "block_order": [
+        "column_HqVALW",
+        "column_MQQHXx",
+        "column_9KzYyy",
+        "column_9QpMhY"
+      ],
+      "settings": {
+        "title": "Articles I have written",
+        "box_link": false,
+        "heading_size": "hxl",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "section_color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": "sk-multi-col uc-multi-col"
+      }
+    },
+    "skool_image_slider_dhbCwq": {
+      "type": "skool-image-slider",
+      "blocks": {
+        "image_d9UTXy": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/0566d63318c1f07adae9e95cd7e6468f.png"
+          }
+        },
+        "image_Nqnm9h": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/ab4caac789e7b58aebe523df6f63fc31.png"
+          }
+        },
+        "image_74QiWf": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/0566d63318c1f07adae9e95cd7e6468f.png"
+          }
+        },
+        "image_WjzMVb": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/0566d63318c1f07adae9e95cd7e6468f.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_d9UTXy",
+        "image_Nqnm9h",
+        "image_74QiWf",
+        "image_WjzMVb"
+      ],
+      "settings": {
+        "section_head": "Take a look at skool",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_cmmbXX": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_UFy37y": {
+          "type": "heading",
+          "settings": {
+            "heading": "Not ready to purchase?",
+            "heading_size": "h1"
+          }
+        },
+        "text_HiNLnk": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Try a free month trial of our Skool community instead and see what hundreds of others who are doing the process are posting.</p>"
+          }
+        },
+        "button_ktXcj4": {
+          "type": "button",
+          "settings": {
+            "button_label": "Join now",
+            "button_link": "#",
+            "button_id": "form-popup-btn yellow-btn",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_UFy37y",
+        "text_HiNLnk",
+        "button_ktXcj4"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "custom__class": ""
+      }
+    },
+    "product_cards_j8jV4n": {
+      "type": "product-cards",
+      "blocks": {
+        "product_card_rnJawi": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-two",
+            "is_new": true
+          }
+        },
+        "product_card_jBbiK3": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-two-without-support",
+            "is_new": true
+          }
+        },
+        "product_card_VYkMzd": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-one",
+            "is_new": false
+          }
+        },
+        "product_card_Jf3L8L": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-one-without-support",
+            "is_new": false
+          }
+        },
+        "product_card_kiLBxy": {
+          "type": "product_card",
+          "settings": {
+            "product": "1-year-subscription-only",
+            "is_new": false
+          }
+        }
+      },
+      "block_order": [
+        "product_card_rnJawi",
+        "product_card_jBbiK3",
+        "product_card_VYkMzd",
+        "product_card_Jf3L8L",
+        "product_card_kiLBxy"
+      ],
+      "custom_css": [
+        ".product-card__price,.product-card__title {color: #000 !important;}",
+        ".product-card__title {font-size: 18px; line-height: normal;}",
+        ".swiper-pagination-bullet: not(.swiper-pagination-bullet-active) {border-color: #000;}",
+        ".product-form {margin-top: 0;}",
+        "span.swiper-pagination-bullet {margin: 0 5px !important;}",
+        ".swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {border-color: #000; opacity: 1;}",
+        ".swiper {width: auto; overflow: hidden;}",
+        ".add-to-cart__button {border: 1px solid #000000; color: black;}"
+      ],
+      "settings": {
+        "section_color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_classes": ""
+      }
+    },
+    "collapsible_content_JN3rhi": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_UjR4JN": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can Reviv reverse damage from braces when I completed treatment years ago?",
+            "icon": "none",
+            "row_content": "<p>I 'believe' it can based on what I have seen.</p><p>Because regardless of the damage you can still resurrect the structure through these biomechanics.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_tUj3HX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What consequences of braces can Reviv help with?",
+            "icon": "none",
+            "row_content": "<p>I 'believe' Reviv can help with things like facial asymmetry, diminished jawline, neck and back pain, TMJ problems, sleep issues, brain fog, decreased energy, mood swings, and even various health conditions that emerged after orthodontic work. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_6bErhk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Will using Reviv undo the teeth straightening from my braces?",
+            "icon": "none",
+            "row_content": "<p>Teeth move during the Reviv process.  But i find that that they generally move in a good way if you are consistent with using it to sleep.</p><p>And so the teeth will move from where your orthodontist put them to where the skull wants them.</p><p>But since the mouthguard is also stretching things out and expanding them, you will be making space for them to align in a more natural way.  At least based on what I have seen.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_jEbzGk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "I'm experiencing health issues after Invisalign/clear aligners - will Reviv help with this too?",
+            "icon": "none",
+            "row_content": "<p>I believe it can.</p><p>In my experience clear aligners like Invisalign cause the same fundamental biomechanical problems as traditional braces - sometimes even more severely. <br/><br/>And so i've seen that Reviv can counteract this in a similar way to how i explained with braces.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_UjR4JN",
+        "collapsible_row_tUj3HX",
+        "collapsible_row_6bErhk",
+        "collapsible_row_jEbzGk"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "frequently asked questions",
+        "heading_size": "hxxl",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": "sk-faqs"
+      }
+    },
+    "1743752606d7c9c7a3": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_RjGj3h": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "414780",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_RjGj3h"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "multicolumn_49tKYY": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_iM7qaf": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/0b05566d-bda8-4286-bca9-03a8e2ebe3db_1280x720_a7d44b20-5f39-4dc3-baca-9f7371870b3d.webp",
+            "title": "What Likely Happened to Selena Gomez",
+            "text": "<p>Root cause is that she had braces</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/what-likely-happened-to-selena-gomez?_pos=23&_sid=7fd05cd71&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_3cdnw3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_8986965a-6016-465d-ae9e-1c5926da57dd_00000303_003.webp",
+            "title": "Reviv vs Braces & Surgery for Facial Asymmetry",
+            "text": "<p>Pros, Cons, and When to Choose Each</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/reviv-vs-braces-surgery-for-facial-asymmetry-pros-cons-and-when-to-choose-each?_pos=3&_sid=7fd05cd71&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_eL9iML": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___M_70cbc86c-b8eb-4648-9973-8dfcc10895f7.webp",
+            "title": "Mouthguards for Braces, Veneers, and Implants",
+            "text": "<p>What Changes in Fit and Care?</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/mouthguards-for-braces-veneers-and-implants-what-changes-in-fit-and-care?_pos=2&_sid=7fd05cd71&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_qDzbNb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/b4a1cb1e-c919-44b4-a664-fdc4d89a4c97_721x424_bb88a666-61dd-4287-9e0a-6c2c8d1f6e0d.webp",
+            "title": "Teeth must move for the Reviv process",
+            "text": "<p>The Reviv Process Straightens Teeth Naturally</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/teeth-need-to-be-able-to-move-with-the-reviv-process?_pos=5&_sid=f7a2cc8d6&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_rjJbmr": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_8986965a-6016-465d-ae9e-1c5926da57dd_00001679_002.webp",
+            "title": "Cost, Timelines, and Results",
+            "text": "<p>Flattening a Deep Curve of Spee</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/cost-timelines-and-results-flattening-a-deep-curve-of-spee?_pos=4&_sid=f7a2cc8d6&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_YzK4R9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___M_dd22771e-de71-4b0d-b047-667192b7d5bc.webp",
+            "title": "Reviv for Teens: Early Bite Correction to Prevent Facial Asymmetry",
+            "text": "<p>What Parents Should Know</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/reviv-for-teens-early-bite-correction-to-prevent-facial-asymmetry-what-parents-should-know?_pos=7&_sid=f7a2cc8d6&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_gmzTVU": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design.webp",
+            "title": "The Curve of Spee Explained Like You’re 12",
+            "text": "<p>and How a Mouthguard Interacts with It</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/the-curve-of-spee-explained-like-you-re-12-and-how-a-mouthguard-interacts-with-it?_pos=6&_sid=f7a2cc8d6&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_GMpXpM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_8986965a-6016-465d-ae9e-1c5926da57dd_00001602_002.webp",
+            "title": "Reverse Curve of Spee Archwires",
+            "text": "<p>A Patient’s Guide</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/reverse-curve-of-spee-archwires-a-patient-s-guide?_pos=16&_sid=f7a2cc8d6&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_EiNAED": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_00000539_003_106b2bb2-b7eb-4c32-bb20-5d08ed7c4e1d.webp",
+            "title": "Reviv Mouthguard Reviews and Before/After Journal Hub",
+            "text": "<p>User Gallery + HRV/Sleep Charts</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/reviv-mouthguard-reviews-and-before-after-journal-hub-user-gallery-hrv-sleep-charts?_pos=18&_sid=f7a2cc8d6&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_GDQJ4Y": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___M_569417de-c3ae-4502-bc21-29b2784f8aeb.webp",
+            "title": "The Psychology of Jaw Clenching",
+            "text": "<p>It’s Not Just Stress</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/the-psychology-of-jaw-clenching-it-s-not-just-stress?_pos=8&_sid=f7a2cc8d6&_ss=r",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_hHEpfk": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/uri_ifs___S_00000071_000_47bc0281-1c5b-4ac4-894e-7b5d21e8ddc1.webp",
+            "title": "Mouthguard 101",
+            "text": "<p>Types, Uses, and What Actually Changes Your Face</p>",
+            "link_label": "READ MORE",
+            "link": "https://getreviv.com/blogs/content/mouthguard-101-types-uses-and-what-actually-changes-your-face",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        }
+      },
+      "block_order": [
+        "column_iM7qaf",
+        "column_3cdnw3",
+        "column_eL9iML",
+        "column_qDzbNb",
+        "column_rjJbmr",
+        "column_YzK4R9",
+        "column_gmzTVU",
+        "column_GMpXpM",
+        "column_EiNAED",
+        "column_GDQJ4Y",
+        "column_hHEpfk"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "OTHER RELATED ARTICLES",
+        "box_link": false,
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "section_color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_g8wcVV",
+    "free_trial_CX8H9e",
+    "tmj_block_UtYCDW",
+    "multicolumn_HzjGGH",
+    "skool_image_slider_dhbCwq",
+    "rich_text_cmmbXX",
+    "product_cards_j8jV4n",
+    "collapsible_content_JN3rhi",
+    "1743752606d7c9c7a3",
+    "multicolumn_49tKYY"
+  ]
+}

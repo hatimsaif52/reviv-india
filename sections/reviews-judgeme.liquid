@@ -1,0 +1,261 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .reviews-judge-heading div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .reviews-judge-title {
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  .review-judge-header {
+    width: 200px;
+    text-align: center;
+    padding-top: 12px;
+  }
+
+  .review-judge-writter {
+    font-weight: 600;
+  }
+
+  .review-judge-card-wrapper {
+    display: flex;
+    gap: 12px;
+  }
+
+  .review-judge-card-content {
+    flex:1;
+  }
+
+  .stars {
+    margin-bottom: 0px;
+  }
+
+  .star.filled {
+    color: #e5c085;
+  }
+
+  .star.empty {
+    color: #cccccc;
+  }
+
+  .review-judgeme-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 750px) {
+    .review-judge-card-wrapper {
+      flex-direction: column;
+    }
+
+    .review-judge-header {
+      width: 100%;
+    }
+
+  }
+
+  .reviews-judge-footer__features {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .reviews-judge-footer__feature {
+    display: flex;
+    gap: 4px;
+    background: linear-gradient(133.26deg, #CEFDC7 25.76%, #A5EC9B 93.18%);
+    border-radius: 50px;
+    padding: 8px 12px;
+  }
+
+  .reviews-judge-footer__stars {
+    font-size: 16px;
+    font-weight: 700;
+    color: #E5BF85;
+    display: flex;
+    gap: 4px;
+    margin: 20px 0px;
+  }
+
+  .reviews-judge-footer__stars svg {
+    fill: #E5BF85;
+  }
+
+  .reviews-judge-footer__feature svg {
+    font-size: 16px;
+    font-weight: 700;
+    fill: #377B63;
+  }
+
+  .reviews-judge-footer__feature div {
+    display: flex;
+    align-items: center;
+  }
+
+  .reviews-judge-footer__heading {
+    font-weight: 700;
+    font-size: 20px;
+    color: #333333;
+    margin-bottom: 12px;
+  }
+{%- endstyle -%}
+
+<script src="{{ 'reviews-judgeme.js' | asset_url }}" defer="defer"></script>
+
+<div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
+  <div class="page-width">
+    <div class="reviews-judge-wrapper">
+      <div class="reviews-judge-heading">
+        <div class="reviews-judge-title">Истории наших клиентов</div>
+        <div class="stars">
+          {%- for i in (1..5) -%}
+            <span class="star filled">★</span>
+          {%- endfor -%}
+        </div>
+        <div>из 152 отзывов</div>
+      </div>
+      <div class="swiper reviews-judge-swiper">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            <div class="swiper-slide review-judge-card">
+              <div class="review-judge-card-wrapper">
+                <div class="review-judge-header">
+                  <div class="review-judge-writter">{{ block.settings.review_writer }}</div>
+                  <div class="review-rating">
+                    <div class="stars">
+                      {%- for i in (1..5) -%}
+                        {%- if i <= block.settings.review_rating -%}
+                          <span class="star filled">★</span>
+                        {%- else -%}
+                          <span class="star empty">★</span>
+                        {%- endif -%}
+                      {%- endfor -%}
+                    </div>
+                  </div>
+                </div>
+                <div class="review-judge-card-content">
+                  {{ block.settings.review_content }}
+                </div>
+              </div>
+
+              <div class="review-judgeme-buttons">
+                <div class="review-judgeme-buttons__prev">{{- 'chervon-left.svg' | inline_asset_content -}}</div>
+                <div class="review-judgeme-buttons__next">{{- 'chervon-right.svg' | inline_asset_content -}}</div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="reviews-judge-footer">
+        <div class="reviews-judge-footer__heading">Что покупатели думают о магазине</div>
+        <div class="reviews-judge-footer__content">
+          Reviv One предлагает высокоэффективные и инновационные продукты для снятия напряжения в челюсти, боли в ВНЧС,
+          проблем со сном и общего физического дискомфорта. Покупатели глубоко впечатлены заметными улучшениями в
+          качестве сна, уровне расслабления и уменьшением привычки скрежетать зубами или сжимать челюсть. Всесторонние
+          обучающие материалы магазина, активная поддержка сообщества и персональные рекомендации от основателя
+          способствуют исключительному клиентскому опыту.
+        </div>
+        <div class="reviews-judge-footer__stars">
+          {{- 'stars.svg' | inline_asset_content -}}
+          <div>Сгенерировано ИИ на основе отзывов клиентов.</div>
+        </div>
+        <div class="reviews-judge-footer__features">
+          <div class="reviews-judge-footer__feature">
+            <div>{{- 'shield.svg' | inline_asset_content -}}</div>
+            <div>Сон</div>
+          </div>
+          <div class="reviews-judge-footer__feature">
+            <div>{{- 'shield.svg' | inline_asset_content -}}</div>
+            <div>Боль</div>
+          </div>
+          <div class="reviews-judge-footer__feature">
+            <div>{{- 'shield.svg' | inline_asset_content -}}</div>
+            <div>Облегчение</div>
+          </div>
+          <div class="reviews-judge-footer__feature">
+            <div>{{- 'shield.svg' | inline_asset_content -}}</div>
+            <div>Комфорт</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Reviews Judge.me-like",
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "text",
+          "id": "review_writer",
+          "label": "Review Writer Name",
+          "default": "Ivan"
+        },
+        {
+          "type": "range",
+          "id": "review_rating",
+          "label": "Review Rating",
+          "min": 1,
+          "max": 5,
+          "default": 5
+        },
+        {
+          "type": "richtext",
+          "id": "review_content",
+          "label": "Review Content",
+          "default": "<p>I love this product! It works great and I would recommend it to anyone.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Reviews Judge.me-like",
+      "category": "Review"
+    }
+  ]
+}
+{% endschema %}

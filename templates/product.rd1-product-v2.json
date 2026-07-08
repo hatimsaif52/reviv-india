@@ -1,0 +1,667 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "judge_me_reviews_preview_badge_EAUeai": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+            "quantity_style": "default"
+          }
+        },
+        "custom_liquid_zeyt9h": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<p style=\"font-size:14px; margin:0; padding:0; color:yellow; text-align:center;\">\n    ★★★★★ Google Reviews\n</p>"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "text_EMq7Cg": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "body"
+          }
+        },
+        "custom_liquid_zK6p4z": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div dark-mode id=\"truemed-instructions\" style=\"font-size: 14px;\" icon-height=\"12\" data-public-id=\"tm_qual_mw7eoyby3p\"></div>\n<script src=\"https://static.truemed.com/widgets/product-page-widget.min.js\" defer></script>"
+          }
+        },
+        "custom_liquid_aFheq7": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"testimonial-card\">\n      <div class=\"testimonial-header\">\n        <div class=\"profile\">\n          <img class=\"profile-image\" width=\"100\" height=\"100\" src=\"{{ 'andrew-testimonial.png' | asset_url }}\" alt=\"Andrew from SKOOL Community\">\n          <strong class=\"profile-name\">Andrew</strong>\n        </div>\n        <div class=\"brand-logo\">\n          <span class=\"logo-letter logo-s\">s</span>\n          <span class=\"logo-letter logo-k\">k</span>\n          <span class=\"logo-letter logo-o1\">o</span>\n          <span class=\"logo-letter logo-o2\">o</span>\n          <span class=\"logo-letter logo-l\">l</span>\n        </div>\n      </div>\n      <blockquote class=\"testimonial-quote\">\n        \"Structurally and neurologically I feel so much better after I started the Reviv.\"\n      </blockquote>\n    </div>\n\n{% style %}\n.testimonial-card {\n  max-width: 42rem;\n  background: rgba(239, 201, 139, 0.04);\n  border: 1px solid #ffd7ba;\n  border-radius: 32px;\n  padding: 2rem;\n  position: relative;\n}\n\n.testimonial-header {\n  display: flex;\n  align-items: flex-start;\n  justify-content: space-between;\n  margin-bottom: 2rem;\n}\n\n.profile {\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n}\n\n.profile-image {\n  width: 4rem;\n  height: 4rem;\n  border-radius: 50%;\n  object-fit: cover;\n}\n\n.profile-name {\n  color: white;\n  font-size: 1.875rem;\n  font-weight: 600;\n}\n\n.brand-logo {\n  font-size: 2.25rem;\n  font-weight: 700;\n}\n\n.logo-letter {\n  font-weight: bold;\n}\n\n.logo-s {\n  color: #1b3bdb;\n}\n\n.logo-k {\n  color: #db1b1b;\n}\n\n.logo-o1 {\n  color: #dbc31b;\n}\n\n.logo-o2 {\n  color: #1bdbdb;\n}\n\n.logo-l {\n  color: #db1b1b;\n}\n\n.testimonial-quote {\n  color: rgba(255, 255, 255, 0.8);\n  font-weight: 400;\n  font-size: 18px;\n  letter-spacing: -0.02em;\n  line-height: 1.3;\n  font-style: italic;\n  border: none;\n  padding: 0;\n  margin: 0;\n}\n\n/* Responsive styles */\n@media (max-width: 640px) {\n  .testimonial-card {\n    padding: 1.5rem;\n  }\n\n  .profile-name,\n  .testimonial-quote {\n    font-size: 1.5rem;\n  }\n\n  .brand-logo {\n    font-size: 1.875rem;\n  }\n\n  .profile-image {\n    width: 3rem;\n    height: 3rem;\n  }\n}\n{% endstyle %}"
+          }
+        },
+        "custom_liquid_4YiTcD": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<p style=\"font-size:14px; margin:0; padding:0; color:white; text-align:center;\">\n    <span style=\"height:8px; width:8px; background-color:green; border-radius:50%; display:inline-block; animation:blinking 1.5s infinite;\"></span>\n    <span style=\"color:green;\">Note:</span> Only <span style=\"font-weight:bold;\">7</span> units left in stock\n</p>\n\n<style>\n@keyframes blinking {\n    0% { opacity: 1.0; }\n    50% { opacity: 0.0; }\n    100% { opacity: 1.0; }\n}\n</style>"
+          }
+        },
+        "icon_with_text_cbe7i6": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "center_content": false,
+            "icon_1": "heart",
+            "heading_1": "<strong>Trusted by 30k+ Customers</strong>",
+            "icon_2": "lock",
+            "heading_2": "<strong>Secure Checkout</strong>",
+            "icon_3": "return",
+            "heading_3": ""
+          }
+        },
+        "collapsible_tab_LfJKQ9": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How do I mold it?",
+            "icon": "question_mark",
+            "content": "<p>RevivDay (RD1) is designed for regular re-molding (once a week). Learn more <a href=\"https://youtube.com/shorts/8t0ObAOROs8?si=tuxKy0IQ5tGiiJ2D\" target=\"_blank\" title=\"https://youtube.com/shorts/8t0ObAOROs8?si=tuxKy0IQ5tGiiJ2D\">here</a></p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_bETJ9W": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How it works?",
+            "icon": "question_mark",
+            "content": "<p>The RD1 offers the same superior tooth protection in a low-profile design. It is optimized for comfort during daytime activities such as gym sessions, jogging, or social settings where ease of speech is a priority.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_MdA9x7": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Our Guarantee",
+            "icon": "heart",
+            "content": "<p>If you wear the appliance consistently and don't agree that your health issues are improving in the first 90 days we give you your money back. See terms <a href=\"https://getreviv.com/pages/our-guarantee\" title=\"Our Guarantee\">here</a></p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_PmmWBf": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping Information",
+            "icon": "truck",
+            "content": "<ul><li>Shipping typically takes 7-10 days to most destinations including the US. More remote countries can take longer.</li><li>Orders typically ship within 48 hours and you will receive a tracking number by email as soon as it ships.</li></ul>",
+            "page": ""
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "judge_me_reviews_preview_badge_EAUeai",
+        "title",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "custom_liquid_zeyt9h",
+        "buy_buttons",
+        "text_EMq7Cg",
+        "custom_liquid_zK6p4z",
+        "custom_liquid_aFheq7",
+        "custom_liquid_4YiTcD",
+        "icon_with_text_cbe7i6",
+        "collapsible_tab_LfJKQ9",
+        "collapsible_tab_bETJ9W",
+        "collapsible_tab_MdA9x7",
+        "collapsible_tab_PmmWBf",
+        "description",
+        "share"
+      ],
+      "custom_css": [
+        ".product__title h1 {color: #e5c085;}",
+        ".icon-with-text .icon {fill: #e5c085;}",
+        ".icon-accordion {fill: #e5c085;}",
+        ".icon-caret {fill: #e5c085;}",
+        ".product__media img,.thumbnail.global-media-settings img {border-radius: 10px;}"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "show_sold_alert": true,
+        "color_scheme": "scheme-4",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "hover",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12,
+        "show_benefits": false
+      }
+    },
+    "rd1_middle_sections": {
+      "type": "rd1-middle-sections",
+      "blocks": {
+        "step_FYEn9E": {
+          "type": "step",
+          "settings": {
+            "number": "01",
+            "title": "Boil Water",
+            "text": "Bring a pot of water to a full boil on the stove or kettle. You need it at maximum temperature for the mold to set correctly."
+          }
+        },
+        "step_EGpQWq": {
+          "type": "step",
+          "settings": {
+            "number": "02",
+            "title": "Soak for 60 Seconds",
+            "text": "Submerge the RD1 in the boiling water for exactly 60 seconds. This softens it evenly so it can mold precisely to your teeth."
+          }
+        },
+        "step_jXCpxH": {
+          "type": "step",
+          "settings": {
+            "number": "03",
+            "title": "Cool Briefly — 3 to 5 Seconds",
+            "text": "Using a slotted spoon, remove the guard and dip it in cold water for just 3–5 seconds. Enough to handle it safely without losing its softness."
+          }
+        },
+        "step_Wf4Ygp": {
+          "type": "step",
+          "settings": {
+            "number": "04",
+            "title": "Place and Bite Down",
+            "text": "Stand in front of a mirror. Place RD1 on your lower teeth, centered in the bite channel. Gently bite down and press your fingers along the side walls to shape it around your teeth."
+          }
+        },
+        "step_7QHHNT": {
+          "type": "step",
+          "settings": {
+            "number": "05",
+            "title": "Hold for 5 Minutes",
+            "text": "Keep the guard in your mouth for at least 5 minutes without moving it. This gives the material enough time to take the exact shape of your bite."
+          }
+        },
+        "step_FjjtCY": {
+          "type": "step",
+          "settings": {
+            "number": "06",
+            "title": "Set in Cold Water",
+            "text": "Place the molded guard back in cold water for 5 minutes to lock in the shape. Once done — it's ready to wear."
+          }
+        },
+        "idea_item_1": {
+          "type": "idea_item",
+          "settings": {
+            "text": "You clench at your desk without knowing it"
+          }
+        },
+        "idea_item_2": {
+          "type": "idea_item",
+          "settings": {
+            "text": "You grind through stressful moments"
+          }
+        },
+        "idea_item_4": {
+          "type": "idea_item",
+          "settings": {
+            "text": "Your nighttime progress slowly unravels during the day"
+          }
+        },
+        "tag_1": {
+          "type": "tag",
+          "settings": {
+            "text": "At Your Desk"
+          }
+        },
+        "tag_2": {
+          "type": "tag",
+          "settings": {
+            "text": "At the Gym"
+          }
+        },
+        "tag_3": {
+          "type": "tag",
+          "settings": {
+            "text": "Commuting"
+          }
+        },
+        "tag_4": {
+          "type": "tag",
+          "settings": {
+            "text": "On Calls"
+          }
+        },
+        "tag_5": {
+          "type": "tag",
+          "settings": {
+            "text": "Jogging"
+          }
+        },
+        "tag_6": {
+          "type": "tag",
+          "settings": {
+            "text": "In Meetings"
+          }
+        },
+        "day_card_1": {
+          "type": "day_card",
+          "settings": {
+            "image": "shopify://shop_images/work.png",
+            "title": "At Work",
+            "text": "Low profile enough for meetings and calls."
+          }
+        },
+        "day_card_2": {
+          "type": "day_card",
+          "settings": {
+            "image": "shopify://shop_images/gym.png",
+            "title": "At the Gym",
+            "text": "Built for movement, lifting and effort."
+          }
+        },
+        "day_card_3": {
+          "type": "day_card",
+          "settings": {
+            "image": "shopify://shop_images/running.png",
+            "title": "On a Run",
+            "text": "Stays put during cardio and outdoor sessions."
+          }
+        },
+        "day_card_4": {
+          "type": "day_card",
+          "settings": {
+            "image": "shopify://shop_images/commuting.png",
+            "title": "Commuting",
+            "text": "Stays in on the train or in the car."
+          }
+        }
+      },
+      "block_order": [
+        "step_FYEn9E",
+        "step_EGpQWq",
+        "step_jXCpxH",
+        "step_Wf4Ygp",
+        "step_7QHHNT",
+        "step_FjjtCY",
+        "idea_item_1",
+        "idea_item_2",
+        "idea_item_4",
+        "tag_1",
+        "tag_2",
+        "tag_3",
+        "tag_4",
+        "tag_5",
+        "tag_6",
+        "day_card_1",
+        "day_card_2",
+        "day_card_3",
+        "day_card_4"
+      ],
+      "settings": {
+        "load_google_fonts": true,
+        "font_serif": "'Cormorant Garamond', 'Times New Roman', serif",
+        "font_sans": "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+        "max_width": 1280,
+        "side_padding": 32,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "bg_color": "#1c1c1c",
+        "card_bg_color": "#262626",
+        "accent_color": "#dfb88a",
+        "text_color": "#ffffff",
+        "text_color_2": "#bfbfbf",
+        "text_color_3": "#8a8a8a",
+        "border_color": "#ffffff14",
+        "idea_eyebrow": "— The idea behind RD1 —",
+        "idea_title": "<strong>Designed for your </strong><em><strong>whole day.</strong></em>",
+        "idea_subtext": "<p>RD1 is lightweight and low-profile, which is designed so you can speak naturally, breathe easily, commute, train at the gym, and go about your normal life without any issues.Think of it as the daytime counterpart to your Reviv mouthguard (R1/R2/R3) appliance. Day and night together means consistent, compounding progress.<br/><br/>Day and night. Together, that's when the real progress happens.</p>",
+        "day_eyebrow": "— Where you'll wear it —",
+        "day_title": "Designed for Your <em>Whole Day</em>",
+        "mold_eyebrow": "— How to mold it —",
+        "mold_title": "You're wearing this through your whole day. <em>It needs to fit perfectly.</em>",
+        "mold_body": "<p>You're talking, training, commuting, going about your day life — RD1 needs to move with you, not against you. That only happens when it's molded specifically to your mouth. Not a generic average. Yours.</p><p>A good fit means it stays in place, feels natural, and you forget it's even there. A poor fit means you'll take it out and stop wearing it altogether.</p><p>Because your bite subtly shifts as your jaw improves over time, we recommend remolding once a week. It takes 10 minutes and keeps RD1 tracking your progress the whole way through.</p>",
+        "video_external": "https://www.youtube.com/watch?v=roBsgSYzcr8",
+        "video_link_label": "Watch the RD1 molding video",
+        "steps_title": "6 Simple Steps. <em>Perfect Fit.</em>",
+        "steps_subtext": "<p>The boil-and-bite process takes under 10 minutes.<br/>Here's exactly how to do it right.</p>",
+        "steps_video_external": "https://www.youtube.com/watch?v=8t0ObAOROs8",
+        "steps_video_link_label": "Watch the steps video",
+        "remold_title": "Remold Once a Week.",
+        "remold_body": "<p>RD1 is designed for regular remolding — <strong>once per week is what we recommend.</strong></p><p>Why? Because your bite subtly shifts as your structure improves over time. Weekly remolding ensures RD1 keeps up with your progress and continues to fit perfectly — so it never stops doing its job.</p>",
+        "remold_footnote": "If it ever feels loose, tight, or uncomfortable before the week is up — remold it. Your comfort is your signal."
+      }
+    },
+    "1777795313f54a279b": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_dVVgF7": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_dVVgF7"
+      ],
+      "custom_css": [
+        "{background: #232021;}"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "substack_blog_BMDpyd": {
+      "type": "substack-blog",
+      "blocks": {
+        "column_aAMFJK": {
+          "type": "column",
+          "settings": {
+            "category": "",
+            "article_type": "",
+            "date": "",
+            "image": "shopify://shop_images/article-1.png",
+            "title": "I Am Going to Challenge What You Believe About Health",
+            "text": "<p>Challenges traditional health views, introduces the balloon theory, and explores how dental health affects overall well-being.</p>",
+            "link_label": "Read post",
+            "link": "https://reviv.substack.com/p/i-am-going-to-challenge-what-you",
+            "youtube_video_url": ""
+          }
+        },
+        "column_wJbqdQ": {
+          "type": "column",
+          "settings": {
+            "category": "",
+            "article_type": "",
+            "date": "",
+            "image": "shopify://shop_images/article-2.png",
+            "title": "The Balloon Theory",
+            "text": "<p>Explains how dental health impacts overall well-being by linking teeth to various health issues and introduces methods for addressing these connections.</p>",
+            "link_label": "Read post",
+            "link": "https://reviv.substack.com/p/so-why-do-the-teeth-relate-to-your",
+            "youtube_video_url": ""
+          }
+        },
+        "column_BRPMe7": {
+          "type": "column",
+          "settings": {
+            "category": "",
+            "article_type": "",
+            "date": "",
+            "image": "shopify://shop_images/article-3.png",
+            "title": "How to Correct the Problem",
+            "text": "<p>Provides strategies for addressing dental health issues and correcting related problems for improved overall well-being.</p>",
+            "link_label": "Read post",
+            "link": "https://reviv.substack.com/p/how-to-solve-the-problem",
+            "youtube_video_url": ""
+          }
+        },
+        "column_J3eidb": {
+          "type": "column",
+          "settings": {
+            "category": "",
+            "article_type": "",
+            "date": "",
+            "image": "shopify://shop_images/article-4.png",
+            "title": "What Is Impacted by These Biomechanics?",
+            "text": "<p>Explores how dental biomechanics affect various aspects of health and well-being.</p>",
+            "link_label": "Read post",
+            "link": "https://reviv.substack.com/p/what-is-impacted-by-these-biomechanics",
+            "youtube_video_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_aAMFJK",
+        "column_wJbqdQ",
+        "column_BRPMe7",
+        "column_J3eidb"
+      ],
+      "custom_css": [
+        "h2 {text-align: center;}",
+        ".rte {color: #fff;}"
+      ],
+      "settings": {
+        "title": "LEARN MORE ABOUT HOW THIS WORKS",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-2ab1995e-c67e-4402-af73-6a85779ae883",
+        "section_color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class": "blog-cards-style",
+        "custom__class2": ""
+      }
+    },
+    "collapsible_content_HA7hTA": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_bdwWYh": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is RevivDay?",
+            "icon": "lightning_bolt",
+            "row_content": "<p>RevivDay is a lightweight, discreet daytime mouthguard engineered for comfort and protection. Unlike traditional guards, it’s designed for working, gym, jogging, or social settings.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_b3Aq6U": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How is it different from R1 & R2?",
+            "icon": "lightning_bolt",
+            "row_content": "<p>RD1 uses the same biomechanics as R1 & R2 but tends to be a bit easier to wear and offers a bit less stretch.  But it is perfect for daytime activities and preventing regression.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_46p3KR": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What if I didn't mold it correctly and it has deformed?",
+            "icon": "check_mark",
+            "row_content": "<p>In cases like this just mold it again.  It is very hard to damage the RD1 since the transparent part is completely remoldable.  It is only when you damage the yellow base that the appliance is truly damaged.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_zVraUA": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I wear it at night?",
+            "icon": "lightning_bolt",
+            "row_content": "<p>Yes absolutely but it will tend to be a bit less stretch than R1/R2/R3.  Many folks use RD1 as a transition to those other mouthguards as it tends to be easier to start with.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_wYPXBk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Will I get the same results as R1/R2?",
+            "icon": "lightning_bolt",
+            "row_content": "<p>Yes. RD1 maintains the same benefits, but is best used alongside R1/R2 for 24-hour coverage.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_7ExR9g": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I clean RevivDay?",
+            "icon": "lightning_bolt",
+            "row_content": "<p>Clean with soap and warm water (not boiling). We also recommend using Repod Repod Ultrasonic Cleaner for Dentist-Level Cleaning in just 3 Minutes</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_zHYD8j": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I mold it?",
+            "icon": "check_mark",
+            "row_content": "<p><strong>Watch Video here: </strong><a href=\"https://youtube.com/shorts/8t0ObAOROs8?si=tuxKy0IQ5tGiiJ2D\" target=\"_blank\" title=\"https://youtube.com/shorts/8t0ObAOROs8?si=tuxKy0IQ5tGiiJ2D\">https://youtube.com/shorts/8t0ObAOROs8?si=tuxKy0IQ5tGiiJ2D</a><strong><br/><br/>Step 1: Boil <br/></strong>Fill a pot with enough water to submerge the RevivDay mouthguard without touching the bottom. Bring the water to a gentle boil.<br/><br/><strong>Step 2: Drop<br/></strong>Turn off the heat and carefully place the mouthguard into the hot water. Let it soak for 60 seconds.<br/><br/><strong>Step 3: Retrieve & Cool<br/></strong>Use a slotted spoon to remove the mouthguard and immediately place it into a bowl of cold water for 3-5 seconds.<br/><br/><strong>Step 4: Mold<br/></strong>Stand in front of a mirror and place RevivDay onto your lower teeth. Ensure your teeth sit in the center of the bite channel (not pressing against the side walls).<br/>- Gently bite down<br/>- Press your fingers against the side walls to shape the fit around your teeth<br/>- Keep it in your mouth for at least 5 minutes for best molding results</p><p><strong>Step 5: Set<br/></strong>After molding, place the mouthguard back in cold water for 5 minutes to solidify the fit.<br/><br/><strong>Step 6: Ready for Use<br/></strong>After you take the appliance out of the cold water it is ready to be used!<br/>Note that the lower teeth will still move a little bit with this process even though you are wearing the RD1 on top of them. And that movement is good.<br/>For this reason you should re-mold your RD1 about once a week to continue to allow the lower teeth to move and upright.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_VrBWRK": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the appliance made out of?",
+            "icon": "check_mark",
+            "row_content": "<p>The appliance is made of EVA which is a non-toxic, BPA-free, and safe material.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_bdwWYh",
+        "collapsible_row_b3Aq6U",
+        "collapsible_row_46p3KR",
+        "collapsible_row_zVraUA",
+        "collapsible_row_wYPXBk",
+        "collapsible_row_7ExR9g",
+        "collapsible_row_zHYD8j",
+        "collapsible_row_VrBWRK"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h0",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "scheme-4",
+        "container_color_scheme": "scheme-4",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "custom_class": "repod-faq-section"
+      }
+    },
+    "product_cards_wKGKUV": {
+      "type": "product-cards",
+      "blocks": {
+        "product_card_YWn3tN": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-two",
+            "is_new": true
+          }
+        },
+        "product_card_qAgEHV": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-two-without-support",
+            "is_new": true
+          }
+        },
+        "product_card_3EANmB": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-one",
+            "is_new": false
+          }
+        },
+        "product_card_6QpAza": {
+          "type": "product_card",
+          "settings": {
+            "product": "reviv-one-without-support",
+            "is_new": false
+          }
+        },
+        "product_card_MAiyJb": {
+          "type": "product_card",
+          "settings": {
+            "product": "1-year-subscription-only",
+            "is_new": false
+          }
+        }
+      },
+      "block_order": [
+        "product_card_YWn3tN",
+        "product_card_qAgEHV",
+        "product_card_3EANmB",
+        "product_card_6QpAza",
+        "product_card_MAiyJb"
+      ],
+      "settings": {
+        "section_color_scheme": "scheme-4",
+        "padding_top": 72,
+        "padding_bottom": 36,
+        "custom_classes": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rd1_middle_sections",
+    "1777795313f54a279b",
+    "substack_blog_BMDpyd",
+    "collapsible_content_HA7hTA",
+    "product_cards_wKGKUV"
+  ]
+}

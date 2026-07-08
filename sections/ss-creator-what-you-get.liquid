@@ -1,0 +1,87 @@
+<section class="ss-creator-what-you-get">
+  <div class="container">
+    <h2>{{ section.settings.heading }}</h2>
+
+    <div class="grid">
+      {% for block in section.blocks %}
+        <div class="card">
+          <div class="icon"><img src="{{ block.settings.icon| img_url: '200x'}}" /> </div>
+          <h3>{{ block.settings.title }}</h3>
+          <p>{{ block.settings.text }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<style>
+.ss-creator-what-you-get {
+  background: #0d0c0b;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+
+   h2 {
+    margin-bottom: 40px;
+    font-size: 40px;
+    color: #E9E9E9;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+   .card {
+      border: 1px solid #2a2725;
+      padding: 40px;
+      border-radius: 12px;
+      background: #1E1B14;
+  }
+  .icon {
+    font-size: 22px;
+    color: #c9a46c;
+    margin-bottom: 15px;
+  }
+  .card h3 {
+      margin-bottom: 10px;
+      color: #FFFFFF;
+      font-size: 32px;
+  }
+  .card p {
+      color: #A8A29E;
+      font-size: 16px;
+      max-width: 260px;
+      margin: 0 auto;
+  }
+}
+
+@media(max-width: 768px){
+  .ss-creator-what-you-get .grid { grid-template-columns: 1fr; }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Creator What You Get",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "What you get",
+      "label": "Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        { "type": "image_picker", "id": "icon", "label": "Icon (emoji or symbol)"},
+        { "type": "text", "id": "title", "label": "Title" },
+        { "type": "textarea", "id": "text", "label": "Text" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Creator What You Get" }]
+}
+{% endschema %}

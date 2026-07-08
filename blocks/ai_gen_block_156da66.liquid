@@ -1,0 +1,457 @@
+{% doc %}
+  @prompt
+    generate a section that has a text on top, a number in the middle as a jumbo text, and this number should have an animation that will show the number progressing gradually to the number I entered. So, for example, if I enter a thousand, it's going to show the number incrementing from a certain number with a certain speed to the target number, and in the bottom of this number we will have another text., add color scheme change, add padding chnage and margins 
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-counter-block-{{ ai_gen_id }} {
+    padding: {{ block.settings.padding_top }}px {{ block.settings.padding_horizontal }}px {{ block.settings.padding_bottom }}px;
+    margin: {{ block.settings.margin_top }}px 0 {{ block.settings.margin_bottom }}px;
+    text-align: {{ block.settings.text_alignment }};
+  }
+
+  .ai-counter-block__top-text-{{ ai_gen_id }} {
+    font-size: {{ block.settings.top_text_size }}px;
+    margin: 0 0 {{ block.settings.spacing_top }}px;
+    font-weight: {{ block.settings.top_text_weight }};
+  }
+
+  .ai-counter-block__number-{{ ai_gen_id }} {
+    font-size: {{ block.settings.number_size }}px;
+    font-weight: {{ block.settings.number_weight }};
+    margin: 0;
+    line-height: 1.1;
+  }
+
+  .ai-counter-block__bottom-text-{{ ai_gen_id }} {
+    font-size: {{ block.settings.bottom_text_size }}px;
+    margin: {{ block.settings.spacing_bottom }}px 0 0;
+    font-weight: {{ block.settings.bottom_text_weight }};
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-counter-block-{{ ai_gen_id }} {
+      padding: {{ block.settings.padding_top | times: 0.7 }}px {{ block.settings.padding_horizontal | times: 0.7 }}px {{ block.settings.padding_bottom | times: 0.7 }}px;
+      margin: {{ block.settings.margin_top | times: 0.7 }}px 0 {{ block.settings.margin_bottom | times: 0.7 }}px;
+    }
+
+    .ai-counter-block__top-text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.top_text_size | times: 0.8 }}px;
+    }
+
+    .ai-counter-block__number-{{ ai_gen_id }} {
+      font-size: {{ block.settings.number_size | times: 0.6 }}px;
+    }
+
+    .ai-counter-block__bottom-text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.bottom_text_size | times: 0.8 }}px;
+    }
+  }
+  .ai-counter-block-{{ ai_gen_id }} {
+  padding: {{ block.settings.padding_top }}px {{ block.settings.padding_horizontal }}px {{ block.settings.padding_bottom }}px;
+  margin: {{ block.settings.margin_top }}px 0 {{ block.settings.margin_bottom }}px;
+  text-align: {{ block.settings.text_alignment }};
+  background-color: {{ block.settings.background_color }};
+}
+
+/* Make the custom element itself paint bg and beat color-scheme defaults */
+animated-counter-{{ ai_gen_id }}.ai-counter-block-{{ ai_gen_id }} {
+  display:block;
+  background-color: {{ block.settings.background_color }} !important;
+}
+.color-{{ block.settings.color_scheme }}.ai-counter-block-{{ ai_gen_id }} {
+  background-color: {{ block.settings.background_color }} !important;
+}
+
+/* Text colors */
+.ai-counter-block__top-text-{{ ai_gen_id }} { color: {{ block.settings.top_text_color }}; }
+.ai-counter-block__number-{{ ai_gen_id }}    { color: {{ block.settings.number_color }}; }
+.ai-counter-block__bottom-text-{{ ai_gen_id }} { color: {{ block.settings.bottom_text_color }}; }
+
+{% endstyle %}
+
+<animated-counter-{{ ai_gen_id }}
+  class="ai-counter-block-{{ ai_gen_id }} color-{{ block.settings.color_scheme }}"
+  {{ block.shopify_attributes }}
+>
+  {% if block.settings.top_text != blank %}
+    <div class="ai-counter-block__top-text-{{ ai_gen_id }}">
+      {{ block.settings.top_text }}
+    </div>
+  {% endif %}
+
+  <div
+    class="ai-counter-block__number-{{ ai_gen_id }}"
+    data-target="{{ block.settings.target_number }}"
+    data-start="{{ block.settings.start_number }}"
+    data-duration="{{ block.settings.animation_duration }}"
+    data-prefix="{{ block.settings.number_prefix }}"
+    data-suffix="{{ block.settings.number_suffix }}"
+  >
+    {{ block.settings.start_number }}{{ block.settings.number_suffix }}
+  </div>
+
+  {% if block.settings.bottom_text != blank %}
+    <div class="ai-counter-block__bottom-text-{{ ai_gen_id }}">
+      {{ block.settings.bottom_text }}
+    </div>
+  {% endif %}
+</animated-counter-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class AnimatedCounter{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.hasAnimated = false;
+      }
+
+      connectedCallback() {
+        this.counterElement = this.querySelector('.ai-counter-block__number-{{ ai_gen_id }}');
+        this.targetNumber = parseInt(this.counterElement.dataset.target);
+        this.startNumber = parseInt(this.counterElement.dataset.start);
+        this.duration = parseInt(this.counterElement.dataset.duration);
+        this.prefix = this.counterElement.dataset.prefix || '';
+        this.suffix = this.counterElement.dataset.suffix || '';
+
+        this.setupIntersectionObserver();
+      }
+
+      setupIntersectionObserver() {
+        const options = {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.3
+        };
+
+        this.observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && !this.hasAnimated) {
+              this.animateCounter();
+              this.hasAnimated = true;
+            }
+          });
+        }, options);
+
+        this.observer.observe(this);
+      }
+
+      animateCounter() {
+        const startTime = performance.now();
+        const difference = this.targetNumber - this.startNumber;
+
+        const updateCounter = (currentTime) => {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / this.duration, 1);
+
+          const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+          const currentNumber = Math.floor(this.startNumber + (difference * easeOutQuart));
+
+          this.counterElement.textContent = this.prefix + this.formatNumber(currentNumber) + this.suffix;
+
+          if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+          } else {
+            this.counterElement.textContent = this.prefix + this.formatNumber(this.targetNumber) + this.suffix;
+          }
+        };
+
+        requestAnimationFrame(updateCounter);
+      }
+
+      formatNumber(num) {
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      }
+
+      disconnectedCallback() {
+        if (this.observer) {
+          this.observer.disconnect();
+        }
+      }
+    }
+
+    customElements.define('animated-counter-{{ ai_gen_id }}', AnimatedCounter{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Animated counter",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Top text"
+    },
+    {
+      "type": "richtext",
+      "id": "top_text",
+      "label": "Text",
+      "default": "<p>Our achievement</p>"
+    },
+    {
+      "type": "range",
+      "id": "top_text_size",
+      "min": 12,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Font size",
+      "default": 18
+    },
+    {
+      "type": "select",
+      "id": "top_text_weight",
+      "label": "Font weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "range",
+      "id": "spacing_top",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "label": "Spacing below",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Counter number"
+    },
+    {
+      "type": "text",
+      "id": "target_number",
+      "label": "Target number",
+      "default": "1000"
+    },
+    {
+      "type": "text",
+      "id": "start_number",
+      "label": "Start number",
+      "default": "0"
+    },
+    {
+      "type": "text",
+      "id": "number_prefix",
+      "label": "Prefix"
+    },
+    {
+      "type": "text",
+      "id": "number_suffix",
+      "label": "Suffix",
+      "default": "+"
+    },
+    {
+      "type": "range",
+      "id": "number_size",
+      "min": 32,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Font size",
+      "default": 96
+    },
+    {
+      "type": "select",
+      "id": "number_weight",
+      "label": "Font weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        },
+        {
+          "value": "800",
+          "label": "Extra-bold"
+        }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "range",
+      "id": "animation_duration",
+      "min": 500,
+      "max": 5000,
+      "step": 100,
+      "unit": "ms",
+      "label": "Animation duration",
+      "default": 2000
+    },
+    {
+      "type": "header",
+      "content": "Bottom text"
+    },
+    {
+      "type": "richtext",
+      "id": "bottom_text",
+      "label": "Text",
+      "default": "<p>Happy customers worldwide</p>"
+    },
+    {
+      "type": "range",
+      "id": "bottom_text_size",
+      "min": 12,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Font size",
+      "default": 18
+    },
+    {
+      "type": "select",
+      "id": "bottom_text_weight",
+      "label": "Font weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "range",
+      "id": "spacing_bottom",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "label": "Spacing above",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-4"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding horizontal",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin bottom",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Animated counter"
+    }
+  ]
+}
+{% endschema %}

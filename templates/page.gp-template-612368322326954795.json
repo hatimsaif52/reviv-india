@@ -1,0 +1,194 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "gp_section_612368322377286443": {
+      "settings": {
+        "checksum": "a25eee30dca4567d8ab3d765239c1af034bcf0b873dde0a62337b3c02e6cc739_1_1_0_0__1",
+        "ggJnkQFfOWB_label": "<p>Reclaim your posture</p>",
+        "ggn6nf__AKd_text": "Forward head posture isn't a bad habit. It's a structural collapse.",
+        "ggqFNh-WfCX_text": "<p>and your body knows how to fix it.</p>",
+        "ggwv9Z1NSP__srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/Image_6.png",
+        "ggzKbcjRh7z_text": "<p>by satisfied customers</p>",
+        "section_preload": "true"
+      },
+      "type": "gp-section-612368322377286443"
+    },
+    "gp_section_612368322377351979": {
+      "settings": {
+        "checksum": "8c2d1d05411b75a9f9a441a516fba6c6f64888415b6a20de3eb0cc684c2d1186_1_1_0_0__1",
+        "gg--jxQjR62_text": "<p>Chest opens, breathing capacity increases</p>",
+        "gg1ryJGeKz2_text": "Cervical Alignment",
+        "gg4mJlQzMUq_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/eac032c791a873706d64da26d89ce022fc6a11ab.jpg",
+        "gg50XRiPuIN_text": "How Your Posture Deteriorated",
+        "gg6PEsW_iJi_text": "<span style=\"color:#ECBF7C;\">Result → </span><span style=\"color:#9B9999;\">Forward head posture, cervical strain, reduced spinal alignment</span>",
+        "gg6uJ4euMaP_text": "<p>Cervical spine decompresses → neutral head position restored</p>",
+        "gg6zvhDGhHF_text": "<span style=\"color:#ECBF7C;\">Orthodontics &amp; extractions → </span><span style=\"color:#6B6B6B;\">compressed airway → forward head posture compensation</span>",
+        "gg7w_HlM-lu_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/31c04762c08605a3a84a5e8f79d002aa79dcc027.png",
+        "gg8BJ3CgbSb_text": "It All Starts in Your Mouth",
+        "ggAmofXIrqo_text": "Improved Thoracic Mobility",
+        "ggJ44qGxvi0_text": "<p>Head forward → cervical spine strain → thoracic kyphosis → lumbar compensation</p>",
+        "ggJex8fsTrx_text": "<p>Airway opens naturally → head no longer needs forward compensation</p>",
+        "ggKffcOJx3G_text": "<p>Lumbar spine no longer compensating for upper body collape</p>",
+        "ggKrG450EPX_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/21b3b34d7d9e041e6602faf1ed47d4c5dad16a0b.jpg",
+        "ggLNHR5JdXQ_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/3ba07ce6f96c5d023d7db7dc4f3437a19ec06228.png",
+        "ggMzLeEevCd_text": "<p>Cascading effects → shoulders, thoracic spine, lumbar spine all re-align</p>",
+        "ggO5_yJW8hH_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/6db2de04f81c1cff033d5ea03d74c3eb3716be9d.png",
+        "ggQx-67UfxS_text": "<p>Four interconnected causes that drive postural collapse</p>",
+        "ggRSQ1SUl8v_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/9c4815d33081e596f43202c2657db4b592b2244f.jpg",
+        "ggS7QQDyHJx_text": "<span style=\"color:#ECBF7C;\">Vertical dental collapse →</span><span style=\"color:#757472;\"> jaw recedes → head follows forward</span>",
+        "ggTsUItVPMe_text": "It All Starts in Your Mouth",
+        "ggUT7CA9htY_text": "Reduced Neck Tension",
+        "ggXPPYxpLCR_text": "<p>Airway restriction → head position compensation</p>",
+        "ggYFwmbj-HA_text": "Increased Height/Reach",
+        "ggYVmMSuzwv_text": "Re-establish Your Alignment",
+        "gg_GwBg0XV0_text": "Breathing Capacity",
+        "ggaj4u244FL_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/680adb7a1ea348cbb3a181aaf7bbaf3b8c6a7d70.png",
+        "ggaoghAtuy0_text": "<p>Tooth structure/jaw position → airway space</p>",
+        "ggatmt8pU0e_text": "<span style=\"color:#ECBF7C;\">Restricted airway →</span><span style=\"color:#939393;\"> body seeks better breathing position (head forward)</span>",
+        "ggdHUuWN0H5_text": "<p>Tooth structure/jaw position → airway space</p>",
+        "ggdcpVTZypm_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/74e5807461cd0445df594e96d291caa889ba3d97.png",
+        "gge53u96qVN_text": "<p>Head returns to neutral over shoulders</p>",
+        "ggfVCU1rgi6_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/b2a042faf10b34550e51698b4a6d7b7fdc46507c.png",
+        "ggfXvFqgMoZ_text": "<p>Timeline: Most people notice postural improvements within X weeks</p>",
+        "ggmSMHuyUTA_text": "Lower Back Relief",
+        "ggmjP1-XOdV_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/6964f4d2e5cf24428c100286d457027ba238a3e6.png",
+        "ggntwIn0IEP_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/8af115add794e423f76028e05a8a5743d3d10ac7.jpg",
+        "ggrWVsoAbV9_text": "<p>Airway opens, oxygen flow improves</p>",
+        "ggsBskboCdG_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/f63ad9c61b5288d7b2ddfa1f83c1d322e01cb99b.jpg",
+        "ggtoEhrrgzj_text": "<p>Decompression of C-spine and trapezius</p>",
+        "ggvh35G3Lka_text": "What Improves",
+        "ggx_2ZgXQfG_text": "<p>Natural postural length without strain</p>"
+      },
+      "type": "gp-section-612368322377351979"
+    },
+    "gp_section_612368322377548587": {
+      "settings": {
+        "checksum": "498fea2173d25cf8535853cd819e1c2611f2ac7ecb69149dfdcd4e9504a202de_1_1_0_0__1",
+        "gg9Bxa_cYv0_text": "People Notice the Difference",
+        "ggVB5y_QJGW_text": "<p>- Barbora</p>",
+        "gg_bkok-kRn_text": "<p>I cannot stress enough how much has changed: strength, balance, sleep, focus… and the list goes on. I finally did my first pull-ups after years of training, not from more effort, but from better connection. I effortlessly move, stretch, lift. This process is not linear. More like a cycle.</p>",
+        "ggcMs92oiZz_text": "<p>- George</p>",
+        "ggeECchcoBQ_text": "<p>- Stella</p>",
+        "ggwgn5YyW7s_text": "<p>I got relief from tension in my jaw, neck, shoulders and back from day one. The mouth guard or plackers make me aware of jaw clenching instantly, and I stop doing it. I knew my jaw was tight before, but I thought it was a tension headache, not the cause of all the tension.</p>",
+        "ggyaX9ZvT3T_text": "<p>As soon as I put the Reviv into my mouth, my head raises up and my posture improves. It improves my posture, allowing me to relax my upper body, decreasing fatigue. Lifting my head up also lifts my chest, allowing proper breathing. All positives, and it’s immediate.</p>"
+      },
+      "type": "gp-section-612368322377548587"
+    },
+    "gp_section_612660175672705835": {
+      "settings": {
+        "checksum": "cf836fc18849a5df2fe9e885b323581de6fc212a57f90b81c73a5fe6fc333a69_1_1_0_0__1",
+        "ggFpeu_W5DI_text": "I can finally stand without my head hanging forward",
+        "ggFsk7RX-3B_text": "My neck pain disappeared within weeks",
+        "ggGbzZJGboT_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/0117729deeab068732edabb0efe77f2fb4985f5a.png",
+        "ggnMC6GxrQs_text": "Real Postural Recovery",
+        "ggsOifGx9Rr_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/7d6a18e6aea9b83174a5b0e6d2e2160d6c9da647.png"
+      },
+      "type": "gp-section-612660175672705835"
+    },
+    "gp_section_612665944988189483": {
+      "settings": {
+        "checksum": "0d3143b574110e299a81eb82ee738aae89b5e41eaab3834567bf37e74c671c72_1_1_0_0__1",
+        "gg1BXTYXw3c_text": "<p>Open your airway</p>",
+        "ggAsplfkr4H_text": "Restore Your Structure with R3",
+        "ggPkhvuKL5v_text": "<p>Free your spine</p>",
+        "ggRU6fSd-hN_text": "<p>Restore your height</p>",
+        "ggaOytZ3tv5_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/821ce5c1e013aef253c23417bafe936a0aa4a18b_1.png",
+        "ggsLgYHWb8L_text": "<p>R3 (RevivThree) positioned as the foundation for postural recovery. Clear benefits tied to alignment</p>",
+        "ggx8L_krntn_label": "<p>Start your postural recovery</p>"
+      },
+      "type": "gp-section-612665944988189483"
+    },
+    "gp_section_612783840884163091": {
+      "settings": {
+        "checksum": "bc8b55388a139e7a6f1444a6c2c441e31c166dd1f2aeefe7de2a4691371d3293_1_1_0_0__1",
+        "ggLkmo5XcuE_text": "Dental structure&nbsp;",
+        "ggY8QQWdD4b_text": "Airway",
+        "ggmRm3s5rO5_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/343688d94aa4a082b408bdde2004c9456c3c7f0a.png",
+        "ggo6npDja9V_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/6bf7a41243b219da70e7b71175f3de30b4a88666.png",
+        "ggoGrO_-ENl_text": "Spinal Alignment",
+        "ggslotrSe4e_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/d3e1395d62406b37a7b25777e380afb3aba5733a.png",
+        "ggy494_UmwE_text": "Head Position",
+        "ggylWglrZsh_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/e8c966cd4d6741be2f1dce201a24778940492513.png"
+      },
+      "type": "gp-section-612783840884163091"
+    },
+    "gp_section_612787424229065515": {
+      "settings": {
+        "checksum": "a77563fe6e33a138ba62786fa1b0dc6f99670089f62948192e7eb4807465506a_1_1_0_0__1",
+        "ggKnjUNywOO_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/365b4da05f0e4950198b33d771c0e3f258b522c8.jpg",
+        "ggZxPTxnK0p_text": "Frequently Asked Questions"
+      },
+      "type": "gp-section-612787424229065515"
+    },
+    "gp_section_612787674830340973": {
+      "settings": {
+        "checksum": "f34e3da9454628c5c60c27e82deccfbc4a66a728d522b4fa0f26b2426d6ab60d_1_1_0_0__1",
+        "ggt_GlObdac_text": "Why This Actually Works"
+      },
+      "type": "gp-section-612787674830340973"
+    },
+    "gp_section_612789874474353251": {
+      "settings": {
+        "checksum": "aa0d4b7e7f7ce947f137813531016a65afce42e93f165adc82ecf7313564214b_1_1_0_0__1",
+        "gg28gPixRQS_text": "<p>- The mouthguard alone has plateaud but you're doing the 'fast method' stretches that are recommended in the community<br>- Things just keep improving functionally and aesthetically<br>- It seems almost impossible to get sick and you seem to be in a good mood almost all the time</p>",
+        "gg3q-IlAPvd_text": "Beyond 2 Years",
+        "ggI3omxFdIh_text": "1 Month",
+        "ggLQ4fZ2zqF_text": "<p>- Likely some pain in the teeth and gums&nbsp;<br>- It will be hard to sleep the whole night with it</p>",
+        "ggVpNhiYfGC_text": "<span style=\"font-size:32px;\">What should I expect from doing Reviv?</span>",
+        "ggWlxnFViRk_text": "&nbsp;2 Years",
+        "ggaSU5AI26k_text": "<p>- You're playing for the 'end'<br>- Does this process really go as far as this crazy guy, Ken, thinks it does?</p>",
+        "ggfSrUABMvH_text": "1 Week",
+        "ggkoKPGTDW2_text": "<p>- You might notice some differences in the teeth/bite<br>- Complexion will likely improve a bit<br>- You should notice better sleep and energy</p>",
+        "ggn0uP5oNNg_text": "1 Year",
+        "ggoXmcEV0ej_text": "<p>- You function better (concentration, ability to - handle complexity, etc)<br>- You have more energy and stamina than years<br>- You look better than you have in many years</p>"
+      },
+      "type": "gp-section-612789874474353251"
+    },
+    "gp_section_612795220433568621": {
+      "settings": {
+        "checksum": "9f7d466866fcce1f487f21c63819e6b1dc2742dfa0ef4ad6ba3fd4575df971a9_1_1_0_0__1",
+        "gg15Fu2j-Us_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/b6903f38249bdba4519a364ddda63f18f9c2e8af.png",
+        "gg2TuIeYO0a_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/9d958d6a40db0697db8288a7dbf2a2ca91f29e4a.jpg",
+        "gg56Qo9xC5j_label": "<p>ADD TO CART</p>",
+        "ggD1gr4Tibg_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/9d958d6a40db0697db8288a7dbf2a2ca91f29e4a.jpg",
+        "ggFPBz_Tym6_text": "r1 (revivone) with one mo..",
+        "ggM-wjrBnlc_text": "r1 (revivone) with one mo..",
+        "ggPWLrBnPPO_text": "<p>$25.00</p>",
+        "ggPnJBiOBlC_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/b6903f38249bdba4519a364ddda63f18f9c2e8af.png",
+        "ggQQMsqUE2a_text": "r1 (revivone) with one mo..",
+        "ggSP1nIPgBI_label": "<p>ADD TO CART</p>",
+        "ggY7AHbO9Vr_text": "r1 (revivone) with one mo..",
+        "ggbynYS-DX3_text": "<p>$25.00</p>",
+        "ggdfFhHdnZe_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/b6903f38249bdba4519a364ddda63f18f9c2e8af.png",
+        "ggnEGkRTHB0_label": "<p>ADD TO CART</p>",
+        "ggpP3aCR4Os_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/b6903f38249bdba4519a364ddda63f18f9c2e8af.png",
+        "ggq_Y7ny5Gp_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/9d958d6a40db0697db8288a7dbf2a2ca91f29e4a.jpg",
+        "ggrOjywIzdv_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0706/4243/4289/files/9d958d6a40db0697db8288a7dbf2a2ca91f29e4a.jpg",
+        "ggrW1foGsqN_text": "<p>$25.00</p>",
+        "ggwx6P3PoGV_label": "<p>ADD TO CART</p>",
+        "ggzs2MJO2VH_text": "<p>$25.00</p>"
+      },
+      "type": "gp-section-612795220433568621"
+    }
+  },
+  "order": [
+    "gp_section_612368322377286443",
+    "gp_section_612368322377351979",
+    "gp_section_612660175672705835",
+    "gp_section_612368322377548587",
+    "gp_section_612665944988189483",
+    "gp_section_612787674830340973",
+    "gp_section_612783840884163091",
+    "gp_section_612787424229065515",
+    "gp_section_612789874474353251",
+    "gp_section_612795220433568621"
+  ]
+}

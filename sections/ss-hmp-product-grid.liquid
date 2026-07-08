@@ -1,0 +1,421 @@
+{%- style -%}
+  .product-card {
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    min-width: 31.5%;
+    margin: 10px !important;
+    /* height: 100%; */
+    justify-content: space-evenly;
+
+  }
+
+  .product-card__link {
+    text-decoration: none;
+  }
+
+  .product-card-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+
+  .product-card__image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .product-card__badge-wrapper {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+  }
+
+  .product-card-image-wrapper {
+    cursor: pointer;
+  }
+
+  .product-card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .product-card__title {
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 500;
+    color: white;
+    margin-top: 32px;
+  }
+
+  .product-card__price {
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 400;
+    color: #FFFFFFCC;
+    margin-top: 12px;
+    margin-bottom: 32px;
+  }
+
+  .product-card__cart-button {
+    background: transparent;
+    margin-top: auto;
+    border-radius: 100px;
+    border: 1px solid #FFFFFF;
+    font-size: 20px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: white;
+    padding: 12px 24px;
+    width: fit-content;
+    cursor: pointer;
+  }
+
+  .product-cards-slider-footer {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+  }
+
+  .product-cards-pagination {
+    width: fit-content !important;
+  }
+
+  .swiper-pagination-bullet {
+    background: transparent;
+    border: 3px solid white;
+    width: 14px;
+    height: 14px;
+    margin: 0px 20px !important;
+  }
+
+  .product-cards-button-prev,
+  .product-cards-button-next,
+  .swiper-pagination-bullet {
+    cursor: pointer;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: wheat;
+    border: 3px solid wheat;
+
+  }
+
+  @media screen and (max-width: 550px) {
+    .product-cards-slider-footer {
+      gap: 20px;
+    }
+
+    .swiper-pagination-bullet {
+      margin: 0px 10px !important;
+    }
+  }
+
+  .add-to-cart__button {
+    padding: 12px 0;
+    background-color: #e5c085;
+    border-radius: 8px;
+    border: none;
+    font-size: 15px;
+    color: #232021;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 768px) {
+  .product-cards-swiper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    row-gap: 4rem;
+  }
+
+  .swiper-wrapper {
+    display: contents !important; /* cancel Swiper's flex layout */
+  }
+
+  .swiper-slide {
+    width: 100% !important;
+    flex-shrink: 0 !important;
+    max-width: 100%;
+    margin-right: 0 !important;
+  }
+
+  .product-cards-slider-footer {
+    display: none;
+  }
+  .product-card {
+    min-height: 350px;
+    margin: 0 !important;
+    }
+  .product-card__title,
+  .add-to-cart__button{
+    font-size: 14px;
+  }
+}
+
+{%- endstyle -%}
+
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>    
+
+<div class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
+
+    <div class="tab-grid_main-container page-width">
+      <div class="tab-container">
+        <h1 class="cstm-title collection-hero__title">
+          {{ section.settings.cstm_collection_title | default: collection.title }}
+          <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
+       </h1>
+          <div class="collection-tabs text-center mb-6">
+          <button class="tab-button active" data-tab="bestseller">Best Seller</button>
+          <button class="tab-button" data-tab="mouthguard">Mouthguards</button>
+          <button class="tab-button" data-tab="accessories">Accessories</button>
+          <button class="tab-button" data-tab="wellness">Wellness Programs</button>
+          </div>
+        </div>
+
+
+     <div class="product-cards-wrapper">
+      <div class="swiper product-cards-swiper">
+        <div class="swiper-wrapper">
+        {% for product in section.settings.best_seller_collection.products %}
+            {% assign itemclass = "bestseller-item" %}            
+            {% render 'ss-hmp-product-card', product: product, category: "bestseller", class: itemclass %}
+        {% endfor %}
+        
+        
+        {% for product in section.settings.all_products_collection.products %}
+            {% assign topcategory = product.metafields.product.topcategory.value %}
+            {% assign itemclass = "all-products-item" %}            
+            {% render 'ss-hmp-product-card' product: product, category: topcategory, class: itemclass %}
+        {% endfor %}
+       </div>
+        <div class="product-cards-slider-footer" style="display: none;">
+          <div class="product-cards-button-prev">{{ 'slider-prev.svg' | inline_asset_content }}</div>
+          <div class="product-cards-pagination"></div>
+          <div class="product-cards-button-next">{{ 'slider-next.svg' | inline_asset_content }}</div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+</div>
+
+<script src="{{ 'product-cards.js' | asset_url }}" defer="defer"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const buttons = document.querySelectorAll('.tab-button');
+
+  function handleTabSwitch(tab) {
+    const bestSellerItems = document.querySelectorAll('.bestseller-item');
+    const allProductItems = document.querySelectorAll('.all-products-item');
+
+    if (tab === 'bestseller') {
+      bestSellerItems.forEach(el => el.style.display = '');
+      allProductItems.forEach(el => el.style.display = 'none');
+      return;
+    }
+
+    // hide best sellers when any other tab selected
+    bestSellerItems.forEach(el => el.style.display = 'none');
+
+    allProductItems.forEach(el => {
+      const cat = el.dataset.category.toLowerCase();
+      el.style.display = (cat === tab ? '' : 'none');
+    });
+    updateFooterVisibility();
+
+  }
+    function updateFooterVisibility() {
+    const visibleCards = document.querySelectorAll('.all-products-item:not([style*="display: none"]), .bestseller-item:not([style*="display: none"])');
+    const footer = document.querySelector('.product-cards-slider-footer');
+
+    if (visibleCards.length < 3) {
+        footer.style.display = 'none';
+    } else {
+        footer.style.display = '';
+    }
+    }
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      handleTabSwitch(btn.dataset.tab);
+    });
+  });
+  updateFooterVisibility();
+  handleTabSwitch("bestseller"); // default
+});
+</script>
+
+
+
+
+<style>
+  :root{--tabgap: 20px;
+  --grid-desktop-horizontal-spacing: 20px;
+  --grid-mobile-horizontal-spacing: 10px;
+  }
+  @media screen and (max-width: 768px){
+    :root{
+    --tabgap: 10px;
+  }
+  }
+  
+  .product-cards-wrapper{
+    width: 70%;
+    padding: 80px 0 10px;    
+  }
+  .tab-grid_main-container{
+    display: flex;
+  }
+  {% comment %} .facets__heading{display: none;}
+  #FacetsWrapperDesktop details{display: none;}
+  #main-collection-filters{padding-left: 20px !important;
+    padding-right: 1.2rem;} {% endcomment %}
+.cstm-title{
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 80px 20px 20px;}
+.tab-container{
+    justify-content: start;
+    display: flex;
+    flex-direction: column;
+}
+.collection-tabs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--tabgap);
+  padding: 0 35px 0 20px;
+}
+.tab-button {
+  {% comment %} width: calc(50% - (var(--tabgap))); {% endcomment %}
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid #e5c085;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #232021;
+  color: #fff;
+  font-size: 12px;
+  border-color: #e5c085;
+  text-transform: uppercase;
+}
+.tab-button {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.tab-button.active,
+.tab-button:hover {
+  background: #e5bf854f;
+  font-weight: 600;
+}
+
+{% comment %} @media screen and (min-width: 750px){
+
+  .card-wrapper .card__information{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: start;
+    .card-information{text-align: right;}
+  }
+} {% endcomment %}
+@media screen and (min-width: 768px){
+  .tab-grid_main-container{
+    max-height: 750px;
+    overflow: hidden;
+
+  }
+}
+@media screen and (max-width: 768px){
+  .product-cards-wrapper{
+    width: 100%;
+    padding: 20px 20px 30px;
+  }
+  .collection-tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: var(--tabgap);
+    padding: 0 35px 0 20px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  .tab-button {
+    {% comment %} width: calc(25% - (var(--tabgap))); {% endcomment %}
+    min-width: 170px;
+    margin-bottom: 8px;
+    padding: 4px 18px;
+
+  }
+  .tab-grid_main-container{
+    flex-direction: column;
+
+  }
+{% comment %} .facets__heading{display: block;}
+.mobile-facets__wrapper, .active-facets-mobile{
+display: none;
+}
+.active-facets, .facets__heading{
+  margin: 0
+}
+.facets-layout{
+  display: flex;
+}
+.facets-wrap{
+  border: none; padding-left: 0;
+}
+.product-count{
+  grid-column: 2;
+} {% endcomment %}
+}
+</style>
+
+{% schema %}
+{
+  "name": "SS Product Tabs Grid",
+  "settings": [
+    {
+      "type": "text",
+      "id": "cstm_collection_title",
+      "label": "Custom Title"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "info": "t:sections.all.colors.has_cards_info",
+      "default": "scheme-1"
+    },
+    {
+      "type": "collection",
+      "id": "best_seller_collection",
+      "label": "Best Seller Collection"
+    },
+    {
+      "type": "collection",
+      "id": "all_products_collection",
+      "label": "All Products Collection (with metafield categories)"
+    }
+ ],
+  "presets": [
+    {
+      "name": "SS Product Tabs Grid"
+    }
+  ]
+}
+{% endschema %}

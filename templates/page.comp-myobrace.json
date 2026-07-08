@@ -1,0 +1,690 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_banner_JMPDGw": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_bwGNPU": {
+          "type": "heading",
+          "settings": {
+            "heading": "Reviv vs. Myobrace",
+            "heading_size": "h0"
+          }
+        },
+        "text_UWnyzN": {
+          "type": "text",
+          "settings": {
+            "text": "Exploring mouthguard options? See how Reviv compares to Myobrace.",
+            "text_style": "body"
+          }
+        },
+        "buttons_rLEWn9": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "See Comparison",
+            "button_id": "",
+            "button_link_1": "#comp-chart-myobrace",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_bwGNPU",
+        "text_UWnyzN",
+        "buttons_rLEWn9"
+      ],
+      "custom_css": [
+        ".button {text-transform: capitalize;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Sid_-_-Figma-12-31-2025_01_25_AM.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-4",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false,
+        "custom_classes": "sk-main-banner aff-hero-banner"
+      }
+    },
+    "comp_tab_buttons_F6xAxB": {
+      "type": "comp-tab-buttons",
+      "blocks": {
+        "tab_wtHiJ3": {
+          "type": "tab",
+          "settings": {
+            "label": "Vs. ShockDoctor",
+            "link": "https://getreviv.com/pages/reviv-vs-shockdoctor",
+            "is_active": false
+          }
+        },
+        "tab_KEV4g6": {
+          "type": "tab",
+          "settings": {
+            "label": "Vs. Oralift",
+            "link": "https://getreviv.com/pages/reviv-vs-oralift",
+            "is_active": false
+          }
+        },
+        "tab_eznQJ3": {
+          "type": "tab",
+          "settings": {
+            "label": "Vs. Myobrace",
+            "link": "#",
+            "is_active": true
+          }
+        },
+        "tab_V8b9gQ": {
+          "type": "tab",
+          "settings": {
+            "label": "Vs. Zenyum Guard",
+            "link": "https://getreviv.com/pages/reviv-vs-zenyum-guard",
+            "is_active": false
+          }
+        }
+      },
+      "block_order": [
+        "tab_wtHiJ3",
+        "tab_KEV4g6",
+        "tab_eznQJ3",
+        "tab_V8b9gQ"
+      ],
+      "name": "Comparison Tabs",
+      "settings": {
+        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "comp_side_by_side_t7QNiP": {
+      "type": "comp-side-by-side",
+      "blocks": {
+        "column_CnbnKW": {
+          "type": "column",
+          "settings": {
+            "heading": "What is Reviv?",
+            "text": "<p>Reviv is a flat-plane, non-locking jaw-supportive oral appliance designed for adult sleep use. Its design maintains stable vertical jaw height without locking the bite — allowing natural jaw micro-movement during sleep rather than holding the jaw in a fixed position overnight.</p><p>Many users find consistent nightly use gradually reduces morning jaw tightness and clenching sensation over weeks to months. Unlike standard guards that replicate and lock the bite, Reviv's flat-plane design allows natural jaw movement — which is the core mechanical difference.</p>",
+            "image": "shopify://shop_images/image_73.webp",
+            "layout": "column-reverse"
+          }
+        },
+        "column_tfXFbt": {
+          "type": "column",
+          "settings": {
+            "heading": "What is Myobrace?",
+            "text": "<p>Myobrace is a <strong>myofunctional orthodontic system</strong>, largely used in children (ages 3–15), but also available for adults. It’s less about brute force and more about <strong>habit correction</strong> which encourages nasal breathing, proper tongue posture, correct swallowing, and lip seal.</p><p>The Myobrace journey typically involves a series of appliances (stages), combined with daily “Myobrace Activities” such as breathing, tongue, cheek, and lip exercises that reinforce the habits you’re reshaping.</p>",
+            "image": "shopify://shop_images/guard_myobrace.webp",
+            "layout": "column-reverse"
+          }
+        }
+      },
+      "block_order": [
+        "column_CnbnKW",
+        "column_tfXFbt"
+      ],
+      "name": "Comparison Side By Side",
+      "settings": {
+        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "comp_table_ss_wA3WkU": {
+      "type": "comp-table-ss",
+      "blocks": {
+        "row_V7MigL": {
+          "type": "row",
+          "settings": {
+            "feature": "Primary Function",
+            "col_2_text": "Jaw-supportive sleep appliance",
+            "col_3_text": "Orthodontics & Habit Correction"
+          }
+        },
+        "row_MRbkNt": {
+          "type": "row",
+          "settings": {
+            "feature": "Optimized for Sleep?",
+            "col_2_icon": "shopify://shop_images/check.png",
+            "col_2_text": "Yes (Designed for nightly wear)",
+            "col_3_icon": "shopify://shop_images/check.png",
+            "col_3_text": "Yes (But requires habit training)"
+          }
+        },
+        "row_WUYAp6": {
+          "type": "row",
+          "settings": {
+            "feature": "Jaw Vertical Support?",
+            "col_2_icon": "shopify://shop_images/check.png",
+            "col_2_text": "Yes (Stable vertical height, non-locking)",
+            "col_3_text": "Variable (Depends on appliance)"
+          }
+        },
+        "row_YKp3FX": {
+          "type": "row",
+          "settings": {
+            "feature": "Sports Impact Protection?",
+            "col_2_icon": "shopify://shop_images/x_7bb36027-232e-4e35-b20c-36dd3dfedbdc.png",
+            "col_2_text": "No",
+            "col_3_icon": "shopify://shop_images/x_7bb36027-232e-4e35-b20c-36dd3dfedbdc.png",
+            "col_3_text": "No"
+          }
+        },
+        "row_Hk3xNt": {
+          "type": "row",
+          "settings": {
+            "feature": "Wear Schedule",
+            "col_2_text": "Overnight + 1-2 hours day",
+            "col_3_text": "Overnight + 1-2 hours day"
+          }
+        },
+        "row_P7pYRR": {
+          "type": "row",
+          "settings": {
+            "feature": "Community",
+            "col_2_icon": "shopify://shop_images/check.png",
+            "col_2_text": "Yes",
+            "col_3_icon": "shopify://shop_images/x_7bb36027-232e-4e35-b20c-36dd3dfedbdc.png",
+            "col_3_text": "None"
+          }
+        },
+        "row_9izNeH": {
+          "type": "row",
+          "settings": {
+            "feature": "Ease of Adoption",
+            "col_2_text": "High (Immediate wear)",
+            "col_3_text": "Low (Requires exercises/training)"
+          }
+        }
+      },
+      "block_order": [
+        "row_V7MigL",
+        "row_MRbkNt",
+        "row_WUYAp6",
+        "row_YKp3FX",
+        "row_Hk3xNt",
+        "row_P7pYRR",
+        "row_9izNeH"
+      ],
+      "custom_css": [
+        "p,,.feature,span {color: #fff;}",
+        ".table-logo-image img {max-height: 38px;}"
+      ],
+      "name": "Comparison Chart",
+      "settings": {
+        "comp_id": "comp-chart-myobrace",
+        "heading": "Comparison Chart",
+        "subtext": "Compare everything at a glance, including pricing and perks.",
+        "col_2_image": "shopify://shop_images/logo_reviv.png",
+        "col_2_label": "",
+        "col_3_image": "shopify://shop_images/logo_myobrace.png",
+        "col_3_label": "",
+        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "multicolumn_nQLArT": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_aHiwQX": {
+          "type": "column",
+          "settings": {
+            "text_top": "",
+            "title": "",
+            "text": "<p>You want <strong>jaw mechanical support during sleep</strong>, not just tooth protection</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_nXqU6B": {
+          "type": "column",
+          "settings": {
+            "text_top": "",
+            "title": "",
+            "text": "<p>You prefer a <strong>relatively simple protocol</strong> without mandatory exercises (beyond wearing)</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_AT64y7": {
+          "type": "column",
+          "settings": {
+            "text_top": "",
+            "title": "",
+            "text": "<p>Your priority is <strong>reducing clenching</strong> and consistent nightly jaw mechanical support over the long term</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        }
+      },
+      "block_order": [
+        "column_aHiwQX",
+        "column_nXqU6B",
+        "column_AT64y7"
+      ],
+      "custom_css": [
+        ".media.media--transparent.media--adapt img {position: relative !important; width: 48px;}",
+        ".multicolumn-card__info {text-align: center;}",
+        "h3 {color: #fff; font-family: Roboto, sans-serif !important; letter-spacing: -0.02em; font-size: 24px; line-height: 100%; margin-bottom: 12px;}",
+        "p {color: #ffffffa3; letter-spacing: -0.02em; font-weight: 400; font-size: 18px; line-height: 150%;}"
+      ],
+      "settings": {
+        "title": "Why Choose Reviv?",
+        "box_link": false,
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "section_color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 48,
+        "custom_class": "multi-centered-100 multi-comp--column"
+      }
+    },
+    "multicolumn_AhhcdC": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_wxTQg3": {
+          "type": "column",
+          "settings": {
+            "text_top": "",
+            "title": "",
+            "text": "<p>You or your child need to <strong>correct oral habits</strong> like mouth-breathing, tongue posture, or incorrect swallowing.<br/><br/></p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_jDcUJ7": {
+          "type": "column",
+          "settings": {
+            "text_top": "",
+            "title": "",
+            "text": "<p>You’re invested in a <strong>long-term developmental journey</strong> involving both appliance wear and myofunctional exercises.</p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        },
+        "column_KCAXRX": {
+          "type": "column",
+          "settings": {
+            "text_top": "",
+            "title": "",
+            "text": "<p>You're seeking a preventive or early orthodontic path that may reduce the need for braces later.<br/><br/></p>",
+            "link_label": "",
+            "link": "",
+            "youtube_video_url": "",
+            "isNewTab": false
+          }
+        }
+      },
+      "block_order": [
+        "column_wxTQg3",
+        "column_jDcUJ7",
+        "column_KCAXRX"
+      ],
+      "custom_css": [
+        ".media.media--transparent.media--adapt img {position: relative !important; width: 48px;}",
+        ".multicolumn-card__info {text-align: center;}",
+        "h3 {color: #fff; font-family: Roboto, sans-serif !important; letter-spacing: -0.02em; font-size: 24px; line-height: 100%; margin-bottom: 12px;}",
+        "p {color: #ffffffa3; letter-spacing: -0.02em; font-weight: 400; font-size: 18px; line-height: 150%;}"
+      ],
+      "settings": {
+        "title": "Why Choose Myobrace?",
+        "box_link": false,
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-2",
+        "section_color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 48,
+        "custom_class": "multi-comp--column multi-comp--two"
+      }
+    },
+    "rich_text_ChtzAa": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_UEiMTG": {
+          "type": "heading",
+          "settings": {
+            "heading": "Considerations & Trade-Offs",
+            "heading_size": "h1"
+          }
+        },
+        "text_XmEx7E": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Myobrace is delivered through a dentist and usually costs $1000-4000.  Reviv appliances typically cost &lt;$100 and no dentist is needed.</li><li>Reviv is designed for adult sleep use and jaw mechanical support during sleep — a different purpose from Myobrace's orthodontic and habit-correction focus.</li><li>Reviv uses a flat-plane, non-locking design that avoids fixing the bite position overnight — meaningful change in jaw comfort takes consistent nightly use over months.</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_UEiMTG",
+        "text_XmEx7E"
+      ],
+      "custom_css": [
+        "li {color: #fff; text-align: left;}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "custom__class": ""
+      }
+    },
+    "comp_text_side_by_side_tFpEQp": {
+      "type": "comp-text-side-by-side",
+      "blocks": {
+        "text_block_dQdfpf": {
+          "type": "text_block",
+          "settings": {
+            "text": "<p>If you clench / grind at night</p>",
+            "column": "left",
+            "custom_class": "multi-centered-100 multi-comp--column"
+          }
+        },
+        "text_block_rRacMp": {
+          "type": "text_block",
+          "settings": {
+            "text": "<p>If you have TMJ discomfort or want to improve <br/>jaw rest position</p>",
+            "column": "left",
+            "custom_class": "multi-centered-100 multi-comp--column"
+          }
+        },
+        "text_block_QkF4r6": {
+          "type": "text_block",
+          "settings": {
+            "text": "<p>If you’re focused on long-term structure & alignment, <br/>not just protection</p>",
+            "column": "left",
+            "custom_class": "multi-centered-100 multi-comp--column"
+          }
+        },
+        "text_block_8Gbmkp": {
+          "type": "text_block",
+          "settings": {
+            "text": "<p>In contact sports <br/>(boxing, hockey, football)</p>",
+            "column": "right",
+            "custom_class": "multi-comp--column multi-comp--two"
+          }
+        },
+        "text_block_WMFkGM": {
+          "type": "text_block",
+          "settings": {
+            "text": "<p>When you need a guard that can absorb<br/> very high-impact hits</p>",
+            "column": "right",
+            "custom_class": "multi-comp--column multi-comp--two"
+          }
+        },
+        "text_block_GzdCGF": {
+          "type": "text_block",
+          "settings": {
+            "text": "<p>For athletes who need a <br/>high-performance sport-specific guard</p>",
+            "column": "right",
+            "custom_class": "multi-comp--column multi-comp--two"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_dQdfpf",
+        "text_block_rRacMp",
+        "text_block_QkF4r6",
+        "text_block_8Gbmkp",
+        "text_block_WMFkGM",
+        "text_block_GzdCGF"
+      ],
+      "disabled": true,
+      "name": "Comparison – Text Columns",
+      "settings": {
+        "left_heading": "Use Reviv if…",
+        "right_heading": "Use ShockDoctor if…",
+        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "1766990743dda80ad5": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_featured_carousel_kQLwDr": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_featured_carousel_kQLwDr"
+      ],
+      "custom_css": [
+        ".jdgm-carousel-wrapper .jdgm-carousel__item-wrapper {height: fit-content;}"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "comp_side_by_side_JVYrLd": {
+      "type": "comp-side-by-side",
+      "blocks": {
+        "column_aDiK6i": {
+          "type": "column",
+          "settings": {
+            "icon": "shopify://shop_images/check-circle-r.png",
+            "heading": "",
+            "text": "<p>Foodgrade silicone, designed for long-term wear.</p>",
+            "image": "shopify://shop_images/logo_reviv.png",
+            "layout": "column"
+          }
+        },
+        "column_PNR6tK": {
+          "type": "column",
+          "settings": {
+            "icon": "shopify://shop_images/check-circle.png",
+            "heading": "",
+            "text": "<p> Best for parents of children with poor oral habits, early orthodontic needs, or for adults wanting to correct functional posture through behavior and growth</p>",
+            "image": "shopify://shop_images/logo_myobrace.png",
+            "layout": "column"
+          }
+        }
+      },
+      "block_order": [
+        "column_aDiK6i",
+        "column_PNR6tK"
+      ],
+      "custom_css": [
+        ".comparison-column__image img {max-width: 200px;}"
+      ],
+      "name": "Comparison Side By Side",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "collapsible_content_et4dBV": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_hcVHUt": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can Myobrace help with TMJ pain?",
+            "icon": "check_mark",
+            "row_content": "<p>It’s not primarily designed for TMJ relief; its strength lies in training habits, not decompressing the joint</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_jQmmMA": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do I need exercises with Myobrace?",
+            "icon": "check_mark",
+            "row_content": "<p>Yes — Myobrace Activities (tongue, lip, breath, swallowing exercises) are part of the protocol.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_qbXKwz": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is Reviv suitable for children?",
+            "icon": "check_mark",
+            "row_content": "<p>Reviv’s site suggests some models may fit younger users, but size and usage should be confirmed.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_DmrdbH": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long is the Myobrace treatment?",
+            "icon": "check_mark",
+            "row_content": "<p>Typically several months to years, depending on the stage and how faithfully you follow the regimen</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_hcVHUt",
+        "collapsible_row_jQmmMA",
+        "collapsible_row_qbXKwz",
+        "collapsible_row_DmrdbH"
+      ],
+      "custom_css": [
+        ".icon-accordion {display: none;}",
+        ".accordion__title {font-size: 1.3em; letter-spacing: 0.02em; font-family: Roboto !important; line-height: 100%; padding-top: 12px; color: #212121 !important;}",
+        "h2:hover {text-decoration: none;}",
+        ".accordion__content {padding-left: 0;}",
+        "p {color: #232021; letter-spacing: -0.02em; font-weight: 400; font-size: 18px; line-height: 150%; padding-left: 16px;}",
+        ".collapsible-content__heading {color: #232021 !important; display: block; color: rgba(239, 201, 139, 1); font-family: Cardillac, serif; padding-bottom: 16px;}"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "scheme-0b5397a7-cffb-42ac-88ef-8cf9135047b7",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "custom_class": ""
+      }
+    },
+    "rich_text_CU3i7e": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_mfbKMM": {
+          "type": "heading",
+          "settings": {
+            "heading": "Experience Better TMJ Relief",
+            "heading_size": "h1"
+          }
+        },
+        "text_eqhCKG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Reviv is engineered for comfort, decompression, and long-term jaw health.</p>"
+          }
+        },
+        "button_6AHYWU": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get Reviv Today",
+            "button_link": "shopify://products/reviv-one-without-support",
+            "button_id": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_mfbKMM",
+        "text_eqhCKG",
+        "button_6AHYWU"
+      ],
+      "custom_css": [
+        "p {color: white;}",
+        ".rich-text__buttons .button {border-radius: 12px; --buttons-radius-outset: 12px; font-weight: 600;}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
+        "full_width": true,
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "custom__class": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_JMPDGw",
+    "comp_tab_buttons_F6xAxB",
+    "comp_side_by_side_t7QNiP",
+    "comp_table_ss_wA3WkU",
+    "multicolumn_nQLArT",
+    "multicolumn_AhhcdC",
+    "rich_text_ChtzAa",
+    "comp_text_side_by_side_tFpEQp",
+    "1766990743dda80ad5",
+    "comp_side_by_side_JVYrLd",
+    "collapsible_content_et4dBV",
+    "rich_text_CU3i7e"
+  ]
+}

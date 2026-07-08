@@ -1,0 +1,307 @@
+<style>
+         .product-addons {
+           border: 1px solid rgba(255, 255, 255, 0.7);
+           margin-top: 30px;
+           padding: 20px;
+           display: flex;
+           gap: 20px;
+           flex-direction: column;
+           justify-content: space-around;
+           align-content: space-between;
+       }
+       .product-addons label{
+           display: flex;
+           flex-direction: row;
+           justify-content: space-between;
+           width: 100%;
+       }
+
+      .addon-option{
+           display: flex;
+           flex-direction: row;
+           align-content: center;
+           align-items: flex-start;
+           gap: 13px;
+       }
+       .addon-option-wrapper {
+           padding: 10px;
+           border-bottom: 1px solid rgba(210, 210, 210, 0.57);
+       }
+      .addon-option-wrapper:last-child {
+           border: none;
+       }
+       .addon-option input {
+           margin: 7px 0;
+       }
+      .addon-des ul {
+        margin: 0;
+        font-size: 12px;
+        color:rgba(255, 255, 255, 0.75);
+        padding-left: 17px;
+    }
+    .addon-option input[type="radio"]:checked + label {
+    font-weight: 700;
+    color: #fff;
+  }
+</style>
+{% assign customer_b2b = false %}
+{% if customer != nil and customer.b2b? != false %}
+  {% assign customer_b2b = true %}
+{% endif %}
+{%- if product.metafields.custom.addon_pricing != blank and customer_b2b == false -%}
+  <div class="product-addons">
+    {%- assign addons = product.metafields.custom.addon_pricing.value -%}
+    {%- for addon in addons -%}
+      <div class="addon-option-wrapper">
+        <div class="addon-option">
+          <input
+            type="radio"
+            id="addon-{{ forloop.index }}"
+            name="properties[Add-On]"
+            value="{{ addon.title }}"
+            data-price-0="{{ addon.price_0 | times: 100 }}"
+            data-price-1="{{ addon.price_1 | times: 100 }}"
+            data-price-2="{{ addon.price_2 | times: 100 }}"
+            form="{{ product_form_id }}"
+            {% if forloop.first %}checked{% endif %}
+          >
+          <label for="addon-{{ forloop.index }}"
+            ><span>
+              {{- addon.title }}
+            </span>
+            <span class="addon-price"></span>
+          </label>
+        </div>
+        <span class="addon-des">{{ addon.description | metafield_tag }}</span>
+      </div>
+    {%- endfor -%}
+  </div>
+{% comment %} {%- elsif product.metafields.custom.addon_options != blank -%}
+  <div class="product-addons">
+    {%- assign addons = product.metafields.custom.addon_options.value -%}
+    {%- for addon in addons -%}
+      <div class="addon-option-wrapper">
+        <div class="addon-option">
+          <input
+            type="radio"
+            id="addon-{{ forloop.index }}"
+            name="properties[Add-On]"
+            value="{{ addon.title }}"
+            data-price="{{ addon.price | money }}"
+            form="{{ product_form_id }}"
+            {% if forloop.first %}
+              checked
+            {% endif %}
+          >
+          <label for="addon-{{ forloop.index }}"
+            ><span>
+              {{- addon.title }}
+            </span>
+            <span>
+            {% assign product_option_index = 0 %}
+
+            {% for option in product.options %}
+              {% if option == "Product" %}
+                {% assign product_option_index = forloop.index0 %}
+              {% endif %}
+            {% endfor %}
+            {% for variant in product.variants %}
+              {% assign product_value = variant.options[product_option_index] %}
+
+              {% if product_value == addon.title %}
+                {{ variant.price | money }}
+                {% break %}
+              {% endif %}
+            {% endfor %}
+              {% comment %} {{ addon.price | money }} {% endcomment %}
+            </span>
+          </label>
+        </div>
+        <span class="addon-des">{{ addon.description }}</span>
+      </div>
+    {%- endfor -%}
+  </div> {% endcomment %}
+<script>
+  class ProductAddonVariantSync {
+    constructor() {
+      this.initialize();
+      this.setupMutationObserver();
+      this.listenForShopifyEvents();
+    }
+
+    initialize() {
+      this.addonOptions = document.querySelectorAll('input[name="properties[Add-On]"]');
+      this.variantOptions = document.querySelectorAll('input[name^="Product"]');
+      this.variantIdField = document.querySelector('input[name="id"]');
+
+      if (this.addonOptions.length && this.variantOptions.length) {
+        this.setupEventListeners();
+        console.log('Addon-Variant sync initialized');
+      }
+    }
+
+    setupEventListeners() {
+      // Use event delegation for addons
+      document.addEventListener('change', (e) => {
+        if (e.target.matches('input[name="properties[Add-On]"]')) {
+          this.syncVariantToAddon();
+        }
+      });
+
+      // Listen for variant changes
+      document.addEventListener('change', (e) => {
+        if (e.target.matches('input[name^="Product"]')) {
+          this.syncAddonToVariant();
+        }
+      });
+    }
+
+    syncVariantToAddon() {
+      const selectedAddon = document.querySelector('input[name="properties[Add-On]"]:checked');
+      if (!selectedAddon) return;
+
+      const addonTitle = selectedAddon.value.replace(/\(\+.*\)/, '').trim();
+      console.log('Selected addon:', addonTitle);
+
+      let matchFound = false;
+
+      document.querySelectorAll('input[name^="Product"]').forEach(variant => {
+        const variantTitle = variant.value.trim();
+
+        if (variantTitle === addonTitle) {
+          variant.checked = true;
+          const variantId = variant.dataset.optionValueId || variant.getAttribute('data-option-value-id');
+          console.log(variantId);
+          if (this.variantIdField && variantId) {
+            this.variantIdField.value = variantId;
+          }
+          variant.dispatchEvent(new Event('change', { bubbles: true }));
+          matchFound = true;
+        }
+      });
+
+      if (!matchFound) console.warn('No variant found for addon:', addonTitle);
+    }
+
+    syncAddonToVariant() {
+      const selectedVariant = document.querySelector('input[name^="Product"]:checked');
+      if (!selectedVariant) return;
+
+      const variantTitle = selectedVariant.value.trim();
+
+      document.querySelectorAll('input[name="properties[Add-On]"]').forEach(addon => {
+        const addonTitle = addon.value.replace(/\(\+.*\)/, '').trim();
+        if (addonTitle === variantTitle) {
+          addon.checked = true;
+        }
+      });
+    }
+
+    setupMutationObserver() {
+      const observer = new MutationObserver((mutations) => {
+        let shouldReinit = false;
+        mutations.forEach((mutation) => {
+          if (mutation.addedNodes.length) {
+            shouldReinit = true;
+          }
+        });
+        if (shouldReinit) {
+          this.initialize();
+        }
+      });
+
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+    }
+
+    listenForShopifyEvents() {
+      document.addEventListener('shopify:section:load', () => this.initialize());
+      document.addEventListener('shopify:section:unload', () => this.initialize());
+      document.addEventListener('shopify:section:select', () => this.initialize());
+      document.addEventListener('shopify:section:deselect', () => this.initialize());
+      document.addEventListener('shopify:cart:updated', () => this.initialize());
+    }
+  }
+
+  // Initialize and keep working through AJAX updates
+  document.addEventListener('DOMContentLoaded', () => {
+    new ProductAddonVariantSync();
+  });
+
+  // Also initialize if Turbo/Pjax is used
+  document.addEventListener('turbo:load', () => {
+    new ProductAddonVariantSync();
+  });
+</script>
+{%- endif -%}
+
+
+{%- if product.metafields.custom.addon_pricing != blank and customer.b2b? == false -%}
+  <script>
+    window.Shopify = window.Shopify || {};
+    const activeRate = Number(Shopify.currency.rate || 1.0);
+    if (!Shopify.formatMoney) {
+      Shopify.formatMoney = function (cents) {
+        const currencyCode = "{{ cart.currency.iso_code }}";
+        const locale = "{{ localization.language.iso_code }}-{{ localization.country.iso_code }}"; // e.g., "en-US"
+        const formatter = new Intl.NumberFormat(locale, {
+          style: 'currency',
+          currency: currencyCode,
+        });
+        const rawCents = Number(cents);
+        var convertedAmount = (rawCents / 100) * activeRate;
+        if (currencyCode === 'JPY') {
+          convertedAmount = Math.ceil(convertedAmount / 100) * 100;
+        }
+        else if (currencyCode === 'EUR') {
+          convertedAmount = Math.floor(convertedAmount) + 0.95;
+        }
+        else if(['CAD', 'AUD', 'GBP'].includes(currencyCode) || activeRate != 1) {
+          convertedAmount = Math.floor(convertedAmount) + 1;
+        }
+        return formatter.format(convertedAmount.toFixed(2));
+      };
+    }
+
+    function getSelectedValueOption() {
+      const input = document.querySelector(
+        'input[name^="How"]:checked'
+      );
+      
+      return input ? input.value : '0';
+    }
+
+    function updateAddonPrices() {
+      const value = getSelectedValueOption();
+      console.log('Selected value option:', value);
+
+      document.querySelectorAll('input[name="properties[Add-On]"]').forEach(addon => {
+        const price =  addon.getAttribute(`data-price-${value}`);
+        if (!price) return;
+
+        const priceEl = addon
+          .closest('.addon-option')
+          ?.querySelector('.addon-price');
+
+        if (priceEl) {
+          priceEl.textContent = Shopify.formatMoney(Number(price));
+        }
+      });
+    }
+
+    document.addEventListener('change', (e) => {
+      if (
+        e.target.matches('input[name="properties[Add-On]"]') ||
+        e.target.matches(
+          'input[name^="How"]'
+        )
+      ) {
+        updateAddonPrices();
+      }
+    });
+
+    document.addEventListener('DOMContentLoaded', updateAddonPrices);
+  </script>
+{% endif %}

@@ -1,0 +1,284 @@
+{% comment %}
+  Product Terms and Conditions Checkbox
+  - Renders a checkbox that must be checked before adding to cart
+  - Include with: {% render 'product-term' %}
+{% endcomment %}
+
+{{ 'component-product-terms.css' | asset_url | stylesheet_tag }}
+{{ 'component-modal-product-terms.css' | asset_url | stylesheet_tag }}
+<style>
+    .product-terms-modal__section-detail a {
+    color: #007BFF;             /* Blue for normal links */
+    text-decoration: underline; /* Optional underline */
+  }
+
+  .product-terms-modal__section-detail a:visited {
+    color: #007BFF;             /* Keep visited links blue */
+  }
+
+  .product-terms-modal__section-detail a:hover {
+    color: #0056b3;             /* Darker blue on hover */
+  }
+  .product-terms-modal__section-detail a {
+    color: #007BFF;             /* Blue for normal links */
+    text-decoration: underline; /* Optional underline */
+  }
+
+  .product-terms-modal__section-detail a:visited {
+    color: #007BFF;             /* Keep visited links blue */
+  }
+
+  .product-terms-modal__section-detail a:hover {
+    color: #0056b3;             /* Darker blue on hover */
+  }
+
+  .product-terms-modal__section-detail a {
+    color: #007BFF;             /* Blue for normal links */
+    text-decoration: underline; /* Optional underline */
+  }
+
+  .product-terms-modal__section-detail a:visited {
+    color: #007BFF;             /* Keep visited links blue */
+  }
+
+  .product-terms-modal__section-detail a:hover {
+    color: #0056b3;             /* Darker blue on hover */
+  }
+</style>
+<div class="product-terms-container">
+  <div class="product-terms-checkbox-wrapper">
+    <input
+      type="checkbox"
+      id="ProductTerms-{{ section.id }}"
+      class="product-terms-checkbox"
+      name="terms_accepted"
+      data-terms-required="true"
+    >
+    <label for="ProductTerms-{{ section.id }}" class="product-terms-label">
+      I agree to the
+      <div class="terms-link-button" aria-haspopup="dialog">Product terms and conditions</div>
+    </label>
+  </div>
+  <div class="product-terms-error hidden" role="alert">
+    You must agree to the product terms and conditions before adding to cart.
+  </div>
+</div>
+
+<!-- Modal markup - initially hidden -->
+<div class="product-terms-modal" id="ProductTermsModal-{{ section.id }}" style="display: none;">
+  <div class="product-terms-modal__content">
+    <div class="product-terms-modal__header">
+      <div class="product-terms-modal__header-heading">Reviv Product Terms & Conditions</div>
+      <button type="button" class="product-terms-modal__close" id="product-terms-modal__close" aria-label="Close">
+        &times;
+      </button>
+      <div class="product-terms-modal__header-subheading">
+        By purchasing the membership, you acknowledge that you have read, understood, and agree to be
+        bound by the following terms and conditions:
+      </div>
+    </div>
+    <div class="product-terms-modal__body">
+        <div class="product-terms-modal__section">
+            <div class="product-terms-modal__section-heading">Important Notice</div>
+            <div class="product-terms-modal__section-content">This EGK Biomechanics Community & Support Membership is an independent, peer-led support space. It is NOT operated by, affiliated with, or endorsed by Reviv. Participation in this community does not constitute a relationship with Reviv, and nothing shared here represents official guidance, medical advice, or the views of Reviv.</div>
+        </div>
+      <div class="product-terms-modal__section">
+        <div class="product-terms-modal__section-heading">About This Community</div>
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">1.</div>
+          <div class="product-terms-modal__section-detail">This community (hosted on Skool) is an independent, informational space created to allow R3 appliance users to share personal experiences, ask questions, and support one another.</div>
+        </div>
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">2.</div>
+          <div class="product-terms-modal__section-detail">The community is not a product of Reviv, nor is it managed, monitored, or endorsed by Reviv as a company.</div>
+        </div>
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">3.</div>
+          <div class="product-terms-modal__section-detail">Any reference to Reviv, Reviv appliance, or related products within this community is for informational and discussion purposes only.</div>
+        </div>
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">4.</div>
+          <div class="product-terms-modal__section-detail">Reviv the company bears no responsibility for the content, advice, or information shared within this community.</div>
+        </div>
+      </div>
+
+      <div class="product-terms-modal__section">
+        <div class="product-terms-modal__section-heading">No Medical or Professional Advice</div>
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">1.</div>
+          <div class="product-terms-modal__section-detail">Nothing shared in this community — by members, moderators, or administrators — constitutes medical, dental, therapeutic, or professional advice of any kind.</div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">2.</div>
+          <div class="product-terms-modal__section-detail">All content shared is based on personal experience and is strictly informational and educational in nature.</div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">3.</div>
+          <div class="product-terms-modal__section-detail">You should always consult a qualified healthcare or dental professional before making any decisions about your health, dental care, or use of any oral appliance.</div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">4.</div>
+          <div class="product-terms-modal__section-detail">Do not disregard, delay, or substitute professional medical or dental advice based on anything you read or hear in this community.</div>
+        </div>
+      </div>
+
+      <div class="product-terms-modal__section">
+        <div class="product-terms-modal__section-heading">Member Responsibilities</div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-detail">By joining and participating in this community, you agree to:</div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">1.</div>
+          <div class="product-terms-modal__section-detail">Share only your own personal experiences and opinions</div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">2.</div>
+          <div class="product-terms-modal__section-detail">Not make claims to diagnose, treat, cure, or prevent any medical or dental condition</div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">3.</div>
+          <div class="product-terms-modal__section-detail">Not impersonate any Reviv employee, healthcare professional, or other authority</div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">4.</div>
+          <div class="product-terms-modal__section-detail">Treat all members with respect and courtesy</div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">5.</div>
+          <div class="product-terms-modal__section-detail">Not post spam, promotional content, or advertisements without prior approval from community administrators</div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">6.</div>
+          <div class="product-terms-modal__section-detail">Not share content that is harmful, misleading, abusive, defamatory, or illegal</div>
+        </div>
+      </div>
+
+      <div class="product-terms-modal__section">
+        <div class="product-terms-modal__section-heading">Community Content Disclaimer</div>
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">1.</div>
+          <div class="product-terms-modal__section-detail">The community administrators and moderators do their best to maintain a helpful and safe environment, but cannot verify the accuracy of member-submitted content.</div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">2.</div>
+          <div class="product-terms-modal__section-detail">Community posts, comments, and shared experiences may not reflect best practices and should be read critically.</div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">3.</div>
+          <div class="product-terms-modal__section-detail">Community administrators reserve the right to remove any content deemed inappropriate, misleading, or harmful, at their sole discretion.</div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">4.</div>
+          <div class="product-terms-modal__section-detail">The presence of any content in this community does not constitute an endorsement of that content by the Reviv.</div>
+        </div>
+      </div>
+
+      <div class="product-terms-modal__section">
+        <div class="product-terms-modal__section-heading">Limitation of Liability</div>
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">1.</div>
+          <div class="product-terms-modal__section-detail">The community administrators, moderators, and members are not liable for any direct, indirect, incidental, or consequential damages resulting from your participation in or reliance on information shared in this community.</div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">2.</div>
+          <div class="product-terms-modal__section-detail">You participate in this community entirely at your own risk.</div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">3.</div>
+          <div class="product-terms-modal__section-detail">Neither the community administrators nor Reviv (the company) shall be held responsible for outcomes resulting from actions taken based on community discussions.</div>
+        </div>
+      </div>
+
+      <div class="product-terms-modal__section">
+        <div class="product-terms-modal__section-heading">Relationship with Reviv</div>
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">1.</div>
+          <div class="product-terms-modal__section-detail">This community is not an official customer support channel for Reviv.</div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">2.</div>
+          <div class="product-terms-modal__section-detail">For product issues, warranty claims, returns, refunds, or official product guidance, you must contact Reviv directly through their official website and support channels.</div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">3.</div>
+          <div class="product-terms-modal__section-detail">Reviv is not obligated to respond to, act upon, or monitor communications made within this community.</div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">4.</div>
+          <div class="product-terms-modal__section-detail">Product Terms & Conditions governing your purchase of the Reviv appliance are separate from these Community Terms & Conditions and remain fully in effect.</div>
+        </div>
+      </div>
+
+    <div class="product-terms-modal__section">
+        <div class="product-terms-modal__section-heading">Privacy</div>
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">1.</div>
+          <div class="product-terms-modal__section-detail">Any personal information you share in this community is shared voluntarily and publicly (or semi-publicly, depending on community settings).</div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">2.</div>
+          <div class="product-terms-modal__section-detail">Exercise caution when sharing personal health information. Do not share information you are not comfortable having visible to other community members.</div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">3.</div>
+          <div class="product-terms-modal__section-detail">Community administrators will handle any personal data in accordance with applicable privacy laws and the Skool platform's privacy policy.</div>
+        </div>
+      </div>
+
+    <div class="product-terms-modal__section">
+        <div class="product-terms-modal__section-heading">Amendments</div>
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">1.</div>
+          <div class="product-terms-modal__section-detail">These Terms & Conditions may be updated from time to time. Members will be notified of significant changes via a community announcement.</div>
+        </div>
+
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-order">2.</div>
+          <div class="product-terms-modal__section-detail">Your continued participation in the community following any changes constitutes your acceptance of the updated terms.</div>
+        </div>
+      </div>
+
+    <div class="product-terms-modal__section">
+        <div class="product-terms-modal__section-heading">Termination of Access</div>
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-detail">Community administrators reserve the right to suspend or remove any member who violates these terms, engages in harmful behaviour, or acts against the spirit of a respectful and informational community, without prior notice.</div>
+        </div>
+      </div>
+
+      <div class="product-terms-modal__section">
+        <div class="product-terms-modal__section-heading">Acceptance of Terms</div>
+        <div class="product-terms-modal__section-content">
+          <div class="product-terms-modal__section-detail">By joining and participating in the EGK Biomechanics Community & Support Community on Skool, you confirm that you have read, understood, and agree to be bound by these Terms & Conditions.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-terms-modal__footer">
+      <button type="button" class="button button--secondary" id="product-terms-modal__refuse">Refuse</button>
+      <button type="button" class="button button--primary" id="product-terms-modal__accept">Accept</button>
+    </div>
+  </div>
+</div>
+
+<script src="{{ 'product-terms-modal.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'product-terms-validation.js' | asset_url }}" defer="defer"></script>

@@ -1,0 +1,261 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "ss_tiktok_meta_hero_fRQGhk": {
+      "type": "ss-tiktok-meta-hero",
+      "name": "TikTok Meta Hero",
+      "settings": {
+        "badge": "TIKTOK CREATOR PROGRAM",
+        "heading_main": "Your TikTok content,",
+        "heading_highlight": "running as a Meta ad.",
+        "subtext": "If you've made a video featuring Reviv — or want to — we'd love to license it to run as a paid ad on Facebook and Instagram. We handle the spend. You earn a performance bonus.",
+        "button_primary": "Email us to get started →",
+        "button_primary_link": "mailto:affiliates@getreviv.com?subject=Interested in Meta bonus for tiktok content",
+        "button_secondary": "See the workflow ↓",
+        "button_secondary_link": "#tiktok-how-it-works"
+      }
+    },
+    "image_banner_xiyMhA": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/e21e1a7018eb3219385ce27745c508d7594bfa4d_1.webp",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "custom_classes": ""
+      }
+    },
+    "ss_three_steps_znLzKR": {
+      "type": "ss-three-steps",
+      "blocks": {
+        "step_bpEgNU": {
+          "type": "step",
+          "settings": {
+            "step_number": "01 —",
+            "icon": "shopify://shop_images/Frame_1686557736.png",
+            "title": "Make a video",
+            "subtitle": "(or use one you already made)",
+            "text": "Create a TikTok featuring Reviv — or reach out and we'll send you a free sample to try"
+          }
+        },
+        "step_ehtUyR": {
+          "type": "step",
+          "settings": {
+            "step_number": "02 —",
+            "icon": "shopify://shop_images/Frame_1686557737.png",
+            "title": "License it to us",
+            "subtitle": "",
+            "text": "We run your video as a paid ad on Meta. Your content stays on your TikTok profile untouched"
+          }
+        },
+        "step_wYEafF": {
+          "type": "step",
+          "settings": {
+            "step_number": "03 —",
+            "icon": "shopify://shop_images/Frame_1686557738.png",
+            "title": "Earn a bonus",
+            "subtitle": "",
+            "text": "We measure performance over 30 days and pay you a one-time bonus based on results"
+          }
+        }
+      },
+      "block_order": [
+        "step_bpEgNU",
+        "step_ehtUyR",
+        "step_wYEafF"
+      ],
+      "name": "Three Steps Section",
+      "settings": {
+        "badge": "How it works",
+        "heading": "Three steps from video to payout",
+        "description": "No complex onboarding. Create your content, sign the licensing agreement, and collect your performance bonuses."
+      }
+    },
+    "ss_performance_bonus_tiers_8h4yjT": {
+      "type": "ss-performance-bonus-tiers",
+      "blocks": {
+        "tier_Nh9Xxa": {
+          "type": "tier",
+          "settings": {
+            "tier_label": "TIER A",
+            "price": "$300",
+            "roas": "Above 3× ROAS",
+            "description": "Exceptional performance. Ad revenue exceeds 3× the allocated ad spend.",
+            "highlight": true
+          }
+        },
+        "tier_YH87dP": {
+          "type": "tier",
+          "settings": {
+            "tier_label": "TIER B",
+            "price": "$200",
+            "roas": "2× – 3× ROAS",
+            "description": "Strong conversion rate. Revenue sits comfortably between 2× and 3× spend.",
+            "highlight": false
+          }
+        },
+        "tier_4LHVMa": {
+          "type": "tier",
+          "settings": {
+            "tier_label": "TIER C",
+            "price": "$100",
+            "roas": "1× – 2× ROAS",
+            "description": "Ad clears breakeven. Campaign revenue covers ad spend with positive margin.",
+            "highlight": false
+          }
+        },
+        "tier_Y46kMd": {
+          "type": "tier",
+          "settings": {
+            "tier_label": "TIER D",
+            "price": "No bonus",
+            "roas": "Below 1× ROAS",
+            "description": "Ad failed to break even. No bonus is issued, but you assume zero financial risk.",
+            "highlight": false
+          }
+        }
+      },
+      "block_order": [
+        "tier_Nh9Xxa",
+        "tier_YH87dP",
+        "tier_4LHVMa",
+        "tier_Y46kMd"
+      ],
+      "name": "Performance Bonus Tiers",
+      "settings": {
+        "badge": "Performance bonus tiers",
+        "heading": "Earn up to <span>$300</span> per asset.",
+        "description": "Bonuses are strictly tied to 30-day ad performance. You review the exact ROAS metrics before we process the payout.",
+        "footer_note": "<span>ROAS Definition:</span> Return on Ad Spend = Revenue Generated ÷ Ad Spend, calculated over a 30-day tracking window. Reports are delivered within 14 days of window close."
+      }
+    },
+    "ss_what_you_get_bqQfEX": {
+      "type": "ss-what-you-get",
+      "blocks": {
+        "feature_ECgwQB": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Frame_1686557738_1.png",
+            "title": "Performance bonus per video",
+            "description": "Up to $300 per video based on how the ad performs — paid within 30 days of the measurement window"
+          }
+        },
+        "feature_k9Jct6": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Frame_1686557738_2.png",
+            "title": "Your content stays yours",
+            "description": "We only run your video on Meta. It stays on your TikTok profile and we can't sub-license it to anyone else"
+          }
+        },
+        "feature_BPkzKC": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Frame_1686557738_3.png",
+            "title": "We cover all ad spend",
+            "description": "Zero cost to you. We put the budget behind your video you just create\nthe content"
+          }
+        },
+        "feature_bG7YBH": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Frame_1686557738_4.png",
+            "title": "Transparent reporting",
+            "description": "We send you the ROAS data within 14 days of the measurement window so you can see exactly how it performed"
+          }
+        }
+      },
+      "block_order": [
+        "feature_ECgwQB",
+        "feature_k9Jct6",
+        "feature_BPkzKC",
+        "feature_bG7YBH"
+      ],
+      "name": "SS What You Get",
+      "settings": {
+        "badge": "What you get",
+        "heading": "Built for creative partnerships."
+      }
+    },
+    "ss_how_to_start_eTrTzV": {
+      "type": "ss-how-to-start",
+      "blocks": {
+        "step_MCjCa8": {
+          "type": "step",
+          "settings": {
+            "title": "Email us at affiliates@getreviv.com with a link to your video",
+            "description": "Or just introduce yourself — we'll take it from there"
+          }
+        },
+        "step_YbKUWm": {
+          "type": "step",
+          "settings": {
+            "title": "We send over a simple one-page agreement to sign",
+            "description": "It covers the licence terms and bonus structure — no surprises"
+          }
+        },
+        "step_wCeYnD": {
+          "type": "step",
+          "settings": {
+            "title": "We launch ads",
+            "description": "We launch the ad and start the 30-day measurement window"
+          }
+        },
+        "step_PetRKR": {
+          "type": "step",
+          "settings": {
+            "title": "We share the ROAS results and pay your bonus after your ad has been running at least 30 days",
+            "description": "Via PayPal, bank transfer, or another method — your choice"
+          }
+        }
+      },
+      "block_order": [
+        "step_MCjCa8",
+        "step_YbKUWm",
+        "step_wCeYnD",
+        "step_PetRKR"
+      ],
+      "name": "SS How to Start",
+      "settings": {
+        "heading": "How to start",
+        "intro_text": "Once we agree to work together, the only thing we need is your permission to run the video as a Meta ad. Here's the process:"
+      }
+    },
+    "ss_tiktok_reviv_cta_yCnTr4": {
+      "type": "ss-tiktok-reviv-cta",
+      "name": "SS Tiktok Reviv CTA",
+      "settings": {
+        "heading": "Got a Reviv video? Let's talk.",
+        "subtext": "Email us with a link to your content and we'll get back to you within 1–2 business days.",
+        "button_text": "Explore A Different Approach",
+        "button_link": "mailto:affiliates@getreviv.com?subject=Interested in Meta bonus for tiktok content",
+        "note": "We'll reply within 1–2 business days"
+      }
+    }
+  },
+  "order": [
+    "ss_tiktok_meta_hero_fRQGhk",
+    "image_banner_xiyMhA",
+    "ss_three_steps_znLzKR",
+    "ss_performance_bonus_tiers_8h4yjT",
+    "ss_what_you_get_bqQfEX",
+    "ss_how_to_start_eTrTzV",
+    "ss_tiktok_reviv_cta_yCnTr4"
+  ]
+}

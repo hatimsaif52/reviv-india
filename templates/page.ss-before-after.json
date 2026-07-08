@@ -1,0 +1,163 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "ss_mouthguard_before_after_paEnba": {
+      "type": "ss-mouthguard-before-after",
+      "name": "Before After Results",
+      "settings": {
+        "before_image": "shopify://shop_images/before.webp",
+        "after_image": "shopify://shop_images/after.webp"
+      }
+    },
+    "ss_proof_gallery_slider_WraKXM": {
+      "type": "ss-proof-gallery-slider",
+      "blocks": {
+        "card_pixy3L": {
+          "type": "card",
+          "settings": {
+            "before": "shopify://shop_images/Gemini_Generated_Image_mj1ko8mj1ko8mj1k.png",
+            "name": "Emily Carter",
+            "text": "I've been using...",
+            "tag": "R2"
+          }
+        },
+        "card_MHUC6b": {
+          "type": "card",
+          "settings": {
+            "before": "shopify://shop_images/Gemini_Generated_Image_8dpj038dpj038dpj.png",
+            "name": "Robert Ś.",
+            "text": "Here is the proof after a month the skull is inflating.",
+            "tag": "R2"
+          }
+        },
+        "card_XwzjeV": {
+          "type": "card",
+          "settings": {
+            "before": "shopify://shop_images/Gemini_Generated_Image_xgo3qwxgo3qwxgo3_1.png",
+            "name": "Santi s Mouthguard",
+            "text": "This mouthguards dental mechanics will unwind your soft tissue<br>, improving both looks and health.",
+            "tag": "R1"
+          }
+        },
+        "card_jW3Fkb": {
+          "type": "card",
+          "settings": {
+            "before": "shopify://shop_images/Gemini_Generated_Image_mj1ko8mj1ko8mj1k.png",
+            "name": "Emily Carter",
+            "text": "I've been using...",
+            "tag": "R2"
+          }
+        },
+        "card_zyV3LG": {
+          "type": "card",
+          "settings": {
+            "before": "shopify://shop_images/Gemini_Generated_Image_8dpj038dpj038dpj.png",
+            "name": "Robert Ś.",
+            "text": "Here is the proof after a month the skull is inflating.",
+            "tag": "R2"
+          }
+        },
+        "card_RF8TJ9": {
+          "type": "card",
+          "settings": {
+            "before": "shopify://shop_images/Gemini_Generated_Image_xgo3qwxgo3qwxgo3_1.png",
+            "name": "Santi s Mouthguard",
+            "text": "This mouthguards dental mechanics will unwind your soft tissue<br>, improving both looks and health.",
+            "tag": "R1"
+          }
+        },
+        "card_Q7DyeC": {
+          "type": "card",
+          "settings": {
+            "before": "shopify://shop_images/Gemini_Generated_Image_mj1ko8mj1ko8mj1k.png",
+            "name": "Emily Carter",
+            "text": "I've been using...",
+            "tag": "R2"
+          }
+        },
+        "card_BLNxJ9": {
+          "type": "card",
+          "settings": {
+            "before": "shopify://shop_images/Gemini_Generated_Image_8dpj038dpj038dpj.png",
+            "name": "Robert Ś.",
+            "text": "Here is the proof after a month the skull is inflating.",
+            "tag": "R2"
+          }
+        },
+        "card_G9TxWD": {
+          "type": "card",
+          "settings": {
+            "before": "shopify://shop_images/Gemini_Generated_Image_xgo3qwxgo3qwxgo3_1.png",
+            "name": "Santi s Mouthguard",
+            "text": "This mouthguards dental mechanics will unwind your soft tissue<br>, improving both looks and health.",
+            "tag": "R1"
+          }
+        },
+        "card_NdmKQK": {
+          "type": "card",
+          "settings": {
+            "before": "shopify://shop_images/Gemini_Generated_Image_mj1ko8mj1ko8mj1k.png",
+            "name": "Emily Carter",
+            "text": "I've been using...",
+            "tag": "R2"
+          }
+        },
+        "card_qHGVqp": {
+          "type": "card",
+          "settings": {
+            "before": "shopify://shop_images/Gemini_Generated_Image_8dpj038dpj038dpj.png",
+            "name": "Robert Ś.",
+            "text": "Here is the proof after a month the skull is inflating.",
+            "tag": "R2"
+          }
+        },
+        "card_ntCJxk": {
+          "type": "card",
+          "settings": {
+            "before": "shopify://shop_images/Gemini_Generated_Image_xgo3qwxgo3qwxgo3_1.png",
+            "name": "Santi s Mouthguard",
+            "text": "This mouthguards dental mechanics will unwind your soft tissue<br>, improving both looks and health.",
+            "tag": "R1"
+          }
+        }
+      },
+      "block_order": [
+        "card_pixy3L",
+        "card_MHUC6b",
+        "card_XwzjeV",
+        "card_jW3Fkb",
+        "card_zyV3LG",
+        "card_RF8TJ9",
+        "card_Q7DyeC",
+        "card_BLNxJ9",
+        "card_G9TxWD",
+        "card_NdmKQK",
+        "card_qHGVqp",
+        "card_ntCJxk"
+      ],
+      "name": "Proof Gallery Slider",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "ss_mouthguard_before_after_paEnba",
+    "ss_proof_gallery_slider_WraKXM"
+  ]
+}
