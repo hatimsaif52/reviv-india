@@ -20,10 +20,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "judge_me_reviews_preview_badge_EAUeai": {
-          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        },
         "vendor": {
           "type": "text",
           "settings": {
@@ -118,7 +114,7 @@
           "settings": {
             "heading": "Shipping Information",
             "icon": "truck",
-            "content": "<ul><li>Shipping typically takes 7-10 days to most destinations including the US. More remote countries can take longer.</li><li>Orders typically ship within 48 hours and you will receive a tracking number by email as soon as it ships.</li></ul>",
+            "content": "<ul><li>Shipping typically takes 5-10 days to most destinations.</li><li>Orders typically ship within 48 hours and you will receive a tracking number by email as soon as it ships.</li></ul>",
             "page": ""
           }
         },
@@ -146,7 +142,6 @@
         }
       },
       "block_order": [
-        "judge_me_reviews_preview_badge_EAUeai",
         "vendor",
         "title",
         "price",
@@ -887,20 +882,6 @@
     },
     "1769418126c8416a97": {
       "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_th8TNE": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "review_data": "sample_data",
-            "max_width": 1200,
-            "show_shop_reviews": false,
-            "empty_state": "empty_widget"
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_th8TNE"
-      ],
       "custom_css": [
         "{background: #232021;}"
       ],
@@ -910,17 +891,6 @@
     },
     "1769420153d2fd959a": {
       "type": "apps",
-      "blocks": {
-        "shoppable_video_instagram_reel_app_block_Tp7d6H": {
-          "type": "shopify://apps/shoppable-video-instagram-reel/blocks/app-block/f19e5d4b-198e-478b-9f10-15eb1964910e",
-          "settings": {
-            "carousel_name": "Homepage 1"
-          }
-        }
-      },
-      "block_order": [
-        "shoppable_video_instagram_reel_app_block_Tp7d6H"
-      ],
       "custom_css": [
         "{background: #242424;}"
       ],
