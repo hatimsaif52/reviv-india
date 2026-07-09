@@ -256,7 +256,7 @@
         "text_row_4biGUL": {
           "type": "text_row",
           "settings": {
-            "line_text": "<p>Price<strong><br/>$100.00</strong></p><p>Durability<br/><strong>2-4 MONTHS</strong></p><p>Color<br/><strong>BLUE, WHITE<br/><br/></strong>Aggressiveness on Gums<br/><strong>MEDIUM</strong><br/><br/>Air Holes<br/><strong>LARGE</strong></p><p>Sizes<br/><strong>LARGE, SMALL<br/><br/></strong>Guarantee<br/><strong>NONE <br/></strong><br/>Good for Clenchers/Grinders?<br/><strong>NO</strong></p>",
+            "line_text": "<p>Price<strong><br/>₹ 9,490.00</strong></p><p>Durability<br/><strong>2-4 MONTHS</strong></p><p>Color<br/><strong>BLUE, CLEAR<br/><br/></strong>Aggressiveness on Gums<br/><strong>MEDIUM</strong><br/><br/>Air Holes<br/><strong>LARGE</strong></p><p>Sizes<br/><strong>LARGE, SMALL<br/><br/></strong>Guarantee<br/><strong>NONE <br/></strong><br/>Good for Clenchers/Grinders?<br/><strong>NO</strong></p>",
             "slide_number": 1
           }
         },
@@ -270,7 +270,7 @@
         "text_row_pqDKNm": {
           "type": "text_row",
           "settings": {
-            "line_text": "<p>Price<strong><br/>$150.00</strong></p><p>Durability<br/><strong>12+ MONTHS </strong></p><p>Color<br/><strong>YELLOW   <br/><br/></strong>Aggressiveness on Gums<br/><strong>LOW</strong><br/><br/>Air Holes<br/><strong>SMALL (HARD TO MOUTHBREATHE)</strong></p><p>Sizes<br/><strong>LARGE, MEDIUM   <br/><br/></strong>Guarantee<br/><strong>1 YEAR WARRANTY (1 FREE REPLACEMENT PER CUSTOMER)<br/></strong><br/>Good for Clenchers/Grinders?<br/><strong>YES</strong></p>",
+            "line_text": "<p>Price<strong><br/>₹ 14,490.00</strong></p><p>Durability<br/><strong>12+ MONTHS </strong></p><p>Color<br/><strong>YELLOW   <br/><br/></strong>Aggressiveness on Gums<br/><strong>LOW</strong><br/><br/>Air Holes<br/><strong>SMALL (HARD TO MOUTHBREATHE)</strong></p><p>Sizes<br/><strong>LARGE, MEDIUM   <br/><br/></strong>Guarantee<br/><strong>1 YEAR WARRANTY (1 FREE REPLACEMENT PER CUSTOMER)<br/></strong><br/>Good for Clenchers/Grinders?<br/><strong>YES</strong></p>",
             "slide_number": 2
           }
         }
@@ -423,6 +423,7 @@
         "text_with_icon_bzYtkE",
         "text_with_icon_HCYmHJ"
       ],
+      "disabled": true,
       "custom_css": [
         ".image-with-text .grid__item {height: 100%; /* align-self: center; */}"
       ],
@@ -810,6 +811,7 @@
         "text_with_icon_zakBgq",
         "text_with_icon_NKJhFA"
       ],
+      "disabled": true,
       "custom_css": [
         ".image-with-text .grid__item {height: 100%; /* align-self: center; */}"
       ],
