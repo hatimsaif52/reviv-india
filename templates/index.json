@@ -294,17 +294,6 @@
     },
     "175480216884a85264": {
       "type": "apps",
-      "blocks": {
-        "shoppable_video_instagram_reel_app_block_BbcimL": {
-          "type": "shopify://apps/shoppable-video-instagram-reel/blocks/app-block/f19e5d4b-198e-478b-9f10-15eb1964910e",
-          "settings": {
-            "carousel_name": "Homepage 1"
-          }
-        }
-      },
-      "block_order": [
-        "shoppable_video_instagram_reel_app_block_BbcimL"
-      ],
       "custom_css": [
         "{background: #232021;}"
       ],
@@ -444,194 +433,6 @@
         "padding_top": 72,
         "padding_bottom": 72,
         "custom__class": "hmp-btn"
-      }
-    },
-    "rich_text_HNPaLz": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_XBCzFg": {
-          "type": "heading",
-          "settings": {
-            "heading": "Stories of Transformation Across All Ages",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_XBCzFg"
-      ],
-      "disabled": true,
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52,
-        "custom__class": ""
-      }
-    },
-    "review_card_carousel_qkMTNj": {
-      "type": "review-card-carousel",
-      "blocks": {
-        "review_NEwYmX": {
-          "type": "review",
-          "settings": {
-            "rating": 5,
-            "quote": "“Wearing the mouthguard at night has made a real difference. I grind my teeth way less, and I wake up without that tight jaw feeling I used to have. It’s surprising how much better I feel in the mornings — less tension and more ease going about my day.”",
-            "author_name": "- Max, 35",
-            "author_description": "",
-            "author_image": "shopify://shop_images/testi-2.jpg"
-          }
-        },
-        "review_8kViri": {
-          "type": "review",
-          "settings": {
-            "rating": 5,
-            "quote": "“I was skeptical at first, but after using the Reviv Mouthguard, I noticed I was clenching my jaw less throughout the whole day and sleeping more comfortably.”",
-            "author_name": "- Kate, 32",
-            "author_description": "",
-            "author_image": "shopify://shop_images/testi-3.jpg"
-          }
-        },
-        "review_EjQhLy": {
-          "type": "review",
-          "settings": {
-            "rating": 5,
-            "quote": "\"Ken is an ‘out of the box’ thinker. Since using the Reviv Mouthguard, I’ve noticed a difference in how my jaw feels way less tension and a huge difference in how I feel overall.”",
-            "author_name": "- Charlie, 72",
-            "author_description": "",
-            "author_image": "shopify://shop_images/testi-1.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "review_NEwYmX",
-        "review_8kViri",
-        "review_EjQhLy"
-      ],
-      "disabled": true,
-      "settings": {
-        "color_scheme": "scheme-4",
-        "full_width": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "rich_text_yrFJTW": {
-      "type": "rich-text",
-      "blocks": {
-        "button_7Gkza3": {
-          "type": "button",
-          "settings": {
-            "button_label": "Purchase now",
-            "button_link": "shopify://products/reviv-one",
-            "button_id": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "button_7Gkza3"
-      ],
-      "disabled": true,
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 44,
-        "custom__class": ""
-      }
-    },
-    "rich_text_BYe6rQ": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_KXGH6G": {
-          "type": "heading",
-          "settings": {
-            "heading": "Some of the Life-Changing Benefits I Experienced",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_KXGH6G"
-      ],
-      "disabled": true,
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-309f11fb-a7c3-4ae0-a1b0-473a4f43ce02",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52,
-        "custom__class": ""
-      }
-    },
-    "image_with_text_rKP8GA": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_QLW3a6": {
-          "type": "heading",
-          "settings": {
-            "heading": "Reduced Jaw Tension",
-            "heading_size": "h2"
-          }
-        },
-        "text_x8FkNE": {
-          "type": "text",
-          "settings": {
-            "text": "<p>I noticed a big improvement in how relaxed my jaw felt, especially after sleeping, which made a real difference in how I felt throughout the day.</p>",
-            "text_style": "body",
-            "text_size": "medium",
-            "show_below_image": false
-          }
-        },
-        "button_XHnLFP": {
-          "type": "button",
-          "settings": {
-            "button_label": "Learn more",
-            "button_link": "https://reviv.substack.com/p/i-am-confident-this-solves-most-tmj?utm_source=publication-search",
-            "button_style_secondary": false,
-            "button_style_purchase": false,
-            "full_width_button": false,
-            "custom_buy_btns": false,
-            "purchase_btn_text": "",
-            "button_1_text": "",
-            "button_1_url": "",
-            "button_2_text": "",
-            "button_2_url": ""
-          }
-        }
-      },
-      "block_order": [
-        "heading_QLW3a6",
-        "text_x8FkNE",
-        "button_XHnLFP"
-      ],
-      "disabled": true,
-      "settings": {
-        "image": "shopify://shop_images/xWOUEj2YZcuCsq4IMrf3Y0S9xLw.webp",
-        "height": "small",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "scheme-4",
-        "color_scheme": "scheme-4",
-        "wrap_image_to_container": true,
-        "image_behavior": "none",
-        "mobile_content_order": "column",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "custom__class": ""
       }
     },
     "image_with_text_99PzRw": {
@@ -880,17 +681,6 @@
     },
     "1744641492b07314de": {
       "type": "apps",
-      "blocks": {
-        "judge_me_reviews_featured_carousel_gp8GFi": {
-          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "maxwidth": 1080
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_featured_carousel_gp8GFi"
-      ],
       "custom_css": [
         ".jdgm-carousel-item__body {color: black;}"
       ],
@@ -1314,11 +1104,6 @@
     "ss_two_image_with_text_slider_rpxt4T",
     "175480216884a85264",
     "image_with_text_DHebAR",
-    "rich_text_HNPaLz",
-    "review_card_carousel_qkMTNj",
-    "rich_text_yrFJTW",
-    "rich_text_BYe6rQ",
-    "image_with_text_rKP8GA",
     "image_with_text_99PzRw",
     "image_with_text_X9RnUV",
     "image_with_text_yRabXU",
