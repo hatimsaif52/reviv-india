@@ -256,13 +256,13 @@
           "type": "row",
           "settings": {
             "feature": "Price (without Support)",
-            "col_2_text": "$25",
+            "col_2_text": "₹ 2,355.00",
             "col_2_is_button": false,
             "col_2_modal": "",
-            "col_3_text": "$80",
+            "col_3_text": "₹ 7,490.00",
             "col_3_is_button": false,
             "col_3_modal": "",
-            "col_4_text": "$80",
+            "col_4_text": "₹ 7,490.00",
             "col_4_is_button": false,
             "col_4_modal": ""
           }
@@ -271,13 +271,13 @@
           "type": "row",
           "settings": {
             "feature": "Price (with Support)",
-            "col_2_text": "$100",
+            "col_2_text": "₹ 9499.00",
             "col_2_is_button": false,
             "col_2_modal": "",
-            "col_3_text": "$150",
+            "col_3_text": "₹ 14,490.00",
             "col_3_is_button": false,
             "col_3_modal": "",
-            "col_4_text": "$150",
+            "col_4_text": "₹ 14,490.00",
             "col_4_is_button": false,
             "col_4_modal": ""
           }
