@@ -102,6 +102,7 @@
         },
         "collapsible_tab_PmmWBf": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Shipping Information",
             "icon": "truck",
@@ -206,20 +207,6 @@
     },
     "17434042364ad1184b": {
       "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_KVQffE": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "review_data": "sample_data",
-            "max_width": 1200,
-            "show_shop_reviews": false,
-            "empty_state": "empty_widget"
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_KVQffE"
-      ],
       "custom_css": [
         "{background: #232021;}",
         ".jdgm-rev-widg__header {background: #efc98b0a; border: 1px solid rgba(239, 201, 139, 0.6); border-radius: 10px; color: #fff;}",
