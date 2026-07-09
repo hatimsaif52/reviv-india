@@ -95,14 +95,14 @@
           "type": "link_list",
           "settings": {
             "heading": "Promote Reviv",
-            "menu": "footer-promote-reviv"
+            "menu": ""
           }
         },
         "link_list_zRT3CF": {
           "type": "link_list",
           "settings": {
             "heading": "Customer Care",
-            "menu": "footer-creator-menu"
+            "menu": ""
           }
         }
       },
