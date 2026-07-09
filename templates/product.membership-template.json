@@ -32,6 +32,10 @@
           "type": "title",
           "settings": {}
         },
+        "price_wMfPtP": {
+          "type": "price",
+          "settings": {}
+        },
         "custom_liquid_zeyt9h": {
           "type": "custom_liquid",
           "disabled": true,
@@ -126,6 +130,7 @@
       "block_order": [
         "vendor",
         "title",
+        "price_wMfPtP",
         "custom_liquid_zeyt9h",
         "buy_buttons",
         "custom_liquid_aFheq7",
