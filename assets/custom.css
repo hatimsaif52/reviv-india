@@ -37,7 +37,7 @@ body.reviv-choice-guide:has(.rv-choice-banner){
 }
 @media screen and (min-width: 935px){
   .grid--4-col-desktop .footer-block.grid__item:has(.footer-block__brand-info) { min-width: calc(25% - var(--grid-desktop-horizontal-spacing) * 3 / 4); }
-  .grid--3-col-desktop .footer-block.grid__item:has(.footer-block__brand-info) { min-width: calc(33.33% - var(--grid-desktop-horizontal-spacing) * 2 / 3); }
+  .grid--3-col-desktop .footer-block.grid__item:has(.footer-block__brand-info),.grid--3-col-tablet .footer-block.grid__item:has(.footer-block__brand-info) { min-width: calc(33.33% - var(--grid-desktop-horizontal-spacing) * 2 / 3); }
   .footer-block.grid__item:has(.footer-block__brand-info){
     display: flex;
     justify-content: space-between;
