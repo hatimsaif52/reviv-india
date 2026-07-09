@@ -294,6 +294,17 @@
     },
     "175480216884a85264": {
       "type": "apps",
+      "blocks": {
+        "shoppable_video_instagram_reel_app_block_4Q6bxr": {
+          "type": "shopify://apps/shoppable-video-instagram-reel/blocks/app-block/f19e5d4b-198e-478b-9f10-15eb1964910e",
+          "settings": {
+            "carousel_name": "Homepage 1"
+          }
+        }
+      },
+      "block_order": [
+        "shoppable_video_instagram_reel_app_block_4Q6bxr"
+      ],
       "custom_css": [
         "{background: #232021;}"
       ],
