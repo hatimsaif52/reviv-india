@@ -50,7 +50,19 @@
         "b4",
         "b5"
       ],
-      "settings": {}
+      "settings": {
+        "word1": "Sleep",
+        "word2": "deeper.",
+        "word3": "Grind less.",
+        "subtext": "A soft, precision-fit night mouthguard that cushions your teeth and calms nighttime clenching — engineered for better rest.",
+        "disclaimer": "These statements are based on personal experience and have not been evaluated by the FSSAI. This product is not intended to diagnose, treat, cure or prevent any disease.",
+        "button_label": "PURCHASE NOW",
+        "button_url": "",
+        "before_image": "shopify://shop_images/before_b4443a79-eb79-474c-a596-945fa99fc0cc.png",
+        "before_label": "BEFORE · Early 2021",
+        "after_image": "shopify://shop_images/after_98952be6-3303-40fd-a935-fd1ad83c0264.png",
+        "after_label": "AFTER · Early 2025"
+      }
     },
     "collection-showcase": {
       "type": "collection-showcase",
@@ -58,31 +70,37 @@
         "p1": {
           "type": "product",
           "settings": {
+            "product": "r3-revivthree-without-support",
             "badge": "BEST SELLER",
             "chip": "R3 mouthguard",
             "title": "R3 (RevivThree)",
             "sub": "Maximum protection",
-            "price": "₹18,990"
+            "price": "₹18,990",
+            "url": ""
           }
         },
         "p2": {
           "type": "product",
           "settings": {
+            "product": "",
             "badge": "PREMIUM",
             "chip": "R2 in gift box",
             "title": "R2 (RevivTwo)",
             "sub": "1 year support · in box",
-            "price": "₹14,490"
+            "price": "₹14,490",
+            "url": ""
           }
         },
         "p3": {
           "type": "product",
           "settings": {
+            "product": "",
             "badge": "NEW · CLEAR",
             "chip": "R1 clear guard",
             "title": "R1 (RevivOne)",
             "sub": "Everyday starter",
-            "price": "₹9,490"
+            "price": "₹9,490",
+            "url": ""
           }
         }
       },
@@ -91,7 +109,9 @@
         "p2",
         "p3"
       ],
-      "settings": {}
+      "settings": {
+        "heading": "Our Collection"
+      }
     },
     "as-seen-in": {
       "type": "as-seen-in",
@@ -134,11 +154,19 @@
         "o4",
         "o5"
       ],
-      "settings": {}
+      "settings": {
+        "heading": "AS SEEN IN",
+        "bg_color": "#f6f3ec"
+      }
     },
     "our-story": {
       "type": "our-story",
-      "settings": {}
+      "settings": {
+        "heading": "Our Story",
+        "video_url": "",
+        "overlay_title": "What Is Reviv?",
+        "caption": "founder video — EBK Biomechanics"
+      }
     },
     "mouthguards-table": {
       "type": "mouthguards-table",
@@ -226,7 +254,19 @@
         "r7",
         "r8"
       ],
-      "settings": {}
+      "settings": {
+        "heading": "Our Mouthguards",
+        "intro": "Each Reviv mouthguard is crafted with precision using soft premium silicone, designed to cushion your teeth and reduce the effects of nighttime grinding and clenching. Whether you're an athlete, a grinder, or someone who wakes up with jaw discomfort, this is a great appliance for you.",
+        "button_label": "SHOP NOW",
+        "button_url": "",
+        "col1_name": "REVIV ONE",
+        "col1_sub": "1 YEAR SUPPORT",
+        "col2_name": "REVIV TWO",
+        "col2_sub": "1 YEAR SUPPORT",
+        "col3_badge": "★ BEST SELLER",
+        "col3_name": "REVIV THREE",
+        "col3_sub": "1 YEAR SUPPORT"
+      }
     },
     "blog-highlights": {
       "type": "blog-highlights",
@@ -237,7 +277,8 @@
             "date": "02 July 2024",
             "tag": "Article",
             "title": "I Am Going to Challenge What You Believe About Health",
-            "desc": "Challenges traditional health views, introduces the balloon theory, and explores how dental health affects overall well-being."
+            "desc": "Challenges traditional health views, introduces the balloon theory, and explores how dental health affects overall well-being.",
+            "url": ""
           }
         },
         "a2": {
@@ -246,7 +287,8 @@
             "date": "18 July 2024",
             "tag": "Article",
             "title": "The Balloon Theory",
-            "desc": "Explains how dental health impacts overall well-being by linking teeth to various health issues and methods for addressing them."
+            "desc": "Explains how dental health impacts overall well-being by linking teeth to various health issues and methods for addressing them.",
+            "url": ""
           }
         },
         "a3": {
@@ -255,7 +297,8 @@
             "date": "27 June 2024",
             "tag": "Article",
             "title": "How to Correct the Problem",
-            "desc": "Provides strategies for addressing dental health issues and correcting related problems for improved overall well-being."
+            "desc": "Provides strategies for addressing dental health issues and correcting related problems for improved overall well-being.",
+            "url": ""
           }
         },
         "a4": {
@@ -264,7 +307,8 @@
             "date": "25 July 2024",
             "tag": "Article",
             "title": "What Is Impacted by These Biomechanics?",
-            "desc": "Explores how dental biomechanics affect various aspects of health and well-being."
+            "desc": "Explores how dental biomechanics affect various aspects of health and well-being.",
+            "url": ""
           }
         }
       },
@@ -274,7 +318,10 @@
         "a3",
         "a4"
       ],
-      "settings": {}
+      "settings": {
+        "heading_line1": "Learn More About Biomechanics",
+        "heading_line2": "From My Personal Blog"
+      }
     }
   },
   "order": [
