@@ -1,0 +1,56 @@
+{% render 'reviv-base' %}
+<div class="rv-scope" style="background:#0A0A0B; font-family:'Mulish',sans-serif;">
+  <section style="max-width:1240px; margin:0 auto; padding:50px 40px 90px;">
+    <h2 style="text-align:center; font-family:'Cormorant Garamond',serif; font-weight:600; font-size:38px; color:#EF9A2E; margin:0 0 44px; line-height:1.2;">{{ section.settings.heading_line1 }}<br>{{ section.settings.heading_line2 }}</h2>
+    <div class="rv-2col" style="display:grid; grid-template-columns:1fr 1fr; gap:30px;">
+      {%- for block in section.blocks -%}
+        <a href="{{ block.settings.url }}" {{ block.shopify_attributes }} style="text-decoration:none; display:block; background:#0F0E0C; border:1px solid rgba(236,230,218,0.07); border-radius:12px; overflow:hidden;">
+          <div class="rv-stripe" style="position:relative; height:260px;">
+            {% if block.settings.image %}<img src="{{ block.settings.image | image_url: width: 900 }}" alt="{{ block.settings.title }}" style="width:100%; height:100%; object-fit:cover;">{% endif %}
+            <span style="position:absolute; bottom:16px; left:20px; font-family:'Space Mono',monospace; font-size:12px; color:#9a948b;">{{ block.settings.date }}</span>
+            <span style="position:absolute; bottom:16px; right:20px; border:1px solid rgba(232,163,60,0.6); color:#E8A33C; font-size:12px; padding:4px 14px; border-radius:14px;">{{ block.settings.tag }}</span>
+          </div>
+          <div style="padding:26px 24px 30px;">
+            <h3 style="font-family:'Cormorant Garamond',serif; font-weight:600; font-size:25px; color:#ECE6DA; margin:0 0 12px;">{{ block.settings.title }}</h3>
+            <p style="font-size:14.5px; line-height:1.6; color:#8F897F; margin:0 0 20px;">{{ block.settings.desc }}</p>
+            <span style="color:#37A76A; font-weight:700; font-size:14px;">Read post ↗</span>
+          </div>
+        </a>
+      {%- endfor -%}
+    </div>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "Blog highlights",
+  "settings": [
+    { "type": "text", "id": "heading_line1", "label": "Heading line 1", "default": "Learn More About Biomechanics" },
+    { "type": "text", "id": "heading_line2", "label": "Heading line 2", "default": "From My Personal Blog" }
+  ],
+  "blocks": [
+    {
+      "type": "post",
+      "name": "Post",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "date", "label": "Date", "default": "02 July 2024" },
+        { "type": "text", "id": "tag", "label": "Tag", "default": "Article" },
+        { "type": "text", "id": "title", "label": "Title", "default": "Post title" },
+        { "type": "textarea", "id": "desc", "label": "Description" },
+        { "type": "url", "id": "url", "label": "Link" }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [{
+    "name": "Blog highlights",
+    "blocks": [
+      { "type": "post", "settings": { "date": "02 July 2024", "tag": "Article", "title": "I Am Going to Challenge What You Believe About Health", "desc": "Challenges traditional health views, introduces the balloon theory, and explores how dental health affects overall well-being." } },
+      { "type": "post", "settings": { "date": "18 July 2024", "tag": "Article", "title": "The Balloon Theory", "desc": "Explains how dental health impacts overall well-being by linking teeth to various health issues and methods for addressing them." } },
+      { "type": "post", "settings": { "date": "27 June 2024", "tag": "Article", "title": "How to Correct the Problem", "desc": "Provides strategies for addressing dental health issues and correcting related problems for improved overall well-being." } },
+      { "type": "post", "settings": { "date": "25 July 2024", "tag": "Article", "title": "What Is Impacted by These Biomechanics?", "desc": "Explores how dental biomechanics affect various aspects of health and well-being." } }
+    ]
+  }]
+}
+{% endschema %}

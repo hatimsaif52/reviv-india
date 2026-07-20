@@ -1,0 +1,35 @@
+{% render 'reviv-base' %}
+<div class="rv-scope" style="font-family:'Mulish',sans-serif;">
+  <section style="background:{{ section.settings.bg_color }}; padding:44px 40px;">
+    <p style="text-align:center; color:#8a857c; font-size:12px; letter-spacing:0.32em; font-weight:700; margin:0 0 24px;">{{ section.settings.heading }}</p>
+    <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:48px;">
+      {%- for block in section.blocks -%}
+        <span {{ block.shopify_attributes }} style="font-family:'Cormorant Garamond',serif; font-size:24px; color:#1a1917;">{{ block.settings.name }}</span>
+      {%- endfor -%}
+    </div>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "As seen in",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "AS SEEN IN" },
+    { "type": "color", "id": "bg_color", "label": "Background", "default": "#F6F3EC" }
+  ],
+  "blocks": [
+    { "type": "logo", "name": "Outlet", "settings": [ { "type": "text", "id": "name", "label": "Name", "default": "Business Insider" } ] }
+  ],
+  "max_blocks": 8,
+  "presets": [{
+    "name": "As seen in",
+    "blocks": [
+      { "type": "logo", "settings": { "name": "Business Insider" } },
+      { "type": "logo", "settings": { "name": "Yahoo Finance" } },
+      { "type": "logo", "settings": { "name": "Associated Press" } },
+      { "type": "logo", "settings": { "name": "MarketWatch" } },
+      { "type": "logo", "settings": { "name": "Apple News" } }
+    ]
+  }]
+}
+{% endschema %}

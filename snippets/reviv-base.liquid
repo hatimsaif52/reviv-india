@@ -1,0 +1,20 @@
+{%- comment -%}
+  reviv-base — shared fonts + CSS for all Reviv India sections.
+  Render once per section: {% render 'reviv-base' %}
+{%- endcomment -%}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Mulish:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+{% style %}
+  .rv-scope, .rv-scope * { box-sizing: border-box; }
+  .rv-stripe { background-color:#131210; background-image:repeating-linear-gradient(135deg,#17161a 0,#17161a 15px,#201f24 15px,#201f24 30px); }
+  @keyframes rvpulse { 0%,100%{transform:scale(1);} 50%{transform:scale(1.06);} }
+  .rv-purchase:hover { background:#f0b154 !important; }
+  .rv-cart-btn:hover { background:rgba(232,163,60,0.1) !important; }
+  .rv-shop-btn:hover { background:rgba(55,167,106,0.1) !important; }
+  @media (max-width:900px){
+    .rv-hero-grid, .rv-mg-grid, .rv-3col, .rv-2col { grid-template-columns:1fr !important; }
+    .rv-hero-media { height:420px !important; }
+    .rv-nav { display:none !important; }
+  }
+{% endstyle %}
