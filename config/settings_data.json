@@ -9,9 +9,9 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/reviv-logo.png",
+    "logo": "shopify://shop_images/reviv-india-logo.png",
     "logo_dark": "shopify://shop_images/revive-logo-light.png",
-    "logo_width": 90,
+    "logo_width": 250,
     "favicon": "shopify://shop_images/favicon.svg",
     "type_header_font": "inter_n4",
     "heading_scale": 100,
@@ -208,9 +208,9 @@
           "background": "#232021",
           "background_gradient": "",
           "text": "#ffffff",
-          "button": "#e5c085",
+          "button": "#EF9A2E",
           "button_label": "#121212",
-          "secondary_button_label": "#e5c085",
+          "secondary_button_label": "#EF9A2E",
           "shadow": "#121212"
         }
       },
