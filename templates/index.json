@@ -1,61 +1,288 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero": {
       "type": "hero",
       "blocks": {
-        "b1": { "type": "bullet", "settings": { "text": "Woke up with noticeably less jaw tension" } },
-        "b2": { "type": "bullet", "settings": { "text": "Felt more rested in the mornings" } },
-        "b3": { "type": "bullet", "settings": { "text": "Stopped grinding through my nights" } },
-        "b4": { "type": "bullet", "settings": { "text": "My partner said I seemed less restless while sleeping" } },
-        "b5": { "type": "bullet", "settings": { "text": "It just became part of my routine — I don't sleep without it" } }
+        "b1": {
+          "type": "bullet",
+          "settings": {
+            "text": "Woke up with noticeably less jaw tension"
+          }
+        },
+        "b2": {
+          "type": "bullet",
+          "settings": {
+            "text": "Felt more rested in the mornings"
+          }
+        },
+        "b3": {
+          "type": "bullet",
+          "settings": {
+            "text": "Stopped grinding through my nights"
+          }
+        },
+        "b4": {
+          "type": "bullet",
+          "settings": {
+            "text": "My partner said I seemed less restless while sleeping"
+          }
+        },
+        "b5": {
+          "type": "bullet",
+          "settings": {
+            "text": "It just became part of my routine — I don't sleep without it"
+          }
+        }
       },
-      "block_order": ["b1", "b2", "b3", "b4", "b5"]
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5"
+      ],
+      "settings": {}
     },
     "collection-showcase": {
       "type": "collection-showcase",
       "blocks": {
-        "p1": { "type": "product", "settings": { "badge": "BEST SELLER", "chip": "R3 mouthguard", "title": "R3 (RevivThree)", "sub": "Maximum protection", "price": "₹18,990" } },
-        "p2": { "type": "product", "settings": { "badge": "PREMIUM", "chip": "R2 in gift box", "title": "R2 (RevivTwo)", "sub": "1 year support · in box", "price": "₹14,490" } },
-        "p3": { "type": "product", "settings": { "badge": "NEW · CLEAR", "chip": "R1 clear guard", "title": "R1 (RevivOne)", "sub": "Everyday starter", "price": "₹9,490" } }
+        "p1": {
+          "type": "product",
+          "settings": {
+            "badge": "BEST SELLER",
+            "chip": "R3 mouthguard",
+            "title": "R3 (RevivThree)",
+            "sub": "Maximum protection",
+            "price": "₹18,990"
+          }
+        },
+        "p2": {
+          "type": "product",
+          "settings": {
+            "badge": "PREMIUM",
+            "chip": "R2 in gift box",
+            "title": "R2 (RevivTwo)",
+            "sub": "1 year support · in box",
+            "price": "₹14,490"
+          }
+        },
+        "p3": {
+          "type": "product",
+          "settings": {
+            "badge": "NEW · CLEAR",
+            "chip": "R1 clear guard",
+            "title": "R1 (RevivOne)",
+            "sub": "Everyday starter",
+            "price": "₹9,490"
+          }
+        }
       },
-      "block_order": ["p1", "p2", "p3"]
+      "block_order": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "settings": {}
     },
     "as-seen-in": {
       "type": "as-seen-in",
       "blocks": {
-        "o1": { "type": "logo", "settings": { "name": "Business Insider" } },
-        "o2": { "type": "logo", "settings": { "name": "Yahoo Finance" } },
-        "o3": { "type": "logo", "settings": { "name": "Associated Press" } },
-        "o4": { "type": "logo", "settings": { "name": "MarketWatch" } },
-        "o5": { "type": "logo", "settings": { "name": "Apple News" } }
+        "o1": {
+          "type": "logo",
+          "settings": {
+            "name": "Business Insider"
+          }
+        },
+        "o2": {
+          "type": "logo",
+          "settings": {
+            "name": "Yahoo Finance"
+          }
+        },
+        "o3": {
+          "type": "logo",
+          "settings": {
+            "name": "Associated Press"
+          }
+        },
+        "o4": {
+          "type": "logo",
+          "settings": {
+            "name": "MarketWatch"
+          }
+        },
+        "o5": {
+          "type": "logo",
+          "settings": {
+            "name": "Apple News"
+          }
+        }
       },
-      "block_order": ["o1", "o2", "o3", "o4", "o5"]
+      "block_order": [
+        "o1",
+        "o2",
+        "o3",
+        "o4",
+        "o5"
+      ],
+      "settings": {}
     },
-    "our-story": { "type": "our-story", "settings": {} },
+    "our-story": {
+      "type": "our-story",
+      "settings": {}
+    },
     "mouthguards-table": {
       "type": "mouthguards-table",
       "blocks": {
-        "r1": { "type": "row", "settings": { "label": "Price", "one": "₹9,490", "two": "₹14,490", "three": "₹18,990" } },
-        "r2": { "type": "row", "settings": { "label": "Durability", "one": "2–4 months", "two": "1 year", "three": "1 year" } },
-        "r3": { "type": "row", "settings": { "label": "Colour", "one": "Blue, Clear", "two": "Yellow, White", "three": "Yellow, White" } },
-        "r4": { "type": "row", "settings": { "label": "Aggressiveness on Gums", "one": "Medium", "two": "Low", "three": "Much lower" } },
-        "r5": { "type": "row", "settings": { "label": "Air Holes", "one": "Large", "two": "Small (hard to mouthbreathe)", "three": "Yes (good for saliva flow)" } },
-        "r6": { "type": "row", "settings": { "label": "Sizes", "one": "Large, Small", "two": "Medium, Large", "three": "Medium, Large, Extra Large" } },
-        "r7": { "type": "row", "settings": { "label": "Guarantee", "one": "None", "two": "1 yr warranty (1 free replacement)", "three": "1 yr warranty (1 free replacement)" } },
-        "r8": { "type": "row", "settings": { "label": "Good for Grinders?", "one": "No", "two": "Yes", "three": "Yes" } }
+        "r1": {
+          "type": "row",
+          "settings": {
+            "label": "Price",
+            "one": "₹9,490",
+            "two": "₹14,490",
+            "three": "₹18,990"
+          }
+        },
+        "r2": {
+          "type": "row",
+          "settings": {
+            "label": "Durability",
+            "one": "2–4 months",
+            "two": "1 year",
+            "three": "1 year"
+          }
+        },
+        "r3": {
+          "type": "row",
+          "settings": {
+            "label": "Colour",
+            "one": "Blue, Clear",
+            "two": "Yellow, White",
+            "three": "Yellow, White"
+          }
+        },
+        "r4": {
+          "type": "row",
+          "settings": {
+            "label": "Aggressiveness on Gums",
+            "one": "Medium",
+            "two": "Low",
+            "three": "Much lower"
+          }
+        },
+        "r5": {
+          "type": "row",
+          "settings": {
+            "label": "Air Holes",
+            "one": "Large",
+            "two": "Small (hard to mouthbreathe)",
+            "three": "Yes (good for saliva flow)"
+          }
+        },
+        "r6": {
+          "type": "row",
+          "settings": {
+            "label": "Sizes",
+            "one": "Large, Small",
+            "two": "Medium, Large",
+            "three": "Medium, Large, Extra Large"
+          }
+        },
+        "r7": {
+          "type": "row",
+          "settings": {
+            "label": "Guarantee",
+            "one": "None",
+            "two": "1 yr warranty (1 free replacement)",
+            "three": "1 yr warranty (1 free replacement)"
+          }
+        },
+        "r8": {
+          "type": "row",
+          "settings": {
+            "label": "Good for Grinders?",
+            "one": "No",
+            "two": "Yes",
+            "three": "Yes"
+          }
+        }
       },
-      "block_order": ["r1", "r2", "r3", "r4", "r5", "r6", "r7", "r8"]
+      "block_order": [
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7",
+        "r8"
+      ],
+      "settings": {}
     },
     "blog-highlights": {
       "type": "blog-highlights",
       "blocks": {
-        "a1": { "type": "post", "settings": { "date": "02 July 2024", "tag": "Article", "title": "I Am Going to Challenge What You Believe About Health", "desc": "Challenges traditional health views, introduces the balloon theory, and explores how dental health affects overall well-being." } },
-        "a2": { "type": "post", "settings": { "date": "18 July 2024", "tag": "Article", "title": "The Balloon Theory", "desc": "Explains how dental health impacts overall well-being by linking teeth to various health issues and methods for addressing them." } },
-        "a3": { "type": "post", "settings": { "date": "27 June 2024", "tag": "Article", "title": "How to Correct the Problem", "desc": "Provides strategies for addressing dental health issues and correcting related problems for improved overall well-being." } },
-        "a4": { "type": "post", "settings": { "date": "25 July 2024", "tag": "Article", "title": "What Is Impacted by These Biomechanics?", "desc": "Explores how dental biomechanics affect various aspects of health and well-being." } }
+        "a1": {
+          "type": "post",
+          "settings": {
+            "date": "02 July 2024",
+            "tag": "Article",
+            "title": "I Am Going to Challenge What You Believe About Health",
+            "desc": "Challenges traditional health views, introduces the balloon theory, and explores how dental health affects overall well-being."
+          }
+        },
+        "a2": {
+          "type": "post",
+          "settings": {
+            "date": "18 July 2024",
+            "tag": "Article",
+            "title": "The Balloon Theory",
+            "desc": "Explains how dental health impacts overall well-being by linking teeth to various health issues and methods for addressing them."
+          }
+        },
+        "a3": {
+          "type": "post",
+          "settings": {
+            "date": "27 June 2024",
+            "tag": "Article",
+            "title": "How to Correct the Problem",
+            "desc": "Provides strategies for addressing dental health issues and correcting related problems for improved overall well-being."
+          }
+        },
+        "a4": {
+          "type": "post",
+          "settings": {
+            "date": "25 July 2024",
+            "tag": "Article",
+            "title": "What Is Impacted by These Biomechanics?",
+            "desc": "Explores how dental biomechanics affect various aspects of health and well-being."
+          }
+        }
       },
-      "block_order": ["a1", "a2", "a3", "a4"]
+      "block_order": [
+        "a1",
+        "a2",
+        "a3",
+        "a4"
+      ],
+      "settings": {}
     }
   },
-  "order": ["hero", "collection-showcase", "as-seen-in", "our-story", "mouthguards-table", "blog-highlights"]
+  "order": [
+    "hero",
+    "collection-showcase",
+    "as-seen-in",
+    "our-story",
+    "mouthguards-table",
+    "blog-highlights"
+  ]
 }
