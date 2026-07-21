@@ -82,7 +82,7 @@
         "p2": {
           "type": "product",
           "settings": {
-            "product": "",
+            "product": "reviv-two",
             "badge": "PREMIUM",
             "chip": "R2 in gift box",
             "title": "R2 (RevivTwo)",
@@ -94,7 +94,7 @@
         "p3": {
           "type": "product",
           "settings": {
-            "product": "",
+            "product": "reviv-one-without-support",
             "badge": "NEW · CLEAR",
             "chip": "R1 clear guard",
             "title": "R1 (RevivOne)",
