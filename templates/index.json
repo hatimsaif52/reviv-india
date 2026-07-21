@@ -164,6 +164,7 @@
         "o4",
         "o5"
       ],
+      "disabled": true,
       "settings": {
         "heading": "AS SEEN IN",
         "bg_color": "#f6f3ec"
