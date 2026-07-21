@@ -82,6 +82,7 @@
   }
   #shopify-section-{{ section.id }} .copyright__content,
   #shopify-section-{{ section.id }} .footer__copyright { color: {{ section.settings.footer_text }}; opacity: 0.75; }
+  .footer .grid__item:has(.footer-block__brand-info) { background: transparent !important; }
   {%- endif -%}
 {%- endstyle -%}
 
