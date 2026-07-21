@@ -113,6 +113,16 @@
         "heading": "Our Collection"
       }
     },
+    "custom_liquid_hfVg6K": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- As Seen In -->\n<link rel=\"stylesheet\" href=\"https://pressranger.com/css/as-seen-in-widget.css\">\n<div class=\"as-seen-in-widget color-logos\">\n  <h3>As Seen In</h3>\n  <div class=\"as-seen-in-logos-container\">\n    <div class=\"as-seen-in-rail\"></div>\n    <div class=\"as-seen-in-logos\">\n      <div class=\"as-seen-in-logo\">\n        <a href=\"https://markets.businessinsider.com/news/stocks/reviv-celebrates-over-20-000-customers-worldwide-1035504405\" target=\"_blank\">\n          <img src=\"https://pressranger.s3.us-west-1.amazonaws.com/2568852/NYLtGCeSk2eUFDxzqf55PW9MYbJhB8hGOe8BOgLw.png\" alt=\"Markets Insider\">\n        </a>\n      </div>\n      <div class=\"as-seen-in-logo\">\n        <a href=\"https://finance.yahoo.com/news/reviv-celebrates-over-20-000-110000994.html\" target=\"_blank\">\n          <img src=\"https://pressranger.s3.us-west-1.amazonaws.com/2569636/Nv7hfiNFNGQVmQSTxEIuFjEHwI3K0AmvXtQDn827.png\" alt=\"Yahoo! Finance\">\n        </a>\n      </div>\n      <div class=\"as-seen-in-logo\">\n        <a href=\"https://apnews.com/press-release/globenewswire-mobile/reviv-celebrates-over-20-000-customers-worldwide-d3b62ef00dc22b3e795d410abec9f202\" target=\"_blank\">\n          <img src=\"https://pressranger.s3.us-west-1.amazonaws.com/2569639/Zkf9zg616LrwoANxty7C0Bip4GBnL9nPC8ZCRktk.png\" alt=\"Associated Press\">\n        </a>\n      </div>\n      <div class=\"as-seen-in-logo\">\n        <a href=\"https://www.marketwatch.com/press-release/pmzn-reviv-celebrates-over-20-000-customers-worldwide-a2471834?mod=search_headline\" target=\"_blank\">\n          <img src=\"https://pressranger.s3.us-west-1.amazonaws.com/2569637/PdU1uY3Jsg5TlF1XoCsGvTUXeYqSwdoHhMyVujhh.png\" alt=\"MarketWatch\">\n        </a>\n      </div>\n      <div class=\"as-seen-in-logo\">\n        <a href=\"https://apple.news/TzgDuq0U2RBOYM3-_d2KkQg\" target=\"_blank\">\n          <img src=\"https://pressranger.s3.us-west-1.amazonaws.com/2569640/ax1uqW5DRsICCULfTu3lvwXwOzQjKzJ8WVMhZ3GZ.png\" alt=\"Apple News\">\n        </a>\n      </div>\n    </div>\n    <div class=\"as-seen-in-rail right\"></div>\n  </div>\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "as-seen-in": {
       "type": "as-seen-in",
       "blocks": {
@@ -327,6 +337,7 @@
   "order": [
     "hero",
     "collection-showcase",
+    "custom_liquid_hfVg6K",
     "as-seen-in",
     "our-story",
     "mouthguards-table",
