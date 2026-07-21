@@ -8,18 +8,127 @@
  * ------------------------------------------------------------
  */
 {
+  "name": "t:sections.footer.name",
   "type": "footer",
-  "name": "Footer group",
   "sections": {
+    "newsletter_7cAQ4R": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_NJegaW": {
+          "type": "heading",
+          "settings": {
+            "heading": "SIGN UP TO MY SUBSTACK",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_N4gbX3": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Join 1k+ readers who love our content.  <br/>We post <strong>5-6x a week</strong>.</p>"
+          }
+        },
+        "email_form_UGL8z6": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_NJegaW",
+        "paragraph_N4gbX3",
+        "email_form_UGL8z6"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".h1 {color: #e5c085;}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-522b6c27-788f-4b7e-bbb7-d4f61d40572f",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "custom_liquid_Khfnmp": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "custom_liquid": "document.addEventListener('DOMContentLoaded', function () {\n\n  // Size → Color mapping\n  const sizeToColor = {\n    'Large': 'Yellow',\n    'Small': 'White'\n  };\n\n  // Observe the Rapi bundle container because Rapi loads dynamically\n  const rapiContainer = document.querySelector('div[data-rapi-id=\"rapi_6329443a3a024c\"]');\n\n  if (!rapiContainer) {\n    console.warn(\"Rapi container not found.\");\n    return;\n  }\n\n  const observer = new MutationObserver(() => {\n    const sizeSelector = rapiContainer.querySelector('select[data-attribute=\"Size\"]');\n    const colorSelector = rapiContainer.querySelector('select[data-attribute=\"Color\"]');\n\n    if (!sizeSelector || !colorSelector) {\n      return;\n    }\n\n    function syncColor() {\n      const currentSize = sizeSelector.value;\n      const targetColor = sizeToColor[currentSize];\n      if (!targetColor) return;\n\n      const opts = Array.from(colorSelector.options);\n\n      const match = opts.find(\n        opt => opt.text.trim().toLowerCase() === targetColor.toLowerCase()\n      );\n\n      if (match && colorSelector.value !== match.value) {\n        colorSelector.value = match.value;\n        colorSelector.dispatchEvent(new Event('change', { bubbles: true }));\n      }\n    }\n\n    sizeSelector.addEventListener('change', syncColor);\n\n    // run once on load\n    syncColor();\n  });\n\n  observer.observe(rapiContainer, { childList: true, subtree: true });\n});",
+        "color_scheme": "scheme-4",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
     "footer": {
       "type": "footer",
-      "settings": {},
       "blocks": {
-        "c1": { "type": "column", "settings": { "heading": "LINKS", "links": "Reviv vs Competitor\neBooks\nTrack Your Order" } },
-        "c2": { "type": "column", "settings": { "heading": "CUSTOMER CARE", "links": "Contact Us\nReturn & Refund policy\nCash on Delivery · GST Invoice" } }
+        "brand_information_rXeQnh": {
+          "type": "brand_information",
+          "settings": {
+            "show_social": true
+          }
+        },
+        "feature_block_LK7iKE": {
+          "type": "feature_block",
+          "settings": {
+            "icon": "shopify://shop_images/Facebook.png",
+            "title": "",
+            "link": "https://web.facebook.com/revivtechnique"
+          }
+        },
+        "feature_block_XUB96c": {
+          "type": "feature_block",
+          "settings": {
+            "icon": "shopify://shop_images/Instagram.png",
+            "title": "",
+            "link": "https://www.instagram.com/egk_reviv"
+          }
+        },
+        "link_list_VAiyU6": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Links",
+            "menu": "footer-links-menu"
+          }
+        },
+        "link_list_zRT3CF": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Customer Care",
+            "menu": "footer-customer-care-menu"
+          }
+        }
       },
-      "block_order": ["c1", "c2"]
+      "block_order": [
+        "brand_information_rXeQnh",
+        "feature_block_LK7iKE",
+        "feature_block_XUB96c",
+        "link_list_VAiyU6",
+        "link_list_zRT3CF"
+      ],
+      "custom_css": [
+        ".footer__content-bottom.scroll-trigger.animate--slide-in {padding-bottom: 56px;}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-0b5397a7-cffb-42ac-88ef-8cf9135047b7",
+        "newsletter_enable": false,
+        "newsletter_heading": "",
+        "enable_follow_on_shop": false,
+        "show_social": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": false,
+        "show_policy": false,
+        "show_terms": true,
+        "margin_top": 0,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
-  "order": ["footer"]
+  "order": [
+    "newsletter_7cAQ4R",
+    "custom_liquid_Khfnmp",
+    "footer"
+  ]
 }
