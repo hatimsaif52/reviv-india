@@ -174,9 +174,9 @@
       "type": "our-story",
       "settings": {
         "heading": "Our Story",
-        "video_url": "https://www.youtube.com/watch?v=JJstm_T9Prc",
-        "overlay_title": "What Is Reviv?",
-        "caption": "Founder Video — EBK Biomechanics"
+        "youtube_url": "https://www.youtube.com/watch?v=JJstm_T9Prc",
+        "overlay_title": "",
+        "caption": ""
       }
     },
     "mouthguards-table": {
