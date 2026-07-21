@@ -11,43 +11,6 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
-    "newsletter_7cAQ4R": {
-      "type": "newsletter",
-      "blocks": {
-        "heading_NJegaW": {
-          "type": "heading",
-          "settings": {
-            "heading": "SIGN UP TO MY SUBSTACK",
-            "heading_size": "h1"
-          }
-        },
-        "paragraph_N4gbX3": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>Join 1k+ readers who love our content.  <br/>We post <strong>5-6x a week</strong>.</p>"
-          }
-        },
-        "email_form_UGL8z6": {
-          "type": "email_form",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "heading_NJegaW",
-        "paragraph_N4gbX3",
-        "email_form_UGL8z6"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".h1 {color: #e5c085;}"
-      ],
-      "settings": {
-        "color_scheme": "scheme-522b6c27-788f-4b7e-bbb7-d4f61d40572f",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
     "custom_liquid_Khfnmp": {
       "type": "custom-liquid",
       "disabled": true,
@@ -127,7 +90,6 @@
     }
   },
   "order": [
-    "newsletter_7cAQ4R",
     "custom_liquid_Khfnmp",
     "footer"
   ]
