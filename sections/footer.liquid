@@ -64,8 +64,8 @@
   #shopify-section-{{ section.id }} .footer-block__brand-info .footer-block__heading { text-align: right; margin: 0; }
   #shopify-section-{{ section.id }} .footer-block__brand-info .footer-block__image-wrapper img {
     mix-blend-mode: multiply;
-    margin-bottom: 0;
   }
+  #shopify-section-{{ section.id }} .footer-block__brand-info .footer-block__image-wrapper { margin-bottom: 0; }
   #shopify-section-{{ section.id }} .reviv-tagline {
     font-family: 'Mulish', sans-serif; font-size: 13px; font-weight: 700;
     letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.9; margin-top: -2px;
@@ -79,7 +79,7 @@
   }
   #shopify-section-{{ section.id }} .copyright__content,
   #shopify-section-{{ section.id }} .footer__copyright { color: {{ section.settings.footer_text }}; opacity: 0.75; }
-  .footer .grid__item:has(.footer-block__brand-info) { background: transparent !important;justify-content:flex-end;align-items: flex-start;padding: 0; }
+  #shopify-section-{{ section.id }} .grid__item:has(.footer-block__brand-info) { background: transparent !important;justify-content:flex-end;align-items: flex-start;padding: 0; }
   {%- endif -%}
 {%- endstyle -%}
 
