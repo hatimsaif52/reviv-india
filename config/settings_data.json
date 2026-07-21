@@ -112,8 +112,8 @@
     "brand_description": "<p></p>",
     "brand_image": "shopify://shop_images/revive-logo-light.png",
     "brand_image_width": 150,
-    "social_facebook_link": "",
-    "social_instagram_link": "",
+    "social_facebook_link": "https://web.facebook.com/revivtechnique",
+    "social_instagram_link": "https://www.instagram.com/egk_reviv",
     "social_youtube_link": "",
     "social_tiktok_link": "",
     "social_twitter_link": "",
@@ -208,9 +208,9 @@
           "background": "#232021",
           "background_gradient": "",
           "text": "#ffffff",
-          "button": "#EF9A2E",
+          "button": "#ef9a2e",
           "button_label": "#121212",
-          "secondary_button_label": "#EF9A2E",
+          "secondary_button_label": "#ef9a2e",
           "shadow": "#121212"
         }
       },
@@ -227,7 +227,7 @@
       },
       "scheme-0b5397a7-cffb-42ac-88ef-8cf9135047b7": {
         "settings": {
-          "background": "#EF9A2E",
+          "background": "#ef9a2e",
           "background_gradient": "",
           "text": "#121212",
           "button": "#121212",
@@ -241,9 +241,9 @@
           "background": "#2e2e2e",
           "background_gradient": "",
           "text": "#ffffff",
-          "button": "#EF9A2E",
+          "button": "#ef9a2e",
           "button_label": "#ffffff",
-          "secondary_button_label": "#EF9A2E",
+          "secondary_button_label": "#ef9a2e",
           "shadow": "#2e2e2e"
         }
       },
@@ -251,10 +251,10 @@
         "settings": {
           "background": "#232021",
           "background_gradient": "",
-          "text": "#EF9A2E",
-          "button": "#EF9A2E",
+          "text": "#ef9a2e",
+          "button": "#ef9a2e",
           "button_label": "#121212",
-          "secondary_button_label": "#EF9A2E",
+          "secondary_button_label": "#ef9a2e",
           "shadow": "#121212"
         }
       },
@@ -263,9 +263,9 @@
           "background": "#121212",
           "background_gradient": "",
           "text": "#ffffff",
-          "button": "#EF9A2E",
+          "button": "#ef9a2e",
           "button_label": "#ffffff",
-          "secondary_button_label": "#EF9A2E",
+          "secondary_button_label": "#ef9a2e",
           "shadow": "#ffffff"
         }
       },
@@ -274,7 +274,7 @@
           "background": "#ffffff",
           "background_gradient": "",
           "text": "#121212",
-          "button": "#EF9A2E",
+          "button": "#ef9a2e",
           "button_label": "#121212",
           "secondary_button_label": "rgba(0,0,0,0)",
           "shadow": "rgba(0,0,0,0)"
@@ -285,7 +285,7 @@
           "background": "#232021",
           "background_gradient": "",
           "text": "#ffffff",
-          "button": "#EF9A2E",
+          "button": "#ef9a2e",
           "button_label": "#ffffff",
           "secondary_button_label": "#121212",
           "shadow": "#121212"
@@ -329,10 +329,10 @@
           "background": "#000000",
           "background_gradient": "",
           "text": "#ffffff",
-          "button": "#EF9A2E",
+          "button": "#ef9a2e",
           "button_label": "#ffffff",
           "secondary_button_label": "#000000",
-          "shadow": "#EF9A2E"
+          "shadow": "#ef9a2e"
         }
       },
       "scheme-716b1c4a-8f77-44b3-b0ef-264afbd35f50": {

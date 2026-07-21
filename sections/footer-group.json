@@ -51,27 +51,26 @@
         "link_list_VAiyU6",
         "link_list_zRT3CF"
       ],
-      "custom_css": [
-        ".footer__content-bottom.scroll-trigger.animate--slide-in {padding-bottom: 56px;}"
-      ],
+      "custom_css": [],
       "settings": {
         "reviv_style": true,
         "footer_bg": "#e8a33c",
         "footer_text": "#20180a",
         "show_tricolor_bar": true,
+        "reviv_tagline": "भारत के लिए · MADE FOR INDIA",
         "color_scheme": "scheme-0b5397a7-cffb-42ac-88ef-8cf9135047b7",
         "newsletter_enable": false,
         "newsletter_heading": "",
         "enable_follow_on_shop": false,
-        "show_social": true,
+        "show_social": false,
         "enable_country_selector": false,
         "enable_language_selector": false,
         "payment_enable": false,
         "show_policy": false,
-        "show_terms": true,
+        "show_terms": false,
         "margin_top": 0,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 12
       }
     }
   },
