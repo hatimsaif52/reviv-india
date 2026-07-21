@@ -57,6 +57,25 @@
   #shopify-section-{{ section.id }} .footer .footer-block__details-content li { margin-bottom: 12px; }
   #shopify-section-{{ section.id }} .featured-footer-wrapper { display: flex; gap: 16px; justify-content: flex-end; margin-top: 6px; }
   #shopify-section-{{ section.id }} .featured-footer_block img { filter: brightness(0); }
+  #shopify-section-{{ section.id }} .footer-block__brand-info {
+    display: flex; flex-direction: column; align-items: flex-end; gap: 14px; text-align: right;
+  }
+  #shopify-section-{{ section.id }} .footer-block__brand-info .rte,
+  #shopify-section-{{ section.id }} .footer-block__brand-info .footer-block__heading { text-align: right; margin: 0; }
+  #shopify-section-{{ section.id }} .footer-block__brand-info .footer-block__image-wrapper img {
+    mix-blend-mode: multiply;
+  }
+  #shopify-section-{{ section.id }} .reviv-tagline {
+    font-family: 'Mulish', sans-serif; font-size: 13px; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.9; margin-top: -2px;
+  }
+  #shopify-section-{{ section.id }} .footer__content-top {
+    display: grid; grid-template-columns: auto auto 1fr; gap: 40px; align-items: start;
+  }
+  @media screen and (max-width: 749px) {
+    #shopify-section-{{ section.id }} .footer__content-top { grid-template-columns: 1fr; }
+    #shopify-section-{{ section.id }} .footer-block__brand-info { align-items: flex-start; text-align: left; }
+  }
   #shopify-section-{{ section.id }} .footer__content-bottom {
     border-top: 1px solid {{ section.settings.footer_text | color_modify: 'alpha', 0.2 }};
     margin-top: 28px;
@@ -196,6 +215,9 @@
                       {%- endif -%}
                       {%- if settings.brand_description != blank -%}
                         <div class="rte">{{ settings.brand_description }}</div>
+                      {%- endif -%}
+                      {%- if section.settings.reviv_style and section.settings.reviv_tagline != blank -%}
+                        <div class="reviv-tagline">{{ section.settings.reviv_tagline }}</div>
                       {%- endif -%}
                       {%- if block.settings.show_social and has_social_icons -%}
                         {%- render 'social-icons', class: 'footer__list-social' -%}
@@ -589,6 +611,12 @@
       "id": "show_tricolor_bar",
       "label": "Show tricolour top bar (Reviv style)",
       "default": true
+    },
+    {
+      "type": "text",
+      "id": "reviv_tagline",
+      "label": "Brand tagline (below logo)",
+      "default": "भारत के लिए · MADE FOR INDIA"
     },
     {
       "type": "color_scheme",
