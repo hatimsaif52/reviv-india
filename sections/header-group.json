@@ -14,24 +14,16 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement_dpLLV8": {
+        "announcement_aUUWJQ": {
           "type": "announcement",
           "settings": {
-            "text": "⚽ We are selling our new R3 mouthguard. Check it now ⚽",
+            "text": "✦ अच्छी नींद, हर रात — Free shipping across India on the new R3 mouthguard  →",
             "link": "shopify://products/r3-revivthree-without-support"
-          }
-        },
-        "announcement_9pXDV7": {
-          "type": "announcement",
-          "settings": {
-            "text": "Trusted by 3000+ active Skool members",
-            "link": ""
           }
         }
       },
       "block_order": [
-        "announcement_dpLLV8",
-        "announcement_9pXDV7"
+        "announcement_aUUWJQ"
       ],
       "custom_css": [],
       "settings": {
