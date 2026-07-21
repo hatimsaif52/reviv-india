@@ -26,8 +26,47 @@
     }
   }
   .featured-footer-wrapper { margin-top: -20px; }
+  {%- if section.settings.reviv_style -%}
+  #shopify-section-{{ section.id }} .footer {
+    position: relative;
+    background: {{ section.settings.footer_bg }} !important;
+    color: {{ section.settings.footer_text }} !important;
+  }
+  {%- if section.settings.show_tricolor_bar -%}
+  #shopify-section-{{ section.id }} .footer::before {
+    content: ""; position: absolute; top: 0; left: 0; right: 0; height: 5px; z-index: 2;
+    background: linear-gradient(to right, #EF9A2E 0 33.33%, #F3EEE4 33.33% 66.66%, #37A76A 66.66% 100%);
+  }
+  {%- endif -%}
+  #shopify-section-{{ section.id }} .footer * { color: {{ section.settings.footer_text }}; }
+  #shopify-section-{{ section.id }} .footer-block__heading {
+    font-family: 'Mulish', sans-serif; font-size: 12px; font-weight: 800;
+    letter-spacing: 0.2em; text-transform: uppercase;
+  }
+  #shopify-section-{{ section.id }} .footer-block__brand-info .footer-block__heading {
+    font-family: 'Cormorant Garamond', serif; font-size: 34px; font-weight: 600;
+    letter-spacing: 0.16em; text-transform: none;
+  }
+  #shopify-section-{{ section.id }} .footer a,
+  #shopify-section-{{ section.id }} .footer .list-menu__item {
+    color: {{ section.settings.footer_text }} !important; opacity: 0.88; text-decoration: none;
+    font-family: 'Mulish', sans-serif; font-weight: 600;
+  }
+  #shopify-section-{{ section.id }} .footer a:hover,
+  #shopify-section-{{ section.id }} .footer .list-menu__item:hover { opacity: 1; text-decoration: underline; }
+  #shopify-section-{{ section.id }} .footer .footer-block__details-content li { margin-bottom: 12px; }
+  #shopify-section-{{ section.id }} .featured-footer-wrapper { display: flex; gap: 16px; justify-content: flex-end; margin-top: 6px; }
+  #shopify-section-{{ section.id }} .featured-footer_block img { filter: brightness(0); }
+  #shopify-section-{{ section.id }} .footer__content-bottom {
+    border-top: 1px solid {{ section.settings.footer_text | color_modify: 'alpha', 0.2 }};
+    margin-top: 28px;
+  }
+  #shopify-section-{{ section.id }} .copyright__content,
+  #shopify-section-{{ section.id }} .footer__copyright { color: {{ section.settings.footer_text }}; opacity: 0.75; }
+  {%- endif -%}
 {%- endstyle -%}
 
+{%- if section.settings.reviv_style -%}<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet">{%- endif -%}
 <footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
   {%- liquid
     assign has_social_icons = true
@@ -527,6 +566,30 @@
     }
   ],
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "reviv_style",
+      "label": "Enable Reviv India design styling",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "footer_bg",
+      "label": "Footer background (Reviv style)",
+      "default": "#E8A33C"
+    },
+    {
+      "type": "color",
+      "id": "footer_text",
+      "label": "Footer text (Reviv style)",
+      "default": "#20180A"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_tricolor_bar",
+      "label": "Show tricolour top bar (Reviv style)",
+      "default": true
+    },
     {
       "type": "color_scheme",
       "id": "color_scheme",
