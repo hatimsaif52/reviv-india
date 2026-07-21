@@ -1,31 +1,71 @@
 {% render 'reviv-base' %}
+
+{%- comment -%} Extract YouTube video id from watch?v= , youtu.be/ or /embed/ URLs {%- endcomment -%}
+{%- assign yt_url = section.settings.youtube_url -%}
+{%- assign yt_id = '' -%}
+{%- if yt_url contains 'youtu.be/' -%}
+  {%- assign yt_id = yt_url | split: 'youtu.be/' | last | split: '?' | first | split: '&' | first -%}
+{%- elsif yt_url contains 'watch?v=' -%}
+  {%- assign yt_id = yt_url | split: 'watch?v=' | last | split: '&' | first -%}
+{%- elsif yt_url contains '/embed/' -%}
+  {%- assign yt_id = yt_url | split: '/embed/' | last | split: '?' | first | split: '&' | first -%}
+{%- endif -%}
+{%- assign uid = 'rvstory-' | append: section.id -%}
+
 <div class="rv-scope" style="background:#0A0A0B; font-family:'Mulish',sans-serif;">
   <section style="max-width:1240px; margin:0 auto; padding:56px 40px 30px;">
     <div style="border:1.5px solid rgba(232,163,60,0.7); border-radius:16px; overflow:hidden;">
       <div style="padding:22px; text-align:center; border-bottom:1px solid rgba(232,163,60,0.35);">
         <h2 style="font-family:'Cormorant Garamond',serif; font-weight:600; font-size:32px; color:#EF9A2E; margin:0;">{{ section.settings.heading }}</h2>
       </div>
-      <a href="{{ section.settings.video_url }}" style="text-decoration:none; display:block;">
-        <div class="rv-stripe" style="position:relative; height:420px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:22px;">
-          {% if section.settings.poster %}<img src="{{ section.settings.poster | image_url: width: 1400 }}" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.5;">{% endif %}
+      <div id="{{ uid }}" data-ytid="{{ yt_id }}" style="position:relative; height:420px;">
+        {%- comment -%} Poster + play overlay {%- endcomment -%}
+        <button type="button" class="rv-story-poster rv-stripe" aria-label="Play video"
+          style="position:absolute; inset:0; width:100%; height:100%; border:none; padding:0; cursor:pointer; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:22px; overflow:hidden;{% if yt_id == blank %}pointer-events:none;{% endif %}">
+          {%- if section.settings.poster != blank -%}
+            <img src="{{ section.settings.poster | image_url: width: 1400 }}" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.55;">
+          {%- elsif yt_id != blank -%}
+            <img src="https://img.youtube.com/vi/{{ yt_id }}/maxresdefault.jpg" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.55;">
+          {%- endif -%}
           <span style="position:relative; width:80px; height:80px; border-radius:50%; background:#E8A33C; display:flex; align-items:center; justify-content:center; animation:rvpulse 2.4s ease-in-out infinite;">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="#161206"><path d="M8 5v14l11-7z"></path></svg>
           </span>
-          <div style="position:relative; font-family:'Cormorant Garamond',serif; font-size:40px; color:#ECE6DA;">{{ section.settings.overlay_title }}</div>
+          <span style="position:relative; font-family:'Cormorant Garamond',serif; font-size:40px; color:#ECE6DA;">{{ section.settings.overlay_title }}</span>
           <span style="position:relative; background:rgba(0,0,0,0.5); color:#9a948b; font-family:'Space Mono',monospace; font-size:13px; padding:6px 14px; border-radius:5px;">{{ section.settings.caption }}</span>
-        </div>
-      </a>
+        </button>
+      </div>
     </div>
   </section>
 </div>
+
+<script>
+  (function(){
+    var wrap = document.getElementById('{{ uid }}');
+    if(!wrap) return;
+    var btn = wrap.querySelector('.rv-story-poster');
+    var id = wrap.getAttribute('data-ytid');
+    if(!btn || !id) return;
+    btn.addEventListener('click', function(){
+      var f = document.createElement('iframe');
+      f.setAttribute('src', 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0&playsinline=1');
+      f.setAttribute('title', {{ section.settings.overlay_title | json }});
+      f.setAttribute('frameborder', '0');
+      f.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+      f.setAttribute('allowfullscreen', '');
+      f.style.cssText = 'position:absolute; inset:0; width:100%; height:100%; border:0;';
+      wrap.innerHTML = '';
+      wrap.appendChild(f);
+    });
+  })();
+</script>
 
 {% schema %}
 {
   "name": "Our story",
   "settings": [
     { "type": "text", "id": "heading", "label": "Heading", "default": "Our Story" },
-    { "type": "url", "id": "video_url", "label": "Video link" },
-    { "type": "image_picker", "id": "poster", "label": "Poster image" },
+    { "type": "text", "id": "youtube_url", "label": "YouTube video URL", "info": "Plays inline in the page. Supports watch?v=, youtu.be/ and /embed/ links.", "default": "https://www.youtube.com/watch?v=JJstm_T9Prc" },
+    { "type": "image_picker", "id": "poster", "label": "Poster image", "info": "Optional. Falls back to the YouTube thumbnail." },
     { "type": "text", "id": "overlay_title", "label": "Overlay title", "default": "What Is Reviv?" },
     { "type": "text", "id": "caption", "label": "Caption", "default": "founder video — EBK Biomechanics" }
   ],
