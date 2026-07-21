@@ -31,22 +31,6 @@
             "show_social": true
           }
         },
-        "feature_block_LK7iKE": {
-          "type": "feature_block",
-          "settings": {
-            "icon": "shopify://shop_images/Facebook.png",
-            "title": "",
-            "link": "https://web.facebook.com/revivtechnique"
-          }
-        },
-        "feature_block_XUB96c": {
-          "type": "feature_block",
-          "settings": {
-            "icon": "shopify://shop_images/Instagram.png",
-            "title": "",
-            "link": "https://www.instagram.com/egk_reviv"
-          }
-        },
         "link_list_VAiyU6": {
           "type": "link_list",
           "settings": {
@@ -64,8 +48,6 @@
       },
       "block_order": [
         "brand_information_rXeQnh",
-        "feature_block_LK7iKE",
-        "feature_block_XUB96c",
         "link_list_VAiyU6",
         "link_list_zRT3CF"
       ],
@@ -73,6 +55,10 @@
         ".footer__content-bottom.scroll-trigger.animate--slide-in {padding-bottom: 56px;}"
       ],
       "settings": {
+        "reviv_style": true,
+        "footer_bg": "#e8a33c",
+        "footer_text": "#20180a",
+        "show_tricolor_bar": true,
         "color_scheme": "scheme-0b5397a7-cffb-42ac-88ef-8cf9135047b7",
         "newsletter_enable": false,
         "newsletter_heading": "",
