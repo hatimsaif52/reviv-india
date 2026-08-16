@@ -1233,6 +1233,14 @@
         "padding_bottom": 36,
         "custom_classes": ""
       }
+    },
+    "reviews_judgeme_dfTmWE": {
+      "type": "reviews-judgeme",
+      "name": "Reviews Judge.me-like",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -1255,6 +1263,7 @@
     "substack_blog_BMDpyd",
     "ss_comp_banner_CRpMT3",
     "multicolumn_LqFdTP",
+    "reviews_judgeme_dfTmWE",
     "collapsible_content_HA7hTA",
     "related-products",
     "ss_other_prds_slider_zCMUML"
