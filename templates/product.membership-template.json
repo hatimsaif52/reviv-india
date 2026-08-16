@@ -844,6 +844,29 @@
         "padding_bottom": 72
       }
     },
+    "178686704672a577d7": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_BYXL7R": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_BYXL7R"
+      ],
+      "custom_css": [
+        ".jdgm-rev-widg,.jdgm-rev-widg__header,.jdgm-rev-widg__body,.jdgm-rev-widg__summary,.jdgm-widget-summary {background: transparent !important; background-color: transparent !important;}"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "collapsible_content_rnYPMG": {
       "type": "collapsible-content",
       "blocks": {
@@ -925,29 +948,6 @@
         "custom_class": ""
       }
     },
-    "178686704672a577d7": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_BYXL7R": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "review_data": "sample_data",
-            "max_width": 1200,
-            "show_shop_reviews": false,
-            "empty_state": "empty_widget"
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_BYXL7R"
-      ],
-      "custom_css": [
-        ".jdgm-rev-widg,.jdgm-rev-widg__header,.jdgm-rev-widg__body,.jdgm-rev-widg__summary,.jdgm-widget-summary {background: transparent !important; background-color: transparent !important;}"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
     "related-products": {
       "type": "related-products",
       "disabled": true,
@@ -1008,6 +1008,7 @@
     },
     "other_products_jGQxAC": {
       "type": "other-products",
+      "disabled": true,
       "custom_css": [
         ".card__heading a {color: #e5c085; font-size: 18px;}",
         "h2.related-products__heading.inline-richtext.h2 {text-align: center; color: #e5c085; font-size: 48px;}",
@@ -1032,7 +1033,7 @@
     "multicolumn_GCw3Vg": {
       "type": "multicolumn",
       "settings": {
-        "title": "",
+        "title": "OTHER PRODUCTS",
         "box_link": false,
         "heading_size": "h1",
         "image_width": "full",
