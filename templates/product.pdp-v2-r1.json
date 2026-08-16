@@ -1053,6 +1053,27 @@
         "custom_class": "htc-multi_img__banner"
       }
     },
+    "reviews_judgeme_dfTmWE": {
+      "type": "reviews-judgeme",
+      "blocks": {
+        "review_TA3F3A": {
+          "type": "review",
+          "settings": {
+            "review_writer": "Jayarani",
+            "review_rating": 5,
+            "review_content": "<p>I had relief from jaw pain, definitely buy it.<br/><br/>I had a lot of TMJ pain, and I'd also gotten my wisdom tooth removed, so I was in quite a bit of pain. When I popped this in, it was incredibly relieving, and I was finally able to sleep. It stopped my jaws from pressing against each other and helped relieve the pain in my teeth. 100% worth it.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "review_TA3F3A"
+      ],
+      "name": "Reviews Judge.me-like",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "collapsible_content_HA7hTA": {
       "type": "collapsible-content",
       "blocks": {
@@ -1232,14 +1253,6 @@
         "padding_top": 36,
         "padding_bottom": 36,
         "custom_classes": ""
-      }
-    },
-    "reviews_judgeme_dfTmWE": {
-      "type": "reviews-judgeme",
-      "name": "Reviews Judge.me-like",
-      "settings": {
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     }
   },
