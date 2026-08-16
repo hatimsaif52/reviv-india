@@ -1056,16 +1056,25 @@
     "reviews_judgeme_dfTmWE": {
       "type": "reviews-judgeme",
       "blocks": {
+        "review_fjBcBr": {
+          "type": "review",
+          "settings": {
+            "review_writer": "Hemanth",
+            "review_rating": 5,
+            "review_content": "<p><strong>Worth it</strong></p><p>I bought this for my mom. She had her wisdom teeth removed, so this really helped her with the pain, and she was able to sleep better. She tells me that the quality is great, and it was pretty easy to use, just pop it in, and yeah, that's pretty much it.</p>"
+          }
+        },
         "review_TA3F3A": {
           "type": "review",
           "settings": {
             "review_writer": "Jayarani",
             "review_rating": 5,
-            "review_content": "<p>I had relief from jaw pain, definitely buy it.<br/><br/>I had a lot of TMJ pain, and I'd also gotten my wisdom tooth removed, so I was in quite a bit of pain. When I popped this in, it was incredibly relieving, and I was finally able to sleep. It stopped my jaws from pressing against each other and helped relieve the pain in my teeth. 100% worth it.</p>"
+            "review_content": "<p><strong>I had relief from jaw pain, definitely buy it.</strong><br/><br/>I had a lot of TMJ pain, and I'd also gotten my wisdom tooth removed, so I was in quite a bit of pain. When I popped this in, it was incredibly relieving, and I was finally able to sleep. It stopped my jaws from pressing against each other and helped relieve the pain in my teeth. 100% worth it.</p>"
           }
         }
       },
       "block_order": [
+        "review_fjBcBr",
         "review_TA3F3A"
       ],
       "name": "Reviews Judge.me-like",
