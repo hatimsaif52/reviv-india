@@ -824,6 +824,26 @@
         "padding_bottom": 72
       }
     },
+    "17868690784181f763": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_Erm4Ay": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "real_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_Erm4Ay"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "collapsible_content_rnYPMG": {
       "type": "collapsible-content",
       "blocks": {
@@ -903,26 +923,6 @@
         "padding_top": 36,
         "padding_bottom": 36,
         "custom_class": ""
-      }
-    },
-    "17868690784181f763": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_Erm4Ay": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "review_data": "real_data",
-            "max_width": 1200,
-            "show_shop_reviews": false,
-            "empty_state": "empty_widget"
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_Erm4Ay"
-      ],
-      "settings": {
-        "include_margins": true
       }
     },
     "related-products": {
@@ -1007,26 +1007,23 @@
         "padding_bottom": 28
       }
     },
-    "multicolumn_GCw3Vg": {
-      "type": "multicolumn",
+    "other_products_AnMxVa": {
+      "type": "other-products",
+      "name": "Other Products",
       "settings": {
-        "title": "OTHER PRODUCTS",
-        "box_link": false,
+        "heading": "You may also like",
         "heading_size": "h1",
-        "image_width": "full",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-4",
         "image_ratio": "adapt",
-        "columns_desktop": 1,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "button_label": "View All",
-        "button_link": "shopify://collections/all",
-        "color_scheme": "",
-        "section_color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 0,
-        "padding_bottom": 68,
-        "custom_class": ""
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
@@ -1051,6 +1048,6 @@
     "related-products",
     "featured_collection_FymAbp",
     "other_products_jGQxAC",
-    "multicolumn_GCw3Vg"
+    "other_products_AnMxVa"
   ]
 }
