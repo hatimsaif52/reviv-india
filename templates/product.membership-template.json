@@ -925,6 +925,29 @@
         "custom_class": ""
       }
     },
+    "178686704672a577d7": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_BYXL7R": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_BYXL7R"
+      ],
+      "custom_css": [
+        ".jdgm-rev-widg,.jdgm-rev-widg__header,.jdgm-rev-widg__body,.jdgm-rev-widg__summary,.jdgm-widget-summary {background: transparent !important; background-color: transparent !important;}"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "related-products": {
       "type": "related-products",
       "disabled": true,
@@ -1027,26 +1050,6 @@
         "padding_bottom": 68,
         "custom_class": ""
       }
-    },
-    "178686704672a577d7": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_BYXL7R": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "review_data": "sample_data",
-            "max_width": 1200,
-            "show_shop_reviews": false,
-            "empty_state": "empty_widget"
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_BYXL7R"
-      ],
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
@@ -1066,11 +1069,11 @@
     "substack_blog_nJnPUf",
     "1786863436591b9b2f",
     "featured_blog_rbHQbw",
+    "178686704672a577d7",
     "collapsible_content_rnYPMG",
     "related-products",
     "featured_collection_FymAbp",
     "other_products_jGQxAC",
-    "multicolumn_GCw3Vg",
-    "178686704672a577d7"
+    "multicolumn_GCw3Vg"
   ]
 }
