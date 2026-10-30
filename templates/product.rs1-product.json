@@ -20,6 +20,10 @@
             "text_style": "uppercase"
           }
         },
+        "judge_me_reviews_preview_badge_EAUeai": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
         "title": {
           "type": "title",
           "settings": {}
@@ -108,7 +112,7 @@
           "settings": {
             "heading": "What sports is RS1 designed for?",
             "icon": "question_mark",
-            "content": "<p>RS1 is designed for all high-intensity sports and training — powerlifting, bodybuilding, CrossFit, combat sports, team sports, and any activity where strength, stability, and oxygen intake matter.</p>",
+            "content": "<p>RS1 is designed for casual sports and exercise like yoga, jogging, going to the gym, etc.</p>",
             "page": ""
           }
         },
@@ -127,7 +131,7 @@
           "settings": {
             "heading": "Shipping Information",
             "icon": "truck",
-            "content": "<ul><li>Shipping typically takes 7-10 days to most destinations including the US. More remote countries can take longer.</li><li>Orders typically ship within 24 hours and you will receive a tracking number by email as soon as it ships.</li></ul>",
+            "content": "<ul><li>Shipping typically takes 9-13 days to most destinations including the US. More remote countries can take longer.</li><li>Orders typically ship within 48 hours and you will receive a tracking number by email as soon as it ships.</li></ul>",
             "page": ""
           }
         },
@@ -146,6 +150,7 @@
       },
       "block_order": [
         "vendor",
+        "judge_me_reviews_preview_badge_EAUeai",
         "title",
         "price",
         "variant_picker",
@@ -197,7 +202,7 @@
         "heading_size": "h1",
         "enable_video_looping": false,
         "video_url": "https://www.youtube.com/watch?v=BK_Qj5KVEic",
-        "cover_image": "shopify://shop_images/84f6baca-fd71-40c7-8297-ebf3db7da189.jpg",
+        "cover_image": "shopify://shop_images/84f6baca-fd71-40c7-8297-ebf3db7da189.png",
         "description": "",
         "full_width": false,
         "color_scheme": "",
@@ -211,44 +216,44 @@
         "point_1": {
           "type": "point",
           "settings": {
-            "image": "shopify://shop_images/7a96e479-04fd-4f24-83e2-a9c5b46ff0f6.jpg",
+            "image": "shopify://shop_images/7a96e479-04fd-4f24-83e2-a9c5b46ff0f6.png",
             "number": "01",
-            "title": "Yoga & Wellness",
+            "title": "YOGA & WELLNESS",
             "text": ""
           }
         },
         "point_2": {
           "type": "point",
           "settings": {
-            "image": "shopify://shop_images/ChatGPT_Image_Jul_30_2026_04_49_07_PM.jpg",
+            "image": "shopify://shop_images/ChatGPT_Image_Jul_30_2026_04_49_07_PM.png",
             "number": "02",
-            "title": "Gym & Fitness",
+            "title": "GYM & FITNESS",
             "text": ""
           }
         },
         "point_3": {
           "type": "point",
           "settings": {
-            "image": "shopify://shop_images/62aada94-2030-43f2-95ba-25ae4f08d93c.jpg",
+            "image": "shopify://shop_images/62aada94-2030-43f2-95ba-25ae4f08d93c.png",
             "number": "03",
-            "title": "Sports & Active Life",
-            "text": ""
-          }
-        },
-        "point_4": {
-          "type": "point",
-          "settings": {
-            "image": "shopify://shop_images/ChatGPT_Image_Jul_30_2026_05_29_18_PM.jpg",
-            "number": "04",
-            "title": "Team Sports",
+            "title": "SPORTS & ACTIVE LIFE",
             "text": ""
           }
         },
         "point_5": {
           "type": "point",
           "settings": {
-            "image": "shopify://shop_images/c0965560-763c-4dde-8511-13a9c0d20d2c.jpg",
+            "image": "shopify://shop_images/ChatGPT_Image_Jul_30_2026_05_29_18_PM.png",
             "number": "05",
+            "title": "Team Sports",
+            "text": ""
+          }
+        },
+        "point_4": {
+          "type": "point",
+          "settings": {
+            "image": "shopify://shop_images/c0965560-763c-4dde-8511-13a9c0d20d2c.png",
+            "number": "04",
             "title": "Casual Daytime Use",
             "text": ""
           }
@@ -257,81 +262,88 @@
           "type": "problem_item",
           "settings": {
             "number": "01",
-            "text": "Muscle tension from jaw clenching wastes energy"
+            "text": "Clenching under pressure burns energy you need late in the game"
           }
         },
         "problem_item_2": {
           "type": "problem_item",
           "settings": {
             "number": "02",
-            "text": "Misaligned jaw disrupts posture from head to toe"
+            "text": "A misaligned jaw wrecks the symmetry your whole body depends on to move well"
           }
         },
         "problem_item_3": {
           "type": "problem_item",
           "settings": {
             "number": "03",
-            "text": "Restricted airflow limits oxygen under load"
+            "text": "A restricted airway means less oxygen exactly when you need it most"
           }
         },
         "problem_item_4": {
           "type": "problem_item",
           "settings": {
             "number": "04",
-            "text": "Chronic grinding damages teeth and accelerates fatigue"
+            "text": "Grinding wears down your teeth and speeds up the fatigue that follows"
           }
         },
         "solution_item_1": {
           "type": "solution_item",
           "settings": {
-            "title": "Jaw Spacing",
-            "text": "Creates spacing between your upper and lower jaw, supporting natural posture, efficient breathing, and full-body stability from the ground up."
+            "icon": "shopify://shop_images/Frame_14434_9.png",
+            "title": "Unlocking the bite",
+            "text": "We like to say... \"for the skeleton to change, the bite needs to be able to change.\"  Which is why we believe it is important that you unlock how the upper and lower teeth come together when exercising."
           }
         },
         "solution_item_2": {
           "type": "solution_item",
           "settings": {
-            "title": "Airway Optimization",
-            "text": "Opens your airway under load so you breathe harder, fatigue slower."
+            "icon": "shopify://shop_images/Frame_14434_7.png",
+            "title": "Adding vertical height",
+            "text": "Add height between the teeth creates a biomechanical 'stretch' on the rest of the body in our experience.  And that works in your favor in terms of not getting fatigued or sore as easily."
           }
         },
         "solution_item_3": {
           "type": "solution_item",
           "settings": {
-            "title": "Clenching Surface",
-            "text": "Converts jaw tension into raw power while protecting your teeth."
+            "icon": "shopify://shop_images/Frame_14434_11.png",
+            "title": "Remodel the skeleton",
+            "text": "What if you could use every athletic session to remodel the skeleton positively so that you are stronger and more flexible over time?  That is the power of leveraging biomechanics in our view."
           }
         },
         "works_item_1": {
           "type": "works_item",
           "settings": {
             "number": "01",
-            "title": "Jaw Spacing for Total-Body Power",
-            "text": "Creates precise space between your upper and lower teeth, decompressing the jaw."
+            "icon": "shopify://shop_images/Frame_14434.png",
+            "title": "Do not mold",
+            "text": "Just wash it off after you receive it."
           }
         },
         "works_item_2": {
           "type": "works_item",
           "settings": {
             "number": "02",
-            "title": "Reduced Tension & Energy Leaks",
-            "text": "Eliminates the energy drain from clenching and muscle tension — more of your output goes into raw performance."
+            "icon": "shopify://shop_images/Frame_14434_2.png",
+            "title": "Pop it in your mouth",
+            "text": "The ledges should face down and sit inside the lower teeth. This helps keep it in place."
           }
         },
         "works_item_3": {
           "type": "works_item",
           "settings": {
             "number": "03",
-            "title": "Airway Support Under Load",
-            "text": "Keeps your airway open during peak effort. More oxygen in, more fatigue out."
+            "icon": "shopify://shop_images/Frame_14434_3.png",
+            "title": "Use it while playing athletics",
+            "text": "Clench lightly on it while active. Take it out when speaking."
           }
         },
         "works_item_4": {
           "type": "works_item",
           "settings": {
             "number": "04",
-            "title": "Immediate Results",
-            "text": "No break-in period. Stronger, more stable, better breathing from your very first use."
+            "icon": "shopify://shop_images/Frame_14434_4.png",
+            "title": "Wash it after use",
+            "text": "Wash with warm water and soap.  Leave to dry in a dry place."
           }
         },
         "who_item_1": {
@@ -367,8 +379,8 @@
         "point_1",
         "point_2",
         "point_3",
-        "point_4",
         "point_5",
+        "point_4",
         "problem_item_1",
         "problem_item_2",
         "problem_item_3",
@@ -387,23 +399,39 @@
       ],
       "settings": {
         "adv_eyebrow": "— THE RS1 ADVANTAGE —",
-        "adv_title": "Built for your <em>sport.</em>",
+        "adv_title": "The Mouthguard Built <em>Different</em>",
         "problem_eyebrow": "THE PROBLEM",
-        "problem_title": "Your body is leaking performance — <em>and your jaw is why.</em>",
-        "problem_body": "<p>When your jaw is out of alignment, your entire skeletal system compensates. You lose stability, burn extra energy fighting tension, and hit a performance ceiling that no supplement or training program can fix.</p>",
+        "problem_title": "Your jaw is throwing off everything below it — and it's costing you <em>performance</em>.",
+        "problem_body": "<p>When your jaw sits out of position, your whole skeleton compensates for it. You lose the symmetry your body relies on to move efficiently, you burn energy clenching instead of competing, and you hit a ceiling that no amount of training or supplements will break through.</p>",
+        "problem_image": "shopify://shop_images/the-problem.png",
         "solution_eyebrow": "THE SOLUTION",
         "solution_title": "One simple spacing shift <em>unlocks everything.</em>",
         "solution_body": "<p>The RS1 creates spacing between your upper and lower jaw, helping promote a more relaxed jaw position and natural oral posture. This subtle shift can support better breathing, improved comfort, and more efficient movement. So you can perform, recover, and feel your best from the very first use.</p>",
-        "works_eyebrow": "HOW IT WORKS",
-        "works_title": "How RS1 <em>works.</em>",
+        "works_eyebrow": "HOW TO USE IT",
+        "works_title": "How to use your <em>RS1</em>",
         "works_body": "<p>Four mechanisms working together — measured at the jaw, felt through the whole kinetic chain.</p>",
         "works_video_url": "",
         "who_eyebrow": "WHO IT'S FOR",
-        "who_title": "Already a Reviv user? RS1 is what you <em>wear when you move.</em>"
+        "who_title": "Already a Reviv user? RS1 is what you <em>wear when you move.</em>",
+        "who_image": "shopify://shop_images/who-its-for.png"
       }
     },
     "1777795313f54a279b": {
       "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_dVVgF7": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_dVVgF7"
+      ],
       "custom_css": [
         "{background: #232021;}"
       ],
@@ -419,7 +447,7 @@
           "settings": {
             "heading": "What is RS1?",
             "icon": "lightning_bolt",
-            "row_content": "<p>RS1 is Reviv's performance sport mouthguard — designed to align your jaw into its optimal neuromuscular position during athletic activity, improving strength, airflow, and full-body stability.</p>",
+            "row_content": "<p>RS1 is Reviv's sport mouthguard — designed to keep your bite unlocked while exercising and playing sports so that you reap the biomechanical benefits of that.</p>",
             "page": ""
           }
         },
@@ -428,7 +456,7 @@
           "settings": {
             "heading": "How is RS1 different from R1, R2, or R3?",
             "icon": "lightning_bolt",
-            "row_content": "<p>R1, R2, and R3 are designed for nighttime wear and dental recovery during sleep. RS1 is purpose-built for sport — with a design that keeps your airway open, provides a clenching surface for maximum output, and delivers results from your very first use.</p>",
+            "row_content": "<p>R1, R2, and R3 are designed for nighttime wear and have channels for both upper and lower teeth.  They are a bit bulky whereas RS1 is smaller and thus  easier to use during the day.  RS1 also has ledges for the bottom teeth but is completely flat on top.</p>",
             "page": ""
           }
         },
@@ -441,21 +469,12 @@
             "page": ""
           }
         },
-        "collapsible_row_zVraUA": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Will I feel a difference right away?",
-            "icon": "lightning_bolt",
-            "row_content": "<p>Yes. There's no break-in period. The jaw repositioning creates immediate changes in posture, stability, and breathing — stronger, more stable, better breathing from your very first use.</p>",
-            "page": ""
-          }
-        },
         "collapsible_row_wYPXBk": {
           "type": "collapsible_row",
           "settings": {
             "heading": "What sports is RS1 designed for?",
             "icon": "lightning_bolt",
-            "row_content": "<p>RS1 is built for all high-intensity sports and training — powerlifting, bodybuilding, CrossFit, combat sports, team sports, and any activity where strength, stability, and oxygen intake matter. It also works for yoga, HIIT, tennis, golf, pickleball, hiking, and everyday active movement.</p>",
+            "row_content": "<p>RS1 is built for playing sports, exercising, etc.  In general it keeps the upper and lower teeth separated without locking the bite, which has positive biomechanical impacts in our view.</p>",
             "page": ""
           }
         },
@@ -464,7 +483,7 @@
           "settings": {
             "heading": "Can I wear RS1 all day?",
             "icon": "check_mark",
-            "row_content": "<p>RS1 is designed specifically for athletic use — gym sessions, classes, sport, and active daily movement. For all-day daytime wear in work, commuting, or social settings, we recommend the RD1 (RevivDay), which is engineered for comfort and ease of speech.</p>",
+            "row_content": "<p>RS1 is meant to be used more for athletic use — gym sessions, classes, sport, and active daily movement. But it can also be used as a normal daytime mouthguard like RD1 (RevivDay).  But given that RD1 molds to the lower teeth and RS1 doesn't, RS1 is likely not as comfortable as a casual wear day guard as RD1.</p>",
             "page": ""
           }
         },
@@ -482,7 +501,7 @@
           "settings": {
             "heading": "What is the appliance made out of?",
             "icon": "check_mark",
-            "row_content": "<p>RS1 is made from EVA + PP (Ethylene-Vinyl Acetate + Polypropylene) — BPA-free, food-grade, and FDA-compliant. Safe for daily athletic use.</p>",
+            "row_content": "<p>RS1 is made from EVA + PP (Ethylene-Vinyl Acetate + Polypropylene) which is safe for daily athletic use.</p>",
             "page": ""
           }
         }
@@ -491,7 +510,6 @@
         "collapsible_row_bdwWYh",
         "collapsible_row_b3Aq6U",
         "collapsible_row_46p3KR",
-        "collapsible_row_zVraUA",
         "collapsible_row_wYPXBk",
         "collapsible_row_zHYD8j",
         "collapsible_row_RaENdr",
