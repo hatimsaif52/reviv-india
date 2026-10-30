@@ -211,41 +211,46 @@
         "point_1": {
           "type": "point",
           "settings": {
+            "image": "shopify://shop_images/7a96e479-04fd-4f24-83e2-a9c5b46ff0f6.jpg",
             "number": "01",
-            "title": "Powerlifting",
-            "text": "Maximum jaw stability under max load."
+            "title": "Yoga & Wellness",
+            "text": ""
           }
         },
         "point_2": {
           "type": "point",
           "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_Jul_30_2026_04_49_07_PM.jpg",
             "number": "02",
-            "title": "Bodybuilding",
-            "text": "Better posture, cleaner muscle activation."
+            "title": "Gym & Fitness",
+            "text": ""
           }
         },
         "point_3": {
           "type": "point",
           "settings": {
+            "image": "shopify://shop_images/62aada94-2030-43f2-95ba-25ae4f08d93c.jpg",
             "number": "03",
-            "title": "CrossFit",
-            "text": "Sustain output with better oxygen intake."
+            "title": "Sports & Active Life",
+            "text": ""
           }
         },
         "point_4": {
           "type": "point",
           "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_Jul_30_2026_05_29_18_PM.jpg",
             "number": "04",
-            "title": "Combat Sports",
-            "text": "Protection and performance in one."
+            "title": "Team Sports",
+            "text": ""
           }
         },
         "point_5": {
           "type": "point",
           "settings": {
+            "image": "shopify://shop_images/c0965560-763c-4dde-8511-13a9c0d20d2c.jpg",
             "number": "05",
-            "title": "Team Sports",
-            "text": "Stay composed deep into the game."
+            "title": "Casual Daytime Use",
+            "text": ""
           }
         },
         "problem_item_1": {
