@@ -314,6 +314,7 @@
           "type": "works_item",
           "settings": {
             "number": "01",
+            "icon": "shopify://shop_images/Frame_14434.png",
             "title": "Do not mold",
             "text": "Just wash it off after you receive it."
           }
@@ -322,6 +323,7 @@
           "type": "works_item",
           "settings": {
             "number": "02",
+            "icon": "shopify://shop_images/Frame_14434_2.png",
             "title": "Pop it in your mouth",
             "text": "The ledges should face down and sit inside the lower teeth. This helps keep it in place."
           }
@@ -330,6 +332,7 @@
           "type": "works_item",
           "settings": {
             "number": "03",
+            "icon": "shopify://shop_images/Frame_14434_3.png",
             "title": "Use it while playing athletics",
             "text": "Clench lightly on it while active. Take it out when speaking."
           }
@@ -338,6 +341,7 @@
           "type": "works_item",
           "settings": {
             "number": "04",
+            "icon": "shopify://shop_images/Frame_14434_4.png",
             "title": "Wash it after use",
             "text": "Wash with warm water and soap.  Leave to dry in a dry place."
           }
