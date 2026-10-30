@@ -289,6 +289,7 @@
         "solution_item_1": {
           "type": "solution_item",
           "settings": {
+            "icon": "shopify://shop_images/Frame_14434_9.png",
             "title": "Unlocking the bite",
             "text": "We like to say... \"for the skeleton to change, the bite needs to be able to change.\"  Which is why we believe it is important that you unlock how the upper and lower teeth come together when exercising."
           }
@@ -296,6 +297,7 @@
         "solution_item_2": {
           "type": "solution_item",
           "settings": {
+            "icon": "shopify://shop_images/Frame_14434_7.png",
             "title": "Adding vertical height",
             "text": "Add height between the teeth creates a biomechanical 'stretch' on the rest of the body in our experience.  And that works in your favor in terms of not getting fatigued or sore as easily."
           }
@@ -303,6 +305,7 @@
         "solution_item_3": {
           "type": "solution_item",
           "settings": {
+            "icon": "shopify://shop_images/Frame_14434_11.png",
             "title": "Remodel the skeleton",
             "text": "What if you could use every athletic session to remodel the skeleton positively so that you are stronger and more flexible over time?  That is the power of leveraging biomechanics in our view."
           }
@@ -396,6 +399,7 @@
         "problem_eyebrow": "THE PROBLEM",
         "problem_title": "Your jaw is throwing off everything below it — and it's costing you <em>performance</em>.",
         "problem_body": "<p>When your jaw sits out of position, your whole skeleton compensates for it. You lose the symmetry your body relies on to move efficiently, you burn energy clenching instead of competing, and you hit a ceiling that no amount of training or supplements will break through.</p>",
+        "problem_image": "shopify://shop_images/the-problem.jpg",
         "solution_eyebrow": "THE SOLUTION",
         "solution_title": "One simple spacing shift <em>unlocks everything.</em>",
         "solution_body": "<p>The RS1 creates spacing between your upper and lower jaw, helping promote a more relaxed jaw position and natural oral posture. This subtle shift can support better breathing, improved comfort, and more efficient movement. So you can perform, recover, and feel your best from the very first use.</p>",
