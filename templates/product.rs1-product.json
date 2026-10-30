@@ -20,10 +20,6 @@
             "text_style": "uppercase"
           }
         },
-        "judge_me_reviews_preview_badge_EAUeai": {
-          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        },
         "title": {
           "type": "title",
           "settings": {}
@@ -150,7 +146,6 @@
       },
       "block_order": [
         "vendor",
-        "judge_me_reviews_preview_badge_EAUeai",
         "title",
         "price",
         "variant_picker",
@@ -202,7 +197,6 @@
         "heading_size": "h1",
         "enable_video_looping": false,
         "video_url": "https://www.youtube.com/watch?v=BK_Qj5KVEic",
-        "cover_image": "shopify://shop_images/ChatGPT_Image_Jun_8_2026_11_41_48_PM.png",
         "description": "",
         "full_width": false,
         "color_scheme": "",
@@ -216,7 +210,6 @@
         "point_1": {
           "type": "point",
           "settings": {
-            "image": "shopify://shop_images/photo-1534438327276-14e5300c3a48.avif",
             "number": "01",
             "title": "Powerlifting",
             "text": "Maximum jaw stability under max load."
@@ -225,7 +218,6 @@
         "point_2": {
           "type": "point",
           "settings": {
-            "image": "shopify://shop_images/photo-1581009146145-b5ef050c2e1e.avif",
             "number": "02",
             "title": "Bodybuilding",
             "text": "Better posture, cleaner muscle activation."
@@ -234,7 +226,6 @@
         "point_3": {
           "type": "point",
           "settings": {
-            "image": "shopify://shop_images/photo-1517963879433-6ad2b056d712.avif",
             "number": "03",
             "title": "CrossFit",
             "text": "Sustain output with better oxygen intake."
@@ -243,7 +234,6 @@
         "point_4": {
           "type": "point",
           "settings": {
-            "image": "shopify://shop_images/photo-1549719386-74dfcbf7dbed.avif",
             "number": "04",
             "title": "Combat Sports",
             "text": "Protection and performance in one."
@@ -252,7 +242,6 @@
         "point_5": {
           "type": "point",
           "settings": {
-            "image": "shopify://shop_images/photo-1546519638-68e109498ffc.avif",
             "number": "05",
             "title": "Team Sports",
             "text": "Stay composed deep into the game."
@@ -289,7 +278,6 @@
         "solution_item_1": {
           "type": "solution_item",
           "settings": {
-            "icon": "shopify://shop_images/sol-jaw.png",
             "title": "Jaw Spacing",
             "text": "Creates spacing between your upper and lower jaw, supporting natural posture, efficient breathing, and full-body stability from the ground up."
           }
@@ -297,7 +285,6 @@
         "solution_item_2": {
           "type": "solution_item",
           "settings": {
-            "icon": "shopify://shop_images/sol-airway.png",
             "title": "Airway Optimization",
             "text": "Opens your airway under load so you breathe harder, fatigue slower."
           }
@@ -305,7 +292,6 @@
         "solution_item_3": {
           "type": "solution_item",
           "settings": {
-            "icon": "shopify://shop_images/sol-clench.png",
             "title": "Clenching Surface",
             "text": "Converts jaw tension into raw power while protecting your teeth."
           }
@@ -314,7 +300,6 @@
           "type": "works_item",
           "settings": {
             "number": "01",
-            "icon": "shopify://shop_images/how-jaw.png",
             "title": "Jaw Spacing for Total-Body Power",
             "text": "Creates precise space between your upper and lower teeth, decompressing the jaw."
           }
@@ -323,7 +308,6 @@
           "type": "works_item",
           "settings": {
             "number": "02",
-            "icon": "shopify://shop_images/how-energy.png",
             "title": "Reduced Tension & Energy Leaks",
             "text": "Eliminates the energy drain from clenching and muscle tension — more of your output goes into raw performance."
           }
@@ -332,7 +316,6 @@
           "type": "works_item",
           "settings": {
             "number": "03",
-            "icon": "shopify://shop_images/how-airway.png",
             "title": "Airway Support Under Load",
             "text": "Keeps your airway open during peak effort. More oxygen in, more fatigue out."
           }
@@ -341,7 +324,6 @@
           "type": "works_item",
           "settings": {
             "number": "04",
-            "icon": "shopify://shop_images/how-results.png",
             "title": "Immediate Results",
             "text": "No break-in period. Stronger, more stable, better breathing from your very first use."
           }
@@ -403,7 +385,6 @@
         "problem_eyebrow": "THE PROBLEM",
         "problem_title": "Your body is leaking performance — <em>and your jaw is why.</em>",
         "problem_body": "<p>When your jaw is out of alignment, your entire skeletal system compensates. You lose stability, burn extra energy fighting tension, and hit a performance ceiling that no supplement or training program can fix.</p>",
-        "problem_image": "shopify://shop_images/the-problem.png",
         "solution_eyebrow": "THE SOLUTION",
         "solution_title": "One simple spacing shift <em>unlocks everything.</em>",
         "solution_body": "<p>The RS1 creates spacing between your upper and lower jaw, helping promote a more relaxed jaw position and natural oral posture. This subtle shift can support better breathing, improved comfort, and more efficient movement. So you can perform, recover, and feel your best from the very first use.</p>",
@@ -412,26 +393,11 @@
         "works_body": "<p>Four mechanisms working together — measured at the jaw, felt through the whole kinetic chain.</p>",
         "works_video_url": "",
         "who_eyebrow": "WHO IT'S FOR",
-        "who_title": "Already a Reviv user? RS1 is what you <em>wear when you move.</em>",
-        "who_image": "shopify://shop_images/who-its-for.png"
+        "who_title": "Already a Reviv user? RS1 is what you <em>wear when you move.</em>"
       }
     },
     "1777795313f54a279b": {
       "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_dVVgF7": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "review_data": "sample_data",
-            "max_width": 1200,
-            "show_shop_reviews": false,
-            "empty_state": "empty_widget"
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_dVVgF7"
-      ],
       "custom_css": [
         "{background: #232021;}"
       ],
