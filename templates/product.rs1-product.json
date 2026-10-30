@@ -216,34 +216,34 @@
         "point_1": {
           "type": "point",
           "settings": {
-            "image": "shopify://shop_images/7a96e479-04fd-4f24-83e2-a9c5b46ff0f6.png",
+            "image": "shopify://shop_images/7a96e479-04fd-4f24-83e2-a9c5b46ff0f6_a5432001-e6c1-4b2b-bb70-aad15ba74014.jpg",
             "number": "01",
-            "title": "YOGA & WELLNESS",
+            "title": "Yoga & Wellness",
             "text": ""
           }
         },
         "point_2": {
           "type": "point",
           "settings": {
-            "image": "shopify://shop_images/ChatGPT_Image_Jul_30_2026_04_49_07_PM.png",
+            "image": "shopify://shop_images/ChatGPT_Image_Jul_30_2026_04_49_07_PM_79f464e6-6d7f-49fc-b2ee-564f8ce5d895.jpg",
             "number": "02",
-            "title": "GYM & FITNESS",
+            "title": "Gym & Fitness",
             "text": ""
           }
         },
         "point_3": {
           "type": "point",
           "settings": {
-            "image": "shopify://shop_images/62aada94-2030-43f2-95ba-25ae4f08d93c.png",
+            "image": "shopify://shop_images/62aada94-2030-43f2-95ba-25ae4f08d93c_896d3d39-f12e-44b0-a21d-4864c80c3228.jpg",
             "number": "03",
-            "title": "SPORTS & ACTIVE LIFE",
+            "title": "Sports & Active Life",
             "text": ""
           }
         },
         "point_5": {
           "type": "point",
           "settings": {
-            "image": "shopify://shop_images/ChatGPT_Image_Jul_30_2026_05_29_18_PM.png",
+            "image": "shopify://shop_images/ChatGPT_Image_Jul_30_2026_05_29_18_PM_c80190d6-d9a6-4b84-9bc5-b336505c1c58.jpg",
             "number": "05",
             "title": "Team Sports",
             "text": ""
@@ -252,7 +252,7 @@
         "point_4": {
           "type": "point",
           "settings": {
-            "image": "shopify://shop_images/c0965560-763c-4dde-8511-13a9c0d20d2c.png",
+            "image": "shopify://shop_images/c0965560-763c-4dde-8511-13a9c0d20d2c_847145b9-08f6-4348-a556-7d5bef66919e.jpg",
             "number": "04",
             "title": "Casual Daytime Use",
             "text": ""
@@ -289,7 +289,6 @@
         "solution_item_1": {
           "type": "solution_item",
           "settings": {
-            "icon": "shopify://shop_images/Frame_14434_9.png",
             "title": "Unlocking the bite",
             "text": "We like to say... \"for the skeleton to change, the bite needs to be able to change.\"  Which is why we believe it is important that you unlock how the upper and lower teeth come together when exercising."
           }
@@ -297,7 +296,6 @@
         "solution_item_2": {
           "type": "solution_item",
           "settings": {
-            "icon": "shopify://shop_images/Frame_14434_7.png",
             "title": "Adding vertical height",
             "text": "Add height between the teeth creates a biomechanical 'stretch' on the rest of the body in our experience.  And that works in your favor in terms of not getting fatigued or sore as easily."
           }
@@ -305,7 +303,6 @@
         "solution_item_3": {
           "type": "solution_item",
           "settings": {
-            "icon": "shopify://shop_images/Frame_14434_11.png",
             "title": "Remodel the skeleton",
             "text": "What if you could use every athletic session to remodel the skeleton positively so that you are stronger and more flexible over time?  That is the power of leveraging biomechanics in our view."
           }
@@ -314,7 +311,6 @@
           "type": "works_item",
           "settings": {
             "number": "01",
-            "icon": "shopify://shop_images/Frame_14434.png",
             "title": "Do not mold",
             "text": "Just wash it off after you receive it."
           }
@@ -323,7 +319,6 @@
           "type": "works_item",
           "settings": {
             "number": "02",
-            "icon": "shopify://shop_images/Frame_14434_2.png",
             "title": "Pop it in your mouth",
             "text": "The ledges should face down and sit inside the lower teeth. This helps keep it in place."
           }
@@ -332,7 +327,6 @@
           "type": "works_item",
           "settings": {
             "number": "03",
-            "icon": "shopify://shop_images/Frame_14434_3.png",
             "title": "Use it while playing athletics",
             "text": "Clench lightly on it while active. Take it out when speaking."
           }
@@ -341,7 +335,6 @@
           "type": "works_item",
           "settings": {
             "number": "04",
-            "icon": "shopify://shop_images/Frame_14434_4.png",
             "title": "Wash it after use",
             "text": "Wash with warm water and soap.  Leave to dry in a dry place."
           }
@@ -403,7 +396,6 @@
         "problem_eyebrow": "THE PROBLEM",
         "problem_title": "Your jaw is throwing off everything below it — and it's costing you <em>performance</em>.",
         "problem_body": "<p>When your jaw sits out of position, your whole skeleton compensates for it. You lose the symmetry your body relies on to move efficiently, you burn energy clenching instead of competing, and you hit a ceiling that no amount of training or supplements will break through.</p>",
-        "problem_image": "shopify://shop_images/the-problem.png",
         "solution_eyebrow": "THE SOLUTION",
         "solution_title": "One simple spacing shift <em>unlocks everything.</em>",
         "solution_body": "<p>The RS1 creates spacing between your upper and lower jaw, helping promote a more relaxed jaw position and natural oral posture. This subtle shift can support better breathing, improved comfort, and more efficient movement. So you can perform, recover, and feel your best from the very first use.</p>",
@@ -412,8 +404,7 @@
         "works_body": "<p>Four mechanisms working together — measured at the jaw, felt through the whole kinetic chain.</p>",
         "works_video_url": "",
         "who_eyebrow": "WHO IT'S FOR",
-        "who_title": "Already a Reviv user? RS1 is what you <em>wear when you move.</em>",
-        "who_image": "shopify://shop_images/who-its-for.png"
+        "who_title": "Already a Reviv user? RS1 is what you <em>wear when you move.</em>"
       }
     },
     "1777795313f54a279b": {
