@@ -432,9 +432,7 @@
       "block_order": [
         "judge_me_reviews_review_widget_dVVgF7"
       ],
-      "custom_css": [
-        "{background: #232021;}"
-      ],
+      "custom_css": [],
       "settings": {
         "include_margins": true
       }

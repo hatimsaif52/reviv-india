@@ -882,6 +882,7 @@
     },
     "1769418126c8416a97": {
       "type": "apps",
+      "disabled": true,
       "custom_css": [
         "{background: #232021;}"
       ],
@@ -891,6 +892,7 @@
     },
     "1769420153d2fd959a": {
       "type": "apps",
+      "disabled": true,
       "custom_css": [
         "{background: #242424;}"
       ],
