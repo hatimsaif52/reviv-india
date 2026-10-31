@@ -335,6 +335,7 @@
         "day_card_4": {
           "type": "day_card",
           "settings": {
+            "image": "shopify://shop_images/c0d10d0d-0264-49dc-9b4a-62878d598b33.jpg",
             "title": "Commuting",
             "text": "Stays in on the train or in the car."
           }
