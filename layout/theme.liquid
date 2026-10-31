@@ -836,5 +836,39 @@ document.addEventListener("DOMContentLoaded", function() {
 {% comment %} <script> </script> {% endcomment %}
 
 
-  </body>
+  <!-- KLINK Live Chat Widget -->
+<link rel="preconnect" href="https://chat.klink.cloud">
+<script>
+  (function (d, t) {
+    var SCRIPT_PATH = "https://chat.klink.cloud/klink-chat-widget.embed.latest.js"
+    var g = d.createElement(t), s = d.getElementsByTagName(t)[0]
+    g.src = SCRIPT_PATH
+    g.async = true
+    s.parentNode.insertBefore(g, s)
+    // Keeps the widget at normal size on themes that set html font-size to 62.5% (getreviv.in does).
+    // Harmless on themes with a 16px root (mewology.org).
+    function klinkFix() {
+      var host = d.getElementById('klink-chat-widget-container')
+      if (!host || !host.shadowRoot) return setTimeout(klinkFix, 30)
+      var sr = host.shadowRoot
+      function remToPx() {
+        sr.querySelectorAll('style').forEach(function (st) {
+          if (st.getAttribute('data-remfix')) return
+          st.textContent = st.textContent.replace(/(-?\d*\.?\d+)rem\b/g, function (m, n) { return (parseFloat(n) * 16) + 'px' })
+          st.setAttribute('data-remfix', '1')
+        })
+      }
+      remToPx()
+      new MutationObserver(remToPx).observe(sr, { childList: true, subtree: true })
+    }
+    g.onload = function () {
+      window.klinkChatSDK.run({
+        serverUrl: "https://apigw.klink.cloud",
+        scId: "639efffc-8112-4b8c-be04-9b5118b70438",
+      })
+      klinkFix()
+    }
+  })(document, 'script');
+</script>
+</body>
 </html>
