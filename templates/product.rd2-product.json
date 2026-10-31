@@ -311,7 +311,7 @@
         "day_card_1": {
           "type": "day_card",
           "settings": {
-            "image": "shopify://shop_images/ChatGPT_Image_Jul_10_2026_09_57_56_PM.png",
+            "image": "shopify://shop_images/ChatGPT_Image_Jul_10_2026_09_57_56_PM.jpg",
             "title": "At Work",
             "text": "Low profile enough for meetings and calls."
           }
@@ -319,7 +319,7 @@
         "day_card_2": {
           "type": "day_card",
           "settings": {
-            "image": "shopify://shop_images/d452bcc9-a5a6-4d5d-8bbd-afbb28d51cc7.png",
+            "image": "shopify://shop_images/d452bcc9-a5a6-4d5d-8bbd-afbb28d51cc7.jpg",
             "title": "At the Gym",
             "text": "Built for movement, lifting and effort."
           }
@@ -327,7 +327,7 @@
         "day_card_3": {
           "type": "day_card",
           "settings": {
-            "image": "shopify://shop_images/ChatGPT_Image_Jul_10_2026_10_22_20_PM.png",
+            "image": "shopify://shop_images/ChatGPT_Image_Jul_10_2026_10_22_20_PM.jpg",
             "title": "On a Run",
             "text": "Stays put during cardio and outdoor sessions."
           }
@@ -335,7 +335,6 @@
         "day_card_4": {
           "type": "day_card",
           "settings": {
-            "image": "shopify://shop_images/c0d10d0d-0264-49dc-9b4a-62878d598b33.png",
             "title": "Commuting",
             "text": "Stays in on the train or in the car."
           }
@@ -378,7 +377,7 @@
         "text_color_3": "#8a8a8a",
         "border_color": "#ffffff14",
         "idea_eyebrow": "— The idea behind RD2 —",
-        "idea_title": "<strong>Designed for your </strong><em><strong>whole day.</strong></em>",
+        "idea_title": "Designed for your <em>Whole Day.</em>",
         "idea_subtext": "<p>RD2 is lightweight and low-profile, which is designed so you can speak naturally, breathe easily, commute, train at the gym, and go about your normal life without any issues.Think of it as the daytime counterpart to your Reviv mouthguard (R1/R2/R3) appliance. Day and night together means consistent, compounding progress.<br/><br/>Day and night. Together, that's when the real progress happens.</p>",
         "day_eyebrow": "— Where you'll wear it —",
         "day_title": "Designed for Your <em>Whole Day</em>",
