@@ -521,7 +521,7 @@
                   {% render 'rs1-terms', section: section %}
                 {% endif %}
                 {% assign show_preorder = false %}
-                {% if current_variant.metafields.custom.show_preorder == true and current_variant.inventory_quantity <= 0 and current_variant.inventory_policy == 'continue' %}
+                {% if current_variant.metafields.custom.show_preorder == true and current_variant.metafields.custom.preorder_message != blank %}
                   {% assign show_preorder = true %}
                 {% endif %}
                 {%- render 'buy-buttons',
