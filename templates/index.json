@@ -69,7 +69,6 @@
       "blocks": {
         "p1": {
           "type": "product",
-          "disabled": true,
           "settings": {
             "product": "r3-revivthree-without-support",
             "badge": "BEST SELLER",
