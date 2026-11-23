@@ -186,3 +186,5 @@
   scrollbar-width: thin;
   scrollbar-color: #e5c085 rgba(229, 192, 133, 0.2);
 }
+
+.size-chart-img-wrapper img { width: 75%; }
