@@ -1,0 +1,239 @@
+{% comment %}Reviv creator recruiting page (India). Source: reviv-creator-recruit/ in Not Anxious. Rebuild with build.py + make_shopify.py.{% endcomment %}
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+#rcr{--bg:#000000; --s1:#181818; --s2:#1F1F1F; --s3:#272727; --line:#313131;--text:#FFFFFF; --muted:#A3A3A3; --gold:#D4A24C; --gold-ink:#131209;--ease:cubic-bezier(0.22,1,0.36,1);}#rcr *{box-sizing:border-box;margin:0;padding:0}#rcr{background:var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}#rcr a{color:inherit}#rcr img,#rcr video{display:block;max-width:100%}#rcr .skip{position:absolute;left:16px;top:-64px;background:var(--gold);color:var(--gold-ink);padding:8px 12px;border-radius:8px;z-index:100;transition:transform .3s var(--ease)}#rcr .skip:focus{top:16px}#rcr :focus-visible{outline:2px solid var(--gold);outline-offset:4px;border-radius:8px}#rcr .heading-1{font-size:60px;line-height:60px;font-weight:600;letter-spacing:-0.02em}#rcr .heading-2{font-size:48px;line-height:48px;font-weight:600;letter-spacing:-0.02em}#rcr .heading-3{font-size:36px;line-height:40px;font-weight:600;letter-spacing:-0.01em}#rcr .heading-5{font-size:24px;line-height:32px;font-weight:600}#rcr .title-2{font-size:18px;line-height:28px;font-weight:500}#rcr .title-3{font-size:16px;line-height:24px;font-weight:500}#rcr .body-3{font-size:16px;line-height:24px;font-weight:400}#rcr .body-5{font-size:14px;line-height:20px;font-weight:500}#rcr .body-6{font-size:14px;line-height:20px;font-weight:400}#rcr .button-md{font-size:16px;line-height:24px;font-weight:600}#rcr .button-sm{font-size:14px;line-height:20px;font-weight:600}#rcr .caption-3{font-size:12px;line-height:16px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}#rcr .caption-5{font-size:12px;line-height:16px;font-weight:400}#rcr h1,#rcr h2,#rcr h3{text-wrap:balance}#rcr p{text-wrap:pretty}#rcr .muted{color:var(--muted)}#rcr .gold{color:var(--gold)}@media (max-width:720px){#rcr .heading-1{font-size:36px;line-height:40px}#rcr .heading-2{font-size:30px;line-height:36px}#rcr .heading-3{font-size:30px;line-height:36px}}#rcr .wrap{max-width:1120px;margin:0 auto;padding:0 16px}#rcr section{padding:96px 0}@media (max-width:720px){#rcr section{padding:64px 0}}#rcr nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:50;display:flex;align-items:center;gap:24px;padding:8px 16px;border-radius:9999px;background:rgba(24,24,24,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--line);white-space:nowrap}#rcr nav .logo{font-weight:700;letter-spacing:.12em;font-size:14px;line-height:20px}#rcr nav .links{display:flex;gap:16px}#rcr nav .links a{text-decoration:none;color:var(--muted);transition:color .3s var(--ease)}#rcr nav .links a:hover{color:var(--text)}@media (max-width:560px){#rcr nav .links{display:none}}#rcr .btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:9999px;text-decoration:none;border:0;cursor:pointer;transition:transform .3s var(--ease),background-color .3s var(--ease),opacity .3s var(--ease)}#rcr .btn:active{transform:scale(.98)}#rcr .btn-gold{background:var(--gold);color:var(--gold-ink)}#rcr .btn-gold:hover{background:#E0B35F}#rcr .btn-lg{padding:12px 24px}#rcr .btn-ghost{background:var(--s2);color:var(--text);border:1px solid var(--line)}#rcr .btn-ghost:hover{background:var(--s3)}#rcr .hero{padding:144px 0 48px;text-align:center}#rcr .hero h1{max-width:680px;margin:0 auto;background:linear-gradient(90deg,#FFFFFF,#9B9B9B);-webkit-background-clip:text;background-clip:text;color:transparent}#rcr .hero .sub{max-width:680px;margin:24px auto 0}#rcr .hero .cta{margin-top:32px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}#rcr .flags{margin-top:24px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap}#rcr .pill{padding:4px 12px;border-radius:9999px;background:var(--s1);border:1px solid var(--line)}#rcr .pill.new{border-color:var(--gold);color:var(--gold)}#rcr .wall{margin-top:64px;overflow:hidden;display:grid;gap:12px;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}#rcr .row{display:flex;gap:12px;width:max-content;animation:rcr-slide 80s linear infinite}#rcr .row.r2{animation-direction:reverse;animation-duration:95s}#rcr .wall:hover .row{animation-play-state:paused}@keyframes rcr-slide{to{transform:translateX(-50%)}}#rcr .tile{width:150px;aspect-ratio:9/16;border-radius:16px;overflow:hidden;background:var(--s2);position:relative;flex:none;cursor:pointer;border:0;padding:0;color:inherit;text-align:left}#rcr .tile video{width:100%;height:100%;object-fit:cover}#rcr .tile .tag{position:absolute;left:8px;bottom:8px;right:8px;padding:4px 8px;border-radius:8px;background:rgba(0,0,0,.6);backdrop-filter:blur(8px)}@media (max-width:720px){#rcr .tile{width:116px}}@media (prefers-reduced-motion:reduce){#rcr .row{animation:none}}#rcr .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:48px}#rcr .stat{background:var(--s1);border:1px solid var(--line);border-radius:16px;padding:24px;text-align:left}#rcr .stat b{display:block}@media (max-width:720px){#rcr .stats{grid-template-columns:repeat(2,1fr)}}#rcr .sec-head{max-width:680px}#rcr .sec-head p{margin-top:16px}#rcr .deal{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:48px}#rcr .card{background:var(--s1);border:1px solid var(--line);border-radius:24px;padding:32px}#rcr .card .big{font-size:48px;line-height:48px;font-weight:600;color:var(--gold);margin:16px 0 12px}#rcr .card ul{list-style:none;margin-top:24px;display:grid;gap:12px}#rcr .card li{display:flex;gap:12px;align-items:flex-start}#rcr .card li svg{flex:none;margin-top:2px}@media (max-width:720px){#rcr .deal{grid-template-columns:1fr}#rcr .card{padding:24px}}#rcr .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:48px}#rcr .step{background:var(--s1);border:1px solid var(--line);border-radius:24px;padding:32px}#rcr .step .n{width:40px;height:40px;border-radius:9999px;display:grid;place-items:center;background:var(--s3);margin-bottom:24px}#rcr .step p{margin-top:8px}@media (max-width:720px){#rcr .steps{grid-template-columns:1fr}}#rcr .filters{display:flex;gap:8px;margin-top:32px;flex-wrap:wrap}#rcr .chip{padding:8px 12px;border-radius:9999px;background:var(--s1);border:1px solid var(--line);color:var(--muted);cursor:pointer;transition:background-color .3s var(--ease),color .3s var(--ease)}#rcr .chip:hover{color:var(--text)}#rcr .chip[aria-pressed=true]{background:var(--text);color:#000;border-color:var(--text)}#rcr .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}@media (max-width:960px){#rcr .grid{grid-template-columns:repeat(3,1fr)}}@media (max-width:640px){#rcr .grid{grid-template-columns:repeat(2,1fr)}}#rcr .cc{background:var(--s1);border:1px solid var(--line);border-radius:16px;padding:8px;display:flex;flex-direction:column;gap:8px;transition:transform .5s var(--ease)}#rcr .cc:hover{transform:translateY(-4px)}#rcr .cc .vid{aspect-ratio:9/16;border-radius:8px;overflow:hidden;background:var(--s2);position:relative;cursor:pointer;border:0;padding:0;width:100%}#rcr .cc .vid video{width:100%;height:100%;object-fit:cover}#rcr .cc .count{position:absolute;top:8px;right:8px;padding:4px 8px;border-radius:8px;background:rgba(0,0,0,.6);backdrop-filter:blur(8px);display:flex;gap:4px;align-items:center}#rcr .cc .meta{padding:4px 8px 8px}#rcr .cc .meta a{display:inline-flex;gap:4px;align-items:center;margin-top:8px;text-decoration:none;color:var(--gold)}#rcr .cc .meta a:hover{text-decoration:underline}#rcr .skel{background:linear-gradient(90deg,var(--s2),var(--s3),var(--s2));background-size:200% 100%;animation:rcr-sk 1.4s ease-out infinite}@keyframes rcr-sk{to{background-position:-200% 0}}#rcr .reveal{text-align:left}#rcr .reveal h2{max-width:880px}#rcr .reveal .w{color:rgba(255,255,255,.3);transition:color .6s var(--ease)}#rcr .reveal .w.on{color:var(--text)}#rcr .reveal .w.g.on{color:var(--gold)}#rcr .faq{margin-top:48px;display:grid;gap:12px;max-width:800px}#rcr details{background:var(--s1);border:1px solid var(--line);border-radius:16px;padding:24px}#rcr summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}#rcr summary::-webkit-details-marker{display:none}#rcr summary svg{flex:none;transition:transform .5s var(--ease)}#rcr details[open] summary svg{transform:rotate(45deg)}#rcr details p{margin-top:12px}#rcr .final{text-align:center}#rcr .final .card{padding:64px 32px}#rcr .final h2{max-width:680px;margin:0 auto}#rcr .final p{max-width:560px;margin:16px auto 32px}#rcr footer{padding:48px 0;border-top:1px solid var(--s2)}#rcr footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}#rcr footer a{text-decoration:none;color:var(--muted)}#rcr footer a:hover{color:var(--text)}#rcr .rise{opacity:0;transform:translateY(32px);transition:opacity .7s var(--ease),transform .7s var(--ease)}#rcr .rise.in{opacity:1;transform:none}@media (prefers-reduced-motion:reduce){#rcr .rise{transform:none;transition:opacity .3s}}#rcr .player{position:fixed;inset:0;z-index:80;background:rgba(0,0,0,.94);backdrop-filter:blur(16px);display:none}#rcr .player.open{display:block}#rcr .player .feed{height:100%;overflow-y:auto;scroll-snap-type:y mandatory;scrollbar-width:none}#rcr .player .feed::-webkit-scrollbar{display:none}#rcr .player .slide{height:100%;scroll-snap-align:start;display:grid;place-items:center;padding:64px 16px 24px}#rcr .player .slide video{height:100%;max-height:820px;aspect-ratio:9/16;object-fit:cover;border-radius:24px;background:var(--s1)}#rcr .player .top{position:absolute;top:16px;left:16px;right:16px;display:flex;justify-content:space-between;align-items:center;gap:12px;pointer-events:none}#rcr .player .top>*{pointer-events:auto}#rcr .player .who{background:rgba(24,24,24,.8);border:1px solid var(--line);border-radius:9999px;padding:8px 16px}#rcr .iconbtn{width:40px;height:40px;border-radius:9999px;display:grid;place-items:center;background:var(--s2);border:1px solid var(--line);color:var(--text);cursor:pointer;transition:background-color .3s var(--ease)}#rcr .iconbtn:hover{background:var(--s3)}#rcr .player .hint{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);padding:4px 12px;border-radius:9999px;background:rgba(24,24,24,.8)}#rcr{position:relative;overflow-x:hidden;font-family:Manrope,system-ui,sans-serif}#rcr h1,#rcr h2,#rcr h3,#rcr p,#rcr summary{color:inherit;font-family:inherit;text-transform:none}#rcr .hero{padding-top:64px}#rcr .player{z-index:2147483000}
+</style>
+<div id="rcr">
+<div id="rcr-main">
+<div class="hero">
+  <div class="wrap">
+    <h1 class="heading-1">Make one honest video.<br>Earn on every sale it drives.</h1>
+    <p class="sub body-3 muted">We send you a Reviv for free. You film your real experience. We put real ad money behind your video and pay you 5% of every sale it brings in.</p>
+    <div class="cta">
+      <a class="btn btn-gold btn-lg button-md" href="#creators">Watch our creators</a>
+    </div>
+    <div class="flags caption-5">
+      <span class="pill">United States</span><span class="pill">United Kingdom</span><span class="pill">Australia</span><span class="pill new">India &middot; new</span>
+    </div>
+  </div>
+  <div class="wall" aria-label="Creator videos">
+    <div class="row" id="row1"></div>
+    <div class="row r2" id="row2"></div>
+  </div>
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><b class="heading-3">100,000+</b><span class="body-6 muted">Revivs sold worldwide</span></div>
+      <div class="stat"><b class="heading-3" id="nCreators">22</b><span class="body-6 muted">creators with their own Reviv page</span></div>
+      <div class="stat"><b class="heading-3" id="nClips">140+</b><span class="body-6 muted">creator videos running as ads</span></div>
+      <div class="stat"><b class="heading-3">4</b><span class="body-6 muted">countries, India is the newest</span></div>
+    </div>
+  </div>
+</div>
+
+<section id="deal">
+  <div class="wrap">
+    <div class="sec-head rise">
+      <h2 class="heading-2">You make the video.<br>We make it work.</h2>
+      <p class="body-3 muted">Most brand deals pay once and disappear. With Reviv your video keeps earning for as long as our ads keep running it.</p>
+    </div>
+    <div class="deal">
+      <div class="card rise">
+        <p class="title-3 muted">Start here</p>
+        <div class="big">Free Reviv</div>
+        <p class="body-3 muted">Pick your guard. We ship it to you, no charge, no strings on what you say about it.</p>
+        <ul class="body-6">
+          <li><svg width="16" height="16" viewBox="0 0 256 256" fill="#D4A24C" aria-hidden="true"><path d="M229.7 77.7l-128 128a8 8 0 0 1-11.4 0l-56-56a8 8 0 0 1 11.4-11.4L96 188.7 218.3 66.3a8 8 0 0 1 11.4 11.4Z"/></svg><span>Use it, then give your honest review</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 256 256" fill="#D4A24C" aria-hidden="true"><path d="M229.7 77.7l-128 128a8 8 0 0 1-11.4 0l-56-56a8 8 0 0 1 11.4-11.4L96 188.7 218.3 66.3a8 8 0 0 1 11.4 11.4Z"/></svg><span>Your words, your style, your honest take</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 256 256" fill="#D4A24C" aria-hidden="true"><path d="M229.7 77.7l-128 128a8 8 0 0 1-11.4 0l-56-56a8 8 0 0 1 11.4-11.4L96 188.7 218.3 66.3a8 8 0 0 1 11.4 11.4Z"/></svg><span>A personal discount code for your followers</span></li>
+        </ul>
+      </div>
+      <div class="card rise">
+        <p class="title-3 muted">Then keep earning</p>
+        <div class="big">5% of every sale</div>
+        <p class="body-3 muted">When we run your video as an ad from your handle, you earn 5% of every sale that ad brings in.</p>
+        <ul class="body-6">
+          <li><svg width="16" height="16" viewBox="0 0 256 256" fill="#D4A24C" aria-hidden="true"><path d="M229.7 77.7l-128 128a8 8 0 0 1-11.4 0l-56-56a8 8 0 0 1 11.4-11.4L96 188.7 218.3 66.3a8 8 0 0 1 11.4 11.4Z"/></svg><span>We pay for the ads, you never spend a rupee</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 256 256" fill="#D4A24C" aria-hidden="true"><path d="M229.7 77.7l-128 128a8 8 0 0 1-11.4 0l-56-56a8 8 0 0 1 11.4-11.4L96 188.7 218.3 66.3a8 8 0 0 1 11.4 11.4Z"/></svg><span>Your handle on the ad, so your account grows too</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 256 256" fill="#D4A24C" aria-hidden="true"><path d="M229.7 77.7l-128 128a8 8 0 0 1-11.4 0l-56-56a8 8 0 0 1 11.4-11.4L96 188.7 218.3 66.3a8 8 0 0 1 11.4 11.4Z"/></svg><span>Results shared with you every month</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head rise">
+      <h2 class="heading-2">Three steps, nothing complicated</h2>
+    </div>
+    <div class="steps">
+      <div class="step rise"><div class="n title-3">1</div><h3 class="heading-5">Reply to our message</h3><p class="body-6 muted">Answer the Instagram DM we sent you. We ask your size so the guard fits, then ship it.</p></div>
+      <div class="step rise"><div class="n title-3">2</div><h3 class="heading-5">Use it, then review</h3><p class="body-6 muted">Use it and film your review: what you noticed about your sleep, jaw, face or routine. Phone camera is perfect.</p></div>
+      <div class="step rise"><div class="n title-3">3</div><h3 class="heading-5">We run it, you earn</h3><p class="body-6 muted">You approve it as a partnership ad on Instagram. We put budget behind it and you earn 5% of every sale.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="creators">
+  <div class="wrap">
+    <div class="sec-head rise">
+      <h2 class="heading-2">Real people, real routines</h2>
+      <p class="body-3 muted">Tap any creator to watch their videos. Many of them got their own page on our store, built around their story.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filter creators">
+      <button class="chip body-5" aria-pressed="true" data-f="all">All</button>
+      <button class="chip body-5" aria-pressed="false" data-f="face">Face and jaw</button>
+      <button class="chip body-5" aria-pressed="false" data-f="sleep">Sleep and grinding</button>
+      <button class="chip body-5" aria-pressed="false" data-f="pain">TMJ and headaches</button>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="wrap">
+    <h2 class="heading-1" id="tagline">Your honest video, backed by our ad budget, earning you money every time it sells.</h2>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head rise">
+      <h2 class="heading-2">Before you reply</h2>
+    </div>
+    <div class="faq">
+      <details class="rise"><summary class="title-2">Do I need a big following?<svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M224 128a8 8 0 0 1-8 8h-80v80a8 8 0 0 1-16 0v-80H40a8 8 0 0 1 0-16h80V40a8 8 0 0 1 16 0v80h80a8 8 0 0 1 8 8Z"/></svg></summary><p class="body-6 muted">No. We care about how real your video feels, not your follower count. Plenty of our best performing ads come from accounts with a few thousand followers.</p></details>
+      <details class="rise"><summary class="title-2">What does it cost me?<svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M224 128a8 8 0 0 1-8 8h-80v80a8 8 0 0 1-16 0v-80H40a8 8 0 0 1 0-16h80V40a8 8 0 0 1 16 0v80h80a8 8 0 0 1 8 8Z"/></svg></summary><p class="body-6 muted">Nothing. The guard is free and we pay for every ad. You only give us your time and an honest video.</p></details>
+      <details class="rise"><summary class="title-2">How does the 5% work?<svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M224 128a8 8 0 0 1-8 8h-80v80a8 8 0 0 1-16 0v-80H40a8 8 0 0 1 0-16h80V40a8 8 0 0 1 16 0v80h80a8 8 0 0 1 8 8Z"/></svg></summary><p class="body-6 muted">When your video runs as a partnership ad from your handle, every sale that ad brings in earns you 5%. We share the results with you every month and pay out what you earned.</p></details>
+      <details class="rise"><summary class="title-2">Do I have to say good things?<svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M224 128a8 8 0 0 1-8 8h-80v80a8 8 0 0 1-16 0v-80H40a8 8 0 0 1 0-16h80V40a8 8 0 0 1 16 0v80h80a8 8 0 0 1 8 8Z"/></svg></summary><p class="body-6 muted">No. Use it, then give your honest review. Honest videos are the ones that sell, so that is what we want.</p></details>
+      <details class="rise"><summary class="title-2">What is a partnership ad?<svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M224 128a8 8 0 0 1-8 8h-80v80a8 8 0 0 1-16 0v-80H40a8 8 0 0 1 0-16h80V40a8 8 0 0 1 16 0v80h80a8 8 0 0 1 8 8Z"/></svg></summary><p class="body-6 muted">An Instagram ad that shows your handle and your video, paid for by us. You approve it from your Instagram settings and can see it running.</p></details>
+      <details class="rise"><summary class="title-2">What kind of video should I make?<svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M224 128a8 8 0 0 1-8 8h-80v80a8 8 0 0 1-16 0v-80H40a8 8 0 0 1 0-16h80V40a8 8 0 0 1 16 0v80h80a8 8 0 0 1 8 8Z"/></svg></summary><p class="body-6 muted">Talk to camera about what you noticed: your sleep, your jaw, your face, your mornings. Show the guard. Thirty to sixty seconds filmed on your phone is ideal.</p></details>
+      <details class="rise"><summary class="title-2">Which Reviv will I get?<svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M224 128a8 8 0 0 1-8 8h-80v80a8 8 0 0 1-16 0v-80H40a8 8 0 0 1 0-16h80V40a8 8 0 0 1 16 0v80h80a8 8 0 0 1 8 8Z"/></svg></summary><p class="body-6 muted">We will match you to the right guard for your bite once you reply with your size.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <div class="card rise">
+      <h2 class="heading-2">Be one of our first creators in India</h2>
+      <p class="body-3 muted">We are starting with a small group. Interested? Just reply to the Instagram message we sent you and we will take it from there.</p>
+    </div>
+  </div>
+</section>
+</div>
+
+
+
+<div class="player" id="player" role="dialog" aria-modal="true" aria-label="Creator videos">
+  <div class="feed" id="feed"></div>
+  <div class="top">
+    <div class="who body-5" id="who"></div>
+    <button class="iconbtn" id="close" aria-label="Close videos"><svg width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><path d="M205.7 194.3a8 8 0 0 1-11.4 11.4L128 139.3l-66.3 66.4a8 8 0 0 1-11.4-11.4l66.4-66.3-66.4-66.3a8 8 0 0 1 11.4-11.4l66.3 66.4 66.3-66.4a8 8 0 0 1 11.4 11.4L139.3 128Z"/></svg></button>
+  </div>
+  <div class="hint caption-5 muted" id="hint">Scroll for more</div>
+</div>
+</div>
+<script>
+(function(){
+
+const B='https://cdn.shopify.com/s/files/1/0706/4243/4289/t/42/assets/';const CREATORS = [{"slug":"cranium","name":"Anika","handle":"@cranium117","angle":"Full facial structure breakdown","loop":"AT-more-cranium.mp4","clips":["cranium-ethan.mp4","cranium-how.mp4","cranium-scalp.mp4","cranium-spee.mp4","cranium-stacy.mp4","cranium-story.mp4","cranium-top5.mp4"]},{"slug":"shannon","name":"Shannon","handle":"@rheniumstudios","angle":"Daily wear, real routine","loop":"AT-more-shannon.mp4","clips":["shannon-balloon.mp4","shannon-clench.mp4","shannon-connection.mp4","shannon-origin.mp4","shannon-pain.mp4","shannon-skeptic.mp4","shannon-story.mp4"]},{"slug":"mia","name":"Mia Berlin","handle":"@biomechanical__collapse","angle":"Violinist, jaw tension science","loop":"AT-more-mia.mp4","clips":["mia-fascia.mp4","mia-night.mp4","mia-release.mp4","mia-story.mp4","mia-stretch.mp4","mia-techniques.mp4"]},{"slug":"corrie","name":"Corie Sullivan","handle":"@mama_corie","angle":"Sleep, nose breathing, HRV","loop":"AT-more-corrie.mp4","clips":["corrie-clear.mp4","corrie-night.mp4","corrie-r1.mp4","corrie-r2.mp4","corrie-story.mp4"]},{"slug":"harland","name":"Harland","handle":"","angle":"Which Reviv is right for you","loop":"AT-more-harland.mp4","clips":["harland-comfort.mp4","harland-demo.mp4","harland-pick.mp4","harland-size.mp4","harland-story.mp4"]},{"slug":"jessica","name":"Jessica Hartis","handle":"@sellingmama","angle":"Grinding and sleep","loop":"AT-more-jessica.mp4","clips":["jessica-faq.mp4","jessica-holes.mp4","jessica-sleep.mp4","jessica-stops.mp4","jessica-story.mp4"]},{"slug":"juan-abi","name":"Juan Abi","handle":"","angle":"Cheekbones and structure","loop":"AT-more-juanabi.mp4","clips":["https://cdn.shopify.com/videos/c/vp/0629cd569c13415799ca410dab8ccbcd/0629cd569c13415799ca410dab8ccbcd.HD-1080p-2.5Mbps-91301887.mp4","https://cdn.shopify.com/videos/c/vp/140f8b0977df4b9eae327f268781438e/140f8b0977df4b9eae327f268781438e.HD-1080p-2.5Mbps-91301889.mp4","https://cdn.shopify.com/videos/c/vp/6f6e0995ec14452c9ecd8edbb3340c2e/6f6e0995ec14452c9ecd8edbb3340c2e.HD-1080p-2.5Mbps-91301886.mp4","https://cdn.shopify.com/videos/c/vp/8d56446caeec425e9271280e5c8c1a59/8d56446caeec425e9271280e5c8c1a59.HD-1080p-2.5Mbps-91301890.mp4","https://cdn.shopify.com/videos/c/vp/d94d1ac4653046d4a690f915fb9d24e5/d94d1ac4653046d4a690f915fb9d24e5.HD-1080p-2.5Mbps-91301888.mp4"]},{"slug":"chris","name":"Chris H.","handle":"","angle":"Smile and jaw transformation","loop":"AT-more-chris.mp4","clips":["chris-clip2.mp4","chris-clip3.mp4","chris-clip4.mp4","chris-clip5.mp4","chris-story.mp4"]},{"slug":"santiago","name":"Santiago Figarola","handle":"","angle":"Maxillofacial biomechanics","loop":"AT-more-santiago.mp4","clips":["santiago-clip1.mp4","santiago-clip2.mp4","santiago-clip3.mp4","santiago-clip4.mp4"]},{"slug":"katie","name":"Katie Smiley","handle":"","angle":"Clenching, headaches, neck pain","loop":"AT-more-katie.mp4","clips":["katie-clip1.mp4","katie-clip2.mp4","katie-clip3.mp4","katie-clip4.mp4","katie-clip5.mp4","katie-clip6.mp4"]},{"slug":"sarah","name":"Sarah Miller","handle":"","angle":"Jaw alignment, stopped clenching","loop":"AT-more-sarah.mp4","clips":["sarah-clip1.mp4","sarah-clip2.mp4","sarah-clip3.mp4","sarah-clip4.mp4","sarah-clip5.mp4","sarah-clip6.mp4"]},{"slug":"alejandra","name":"Alejandra Maville","handle":"@mavillealejandra","angle":"Bilingual EN + ES","loop":"AT-more-alejandra.mp4","clips":["alejandra-clip1.mp4","alejandra-clip2.mp4","alejandra-clip3.mp4","alejandra-clip4.mp4","alejandra-clip5.mp4","alejandra-clip6.mp4","alejandra-clip7.mp4"]},{"slug":"ney","name":"Ney Batista","handle":"","angle":"Botox vs guard vs braces","loop":"AT-more-ney.mp4","clips":["ney-clip1.mp4","ney-clip2.mp4","ney-clip3.mp4","ney-clip4.mp4","ney-clip5.mp4","ney-clip6.mp4","ney-clip7.mp4","ney-clip8.mp4"]},{"slug":"amanda","name":"Amanda Cooper","handle":"@a.elizabeth_cooper","angle":"45, jawline and sleep","loop":"AT-more-amanda.mp4","clips":["amanda-clip1.mp4","amanda-clip2.mp4","amanda-clip3.mp4","amanda-clip4.mp4","amanda-clip5.mp4","amanda-clip6.mp4"]},{"slug":"makayla","name":"Makayla Herdman","handle":"","angle":"Tongue posture, look and feel","loop":"AT-more-makayla.mp4","clips":["makayla-clip1.mp4","makayla-clip2.mp4","makayla-clip3.mp4","makayla-clip4.mp4","makayla-clip5.mp4","makayla-clip6.mp4","makayla-clip7.mp4"]},{"slug":"leo","name":"Leo Yang","handle":"@leoyangstudio","angle":"Jawline myths, busted","loop":"AT-more-leo.mp4","clips":["leo-clip1.mp4","leo-clip2.mp4","leo-clip3.mp4","leo-clip4.mp4","leo-clip5.mp4","leo-clip6.mp4"]},{"slug":"nick","name":"Nick Pluta","handle":"@coachpluta","angle":"Coach, no boiling, no dentist","loop":"AT-more-nick.mp4","clips":["nick-clip1.mp4","nick-clip2.mp4","nick-clip3.mp4","nick-clip4.mp4","nick-clip5.mp4","nick-clip6.mp4","nick-clip7.mp4"]},{"slug":"laura","name":"Laura Fillier","handle":"","angle":"TMJ, ditched acrylic splints","loop":"AT-more-laura.mp4","clips":["laura-clip1.mp4","laura-clip2.mp4","laura-clip3.mp4","laura-clip4.mp4","laura-clip5.mp4","laura-clip6.mp4","laura-clip7.mp4","laura-clip8.mp4"]},{"slug":"esther","name":"Esther Brubaker","handle":"","angle":"Snoring and grinding","loop":"AT-more-esther.mp4","clips":["esther-clip1.mp4","esther-clip2.mp4","esther-clip3.mp4","esther-clip4.mp4","esther-clip5.mp4","esther-clip6.mp4","esther-clip7.mp4","esther-clip8.mp4"]},{"slug":"arsy","name":"Arsy","handle":"","angle":"","loop":"AT-more-arsy.mp4","clips":["arsy-clip1.mp4","arsy-clip2.mp4","arsy-clip3.mp4","arsy-clip4.mp4","arsy-clip5.mp4","arsy-clip6.mp4","arsy-clip7.mp4","arsy-clip8.mp4"]},{"slug":"tommy","name":"Tommy","handle":"","angle":"","loop":"AT-more-tommy.mp4","clips":["tommy-clip1.mp4","tommy-clip2.mp4","tommy-clip3.mp4","tommy-clip4.mp4","tommy-clip5.mp4","tommy-clip6.mp4","tommy-clip7.mp4","tommy-clip8.mp4"]},{"slug":"jaden","name":"Jaden","handle":"","angle":"","loop":"AT-more-jaden.mp4","clips":["jaden-clip1.mp4","jaden-clip2.mp4","jaden-clip3.mp4","jaden-clip4.mp4","jaden-clip5.mp4","jaden-clip6.mp4","jaden-clip7.mp4","jaden-clip8.mp4"]}];CREATORS.forEach(c=>{c.loop=c.loop.startsWith('http')?c.loop:B+c.loop;c.clips=c.clips.map(x=>x.startsWith('http')?x:B+x);});
+const CAT = {cranium:'face',shannon:'sleep',mia:'pain',corrie:'sleep',harland:'face',jessica:'sleep','juan-abi':'face',chris:'face',santiago:'sleep',katie:'pain',sarah:'pain',alejandra:'face',ney:'face',amanda:'face',makayla:'face',leo:'face',nick:'sleep',laura:'pain',esther:'sleep',arsy:'sleep',tommy:'sleep',jaden:'sleep'};
+const PLAY = '<svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor"><path d="M232.4 114.5 88.3 26.4a16 16 0 0 0-24.3 13.5v176.2a16 16 0 0 0 24.3 13.5l144.1-88.1a15.8 15.8 0 0 0 0-27Z"/></svg>';
+const STAR = '<svg width="12" height="12" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M234.3 114.9l-45.9 39.4 13.9 59.6a16 16 0 0 1-23.8 17.3L128 199.6l-52.5 31.9a16 16 0 0 1-23.8-17.3l13.9-59.6-45.9-39.4a16 16 0 0 1 9.1-28.1l60.4-5.2 23.7-56.3a16 16 0 0 1 29.5 0l23.7 56.3 60.4 5.2a16 16 0 0 1 9.1 28.1Z"/></svg>';
+const ARROW = '<svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor"><path d="M200 64v104a8 8 0 0 1-16 0V83.3L69.7 197.7a8 8 0 0 1-11.4-11.4L172.7 72H88a8 8 0 0 1 0-16h104a8 8 0 0 1 8 8Z"/></svg>';
+
+const total = CREATORS.reduce((a,c)=>a+c.clips.length,0);
+document.getElementById('nCreators').textContent = CREATORS.length;
+document.getElementById('nClips').textContent = (Math.floor(total/10)*10)+'+';
+
+// lazy play: only videos on screen load and play
+const vio = new IntersectionObserver(es=>es.forEach(e=>{
+  const v=e.target;
+  if(e.isIntersecting){ if(!v.src) v.src=v.dataset.src; v.play().catch(()=>{}); }
+  else v.pause();
+}),{rootMargin:'200px'});
+function vid(src){const v=document.createElement('video');v.dataset.src=src;v.muted=true;v.loop=true;v.playsInline=true;v.preload='none';v.setAttribute('aria-hidden','true');vio.observe(v);return v;}
+
+// marquee
+const withLoop = CREATORS.filter(c=>c.loop);
+[['row1',withLoop.slice(0,11)],['row2',withLoop.slice(11)]].forEach(([id,list])=>{
+  const row=document.getElementById(id);
+  [...list,...list].forEach(c=>{
+    const b=document.createElement('button');b.className='tile';b.setAttribute('aria-label','Watch '+c.name);
+    b.appendChild(vid(c.loop));
+    const t=document.createElement('span');t.className='tag caption-5';t.textContent=c.name;b.appendChild(t);
+    b.onclick=()=>openPlayer(c);row.appendChild(b);
+  });
+});
+
+// grid
+const grid=document.getElementById('grid');
+function renderGrid(f){
+  grid.innerHTML='';
+  CREATORS.filter(c=>f==='all'||CAT[c.slug]===f).forEach(c=>{
+    const el=document.createElement('article');el.className='cc rise in';
+    const b=document.createElement('button');b.className='vid skel';b.setAttribute('aria-label','Watch '+c.clips.length+' videos from '+c.name);
+    const v=vid(c.loop||c.clips[0]);v.addEventListener('loadeddata',()=>b.classList.remove('skel'),{once:true});b.appendChild(v);
+    b.insertAdjacentHTML('beforeend','<span class="count caption-3">'+PLAY+c.clips.length+'</span>');
+    b.onclick=()=>openPlayer(c);
+    const m=document.createElement('div');m.className='meta';
+    m.innerHTML='<p class="title-3"></p><p class="caption-5 muted"></p><p class="body-6 muted" style="margin-top:4px"></p><span class="caption-5 gold" style="display:inline-flex;gap:4px;align-items:center;margin-top:8px">'+STAR+' Has their own store page</span>';
+    m.children[0].textContent=c.name;m.children[1].textContent=c.handle||'Reviv creator';m.children[2].textContent=c.angle||'Grinding, sleep and daily wear';
+    el.append(b,m);grid.appendChild(el);
+  });
+}
+renderGrid('all');
+document.querySelectorAll('.chip').forEach(ch=>ch.onclick=()=>{
+  document.querySelectorAll('.chip').forEach(x=>x.setAttribute('aria-pressed','false'));
+  ch.setAttribute('aria-pressed','true');renderGrid(ch.dataset.f);
+});
+
+// player (reels style, sound on)
+const player=document.getElementById('player'),feed=document.getElementById('feed');
+const pio=new IntersectionObserver(es=>es.forEach(e=>{
+  const v=e.target; if(e.isIntersecting&&e.intersectionRatio>.6){ if(!v.src) v.src=v.dataset.src; v.play().catch(()=>{v.muted=true;v.play();}); } else v.pause();
+}),{root:feed,threshold:[0,.6]});
+let lastFocus=null;
+function openPlayer(c){
+  lastFocus=document.activeElement;
+  feed.innerHTML='';
+  c.clips.forEach(src=>{
+    const s=document.createElement('div');s.className='slide';
+    const v=document.createElement('video');v.dataset.src=src;v.playsInline=true;v.loop=true;v.controls=true;v.preload='none';
+    s.appendChild(v);feed.appendChild(s);pio.observe(v);
+  });
+  document.getElementById('who').textContent=c.name+(c.handle?'  '+c.handle:'')+'  \u00b7  '+c.clips.length+' videos';
+  document.getElementById('hint').style.display=c.clips.length>1?'block':'none';
+  player.classList.add('open');document.body.style.overflow='hidden';feed.scrollTop=0;
+  document.getElementById('close').focus();
+}
+function closePlayer(){
+  feed.querySelectorAll('video').forEach(v=>{v.pause();pio.unobserve(v);});
+  player.classList.remove('open');document.body.style.overflow='';feed.innerHTML='';
+  if(lastFocus) lastFocus.focus();
+}
+document.getElementById('close').onclick=closePlayer;
+addEventListener('keydown',e=>{if(e.key==='Escape'&&player.classList.contains('open'))closePlayer();});
+
+// section reveals
+const rio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');rio.unobserve(e.target);}}),{threshold:.15});
+document.querySelectorAll('.rise:not(.in)').forEach(el=>rio.observe(el));
+
+// tagline word reveal
+const tag=document.getElementById('tagline');
+const gold=new Set(['earning','money']);
+tag.innerHTML=tag.textContent.split(' ').map(w=>'<span class="w'+(gold.has(w.replace(/[^a-z]/gi,'').toLowerCase())?' g':'')+'">'+w+'</span>').join(' ');
+const words=[...tag.querySelectorAll('.w')];
+if(matchMedia('(prefers-reduced-motion: reduce)').matches){words.forEach(w=>w.classList.add('on'));}
+else{
+  let ticking=false;
+  const upd=()=>{const line=innerHeight*0.62;words.forEach(w=>w.classList.toggle('on',w.getBoundingClientRect().top<line));ticking=false;};
+  addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(upd);}},{passive:true});upd();
+}
+
+})();
+</script>
+{% schema %}
+{"name":"Creator recruit page","settings":[]}
+{% endschema %}
