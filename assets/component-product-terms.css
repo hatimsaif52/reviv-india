@@ -22,7 +22,7 @@
   text-decoration: underline;
   display: inline;
   background: transparent;
-  color: var(--color-secondary-button-text);
+  color: rgb(var(--color-secondary-button-text));
   border: none;
   cursor: pointer;
 }
@@ -51,7 +51,7 @@
   fill: #d82c0d;
 }
 .preorder-notice {
-  color: var(--color-secondary-button-text);
+  color: rgb(var(--color-secondary-button-text));
   font-weight: bold;
   line-height: 2.2rem;
 }
